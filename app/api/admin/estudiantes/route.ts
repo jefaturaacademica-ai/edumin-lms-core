@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { createAdminClient } from '@/lib/supabase/admin';
+import { obtenerSiguienteCorrelativo } from '@/lib/utils/reciboCorrelativo';
 import {
   parseDiplomadosFromProfile,
   parseCursosFromProfile,
@@ -67,6 +68,7 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
   let nro_recibo: string | undefined = pag.nro_recibo || undefined;
   let nro_operacion: string | undefined = pag.nro_operacion || undefined;
   let comprobante: string | undefined = pag.comprobante || undefined;
+  let cuotas_recibos: Record<number, { nro_recibo?: string; nro_operacion?: string; fecha?: string }> = {};
 
   if (typeof pag.metodo === 'string' && pag.metodo.startsWith('CREDITO_')) {
     try {
@@ -137,6 +139,7 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
     created_at: pag.created_at,
     cuotas,
     plan_cuotas,
+    cuotas_recibos,
     'cuota 01': cuotas[0],
     'cuota 02': cuotas[1],
     'cuota 03': cuotas[2],
@@ -253,6 +256,7 @@ export async function GET() {
           created_at: new Date().toISOString(),
           cuotas: cuotasDefault,
           plan_cuotas: null,
+          cuotas_recibos: {},
           'cuota 01': cuotasDefault[0],
           'cuota 02': cuotasDefault[1],
           'cuota 03': cuotasDefault[2],
@@ -469,7 +473,7 @@ export async function GET() {
       };
     });
 
-    return NextResponse.json({ estudiantes });
+    return NextResponse.json({ estudiantes, siguiente_recibo: obtenerSiguienteCorrelativo(pagos || [], auditLogs || []) });
   } catch (err: any) {
     return NextResponse.json({ error: err.message || 'Error al obtener estudiantes' }, { status: 500 });
   }
@@ -638,10 +642,50 @@ export async function PATCH(request: Request) {
         diplomadosCanjeados: diplomadosListJson.length
       });
 
+      // Sincronizar automáticamente los talleres de regalo incluidos con los diplomados asignados:
+      // Si se removió un diplomado o se cambió por otro, los talleres automáticos se actualizan
+      // para que correspondan exactamente a los diplomados activos del alumno (sin duplicar talleres viejos)
+      const cursosActuales = parseCursosFromProfile(currentProfile);
+      const cursosLibresReales = cursosActuales.filter((c: any) => {
+        const esTaller = String(c.tipo || '').toUpperCase() === 'TALLER' || 
+          String(c.categoria || '').toLowerCase().includes('taller') ||
+          c.id === TALLER_SOFT_SKILLS.id || c.id === TALLER_SEGURIDAD_BASADA.id ||
+          c.codigo === TALLER_SOFT_SKILLS.codigo || c.codigo === TALLER_SEGURIDAD_BASADA.codigo ||
+          Boolean(c.esRegalo);
+        return !esTaller;
+      });
+
+      const talleresRegaloActivos: any[] = [];
+      diplomadosListJson.forEach(d => {
+        const tit = d.titulo || d.slug;
+        if (tit) {
+          const tRegalo = obtenerTallerParaDiplomado(tit);
+          if (tRegalo && !talleresRegaloActivos.some(x => x.id === tRegalo.id || x.codigo === tRegalo.codigo)) {
+            talleresRegaloActivos.push({
+              id: tRegalo.id,
+              codigo: tRegalo.codigo,
+              titulo: tRegalo.titulo,
+              categoria: tRegalo.categoria,
+              duracion: tRegalo.duracion,
+              horas: tRegalo.horas,
+              tipo: 'TALLER',
+              esRegalo: true,
+              nota: 0,
+              completado: false,
+              avance: 0
+            });
+          }
+        }
+      });
+
+      const cursosSincronizados = [...cursosLibresReales, ...talleresRegaloActivos];
+      const cursosSerialized = `CURSOS_LIST|${JSON.stringify(cursosSincronizados)}`;
+
       const { data: updated, error: updateErr } = await admin
         .from('profiles')
         .update({
           diplomados: diplomadosSerialized,
+          cursos: cursosSerialized,
           cupos_creditos: nuevosCuposCreditos
         })
         .eq('id', currentProfile.id)

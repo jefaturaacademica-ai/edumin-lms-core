@@ -1,6 +1,22 @@
 'use client';
 
 import React, { createContext, useContext, useEffect, useState, useCallback } from 'react';
+import { createClient } from '@/lib/supabase/client';
+
+export function limpiarSesionLocal() {
+  if (typeof window === 'undefined') return;
+  try {
+    localStorage.removeItem('edumin_foto_perfil');
+    localStorage.removeItem('edumin_nombres');
+    localStorage.removeItem('edumin_apellidos');
+    localStorage.removeItem('edumin_dni');
+    localStorage.removeItem('edumin_paquete');
+    localStorage.removeItem('edumin_role');
+    localStorage.removeItem('edumin_user_id');
+  } catch (err) {
+    console.warn('No se pudo limpiar localStorage:', err);
+  }
+}
 
 type ProfileContextType = {
   nombres: string;
@@ -71,17 +87,30 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
           setRole(rol);
           setDebeCambiarPassword(Boolean(profile.debe_cambiar_password));
 
+          // Siempre sincronizar fotoPerfil: si el nuevo usuario no tiene foto, debe quedar en null y limpiar localStorage
+          setFotoPerfil(foto);
           if (foto) {
-            setFotoPerfil(foto);
             localStorage.setItem('edumin_foto_perfil', foto);
+          } else {
+            localStorage.removeItem('edumin_foto_perfil');
           }
 
+          if (profile.id) localStorage.setItem('edumin_user_id', profile.id);
           if (nom) localStorage.setItem('edumin_nombres', nom);
           if (ape) localStorage.setItem('edumin_apellidos', ape);
           if (userDni) localStorage.setItem('edumin_dni', userDni);
           if (paq) localStorage.setItem('edumin_paquete', paq);
           if (rol) localStorage.setItem('edumin_role', rol);
         }
+      } else {
+        // Si no hay sesión válida
+        setFotoPerfil(null);
+        setNombres('');
+        setApellidos('');
+        setDni('');
+        setPaqueteContratado('');
+        setRole('ESTUDIANTE');
+        limpiarSesionLocal();
       }
     } catch (e) {
       console.error('Error al cargar perfil desde Supabase en ProfileProvider:', e);
@@ -92,22 +121,52 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     // 1. Cargar almacenamiento local rápido si existe
-    const nombresGuardados = localStorage.getItem('edumin_nombres');
-    const apellidosGuardados = localStorage.getItem('edumin_apellidos');
-    const dniGuardado = localStorage.getItem('edumin_dni');
-    const paqueteGuardado = localStorage.getItem('edumin_paquete');
-    const fotoGuardada = localStorage.getItem('edumin_foto_perfil');
-    const rolGuardado = localStorage.getItem('edumin_role');
+    try {
+      const nombresGuardados = localStorage.getItem('edumin_nombres');
+      const apellidosGuardados = localStorage.getItem('edumin_apellidos');
+      const dniGuardado = localStorage.getItem('edumin_dni');
+      const paqueteGuardado = localStorage.getItem('edumin_paquete');
+      const fotoGuardada = localStorage.getItem('edumin_foto_perfil');
+      const rolGuardado = localStorage.getItem('edumin_role');
 
-    if (nombresGuardados) setNombres(nombresGuardados);
-    if (apellidosGuardados) setApellidos(apellidosGuardados);
-    if (dniGuardado) setDni(dniGuardado);
-    if (paqueteGuardado) setPaqueteContratado(paqueteGuardado);
-    if (fotoGuardada) setFotoPerfil(fotoGuardada);
-    if (rolGuardado) setRole(rolGuardado);
+      if (nombresGuardados) setNombres(nombresGuardados);
+      if (apellidosGuardados) setApellidos(apellidosGuardados);
+      if (dniGuardado) setDni(dniGuardado);
+      if (paqueteGuardado) setPaqueteContratado(paqueteGuardado);
+      if (fotoGuardada) setFotoPerfil(fotoGuardada);
+      if (rolGuardado) setRole(rolGuardado);
+    } catch {
+      // ignore
+    }
 
     // 2. Fetch directo a Supabase para sincronizar siempre con el perfil real logueado
     recargarPerfil();
+  }, [recargarPerfil]);
+
+  // 3. Listener en tiempo real de cambios de autenticación (logout, login)
+  useEffect(() => {
+    try {
+      const supabase = createClient();
+      const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+        if (event === 'SIGNED_OUT' || !session) {
+          setFotoPerfil(null);
+          setNombres('');
+          setApellidos('');
+          setDni('');
+          setPaqueteContratado('');
+          setRole('ESTUDIANTE');
+          limpiarSesionLocal();
+        } else if (event === 'SIGNED_IN') {
+          recargarPerfil();
+        }
+      });
+
+      return () => {
+        subscription?.unsubscribe();
+      };
+    } catch {
+      // ignore
+    }
   }, [recargarPerfil]);
 
   const actualizarFotoPerfil = (nuevaFoto: string | null) => {

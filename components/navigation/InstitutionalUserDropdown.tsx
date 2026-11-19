@@ -14,6 +14,7 @@ import {
   User
 } from 'lucide-react';
 import { createBrowserClient } from '@supabase/ssr';
+import { cerrarSesionUsuario } from '@/lib/auth/logout';
 
 interface InstitutionalUserDropdownProps {
   className?: string;
@@ -83,9 +84,7 @@ export default function InstitutionalUserDropdown({ className = '' }: Institutio
   }, []);
 
   const handleLogout = async () => {
-    await supabase.auth.signOut();
-    router.push('/login');
-    router.refresh();
+    await cerrarSesionUsuario(router);
   };
 
   return (

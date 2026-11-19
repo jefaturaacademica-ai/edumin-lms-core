@@ -33,6 +33,7 @@ export interface CertificadoPdfData {
   horas?: string;
   fecha?: string;
   codigo: string;
+  dni?: string;
   ciudad?: string;
   imagenFondoUrl?: string | null;
   incluyeQr?: boolean;
@@ -633,15 +634,8 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
     }
 
     ctx.textAlign = cfg.codigo.alineacion;
-    let codDrawX = codX;
-    if (cfg.codigo.alineacion === 'left') {
-      codDrawX = codX - (maxCodW / 2);
-    } else if (cfg.codigo.alineacion === 'right') {
-      codDrawX = codX + (maxCodW / 2);
-    }
-
     ctx.fillStyle = colorCod;
-    drawStyledText(ctx, textoCod, codDrawX, codY, fontSizeCod, cfg.codigo.subrayado);
+    drawStyledText(ctx, textoCod, codX, codY, fontSizeCod, cfg.codigo.subrayado);
   }
 
   // Convertir canvas a JPEG de alta fidelidad (calidad 0.95)
@@ -661,7 +655,9 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
   const pdfBlob = new Blob([pdfBytes as any], { type: 'application/pdf' });
 
   // Disparar descarga directa en el navegador
-  const fileNameFinal = nombreArchivo || `Certificado_${codigoCert}_A4_${orientacion}.pdf`;
+  const docIdentificador = (data.dni || '').trim();
+  const sufijoDoc = docIdentificador ? `_${docIdentificador}` : '';
+  const fileNameFinal = nombreArchivo || `Certificado_${codigoCert}${sufijoDoc}.pdf`;
   const url = URL.createObjectURL(pdfBlob);
   const a = document.createElement('a');
   a.href = url;

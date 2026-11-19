@@ -509,31 +509,35 @@ export default async function DashboardPage() {
           </div>
         </article>
 
-        {/* Widget 3: Bolsa de Trabajo y Dreambuilder */}
+        {/* Widget 3: Bolsa de Trabajo y Certificados del Estudiante */}
         <div className="flex flex-col gap-4">
           
-          {/* Tarjeta Dreambuilder */}
-          {dreambuilderHabilitado && (
-            <article className="relative flex-1 overflow-hidden rounded-3xl bg-gradient-to-br from-violet-700 to-indigo-900 p-6 text-white shadow-md">
-              <div className="absolute right-0 top-0 size-32 rounded-bl-full bg-white/5" />
-              <div className="relative z-10 flex items-start justify-between">
-                <div>
-                  <h3 className="text-lg font-bold flex items-center gap-2">
-                    <Rocket className="size-5 text-indigo-300" /> Dreambuilder
-                  </h3>
-                  <p className="mt-1 text-xs text-indigo-200">Potencia tus objetivos profesionales y emprendimiento.</p>
-                </div>
+          {/* Tarjeta Acceso Directo a Mis Certificados */}
+          <article className="relative flex-1 overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-700 via-indigo-800 to-slate-900 p-6 text-white shadow-sm border border-indigo-500/30 flex flex-col justify-between">
+            <div className="absolute right-0 top-0 size-32 rounded-bl-full bg-white/5 pointer-events-none" />
+            <div className="relative z-10">
+              <div className="flex items-center justify-between">
+                <span className="grid size-10 place-items-center rounded-xl bg-white/10 text-indigo-200 border border-white/10">
+                  <Award className="size-5" />
+                </span>
+                <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-indigo-500/30 text-indigo-200 border border-indigo-400/30">
+                  Documentos oficiales
+                </span>
               </div>
-              <a
-                className="mt-4 inline-flex h-9 w-full items-center justify-center gap-2 rounded-lg bg-white/10 px-4 text-sm font-bold text-white transition hover:bg-white/20 border border-white/10"
-                href={dreambuilderUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Ingresar al portal <ArrowUpRight className="size-4" />
-              </a>
-            </article>
-          )}
+              <h3 className="mt-3 text-lg font-bold flex items-center gap-2">
+                Mis certificados
+              </h3>
+              <p className="mt-1 text-xs text-indigo-100/90 leading-relaxed">
+                Descarga tus diplomas generales, certificados modulares y acreditaciones oficiales con QR.
+              </p>
+            </div>
+            <Link
+              className="mt-5 inline-flex h-10 w-full items-center justify-center gap-2 rounded-xl bg-white text-indigo-900 font-bold px-4 text-xs shadow-sm hover:bg-indigo-50 transition"
+              href="/dashboard/certificados"
+            >
+              Ver mis certificados <ArrowUpRight className="size-4" />
+            </Link>
+          </article>
 
           {/* Tarjeta de Bolsas de Trabajo (Regular y Exclusiva) */}
           <article className="relative flex-1 overflow-hidden rounded-3xl bg-slate-900 p-6 text-white shadow-md border border-slate-800 flex flex-col justify-between">

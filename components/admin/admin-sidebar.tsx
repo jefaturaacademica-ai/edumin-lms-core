@@ -9,6 +9,7 @@ import {
   Menu, X, Sun, Moon, Sparkles, FileQuestion, User
 } from 'lucide-react';
 import { createBrowserClient } from '@supabase/ssr';
+import { cerrarSesionUsuario } from '@/lib/auth/logout';
 import { useTheme } from '@/context/theme-context';
 import { UserProfileCard } from '@/components/navigation/UserProfileCard';
 import { ThemeMenuButton } from '@/components/navigation/ThemeMenuButton';
@@ -62,8 +63,7 @@ export default function AdminSidebar() {
   }, [pathname]);
 
   const handleLogout = async () => {
-    await supabase.auth.signOut();
-    router.push('/login');
+    await cerrarSesionUsuario(router);
   };
 
   // Grupos de navegación estructurados por categoría (Opción B: SaaS EdTech)

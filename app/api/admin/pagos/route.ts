@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { obtenerSiguienteCorrelativo } from "@/lib/utils/reciboCorrelativo";
 
 function parseCreditoRow(pag: any, auditLogs: any[]) {
   if (typeof pag.metodo === 'string' && pag.metodo.startsWith('CARGO_EXTRA|')) {
@@ -12,6 +13,9 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
       concepto,
       nro_cuota: `Cargo Extra (${concepto})`,
       num_credito: 99,
+      nro_recibo: pag.nro_recibo || undefined,
+      nro_operacion: pag.nro_operacion || undefined,
+      comprobante: pag.comprobante || undefined,
       monto: Number(pag.monto || 0),
       metodo: 'Yape / Plin',
       estado: pag.estado || 'APROBADO',
@@ -35,6 +39,7 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
   let explicitDeuda: number | undefined = undefined;
   let parsedFromMetodo = false;
   let plan_cuotas: string[] | null = null;
+  let cuotas_recibos: Record<number, { nro_recibo?: string; nro_operacion?: string; fecha?: string }> = {};
   let nro_pagare: string | undefined = pag.nro_pagare || undefined;
   let nro_recibo: string | undefined = pag.nro_recibo || undefined;
   let nro_operacion: string | undefined = pag.nro_operacion || undefined;
@@ -46,6 +51,9 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
       const parsed = JSON.parse(jsonStr);
       num_credito = parsed.num_credito || num_credito;
       if (parsed.nro_pagare) nro_pagare = parsed.nro_pagare;
+      if (parsed.cuotas_recibos && typeof parsed.cuotas_recibos === 'object') {
+        cuotas_recibos = parsed.cuotas_recibos;
+      }
       if (parsed.ultimo_pago?.nro_recibo) nro_recibo = parsed.ultimo_pago.nro_recibo;
       if (parsed.ultimo_pago?.nro_operacion) nro_operacion = parsed.ultimo_pago.nro_operacion;
       if (parsed.ultimo_pago?.comprobante) comprobante = parsed.ultimo_pago.comprobante;
@@ -109,6 +117,7 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
     created_at: pag.created_at,
     cuotas,
     plan_cuotas,
+    cuotas_recibos,
     'cuota 01': cuotas[0],
     'cuota 02': cuotas[1],
     'cuota 03': cuotas[2],
@@ -147,7 +156,7 @@ export async function GET() {
 
     const creditosFmt = (pagos || []).map((p: any) => parseCreditoRow(p, auditLogs || []));
 
-    return NextResponse.json({ pagos: creditosFmt });
+    return NextResponse.json({ pagos: creditosFmt, siguiente_recibo: obtenerSiguienteCorrelativo(creditosFmt, auditLogs || []) });
   } catch (err: any) {
     return NextResponse.json({ error: err.message || "Error al obtener pagos" }, { status: 500 });
   }
@@ -191,6 +200,27 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Alumno no encontrado con el DNI proporcionado." }, { status: 404 });
     }
 
+    // Consultar correlativos institucionales existentes para asegurar unicidad estricta
+    const [{ data: todosPagos }, { data: todosAudits }] = await Promise.all([
+      admin.from("pagos").select("*"),
+      admin.from("audit_logs").select("*")
+    ]);
+    const siguienteCorrelativo = obtenerSiguienteCorrelativo(todosPagos || [], todosAudits || []);
+
+    let nroReciboFinal = nro_recibo;
+    const reciboYaExiste = nroReciboFinal && (todosPagos || []).some((p: any) => {
+      if (p.id === pagoId && !isCargoExtra) return false;
+      if (p.nro_recibo === nroReciboFinal) return true;
+      if (typeof p.metodo === 'string' && p.metodo.includes(`"nro_recibo":"${nroReciboFinal}"`)) return true;
+      return false;
+    });
+
+    if (!nroReciboFinal || reciboYaExiste) {
+      nroReciboFinal = siguienteCorrelativo;
+    }
+
+    const nroOperacionFinal = nro_operacion || (metodo === 'Efectivo en Caja' ? 'N/A' : (comprobante || nroReciboFinal));
+
     // CASO ESPECIAL: REGISTRAR CARGO EXTRA (Examen sustitutorio, mora, etc.)
     if (isCargoExtra) {
       const extraPayload: Record<string, any> = {
@@ -198,26 +228,14 @@ export async function POST(request: Request) {
         dni_ce: student.dni_ce,
         monto: montoPago,
         metodo: `CARGO_EXTRA|${conceptoCargo}`,
-        estado: "APROBADO"
+        estado: "APROBADO",
+        nro_recibo: nroReciboFinal,
+        nro_operacion: nroOperacionFinal
       };
-      if (nro_recibo) extraPayload.nro_recibo = nro_recibo;
-      if (nro_operacion) extraPayload.nro_operacion = nro_operacion;
-      if (comprobante) extraPayload.comprobante = comprobante;
 
-      let newCargo: any = null;
-      let cargoErr: any = null;
-      try {
-        const res = await admin.from("pagos").insert(extraPayload).select().single();
-        newCargo = res.data;
-        cargoErr = res.error;
-      } catch {
-        delete extraPayload.nro_recibo;
-        delete extraPayload.nro_operacion;
-        delete extraPayload.comprobante;
-        const res = await admin.from("pagos").insert(extraPayload).select().single();
-        newCargo = res.data;
-        cargoErr = res.error;
-      }
+      const res = await admin.from("pagos").insert(extraPayload).select().single();
+      const newCargo = res.data;
+      const cargoErr = res.error;
 
       if (cargoErr) {
         return NextResponse.json({ error: `Error al insertar cargo extra: ${cargoErr.message}` }, { status: 500 });
@@ -234,9 +252,9 @@ export async function POST(request: Request) {
             concepto: conceptoCargo,
             monto: montoPago,
             metodo,
-            comprobante,
-            nro_recibo,
-            nro_operacion
+            comprobante: nroReciboFinal,
+            nro_recibo: nroReciboFinal,
+            nro_operacion: nroOperacionFinal
           }
         });
       } catch (e) {
@@ -373,37 +391,45 @@ export async function POST(request: Request) {
 
       const newTotalDeuda = Math.max(0, parsedCredito.monto - newTotalPagado);
 
+      const currentCuotasRecibos = { ...(parsedCredito.cuotas_recibos || {}) };
+      if (cuotaIndex !== null) {
+        currentCuotasRecibos[cuotaIndex] = {
+          nro_recibo: nroReciboFinal,
+          nro_operacion: nroOperacionFinal,
+          fecha: new Date().toISOString()
+        };
+      }
+
       const metadataMetodo = `CREDITO_${parsedCredito.num_credito}|${JSON.stringify({
         num_credito: parsedCredito.num_credito,
         nro_pagare: parsedCredito.nro_pagare || undefined,
         cuotas: updatedCuotas,
         plan_cuotas: parsedCredito.plan_cuotas || null,
+        cuotas_recibos: currentCuotasRecibos,
         total_pagado: newTotalPagado,
         total_deuda: newTotalDeuda,
         ultimo_pago: {
           monto: montoPago,
           metodo,
-          nro_recibo,
-          nro_operacion,
-          comprobante,
+          nro_recibo: nroReciboFinal,
+          nro_operacion: nroOperacionFinal,
+          comprobante: nroReciboFinal,
           fecha: new Date().toISOString()
         }
       })}`;
 
       const updatePayload: Record<string, any> = {
         metodo: metadataMetodo,
-        estado: newTotalDeuda === 0 ? "Completado" : "Pendiente"
+        estado: newTotalDeuda === 0 ? "Completado" : "Pendiente",
+        nro_recibo: nroReciboFinal,
+        nro_operacion: nroOperacionFinal
       };
-      if (nro_recibo) updatePayload.nro_recibo = nro_recibo;
-      if (nro_operacion) updatePayload.nro_operacion = nro_operacion;
-      if (comprobante) updatePayload.comprobante = comprobante;
 
-      try {
-        await admin.from("pagos").update(updatePayload).eq("id", parsedCredito.id);
-      } catch {
+      const { error: updErr } = await admin.from("pagos").update(updatePayload).eq("id", parsedCredito.id);
+      if (updErr) {
+        console.warn('Advertencia al actualizar pagos:', updErr.message);
         delete updatePayload.nro_recibo;
         delete updatePayload.nro_operacion;
-        delete updatePayload.comprobante;
         await admin.from("pagos").update(updatePayload).eq("id", parsedCredito.id);
       }
 
@@ -427,9 +453,9 @@ export async function POST(request: Request) {
           total_deuda: parsedCredito.total_deuda,
           monto_pagado: montoPago,
           metodo,
-          comprobante,
-          nro_recibo,
-          nro_operacion
+          comprobante: nroReciboFinal,
+          nro_recibo: nroReciboFinal,
+          nro_operacion: nroOperacionFinal
         }
       });
     } catch (err) {
@@ -661,9 +687,9 @@ export async function PATCH(request: Request) {
       };
       if (nroPagareFinal) updatePayload.nro_pagare = nroPagareFinal;
 
-      try {
-        await admin.from("pagos").update(updatePayload).eq("id", creditRow.id);
-      } catch {
+      const { error: updErr } = await admin.from("pagos").update(updatePayload).eq("id", creditRow.id);
+      if (updErr) {
+        console.warn('Advertencia al guardar nro_pagare (posible columna no migrada en BD):', updErr.message);
         delete updatePayload.nro_pagare;
         await admin.from("pagos").update(updatePayload).eq("id", creditRow.id);
       }

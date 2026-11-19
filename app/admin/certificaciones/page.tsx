@@ -606,6 +606,17 @@ export default function CertificacionesAdminPage() {
       console.error('Error al actualizar certificación en Supabase:', e);
     }
 
+    const snapshotActualizado = {
+      ...modeloElegido,
+      horas: horasParaEditarCert || certificadoParaCambiarModelo.horas
+    };
+
+    // Actualizar objeto en memoria para que cualquier botón que use el objeto por referencia tenga los datos nuevos
+    certificadoParaCambiarModelo.modelo_id = modeloElegido.id;
+    certificadoParaCambiarModelo.horas = horasParaEditarCert || certificadoParaCambiarModelo.horas;
+    certificadoParaCambiarModelo.fecha = fechaParaEditarCert || certificadoParaCambiarModelo.fecha;
+    certificadoParaCambiarModelo.plantilla_snapshot = snapshotActualizado;
+
     setCertificadosEmitidos(prev => prev.map(c => {
       if (c.id === certificadoParaCambiarModelo.id || c.codigo === certificadoParaCambiarModelo.codigo) {
         return {
@@ -613,11 +624,26 @@ export default function CertificacionesAdminPage() {
           modelo_id: modeloElegido.id,
           horas: horasParaEditarCert || c.horas,
           fecha: fechaParaEditarCert || c.fecha,
-          plantilla_snapshot: modeloElegido
+          plantilla_snapshot: snapshotActualizado
         };
       }
       return c;
     }));
+
+    // Si el modal de previsualización está abierto con este mismo certificado, actualizarlo de inmediato
+    setCertificadoParaVer((prev: any) => {
+      if (!prev) return null;
+      if (prev.id === certificadoParaCambiarModelo.id || prev.codigo === certificadoParaCambiarModelo.codigo) {
+        return {
+          ...prev,
+          modelo_id: modeloElegido.id,
+          horas: horasParaEditarCert || prev.horas,
+          fecha: fechaParaEditarCert || prev.fecha,
+          plantilla_snapshot: snapshotActualizado
+        };
+      }
+      return prev;
+    });
 
     setMensajeExito(`¡Certificado actualizado con éxito! Se aplicó el modelo "${modeloElegido.nombre}" y horas "${horasParaEditarCert || certificadoParaCambiarModelo.horas}".`);
     setCertificadoParaCambiarModelo(null);
@@ -651,6 +677,35 @@ export default function CertificacionesAdminPage() {
       fechaEmision: cert.fecha
     };
 
+    // Actualizar la referencia del objeto inmediatamente para que cualquier click posterior en "Ver" en la misma fila use el nuevo diseño
+    cert.modelo_id = modeloVigente.id;
+    cert.plantilla_snapshot = snapshotActualizado;
+
+    // Actualizar el estado global en React para provocar el re-render de la tabla
+    setCertificadosEmitidos(prev => prev.map(c => {
+      if (c.id === cert.id || c.codigo === cert.codigo) {
+        return {
+          ...c,
+          modelo_id: modeloVigente.id,
+          plantilla_snapshot: snapshotActualizado
+        };
+      }
+      return c;
+    }));
+
+    // Si la previsualización ya estuviera abierta, sincronizarla al instante
+    setCertificadoParaVer((prev: any) => {
+      if (!prev) return null;
+      if (prev.id === cert.id || prev.codigo === cert.codigo) {
+        return {
+          ...prev,
+          modelo_id: modeloVigente.id,
+          plantilla_snapshot: snapshotActualizado
+        };
+      }
+      return prev;
+    });
+
     try {
       await fetch('/api/admin/certificaciones', {
         method: 'PATCH',
@@ -671,18 +726,7 @@ export default function CertificacionesAdminPage() {
         })
       });
 
-      setCertificadosEmitidos(prev => prev.map(c => {
-        if (c.id === cert.id || c.codigo === cert.codigo) {
-          return {
-            ...c,
-            modelo_id: modeloVigente.id,
-            plantilla_snapshot: snapshotActualizado
-          };
-        }
-        return c;
-      }));
-
-      setMensajeExito(`¡Diseño actualizado manualmente para ${cert.codigo}! Ahora usa la última versión de "${modeloVigente.nombre}".`);
+      setMensajeExito(`¡Diseño actualizado con éxito para ${cert.codigo}! Ahora usa la última versión de "${modeloVigente.nombre}".`);
       setTimeout(() => setMensajeExito(null), 4500);
     } catch (e) {
       console.error('Error forzando actualización de diseño:', e);
@@ -2140,41 +2184,43 @@ export default function CertificacionesAdminPage() {
                             </div>
                           </div>
 
-                          {/* Alineación de texto / bloque */}
-                          <div>
-                            <label className="block text-[10px] font-bold text-slate-500 mb-1">
-                              Alineación respecto al punto de anclaje:
-                            </label>
-                            <div className="grid grid-cols-3 gap-1 bg-white dark:bg-slate-900 p-1 rounded-xl border border-slate-200 dark:border-slate-700">
-                              <button
-                                type="button"
-                                onClick={() => actualizarPosicionElemento(elementoSeleccionado, { alineacion: 'left' })}
-                                className={`py-1 text-xs font-bold rounded-lg transition flex items-center justify-center gap-1 cursor-pointer ${
-                                  act.alineacion === 'left' ? 'bg-indigo-600 text-white shadow-xs' : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
-                                }`}
-                              >
-                                <AlignLeft className="w-3 h-3" /> Izquierda
-                              </button>
-                              <button
-                                type="button"
-                                onClick={() => actualizarPosicionElemento(elementoSeleccionado, { alineacion: 'center' })}
-                                className={`py-1 text-xs font-bold rounded-lg transition flex items-center justify-center gap-1 cursor-pointer ${
-                                  act.alineacion === 'center' ? 'bg-indigo-600 text-white shadow-xs' : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
-                                }`}
-                              >
-                                <AlignCenter className="w-3 h-3" /> Centro
-                              </button>
-                              <button
-                                type="button"
-                                onClick={() => actualizarPosicionElemento(elementoSeleccionado, { alineacion: 'right' })}
-                                className={`py-1 text-xs font-bold rounded-lg transition flex items-center justify-center gap-1 cursor-pointer ${
-                                  act.alineacion === 'right' ? 'bg-indigo-600 text-white shadow-xs' : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
-                                }`}
-                              >
-                                <AlignRight className="w-3 h-3" /> Derecha
-                              </button>
+                          {/* Alineación de texto respecto al punto de anclaje (solo para variables de texto) */}
+                          {elementoSeleccionado !== 'qr' && (
+                            <div>
+                              <label className="block text-[10px] font-bold text-slate-500 mb-1">
+                                Alineación respecto al punto de anclaje:
+                              </label>
+                              <div className="grid grid-cols-3 gap-1 bg-white dark:bg-slate-900 p-1 rounded-xl border border-slate-200 dark:border-slate-700">
+                                <button
+                                  type="button"
+                                  onClick={() => actualizarPosicionElemento(elementoSeleccionado, { alineacion: 'left' })}
+                                  className={`py-1 text-xs font-bold rounded-lg transition flex items-center justify-center gap-1 cursor-pointer ${
+                                    act.alineacion === 'left' ? 'bg-indigo-600 text-white shadow-xs' : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
+                                  }`}
+                                >
+                                  <AlignLeft className="w-3 h-3" /> Izquierda
+                                </button>
+                                <button
+                                  type="button"
+                                  onClick={() => actualizarPosicionElemento(elementoSeleccionado, { alineacion: 'center' })}
+                                  className={`py-1 text-xs font-bold rounded-lg transition flex items-center justify-center gap-1 cursor-pointer ${
+                                    act.alineacion === 'center' ? 'bg-indigo-600 text-white shadow-xs' : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
+                                  }`}
+                                >
+                                  <AlignCenter className="w-3 h-3" /> Centro
+                                </button>
+                                <button
+                                  type="button"
+                                  onClick={() => actualizarPosicionElemento(elementoSeleccionado, { alineacion: 'right' })}
+                                  className={`py-1 text-xs font-bold rounded-lg transition flex items-center justify-center gap-1 cursor-pointer ${
+                                    act.alineacion === 'right' ? 'bg-indigo-600 text-white shadow-xs' : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
+                                  }`}
+                                >
+                                  <AlignRight className="w-3 h-3" /> Derecha
+                                </button>
+                              </div>
                             </div>
-                          </div>
+                          )}
 
                           {/* Configuración Tipográfica y Visual (solo para variables de texto) */}
                           {elementoSeleccionado !== 'qr' && (
@@ -3281,15 +3327,15 @@ export default function CertificacionesAdminPage() {
           onClick={(e) => {
             if (e.target === e.currentTarget) setModeloParaPrevisualizar(null);
           }}
-          className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[9999] flex items-center justify-center p-4 overflow-y-auto"
+          className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[9999] flex items-center justify-center p-3 sm:p-5 overflow-y-auto"
         >
           <div 
             onClick={(e) => e.stopPropagation()}
-            className={`bg-white dark:bg-slate-900 w-full ${modeloParaPrevisualizar.orientacion === 'vertical' ? 'max-w-xl' : 'max-w-4xl'} rounded-3xl shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col my-8`}
+            className="bg-white dark:bg-slate-900 w-fit max-w-[94vw] rounded-3xl shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col my-auto"
           >
             
             {/* Header del Modal */}
-            <div className="px-6 py-4 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-800/50">
+            <div className="px-5 py-3.5 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-800/50">
               <div className="flex items-center gap-2">
                 <LayoutTemplate className="w-5 h-5 text-indigo-600" />
                 <div>
@@ -3310,7 +3356,7 @@ export default function CertificacionesAdminPage() {
             </div>
 
             {/* Selector interactivo de simulación con programas del catálogo */}
-            <div className="px-6 py-3 bg-indigo-50/50 dark:bg-indigo-950/30 border-b border-indigo-100 dark:border-indigo-900/50 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div className="px-5 py-2.5 bg-indigo-50/50 dark:bg-indigo-950/30 border-b border-indigo-100 dark:border-indigo-900/50 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <label className="text-xs font-bold text-indigo-900 dark:text-indigo-300 flex items-center gap-1.5">
                 <Sparkles className="w-4 h-4 text-amber-500" />
                 <span>Simular con este programa:</span>
@@ -3370,22 +3416,35 @@ export default function CertificacionesAdminPage() {
             </div>
 
             {/* Certificado Canvas A4 Simulado */}
-            <div className="p-4 sm:p-6 bg-slate-950 flex items-center justify-center">
-              <div className={`w-full flex items-center justify-center ${modeloParaPrevisualizar.orientacion === 'vertical' ? 'max-w-md' : 'max-w-3xl'}`}>
-                <AvanzaCertificateRenderer
-                  tipo={modeloParaPrevisualizar.tipo}
-                  orientacion={modeloParaPrevisualizar.orientacion || 'horizontal'}
-                  estudiante="QUISPE RAMOS, JUAN CARLOS"
-                  programa={programaSimuladoEnModal}
-                  modulo={modeloParaPrevisualizar.tipo === 'MODULAR' ? 'Módulo 01: Legislación Minera y Marco Legal del Sector' : undefined}
-                  horas={modeloParaPrevisualizar.horas || (modeloParaPrevisualizar.tipo === 'MODULAR' ? '108 horas académicas' : '325 horas académicas y 13 créditos')}
-                  fecha={new Date().toISOString().split('T')[0]}
-                  codigo="HNYNXT2"
-                  imagenFondoUrl={modeloParaPrevisualizar.imagenFondoUrl}
-                  incluyeQr={modeloParaPrevisualizar.incluyeQr !== false}
-                  diseno={modeloParaPrevisualizar.disenoCoordenadas}
-                />
-              </div>
+            <div className="p-3 sm:p-5 bg-slate-950/90 flex items-center justify-center">
+              {(() => {
+                const esVertical = modeloParaPrevisualizar.orientacion === 'vertical';
+                return (
+                  <div 
+                    className="flex items-center justify-center"
+                    style={{
+                      width: esVertical
+                        ? 'min(86vw, calc((76vh - 150px) * 210 / 297), 460px)'
+                        : 'min(86vw, calc((76vh - 150px) * 297 / 210), 780px)',
+                      aspectRatio: esVertical ? '210 / 297' : '297 / 210'
+                    }}
+                  >
+                    <AvanzaCertificateRenderer
+                      tipo={modeloParaPrevisualizar.tipo}
+                      orientacion={modeloParaPrevisualizar.orientacion || 'horizontal'}
+                      estudiante="QUISPE RAMOS, JUAN CARLOS"
+                      programa={programaSimuladoEnModal}
+                      modulo={modeloParaPrevisualizar.tipo === 'MODULAR' ? 'Módulo 01: Legislación Minera y Marco Legal del Sector' : undefined}
+                      horas={modeloParaPrevisualizar.horas || (modeloParaPrevisualizar.tipo === 'MODULAR' ? '108 horas académicas' : '325 horas académicas y 13 créditos')}
+                      fecha={new Date().toISOString().split('T')[0]}
+                      codigo="HNYNXT2"
+                      imagenFondoUrl={modeloParaPrevisualizar.imagenFondoUrl}
+                      incluyeQr={modeloParaPrevisualizar.incluyeQr !== false}
+                      diseno={modeloParaPrevisualizar.disenoCoordenadas}
+                    />
+                  </div>
+                );
+              })()}
             </div>
 
             {/* Footer con Acciones */}
@@ -3828,15 +3887,15 @@ export default function CertificacionesAdminPage() {
           onClick={(e) => {
             if (e.target === e.currentTarget) setCertificadoParaVer(null);
           }}
-          className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[9999] flex items-center justify-center p-4 overflow-y-auto"
+          className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[9999] flex items-center justify-center p-3 sm:p-5 overflow-y-auto"
         >
           <div 
             onClick={(e) => e.stopPropagation()}
-            className={`bg-white dark:bg-slate-900 w-full ${certificadoParaVer.plantilla_snapshot?.orientacion === 'vertical' || certificadoParaVer.tipo === 'CURSO' || certificadoParaVer.tipo === 'TALLER' ? 'max-w-xl' : 'max-w-4xl'} rounded-3xl shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col my-8`}
+            className={`bg-white dark:bg-slate-900 w-fit max-w-[94vw] rounded-3xl shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col my-auto`}
           >
             
             {/* Header del Modal */}
-            <div className="px-6 py-4 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-800/50">
+            <div className="px-5 py-3.5 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-800/50">
               <div className="flex items-center gap-2">
                 <Award className="w-5 h-5 text-indigo-600" />
                 <h3 className="text-sm font-bold text-slate-900 dark:text-white">
@@ -3852,7 +3911,7 @@ export default function CertificacionesAdminPage() {
             </div>
 
             {/* Certificado Canvas A4 Simulado */}
-            <div className="p-4 sm:p-6 bg-slate-950 flex items-center justify-center">
+            <div className="p-3 sm:p-5 bg-slate-950/90 flex items-center justify-center">
               {(() => {
                 const snapshot = certificadoParaVer.plantilla_snapshot || {};
                 const modeloActual = modelosCertificados.find(m => m.id === (snapshot.modelo_id || certificadoParaVer.modelo_id)) || 
@@ -3860,12 +3919,21 @@ export default function CertificacionesAdminPage() {
                   modelosCertificados[0];
 
                 const orientacionFinal = snapshot.orientacion || modeloActual?.orientacion || 'horizontal';
+                const esVertical = orientacionFinal === 'vertical';
                 const imagenFondoFinal = snapshot.imagenFondoUrl !== undefined ? snapshot.imagenFondoUrl : modeloActual?.imagenFondoUrl;
                 const disenoFinal = snapshot.disenoCoordenadas || modeloActual?.disenoCoordenadas;
                 const incluyeQrFinal = snapshot.incluyeQr !== undefined ? snapshot.incluyeQr !== false : (modeloActual?.incluyeQr !== false);
 
                 return (
-                  <div className={`w-full flex items-center justify-center ${orientacionFinal === 'vertical' ? 'max-w-md' : 'max-w-3xl'}`}>
+                  <div 
+                    className="flex items-center justify-center"
+                    style={{
+                      width: esVertical
+                        ? 'min(86vw, calc((76vh - 120px) * 210 / 297), 460px)'
+                        : 'min(86vw, calc((76vh - 120px) * 297 / 210), 780px)',
+                      aspectRatio: esVertical ? '210 / 297' : '297 / 210'
+                    }}
+                  >
                     <AvanzaCertificateRenderer
                       tipo={certificadoParaVer.tipo}
                       orientacion={orientacionFinal}
@@ -3909,6 +3977,8 @@ export default function CertificacionesAdminPage() {
                       const imagenFondoFinal = snapshot.imagenFondoUrl !== undefined ? snapshot.imagenFondoUrl : modeloActual?.imagenFondoUrl;
                       const disenoFinal = snapshot.disenoCoordenadas || modeloActual?.disenoCoordenadas;
                       const incluyeQrFinal = snapshot.incluyeQr !== undefined ? snapshot.incluyeQr !== false : (modeloActual?.incluyeQr !== false);
+                      const docDni = (certificadoParaVer.dni || '').trim();
+                      const sufijoDoc = docDni ? `_${docDni}` : '';
 
                       await descargarCertificadoA4Pdf({
                         tipo: certificadoParaVer.tipo,
@@ -3919,10 +3989,11 @@ export default function CertificacionesAdminPage() {
                         horas: certificadoParaVer.horas,
                         fecha: certificadoParaVer.fecha,
                         codigo: certificadoParaVer.codigo,
+                        dni: docDni,
                         imagenFondoUrl: imagenFondoFinal,
                         incluyeQr: incluyeQrFinal,
                         diseno: disenoFinal
-                      }, `Certificado_${certificadoParaVer.codigo}_${certificadoParaVer.dni}.pdf`);
+                      }, `Certificado_${certificadoParaVer.codigo}${sufijoDoc}.pdf`);
                     } catch (e) {
                       console.error('Error al descargar PDF:', e);
                       alert('Error generando el archivo PDF.');

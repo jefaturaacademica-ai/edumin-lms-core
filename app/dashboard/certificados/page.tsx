@@ -20,7 +20,8 @@ import {
   LayoutGrid,
   ChevronDown,
   ChevronUp,
-  ArrowRight
+  ArrowRight,
+  Rocket
 } from 'lucide-react';
 import { useTheme } from '@/context/theme-context';
 import { StudentPageHeader } from '@/components/dashboard/StudentPageHeader';
@@ -72,6 +73,31 @@ function esModuloAprobadoParaCertificado(dip: any, mod: any, mIdx: number): { ap
     return { aprobado: notaNum >= notaMinima, nota: notaNum };
   }
   return { aprobado: Boolean(mod.completado), nota: mod.completado ? 18 : 0 };
+}
+
+function normalizarProgramaTitulo(titulo?: string | null): string {
+  return String(titulo || '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/^diplomado\s+(?:de\s+alta\s+especializaci[oó]n\s+)?en\s+/i, '')
+    .replace(/^diplomado\s+en\s+/i, '')
+    .replace(/^diplomado\s+/i, '')
+    .replace(/^curso\s+(?:de\s+alta\s+especializaci[oó]n\s+)?en\s+/i, '')
+    .replace(/^curso\s+en\s+/i, '')
+    .replace(/^curso\s+/i, '')
+    .replace(/^taller\s+(?:de\s+alta\s+especializaci[oó]n\s+)?(?:en|de)\s+/i, '')
+    .replace(/^taller\s+(?:en|de)\s+/i, '')
+    .replace(/^taller\s+/i, '')
+    .trim();
+}
+
+function sonProgramasEquivalentes(p1?: string | null, p2?: string | null): boolean {
+  if (!p1 || !p2) return false;
+  const n1 = normalizarProgramaTitulo(p1);
+  const n2 = normalizarProgramaTitulo(p2);
+  if (!n1 || !n2) return false;
+  return n1 === n2 || n1.includes(n2) || n2.includes(n1);
 }
 
 function formatearFechaDDMMYYYY(fecha?: string | null): string {
@@ -268,19 +294,28 @@ export default function CertificadosPage() {
   const [eduminCredits, setEduminCredits] = useState<any>(null);
   const [modelosCertificados, setModelosCertificados] = useState<any[]>([]);
   const [certificadosEmitidosDb, setCertificadosEmitidosDb] = useState<any[]>([]);
+  const [paquetesConfig, setPaquetesConfig] = useState<Record<string, any>>({});
 
   useEffect(() => {
     const fetchMe = async () => {
       try {
-        const [meRes, modelosRes] = await Promise.all([
+        const [meRes, modelosRes, paquetesRes] = await Promise.all([
           fetch('/api/dashboard/me'),
-          fetch('/api/admin/certificaciones/modelos').catch(() => null)
+          fetch('/api/admin/certificaciones/modelos').catch(() => null),
+          fetch('/api/admin/configuracion-paquetes').catch(() => null)
         ]);
 
         if (modelosRes && modelosRes.ok) {
           const modData = await modelosRes.json();
           if (Array.isArray(modData.modelos)) {
             setModelosCertificados(modData.modelos);
+          }
+        }
+
+        if (paquetesRes && paquetesRes.ok) {
+          const paqData = await paquetesRes.json();
+          if (paqData.paquetes) {
+            setPaquetesConfig(paqData.paquetes);
           }
         }
 
@@ -385,7 +420,7 @@ export default function CertificadosPage() {
             );
           }
           if (c.tipo === tipoEsperado || (tipoEsperado === 'CURSO' && c.tipo === 'TALLER') || (tipoEsperado === 'TALLER' && c.tipo === 'CURSO')) {
-            return c.programa_titulo?.toLowerCase() === certParams.titulo.toLowerCase();
+            return sonProgramasEquivalentes(c.programa_titulo, certParams.titulo);
           }
           return false;
         });
@@ -419,14 +454,12 @@ export default function CertificadosPage() {
       //    solo usar la superplantilla actual como respaldo si no existe snapshot previo.
       const orientacionDefecto = (tipoEsperado === 'CURSO' || tipoEsperado === 'TALLER') ? 'vertical' : 'horizontal';
       const orientacionFinal = snap?.orientacion || modeloSuperplantilla?.orientacion || orientacionDefecto;
-      const fondoFinal = snap?.imagenFondoUrl !== undefined
-        ? snap.imagenFondoUrl
-        : (modeloSuperplantilla?.imagenFondoUrl ||
+      const fondoFinal = snap?.imagenFondoUrl || modeloSuperplantilla?.imagenFondoUrl ||
             (orientacionFinal === 'vertical'
               ? 'https://wluuomwkxywpfotbngwf.supabase.co/storage/v1/object/public/certificados/fondos/plantilla_1792606225470_g6hsm1j.webp'
               : (tipoEsperado === 'DIPLOMA'
                   ? '/assets/certificates/plantilla_avanza_diploma_bg.png'
-                  : '/assets/certificates/plantilla_avanza_modular_bg.png')));
+                  : '/assets/certificates/plantilla_avanza_modular_bg.png'));
 
       const coordsFinal = snap?.disenoCoordenadas || modeloSuperplantilla?.disenoCoordenadas || null;
       const incluyeQrFinal = snap?.incluyeQr !== undefined
@@ -436,6 +469,9 @@ export default function CertificadosPage() {
       return {
         ...(modeloSuperplantilla || {}),
         ...(snap || {}),
+        estudiante_nombre: certDb?.estudiante_nombre || null,
+        codigo_verificacion: certDb?.codigo_verificacion || null,
+        programa_titulo: certDb?.programa_titulo || null,
         orientacion: orientacionFinal,
         imagenFondoUrl: fondoFinal,
         disenoCoordenadas: coordsFinal,
@@ -456,6 +492,9 @@ export default function CertificadosPage() {
     : 'Estudiante EDUMIN';
 
   const paqueteUsuario = perfilEstudiante?.paquete_adquirido || 'COMPLETO';
+  const configPaqueteEstudiante = paquetesConfig[String(paqueteUsuario).toUpperCase()] || paquetesConfig['COMPLETO'] || null;
+  const incluyeDreambuilderEstudiante = configPaqueteEstudiante?.dreambuilder !== false;
+  const dreambuilderUrl = process.env.NEXT_PUBLIC_DREAMBUILDER_URL ?? "https://dreambuilder.com";
 
   // Reglas financieras centralizadas para emisión de certificados (cuotas pagadas vs saldo pendiente)
   const reglasCertificados = useMemo(() => {
@@ -483,8 +522,8 @@ export default function CertificadosPage() {
       const sumaNotas = modulosAprobadosEval.reduce((sum, e) => sum + e.nota, 0);
       const promedio = modularesAprobados > 0 ? Number((sumaNotas / modularesAprobados).toFixed(1)) : 0;
 
-      // Buscar si ya tiene certificado oficial de diploma en DB
-      const certDbDip = certificadosEmitidosDb.find(c => c.tipo === 'DIPLOMA' && c.programa_titulo?.toLowerCase() === d.titulo?.toLowerCase());
+      // Buscar si ya tiene certificado oficial de diploma en DB (búsqueda flexible por título equivalente)
+      const certDbDip = certificadosEmitidosDb.find(c => c.tipo === 'DIPLOMA' && sonProgramasEquivalentes(c.programa_titulo, d.titulo));
 
       // REGLA ACADÉMICA + FINANCIERA:
       // 1) Aprobar todos los módulos del diplomado
@@ -495,7 +534,7 @@ export default function CertificadosPage() {
 
       return {
         id: d.id || d.slug || `dip-${idx + 1}`,
-        titulo: d.titulo || 'Diplomado',
+        titulo: certDbDip?.programa_titulo || d.titulo || 'Diplomado',
         modularesAprobados,
         modularesTotales,
         promedio: certDbDip?.nota_final !== undefined && certDbDip.nota_final !== null ? Number(certDbDip.nota_final) : (d.promedio || promedio),
@@ -505,8 +544,30 @@ export default function CertificadosPage() {
         horas: certDbDip?.horas_lectivas || d.horas || '325 horas académicas y 13 créditos académicos',
         modelo_id: certDbDip?.plantilla_snapshot?.modelo_id || (d as any).modelo_id || 'mod-avanza-dip',
         fecha: certDbDip?.fecha_emision ? String(certDbDip.fecha_emision) : (d.fecha || '15/03/2026'),
-        codigo: certDbDip?.codigo_verificacion || d.codigo || `EDUMIN-DIP-${perfilEstudiante.dni_ce || '71234567'}-${(d.id || 'DIP').substring(0, 3).toUpperCase()}`
+        codigo: certDbDip?.codigo_verificacion || d.codigo || `EDUMIN-DIP-${perfilEstudiante.dni_ce || '71234567'}-${(d.id || 'DIP').substring(0, 3).toUpperCase()}`,
+        plantilla_snapshot: certDbDip?.plantilla_snapshot || null
       };
+    });
+
+    // B. Añadir cualquier diploma oficial emitido en BD que no estuviera ya en el listado
+    certificadosEmitidosDb.forEach((cd: any, idx: number) => {
+      if (cd.tipo === 'DIPLOMA' && !mapeados.some((m: any) => m.codigo === cd.codigo_verificacion || sonProgramasEquivalentes(m.titulo, cd.programa_titulo))) {
+        mapeados.push({
+          id: cd.id || `db-dip-${idx + 1}`,
+          titulo: cd.programa_titulo || 'Diplomado',
+          modularesAprobados: 3,
+          modularesTotales: 3,
+          promedio: cd.nota_final !== undefined && cd.nota_final !== null ? Number(cd.nota_final) : 18,
+          aprobadoAcademico: true,
+          bloqueadoPorCuota: !reglasCertificados.sinRestriccionPago,
+          completado: reglasCertificados.sinRestriccionPago,
+          horas: cd.horas_lectivas || '325 horas académicas y 13 créditos académicos',
+          modelo_id: cd.plantilla_snapshot?.modelo_id || 'mod-avanza-dip',
+          fecha: cd.fecha_emision ? String(cd.fecha_emision) : '15/03/2026',
+          codigo: cd.codigo_verificacion,
+          plantilla_snapshot: cd.plantilla_snapshot || null
+        });
+      }
     });
 
     const prioridadPeso = (d: any) => (d.completado ? 0 : d.bloqueadoPorCuota ? 1 : 2);
@@ -739,21 +800,26 @@ export default function CertificadosPage() {
             ? '108 horas académicas'
             : '24 horas académicas';
 
+      const docDni = (perfilEstudiante?.dni_ce || perfilEstudiante?.dni || '').trim();
+      const sufijoDoc = docDni ? `_${docDni}` : '';
+      const cod = certParams.codigo || 'EDUMIN';
+
       await descargarCertificadoA4Pdf(
         {
           tipo: tipoPdf,
-          estudiante: nombreEstudianteCompleto || 'ESTUDIANTE EDUMIN',
-          programa: certParams.tipo === 'Modular' ? (certParams.subtitulo || certParams.titulo) : certParams.titulo,
+          estudiante: modelo.estudiante_nombre || nombreEstudianteCompleto || 'ESTUDIANTE EDUMIN',
+          programa: certParams.tipo === 'Modular' ? (certParams.subtitulo || certParams.titulo) : (modelo.programa_titulo || certParams.titulo),
           modulo: certParams.tipo === 'Modular' ? certParams.titulo : undefined,
           horas: certParams.horas || modelo.horas || defaultHoras,
           fecha: certParams.fecha,
-          codigo: certParams.codigo,
+          codigo: cod,
+          dni: docDni,
           orientacion: modelo.orientacion,
           imagenFondoUrl: modelo.imagenFondoUrl,
           diseno: modelo.disenoCoordenadas,
           incluyeQr: modelo.incluyeQr !== false
         },
-        `Certificado_${certParams.codigo || 'EDUMIN'}_A4.pdf`
+        `Certificado_${cod}${sufijoDoc}.pdf`
       );
     } catch (e) {
       console.error('Error al descargar certificado:', e);
@@ -889,13 +955,13 @@ export default function CertificadosPage() {
       id: 'CONVENIOS' as TabTipo,
       label: 'Certificados adicionales',
       icon: Globe,
-      badge: 2,
+      badge: incluyeDreambuilderEstudiante ? 3 : 2,
     };
     const tabTodos = {
       id: 'TODOS' as TabTipo,
       label: 'Todos',
       icon: LayoutGrid,
-      badge: diplomadosVisibles.length + totalModularesCount + totalCursosCount,
+      badge: diplomadosVisibles.length + totalModularesCount + totalCursosCount + (incluyeDreambuilderEstudiante ? 3 : 2),
     };
 
     const tieneDiplomaCompleto = diplomadosVisibles.some(
@@ -910,7 +976,7 @@ export default function CertificadosPage() {
       return [tabModulares, tabDiplomas, tabCursos, tabConvenios, tabTodos];
     }
     return [tabCursos, tabModulares, tabDiplomas, tabConvenios, tabTodos];
-  }, [diplomadosVisibles, totalModularesCount, totalCursosCount]);
+  }, [diplomadosVisibles, totalModularesCount, totalCursosCount, incluyeDreambuilderEstudiante]);
 
   useEffect(() => {
     if (!loading && !tabInicialAplicadaRef.current && tabsOrdenadas.length > 0) {
@@ -1038,7 +1104,14 @@ export default function CertificadosPage() {
                   });
                   /* DIPLOMA HABILITADO 100% */
                   return (
-                    <div key={dip.id} className="border border-indigo-500/30 rounded-2xl overflow-hidden bg-gradient-to-br from-indigo-950 via-slate-900 to-slate-950 text-white relative flex flex-col justify-between shadow-lg">
+                    <div 
+                      key={dip.id} 
+                      className={`rounded-2xl overflow-hidden relative flex flex-col justify-between transition-all border ${
+                        esOscuro
+                          ? 'bg-slate-900/80 border-slate-800 hover:border-indigo-500/40'
+                          : 'bg-white border-slate-200 hover:border-indigo-300 shadow-sm'
+                      }`}
+                    >
                       <CertificadoMiniatura
                         tipo="DIPLOMA"
                         orientacion={modeloDip.orientacion}
@@ -1051,28 +1124,28 @@ export default function CertificadosPage() {
                         diseno={modeloDip.disenoCoordenadas}
                         incluyeQr={modeloDip.incluyeQr !== false}
                         onPreview={abrirPreviewDip}
-                        esOscuro={true}
+                        esOscuro={esOscuro}
                       />
 
                       <div className="p-5 flex-1 flex flex-col justify-between gap-4">
                         <div className="space-y-2.5">
                           <div className="flex items-center justify-between gap-2">
-                            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-500 border border-emerald-500/25">
                               <CheckCircle2 className="size-3 shrink-0" /> Habilitado
                             </span>
                             {formatearNotaCertificado(dip.promedio) && (
-                              <span className="bg-emerald-500/15 text-emerald-300 border border-emerald-500/25 font-bold px-2.5 py-0.5 rounded-lg text-[11px] tabular-nums shrink-0">
+                              <span className="bg-emerald-500/15 text-emerald-500 border border-emerald-500/25 font-bold px-2.5 py-0.5 rounded-lg text-[11px] tabular-nums shrink-0">
                                 Nota: {formatearNotaCertificado(dip.promedio)}
                               </span>
                             )}
                           </div>
-                          <h3 title={dip.titulo} className="text-sm font-bold uppercase leading-snug line-clamp-2 min-h-[2.45rem] text-white">
+                          <h3 title={dip.titulo} className={`text-sm font-bold uppercase leading-snug line-clamp-2 min-h-[2.45rem] ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
                             {dip.titulo}
                           </h3>
-                          <div className="text-[11px] text-indigo-200/80 space-y-1">
+                          <div className={`text-[11px] space-y-1 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
                             {filasDip.map((fila) => (
                               <p key={fila.label} className={fila.mono ? 'tabular-nums truncate' : 'truncate'}>
-                                <span className="text-indigo-200/60">{fila.label}:</span> {fila.value}
+                                {fila.label}: {fila.value}
                               </p>
                             ))}
                           </div>
@@ -1081,7 +1154,11 @@ export default function CertificadosPage() {
                         <div className="flex items-center gap-2 pt-1">
                           <button
                             onClick={abrirPreviewDip}
-                            className="bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold px-3 py-2.5 rounded-xl text-xs transition-colors border border-slate-700 cursor-pointer flex items-center justify-center"
+                            className={`px-3 py-2.5 rounded-xl text-xs font-bold transition-colors border cursor-pointer flex items-center justify-center ${
+                              esOscuro
+                                ? 'bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700'
+                                : 'bg-white hover:bg-slate-100 text-slate-700 border-slate-300'
+                            }`}
                             title="Vista Previa"
                           >
                             <Eye className="w-4 h-4" />
@@ -1117,7 +1194,7 @@ export default function CertificadosPage() {
                   });
                   /* DIPLOMA APROBADO ACADÉMICAMENTE, BLOQUEADO POR CUOTA PENDIENTE */
                   return (
-                    <div key={dip.id} className={`border rounded-2xl overflow-hidden relative flex flex-col justify-between ${esOscuro ? 'bg-slate-900/90 border-purple-500/30' : 'bg-white border-purple-200 shadow-sm'}`}>
+                    <div key={dip.id} className={`rounded-2xl overflow-hidden relative flex flex-col justify-between transition-all border ${esOscuro ? 'bg-slate-900/80 border-slate-800' : 'bg-white border-slate-200 shadow-sm'}`}>
                       <CertificadoMiniatura
                         tipo="DIPLOMA"
                         orientacion={modeloDip.orientacion}
@@ -1233,7 +1310,7 @@ export default function CertificadosPage() {
               </span>
             </div>
 
-            {/* Contenido Modular con Acordeón Desplegable por Diplomado */}
+            {/* Contenido Modular limpio con divisor por Diplomado al mismo nivel de cuadrícula */}
             {Object.keys(modularesPorDiplomado).length === 0 ? (
               <div className={`text-center py-10 px-6 rounded-2xl border ${
                 esOscuro ? 'bg-slate-900/60 border-slate-800 text-slate-400' : 'bg-white border-slate-200 text-slate-500'
@@ -1247,23 +1324,12 @@ export default function CertificadosPage() {
                 </p>
               </div>
             ) : (
-              <div className="space-y-6 pt-2">
+              <div className="space-y-8 pt-2">
                 {Object.entries(modularesPorDiplomado).map(([diplomadoNombre, modulares]) => {
-                  const estaAbierto = modularesAbiertos[diplomadoNombre] !== false;
                   return (
-                    <div 
-                      key={diplomadoNombre} 
-                      className={`rounded-2xl border overflow-hidden transition-all ${
-                        esOscuro ? 'bg-slate-900/80 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
-                      }`}
-                    >
-                      {/* Cabecera desplegable de Diplomado */}
-                      <button
-                        onClick={() => toggleModularesDiplomado(diplomadoNombre)}
-                        className={`w-full p-4 sm:p-5 flex items-center justify-between transition text-left cursor-pointer ${
-                          estaAbierto ? 'border-b border-slate-200 dark:border-slate-800/60' : ''
-                        } ${esOscuro ? 'hover:bg-slate-800/40' : 'hover:bg-slate-50'}`}
-                      >
+                    <div key={diplomadoNombre} className="space-y-4">
+                      {/* Cabecera limpia de diplomado sin caja envolvente */}
+                      <div className="flex items-center justify-between gap-3 pb-2 border-b border-slate-100 dark:border-slate-800/80">
                         <div className="flex items-center gap-2">
                           <GraduationCap className="size-4 shrink-0 text-indigo-500" />
                           <h3 className={`text-xs sm:text-sm font-bold uppercase tracking-wide ${esOscuro ? 'text-indigo-400' : 'text-indigo-600'}`}>
@@ -1271,171 +1337,164 @@ export default function CertificadosPage() {
                           </h3>
                         </div>
 
-                        <div className="flex items-center gap-3">
-                          <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
-                            {modulares.length} Módulo(s) Aprobado(s)
-                          </span>
-                          <div className="text-slate-400">
-                            {estaAbierto ? <ChevronUp className="size-4" /> : <ChevronDown className="size-4" />}
-                          </div>
-                        </div>
-                      </button>
+                        <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                          {modulares.length} Módulo(s) Aprobado(s)
+                        </span>
+                      </div>
 
-                      {/* Tarjetas de certificados modulares del diplomado */}
-                      {estaAbierto && (
-                        <div className="p-4 sm:p-5 grid grid-cols-1 md:grid-cols-3 gap-5">
-                          {modulares.map((cert) => {
-                            const whatsappCuotaModUrl = `https://wa.me/51984512809?text=${encodeURIComponent(
-                              `Hola EDUMIN, aprobé "${cert.modulo}" en ${cert.diplomado} y deseo orientación para pagar mi cuota ${cert.cuotaRequerida} y habilitar este certificado modular.`
-                            )}`;
-                            const modeloMod = resolverModeloParaCertificado({
-                              tipo: 'Modular',
+                      {/* Tarjetas de certificados modulares alineadas directamente con el grid de los demás certificados */}
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {modulares.map((cert) => {
+                          const whatsappCuotaModUrl = `https://wa.me/51984512809?text=${encodeURIComponent(
+                            `Hola EDUMIN, aprobé "${cert.modulo}" en ${cert.diplomado} y deseo orientación para pagar mi cuota ${cert.cuotaRequerida} y habilitar este certificado modular.`
+                          )}`;
+                          const modeloMod = resolverModeloParaCertificado({
+                            tipo: 'Modular',
+                            titulo: cert.modulo,
+                            codigo: cert.codigo,
+                            horas: cert.horas,
+                            modelo_id: cert.modelo_id,
+                          });
+                          const abrirPreviewMod = () =>
+                            abrirVistaPrevia({
                               titulo: cert.modulo,
-                              codigo: cert.codigo,
-                              horas: cert.horas,
-                              modelo_id: cert.modelo_id,
-                            });
-                            const abrirPreviewMod = () =>
-                              abrirVistaPrevia({
-                                titulo: cert.modulo,
-                                subtitulo: cert.diplomado,
-                                categoria: 'Certificado Modular (PAE)',
-                                fecha: cert.fecha,
-                                horas: cert.horas,
-                                codigo: cert.codigo,
-                                modelo_id: cert.modelo_id,
-                                nota: cert.nota,
-                                tipo: 'Modular',
-                              });
-
-                            const filasMod = obtenerMetadatosTarjeta({
-                              modelo: modeloMod,
-                              horas: cert.horas,
+                              subtitulo: cert.diplomado,
+                              categoria: 'Certificado Modular (PAE)',
                               fecha: cert.fecha,
+                              horas: cert.horas,
                               codigo: cert.codigo,
-                              esDiploma: false,
-                              bloqueadoPorCuota: Boolean(cert.bloqueadoPorCuota),
+                              modelo_id: cert.modelo_id,
+                              nota: cert.nota,
+                              tipo: 'Modular',
                             });
 
-                            return (
-                              <div
-                                key={cert.id}
-                                className={`rounded-2xl overflow-hidden border flex flex-col justify-between transition-all ${
-                                  cert.bloqueadoPorCuota
-                                    ? esOscuro
-                                      ? 'bg-slate-950/60 border-purple-500/30'
-                                      : 'bg-purple-50/30 border-purple-200'
-                                    : esOscuro
-                                      ? 'bg-slate-950/50 border-slate-800 hover:border-indigo-500/40'
-                                      : 'bg-white border-slate-200 hover:border-indigo-300 shadow-xs'
-                                }`}
-                              >
-                                <CertificadoMiniatura
-                                  tipo="MODULAR"
-                                  orientacion={modeloMod.orientacion}
-                                  estudiante={nombreEstudianteCompleto || 'ESTUDIANTE EDUMIN'}
-                                  programa={cert.diplomado}
-                                  modulo={cert.modulo}
-                                  horas={cert.horas}
-                                  fecha={cert.fecha}
-                                  codigo={cert.codigo}
-                                  imagenFondoUrl={modeloMod.imagenFondoUrl}
-                                  diseno={modeloMod.disenoCoordenadas}
-                                  incluyeQr={modeloMod.incluyeQr !== false}
-                                  bloqueadoPorCuota={cert.bloqueadoPorCuota}
-                                  onPreview={cert.bloqueadoPorCuota ? undefined : abrirPreviewMod}
-                                  esOscuro={esOscuro}
-                                />
+                          const filasMod = obtenerMetadatosTarjeta({
+                            modelo: modeloMod,
+                            horas: cert.horas,
+                            fecha: cert.fecha,
+                            codigo: cert.codigo,
+                            esDiploma: false,
+                            bloqueadoPorCuota: Boolean(cert.bloqueadoPorCuota),
+                          });
 
-                                <div className="p-5 flex-1 flex flex-col justify-between gap-4">
-                                  <div className="space-y-2.5">
-                                    <div className="flex items-center justify-between gap-2">
-                                      {cert.bloqueadoPorCuota ? (
-                                        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-purple-600 text-white border border-purple-400/30">
-                                          <Lock className="size-3 shrink-0" /> Bloqueado por cuota
-                                        </span>
-                                      ) : (
-                                        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-500 border border-emerald-500/25">
-                                          <CheckCircle2 className="size-3 shrink-0" /> Habilitado
-                                        </span>
-                                      )}
+                          return (
+                            <div
+                              key={cert.id}
+                              className={`rounded-2xl overflow-hidden border flex flex-col justify-between transition-all ${
+                                cert.bloqueadoPorCuota
+                                  ? esOscuro
+                                    ? 'bg-slate-900/80 border-slate-800'
+                                    : 'bg-white border-slate-200 shadow-sm'
+                                  : esOscuro
+                                    ? 'bg-slate-900/80 border-slate-800 hover:border-indigo-500/40'
+                                    : 'bg-white border-slate-200 hover:border-indigo-300 shadow-sm'
+                              }`}
+                            >
+                              <CertificadoMiniatura
+                                tipo="MODULAR"
+                                orientacion={modeloMod.orientacion}
+                                estudiante={nombreEstudianteCompleto || 'ESTUDIANTE EDUMIN'}
+                                programa={cert.diplomado}
+                                modulo={cert.modulo}
+                                horas={cert.horas}
+                                fecha={cert.fecha}
+                                codigo={cert.codigo}
+                                imagenFondoUrl={modeloMod.imagenFondoUrl}
+                                diseno={modeloMod.disenoCoordenadas}
+                                incluyeQr={modeloMod.incluyeQr !== false}
+                                bloqueadoPorCuota={cert.bloqueadoPorCuota}
+                                onPreview={cert.bloqueadoPorCuota ? undefined : abrirPreviewMod}
+                                esOscuro={esOscuro}
+                              />
 
-                                      {formatearNotaCertificado(cert.nota) && (
-                                        <span className="bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 font-bold px-2.5 py-0.5 rounded-lg text-[11px] tabular-nums shrink-0">
-                                          Nota: {formatearNotaCertificado(cert.nota)}
-                                        </span>
-                                      )}
-                                    </div>
+                              <div className="p-5 flex-1 flex flex-col justify-between gap-4">
+                                <div className="space-y-2.5">
+                                  <div className="flex items-center justify-between gap-2">
+                                    {cert.bloqueadoPorCuota ? (
+                                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-purple-600 text-white border border-purple-400/30">
+                                        <Lock className="size-3 shrink-0" /> Bloqueado por cuota
+                                      </span>
+                                    ) : (
+                                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-500 border border-emerald-500/25">
+                                        <CheckCircle2 className="size-3 shrink-0" /> Habilitado
+                                      </span>
+                                    )}
 
-                                    <h3 title={cert.modulo} className={`text-sm font-bold uppercase leading-snug line-clamp-2 min-h-[2.45rem] ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                                      {cert.modulo}
-                                    </h3>
-
-                                    <div className={`text-[11px] space-y-1 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                                      {filasMod.map((fila) => (
-                                        <p key={fila.label} className={fila.mono ? 'tabular-nums truncate' : 'truncate'}>
-                                          {fila.label}: {fila.value}
-                                        </p>
-                                      ))}
-                                    </div>
-
-                                    {cert.bloqueadoPorCuota && (
-                                      <p className={`text-[11px] font-semibold p-2.5 rounded-xl border leading-snug ${
-                                        esOscuro
-                                          ? 'bg-purple-950/30 border-purple-500/25 text-purple-300'
-                                          : 'bg-purple-50 border-purple-200 text-purple-800'
-                                      }`}>
-                                        Se habilitará automáticamente con tu cuota {cert.cuotaRequerida} de {reglasCertificados.cuotasTotales}.
-                                      </p>
+                                    {formatearNotaCertificado(cert.nota) && (
+                                      <span className="bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 font-bold px-2.5 py-0.5 rounded-lg text-[11px] tabular-nums shrink-0">
+                                        Nota: {formatearNotaCertificado(cert.nota)}
+                                      </span>
                                     )}
                                   </div>
 
-                                  {cert.bloqueadoPorCuota ? (
-                                    <a
-                                      href={whatsappCuotaModUrl}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      className="w-full inline-flex items-center justify-center gap-1.5 bg-purple-600 hover:bg-purple-700 text-white px-3.5 py-2.5 rounded-xl text-xs font-bold transition-all shadow-sm shadow-purple-600/20 cursor-pointer"
-                                    >
-                                      <Lock className="w-3.5 h-3.5" />
-                                      <span>Pagar cuota</span>
-                                      <ArrowRight className="w-3.5 h-3.5" />
-                                    </a>
-                                  ) : (
-                                    <div className="flex items-center gap-2 pt-1">
-                                      <button
-                                        onClick={abrirPreviewMod}
-                                        className={`px-3 py-2 rounded-xl text-xs font-bold transition-all border cursor-pointer inline-flex items-center justify-center ${
-                                          esOscuro
-                                            ? 'bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700'
-                                            : 'bg-white hover:bg-slate-100 text-slate-700 border-slate-300 shadow-2xs'
-                                        }`}
-                                        title="Vista Previa"
-                                      >
-                                        <Eye className="w-3.5 h-3.5" />
-                                      </button>
-                                      <button
-                                        onClick={() => descargarCertificadoDirecto({
-                                          tipo: 'Modular',
-                                          titulo: cert.modulo,
-                                          subtitulo: cert.diplomado,
-                                          horas: cert.horas,
-                                          fecha: cert.fecha,
-                                          codigo: cert.codigo,
-                                          modelo_id: cert.modelo_id
-                                        })}
-                                        className="flex-1 inline-flex items-center justify-center gap-1.5 bg-indigo-600 hover:bg-indigo-500 text-white px-3.5 py-2 rounded-xl text-xs font-bold transition-all shadow-sm cursor-pointer"
-                                      >
-                                        <Download className="w-3.5 h-3.5" /> Descargar
-                                      </button>
-                                    </div>
+                                  <h3 title={cert.modulo} className={`text-sm font-bold uppercase leading-snug line-clamp-2 min-h-[2.45rem] ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                                    {cert.modulo}
+                                  </h3>
+
+                                  <div className={`text-[11px] space-y-1 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
+                                    {filasMod.map((fila) => (
+                                      <p key={fila.label} className={fila.mono ? 'tabular-nums truncate' : 'truncate'}>
+                                        {fila.label}: {fila.value}
+                                      </p>
+                                    ))}
+                                  </div>
+
+                                  {cert.bloqueadoPorCuota && (
+                                    <p className={`text-[11px] font-semibold p-2.5 rounded-xl border leading-snug ${
+                                      esOscuro
+                                        ? 'bg-purple-950/30 border-purple-500/25 text-purple-300'
+                                        : 'bg-purple-50 border-purple-200 text-purple-800'
+                                    }`}>
+                                      Se habilitará automáticamente con tu cuota {cert.cuotaRequerida} de {reglasCertificados.cuotasTotales}.
+                                    </p>
                                   )}
                                 </div>
+
+                                {cert.bloqueadoPorCuota ? (
+                                  <a
+                                    href={whatsappCuotaModUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-full inline-flex items-center justify-center gap-1.5 bg-purple-600 hover:bg-purple-700 text-white px-3.5 py-2.5 rounded-xl text-xs font-bold transition-all shadow-sm shadow-purple-600/20 cursor-pointer"
+                                  >
+                                    <Lock className="w-3.5 h-3.5" />
+                                    <span>Pagar cuota</span>
+                                    <ArrowRight className="w-3.5 h-3.5" />
+                                  </a>
+                                ) : (
+                                  <div className="flex items-center gap-2 pt-1">
+                                    <button
+                                      onClick={abrirPreviewMod}
+                                      className={`px-3 py-2.5 rounded-xl text-xs font-bold transition-all border cursor-pointer inline-flex items-center justify-center ${
+                                        esOscuro
+                                          ? 'bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700'
+                                          : 'bg-white hover:bg-slate-100 text-slate-700 border-slate-300'
+                                      }`}
+                                      title="Vista Previa"
+                                    >
+                                      <Eye className="w-4 h-4" />
+                                    </button>
+                                    <button
+                                      onClick={() => descargarCertificadoDirecto({
+                                        tipo: 'Modular',
+                                        titulo: cert.modulo,
+                                        subtitulo: cert.diplomado,
+                                        horas: cert.horas,
+                                        fecha: cert.fecha,
+                                        codigo: cert.codigo,
+                                        modelo_id: cert.modelo_id
+                                      })}
+                                      className="flex-1 inline-flex items-center justify-center gap-1.5 bg-indigo-600 hover:bg-indigo-500 text-white px-3.5 py-2.5 rounded-xl text-xs font-bold transition-all shadow-sm cursor-pointer"
+                                    >
+                                      <Download className="w-3.5 h-3.5" /> Descargar
+                                    </button>
+                                  </div>
+                                )}
                               </div>
-                            );
-                          })}
-                        </div>
-                      )}
+                            </div>
+                          );
+                        })}
+                      </div>
                     </div>
                   );
                 })}
@@ -1596,110 +1655,156 @@ export default function CertificadosPage() {
               </h2>
 
               <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
-                2 convenios
+                {incluyeDreambuilderEstudiante ? '3 certificaciones adicionales' : '2 convenios'}
               </span>
             </div>
 
-            {/* Grid de Convenios en 3 columnas (compactos cuando aún no tiene Diploma General) */}
+            {/* Grid de Convenios y Certificaciones Adicionales en 3 columnas */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
               
               {/* Tarjeta CIP */}
-              <div className={`shadow-lg relative overflow-hidden flex flex-col justify-between border transition-all ${
+              <div className={`rounded-2xl overflow-hidden border flex flex-col justify-between transition-all ${
                 tieneDiplomaGeneral 
-                  ? 'rounded-3xl p-6 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 border-slate-800 text-white' 
-                  : `rounded-2xl p-5 ${esOscuro ? 'bg-slate-900/60 border-slate-800/80 text-white' : 'bg-white border-slate-200 shadow-sm text-slate-900'}`
+                  ? (esOscuro 
+                      ? 'bg-slate-900/80 border-slate-800 hover:border-indigo-500/40' 
+                      : 'bg-white border-slate-200 hover:border-indigo-300 shadow-sm')
+                  : (esOscuro 
+                      ? 'bg-slate-950/60 border-slate-800/80' 
+                      : 'bg-slate-50/80 border-slate-200 shadow-2xs')
               }`}>
-                <div>
-                  <div className="flex justify-between items-start mb-3">
+                <div className="p-5 space-y-2.5">
+                  <div className="flex justify-between items-start">
                     {tieneDiplomaGeneral ? (
-                      <span className="text-[11px] font-bold text-emerald-400 bg-emerald-500/20 border border-emerald-500/30 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                      <span className="text-[11px] font-bold text-emerald-500 bg-emerald-500/15 border border-emerald-500/25 px-2.5 py-0.5 rounded-full flex items-center gap-1">
                         <CheckCircle2 className="size-3" /> Habilitado
                       </span>
                     ) : (
-                      <span className="text-[11px] font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                      <span className="text-[11px] font-bold text-amber-500 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full flex items-center gap-1">
                         <Lock className="size-3" /> Bloqueado
                       </span>
                     )}
                   </div>
-                  <h3 className={`font-bold leading-snug ${tieneDiplomaGeneral ? 'text-lg text-white' : `text-sm ${esOscuro ? 'text-white' : 'text-slate-900'}`}`}>
+                  <h3 className={`text-sm font-bold uppercase leading-snug line-clamp-2 min-h-[2.45rem] ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
                     Colegio de Ingenieros del Perú (CIP)
                   </h3>
-                  <p className={`mt-2 leading-relaxed ${tieneDiplomaGeneral ? 'text-slate-300 text-xs sm:text-sm' : `text-xs ${esOscuro ? 'text-slate-400' : 'text-slate-600'}`}`}>
+                  <p className={`text-xs leading-relaxed ${esOscuro ? 'text-slate-400' : 'text-slate-600'}`}>
                     Acreditación respaldada institucionalmente por el CIP para validar tus horas lectivas y especialización profesional.
                   </p>
                   {!tieneDiplomaGeneral && (
-                    <p className="text-[11px] text-amber-400 mt-3 font-medium flex items-center gap-1.5 bg-amber-500/10 p-2 rounded-xl border border-amber-500/20">
+                    <p className="text-[11px] text-amber-500 mt-2 font-medium flex items-center gap-1.5 bg-amber-500/10 p-2 rounded-xl border border-amber-500/20">
                       <AlertTriangle className="size-3.5 shrink-0" />
                       Requisito: obtén primero tu Diploma General.
                     </p>
                   )}
                 </div>
 
-                <button
-                  onClick={() => abrirModal('CIP')}
-                  disabled={!tieneDiplomaGeneral}
-                  className={`mt-5 w-full font-bold py-2.5 rounded-xl transition-all flex items-center justify-center gap-2 text-xs ${
-                    tieneDiplomaGeneral 
-                      ? 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-md cursor-pointer' 
-                      : `${esOscuro ? 'bg-slate-800 text-slate-500 border-slate-700' : 'bg-slate-100 text-slate-400 border-slate-200'} cursor-not-allowed border`
-                  }`}
-                >
-                  <ShieldCheck className="w-4 h-4" /> 
-                  {tieneDiplomaGeneral ? 'Solicitar Certificación CIP' : 'Disponible al completar diplomado'}
-                </button>
+                <div className="p-5 pt-0">
+                  <button
+                    onClick={() => abrirModal('CIP')}
+                    disabled={!tieneDiplomaGeneral}
+                    className={`w-full font-bold py-2.5 rounded-xl transition-all flex items-center justify-center gap-2 text-xs ${
+                      tieneDiplomaGeneral 
+                        ? 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-sm cursor-pointer' 
+                        : `${esOscuro ? 'bg-slate-800 text-slate-500 border-slate-700' : 'bg-slate-100 text-slate-400 border-slate-200'} cursor-not-allowed border`
+                    }`}
+                  >
+                    <ShieldCheck className="w-4 h-4" /> 
+                    {tieneDiplomaGeneral ? 'Solicitar Certificación CIP' : 'Disponible al completar diplomado'}
+                  </button>
+                </div>
               </div>
 
               {/* Tarjeta MIAMI */}
-              <div className={`shadow-lg relative overflow-hidden flex flex-col justify-between border transition-all ${
+              <div className={`rounded-2xl overflow-hidden border flex flex-col justify-between transition-all ${
                 tieneDiplomaGeneral 
-                  ? 'rounded-3xl p-6 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 border-slate-800 text-white' 
-                  : `rounded-2xl p-5 ${esOscuro ? 'bg-slate-900/60 border-slate-800/80 text-white' : 'bg-white border-slate-200 shadow-sm text-slate-900'}`
+                  ? (esOscuro 
+                      ? 'bg-slate-900/80 border-slate-800 hover:border-indigo-500/40' 
+                      : 'bg-white border-slate-200 hover:border-indigo-300 shadow-sm')
+                  : (esOscuro 
+                      ? 'bg-slate-950/60 border-slate-800/80' 
+                      : 'bg-slate-50/80 border-slate-200 shadow-2xs')
               }`}>
-                <div>
-                  <div className="flex justify-between items-start mb-3">
+                <div className="p-5 space-y-2.5">
+                  <div className="flex justify-between items-start">
                     {tieneDiplomaGeneral ? (
-                      <span className="text-[11px] font-bold text-emerald-400 bg-emerald-500/20 border border-emerald-500/30 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                      <span className="text-[11px] font-bold text-emerald-500 bg-emerald-500/15 border border-emerald-500/25 px-2.5 py-0.5 rounded-full flex items-center gap-1">
                         <CheckCircle2 className="size-3" /> Habilitado
                       </span>
                     ) : (
-                      <span className="text-[11px] font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                      <span className="text-[11px] font-bold text-amber-500 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full flex items-center gap-1">
                         <Lock className="size-3" /> Bloqueado
                       </span>
                     )}
                   </div>
-                  <h3 className={`font-bold leading-snug ${tieneDiplomaGeneral ? 'text-lg text-white' : `text-sm ${esOscuro ? 'text-white' : 'text-slate-900'}`}`}>
+                  <h3 className={`text-sm font-bold uppercase leading-snug line-clamp-2 min-h-[2.45rem] ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
                     San Ignacio University (Miami, FL)
                   </h3>
-                  <p className={`mt-2 leading-relaxed ${tieneDiplomaGeneral ? 'text-slate-300 text-xs sm:text-sm' : `text-xs ${esOscuro ? 'text-slate-400' : 'text-slate-600'}`}`}>
+                  <p className={`text-xs leading-relaxed ${esOscuro ? 'text-slate-400' : 'text-slate-600'}`}>
                     Certificación académica internacional expedida desde EE.UU. con validez global en tu programa de alta especialización.
                   </p>
 
                   {!tieneDiplomaGeneral && (
-                    <p className="text-[11px] text-amber-400 mt-3 font-medium flex items-center gap-1.5 bg-amber-500/10 p-2 rounded-xl border border-amber-500/20">
+                    <p className="text-[11px] text-amber-500 mt-2 font-medium flex items-center gap-1.5 bg-amber-500/10 p-2 rounded-xl border border-amber-500/20">
                       <AlertTriangle className="size-3.5 shrink-0" />
                       Requisito: obtén primero tu Diploma General.
                     </p>
                   )}
                 </div>
 
-                {tieneDiplomaGeneral ? (
-                  <button
-                    onClick={() => abrirModal('MIAMI')}
-                    className="mt-5 w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 text-xs cursor-pointer"
-                  >
-                    <Globe className="w-4 h-4" /> Solicitar Certificación MIAMI
-                  </button>
-                ) : (
-                  <button
-                    disabled
-                    className={`mt-5 w-full font-bold py-2.5 rounded-xl border flex items-center justify-center gap-2 text-xs cursor-not-allowed ${
-                      esOscuro ? 'bg-slate-800 text-slate-500 border-slate-700' : 'bg-slate-100 text-slate-400 border-slate-200'
-                    }`}
-                  >
-                    <Globe className="w-4 h-4" /> Disponible al completar diplomado
-                  </button>
-                )}
+                <div className="p-5 pt-0">
+                  {tieneDiplomaGeneral ? (
+                    <button
+                      onClick={() => abrirModal('MIAMI')}
+                      className="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2.5 rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 text-xs cursor-pointer"
+                    >
+                      <Globe className="w-4 h-4" /> Solicitar Certificación MIAMI
+                    </button>
+                  ) : (
+                    <button
+                      disabled
+                      className={`w-full font-bold py-2.5 rounded-xl border flex items-center justify-center gap-2 text-xs cursor-not-allowed ${
+                        esOscuro ? 'bg-slate-800 text-slate-500 border-slate-700' : 'bg-slate-100 text-slate-400 border-slate-200'
+                      }`}
+                    >
+                      <Globe className="w-4 h-4" /> Disponible al completar diplomado
+                    </button>
+                  )}
+                </div>
               </div>
+
+              {/* Tarjeta Dreambuilder (Incluido según tipo de paquete del alumno) */}
+              {incluyeDreambuilderEstudiante && (
+                <div className={`rounded-2xl overflow-hidden border flex flex-col justify-between transition-all ${
+                  esOscuro 
+                    ? 'bg-slate-900/80 border-slate-800 hover:border-indigo-500/40' 
+                    : 'bg-white border-slate-200 hover:border-indigo-300 shadow-sm'
+                }`}>
+                  <div className="p-5 space-y-2.5">
+                    <div className="flex justify-between items-start">
+                      <span className="text-[11px] font-bold text-emerald-500 bg-emerald-500/15 border border-emerald-500/25 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                        <CheckCircle2 className="size-3" /> Habilitado en tu paquete
+                      </span>
+                    </div>
+                    <h3 className={`text-sm font-bold uppercase leading-snug line-clamp-2 min-h-[2.45rem] ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                      Dreambuilder • Thunderbird School
+                    </h3>
+                    <p className={`text-xs leading-relaxed ${esOscuro ? 'text-slate-400' : 'text-slate-600'}`}>
+                      Acreditación en gestión empresarial y emprendimiento internacional respaldada por la Universidad de Arizona y Freeport-McMoRan.
+                    </p>
+                  </div>
+
+                  <div className="p-5 pt-0">
+                    <a
+                      href={dreambuilderUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full bg-violet-600 hover:bg-violet-500 text-white font-bold py-2.5 rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 text-xs cursor-pointer"
+                    >
+                      <Rocket className="w-4 h-4" /> Ingresar al portal y certificarme
+                    </a>
+                  </div>
+                </div>
+              )}
 
             </div>
           </div>
@@ -1715,44 +1820,84 @@ export default function CertificadosPage() {
               onClick={(e) => {
                 if (e.target === e.currentTarget) setModalVistaPrevia(null);
               }}
-              className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/85 backdrop-blur-md animate-in fade-in overflow-y-auto"
+              className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-slate-950/85 backdrop-blur-md animate-in fade-in overflow-y-auto"
             >
               <div 
                 onClick={(e) => e.stopPropagation()}
-                className={`rounded-3xl w-full ${esVerticalModal ? 'max-w-lg' : 'max-w-4xl'} p-4 sm:p-5 shadow-2xl relative border flex flex-col gap-3.5 my-auto ${
+                className={`rounded-3xl w-fit max-w-[94vw] p-4 sm:p-5 shadow-2xl relative border flex flex-col gap-3 my-auto ${
                   esOscuro ? 'bg-slate-900 text-white border-slate-800' : 'bg-white text-slate-900 border-slate-200'
                 }`}
               >
-                {/* Botón de cierre limpio sin badge ni código redundante */}
-                <button 
-                  onClick={() => setModalVistaPrevia(null)} 
-                  className={`absolute top-3 right-3 z-30 p-1.5 rounded-full transition-colors cursor-pointer ${
-                    esOscuro
-                      ? 'text-slate-400 hover:text-white hover:bg-slate-800'
-                      : 'text-slate-500 hover:text-slate-900 hover:bg-slate-100'
-                  }`}
-                  title="Cerrar"
-                >
-                  <X className="w-5 h-5" />
-                </button>
+                {/* BARRA SUPERIOR: Código + Botón Principal [Descargar PDF] en esquina superior + Cierre [✕] */}
+                <div className="flex items-center justify-between pb-2 border-b border-slate-100 dark:border-slate-800/80 shrink-0 z-30">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-black text-slate-700 dark:text-slate-300 font-mono tracking-wider">
+                      {modalVistaPrevia.codigo || 'EDUMIN'}
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <button 
+                      onClick={async () => {
+                        try {
+                          const docDni = (perfilEstudiante?.dni_ce || perfilEstudiante?.dni || '').trim();
+                          const sufijoDoc = docDni ? `_${docDni}` : '';
+                          const cod = modalVistaPrevia.codigo || 'EDUMIN';
+                          await descargarCertificadoA4Pdf({
+                            tipo: modalVistaPrevia.tipo === 'Diplomado' ? 'DIPLOMA' : (modalVistaPrevia.tipo === 'Modular' ? 'MODULAR' : (modalVistaPrevia.tipo === 'Taller' ? 'TALLER' : 'CURSO')),
+                            estudiante: modeloActivo?.estudiante_nombre || nombreEstudianteCompleto || 'ESTUDIANTE EDUMIN',
+                            programa: modalVistaPrevia.tipo === 'Modular' ? (modalVistaPrevia.subtitulo || modalVistaPrevia.titulo) : (modeloActivo?.programa_titulo || modalVistaPrevia.titulo),
+                            modulo: modalVistaPrevia.tipo === 'Modular' ? modalVistaPrevia.titulo : undefined,
+                            horas: modalVistaPrevia.horas || (modalVistaPrevia.tipo === 'Diplomado' ? '325 horas académicas y 13 créditos académicos' : (modalVistaPrevia.tipo === 'Modular' ? '108 horas académicas' : '24 horas académicas')),
+                            fecha: modalVistaPrevia.fecha,
+                            codigo: cod,
+                            dni: docDni,
+                            orientacion: orientacionFinal,
+                            imagenFondoUrl: modeloActivo?.imagenFondoUrl,
+                            diseno: modeloActivo?.disenoCoordenadas,
+                            incluyeQr: modeloActivo?.incluyeQr !== false
+                          }, `Certificado_${cod}${sufijoDoc}.pdf`);
+                        } catch (e) {
+                          console.error('Error al descargar certificado:', e);
+                          alert('Error al descargar el certificado en PDF.');
+                        }
+                      }}
+                      className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs whitespace-nowrap transition flex items-center justify-center gap-1.5 shadow-md cursor-pointer"
+                    >
+                      <Download className="size-3.5 sm:size-4 shrink-0" />
+                      <span>Descargar PDF</span>
+                    </button>
+
+                    <button 
+                      onClick={() => setModalVistaPrevia(null)} 
+                      className={`p-1.5 rounded-xl transition-colors cursor-pointer ${
+                        esOscuro
+                          ? 'text-slate-400 hover:text-white hover:bg-slate-800'
+                          : 'text-slate-500 hover:text-slate-900 hover:bg-slate-100'
+                      }`}
+                      title="Cerrar"
+                    >
+                      <X className="w-5 h-5" />
+                    </button>
+                  </div>
+                </div>
 
                 {/* CERTIFICADO A4 COMPLETO (SIN RECORTE NI SOLAPAMIENTO EN HORIZONTAL NI EN VERTICAL) */}
-                <div className="w-full flex items-center justify-center pt-2 pb-1 overflow-hidden shrink">
+                <div className="w-full flex items-center justify-center p-3 sm:p-4 shrink">
                   <div
                     className="mx-auto flex items-center justify-center"
                     style={{
-                      width: '100%',
-                      maxWidth: esVerticalModal
-                        ? 'min(100%, calc((80vh - 150px) * 210 / 297), 440px)'
-                        : 'min(100%, calc((80vh - 150px) * 297 / 210), 840px)',
+                      width: esVerticalModal
+                        ? 'min(86vw, calc((76vh - 110px) * 210 / 297), 460px)'
+                        : 'min(86vw, calc((76vh - 110px) * 297 / 210), 780px)',
                       aspectRatio: esVerticalModal ? '210 / 297' : '297 / 210'
                     }}
                   >
                     <AvanzaCertificateRenderer
                       tipo={modalVistaPrevia.tipo === 'Diplomado' ? 'DIPLOMA' : (modalVistaPrevia.tipo === 'Modular' ? 'MODULAR' : (modalVistaPrevia.tipo === 'Taller' ? 'TALLER' : 'CURSO'))}
                       orientacion={orientacionFinal}
-                      estudiante={nombreEstudianteCompleto || 'ESTUDIANTE EDUMIN'}
-                      programa={modalVistaPrevia.tipo === 'Modular' ? (modalVistaPrevia.subtitulo || modalVistaPrevia.titulo) : modalVistaPrevia.titulo}
+                      estudiante={modeloActivo?.estudiante_nombre || nombreEstudianteCompleto || 'ESTUDIANTE EDUMIN'}
+                      programa={modalVistaPrevia.tipo === 'Modular' ? (modalVistaPrevia.subtitulo || modalVistaPrevia.titulo) : (modeloActivo?.programa_titulo || modalVistaPrevia.titulo)}
                       modulo={modalVistaPrevia.tipo === 'Modular' ? modalVistaPrevia.titulo : undefined}
                       horas={modalVistaPrevia.horas || (modalVistaPrevia.tipo === 'Diplomado' ? '325 horas académicas y 13 créditos académicos' : (modalVistaPrevia.tipo === 'Modular' ? '108 horas académicas' : '24 horas académicas'))}
                       fecha={modalVistaPrevia.fecha}
@@ -1765,109 +1910,27 @@ export default function CertificadosPage() {
                   </div>
                 </div>
 
-                {/* BARRA DE ACCIONES (2 FILAS EN VERTICAL Y HORIZONTAL FLUIDO SIN SOLAPAMIENTO) */}
-                <div className="pt-2 shrink-0 z-20 flex flex-col gap-2 w-full">
-                  {esVerticalModal ? (
-                    <>
-                      <div className="grid grid-cols-2 gap-2 w-full">
-                        <button
-                          onClick={copiarLinkValidacion}
-                          className={`w-full px-3 py-2.5 rounded-xl text-xs font-bold whitespace-nowrap transition flex items-center justify-center gap-1.5 border cursor-pointer ${
-                            copiadoLink 
-                              ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40' 
-                              : (esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700' : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200')
-                          }`}
-                        >
-                          {copiadoLink ? <Check className="size-4 shrink-0 text-emerald-500" /> : <Copy className="size-4 shrink-0" />}
-                          <span className="truncate">{copiadoLink ? '¡Copiado!' : 'Copiar enlace'}</span>
-                        </button>
+                {/* BARRA INFERIOR: Única fila compartida con acciones secundarias (Añadir a LinkedIn + Copiar enlace) */}
+                <div className="pt-1 shrink-0 z-20 grid grid-cols-1 sm:grid-cols-2 gap-2 w-full">
+                  <button
+                    onClick={compartirLinkedIn}
+                    className="w-full bg-[#0A66C2] hover:bg-[#084e96] text-white font-bold px-4 py-2 rounded-xl text-xs whitespace-nowrap transition flex items-center justify-center gap-2 shadow-sm cursor-pointer"
+                  >
+                    <Share2 className="size-4 shrink-0" />
+                    <span>Añadir a LinkedIn</span>
+                  </button>
 
-                        <button
-                          onClick={compartirLinkedIn}
-                          className="w-full bg-[#0A66C2] hover:bg-[#084e96] text-white font-bold px-3 py-2.5 rounded-xl text-xs whitespace-nowrap transition flex items-center justify-center gap-1.5 shadow-sm cursor-pointer"
-                        >
-                          <Share2 className="size-4 shrink-0" />
-                          <span className="truncate">Añadir a LinkedIn</span>
-                        </button>
-                      </div>
-
-                      <button 
-                        onClick={async () => {
-                          try {
-                            await descargarCertificadoA4Pdf({
-                              tipo: modalVistaPrevia.tipo === 'Diplomado' ? 'DIPLOMA' : (modalVistaPrevia.tipo === 'Modular' ? 'MODULAR' : (modalVistaPrevia.tipo === 'Taller' ? 'TALLER' : 'CURSO')),
-                              estudiante: nombreEstudianteCompleto || 'ESTUDIANTE EDUMIN',
-                              programa: modalVistaPrevia.tipo === 'Modular' ? (modalVistaPrevia.subtitulo || modalVistaPrevia.titulo) : modalVistaPrevia.titulo,
-                              modulo: modalVistaPrevia.tipo === 'Modular' ? modalVistaPrevia.titulo : undefined,
-                              horas: modalVistaPrevia.horas || (modalVistaPrevia.tipo === 'Diplomado' ? '325 horas académicas y 13 créditos académicos' : (modalVistaPrevia.tipo === 'Modular' ? '108 horas académicas' : '24 horas académicas')),
-                              fecha: modalVistaPrevia.fecha,
-                              codigo: modalVistaPrevia.codigo || 'HNYNXT2',
-                              orientacion: orientacionFinal,
-                              imagenFondoUrl: modeloActivo?.imagenFondoUrl,
-                              diseno: modeloActivo?.disenoCoordenadas,
-                              incluyeQr: modeloActivo?.incluyeQr !== false
-                            }, `Certificado_${modalVistaPrevia.codigo || 'EDUMIN'}_A4.pdf`);
-                          } catch (e) {
-                            console.error('Error al descargar certificado:', e);
-                            alert('Error al descargar el certificado en PDF.');
-                          }
-                        }}
-                        className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-4 py-2.5 rounded-xl text-xs whitespace-nowrap transition flex items-center justify-center gap-2 shadow-md cursor-pointer"
-                      >
-                        <Download className="size-4 shrink-0" />
-                        <span>Descargar PDF Oficial</span>
-                      </button>
-                    </>
-                  ) : (
-                    <div className="flex flex-col sm:flex-row items-center justify-between gap-2.5 w-full">
-                      <button
-                        onClick={copiarLinkValidacion}
-                        className={`w-full sm:w-auto px-4 py-2.5 rounded-xl text-xs font-bold whitespace-nowrap transition flex items-center justify-center gap-2 border cursor-pointer ${
-                          copiadoLink 
-                            ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40' 
-                            : (esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700' : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200')
-                        }`}
-                      >
-                        {copiadoLink ? <Check className="size-4 shrink-0 text-emerald-500" /> : <Copy className="size-4 shrink-0" />}
-                        {copiadoLink ? '¡Enlace copiado!' : 'Copiar enlace de validación'}
-                      </button>
-
-                      <div className="flex items-center gap-2 w-full sm:w-auto">
-                        <button
-                          onClick={compartirLinkedIn}
-                          className="flex-1 sm:flex-initial bg-[#0A66C2] hover:bg-[#084e96] text-white font-bold px-4 py-2.5 rounded-xl text-xs whitespace-nowrap transition flex items-center justify-center gap-2 shadow-sm cursor-pointer"
-                        >
-                          <Share2 className="size-4 shrink-0" /> Añadir a LinkedIn
-                        </button>
-
-                        <button 
-                          onClick={async () => {
-                            try {
-                              await descargarCertificadoA4Pdf({
-                                tipo: modalVistaPrevia.tipo === 'Diplomado' ? 'DIPLOMA' : (modalVistaPrevia.tipo === 'Modular' ? 'MODULAR' : (modalVistaPrevia.tipo === 'Taller' ? 'TALLER' : 'CURSO')),
-                                estudiante: nombreEstudianteCompleto || 'ESTUDIANTE EDUMIN',
-                                programa: modalVistaPrevia.tipo === 'Modular' ? (modalVistaPrevia.subtitulo || modalVistaPrevia.titulo) : modalVistaPrevia.titulo,
-                                modulo: modalVistaPrevia.tipo === 'Modular' ? modalVistaPrevia.titulo : undefined,
-                                horas: modalVistaPrevia.horas || (modalVistaPrevia.tipo === 'Diplomado' ? '325 horas académicas y 13 créditos académicos' : (modalVistaPrevia.tipo === 'Modular' ? '108 horas académicas' : '24 horas académicas')),
-                                fecha: modalVistaPrevia.fecha,
-                                codigo: modalVistaPrevia.codigo || 'HNYNXT2',
-                                orientacion: orientacionFinal,
-                                imagenFondoUrl: modeloActivo?.imagenFondoUrl,
-                                diseno: modeloActivo?.disenoCoordenadas,
-                                incluyeQr: modeloActivo?.incluyeQr !== false
-                              }, `Certificado_${modalVistaPrevia.codigo || 'EDUMIN'}_A4.pdf`);
-                            } catch (e) {
-                              console.error('Error al descargar certificado:', e);
-                              alert('Error al descargar el certificado en PDF.');
-                            }
-                          }}
-                          className="flex-1 sm:flex-initial bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-5 py-2.5 rounded-xl text-xs whitespace-nowrap transition flex items-center justify-center gap-2 shadow-md cursor-pointer"
-                        >
-                          <Download className="size-4 shrink-0" /> Descargar PDF
-                        </button>
-                      </div>
-                    </div>
-                  )}
+                  <button
+                    onClick={copiarLinkValidacion}
+                    className={`w-full px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition flex items-center justify-center gap-2 border cursor-pointer ${
+                      copiadoLink 
+                        ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40' 
+                        : (esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700' : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200')
+                    }`}
+                  >
+                    {copiadoLink ? <Check className="size-4 shrink-0 text-emerald-500" /> : <Copy className="size-4 shrink-0" />}
+                    <span>{copiadoLink ? '¡Enlace copiado!' : 'Copiar enlace de validación'}</span>
+                  </button>
                 </div>
 
               </div>

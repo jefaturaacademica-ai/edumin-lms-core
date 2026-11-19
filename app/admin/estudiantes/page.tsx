@@ -163,6 +163,7 @@ export default function AdminEstudiantesPage() {
         const data = await res.json();
         if (Array.isArray(data.estudiantes)) {
           setEstudiantes(data.estudiantes);
+          if (data.siguiente_recibo) setSiguienteRecibo(data.siguiente_recibo);
           setAlumnoSeleccionado((prev) => {
             if (!prev) return null;
             return data.estudiantes.find((e: EstudianteCompleto) => e.id === prev.id || e.dni_ce === prev.dni_ce) || null;
@@ -251,6 +252,7 @@ export default function AdminEstudiantesPage() {
   const [pagoIdParaValidar, setPagoIdParaValidar] = useState<string | null>(null);
   const [selectedCreditoIdx, setSelectedCreditoIdx] = useState<number>(0);
   const [cargandoPago, setCargandoPago] = useState<boolean>(false);
+  const [siguienteRecibo, setSiguienteRecibo] = useState<string>('REC-2026-00001');
   const [mensaje, setMensaje] = useState<{ texto: string; tipo: 'exito' | 'error'; webhookStatus?: string } | null>(null);
 
   // Estados de Anulación de Pago
@@ -274,16 +276,16 @@ export default function AdminEstudiantesPage() {
     setCargandoPago(true);
     setMensaje(null);
     try {
-      const nroReciboFinal = datosExtraParam?.nro_recibo || comprobante;
-      const nroOperacionFinal = datosExtraParam?.nro_operacion || (metodo === 'Efectivo en Caja' ? 'N/A' : comprobante);
+      const nroReciboFinal = datosExtraParam?.nro_recibo || comprobante || siguienteRecibo || 'REC-2026-00001';
+      const nroOperacionFinal = datosExtraParam?.nro_operacion || (metodo === 'Efectivo en Caja' ? 'N/A' : (comprobante || nroReciboFinal));
 
       const payload: any = {
         dni_ce: alumnoSeleccionado.dni_ce,
         monto: cargoExtraParam ? cargoExtraParam.monto : Number(montoPago),
         metodo: cargoExtraParam ? `Cargo Extra: ${cargoExtraParam.concepto}` : metodo,
-        comprobante: cargoExtraParam ? `CARGO-${Math.floor(100000 + Math.random() * 900000)}` : nroReciboFinal,
-        nro_recibo: cargoExtraParam ? `REC-CARGO-${Math.floor(100000 + Math.random() * 900000)}` : nroReciboFinal,
-        nro_operacion: cargoExtraParam ? 'N/A' : nroOperacionFinal,
+        comprobante: nroReciboFinal,
+        nro_recibo: nroReciboFinal,
+        nro_operacion: cargoExtraParam ? (datosExtraParam?.nro_operacion || 'N/A') : nroOperacionFinal,
         pago_id: pagoIdParaValidar,
         descuento: Number(descuento)
       };
@@ -1087,6 +1089,7 @@ export default function AdminEstudiantesPage() {
           onEnviarAlertaWhatsApp={enviarAlertaWhatsAppRetencion}
           enviandoAlertaWhatsApp={enviandoAlertaWhatsApp}
           onRefetchEstudiantes={cargarEstudiantes}
+          siguienteRecibo={siguienteRecibo}
         />
       )}
 

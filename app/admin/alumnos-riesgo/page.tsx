@@ -6,6 +6,7 @@ import {
   Activity, AlertTriangle, UserX, CheckCircle2, Lock, Unlock, Calendar, Sparkles, X, Clock 
 } from 'lucide-react';
 import { createBrowserClient } from '@supabase/ssr';
+import { cerrarSesionUsuario } from '@/lib/auth/logout';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import AdminSidebar from '@/components/admin/admin-sidebar';
@@ -142,8 +143,7 @@ export default function AlumnosRiesgoPage() {
   };
 
   const handleLogout = async () => {
-    await supabase.auth.signOut();
-    router.push('/login');
+    await cerrarSesionUsuario(router);
   };
 
   const estudiantesFiltrados = estudiantes.filter(est => {

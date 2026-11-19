@@ -537,7 +537,7 @@ export default function SolicitudesDatosAdminPage() {
                   </p>
 
                   <p>
-                    Que el/la estudiante <strong>{estudianteConstancia.nombres.toUpperCase()} {estudianteConstancia.apellidos.toUpperCase()}</strong>, identificado(a) con Documento Nacional de Identidad / CE N° <strong>{estudianteConstancia.dni_ce}</strong>, se encuentra formalmente matriculado(a) y en condición académica de <strong>ALUMNO REGULAR</strong> en el programa de especialización:
+                    Que el/la estudiante <strong>{estudianteConstancia.nombres.toUpperCase()} {estudianteConstancia.apellidos.toUpperCase()}</strong>, identificado(a) con Documento Nacional de Identidad / CE N.º <strong>{estudianteConstancia.dni_ce}</strong>, se encuentra formalmente matriculado(a) y en condición académica de <strong>ALUMNO REGULAR</strong> en el programa de especialización:
                   </p>
 
                   <div className="p-3 bg-indigo-50/70 border-l-4 border-indigo-600 rounded-r-xl text-center">

@@ -98,6 +98,7 @@ export default function PerfilEstudiante() {
             nombres: data.nombres || nombres,
             apellidos: data.apellidos || apellidos,
           });
+          actualizarFotoPerfil(data.foto_perfil || null);
         }
       }
       setCargando(false);

@@ -13,6 +13,10 @@ import { getDiplomadoByTitleOrSlug } from '@/lib/data/diplomadosData';
 import { obtenerTallerParaDiplomado } from '@/lib/utils/tallerAsignado';
 
 function parseCreditoRow(pag: any) {
+  const nro_recibo = pag.nro_recibo || undefined;
+  const nro_operacion = pag.nro_operacion || undefined;
+  const comprobante = pag.comprobante || undefined;
+
   if (typeof pag.metodo === 'string' && pag.metodo.startsWith('CARGO_EXTRA|')) {
     const concepto = pag.metodo.replace('CARGO_EXTRA|', '');
     return {
@@ -23,6 +27,9 @@ function parseCreditoRow(pag: any) {
       concepto,
       nro_cuota: `Cargo Extra (${concepto})`,
       num_credito: 99,
+      nro_recibo,
+      nro_operacion,
+      comprobante,
       monto: Number(pag.monto || 0),
       metodo: 'Yape / Plin',
       estado: pag.estado || 'APROBADO',
@@ -44,12 +51,24 @@ function parseCreditoRow(pag: any) {
   ];
   let total_pagado = Number(pag.total_pagado || pag['total pagado'] || 0);
   let explicitDeuda: number | undefined = undefined;
+  let cuotas_recibos: Record<number, { nro_recibo?: string; nro_operacion?: string; fecha?: string }> = {};
+  let rowNroRecibo = nro_recibo;
+  let rowNroOperacion = nro_operacion;
+  let rowComprobante = comprobante;
+  let nro_pagare = pag.nro_pagare || undefined;
 
   if (typeof pag.metodo === 'string' && pag.metodo.startsWith('CREDITO_')) {
     try {
       const jsonStr = pag.metodo.substring(pag.metodo.indexOf('|') + 1).trim();
       const parsed = JSON.parse(jsonStr);
       num_credito = parsed.num_credito || num_credito;
+      if (parsed.nro_pagare) nro_pagare = parsed.nro_pagare;
+      if (parsed.cuotas_recibos && typeof parsed.cuotas_recibos === 'object') {
+        cuotas_recibos = parsed.cuotas_recibos;
+      }
+      if (parsed.ultimo_pago?.nro_recibo) rowNroRecibo = parsed.ultimo_pago.nro_recibo;
+      if (parsed.ultimo_pago?.nro_operacion) rowNroOperacion = parsed.ultimo_pago.nro_operacion;
+      if (parsed.ultimo_pago?.comprobante) rowComprobante = parsed.ultimo_pago.comprobante;
       if (Array.isArray(parsed.cuotas)) {
         cuotas = parsed.cuotas;
       }
@@ -84,6 +103,11 @@ function parseCreditoRow(pag: any) {
     profile_id: pag.profile_id,
     dni_ce: pag.dni_ce,
     num_credito,
+    nro_pagare,
+    nro_recibo: rowNroRecibo,
+    nro_operacion: rowNroOperacion,
+    comprobante: rowComprobante,
+    cuotas_recibos,
     monto: montoTotal,
     metodo: pag.metodo && !pag.metodo.startsWith('CREDITO_') ? pag.metodo : 'Por Pagar',
     estado: total_deuda === 0 ? 'Completado' : (pag.estado || 'Pendiente'),
@@ -403,12 +427,14 @@ export async function GET() {
     let cursos_json = parseCursosFromProfile(profile);
 
     const dipTitulosProfile: string[] = [];
-    if (profile.diplomado_1) dipTitulosProfile.push(profile.diplomado_1);
-    if (profile.diplomado_2) dipTitulosProfile.push(profile.diplomado_2);
     diplomados_json.forEach((d: any) => {
       const t = d.titulo || d.slug;
       if (t && !dipTitulosProfile.includes(t)) dipTitulosProfile.push(t);
     });
+    if (dipTitulosProfile.length === 0) {
+      if (profile.diplomado_1) dipTitulosProfile.push(profile.diplomado_1);
+      if (profile.diplomado_2) dipTitulosProfile.push(profile.diplomado_2);
+    }
 
     // Inyectar el taller que viene incluido en cada diplomado matriculado
     dipTitulosProfile.forEach(dipTitulo => {

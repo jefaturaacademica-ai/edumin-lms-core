@@ -88,10 +88,10 @@ export default function PagosEstudiantePage() {
       return Array.from({ length: totalCuotas }).map((_, idx) => ({
         id: `sim-${idx + 1}`,
         cuota: `Cuota 0${idx + 1} de 0${totalCuotas}`,
-        concepto: idx === 0 ? 'Matrícula + Primera Cuota Diplomado' : `Cuota 0${idx + 1} Académica`,
+        concepto: `Cuota 0${idx + 1} - ${profile?.diplomado_1 || 'Programa Académico'}`,
         monto: cuotaMonto,
         fecha: `15/0${idx + 1}/2026`,
-        comprobante: idx === 0 ? 'OP-882910' : '-',
+        comprobante: idx === 0 ? 'REC-2026-00001' : '-',
         medio: idx === 0 ? 'Yape / Plin' : '-',
         estado: idx === 0 ? 'Pagado' : 'Por vencer'
       }));
@@ -108,7 +108,8 @@ export default function PagosEstudiantePage() {
           concepto: pago.concepto || 'Examen Sustitutorio',
           monto: Number(pago.monto || 0),
           fecha: pago.created_at ? new Date(pago.created_at).toLocaleDateString('es-PE') : '15/02/2026',
-          comprobante: `OP-CARGO-${String(pago.id).substring(0, 6)}`,
+          comprobante: pago.nro_recibo || pago.comprobante || '-',
+          nro_operacion: pago.nro_operacion || null,
           medio: pago.metodo || 'Yape / Plin',
           estado: pago.estado || 'Pagado'
         });
@@ -128,13 +129,17 @@ export default function PagosEstudiantePage() {
         const esPagada = Number(cVal) > 0;
         const estadoCuota = esPagada ? 'Pagado' : profile?.bloqueado ? 'Vencido' : 'Por vencer';
 
+        const reciboCuota = pago.cuotas_recibos?.[cIdx]?.nro_recibo || (esPagada ? (pago.nro_recibo || null) : null);
+        const operacionCuota = pago.cuotas_recibos?.[cIdx]?.nro_operacion || (esPagada ? (pago.nro_operacion || null) : null);
+
         items.push({
           id: `${pago.id}-c${numCuota}`,
           cuota: totalValidasCount === 1 ? 'Cuota Única' : `Cuota 0${numCuota} de 0${totalValidasCount}`,
-          concepto: numCuota === 1 ? `Cuota 01 - Matrícula + Programa (${profile?.diplomado_1 || 'Diplomado'})` : `Cuota 0${numCuota} Académica`,
+          concepto: `Cuota 0${numCuota} - ${profile?.diplomado_1 || 'Programa Académico'}`,
           monto: montoCuota,
           fecha: `15/0${Math.min(9, numCuota + 1)}/2026`,
-          comprobante: esPagada ? `OP-CUOTA-0${numCuota}` : '-',
+          comprobante: esPagada ? (reciboCuota || '-') : '-',
+          nro_operacion: operacionCuota,
           medio: esPagada ? (pago.metodo && !pago.metodo.startsWith('CREDITO_') ? pago.metodo : 'Yape / Plin') : '-',
           estado: estadoCuota
         });
@@ -313,7 +318,7 @@ export default function PagosEstudiantePage() {
                     <th className="py-3 px-4">Concepto</th>
                     <th className="py-3 px-4">Monto</th>
                     <th className="py-3 px-4">Fecha Vencimiento</th>
-                    <th className="py-3 px-4">Nº Comprobante</th>
+                    <th className="py-3 px-4">N.º Recibo</th>
                     <th className="py-3 px-4">Estado</th>
                     <th className="py-3 px-4 text-right">Recibo</th>
                   </tr>
@@ -373,7 +378,7 @@ export default function PagosEstudiantePage() {
               <table className="w-full text-left border-collapse text-xs">
                 <thead>
                   <tr className="border-b border-slate-200 dark:border-slate-800 text-slate-400 dark:text-slate-500 font-bold uppercase tracking-wider text-[10px]">
-                    <th className="py-3 px-4">Nº Comprobante</th>
+                    <th className="py-3 px-4">N.º Recibo</th>
                     <th className="py-3 px-4">Concepto de Pago</th>
                     <th className="py-3 px-4">Monto Abonado</th>
                     <th className="py-3 px-4">Medio de Pago</th>

@@ -46,12 +46,16 @@ export default function ReciboModal({
             <strong className="text-indigo-600 dark:text-indigo-400">{alumnoSeleccionado?.diplomado_actual}</strong>
           </div>
           <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+            <span className="text-slate-500 dark:text-slate-400 font-semibold">N.º Recibo Oficial:</span>
+            <strong className="tabular-nums text-indigo-600 dark:text-indigo-400 font-bold">{reciboImprimir.nro_recibo || reciboImprimir.id || 'REC-2026-0001'}</strong>
+          </div>
+          <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
             <span className="text-slate-500 dark:text-slate-400 font-semibold">Método de Pago:</span>
             <strong className="text-slate-800 dark:text-slate-200">{reciboImprimir.metodo || 'Yape / Plin'}</strong>
           </div>
           <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
-            <span className="text-slate-500 dark:text-slate-400 font-semibold">Nº Operación / Comprobante:</span>
-            <strong className="tabular-nums text-slate-900 dark:text-white">{reciboImprimir.comprobante || 'OP-984321'}</strong>
+            <span className="text-slate-500 dark:text-slate-400 font-semibold">N.º Operación Bancaria:</span>
+            <strong className="tabular-nums text-slate-900 dark:text-white">{reciboImprimir.nro_operacion || 'No aplica (Efectivo)'}</strong>
           </div>
           <div className="flex justify-between bg-emerald-50 dark:bg-emerald-950/40 p-3 rounded-xl border border-emerald-200 dark:border-emerald-800 text-sm">
             <span className="text-emerald-900 dark:text-emerald-300 font-bold">Monto Total Pagado:</span>

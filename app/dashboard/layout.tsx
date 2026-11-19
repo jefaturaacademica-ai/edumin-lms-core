@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { Home, BookOpen, Award, LogOut, GraduationCap, Wallet, Menu, X, User } from 'lucide-react';
 import { createBrowserClient } from '@supabase/ssr';
+import { cerrarSesionUsuario } from '@/lib/auth/logout';
 import { ThemeProvider } from '@/context/theme-context';
 import { ProfileProvider, useProfile } from '@/context/profile-context';
 import { UserProfileCard } from '@/components/navigation/UserProfileCard';
@@ -42,9 +43,7 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
   }, [pathname]);
 
   const handleLogout = async () => {
-    await supabase.auth.signOut();
-    router.push('/login');
-    router.refresh();
+    await cerrarSesionUsuario(router);
   };
 
   const menuItems = [

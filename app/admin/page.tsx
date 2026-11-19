@@ -37,7 +37,7 @@ export default function AdminDashboard360() {
 
   // Formulario de Pago en Ficha 360 / Tesorería
   const [montoPago, setMontoPago] = useState<string>('150.00');
-  const [comprobante, setComprobante] = useState<string>('OP-984321');
+  const [comprobante, setComprobante] = useState<string>('');
   const [metodo, setMetodo] = useState<string>('Yape / Plin');
   const [descuento, setDescuento] = useState<string>('0');
   const [cargandoPago, setCargandoPago] = useState(false);
@@ -55,6 +55,7 @@ export default function AdminDashboard360() {
   const [mostrarEditarCronogramaModal, setMostrarEditarCronogramaModal] = useState(false);
   const [selectedCreditoIdx, setSelectedCreditoIdx] = useState<number>(0);
   const [editMontoTotal, setEditMontoTotal] = useState<number>(1500);
+  const [editNroPagare, setEditNroPagare] = useState<string>('');
   const [editCuotas6, setEditCuotas6] = useState<{ val: string }[]>([
     { val: '0' }, { val: 'no corresponde' }, { val: 'no corresponde' }, { val: 'no corresponde' }, { val: 'no corresponde' }, { val: 'no corresponde' }
   ]);
@@ -165,6 +166,7 @@ export default function AdminDashboard360() {
           dni_ce: alumnoSeleccionado.dni_ce,
           num_credito: creditoActual?.num_credito || (selectedCreditoIdx + 1),
           monto_total: editMontoTotal,
+          nro_pagare: editNroPagare,
           cuotas: cuotasArray
         })
       });
@@ -225,16 +227,19 @@ export default function AdminDashboard360() {
     ? Math.round(estudiantesFiltrados.reduce((acc, curr) => acc + curr.avance_porcentaje, 0) / estudiantesFiltrados.length) 
     : 0;
 
-  const registrarPago = async (cuotaIdxParam?: number, cargoExtraParam?: { concepto: string; monto: number }) => {
+  const registrarPago = async (cuotaIdxParam?: number, cargoExtraParam?: { concepto: string; monto: number; metodo?: string }, datosExtraParam?: { nro_recibo?: string; nro_operacion?: string }) => {
     if (!alumnoSeleccionado) return;
     setCargandoPago(true);
     setMensaje(null);
     try {
+      const nroReciboValido = (datosExtraParam as any)?.nro_recibo || comprobante || 'REC-2026-00001';
       const payload: any = {
         dni_ce: alumnoSeleccionado.dni_ce,
         monto: cargoExtraParam ? cargoExtraParam.monto : Number(montoPago),
-        metodo: cargoExtraParam ? `Cargo Extra: ${cargoExtraParam.concepto}` : metodo,
-        comprobante: cargoExtraParam ? `CARGO-${Math.floor(100000 + Math.random() * 900000)}` : comprobante,
+        metodo: cargoExtraParam ? ((cargoExtraParam as any).metodo || `Cargo Extra: ${cargoExtraParam.concepto}`) : metodo,
+        comprobante: nroReciboValido,
+        nro_recibo: nroReciboValido,
+        nro_operacion: cargoExtraParam ? ((datosExtraParam as any)?.nro_operacion || 'N/A') : (metodo === 'Efectivo en Caja' ? 'N/A' : comprobante),
         pago_id: pagoIdParaValidar,
         descuento: Number(descuento)
       };
@@ -708,7 +713,7 @@ export default function AdminDashboard360() {
                       <thead>
                         <tr className="border-b border-slate-100 dark:border-slate-800 text-slate-400 dark:text-slate-500 text-[10px] uppercase tracking-wider font-bold">
                           <th className="pb-3 px-4">Fecha y Hora</th>
-                          <th className="pb-3 px-4">Nº Operación</th>
+                          <th className="pb-3 px-4">N.º Operación</th>
                           <th className="pb-3 px-4">Estudiante & DNI</th>
                           <th className="pb-3 px-4">Programa</th>
                           <th className="pb-3 px-4">Concepto / Cuota</th>
@@ -800,14 +805,81 @@ export default function AdminDashboard360() {
         alumnoSeleccionado={alumnoSeleccionado}
         catalogoDiplomados={catalogoDiplomados}
         onClose={() => setAlumnoSeleccionado(null)}
+        onAbrirCronograma={(credParam: any) => {
+          if (!alumnoSeleccionado) return;
+          const creditos = (alumnoSeleccionado as any).creditos || [];
+          const cred = credParam || creditos[selectedCreditoIdx] || creditos[0];
+          if (cred) {
+            const totalMonto = Number(cred.monto || cred.monto_total || alumnoSeleccionado.monto_total_programa || 900);
+            setEditMontoTotal(totalMonto);
+            setEditNroPagare(cred.nro_pagare || ('2026-I-000' + (alumnoSeleccionado.dni_ce || '').substring(0, 4)));
+
+            const rawPlan = Array.isArray(cred.plan_cuotas) && cred.plan_cuotas.length > 0 ? cred.plan_cuotas : null;
+            const rawCuotas = Array.isArray(cred.cuotas) && cred.cuotas.length > 0 
+              ? cred.cuotas 
+              : (Array.isArray(cred.cuotas_desglose) && cred.cuotas_desglose.length > 0 ? cred.cuotas_desglose : null);
+
+            const fuenteCuotas = rawPlan || rawCuotas;
+            if (fuenteCuotas) {
+              const indicesCorresponden: number[] = [];
+              fuenteCuotas.forEach((c: any, i: number) => {
+                if (c !== 'no corresponde' && i < 6) indicesCorresponden.push(i);
+              });
+              if (indicesCorresponden.length === 0) indicesCorresponden.push(0, 1);
+              const numCuotas = Math.max(1, indicesCorresponden.length);
+              const cuotaPromedio = Math.round(totalMonto / numCuotas);
+
+              const arr = Array(6).fill(null).map((_, i) => {
+                if (!indicesCorresponden.includes(i)) return { val: 'no corresponde' };
+                const rawVal = fuenteCuotas ? fuenteCuotas[i] : null;
+                const numVal = Number(rawVal) || 0;
+                if ((!rawVal || rawVal === 'no corresponde' || numVal === 0) && !rawPlan) {
+                  if (i === 0 && Number(cred.total_pagado || 0) > 0) return { val: String(cred.total_pagado) };
+                  if (i === 1 && Number(cred.total_pagado || 0) > 0 && totalMonto > Number(cred.total_pagado || 0)) {
+                    return { val: String(totalMonto - Number(cred.total_pagado)) };
+                  }
+                  return { val: String(cuotaPromedio) };
+                }
+                return { val: String(rawVal) };
+              });
+
+              let sumaActual = arr.reduce((acc, it) => it.val !== 'no corresponde' ? acc + (Number(it.val) || 0) : acc, 0);
+              const diferencia = totalMonto - sumaActual;
+              if (diferencia !== 0 && indicesCorresponden.length > 0) {
+                const lastIdx = indicesCorresponden[indicesCorresponden.length - 1];
+                const lastVal = Number(arr[lastIdx].val) || 0;
+                arr[lastIdx] = { val: String(Math.max(0, lastVal + diferencia)) };
+              }
+              setEditCuotas6(arr);
+            } else {
+              setEditCuotas6([
+                { val: String(totalMonto) },
+                { val: 'no corresponde' },
+                { val: 'no corresponde' },
+                { val: 'no corresponde' },
+                { val: 'no corresponde' },
+                { val: 'no corresponde' }
+              ]);
+            }
+          }
+          setMostrarEditarCronogramaModal(true);
+        }}
         onOpenEditCronograma={() => {
           if (!alumnoSeleccionado) return;
           const creditos = (alumnoSeleccionado as any).creditos || [];
           const cred = creditos[selectedCreditoIdx] || creditos[0];
           if (cred) {
-            setEditMontoTotal(cred.monto_total || alumnoSeleccionado.monto_total_programa || 1500);
-            if (cred.cuotas_desglose && cred.cuotas_desglose.length > 0) {
-              setEditCuotas6(cred.cuotas_desglose.map((val: string) => ({ val })));
+            const totalMonto = Number(cred.monto || cred.monto_total || alumnoSeleccionado.monto_total_programa || 900);
+            setEditMontoTotal(totalMonto);
+            setEditNroPagare(cred.nro_pagare || ('2026-I-000' + (alumnoSeleccionado.dni_ce || '').substring(0, 4)));
+            const rawPlan = Array.isArray(cred.plan_cuotas) && cred.plan_cuotas.length > 0 ? cred.plan_cuotas : null;
+            const rawCuotas = Array.isArray(cred.cuotas) && cred.cuotas.length > 0 ? cred.cuotas : null;
+            const fuente = rawPlan || rawCuotas;
+            if (fuente) {
+              const arr = Array(6).fill(null).map((_, i) => ({
+                val: fuente[i] !== undefined ? String(fuente[i]) : 'no corresponde'
+              }));
+              setEditCuotas6(arr);
             }
           }
           setMostrarEditarCronogramaModal(true);
@@ -866,7 +938,7 @@ export default function AdminDashboard360() {
                 {alumnoSeleccionado.nombres} {alumnoSeleccionado.apellidos}
               </h3>
               <p className="text-slate-700 dark:text-slate-300">
-                Con Documento de Identidad <strong>DNI/CE Nº {alumnoSeleccionado.dni_ce}</strong>, inscrito(a) en el programa:
+                Con Documento de Identidad <strong>DNI/CE N.º {alumnoSeleccionado.dni_ce}</strong>, inscrito(a) en el programa:
               </p>
               <p className="font-bold text-indigo-700 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/60 p-2.5 rounded-xl border border-indigo-100 dark:border-indigo-800">
                 {alumnoSeleccionado.diplomado_actual}
@@ -922,6 +994,8 @@ export default function AdminDashboard360() {
         selectedCreditoIdx={selectedCreditoIdx}
         editMontoTotal={editMontoTotal}
         setEditMontoTotal={setEditMontoTotal}
+        editNroPagare={editNroPagare}
+        setEditNroPagare={setEditNroPagare}
         editCuotas6={editCuotas6}
         setEditCuotas6={setEditCuotas6}
         onClose={() => setMostrarEditarCronogramaModal(false)}

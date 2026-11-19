@@ -31,6 +31,7 @@ interface Ficha360ModalProps {
   onEnviarAlertaWhatsApp: () => Promise<void>;
   enviandoAlertaWhatsApp: boolean;
   onRefetchEstudiantes?: () => void;
+  siguienteRecibo?: string;
 }
 
 export default function Ficha360Modal({
@@ -55,7 +56,8 @@ export default function Ficha360Modal({
   onSetReciboImprimir,
   onEnviarAlertaWhatsApp,
   enviandoAlertaWhatsApp,
-  onRefetchEstudiantes
+  onRefetchEstudiantes,
+  siguienteRecibo
 }: Ficha360ModalProps) {
   // Pestañas modernas
   const [modalTab, setModalTab] = useState<'datos' | 'cronograma' | 'creditos' | 'academico' | 'retencion'>('datos');
@@ -85,6 +87,9 @@ export default function Ficha360Modal({
   // Estado local para módulo de Cargos Extras
   const [conceptoExtra, setConceptoExtra] = useState<string>('Examen Sustitutorio');
   const [montoExtra, setMontoExtra] = useState<string>('25.00');
+  const [nroReciboExtra, setNroReciboExtra] = useState<string>('');
+  const [nroOperacionExtra, setNroOperacionExtra] = useState<string>('');
+  const [metodoExtra, setMetodoExtra] = useState<string>('Yape / Plin');
 
   // Estado para formulario colapsable de pago manual y cargo extra
   const [mostrarFormPago, setMostrarFormPago] = useState<boolean>(false);
@@ -118,9 +123,27 @@ export default function Ficha360Modal({
         const totalCuotas = Math.max(1, activas.length);
         const basePlan = Math.round(Number(cred.monto || 0) / totalCuotas);
 
-        // Buscar la primera cuota pendiente
+        // Buscar la primera cuota pendiente considerando plan_cuotas guardado o distribución del saldo
+        const montoCred = Number(cred.monto || 0);
         const pendientes = activas.map(({ val, idx }: { val: string; idx: number }) => {
-          const plan = planRaw?.[idx] ? Number(planRaw[idx]) : basePlan;
+          let plan = basePlan;
+          if (planRaw?.[idx] && planRaw[idx] !== 'no corresponde') {
+            plan = Number(planRaw[idx]) || basePlan;
+          } else {
+            const cuota1Pagada = Number(cuotasRaw[0]) || 0;
+            if (activas.length > 1 && cuota1Pagada > 0 && cuota1Pagada < montoCred) {
+              if (idx === 0) {
+                plan = cuota1Pagada;
+              } else {
+                const saldo = montoCred - cuota1Pagada;
+                const restCuotas = activas.length - 1;
+                const bRest = Math.floor(saldo / restCuotas);
+                const rRest = saldo - (bRest * restCuotas);
+                const posR = activas.filter((c: any) => c.idx !== 0).findIndex((c: any) => c.idx === idx);
+                plan = posR === restCuotas - 1 ? bRest + rRest : bRest;
+              }
+            }
+          }
           const pagado = Number(val) || 0;
           const pendiente = Math.max(0, plan - pagado);
           return { idx, plan, pagado, pendiente };
@@ -663,43 +686,35 @@ export default function Ficha360Modal({
           {modalTab === 'cronograma' && (
             <div className="space-y-6">
               
-              {/* Header Pagaré & Botones */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-50 dark:bg-slate-800/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
+              {/* Header Pagaré & Información del Programa */}
+              <div className="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
                   <div>
-                    <span className="tabular-nums text-[10px] text-slate-400 uppercase block">Pagaré Nº</span>
+                    <span className="tabular-nums text-[10px] text-slate-400 uppercase block font-semibold">Pagaré N.º</span>
                     <strong className="tabular-nums text-sm text-slate-900 dark:text-white">
                       {creditoSeleccionado?.nro_pagare || `2026-I-000${alumnoSeleccionado.dni_ce.substring(0, 4)}`}
                     </strong>
                   </div>
                   <div>
-                    <span className="tabular-nums text-[10px] text-slate-400 uppercase block">Programa inscrito</span>
-                    <strong className="text-indigo-600 dark:text-indigo-400 truncate block">{alumnoSeleccionado.diplomado_actual}</strong>
+                    <span className="tabular-nums text-[10px] text-slate-400 uppercase block font-semibold">Programa inscrito</span>
+                    <strong className="text-indigo-600 dark:text-indigo-400 truncate block font-bold">{alumnoSeleccionado.diplomado_actual}</strong>
                   </div>
                   <div>
-                    <span className="tabular-nums text-[10px] text-slate-400 uppercase block">Monto total programa</span>
-                    <strong className="text-emerald-600 dark:text-emerald-400 font-black tabular-nums text-sm">S/ {alumnoSeleccionado.monto_total_programa.toFixed(2)}</strong>
+                    <span className="tabular-nums text-[10px] text-slate-400 uppercase block font-semibold">Total Créditos Alumno</span>
+                    <strong className="text-slate-800 dark:text-slate-200 font-bold tabular-nums text-sm">
+                      {creditosAlumno.length} Contrato{creditosAlumno.length === 1 ? '' : 's'}
+                    </strong>
                   </div>
                   <div>
-                    <span className="tabular-nums text-[10px] text-slate-400 uppercase block">Deuda pendiente</span>
-                    <strong className="text-red-600 dark:text-red-400 font-black tabular-nums text-sm">S/ {alumnoSeleccionado.deuda_total_pendiente.toFixed(2)}</strong>
+                    <span className="tabular-nums text-[10px] text-slate-400 uppercase block font-semibold">Estado Global Alumno</span>
+                    <span className={`inline-block font-black text-xs px-2.5 py-0.5 rounded-full mt-0.5 ${
+                      alumnoSeleccionado.deuda_total_pendiente === 0 
+                        ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300' 
+                        : 'bg-amber-100 text-amber-800 dark:bg-amber-950/60 dark:text-amber-300'
+                    }`}>
+                      {alumnoSeleccionado.deuda_total_pendiente === 0 ? 'Sin Deuda Global' : `Deuda Global: S/ ${alumnoSeleccionado.deuda_total_pendiente.toFixed(2)}`}
+                    </span>
                   </div>
-                </div>
-
-                <div className="flex gap-2">
-                  <button
-                    type="button"
-                    onClick={() => {
-                      if (onAbrirCronograma) {
-                        onAbrirCronograma(creditoSeleccionado);
-                      } else if (onOpenEditCronograma) {
-                        onOpenEditCronograma();
-                      }
-                    }}
-                    className="bg-indigo-600 hover:bg-indigo-700 text-white px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer shadow-sm"
-                  >
-                    <Settings className="size-3.5" /> Editar cronograma
-                  </button>
                 </div>
               </div>
 
@@ -762,8 +777,26 @@ export default function Ficha360Modal({
                 const totalDeudaCredito = Number(creditoSeleccionado?.total_deuda ?? totalMontoCredito);
                 const planCuotaBase = Math.round(totalMontoCredito / Math.max(1, cuotasAMostrar.length));
 
+                const obtenerPlanCuota = (targetIdx: number) => {
+                  if (planCuotasRaw?.[targetIdx] && planCuotasRaw[targetIdx] !== 'no corresponde') {
+                    const parsed = Number(planCuotasRaw[targetIdx]);
+                    if (!isNaN(parsed) && parsed > 0) return parsed;
+                  }
+                  const cuota1Pagada = Number(cuotasRaw[0]) || 0;
+                  if (cuotasAMostrar.length > 1 && cuota1Pagada > 0 && cuota1Pagada < totalMontoCredito) {
+                    if (targetIdx === 0) return cuota1Pagada;
+                    const saldo = totalMontoCredito - cuota1Pagada;
+                    const restCuotas = cuotasAMostrar.length - 1;
+                    const bRest = Math.floor(saldo / restCuotas);
+                    const rRest = saldo - (bRest * restCuotas);
+                    const posR = cuotasAMostrar.filter((c: any) => c.idx !== 0).findIndex((c: any) => c.idx === targetIdx);
+                    return posR === restCuotas - 1 ? bRest + rRest : bRest;
+                  }
+                  return planCuotaBase;
+                };
+
                 const pendingCuotasList = cuotasAMostrar.map(({ val, idx }: { val: string; idx: number }) => {
-                  const plan = planCuotasRaw?.[idx] ? Number(planCuotasRaw[idx]) : planCuotaBase;
+                  const plan = obtenerPlanCuota(idx);
                   const pagado = Number(val) || 0;
                   const pendiente = Math.max(0, plan - pagado);
                   return { idx, plan, pagado, pendiente };
@@ -795,242 +828,349 @@ export default function Ficha360Modal({
                         <button
                           type="button"
                           onClick={() => {
-                            setMostrarFormCargoExtra(!mostrarFormCargoExtra);
-                            if (!mostrarFormCargoExtra) setMostrarFormPago(false);
+                            if (onAbrirCronograma) {
+                              onAbrirCronograma(creditoSeleccionado);
+                            } else if (onOpenEditCronograma) {
+                              onOpenEditCronograma();
+                            }
                           }}
-                          className={`px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-sm cursor-pointer ${
-                            mostrarFormCargoExtra
-                              ? 'bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200'
-                              : 'bg-indigo-600 hover:bg-indigo-700 text-white'
-                          }`}
+                          className="bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer border border-slate-200 dark:border-slate-700 shadow-xs"
                         >
-                          <Plus className="size-4" />
-                          <span>{mostrarFormCargoExtra ? 'Cerrar cargo extra' : 'Añadir cargo extra'}</span>
+                          <Settings className="size-3.5 text-slate-500 dark:text-slate-400" />
+                          <span>Editar cronograma</span>
                         </button>
 
                         <button
                           type="button"
                           onClick={() => {
-                            if (!mostrarFormPago) {
-                              if (nextPendingCuota) {
-                                setCuotaIdxSeleccionada(nextPendingCuota.idx);
-                                const sug = pendingCuotasList.length === 1 && totalDeudaCredito > 0 ? totalDeudaCredito : (nextPendingCuota.pendiente > 0 ? nextPendingCuota.pendiente : nextPendingCuota.plan);
-                                setMontoPago(String(sug > 0 ? sug : nextPendingCuota.plan));
-                              }
-                              onSetPagoIdParaValidar(creditoSeleccionado?.id || null);
-                              setMostrarFormCargoExtra(false);
+                            if (nextPendingCuota) {
+                              setCuotaIdxSeleccionada(nextPendingCuota.idx);
+                              const sug = pendingCuotasList.length === 1 && totalDeudaCredito > 0 ? totalDeudaCredito : (nextPendingCuota.pendiente > 0 ? nextPendingCuota.pendiente : nextPendingCuota.plan);
+                              setMontoPago(String(sug > 0 ? sug : nextPendingCuota.plan));
                             }
-                            setMostrarFormPago(!mostrarFormPago);
+                            const correlativoSugerido = siguienteRecibo || 'REC-2026-00001';
+                            setComprobante(correlativoSugerido);
+                            onSetPagoIdParaValidar(creditoSeleccionado?.id || null);
+                            setMostrarFormCargoExtra(false);
+                            setMostrarFormPago(true);
                           }}
-                          className={`px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-sm cursor-pointer ${
-                            mostrarFormPago
-                              ? 'bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200'
-                              : 'bg-emerald-600 hover:bg-emerald-700 text-white'
-                          }`}
+                          className="bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-sm cursor-pointer"
                         >
-                          {mostrarFormPago ? <ChevronUp className="size-4" /> : <Coins className="size-4" />}
-                          <span>{mostrarFormPago ? 'Ocultar pago' : 'Registrar pago de cuota'}</span>
+                          <Coins className="size-4" />
+                          <span>Registrar pago de cuota</span>
+                        </button>
+
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setNroReciboExtra(siguienteRecibo || 'REC-2026-00001');
+                            setNroOperacionExtra('');
+                            setMostrarFormCargoExtra(true);
+                            setMostrarFormPago(false);
+                          }}
+                          className="bg-indigo-600 hover:bg-indigo-700 text-white px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-sm cursor-pointer"
+                        >
+                          <Plus className="size-4" />
+                          <span>Cargo extra</span>
                         </button>
                       </div>
                     </div>
 
-                    {/* Formulario Desplegable de Cargo Extra */}
+                    {/* Modal Popup de Cargo Extra */}
                     {mostrarFormCargoExtra && (
-                      <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border-2 border-indigo-500/30 dark:border-indigo-500/20 shadow-md space-y-4 animate-in fade-in duration-200">
-                        <div className="flex justify-between items-center pb-2 border-b border-slate-100 dark:border-slate-800">
-                          <div className="flex items-center gap-2">
-                            <span className="bg-indigo-100 dark:bg-indigo-950/60 text-indigo-800 dark:text-indigo-300 font-black text-[10px] px-2.5 py-0.5 rounded-full uppercase">
-                              Nuevo Cargo
-                            </span>
-                            <h4 className="font-bold text-slate-900 dark:text-white text-xs">
-                              Añadir Cargo Extra / Adicional al Estudiante
-                            </h4>
-                          </div>
-                          <button 
-                            type="button" 
-                            onClick={() => setMostrarFormCargoExtra(false)}
-                            className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-xs font-bold cursor-pointer"
-                          >
-                            Cerrar
-                          </button>
-                        </div>
-
-                        <form 
-                          onSubmit={async (e) => {
-                            await handleAgregarCargoSubmit(e);
-                            setMostrarFormCargoExtra(false);
-                          }} 
-                          className="grid grid-cols-1 sm:grid-cols-12 gap-3 items-end"
+                      <div 
+                        onClick={(e) => { if (e.target === e.currentTarget) setMostrarFormCargoExtra(false); }}
+                        className="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-[10010] flex items-center justify-center p-4 animate-in fade-in duration-200"
+                      >
+                        <div 
+                          onClick={(e) => e.stopPropagation()}
+                          className="bg-white dark:bg-slate-900 w-full max-w-lg rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6 space-y-4 animate-in zoom-in-95 duration-200"
                         >
-                          <div className="sm:col-span-6">
-                            <label className="block text-[10px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
-                              Concepto del cargo extra
-                            </label>
-                            <input 
-                              type="text"
-                              value={conceptoExtra}
-                              onChange={(e) => setConceptoExtra(e.target.value)}
-                              placeholder="Ej. Examen Sustitutorio, Mora, Certificado físico"
-                              className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none"
-                              required
-                            />
-                          </div>
-                          <div className="sm:col-span-3">
-                            <label className="block text-[10px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
-                              Monto (S/)
-                            </label>
-                            <input 
-                              type="number"
-                              step="0.01"
-                              value={montoExtra}
-                              onChange={(e) => setMontoExtra(e.target.value)}
-                              className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-black text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none"
-                              required
-                            />
-                          </div>
-                          <div className="sm:col-span-3 flex gap-2">
-                            <button
-                              type="submit"
-                              disabled={cargandoPago}
-                              className="bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white px-4 py-2 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer shadow-sm w-full"
+                          <div className="flex justify-between items-center pb-3 border-b border-slate-100 dark:border-slate-800">
+                            <div className="flex items-center gap-2">
+                              <span className="bg-indigo-100 dark:bg-indigo-950/60 text-indigo-800 dark:text-indigo-300 font-black text-[10px] px-2.5 py-0.5 rounded-full uppercase">
+                                Cargo Extra
+                              </span>
+                              <h4 className="font-black text-slate-900 dark:text-white text-sm">
+                                Añadir Cargo Adicional
+                              </h4>
+                            </div>
+                            <button 
+                              type="button" 
+                              onClick={() => setMostrarFormCargoExtra(false)}
+                              className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer"
                             >
-                              {cargandoPago ? <RefreshCw className="size-3.5 animate-spin" /> : <Plus className="size-3.5" />}
-                              <span>Registrar cargo</span>
+                              <X className="size-5" />
                             </button>
                           </div>
-                        </form>
+
+                          <form 
+                            onSubmit={async (e) => {
+                              e.preventDefault();
+                              await onRegistrarPago(
+                                undefined,
+                                { concepto: conceptoExtra, monto: Number(montoExtra) },
+                                {
+                                  nro_recibo: nroReciboExtra,
+                                  nro_operacion: metodoExtra === 'Efectivo en Caja' ? 'N/A' : (nroOperacionExtra || nroReciboExtra)
+                                }
+                              );
+                              setMostrarFormCargoExtra(false);
+                            }} 
+                            className="space-y-3.5"
+                          >
+                            <div>
+                              <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
+                                Concepto del cargo extra
+                              </label>
+                              <input 
+                                type="text"
+                                value={conceptoExtra}
+                                onChange={(e) => setConceptoExtra(e.target.value)}
+                                placeholder="Ej. Examen Sustitutorio, Mora administrativa, Certificado físico"
+                                className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none"
+                                required
+                              />
+                            </div>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                              <div>
+                                <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
+                                  Monto a cobrar (S/)
+                                </label>
+                                <div className="relative flex items-center">
+                                  <span className="absolute left-3 text-slate-400 dark:text-slate-500 font-bold text-xs pointer-events-none">
+                                    S/
+                                  </span>
+                                  <input 
+                                    type="number"
+                                    step="0.01"
+                                    value={montoExtra}
+                                    placeholder="0.00"
+                                    onChange={(e) => setMontoExtra(e.target.value)}
+                                    className="w-full pl-8 pr-3.5 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-black text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none tabular-nums"
+                                    required
+                                  />
+                                </div>
+                              </div>
+
+                              <div>
+                                <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
+                                  Método de pago
+                                </label>
+                                <select
+                                  value={metodoExtra}
+                                  onChange={(e) => setMetodoExtra(e.target.value)}
+                                  className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none"
+                                >
+                                  <option value="Yape / Plin">Yape / Plin</option>
+                                  <option value="Transferencia BCP">Transferencia BCP</option>
+                                  <option value="Tarjeta BBVA / Interbank">Tarjeta BBVA / Interbank</option>
+                                  <option value="Efectivo en Caja">Efectivo en Caja</option>
+                                </select>
+                              </div>
+                            </div>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                              <div>
+                                <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
+                                  N.º Recibo (Correlativo)
+                                </label>
+                                <input 
+                                  type="text"
+                                  value={nroReciboExtra}
+                                  onChange={(e) => setNroReciboExtra(e.target.value)}
+                                  placeholder="REC-2026-00001"
+                                  className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs tabular-nums font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none"
+                                  required
+                                />
+                              </div>
+
+                              <div>
+                                <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
+                                  N.º Operación Bancaria
+                                </label>
+                                <input 
+                                  type="text"
+                                  disabled={metodoExtra === 'Efectivo en Caja'}
+                                  value={metodoExtra === 'Efectivo en Caja' ? 'No aplica (Efectivo)' : nroOperacionExtra}
+                                  onChange={(e) => setNroOperacionExtra(e.target.value)}
+                                  placeholder="OP-123456"
+                                  className={`w-full px-3.5 py-2.5 border rounded-xl text-xs tabular-nums font-bold focus:ring-2 focus:ring-indigo-500 outline-none ${
+                                    metodoExtra === 'Efectivo en Caja'
+                                      ? 'bg-slate-100 dark:bg-slate-800/60 text-slate-400 border-slate-200 dark:border-slate-800 italic cursor-not-allowed'
+                                      : 'bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white border-slate-200 dark:border-slate-700'
+                                  }`}
+                                />
+                              </div>
+                            </div>
+
+                            <div className="flex gap-2 justify-end pt-3 border-t border-slate-100 dark:border-slate-800">
+                              <button
+                                type="button"
+                                onClick={() => setMostrarFormCargoExtra(false)}
+                                className="px-4 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-xl text-xs font-bold transition cursor-pointer"
+                              >
+                                Cancelar
+                              </button>
+                              <button
+                                type="submit"
+                                disabled={cargandoPago || Number(montoExtra) <= 0}
+                                className="bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white px-5 py-2 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer shadow-md"
+                              >
+                                {cargandoPago ? <RefreshCw className="size-3.5 animate-spin" /> : <Plus className="size-3.5" />}
+                                <span>Registrar cargo extra</span>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
                       </div>
                     )}
 
-                    {/* Formulario Desplegable de Pago Manual */}
+                    {/* Modal Popup de Registrar Pago de Cuota */}
                     {mostrarFormPago && (
-                      <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border-2 border-emerald-500/30 dark:border-emerald-500/20 shadow-md space-y-4 animate-in fade-in duration-200">
-                        <div className="flex justify-between items-center pb-2 border-b border-slate-100 dark:border-slate-800">
-                          <div className="flex items-center gap-2">
-                            <span className="bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 font-black text-[10px] px-2.5 py-0.5 rounded-full uppercase">
-                              Nuevo Abono
-                            </span>
-                            <h4 className="font-bold text-slate-900 dark:text-white text-xs">
-                              {cuotaIdxSeleccionada !== null 
-                                ? `Abonando a: Cuota ${(cuotaIdxSeleccionada + 1).toString().padStart(2, '0')} - ${alumnoSeleccionado.diplomado_actual}`
-                                : `Abonando a: Cuota ${(nextPendingCuota ? nextPendingCuota.idx + 1 : 1).toString().padStart(2, '0')}`
-                              }
-                            </h4>
-                          </div>
-                          <button 
-                            type="button" 
-                            onClick={() => setMostrarFormPago(false)}
-                            className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-xs font-bold"
-                          >
-                            Cerrar
-                          </button>
-                        </div>
-
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-                          <div>
-                            <label className="block text-[10px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
-                              Monto pagado (S/)
-                            </label>
-                            <input 
-                              type="number"
-                              step="0.5"
-                              value={montoPago}
-                              onChange={(e) => setMontoPago(e.target.value)}
-                              className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-black text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500 outline-none"
-                            />
-                            <span className="text-[10px] text-slate-400 mt-0.5 block">
-                              Acepta abono parcial o pago mayor
-                            </span>
-                          </div>
-
-                          <div>
-                            <label className="block text-[10px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
-                              Método de pago
-                            </label>
-                            <select
-                              value={metodo}
-                              onChange={(e) => {
-                                setMetodo(e.target.value);
-                                if (e.target.value === 'Efectivo en Caja') {
-                                  setNroOperacion('N/A');
-                                } else if (nroOperacion === 'N/A') {
-                                  setNroOperacion('');
+                      <div 
+                        onClick={(e) => { if (e.target === e.currentTarget) setMostrarFormPago(false); }}
+                        className="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-[10010] flex items-center justify-center p-4 animate-in fade-in duration-200"
+                      >
+                        <div 
+                          onClick={(e) => e.stopPropagation()}
+                          className="bg-white dark:bg-slate-900 w-full max-w-lg rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6 space-y-4 animate-in zoom-in-95 duration-200"
+                        >
+                          <div className="flex justify-between items-center pb-3 border-b border-slate-100 dark:border-slate-800">
+                            <div className="flex items-center gap-2">
+                              <span className="bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 font-black text-[10px] px-2.5 py-0.5 rounded-full uppercase">
+                                Pago de Cuota
+                              </span>
+                              <h4 className="font-black text-slate-900 dark:text-white text-sm">
+                                {cuotaIdxSeleccionada !== null 
+                                  ? `Cuota ${(cuotaIdxSeleccionada + 1).toString().padStart(2, '0')}`
+                                  : `Cuota ${(nextPendingCuota ? nextPendingCuota.idx + 1 : 1).toString().padStart(2, '0')}`
                                 }
-                              }}
-                              className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500 outline-none"
+                              </h4>
+                            </div>
+                            <button 
+                              type="button" 
+                              onClick={() => setMostrarFormPago(false)}
+                              className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer"
                             >
-                              <option value="Yape / Plin">Yape / Plin</option>
-                              <option value="Transferencia BCP">Transferencia BCP</option>
-                              <option value="Tarjeta BBVA / Interbank">Tarjeta BBVA / Interbank</option>
-                              <option value="Efectivo en Caja">Efectivo en Caja</option>
-                            </select>
+                              <X className="size-5" />
+                            </button>
                           </div>
 
-                          <div>
-                            <label className="block text-[10px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
-                              Nº Recibo / Boleta (Institucional)
-                            </label>
-                            <input 
-                              type="text"
-                              value={comprobante}
-                              onChange={(e) => setComprobante(e.target.value)}
-                              placeholder="REC-2026-00124"
-                              className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs tabular-nums font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500 outline-none"
-                            />
-                            <span className="text-[10px] text-slate-400 mt-0.5 block">
-                              Emisión formal (aplica a todo pago)
-                            </span>
+                          <div className="space-y-3.5">
+                            <div>
+                              <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
+                                Monto a pagar (S/)
+                              </label>
+                              <div className="relative flex items-center">
+                                <span className="absolute left-3 text-slate-400 dark:text-slate-500 font-bold text-xs pointer-events-none">
+                                  S/
+                                </span>
+                                <input 
+                                  type="number"
+                                  step="0.5"
+                                  value={montoPago}
+                                  onChange={(e) => setMontoPago(e.target.value)}
+                                  className="w-full pl-8 pr-3.5 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-black text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500 outline-none tabular-nums"
+                                />
+                              </div>
+                              <span className="text-[10px] text-slate-400 mt-1 block">
+                                Acepta abono parcial o cancelación total de la cuota.
+                              </span>
+                            </div>
+
+                            <div>
+                              <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
+                                Método de pago
+                              </label>
+                              <select
+                                value={metodo}
+                                onChange={(e) => {
+                                  setMetodo(e.target.value);
+                                  if (e.target.value === 'Efectivo en Caja') {
+                                    setNroOperacion('N/A');
+                                  } else if (nroOperacion === 'N/A') {
+                                    setNroOperacion('');
+                                  }
+                                }}
+                                className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500 outline-none"
+                              >
+                                <option value="Yape / Plin">Yape / Plin</option>
+                                <option value="Transferencia BCP">Transferencia BCP</option>
+                                <option value="Tarjeta BBVA / Interbank">Tarjeta BBVA / Interbank</option>
+                                <option value="Efectivo en Caja">Efectivo en Caja</option>
+                              </select>
+                            </div>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                              <div>
+                                <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
+                                  N.º Recibo (Institucional)
+                                </label>
+                                <input 
+                                  type="text"
+                                  value={comprobante}
+                                  onChange={(e) => setComprobante(e.target.value)}
+                                  placeholder="REC-2026-00001"
+                                  className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs tabular-nums font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500 outline-none"
+                                />
+                                <span className="text-[10px] text-slate-400 mt-0.5 block">
+                                  Correlativo oficial EDUMIN
+                                </span>
+                              </div>
+
+                              <div>
+                                <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
+                                  N.º Operación Bancaria
+                                </label>
+                                <input 
+                                  type="text"
+                                  disabled={metodo === 'Efectivo en Caja'}
+                                  value={metodo === 'Efectivo en Caja' ? 'No aplica (Efectivo)' : nroOperacion}
+                                  onChange={(e) => setNroOperacion(e.target.value)}
+                                  placeholder="OP-123456"
+                                  className={`w-full px-3.5 py-2.5 border rounded-xl text-xs tabular-nums font-bold focus:ring-2 focus:ring-emerald-500 outline-none ${
+                                    metodo === 'Efectivo en Caja'
+                                      ? 'bg-slate-100 dark:bg-slate-800/60 text-slate-400 border-slate-200 dark:border-slate-800 italic cursor-not-allowed'
+                                      : 'bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white border-slate-200 dark:border-slate-700'
+                                  }`}
+                                />
+                                <span className="text-[10px] text-slate-400 mt-0.5 block">
+                                  Código de transacción / Yape / Voucher
+                                </span>
+                              </div>
+                            </div>
                           </div>
 
-                          <div>
-                            <label className="block text-[10px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
-                              Nº Operación Bancaria (Voucher)
-                            </label>
-                            <input 
-                              type="text"
-                              disabled={metodo === 'Efectivo en Caja'}
-                              value={metodo === 'Efectivo en Caja' ? 'No aplica (Efectivo)' : nroOperacion}
-                              onChange={(e) => setNroOperacion(e.target.value)}
-                              placeholder="OP-123456"
-                              className={`w-full px-3 py-2 border rounded-xl text-xs tabular-nums font-bold focus:ring-2 focus:ring-emerald-500 outline-none ${
-                                metodo === 'Efectivo en Caja'
-                                  ? 'bg-slate-100 dark:bg-slate-800/60 text-slate-400 border-slate-200 dark:border-slate-800 italic cursor-not-allowed'
-                                  : 'bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white border-slate-200 dark:border-slate-700'
-                              }`}
-                            />
-                            <span className="text-[10px] text-slate-400 mt-0.5 block">
-                              Código de transacción bancaria / Yape
-                            </span>
+                          <div className="flex gap-2 justify-end pt-3 border-t border-slate-100 dark:border-slate-800">
+                            <button
+                              type="button"
+                              onClick={() => setMostrarFormPago(false)}
+                              className="px-4 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-xl text-xs font-bold transition cursor-pointer"
+                            >
+                              Cancelar
+                            </button>
+                            <button
+                              onClick={async () => {
+                                onSetPagoIdParaValidar(creditoSeleccionado?.id || null);
+                                await onRegistrarPago(
+                                  cuotaIdxSeleccionada !== null ? cuotaIdxSeleccionada : undefined,
+                                  undefined,
+                                  {
+                                    nro_recibo: comprobante,
+                                    nro_operacion: metodo === 'Efectivo en Caja' ? 'N/A' : (nroOperacion || comprobante)
+                                  }
+                                );
+                                setMostrarFormPago(false);
+                              }}
+                              disabled={cargandoPago || Number(montoPago) <= 0}
+                              className="bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed text-white px-5 py-2 rounded-xl font-bold text-xs shadow-md transition flex items-center justify-center gap-2 cursor-pointer"
+                            >
+                              {cargandoPago ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Coins className="w-4 h-4" />}
+                              <span>{cargandoPago ? 'Procesando...' : `Registrar pago (S/ ${Number(montoPago || 0).toFixed(2)})`}</span>
+                            </button>
                           </div>
-                        </div>
-
-                        <div className="flex gap-2 justify-end pt-1">
-                          <button
-                            type="button"
-                            onClick={() => setMostrarFormPago(false)}
-                            className="px-4 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-xl text-xs font-bold transition cursor-pointer"
-                          >
-                            Cancelar
-                          </button>
-                          <button
-                            onClick={async () => {
-                              onSetPagoIdParaValidar(creditoSeleccionado?.id || null);
-                              await onRegistrarPago(
-                                cuotaIdxSeleccionada !== null ? cuotaIdxSeleccionada : undefined,
-                                undefined,
-                                {
-                                  nro_recibo: comprobante,
-                                  nro_operacion: metodo === 'Efectivo en Caja' ? 'N/A' : (nroOperacion || comprobante)
-                                }
-                              );
-                              setMostrarFormPago(false);
-                            }}
-                            disabled={cargandoPago || Number(montoPago) <= 0}
-                            className="bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed text-white px-5 py-2 rounded-xl font-bold text-xs shadow-md transition flex items-center justify-center gap-2 cursor-pointer"
-                          >
-                            {cargandoPago ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Coins className="w-4 h-4" />}
-                            <span>{cargandoPago ? 'Procesando pago...' : `Registrar pago (S/ ${Number(montoPago || 0).toFixed(2)})`}</span>
-                          </button>
                         </div>
                       </div>
                     )}
@@ -1052,6 +1192,7 @@ export default function Ficha360Modal({
                               <th className="py-2.5 px-4">Concepto</th>
                               <th className="py-2.5 px-4">Monto Programado</th>
                               <th className="py-2.5 px-4">Pagado</th>
+                              <th className="py-2.5 px-4">N.º Recibo</th>
                               <th className="py-2.5 px-4">Estado cuota</th>
                               <th className="py-2.5 px-4 text-right">Acciones</th>
                             </tr>
@@ -1060,10 +1201,14 @@ export default function Ficha360Modal({
                             {cuotasAMostrar.map(({ val: cuotaVal, idx }: { val: string; idx: number }) => {
                               const nroFmt = (idx + 1).toString().padStart(2, '0');
                               const pagadoNum = Number(cuotaVal) || 0;
-                              const planNum = planCuotasRaw?.[idx] ? Number(planCuotasRaw[idx]) : planCuotaBase;
+                              const planNum = obtenerPlanCuota(idx);
                               const pendienteNum = Math.max(0, planNum - pagadoNum);
                               const estaTotalmentePagada = pagadoNum >= planNum && planNum > 0;
                               const esPagoParcial = pagadoNum > 0 && pagadoNum < planNum;
+
+                              const reciboAsociado = creditoSeleccionado?.cuotas_recibos?.[idx];
+                              const nroReciboCuota = reciboAsociado?.nro_recibo || (pagadoNum > 0 ? creditoSeleccionado?.nro_recibo : null);
+                              const nroOperacionCuota = reciboAsociado?.nro_operacion || (pagadoNum > 0 ? creditoSeleccionado?.nro_operacion : null);
 
                               return (
                                 <tr key={idx} className={estaTotalmentePagada ? 'bg-emerald-50/30 dark:bg-emerald-950/20' : esPagoParcial ? 'bg-sky-50/30 dark:bg-sky-950/20' : 'hover:bg-slate-50 dark:hover:bg-slate-800/40'}>
@@ -1079,31 +1224,57 @@ export default function Ficha360Modal({
                                   <td className="py-3 px-4 tabular-nums font-bold text-emerald-600 dark:text-emerald-400">
                                     S/ {pagadoNum.toFixed(2)}
                                   </td>
+                                  <td className="py-3 px-4 text-[11px]">
+                                    {pagadoNum > 0 ? (
+                                      <span className="font-bold text-indigo-600 dark:text-indigo-400 tabular-nums">
+                                        {nroReciboCuota || 'Registrado'}
+                                      </span>
+                                    ) : (
+                                      <span className="text-slate-300 dark:text-slate-600 italic text-[10px]">Por emitir</span>
+                                    )}
+                                  </td>
                                   <td className="py-3 px-4 font-bold">
                                     {estaTotalmentePagada ? (
                                       <span className="bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 text-[10px] px-2.5 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800 inline-flex items-center gap-1">
-                                        <CheckCircle2 className="size-3" /> Pagado (S/ {pagadoNum.toFixed(2)})
+                                        <CheckCircle2 className="size-3" /> Pagado
                                       </span>
                                     ) : esPagoParcial ? (
                                       <span className="bg-sky-100 dark:bg-sky-950/60 text-sky-800 dark:text-sky-300 text-[10px] px-2.5 py-0.5 rounded-full border border-sky-200 dark:border-sky-800 inline-flex items-center gap-1">
-                                        Abono parcial (S/ {pagadoNum.toFixed(2)} / S/ {planNum.toFixed(2)})
+                                        Abono parcial
                                       </span>
                                     ) : (
                                       <span className="bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 text-[10px] px-2.5 py-0.5 rounded-full border border-amber-200 dark:border-amber-800 inline-flex items-center gap-1">
-                                        Pendiente (S/ {planNum.toFixed(2)})
+                                        Pendiente
                                       </span>
                                     )}
                                   </td>
                                   <td className="py-3 px-4 text-right">
                                     <div className="flex items-center justify-end gap-2">
                                       {pagadoNum > 0 && (
-                                        <button
-                                          type="button"
-                                          onClick={() => onSetPagoParaAnular({ id: creditoSeleccionado?.id, dni_ce: alumnoSeleccionado.dni_ce, cuota_index: idx, monto: pagadoNum })}
-                                          className="text-[10px] text-red-600 hover:text-red-800 dark:text-red-400 dark:hover:text-red-300 font-bold underline cursor-pointer"
-                                        >
-                                          Anular
-                                        </button>
+                                        <>
+                                          <button
+                                            type="button"
+                                            onClick={() => onSetReciboImprimir({
+                                              id: nroReciboCuota || `REC-2026-${String(idx + 1).padStart(5, '0')}`,
+                                              monto: pagadoNum,
+                                              metodo: creditoSeleccionado?.metodo || 'Yape / Plin',
+                                              comprobante: nroReciboCuota || `REC-2026-${String(idx + 1).padStart(5, '0')}`,
+                                              nro_recibo: nroReciboCuota || `REC-2026-${String(idx + 1).padStart(5, '0')}`,
+                                              nro_operacion: nroOperacionCuota || 'N/A'
+                                            })}
+                                            className="text-[10px] text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300 font-bold underline cursor-pointer"
+                                            title="Ver recibo oficial"
+                                          >
+                                            Ver recibo
+                                          </button>
+                                          <button
+                                            type="button"
+                                            onClick={() => onSetPagoParaAnular({ id: creditoSeleccionado?.id, dni_ce: alumnoSeleccionado.dni_ce, cuota_index: idx, monto: pagadoNum })}
+                                            className="text-[10px] text-red-600 hover:text-red-800 dark:text-red-400 dark:hover:text-red-300 font-bold underline cursor-pointer"
+                                          >
+                                            Anular
+                                          </button>
+                                        </>
                                       )}
                                       {!estaTotalmentePagada && (
                                         <button
@@ -1114,6 +1285,7 @@ export default function Ficha360Modal({
                                               ? totalDeudaCredito 
                                               : (pendienteNum > 0 ? pendienteNum : planNum);
                                             setMontoPago(String(montoASugerir > 0 ? montoASugerir : planNum));
+                                            setComprobante(siguienteRecibo || 'REC-2026-00001');
                                             onSetPagoIdParaValidar(creditoSeleccionado?.id || null);
                                             setMostrarFormPago(true);
                                           }}
@@ -1155,33 +1327,63 @@ export default function Ficha360Modal({
                               <tr className="bg-slate-50 dark:bg-slate-800/60 border-b border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-[10px] uppercase font-bold tracking-wider">
                                 <th className="py-2.5 px-4">Concepto</th>
                                 <th className="py-2.5 px-4">Monto</th>
+                                <th className="py-2.5 px-4">N.º Recibo</th>
                                 <th className="py-2.5 px-4">Fecha</th>
                                 <th className="py-2.5 px-4">Estado</th>
                                 <th className="py-2.5 px-4 text-right">Acciones</th>
                               </tr>
                             </thead>
                             <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
-                              {cargosExtras.map((cargo: any, idx: number) => (
-                                <tr key={idx} className="hover:bg-slate-50 dark:hover:bg-slate-800/40 font-medium">
-                                  <td className="py-3 px-4 font-bold text-slate-900 dark:text-white">{cargo.concepto || 'Cargo adicional'}</td>
-                                  <td className="py-3 px-4 tabular-nums font-bold text-slate-800 dark:text-slate-200">S/ {Number(cargo.monto || 0).toFixed(2)}</td>
-                                  <td className="py-3 px-4 text-slate-500 dark:text-slate-400">{cargo.created_at ? new Date(cargo.created_at).toLocaleDateString('es-PE') : '-'}</td>
-                                  <td className="py-3 px-4">
-                                    <span className="bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 text-[10px] px-2.5 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800 font-bold">
-                                      {cargo.estado || 'Aprobado'}
-                                    </span>
-                                  </td>
-                                  <td className="py-3 px-4 text-right">
-                                    <button
-                                      type="button"
-                                      onClick={() => onSetPagoParaAnular({ id: cargo.id, dni_ce: alumnoSeleccionado.dni_ce, is_cargo_extra: true, monto: cargo.monto })}
-                                      className="text-[10px] text-red-600 hover:text-red-800 dark:text-red-400 dark:hover:text-red-300 font-bold underline cursor-pointer"
-                                    >
-                                      Anular cargo
-                                    </button>
-                                  </td>
-                                </tr>
-                              ))}
+                              {cargosExtras.map((cargo: any, idx: number) => {
+                                let nroReciboCargo = cargo.nro_recibo || (cargo.comprobante?.startsWith('REC-') ? cargo.comprobante : null);
+                                if (nroReciboCargo && (/CARGO/i.test(nroReciboCargo) || /^REC-\d{4}-\d{4,8}-\d+$/i.test(nroReciboCargo))) {
+                                  nroReciboCargo = null;
+                                }
+                                const nroOperacionCargo = cargo.nro_operacion || 'N/A';
+                                return (
+                                  <tr key={idx} className="hover:bg-slate-50 dark:hover:bg-slate-800/40 font-medium">
+                                    <td className="py-3 px-4 font-bold text-slate-900 dark:text-white">{cargo.concepto || 'Cargo adicional'}</td>
+                                    <td className="py-3 px-4 tabular-nums font-bold text-slate-800 dark:text-slate-200">S/ {Number(cargo.monto || 0).toFixed(2)}</td>
+                                    <td className="py-3 px-4 text-[11px]">
+                                      <span className="font-bold text-indigo-600 dark:text-indigo-400 tabular-nums">
+                                        {nroReciboCargo || 'Registrado'}
+                                      </span>
+                                    </td>
+                                    <td className="py-3 px-4 text-slate-500 dark:text-slate-400">{cargo.created_at ? new Date(cargo.created_at).toLocaleDateString('es-PE') : '-'}</td>
+                                    <td className="py-3 px-4">
+                                      <span className="bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 text-[10px] px-2.5 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800 font-bold">
+                                        {cargo.estado || 'Aprobado'}
+                                      </span>
+                                    </td>
+                                    <td className="py-3 px-4 text-right">
+                                      <div className="flex items-center justify-end gap-2">
+                                        <button
+                                          type="button"
+                                          onClick={() => onSetReciboImprimir({
+                                            id: nroReciboCargo,
+                                            monto: cargo.monto,
+                                            metodo: cargo.metodo || 'Yape / Plin',
+                                            comprobante: nroReciboCargo,
+                                            nro_recibo: nroReciboCargo,
+                                            nro_operacion: nroOperacionCargo
+                                          })}
+                                          className="text-[10px] text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300 font-bold underline cursor-pointer"
+                                          title="Ver recibo oficial"
+                                        >
+                                          Ver recibo
+                                        </button>
+                                        <button
+                                          type="button"
+                                          onClick={() => onSetPagoParaAnular({ id: cargo.id, dni_ce: alumnoSeleccionado.dni_ce, is_cargo_extra: true, monto: cargo.monto })}
+                                          className="text-[10px] text-red-600 hover:text-red-800 dark:text-red-400 dark:hover:text-red-300 font-bold underline cursor-pointer"
+                                        >
+                                          Anular cargo
+                                        </button>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                );
+                              })}
                             </tbody>
                           </table>
                         </div>
