@@ -37,9 +37,9 @@ export const LOGIN_CONTACT_INFO: LoginContactConfig = {
     },
     pagos: {
       titulo: "Consultas de pagos",
-      valor: "+51 914601253",
+      valor: "+51 980 694 497",
       textoBoton: "Escribir al WhatsApp",
-      enlace: "https://wa.me/51914601253?text=Hola%2C%20tengo%20una%20consulta%20sobre%20mis%20pagos%20en%20EDUMIN",
+      enlace: "https://wa.me/51980694497?text=Hola%2C%20tengo%20una%20consulta%20sobre%20mis%20pagos%20en%20EDUMIN",
       tipo: "whatsapp"
     },
     correo: {

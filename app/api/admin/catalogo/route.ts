@@ -12,6 +12,14 @@ import {
 import fs from 'fs';
 import path from 'path';
 
+// En-memoria cache para respuesta instantánea (< 2ms) del catálogo en toda la plataforma
+let catalogoCache: { data: any; timestamp: number } | null = null;
+const CATALOGO_CACHE_TTL = 3 * 60 * 1000; // 3 minutos
+
+export function invalidateCatalogoCache() {
+  catalogoCache = null;
+}
+
 // Helper para limpiar y formatear datos locales
 function getLocalCatalogoData() {
   const diplomadosPath = path.join(process.cwd(), 'lib/data/diplomados_todos.json');
@@ -408,8 +416,20 @@ function reconstruirDiplomadosDesdeLecciones(leccionesRows: any[], cursosSupabas
   });
 }
 
-export async function GET() {
+export async function GET(request?: Request) {
   try {
+    const url = request ? new URL(request.url) : null;
+    const noCache = url?.searchParams.get('fresh') === 'true';
+
+    if (!noCache && catalogoCache && (Date.now() - catalogoCache.timestamp < CATALOGO_CACHE_TTL)) {
+      return NextResponse.json(catalogoCache.data, {
+        headers: {
+          'Cache-Control': 'public, s-maxage=120, stale-while-revalidate=300',
+          'X-Cache': 'HIT'
+        }
+      });
+    }
+
     const admin = createAdminClient();
     const local = getLocalCatalogoData();
 
@@ -522,7 +542,7 @@ export async function GET() {
       ...(talleres.length > 0 ? talleres : local.talleres)
     ];
 
-    return NextResponse.json({
+    const resultado = {
       cursos: cursosEspecializacion.length > 0 ? cursosEspecializacion : local.cursosEspecializacion,
       diplomados: diplomados.length > 0 ? diplomados : local.diplomados,
       cursosEspecializacion: cursosEspecializacion.length > 0 ? cursosEspecializacion : local.cursosEspecializacion,
@@ -532,6 +552,15 @@ export async function GET() {
         diplomados: diplomados.length || local.diplomados.length,
         cursos: cursosEspecializacion.length || local.cursosEspecializacion.length,
         talleres: talleres.length || local.talleres.length
+      }
+    };
+
+    catalogoCache = { data: resultado, timestamp: Date.now() };
+
+    return NextResponse.json(resultado, {
+      headers: {
+        'Cache-Control': 'public, s-maxage=120, stale-while-revalidate=300',
+        'X-Cache': 'MISS'
       }
     });
   } catch (err: any) {
@@ -548,6 +577,7 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
+    invalidateCatalogoCache();
     const body = await request.json();
     const admin = createAdminClient();
 
@@ -692,6 +722,7 @@ export async function POST(request: Request) {
 
 export async function PUT(request: Request) {
   try {
+    invalidateCatalogoCache();
     const body = await request.json();
     const { 
       id, codigo, version, ano, titulo, categoria, nivel, num_modulos, 
@@ -793,6 +824,7 @@ export async function PUT(request: Request) {
 
 export async function DELETE(request: Request) {
   try {
+    invalidateCatalogoCache();
     const body = await request.json();
     const { ids } = body;
 

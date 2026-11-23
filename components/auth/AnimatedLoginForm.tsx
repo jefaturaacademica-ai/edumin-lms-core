@@ -16,6 +16,7 @@ import {
   ArrowLeft
 } from "lucide-react";
 import { loginWithDni, type LoginState } from "@/actions/auth";
+import { limpiarSesionLocal } from "@/context/profile-context";
 
 const initialState: LoginState = {};
 
@@ -34,6 +35,11 @@ export function AnimatedLoginForm({ className = "" }: AnimatedLoginFormProps) {
   const [infoMessage, setInfoMessage] = useState<string | null>(null);
 
   const dniInputRef = useRef<HTMLInputElement>(null);
+
+  // Limpiar cualquier residuo de sesión local previa al cargar la pantalla de login
+  useEffect(() => {
+    limpiarSesionLocal();
+  }, []);
 
   // Escuchar si se activa/desactiva el modo invitado desde el botón superior o URL
   useEffect(() => {

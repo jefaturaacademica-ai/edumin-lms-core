@@ -35,6 +35,7 @@ import { TarjetaBloqueoOverlay } from '@/components/dashboard/TarjetaBloqueoOver
 import { ALL_DIPLOMADOS, getDiplomadoBySlug, getDiplomadoByTitleOrSlug, DiplomadoCompleto } from '@/lib/data/diplomadosData';
 import { parseDiplomadosFromProfile, formatearCodigoModulo, calcularAvanceModuloGranular } from '@/lib/utils/profileParser';
 import configuracionExamenesJson from '@/lib/data/configuracion_examenes.json';
+import { getClientCachedData, fetchWithClientCache } from '@/lib/utils/clientCache';
 
 export default function DiplomadosPage() {
   const [paquete, setPaquete] = useState<string>('FULL');
@@ -113,146 +114,159 @@ export default function DiplomadosPage() {
   const listaNiveles = ['Todos', 'Especialización', 'Avanzado', 'Gerencial'];
 
   useEffect(() => {
-    async function cargarPerfilYSupabase() {
-      try {
-        const [meRes, catRes] = await Promise.all([
-          fetch('/api/dashboard/me').catch(() => null),
-          fetch('/api/admin/catalogo').catch(() => null)
-        ]);
+    function procesarDiplomadosPayload(data: any, catData: any) {
+      let liveDiplomados: any[] = [];
+      if (catData) {
+        liveDiplomados = catData.diplomados || [];
+        if (liveDiplomados.length > 0) {
+          setCatalogoSupabase(liveDiplomados);
+        }
+      }
 
-        let liveDiplomados: any[] = [];
-        if (catRes && catRes.ok) {
-          const catData = await catRes.json();
-          liveDiplomados = catData.diplomados || [];
-          if (liveDiplomados.length > 0) {
-            setCatalogoSupabase(liveDiplomados);
-          }
+      if (data) {
+        const prof = data.profile;
+        const matriculas = data.matriculas || [];
+
+        if (data.eduminCredits?.diplomados?.disponibles !== undefined) {
+          setCreditosDipDisponibles(data.eduminCredits.diplomados.disponibles);
+        }
+        if (data.eduminCredits?.diplomados?.habilitados !== undefined) {
+          setDiplomadosHabilitados(data.eduminCredits.diplomados.habilitados);
         }
 
-        if (meRes && meRes.ok) {
-          const data = await meRes.json();
-          const prof = data.profile;
-          const matriculas = data.matriculas || [];
+        if (prof) {
+          if (prof.paquete_adquirido) setPaquete(prof.paquete_adquirido);
+          if (prof.nombres) setNombres(prof.nombres);
 
-          if (data.eduminCredits?.diplomados?.disponibles !== undefined) {
-            setCreditosDipDisponibles(data.eduminCredits.diplomados.disponibles);
-          }
-          if (data.eduminCredits?.diplomados?.habilitados !== undefined) {
-            setDiplomadosHabilitados(data.eduminCredits.diplomados.habilitados);
-          }
+          const listMap: any[] = [];
+          const addedSlugs = new Set<string>();
 
-          if (prof) {
-            if (prof.paquete_adquirido) setPaquete(prof.paquete_adquirido);
-            if (prof.nombres) setNombres(prof.nombres);
-
-            const listMap: any[] = [];
-            const addedSlugs = new Set<string>();
-
-            // Parsear diplomados JSON del perfil en Supabase
-            const parsedDiplomadosJson = parseDiplomadosFromProfile(prof);
-            const dipJsonBySlug = new Map<string, any>();
-            parsedDiplomadosJson.forEach((d: any) => {
-              const matched = getDiplomadoByTitleOrSlug(d.titulo || d.slug || d.id);
-              if (matched) {
-                const existing = dipJsonBySlug.get(matched.slug);
-                if (!existing) {
-                  dipJsonBySlug.set(matched.slug, d);
-                } else {
-                  const mergedCompMap = { ...existing.completadosMap, ...d.completadosMap };
-                  const maxAvance = Math.max(existing.avance || 0, d.avance || 0);
-                  dipJsonBySlug.set(matched.slug, {
-                    ...existing,
-                    ...d,
-                    slug: matched.slug,
-                    id: matched.slug,
-                    avance: maxAvance,
-                    completadosMap: mergedCompMap
-                  });
-                }
+          // Parsear diplomados JSON del perfil en Supabase
+          const parsedDiplomadosJson = parseDiplomadosFromProfile(prof);
+          const dipJsonBySlug = new Map<string, any>();
+          parsedDiplomadosJson.forEach((d: any) => {
+            const matched = getDiplomadoByTitleOrSlug(d.titulo || d.slug || d.id);
+            if (matched) {
+              const existing = dipJsonBySlug.get(matched.slug);
+              if (!existing) {
+                dipJsonBySlug.set(matched.slug, d);
+              } else {
+                const mergedCompMap = { ...existing.completadosMap, ...d.completadosMap };
+                const maxAvance = Math.max(existing.avance || 0, d.avance || 0);
+                dipJsonBySlug.set(matched.slug, {
+                  ...existing,
+                  ...d,
+                  slug: matched.slug,
+                  id: matched.slug,
+                  avance: maxAvance,
+                  completadosMap: mergedCompMap
+                });
               }
+            }
+          });
+
+          // Helper para procesar e incluir un diplomado
+          const agregarDiplomadoALista = (matched: any, dipJson?: any) => {
+            if (addedSlugs.has(matched.slug)) return;
+            addedSlugs.add(matched.slug);
+
+            const compMap = dipJson?.completadosMap || {};
+
+            // Buscar si existe versión en vivo actualizada desde Supabase (/api/admin/catalogo)
+            const liveDip = liveDiplomados.find((ld: any) => 
+              ld.id === matched.slug || 
+              (ld.codigo && ld.codigo.toLowerCase() === matched.id?.toLowerCase()) ||
+              (ld.codigo && matched.numId && ld.codigo.toLowerCase() === `dip-${String(matched.numId).padStart(2, '0')}`.toLowerCase()) ||
+              (ld.titulo && matched.titulo && ld.titulo.toLowerCase().replace(/[^a-z0-9]+/g, '') === matched.titulo.toLowerCase().replace(/[^a-z0-9]+/g, ''))
+            );
+
+            const modulosSource = (liveDip && Array.isArray(liveDip.modulos) && liveDip.modulos.length > 0)
+              ? liveDip.modulos
+              : matched.modulos;
+
+            const modulosMap = modulosSource.map((mod: any, mIdx: number) => {
+              const modJson = dipJson?.modulos?.[mIdx];
+              const avanceMod = calcularAvanceModuloGranular(mod, mIdx, compMap, modJson);
+              const codigoFormateado = formatearCodigoModulo(mod.codigo, mIdx);
+              const nombreUpper = (mod.nombre || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`).toUpperCase();
+              return {
+                id: codigoFormateado,
+                codigo: codigoFormateado,
+                nombre: nombreUpper,
+                titulo: `${codigoFormateado}: ${nombreUpper}`.toUpperCase(),
+                docente: mod.docente || '',
+                clases: mod.clases || [],
+                avance: avanceMod,
+                nota: modJson?.nota !== undefined ? Number(modJson.nota) : undefined,
+                rendido: Boolean(modJson?.rendido || (modJson?.nota !== undefined && modJson?.nota !== null && Number(modJson?.nota) > 0)),
+                completado: avanceMod === 100
+              };
             });
 
-            // Helper para procesar e incluir un diplomado
-            const agregarDiplomadoALista = (matched: any, dipJson?: any) => {
-              if (addedSlugs.has(matched.slug)) return;
-              addedSlugs.add(matched.slug);
+            const sumAvanceModulos = modulosMap.reduce((acc: number, m: any) => acc + m.avance, 0);
+            const avanceCalc = modulosMap.length > 0 
+              ? Math.round(sumAvanceModulos / modulosMap.length) 
+              : 0;
+            const avanceGuardado = (typeof dipJson?.avance === 'number' && dipJson.avance > 0) ? dipJson.avance : 0;
+            const avanceFinal = Math.max(avanceGuardado, avanceCalc);
 
-              const compMap = dipJson?.completadosMap || {};
+            listMap.push({
+              id: matched.slug,
+              codigo: liveDip?.codigo || dipJson?.codigo || '',
+              titulo: (liveDip?.titulo || matched.titulo).toUpperCase(),
+              avance: avanceFinal,
+              imagen: (liveDip?.imagen && !liveDip.imagen.includes('gestion-minera.webp'))
+              ? liveDip.imagen
+              : (matched.imagen || liveDip?.imagen || '/assets/images/daem/gestion-minera.webp'),
+              completadosMap: compMap,
+              modulos: modulosMap
+            });
+          };
 
-              // Buscar si existe versión en vivo actualizada desde Supabase (/api/admin/catalogo)
-              const liveDip = liveDiplomados.find((ld: any) => 
-                ld.id === matched.slug || 
-                (ld.codigo && ld.codigo.toLowerCase() === matched.id?.toLowerCase()) ||
-                (ld.codigo && matched.numId && ld.codigo.toLowerCase() === `dip-${String(matched.numId).padStart(2, '0')}`.toLowerCase()) ||
-                (ld.titulo && matched.titulo && ld.titulo.toLowerCase().replace(/[^a-z0-9]+/g, '') === matched.titulo.toLowerCase().replace(/[^a-z0-9]+/g, ''))
-              );
+          // 1. Diplomados JSON del perfil en Supabase (orden cronológico de matrícula/canje)
+          parsedDiplomadosJson.forEach((dipJson) => {
+            const matched = getDiplomadoByTitleOrSlug(dipJson.titulo || dipJson.slug);
+            if (matched) {
+              agregarDiplomadoALista(matched, dipJson);
+            }
+          });
 
-              const modulosSource = (liveDip && Array.isArray(liveDip.modulos) && liveDip.modulos.length > 0)
-                ? liveDip.modulos
-                : matched.modulos;
-
-              const modulosMap = modulosSource.map((mod: any, mIdx: number) => {
-                const modJson = dipJson?.modulos?.[mIdx];
-                const avanceMod = calcularAvanceModuloGranular(mod, mIdx, compMap, modJson);
-                const codigoFormateado = formatearCodigoModulo(mod.codigo, mIdx);
-                const nombreUpper = (mod.nombre || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`).toUpperCase();
-                return {
-                  id: codigoFormateado,
-                  codigo: codigoFormateado,
-                  nombre: nombreUpper,
-                  titulo: `${codigoFormateado}: ${nombreUpper}`.toUpperCase(),
-                  docente: mod.docente || '',
-                  clases: mod.clases || [],
-                  avance: avanceMod,
-                  nota: modJson?.nota !== undefined ? Number(modJson.nota) : undefined,
-                  rendido: Boolean(modJson?.rendido || (modJson?.nota !== undefined && modJson?.nota !== null && Number(modJson?.nota) > 0)),
-                  completado: avanceMod === 100
-                };
-              });
-
-              const sumAvanceModulos = modulosMap.reduce((acc: number, m: any) => acc + m.avance, 0);
-              const avanceCalc = modulosMap.length > 0 
-                ? Math.round(sumAvanceModulos / modulosMap.length) 
-                : 0;
-              const avanceGuardado = (typeof dipJson?.avance === 'number' && dipJson.avance > 0) ? dipJson.avance : 0;
-              const avanceFinal = Math.max(avanceGuardado, avanceCalc);
-
-              listMap.push({
-                id: matched.slug,
-                codigo: liveDip?.codigo || dipJson?.codigo || '',
-                titulo: (liveDip?.titulo || matched.titulo).toUpperCase(),
-                avance: avanceFinal,
-                imagen: (liveDip?.imagen && !liveDip.imagen.includes('gestion-minera.webp'))
-                ? liveDip.imagen
-                : (matched.imagen || liveDip?.imagen || '/assets/images/daem/gestion-minera.webp'),
-                completadosMap: compMap,
-                modulos: modulosMap
-              });
-            };
-
-            // 1. Diplomados JSON del perfil en Supabase (orden cronológico de matrícula/canje)
-            parsedDiplomadosJson.forEach((dipJson) => {
-              const matched = getDiplomadoByTitleOrSlug(dipJson.titulo || dipJson.slug);
+          // 2. Matrículas de tipo DIPLOMADO en Supabase (respaldo para registros que no estén en el perfil)
+          (matriculas || []).forEach((m: any) => {
+            if (m.tipo === 'DIPLOMADO' || m.tipo === 'diplomado') {
+              const matched = getDiplomadoByTitleOrSlug(m.titulo || m.item_id);
               if (matched) {
+                const dipJson = dipJsonBySlug.get(matched.slug);
                 agregarDiplomadoALista(matched, dipJson);
               }
-            });
-
-            // 2. Matrículas de tipo DIPLOMADO en Supabase (respaldo para registros que no estén en el perfil)
-            (matriculas || []).forEach((m: any) => {
-              if (m.tipo === 'DIPLOMADO' || m.tipo === 'diplomado') {
-                const matched = getDiplomadoByTitleOrSlug(m.titulo || m.item_id);
-                if (matched) {
-                  const dipJson = dipJsonBySlug.get(matched.slug);
-                  agregarDiplomadoALista(matched, dipJson);
-                }
-              }
-            });
-
-            if (listMap.length > 0) {
-              setDiplomadosEstudianteReal(listMap);
             }
+          });
+
+          if (listMap.length > 0) {
+            setDiplomadosEstudianteReal(listMap);
           }
+        }
+      }
+    }
+
+    // 1. Hidratación instantánea desde caché si existe
+    const cachedMe = getClientCachedData('/api/dashboard/me');
+    const cachedCat = getClientCachedData('/api/admin/catalogo');
+    if (cachedMe) {
+      procesarDiplomadosPayload(cachedMe, cachedCat);
+      setLoading(false);
+    }
+
+    // 2. Revalidación en segundo plano (stale-while-revalidate)
+    async function cargarPerfilYSupabase() {
+      try {
+        const [meData, catData] = await Promise.all([
+          fetchWithClientCache('/api/dashboard/me'),
+          fetchWithClientCache('/api/admin/catalogo').catch(() => null)
+        ]);
+
+        if (meData) {
+          procesarDiplomadosPayload(meData, catData);
         }
       } catch (err) {
         console.error('Error cargando diplomados de Supabase:', err);
@@ -343,7 +357,6 @@ export default function DiplomadosPage() {
         <StudentPageHeader
           icon={GraduationCap}
           title="Mis diplomados"
-          subtitle="Accede a tus diplomados activos o explora el catálogo de especializaciones."
           iconClassName={esIlimitado ? 'text-amber-500' : 'text-indigo-600'}
         />
 
@@ -553,15 +566,15 @@ export default function DiplomadosPage() {
 
                             // El estado Desaprobado solo aplica cuando ya llegó al 100% de avance de clases.
                             // Si va en < 100% (ej. 70%), sigue mostrando "Continuar clases" (En progreso).
-                            const esModuloCompletado = noAplica ? avanceModulo === 100 : (avanceModulo === 100 && examenAprobado);
+                            const esModuloCompletado = noAplica ? avanceModulo === 100 : (examenAprobado || (avanceModulo === 100 && examenAprobado));
                             const esModuloDesaprobado100 = !noAplica && avanceModulo === 100 && examenDesaprobado;
-                            const tieneExamenPendiente = !noAplica && avanceModulo === 100 && !examenRendido;
+                            const tieneExamenPendiente = !noAplica && !examenRendido && !examenAprobado && (avanceModulo === 100);
                             const esModuloPorIniciar = avanceModulo === 0;
 
-                            const whatsappCuotaUrl = `https://wa.me/51984512809?text=${encodeURIComponent(
+                            const whatsappCuotaUrl = `https://wa.me/51980694497?text=${encodeURIComponent(
                               `Hola EDUMIN, deseo orientación para pagar mi siguiente cuota y habilitar el diplomado: ${diplomado.titulo}.`
                             )}`;
-                            const whatsappSustitutorioUrl = `https://wa.me/51924400268?text=${encodeURIComponent(
+                            const whatsappSustitutorioUrl = `https://wa.me/51980694497?text=${encodeURIComponent(
                               `Hola EDUMIN, desaprobé el ${modCodKey} de ${diplomado.titulo}. Deseo adquirir el Examen Sustitutorio.`
                             )}`;
 

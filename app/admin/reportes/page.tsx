@@ -6,6 +6,7 @@ import {
   Activity, Download, FileSpreadsheet, Coins, TrendingUp, AlertTriangle, CheckCircle2, Server, RefreshCw
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
+import { getClientCachedData, fetchWithClientCache } from '@/lib/utils/clientCache';
 
 export default function ReportesPage() {
   const [descargando, setDescargando] = useState<string | null>(null);
@@ -23,30 +24,38 @@ export default function ReportesPage() {
   });
   const [cargando, setCargando] = useState(true);
 
+  function procesarReportesData(data: any) {
+    if (!data) return;
+    if (data.kpis) {
+      setKpis({
+        totalRecaudado: Number(data.kpis.totalRecaudado) || 0,
+        tasaMorosidad: data.kpis.tasaMorosidad || '0%',
+        alumnosEnRiesgo: Number(data.kpis.alumnosEnRiesgo) || 0,
+        totalAlumnos: Number(data.kpis.totalAlumnos) || 0,
+        totalCursos: Number(data.kpis.totalCursos) || 0
+      });
+    }
+    setReporteData({
+      pagos: data.pagos || [],
+      alumnosRiesgo: data.alumnosRiesgo || [],
+      cursos: data.cursos || []
+    });
+  }
+
   useEffect(() => {
+    const cached = getClientCachedData('/api/admin/reportes');
+    if (cached) {
+      procesarReportesData(cached);
+      setCargando(false);
+    }
     cargarReportesData();
   }, []);
 
-  const cargarReportesData = async () => {
-    setCargando(true);
+  const cargarReportesData = async (forceRefresh = false) => {
     try {
-      const res = await fetch('/api/admin/reportes');
-      if (res.ok) {
-        const data = await res.json();
-        if (data.kpis) {
-          setKpis({
-            totalRecaudado: Number(data.kpis.totalRecaudado) || 0,
-            tasaMorosidad: data.kpis.tasaMorosidad || '0%',
-            alumnosEnRiesgo: Number(data.kpis.alumnosEnRiesgo) || 0,
-            totalAlumnos: Number(data.kpis.totalAlumnos) || 0,
-            totalCursos: Number(data.kpis.totalCursos) || 0
-          });
-        }
-        setReporteData({
-          pagos: data.pagos || [],
-          alumnosRiesgo: data.alumnosRiesgo || [],
-          cursos: data.cursos || []
-        });
+      const data = await fetchWithClientCache('/api/admin/reportes', { forceRefresh });
+      if (data) {
+        procesarReportesData(data);
       }
     } catch (e) {
       console.error('Error cargando reportes:', e);
@@ -57,7 +66,7 @@ export default function ReportesPage() {
 
   const exportarPagosCSV = () => {
     setDescargando('pagos');
-    setTimeout(() => {
+    try {
       let rows = "ID,DNI_CE,MONTO,METODO,ESTADO,FECHA\n";
       if (reporteData.pagos.length > 0) {
         reporteData.pagos.forEach(p => {
@@ -72,13 +81,14 @@ export default function ReportesPage() {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+    } finally {
       setDescargando(null);
-    }, 400);
+    }
   };
 
   const exportarAlumnosRiesgoCSV = () => {
     setDescargando('riesgo');
-    setTimeout(() => {
+    try {
       let rows = "DNI_CE,NOMBRES,APELLIDOS,EMAIL,PAQUETE,CUOTAS_PAGADAS,BLOQUEADO,PRORROGA_HASTA\n";
       if (reporteData.alumnosRiesgo.length > 0) {
         reporteData.alumnosRiesgo.forEach(a => {
@@ -93,13 +103,14 @@ export default function ReportesPage() {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+    } finally {
       setDescargando(null);
-    }, 400);
+    }
   };
 
   const exportarCatalogoCSV = () => {
     setDescargando('catalogo');
-    setTimeout(() => {
+    try {
       let rows = "ID,TITULO,CATEGORIA,DURACION,PRECIO,NIVEL\n";
       if (reporteData.cursos.length > 0) {
         reporteData.cursos.forEach(c => {
@@ -114,8 +125,9 @@ export default function ReportesPage() {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+    } finally {
       setDescargando(null);
-    }, 400);
+    }
   };
 
   return (
@@ -135,7 +147,7 @@ export default function ReportesPage() {
 
             </div>
             <button 
-              onClick={cargarReportesData}
+              onClick={() => cargarReportesData(true)}
               className="p-2 bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 rounded-xl text-xs font-bold transition cursor-pointer flex items-center gap-1.5 shadow-sm"
             >
               <RefreshCw className={`w-4 h-4 ${cargando ? 'animate-spin' : ''}`} /> Recargar KPIs

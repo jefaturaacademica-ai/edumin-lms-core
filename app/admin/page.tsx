@@ -14,6 +14,7 @@ import EditarCronogramaModal from '@/components/admin/editar-cronograma-modal';
 import Ficha360Modal from '@/components/admin/ficha-360-modal';
 import { EstudianteCompleto } from '@/lib/data/mockStudents';
 import { useTabSlug } from '@/lib/hooks/useTabSlug';
+import { getClientCachedData, fetchWithClientCache, invalidateClientCache } from '@/lib/utils/clientCache';
 
 export default function AdminDashboard360() {
   const [activeTab, setActiveTab] = useTabSlug<'analitica' | 'tesoreria'>('analitica', ['analitica', 'tesoreria'] as const);
@@ -67,24 +68,33 @@ export default function AdminDashboard360() {
   const [catalogoDiplomados, setCatalogoDiplomados] = useState<any[]>([]);
 
   useEffect(() => {
+    // 1. Hidratación instantánea desde caché si existe
+    const cachedEst = getClientCachedData('/api/admin/estudiantes');
+    const cachedCat = getClientCachedData('/api/admin/catalogo');
+    if (cachedEst?.estudiantes && Array.isArray(cachedEst.estudiantes)) {
+      setEstudiantes(cachedEst.estudiantes);
+      setCargandoEstudiantes(false);
+    }
+    if (cachedCat?.diplomados && Array.isArray(cachedCat.diplomados)) {
+      setCatalogoDiplomados(cachedCat.diplomados);
+    }
+
+    // 2. Revalidación en segundo plano (stale-while-revalidate)
     cargarEstudiantesDeSupabase();
     cargarCatalogoSupabase();
   }, []);
 
-  const cargarEstudiantesDeSupabase = async () => {
-    setCargandoEstudiantes(true);
+  const cargarEstudiantesDeSupabase = async (forceRefresh = false) => {
+    if (!estudiantes.length) setCargandoEstudiantes(true);
     try {
-      const res = await fetch('/api/admin/estudiantes');
-      if (res.ok) {
-        const data = await res.json();
-        if (Array.isArray(data.estudiantes)) {
-          setEstudiantes(data.estudiantes);
-          setAlumnoSeleccionado((prev) => {
-            if (!prev) return null;
-            const updated = data.estudiantes.find((e: EstudianteCompleto) => e.id === prev.id || e.dni_ce === prev.dni_ce);
-            return updated || null;
-          });
-        }
+      const data = await fetchWithClientCache('/api/admin/estudiantes', { forceRefresh });
+      if (data && Array.isArray(data.estudiantes)) {
+        setEstudiantes(data.estudiantes);
+        setAlumnoSeleccionado((prev) => {
+          if (!prev) return null;
+          const updated = data.estudiantes.find((e: EstudianteCompleto) => e.id === prev.id || e.dni_ce === prev.dni_ce);
+          return updated || null;
+        });
       }
     } catch (e) {
       console.error('Error cargando estudiantes de Supabase:', e);
@@ -93,12 +103,11 @@ export default function AdminDashboard360() {
     }
   };
 
-  const cargarCatalogoSupabase = async () => {
+  const cargarCatalogoSupabase = async (forceRefresh = false) => {
     try {
-      const res = await fetch('/api/admin/catalogo');
-      if (res.ok) {
-        const data = await res.json();
-        setCatalogoDiplomados(data.diplomados || []);
+      const data = await fetchWithClientCache('/api/admin/catalogo', { forceRefresh });
+      if (data?.diplomados) {
+        setCatalogoDiplomados(data.diplomados);
       }
     } catch (e) {
       console.error('Error cargando catálogo:', e);

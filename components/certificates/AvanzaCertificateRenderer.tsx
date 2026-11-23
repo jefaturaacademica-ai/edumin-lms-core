@@ -233,7 +233,7 @@ export function formatearNombreSegunEstilo(
  */
 export function resolverTextoHoras(
   cfgHoras?: PosicionElemento,
-  horasOriginales?: string,
+  horasOriginales?: string | number,
   esDiploma: boolean = false,
   creditosOriginales?: string | number,
   horasNumOriginal?: string | number
@@ -246,17 +246,19 @@ export function resolverTextoHoras(
     return cfgHoras.textoHorasPersonalizado.trim();
   }
 
+  const strHorasOriginales = horasOriginales !== undefined && horasOriginales !== null ? String(horasOriginales) : '';
+
   // 1. Extraer número de horas dinámico si no está explícito en cfgHoras.horasValor
   let valHoras = cfgHoras.horasValor?.trim();
   if (!valHoras) {
     if (horasNumOriginal) {
       valHoras = String(horasNumOriginal).replace(/[^0-9]/g, '').trim();
-    } else if (horasOriginales) {
-      const matchH = horasOriginales.match(/(\d+)\s*(?:horas|hrs)/i);
+    } else if (strHorasOriginales) {
+      const matchH = strHorasOriginales.match(/(\d+)\s*(?:horas|hrs)/i);
       if (matchH) {
         valHoras = matchH[1];
       } else {
-        const justNum = horasOriginales.replace(/[^0-9]/g, '');
+        const justNum = strHorasOriginales.replace(/[^0-9]/g, '');
         if (justNum) valHoras = justNum;
       }
     }
@@ -270,7 +272,7 @@ export function resolverTextoHoras(
     ? cfgHoras.sufijo.trim() 
     : (cfgHoras.sufijoHoras !== undefined ? cfgHoras.sufijoHoras.trim() : 'horas académicas');
 
-  const textoNumeroYSufijo = valHoras.match(/horas|hrs/i)
+  const textoNumeroYSufijo = String(valHoras).match(/horas|hrs/i)
     ? valHoras
     : (sufijo ? valHoras + ' ' + sufijo : valHoras);
 
@@ -286,7 +288,7 @@ export function resolverTextoCreditos(
   cfgCreditos?: PosicionElemento,
   creditosOriginales?: string | number,
   esDiploma: boolean = false,
-  horasOriginales?: string,
+  horasOriginales?: string | number,
   horasNumOriginal?: string | number
 ): string {
   if (!cfgCreditos) return '';
@@ -294,13 +296,15 @@ export function resolverTextoCreditos(
     return cfgCreditos.textoPersonalizado.trim();
   }
 
+  const strHorasOriginales = horasOriginales !== undefined && horasOriginales !== null ? String(horasOriginales) : '';
+
   // 1. Extraer número de créditos dinámico si no está explícito en cfgCreditos.creditosValor
   let valCreditos = cfgCreditos.creditosValor?.trim();
   if (!valCreditos) {
     if (creditosOriginales) {
       valCreditos = String(creditosOriginales).replace(/[^0-9]/g, '').trim();
-    } else if (horasOriginales) {
-      const matchC = horasOriginales.match(/(\d+)\s*cr[ée]ditos/i);
+    } else if (strHorasOriginales) {
+      const matchC = strHorasOriginales.match(/(\d+)\s*cr[ée]ditos/i);
       if (matchC) {
         valCreditos = matchC[1];
       }
@@ -315,7 +319,7 @@ export function resolverTextoCreditos(
     ? cfgCreditos.sufijo.trim() 
     : (cfgCreditos.sufijoCreditos !== undefined ? cfgCreditos.sufijoCreditos.trim() : 'créditos académicos');
 
-  const textoNumeroYSufijo = valCreditos.match(/cr[ée]ditos|cr[ée]d/i)
+  const textoNumeroYSufijo = String(valCreditos).match(/cr[ée]ditos|cr[ée]d/i)
     ? valCreditos
     : (sufijo ? valCreditos + ' ' + sufijo : valCreditos);
 
@@ -325,7 +329,7 @@ export function resolverTextoCreditos(
 
 export function resolverTextoHorasCreditos(
   cfgHoras: PosicionElemento,
-  horasOriginales?: string,
+  horasOriginales?: string | number,
   esDiploma: boolean = false,
   creditosOriginales?: string | number,
   horasNumOriginal?: string | number
@@ -341,17 +345,19 @@ export function resolverTextoHorasCreditos(
     return personalizado.trim();
   }
 
+  const strHorasOriginales = horasOriginales !== undefined && horasOriginales !== null ? String(horasOriginales) : '';
+
   // 1. Extraer número de horas dinámico si no está explícito en cfgHoras.horasValor
   let valHoras = cfgHoras.horasValor?.trim();
   if (!valHoras) {
     if (horasNumOriginal) {
       valHoras = String(horasNumOriginal).replace(/[^0-9]/g, '').trim();
-    } else if (horasOriginales) {
-      const matchH = horasOriginales.match(/(\d+)\s*(?:horas|hrs)/i);
+    } else if (strHorasOriginales) {
+      const matchH = strHorasOriginales.match(/(\d+)\s*(?:horas|hrs)/i);
       if (matchH) {
         valHoras = matchH[1];
       } else {
-        const justNum = horasOriginales.replace(/[^0-9]/g, '');
+        const justNum = strHorasOriginales.replace(/[^0-9]/g, '');
         if (justNum) valHoras = justNum;
       }
     }
@@ -365,8 +371,8 @@ export function resolverTextoHorasCreditos(
   if (!valCreditos) {
     if (creditosOriginales) {
       valCreditos = String(creditosOriginales).replace(/[^0-9]/g, '').trim();
-    } else if (horasOriginales) {
-      const matchC = horasOriginales.match(/(\d+)\s*cr[ée]ditos/i);
+    } else if (strHorasOriginales) {
+      const matchC = strHorasOriginales.match(/(\d+)\s*cr[ée]ditos/i);
       if (matchC) {
         valCreditos = matchC[1];
       }
@@ -388,13 +394,13 @@ export function resolverTextoHorasCreditos(
     : ' y ';
 
   // Armar partes con o sin sufijo (si el usuario ya escribió "horas" en el valor, no duplicar sufijo)
-  const textoParteHoras = valHoras.match(/horas|hrs/i) 
-    ? valHoras 
-    : (sufijoH ? `${valHoras} ${sufijoH}` : valHoras);
+  const textoParteHoras = String(valHoras).match(/horas|hrs/i) 
+    ? String(valHoras) 
+    : (sufijoH ? `${valHoras} ${sufijoH}` : String(valHoras));
 
-  const textoParteCreditos = valCreditos.match(/cr[ée]ditos|cr[ée]d/i)
-    ? valCreditos
-    : (sufijoC ? `${valCreditos} ${sufijoC}` : valCreditos);
+  const textoParteCreditos = String(valCreditos).match(/cr[ée]ditos|cr[ée]d/i)
+    ? String(valCreditos) 
+    : (sufijoC ? `${valCreditos} ${sufijoC}` : String(valCreditos));
 
   let cuerpo = '';
   const modo = cfgHoras.modoHorasCreditos || 'horas-y-creditos';

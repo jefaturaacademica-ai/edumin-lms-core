@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useEffect, useMemo, useRef } from 'react';
+import { useState, useEffect, useMemo, useRef, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { 
   Award, 
   FileText, 
@@ -21,13 +22,15 @@ import {
   ChevronDown,
   ChevronUp,
   ArrowRight,
-  Rocket
+  Rocket,
+  Clock
 } from 'lucide-react';
 import { useTheme } from '@/context/theme-context';
 import { StudentPageHeader } from '@/components/dashboard/StudentPageHeader';
 import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
 import { parseDiplomadosFromProfile, parseCursosFromProfile, esCursoTaller } from '@/lib/utils/profileParser';
 import { evaluarReglasCertificados, parseFechaCertificadoMs } from '@/lib/utils/credits';
+import { getClientCachedData, fetchWithClientCache } from '@/lib/utils/clientCache';
 import configuracionExamenesJson from '@/lib/data/configuracion_examenes.json';
 import AvanzaCertificateRenderer from '@/components/certificates/AvanzaCertificateRenderer';
 import { generarUrlQRValidacion, formatearNotaCertificado } from '@/lib/utils/certificateUtils';
@@ -285,7 +288,39 @@ function CertificadoMiniatura({
   return contenido;
 }
 
-export default function CertificadosPage() {
+
+type TabTipo = 'TODOS' | 'DIPLOMAS' | 'MODULARES' | 'CONVENIOS' | 'CURSOS_TALLERES';
+
+const TAB_SLUG_MAP: Record<TabTipo, string> = {
+  CURSOS_TALLERES: 'cursos',
+  MODULARES: 'modulares',
+  DIPLOMAS: 'diplomas',
+  CONVENIOS: 'convenios',
+  TODOS: 'todos',
+};
+
+function parseTabFromSlug(param?: string | null): TabTipo | null {
+  if (!param) return null;
+  const p = param.trim().toLowerCase();
+  if (p === 'cursos' || p === 'curso' || p === 'talleres' || p === 'taller' || p === 'cursos_talleres') {
+    return 'CURSOS_TALLERES';
+  }
+  if (p === 'modulares' || p === 'modular' || p === 'modulos' || p === 'modulo') {
+    return 'MODULARES';
+  }
+  if (p === 'diplomas' || p === 'diploma' || p === 'diplomados' || p === 'diplomado') {
+    return 'DIPLOMAS';
+  }
+  if (p === 'convenios' || p === 'convenio' || p === 'adicionales' || p === 'adicional') {
+    return 'CONVENIOS';
+  }
+  if (p === 'todos' || p === 'all') {
+    return 'TODOS';
+  }
+  return null;
+}
+
+function CertificadosContent() {
   const { esOscuro } = useTheme();
 
   // Perfil real del estudiante y estado de créditos/cuotas desde Supabase
@@ -297,55 +332,61 @@ export default function CertificadosPage() {
   const [paquetesConfig, setPaquetesConfig] = useState<Record<string, any>>({});
 
   useEffect(() => {
+    function procesarCertificadosPayload(data: any, modData: any, paqData: any, certData?: any) {
+      if (modData && Array.isArray(modData.modelos)) {
+        setModelosCertificados(modData.modelos);
+      }
+      if (paqData && paqData.paquetes) {
+        setPaquetesConfig(paqData.paquetes);
+      }
+      if (certData && Array.isArray(certData.certificaciones)) {
+        setCertificadosEmitidosDb(certData.certificaciones);
+      }
+      if (data) {
+        if (data.eduminCredits) {
+          setEduminCredits(data.eduminCredits);
+        }
+        if (data.profile) {
+          setPerfilEstudiante(data.profile);
+          if (data.profile.diplomado_1) {
+            setDiplomadoSeleccionado(data.profile.diplomado_1);
+          }
+        }
+      }
+    }
+
+    // 1. Hidratación instantánea desde caché si existe
+    const cachedMe = getClientCachedData('/api/dashboard/me');
+    const cachedModelos = getClientCachedData('/api/admin/certificaciones/modelos');
+    const cachedPaquetes = getClientCachedData('/api/admin/configuracion-paquetes');
+    const cachedDni = cachedMe?.profile?.dni_ce || cachedMe?.profile?.dni;
+    const cachedCerts = cachedDni ? getClientCachedData(`/api/admin/certificaciones?dni=${encodeURIComponent(cachedDni)}`) : null;
+
+    if (cachedMe) {
+      procesarCertificadosPayload(cachedMe, cachedModelos, cachedPaquetes, cachedCerts);
+      setLoading(false);
+    }
+
+    // 2. Revalidación en segundo plano (stale-while-revalidate)
     const fetchMe = async () => {
       try {
-        const [meRes, modelosRes, paquetesRes] = await Promise.all([
-          fetch('/api/dashboard/me'),
-          fetch('/api/admin/certificaciones/modelos').catch(() => null),
-          fetch('/api/admin/configuracion-paquetes').catch(() => null)
+        const [meData, modData, paqData] = await Promise.all([
+          fetchWithClientCache('/api/dashboard/me'),
+          fetchWithClientCache('/api/admin/certificaciones/modelos').catch(() => null),
+          fetchWithClientCache('/api/admin/configuracion-paquetes').catch(() => null)
         ]);
 
-        if (modelosRes && modelosRes.ok) {
-          const modData = await modelosRes.json();
-          if (Array.isArray(modData.modelos)) {
-            setModelosCertificados(modData.modelos);
+        let certData: any = null;
+        const dni = meData?.profile?.dni_ce || meData?.profile?.dni;
+        if (dni) {
+          try {
+            certData = await fetchWithClientCache(`/api/admin/certificaciones?dni=${encodeURIComponent(dni)}`).catch(() => null);
+          } catch {
+            // Continuar con datos del perfil
           }
         }
 
-        if (paquetesRes && paquetesRes.ok) {
-          const paqData = await paquetesRes.json();
-          if (paqData.paquetes) {
-            setPaquetesConfig(paqData.paquetes);
-          }
-        }
-
-        if (meRes.ok) {
-          const data = await meRes.json();
-          if (data.eduminCredits) {
-            setEduminCredits(data.eduminCredits);
-          }
-          if (data.profile) {
-            setPerfilEstudiante(data.profile);
-            if (data.profile.diplomado_1) {
-              setDiplomadoSeleccionado(data.profile.diplomado_1);
-            }
-
-            const dni = data.profile.dni_ce || data.profile.dni;
-            if (dni) {
-              try {
-                const certRes = await fetch(`/api/admin/certificaciones?dni=${encodeURIComponent(dni)}`);
-                if (certRes.ok) {
-                  const certData = await certRes.json();
-                  if (Array.isArray(certData.certificaciones)) {
-                    setCertificadosEmitidosDb(certData.certificaciones);
-                  }
-                }
-              } catch {
-                // Continuar con datos del perfil
-              }
-            }
-          }
-        }
+        procesarCertificadosPayload(meData, modData, paqData, certData);
       } catch (e) {
         console.error('Error fetching student profile for certificates:', e);
       } finally {
@@ -355,10 +396,30 @@ export default function CertificadosPage() {
     fetchMe();
   }, []);
 
+  const searchParams = useSearchParams();
+  const tabParam = searchParams.get('tab');
+  const tabFromUrl = useMemo(() => parseTabFromSlug(tabParam), [tabParam]);
+
   // Navegación por pestañas (Tabs Navigation)
-  type TabTipo = 'TODOS' | 'DIPLOMAS' | 'MODULARES' | 'CONVENIOS' | 'CURSOS_TALLERES';
-  const [tabActiva, setTabActiva] = useState<TabTipo>('CURSOS_TALLERES');
-  const tabInicialAplicadaRef = useRef(false);
+  const [tabActiva, setTabActiva] = useState<TabTipo>(() => tabFromUrl || 'CURSOS_TALLERES');
+  const tabInicialAplicadaRef = useRef(Boolean(tabFromUrl));
+
+  useEffect(() => {
+    if (tabFromUrl) {
+      setTabActiva(tabFromUrl);
+      tabInicialAplicadaRef.current = true;
+    }
+  }, [tabFromUrl]);
+
+  const cambiarTab = (nuevaTab: TabTipo) => {
+    setTabActiva(nuevaTab);
+    if (typeof window !== 'undefined') {
+      const slug = TAB_SLUG_MAP[nuevaTab] || 'todos';
+      const url = new URL(window.location.href);
+      url.searchParams.set('tab', slug);
+      window.history.replaceState(null, '', url.toString());
+    }
+  };
 
   // Control de despliegue de acordeón por diplomado en Certificados Modulares
   const [modularesAbiertos, setModularesAbiertos] = useState<Record<string, boolean>>({});
@@ -494,7 +555,7 @@ export default function CertificadosPage() {
   const paqueteUsuario = perfilEstudiante?.paquete_adquirido || 'COMPLETO';
   const configPaqueteEstudiante = paquetesConfig[String(paqueteUsuario).toUpperCase()] || paquetesConfig['COMPLETO'] || null;
   const incluyeDreambuilderEstudiante = configPaqueteEstudiante?.dreambuilder !== false;
-  const dreambuilderUrl = process.env.NEXT_PUBLIC_DREAMBUILDER_URL ?? "https://dreambuilder.com";
+  const dreambuilderUrl = process.env.NEXT_PUBLIC_DREAMBUILDER_URL ?? "https://dreambuilder.bluedrop.io/client/dreambuilder/?cl=program&lang=es";
 
   // Reglas financieras centralizadas para emisión de certificados (cuotas pagadas vs saldo pendiente)
   const reglasCertificados = useMemo(() => {
@@ -708,20 +769,31 @@ export default function CertificadosPage() {
     const result: any[] = [];
     const codigosVistos = new Set<string>();
 
+    const normalizarHorasTexto = (val: any, fallback: string) => {
+      if (val === undefined || val === null || val === '') return fallback;
+      const str = String(val).trim();
+      if (/horas|hrs/i.test(str)) return str;
+      return `${str} horas académicas`;
+    };
+
     rawCursos
       .filter((c: any) => {
-        const esCompletadoLecciones = Boolean(c.completado) || Number(c.avance) >= 100 || Boolean(c.codigo_cert);
-        if (!esCompletadoLecciones) return false;
-
         if (c.codigo_cert) return true;
 
         const { aplicaExamen, notaMinima } = obtenerConfigNotaExamen(c.codigo || c.id);
-        if (!aplicaExamen) return true;
+        const tieneNota = c.nota !== undefined && c.nota !== null && c.nota !== '';
+        const examenAprobado = tieneNota && Number(c.nota) >= notaMinima;
 
-        if (c.nota !== undefined && c.nota !== null && c.nota !== '') {
-          return Number(c.nota) >= notaMinima;
+        // Si aprobó el examen, califica directamente para su certificado
+        if (examenAprobado) return true;
+
+        // Si no aplica examen, requiere haber completado las lecciones
+        if (!aplicaExamen) {
+          return Boolean(c.completado) || Number(c.avance) >= 100;
         }
-        return Boolean(c.completado);
+
+        // Si no aprobó el examen todavía, requiere avance 100% y aprobación
+        return (Boolean(c.completado) || Number(c.avance) >= 100) && examenAprobado;
       })
       .forEach((c: any, idx: number) => {
         const certDb = certificadosEmitidosDb.find(cd =>
@@ -740,7 +812,7 @@ export default function CertificadosPage() {
           titulo: c.titulo,
           tipo: (esTaller ? 'Taller' : 'Curso') as 'Curso' | 'Taller',
           esRegalo: esTaller,
-          horas: certDb?.horas_lectivas || c.horas || (esTaller ? '20 horas académicas' : '24 horas académicas'),
+          horas: normalizarHorasTexto(certDb?.horas_lectivas || c.horas, esTaller ? '20 horas académicas' : '24 horas académicas'),
           modelo_id: certDb?.plantilla_snapshot?.modelo_id || (c as any).modelo_id || 'mod-226455',
           fecha: certDb?.fecha_emision ? String(certDb.fecha_emision) : (c.fecha || '18/02/2026'),
           nota: typeof certDb?.nota_final === 'number' && certDb.nota_final > 0
@@ -761,7 +833,7 @@ export default function CertificadosPage() {
           titulo: cd.programa_titulo,
           tipo: (esTaller ? 'Taller' : 'Curso') as 'Curso' | 'Taller',
           esRegalo: esTaller,
-          horas: cd.horas_lectivas || (esTaller ? '20 horas académicas' : '24 horas académicas'),
+          horas: normalizarHorasTexto(cd.horas_lectivas, esTaller ? '20 horas académicas' : '24 horas académicas'),
           modelo_id: cd.plantilla_snapshot?.modelo_id || 'mod-226455',
           fecha: cd.fecha_emision ? String(cd.fecha_emision) : '18/02/2026',
           nota: typeof cd.nota_final === 'number' && cd.nota_final > 0 ? Number(cd.nota_final) : undefined,
@@ -867,7 +939,7 @@ export default function CertificadosPage() {
     setTimeout(() => {
       setModalAbierto(false);
       setSolicitudEnviada(false);
-    }, 3000);
+    }, 1200);
   };
 
   const abrirVistaPrevia = (certData: {
@@ -1013,7 +1085,7 @@ export default function CertificadosPage() {
               return (
                 <button
                   key={tab.id}
-                  onClick={() => setTabActiva(tab.id as TabTipo)}
+                  onClick={() => cambiarTab(tab.id as TabTipo)}
                   className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap shrink-0 border transition-colors cursor-pointer ${
                     esActiva
                       ? esTabTodos
@@ -1051,8 +1123,11 @@ export default function CertificadosPage() {
                 Diplomas generales
               </h2>
 
-              <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">
-                {diplomadosVisibles.filter(d => d.completado).length} habilitado(s)
+              <span className="text-xs sm:text-sm font-bold text-amber-500 dark:text-amber-400">
+                {(() => {
+                  const habilitados = diplomadosVisibles.filter(d => d.completado).length;
+                  return `${habilitados} ${habilitados === 1 ? 'habilitado' : 'habilitados'}`;
+                })()}
               </span>
             </div>
 
@@ -1071,7 +1146,7 @@ export default function CertificadosPage() {
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
                 {diplomadosVisibles.map((dip) => {
-                const whatsappCuotaDipUrl = `https://wa.me/51984512809?text=${encodeURIComponent(
+                const whatsappCuotaDipUrl = `https://wa.me/51980694497?text=${encodeURIComponent(
                   `Hola EDUMIN, ya aprobé los módulos de ${dip.titulo} y deseo orientación para pagar mi siguiente cuota y habilitar mi Diploma General.`
                 )}`;
                 const modeloDip = resolverModeloParaCertificado({
@@ -1130,11 +1205,11 @@ export default function CertificadosPage() {
                       <div className="p-5 flex-1 flex flex-col justify-between gap-4">
                         <div className="space-y-2.5">
                           <div className="flex items-center justify-between gap-2">
-                            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-500 border border-emerald-500/25">
-                              <CheckCircle2 className="size-3 shrink-0" /> Habilitado
+                            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border border-emerald-200/80 dark:border-emerald-800/60 shadow-2xs">
+                              <CheckCircle2 className="size-3 shrink-0 text-emerald-600 dark:text-emerald-400" /> Habilitado
                             </span>
                             {formatearNotaCertificado(dip.promedio) && (
-                              <span className="bg-emerald-500/15 text-emerald-500 border border-emerald-500/25 font-bold px-2.5 py-0.5 rounded-lg text-[11px] tabular-nums shrink-0">
+                              <span className="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 font-bold px-2 py-0.5 rounded-lg text-[11px] tabular-nums shrink-0">
                                 Nota: {formatearNotaCertificado(dip.promedio)}
                               </span>
                             )}
@@ -1217,7 +1292,7 @@ export default function CertificadosPage() {
                               <Lock className="size-3 shrink-0" /> Bloqueado por cuota
                             </span>
                             {formatearNotaCertificado(dip.promedio) && (
-                              <span className="bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 font-bold px-2.5 py-0.5 rounded-lg text-[11px] tabular-nums shrink-0">
+                              <span className="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 font-bold px-2 py-0.5 rounded-lg text-[11px] tabular-nums shrink-0">
                                 Nota: {formatearNotaCertificado(dip.promedio)}
                               </span>
                             )}
@@ -1258,10 +1333,10 @@ export default function CertificadosPage() {
                   <div key={dip.id} className={`border rounded-2xl p-5 relative overflow-hidden flex flex-col justify-between gap-4 ${esOscuro ? 'bg-slate-900/80 border-slate-800' : 'bg-white border-slate-200 shadow-sm'}`}>
                     <div className="space-y-3">
                       <div className="flex items-center justify-between gap-2">
-                        <span className="text-[11px] font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full inline-flex items-center gap-1.5">
-                          <Lock className="size-3 shrink-0" /> En progreso
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-600 text-white shadow-xs">
+                          <Clock className="size-3 shrink-0" /> En progreso
                         </span>
-                        <span className={`text-[11px] font-bold px-2.5 py-0.5 rounded-lg border tabular-nums ${esOscuro ? 'bg-slate-800/80 text-slate-300 border-slate-700' : 'bg-slate-100 text-slate-600 border-slate-200'}`}>
+                        <span className={`text-[11px] font-bold px-2 py-0.5 rounded-lg border tabular-nums ${esOscuro ? 'bg-slate-800 text-slate-300 border-slate-700' : 'bg-slate-100 text-slate-700 border-slate-200'}`}>
                           {dip.modularesAprobados} / {dip.modularesTotales} módulos
                         </span>
                       </div>
@@ -1285,7 +1360,10 @@ export default function CertificadosPage() {
 
                     <p className="text-[11px] text-amber-400/90 font-medium flex items-center gap-1.5 pt-2">
                       <AlertTriangle className="size-3.5 shrink-0" />
-                      Aprueba {Math.max(1, dip.modularesTotales - dip.modularesAprobados)} módulo(s) adicional(es) para desbloquear tu Diploma.
+                      {(() => {
+                        const faltantes = Math.max(1, dip.modularesTotales - dip.modularesAprobados);
+                        return `Aprueba ${faltantes} ${faltantes === 1 ? 'módulo adicional' : 'módulos adicionales'} para desbloquear tu diploma.`;
+                      })()}
                     </p>
                   </div>
                 );
@@ -1305,8 +1383,8 @@ export default function CertificadosPage() {
                 Certificados modulares
               </h2>
 
-              <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
-                {modularesHabilitadosCount} / {totalModularesCount} habilitado(s)
+              <span className="text-xs sm:text-sm font-bold text-indigo-600 dark:text-indigo-400">
+                {modularesHabilitadosCount} de {totalModularesCount} {totalModularesCount === 1 ? 'habilitado' : 'habilitados'}
               </span>
             </div>
 
@@ -1331,21 +1409,20 @@ export default function CertificadosPage() {
                       {/* Cabecera limpia de diplomado sin caja envolvente */}
                       <div className="flex items-center justify-between gap-3 pb-2 border-b border-slate-100 dark:border-slate-800/80">
                         <div className="flex items-center gap-2">
-                          <GraduationCap className="size-4 shrink-0 text-indigo-500" />
-                          <h3 className={`text-xs sm:text-sm font-bold uppercase tracking-wide ${esOscuro ? 'text-indigo-400' : 'text-indigo-600'}`}>
+                          <h3 className={`text-xs sm:text-sm font-bold uppercase tracking-wide ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
                             {diplomadoNombre}
                           </h3>
                         </div>
 
-                        <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
-                          {modulares.length} Módulo(s) Aprobado(s)
+                        <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400">
+                          {modulares.length} {modulares.length === 1 ? 'módulo aprobado' : 'módulos aprobados'}
                         </span>
                       </div>
 
                       {/* Tarjetas de certificados modulares alineadas directamente con el grid de los demás certificados */}
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {modulares.map((cert) => {
-                          const whatsappCuotaModUrl = `https://wa.me/51984512809?text=${encodeURIComponent(
+                          const whatsappCuotaModUrl = `https://wa.me/51980694497?text=${encodeURIComponent(
                             `Hola EDUMIN, aprobé "${cert.modulo}" en ${cert.diplomado} y deseo orientación para pagar mi cuota ${cert.cuotaRequerida} y habilitar este certificado modular.`
                           )}`;
                           const modeloMod = resolverModeloParaCertificado({
@@ -1411,17 +1488,17 @@ export default function CertificadosPage() {
                                 <div className="space-y-2.5">
                                   <div className="flex items-center justify-between gap-2">
                                     {cert.bloqueadoPorCuota ? (
-                                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-purple-600 text-white border border-purple-400/30">
+                                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-purple-600 text-white shadow-xs">
                                         <Lock className="size-3 shrink-0" /> Bloqueado por cuota
                                       </span>
                                     ) : (
-                                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-500 border border-emerald-500/25">
-                                        <CheckCircle2 className="size-3 shrink-0" /> Habilitado
+                                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border border-emerald-200/80 dark:border-emerald-800/60 shadow-2xs">
+                                        <CheckCircle2 className="size-3 shrink-0 text-emerald-600 dark:text-emerald-400" /> Habilitado
                                       </span>
                                     )}
 
                                     {formatearNotaCertificado(cert.nota) && (
-                                      <span className="bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 font-bold px-2.5 py-0.5 rounded-lg text-[11px] tabular-nums shrink-0">
+                                      <span className="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 font-bold px-2 py-0.5 rounded-lg text-[11px] tabular-nums shrink-0">
                                         Nota: {formatearNotaCertificado(cert.nota)}
                                       </span>
                                     )}
@@ -1513,8 +1590,8 @@ export default function CertificadosPage() {
                 Certificados de cursos
               </h2>
 
-              <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                {totalCursosCount} certificados
+              <span className="text-xs sm:text-sm font-bold text-emerald-600 dark:text-emerald-400">
+                {totalCursosCount} {totalCursosCount === 1 ? 'certificado' : 'certificados'}
               </span>
             </div>
 
@@ -1586,11 +1663,11 @@ export default function CertificadosPage() {
                       <div className="p-5 flex-1 flex flex-col justify-between gap-4">
                         <div className="space-y-2.5">
                           <div className="flex items-center justify-between gap-2">
-                            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-500 border border-emerald-500/25">
-                              <CheckCircle2 className="size-3 shrink-0" /> Habilitado
+                            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border border-emerald-200/80 dark:border-emerald-800/60 shadow-2xs">
+                              <CheckCircle2 className="size-3 shrink-0 text-emerald-600 dark:text-emerald-400" /> Habilitado
                             </span>
                             {formatearNotaCertificado(curso.nota) && (
-                              <span className="text-[11px] font-bold text-emerald-500 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-lg tabular-nums shrink-0">
+                              <span className="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 font-bold px-2 py-0.5 rounded-lg text-[11px] tabular-nums shrink-0">
                                 Nota: {formatearNotaCertificado(curso.nota)}
                               </span>
                             )}
@@ -1654,7 +1731,7 @@ export default function CertificadosPage() {
                 Certificados adicionales
               </h2>
 
-              <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+              <span className="text-xs sm:text-sm font-bold text-cyan-600 dark:text-cyan-400">
                 {incluyeDreambuilderEstudiante ? '3 certificaciones adicionales' : '2 convenios'}
               </span>
             </div>
@@ -1675,11 +1752,11 @@ export default function CertificadosPage() {
                 <div className="p-5 space-y-2.5">
                   <div className="flex justify-between items-start">
                     {tieneDiplomaGeneral ? (
-                      <span className="text-[11px] font-bold text-emerald-500 bg-emerald-500/15 border border-emerald-500/25 px-2.5 py-0.5 rounded-full flex items-center gap-1">
-                        <CheckCircle2 className="size-3" /> Habilitado
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border border-emerald-200/80 dark:border-emerald-800/60 shadow-2xs">
+                        <CheckCircle2 className="size-3 text-emerald-600 dark:text-emerald-400" /> Habilitado
                       </span>
                     ) : (
-                      <span className="text-[11px] font-bold text-amber-500 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-600 text-white shadow-xs">
                         <Lock className="size-3" /> Bloqueado
                       </span>
                     )}
@@ -1727,11 +1804,11 @@ export default function CertificadosPage() {
                 <div className="p-5 space-y-2.5">
                   <div className="flex justify-between items-start">
                     {tieneDiplomaGeneral ? (
-                      <span className="text-[11px] font-bold text-emerald-500 bg-emerald-500/15 border border-emerald-500/25 px-2.5 py-0.5 rounded-full flex items-center gap-1">
-                        <CheckCircle2 className="size-3" /> Habilitado
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border border-emerald-200/80 dark:border-emerald-800/60 shadow-2xs">
+                        <CheckCircle2 className="size-3 text-emerald-600 dark:text-emerald-400" /> Habilitado
                       </span>
                     ) : (
-                      <span className="text-[11px] font-bold text-amber-500 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-600 text-white shadow-xs">
                         <Lock className="size-3" /> Bloqueado
                       </span>
                     )}
@@ -1755,7 +1832,7 @@ export default function CertificadosPage() {
                   {tieneDiplomaGeneral ? (
                     <button
                       onClick={() => abrirModal('MIAMI')}
-                      className="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2.5 rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 text-xs cursor-pointer"
+                      className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 text-xs cursor-pointer"
                     >
                       <Globe className="w-4 h-4" /> Solicitar Certificación MIAMI
                     </button>
@@ -1781,12 +1858,12 @@ export default function CertificadosPage() {
                 }`}>
                   <div className="p-5 space-y-2.5">
                     <div className="flex justify-between items-start">
-                      <span className="text-[11px] font-bold text-emerald-500 bg-emerald-500/15 border border-emerald-500/25 px-2.5 py-0.5 rounded-full flex items-center gap-1">
-                        <CheckCircle2 className="size-3" /> Habilitado en tu paquete
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border border-emerald-200/80 dark:border-emerald-800/60 shadow-2xs">
+                        <CheckCircle2 className="size-3 text-emerald-600 dark:text-emerald-400" /> Habilitado
                       </span>
                     </div>
                     <h3 className={`text-sm font-bold uppercase leading-snug line-clamp-2 min-h-[2.45rem] ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                      Dreambuilder • Thunderbird School
+                      Programa Dreambuilder (Thunderbird School)
                     </h3>
                     <p className={`text-xs leading-relaxed ${esOscuro ? 'text-slate-400' : 'text-slate-600'}`}>
                       Acreditación en gestión empresarial y emprendimiento internacional respaldada por la Universidad de Arizona y Freeport-McMoRan.
@@ -1798,7 +1875,7 @@ export default function CertificadosPage() {
                       href={dreambuilderUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full bg-violet-600 hover:bg-violet-500 text-white font-bold py-2.5 rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 text-xs cursor-pointer"
+                      className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 text-xs cursor-pointer"
                     >
                       <Rocket className="w-4 h-4" /> Ingresar al portal y certificarme
                     </a>
@@ -2066,5 +2143,17 @@ export default function CertificadosPage() {
 
 
     </main>
+  );
+}
+
+export default function CertificadosPage() {
+  return (
+    <Suspense fallback={
+      <div className="w-full h-full min-h-[calc(100vh-5rem)] flex items-center justify-center">
+        <DashboardLoader minHeight="min-h-full" />
+      </div>
+    }>
+      <CertificadosContent />
+    </Suspense>
   );
 }

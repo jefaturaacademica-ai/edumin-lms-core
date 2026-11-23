@@ -10,12 +10,12 @@ import {
   CalendarDays,
   CheckCircle2,
   Play,
-  Award,
-  Lock
+  Award
 } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { calculateEduminCredits, derivePaymentStateForCredits } from "@/lib/utils/credits";
+import { formatearFechaVisual, resolverFechaVencimiento } from "@/lib/utils/fechasCuotas";
 import { getDiplomadoByTitleOrSlug } from "@/lib/data/diplomadosData";
 import {
   parseDiplomadosFromProfile,
@@ -181,16 +181,19 @@ export default async function DashboardPage() {
   let montoPagado = 0;
   let saldoPendiente = costoTotal;
   let deudaSaldada = false;
+  let proximaFechaVencimiento: string | null = null;
 
   if (pagosReales.length > 0) {
     let totalAcumuladoPagado = 0;
     let totalAcumuladoDeuda = 0;
     let tieneDeudaExplicit = false;
+    let montoTotalContratado = 0;
 
     pagosReales.forEach((p) => {
       let pagadoFila = 0;
       let deudaFila = 0;
       let cuotasArray: string[] = [p.cuota_01, p.cuota_02, p.cuota_03, p.cuota_04, p.cuota_05, p.cuota_06];
+      let fechasVencimientoFila: string[] | null = null;
 
       if (typeof p.metodo === 'string' && p.metodo.startsWith('CREDITO_')) {
         try {
@@ -198,6 +201,9 @@ export default async function DashboardPage() {
           const parsed = JSON.parse(jsonStr);
           if (Array.isArray(parsed.cuotas)) {
             cuotasArray = parsed.cuotas;
+          }
+          if (Array.isArray(parsed.fechas_vencimiento)) {
+            fechasVencimientoFila = parsed.fechas_vencimiento;
           }
           if (parsed.total_pagado !== undefined) {
             pagadoFila = Number(parsed.total_pagado) || 0;
@@ -228,24 +234,65 @@ export default async function DashboardPage() {
         deudaFila = Math.max(0, montoBase - pagadoFila);
       }
       totalAcumuladoDeuda += deudaFila;
+
+      const rowMonto = Number(p.monto) || (pagadoFila + deudaFila);
+      if (rowMonto > 0) {
+        montoTotalContratado = Math.max(montoTotalContratado, rowMonto);
+      }
+
+      // Buscar la primera cuota pendiente para su fecha de vencimiento real
+      if (!proximaFechaVencimiento && deudaFila > 0) {
+        const primerPendienteIdx = cuotasArray.findIndex(v => v !== 'no corresponde' && Number(v) === 0);
+        if (primerPendienteIdx !== -1) {
+          proximaFechaVencimiento = resolverFechaVencimiento(
+            primerPendienteIdx,
+            fechasVencimientoFila,
+            p.created_at || safeProfile.created_at
+          );
+        }
+      }
     });
 
+    if (montoTotalContratado > 0) {
+      costoTotal = montoTotalContratado;
+    }
     montoPagado = totalAcumuladoPagado;
     saldoPendiente = tieneDeudaExplicit ? totalAcumuladoDeuda : Math.max(0, costoTotal - montoPagado);
     deudaSaldada = saldoPendiente <= 0;
   } else {
     // Estimación con base en cuotas_pagadas de su perfil
     const cuotaMonto = totalCuotas > 0 ? costoTotal / totalCuotas : 0;
-    const cuotasEfectivas = Math.min(safeProfile.cuotas_pagadas || 0, totalCuotas);
-    montoPagado = cuotasEfectivas * cuotaMonto;
+    const esContadoProfile = safeProfile.tipo_pago === 'CONTADO' || String(safeProfile.paquete_adquirido).includes('CONTADO');
+    const cuotasEfectivas = esContadoProfile ? totalCuotas : Math.min(safeProfile.cuotas_pagadas || 0, totalCuotas);
+    montoPagado = esContadoProfile ? costoTotal : cuotasEfectivas * cuotaMonto;
     saldoPendiente = Math.max(0, costoTotal - montoPagado);
     deudaSaldada = saldoPendiente <= 0;
   }
 
-  const fechaProximoPago = new Date();
-  fechaProximoPago.setDate(15);
-  fechaProximoPago.setMonth(fechaProximoPago.getMonth() + 1);
-  const stringFechaPago = fechaProximoPago.toLocaleDateString('es-PE', { day: 'numeric', month: 'long', year: 'numeric' });
+  // Si no se encontró fecha en pagos pero aún hay saldo pendiente
+  if (!proximaFechaVencimiento && !deudaSaldada) {
+    const idxPendiente = paymentState.cuotasPagadas;
+    proximaFechaVencimiento = resolverFechaVencimiento(
+      idxPendiente,
+      null,
+      safeProfile.created_at || new Date().toISOString()
+    );
+  }
+
+  let stringFechaPago = '';
+  if (proximaFechaVencimiento) {
+    const fObj = new Date(proximaFechaVencimiento + 'T12:00:00');
+    if (!isNaN(fObj.getTime())) {
+      stringFechaPago = fObj.toLocaleDateString('es-PE', { day: 'numeric', month: 'long', year: 'numeric' });
+    } else {
+      stringFechaPago = formatearFechaVisual(proximaFechaVencimiento);
+    }
+  } else {
+    const fechaProximoPago = new Date();
+    fechaProximoPago.setDate(15);
+    fechaProximoPago.setMonth(fechaProximoPago.getMonth() + 1);
+    stringFechaPago = fechaProximoPago.toLocaleDateString('es-PE', { day: 'numeric', month: 'long', year: 'numeric' });
+  }
 
   // Extracción estricta del PRIMER NOMBRE del alumno
   let primerNombre = 'Estudiante';
@@ -404,32 +451,32 @@ export default async function DashboardPage() {
       </section>
 
       {/* SECCIÓN 2 (SEGUNDA): CRÉDITOS Y ESTADO DE CUENTA */}
-      <section className="mx-auto grid max-w-6xl gap-6 px-6 py-10 sm:px-10 lg:grid-cols-3 lg:px-16 lg:py-10">
+      <section className="mx-auto grid max-w-6xl gap-6 px-6 py-10 sm:px-10 lg:grid-cols-3 lg:px-16">
         
         {/* Widget 1: Créditos EDUMIN disponibles */}
-        <article className="relative overflow-hidden rounded-3xl bg-white dark:bg-slate-900 p-7 shadow-sm ring-1 border border-slate-200 dark:border-slate-800 sm:p-9 flex flex-col justify-between">
-          <div className="absolute -right-12 -top-12 size-44 rounded-full bg-indigo-100/50 dark:bg-indigo-950/40" />
-          <div className="relative">
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <p className="text-sm font-bold uppercase tracking-[0.16em] text-indigo-600 dark:text-indigo-400">Créditos EDUMIN</p>
-                <h2 className="mt-3 text-5xl font-bold tracking-tighter text-slate-950 dark:text-white">
-                  {eduminCredits.total.disponibles}
-                </h2>
+        <article className="relative rounded-3xl bg-white dark:bg-slate-900 p-7 sm:p-8 shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-indigo-300 dark:hover:border-indigo-500/40 transition">
+          <div>
+            <div className="flex items-center gap-3 mb-5">
+              <div className="grid size-10 place-items-center rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-900/50">
+                <BookOpenCheck className="size-5" />
               </div>
-              <div className="grid size-12 place-items-center rounded-2xl bg-indigo-600 text-white shadow-lg shadow-indigo-600/25">
-                <BookOpenCheck className="size-6" />
-              </div>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white">Créditos EDUMIN</h3>
             </div>
 
-            <div className="mt-4 space-y-2 text-xs text-slate-600 dark:text-slate-300">
-              <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-1.5">
+            <div className="mb-4">
+              <h2 className="text-5xl font-black tracking-tight text-slate-900 dark:text-white">
+                {eduminCredits.total.disponibles}
+              </h2>
+            </div>
+
+            <div className="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+              <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
                 <span>Diplomados pendientes:</span>
                 <strong className="font-bold text-slate-900 dark:text-white">
                   {eduminCredits.diplomados.disponibles} cupo(s)
                 </strong>
               </div>
-              <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-1.5">
+              <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
                 <span>Cursos libres pendientes:</span>
                 <strong className="font-bold text-slate-900 dark:text-white">
                   {eduminCredits.cursos.disponibles} cupo(s)
@@ -445,7 +492,7 @@ export default async function DashboardPage() {
           {eduminCredits.total.disponibles > 0 ? (
             <Link
               href="/dashboard/canjear"
-              className="mt-6 inline-flex h-12 w-full justify-center items-center gap-2 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 text-white px-4 text-xs font-extrabold uppercase tracking-wider shadow-lg shadow-indigo-600/30 transition hover:opacity-95"
+              className="mt-6 inline-flex h-11 w-full justify-center items-center gap-2 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white px-4 text-xs font-bold transition shadow-sm shadow-indigo-600/20"
             >
               <Sparkles className="size-4 animate-bounce" /> Canjear mis cursos y diplomados
             </Link>
@@ -460,42 +507,42 @@ export default async function DashboardPage() {
         </article>
 
         {/* Widget 2: Estado Financiero */}
-        <article className="relative overflow-hidden rounded-3xl bg-white dark:bg-slate-900 p-7 shadow-sm border border-slate-200 dark:border-slate-800 sm:p-9 flex flex-col justify-between">
+        <article className="relative rounded-3xl bg-white dark:bg-slate-900 p-7 sm:p-8 shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-emerald-300 dark:hover:border-emerald-500/40 transition">
           <div>
             <div className="flex items-center justify-between gap-3 mb-5">
               <div className="flex items-center gap-3">
-                <div className="grid size-10 place-items-center rounded-xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400">
+                <div className="grid size-10 place-items-center rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-900/50">
                   <Wallet className="size-5" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white">Estado de Cuenta</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white">Estado de cuenta</h3>
               </div>
             </div>
             
-            <div className="space-y-4">
-              <div className="flex justify-between items-center border-b border-slate-100 dark:border-slate-800 pb-3">
-                <span className="text-sm text-slate-500 dark:text-slate-400">Monto total</span>
-                <span className="font-semibold tabular-nums text-slate-900 dark:text-white">S/ {costoTotal}</span>
+            <div className="space-y-3.5">
+              <div className="flex justify-between items-center border-b border-slate-100 dark:border-slate-800 pb-2.5">
+                <span className="text-xs text-slate-500 dark:text-slate-400">Monto total</span>
+                <span className="text-sm font-semibold tabular-nums text-slate-900 dark:text-white">S/ {costoTotal}</span>
               </div>
-              <div className="flex justify-between items-center border-b border-slate-100 dark:border-slate-800 pb-3">
-                <span className="text-sm text-slate-500 dark:text-slate-400">Total pagado</span>
-                <span className="font-semibold tabular-nums text-emerald-600 dark:text-emerald-400">S/ {montoPagado}</span>
+              <div className="flex justify-between items-center border-b border-slate-100 dark:border-slate-800 pb-2.5">
+                <span className="text-xs text-slate-500 dark:text-slate-400">Total pagado</span>
+                <span className="text-sm font-semibold tabular-nums text-emerald-600 dark:text-emerald-400">S/ {montoPagado}</span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-sm text-slate-500 dark:text-slate-400">Saldo pendiente</span>
-                <span className="font-bold tabular-nums text-slate-900 dark:text-white">S/ {saldoPendiente}</span>
+                <span className="text-xs text-slate-500 dark:text-slate-400">Saldo pendiente</span>
+                <span className="text-sm font-bold tabular-nums text-slate-900 dark:text-white">S/ {saldoPendiente}</span>
               </div>
             </div>
           </div>
 
           <div className="mt-6 space-y-3">
             {deudaSaldada ? (
-              <div className="flex items-center gap-2 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 px-4 py-3 rounded-xl text-sm font-semibold border border-emerald-100 dark:border-emerald-800/50">
-                <CheckCircle2 className="size-5 shrink-0" />
+              <div className="flex items-center gap-2 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 px-4 py-2.5 rounded-xl text-xs font-semibold border border-emerald-200 dark:border-emerald-800/50">
+                <CheckCircle2 className="size-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
                 <span>Cuenta al día. ¡Gracias por tu puntualidad!</span>
               </div>
             ) : (
-              <div className="flex items-center gap-3 bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 px-4 py-3 rounded-xl text-sm font-medium border border-amber-100 dark:border-amber-800/50">
-                <CalendarDays className="size-5 shrink-0" />
+              <div className="flex items-center gap-2.5 bg-amber-50 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 px-4 py-2.5 rounded-xl text-xs font-medium border border-amber-200 dark:border-amber-800/50">
+                <CalendarDays className="size-4 shrink-0 text-amber-600 dark:text-amber-400" />
                 <span>Próximo pago: <strong>{stringFechaPago}</strong></span>
               </div>
             )}
@@ -504,35 +551,34 @@ export default async function DashboardPage() {
               href="/dashboard/pagos"
               className="inline-flex h-11 w-full justify-center items-center gap-2 rounded-2xl bg-slate-900 hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700 text-white px-4 text-xs font-bold transition shadow-sm border border-slate-800 dark:border-slate-700"
             >
-              Ver Mis Pagos <ArrowUpRight className="size-4" />
+              Ver mis pagos <ArrowUpRight className="size-4" />
             </Link>
           </div>
         </article>
 
         {/* Widget 3: Bolsa de Trabajo y Certificados del Estudiante */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-6">
           
           {/* Tarjeta Acceso Directo a Mis Certificados */}
-          <article className="relative flex-1 overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-700 via-indigo-800 to-slate-900 p-6 text-white shadow-sm border border-indigo-500/30 flex flex-col justify-between">
-            <div className="absolute right-0 top-0 size-32 rounded-bl-full bg-white/5 pointer-events-none" />
-            <div className="relative z-10">
+          <article className="relative flex-1 rounded-3xl bg-white dark:bg-slate-900 p-6 sm:p-7 shadow-sm border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white flex flex-col justify-between hover:border-indigo-300 dark:hover:border-indigo-500/40 transition">
+            <div>
               <div className="flex items-center justify-between">
-                <span className="grid size-10 place-items-center rounded-xl bg-white/10 text-indigo-200 border border-white/10">
+                <div className="grid size-10 place-items-center rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-900/50">
                   <Award className="size-5" />
-                </span>
-                <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-indigo-500/30 text-indigo-200 border border-indigo-400/30">
+                </div>
+                <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-200/60 dark:border-indigo-800/60">
                   Documentos oficiales
                 </span>
               </div>
-              <h3 className="mt-3 text-lg font-bold flex items-center gap-2">
+              <h3 className="mt-3.5 text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
                 Mis certificados
               </h3>
-              <p className="mt-1 text-xs text-indigo-100/90 leading-relaxed">
+              <p className="mt-1 text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
                 Descarga tus diplomas generales, certificados modulares y acreditaciones oficiales con QR.
               </p>
             </div>
             <Link
-              className="mt-5 inline-flex h-10 w-full items-center justify-center gap-2 rounded-xl bg-white text-indigo-900 font-bold px-4 text-xs shadow-sm hover:bg-indigo-50 transition"
+              className="mt-5 inline-flex h-11 w-full items-center justify-center gap-2 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-4 text-xs shadow-sm shadow-indigo-600/20 transition"
               href="/dashboard/certificados"
             >
               Ver mis certificados <ArrowUpRight className="size-4" />
@@ -540,21 +586,29 @@ export default async function DashboardPage() {
           </article>
 
           {/* Tarjeta de Bolsas de Trabajo (Regular y Exclusiva) */}
-          <article className="relative flex-1 overflow-hidden rounded-3xl bg-slate-900 p-6 text-white shadow-md border border-slate-800 flex flex-col justify-between">
+          <article className="relative flex-1 rounded-3xl bg-white dark:bg-slate-900 p-6 sm:p-7 shadow-sm border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white flex flex-col justify-between hover:border-emerald-300 dark:hover:border-emerald-500/40 transition">
             <div>
-              <h3 className="text-lg font-bold flex items-center gap-2">
-                <Briefcase className="size-5 text-emerald-400" /> Bolsa de trabajo
+              <div className="flex items-center justify-between">
+                <div className="grid size-10 place-items-center rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-900/50">
+                  <Briefcase className="size-5" />
+                </div>
+                <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60">
+                  Oportunidades
+                </span>
+              </div>
+              <h3 className="mt-3.5 text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                Bolsa de trabajo
               </h3>
-              <p className="mt-1 text-xs text-slate-400">
+              <p className="mt-1 text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
                 Accede a convocatorias y vacantes laborales activas en minería e industria.
               </p>
             </div>
 
-            <div className="mt-4 space-y-2.5">
+            <div className="mt-5 space-y-2.5">
               {/* Botón 1: Bolsa de Trabajo Regular */}
               {bolsaTrabajoRegularHabilitada ? (
                 <a
-                  className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 px-4 text-xs font-bold text-white transition shadow-sm"
+                  className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white px-4 text-xs font-bold transition shadow-sm shadow-emerald-600/20"
                   href={bolsaRegularUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -562,15 +616,18 @@ export default async function DashboardPage() {
                   Bolsa de trabajo regular <ArrowUpRight className="size-4" />
                 </a>
               ) : (
-                <div className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-xl bg-slate-950/60 px-4 text-xs font-medium text-slate-500 border border-dashed border-slate-800 cursor-not-allowed">
-                  <Lock className="size-3.5" /> Bolsa de trabajo regular no disponible
-                </div>
+                <button
+                  disabled
+                  className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-2xl bg-emerald-600/90 text-white px-4 text-xs font-bold shadow-sm cursor-not-allowed select-none opacity-80"
+                >
+                  Bolsa de trabajo regular <ArrowUpRight className="size-4" />
+                </button>
               )}
 
               {/* Botón 2: Bolsa de Trabajo Exclusiva */}
               {bolsaTrabajoExclusivaHabilitada ? (
                 <a
-                  className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 px-4 text-xs font-bold text-white transition shadow-sm"
+                  className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white px-4 text-xs font-bold transition shadow-sm shadow-emerald-600/20"
                   href={bolsaExclusivaUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -578,9 +635,12 @@ export default async function DashboardPage() {
                   Bolsa de trabajo exclusiva <ArrowUpRight className="size-4" />
                 </a>
               ) : (
-                <div className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-xl bg-slate-950/60 px-4 text-xs font-medium text-slate-500 border border-dashed border-slate-800 cursor-not-allowed">
-                  <Lock className="size-3.5" /> Bolsa de trabajo exclusiva (FULL / ILIMITADO)
-                </div>
+                <button
+                  disabled
+                  className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-2xl bg-emerald-600/90 text-white px-4 text-xs font-bold shadow-sm cursor-not-allowed select-none opacity-80"
+                >
+                  Bolsa de trabajo exclusiva <ArrowUpRight className="size-4" />
+                </button>
               )}
             </div>
           </article>

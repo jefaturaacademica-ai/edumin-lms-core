@@ -8,6 +8,14 @@ import {
 import { getDiplomadoBySlug } from '@/lib/data/diplomadosData';
 import { CATALOGO_CURSOS } from '@/lib/data/catalogoGeneral';
 
+// Caché en memoria para lecciones con TTL de 3 minutos
+const leccionesCache = new Map<string, { data: any; timestamp: number }>();
+const LECCIONES_TTL = 3 * 60 * 1000;
+
+function invalidateLeccionesCache() {
+  leccionesCache.clear();
+}
+
 function normSlug(str: string): string {
   return (str || '')
     .toLowerCase()
@@ -24,12 +32,32 @@ export async function GET(request: Request) {
     const slugParam = searchParams.get('slug')?.trim();
     const tipoParam = searchParams.get('tipo')?.trim().toLowerCase(); // 'curso' | 'diplomado' | undefined
 
+    const cacheKey = `${codigoParam || ''}_${slugParam || ''}_${tipoParam || ''}`;
+    const cached = leccionesCache.get(cacheKey);
+    if (cached && Date.now() - cached.timestamp < LECCIONES_TTL) {
+      return NextResponse.json(cached.data, {
+        headers: {
+          'Cache-Control': 'public, s-maxage=120, stale-while-revalidate=300',
+          'X-Cache': 'HIT'
+        }
+      });
+    }
+
     let admin: any = null;
     try {
       admin = createAdminClient();
     } catch (e) {
       console.warn('No se pudo inicializar createAdminClient, usando fallback local:', e);
     }
+
+    const responderConCache = (obj: any) => {
+      leccionesCache.set(cacheKey, { data: obj, timestamp: Date.now() });
+      return NextResponse.json(obj, {
+        headers: {
+          'Cache-Control': 'public, s-maxage=120, stale-while-revalidate=300'
+        }
+      });
+    };
 
     // Resolver Código Oficial (DIP-XX, CUR-XX, TAL-XX) de forma estricta (sin caer jamás en DIP-01 por defecto)
     let targetCodigo = codigoParam ? codigoParam.toUpperCase() : '';
@@ -100,7 +128,7 @@ export async function GET(request: Request) {
 
       if (!error && Array.isArray(data) && data.length > 0) {
         const normalized = data.map(normalizeLeccionRow);
-        return NextResponse.json({
+        return responderConCache({
           success: true,
           tablaCreada: true,
           total: normalized.length,
@@ -110,7 +138,7 @@ export async function GET(request: Request) {
 
       // Si targetCodigo está resuelto pero aún no hay filas en lecciones, no devolver otros cursos/diplomados
       if (!error) {
-        return NextResponse.json({
+        return responderConCache({
           success: true,
           tablaCreada: true,
           total: 0,
@@ -124,7 +152,7 @@ export async function GET(request: Request) {
         .order('orden', { ascending: true });
       if (!error && Array.isArray(data) && data.length > 0) {
         const normalized = data.map(normalizeLeccionRow);
-        return NextResponse.json({
+        return responderConCache({
           success: true,
           tablaCreada: true,
           total: normalized.length,
@@ -149,7 +177,7 @@ export async function GET(request: Request) {
       });
     }
 
-    return NextResponse.json({
+    return responderConCache({
       success: true,
       tablaCreada: false,
       total: filtradas.length,
@@ -168,6 +196,7 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   try {
+    invalidateLeccionesCache();
     const body = await request.json();
     const admin = createAdminClient();
 
@@ -254,6 +283,7 @@ export async function POST(request: Request) {
 
 export async function PUT(request: Request) {
   try {
+    invalidateLeccionesCache();
     const body = await request.json();
     const admin = createAdminClient();
     const { id, row } = body;
@@ -284,6 +314,7 @@ export async function PUT(request: Request) {
 
 export async function DELETE(request: Request) {
   try {
+    invalidateLeccionesCache();
     const { searchParams } = new URL(request.url);
     const codigoParam = searchParams.get('codigo')?.trim();
     const idParam = searchParams.get('id')?.trim();

@@ -21,11 +21,12 @@ import {
   Sparkles,
   Check
 } from 'lucide-react';
-import { createBrowserClient } from '@supabase/ssr';
+import { createClient } from '@/lib/supabase/client';
 import { useProfile } from '@/context/profile-context';
 import { useTheme } from '@/context/theme-context';
 import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
 import { StudentPageHeader } from '@/components/dashboard/StudentPageHeader';
+import { getClientCachedData, invalidateClientCache } from '@/lib/utils/clientCache';
 
 export default function PerfilEstudiante() {
   const { esOscuro } = useTheme();
@@ -40,8 +41,9 @@ export default function PerfilEstudiante() {
     actualizarDatosUsuario 
   } = useProfile();
 
-  const [perfil, setPerfil] = useState<any>(null);
-  const [cargando, setCargando] = useState(true);
+  const cachedProf = typeof window !== 'undefined' ? getClientCachedData('/api/dashboard/me')?.profile : null;
+  const [perfil, setPerfil] = useState<any>(cachedProf || null);
+  const [cargando, setCargando] = useState(!cachedProf);
   const [modalAbierto, setModalAbierto] = useState(false);
   const [modalPasswordAbierto, setModalPasswordAbierto] = useState(false);
   const [solicitudEnviada, setSolicitudEnviada] = useState(false);
@@ -69,42 +71,44 @@ export default function PerfilEstudiante() {
     residencia: 'Arequipa, Perú (Distrito de Yanahuara)',
   });
 
-  const supabase = createBrowserClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-  );
+  const supabase = createClient();
 
   useEffect(() => {
     async function cargarPerfil() {
-      const { data: { user } } = await supabase.auth.getUser();
-      if (user) {
-        const { data } = await supabase
-          .from('profiles')
-          .select('*')
-          .eq('id', user.id)
-          .single();
-        if (data) {
-          setPerfil(data);
-          setFormEdicion((prev) => ({
-            ...prev,
-            nombres: data.nombres || prev.nombres,
-            apellidos: data.apellidos || prev.apellidos,
-            dni_ce: data.dni_ce || prev.dni_ce,
-            email: data.email || prev.email,
-            celular: data.celular || prev.celular,
-            residencia: data.residencia || prev.residencia,
-          }));
-          actualizarDatosUsuario({
-            nombres: data.nombres || nombres,
-            apellidos: data.apellidos || apellidos,
-          });
-          actualizarFotoPerfil(data.foto_perfil || null);
+      try {
+        const res = await fetch('/api/dashboard/me');
+        if (res.ok) {
+          const data = await res.json();
+          const p = data.profile;
+          if (p) {
+            setPerfil(p);
+            setFormEdicion((prev) => ({
+              ...prev,
+              nombres: p.nombres || prev.nombres,
+              apellidos: p.apellidos || prev.apellidos,
+              dni_ce: p.dni_ce || prev.dni_ce,
+              email: p.email || prev.email,
+              celular: p.telefono || p.celular || prev.celular,
+              residencia: p.residencia || prev.residencia,
+            }));
+            actualizarDatosUsuario({
+              nombres: p.nombres || nombres,
+              apellidos: p.apellidos || apellidos,
+            });
+            const fotoValida = p.foto_perfil || p.avatar_url || null;
+            if (fotoValida) {
+              actualizarFotoPerfil(fotoValida);
+            }
+          }
         }
+      } catch (err) {
+        console.error('Error cargando perfil:', err);
+      } finally {
+        setCargando(false);
       }
-      setCargando(false);
     }
     cargarPerfil();
-  }, [supabase]);
+  }, []);
 
   const [guardandoFoto, setGuardandoFoto] = useState(false);
 
@@ -175,8 +179,9 @@ export default function PerfilEstudiante() {
         });
         const data = await res.json();
         // Usar la URL pública generada en Supabase Storage
-        const nuevaUrl = data.profile?.foto_perfil || fotoTemporal;
+        const nuevaUrl = data.profile?.foto_perfil || data.profile?.avatar_url || fotoTemporal;
         actualizarFotoPerfil(nuevaUrl);
+        invalidateClientCache('/api/dashboard/me');
       } catch (e) {
         console.error('Error guardando foto en Supabase Storage:', e);
         actualizarFotoPerfil(fotoTemporal);
@@ -201,6 +206,7 @@ export default function PerfilEstudiante() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ action: 'actualizar_foto', foto_perfil: '' })
       });
+      invalidateClientCache('/api/dashboard/me');
     } catch (e) {
       console.error('Error al quitar foto en Supabase:', e);
     }
@@ -283,7 +289,7 @@ export default function PerfilEstudiante() {
     setTimeout(() => {
       setModalAbierto(false);
       setSolicitudEnviada(false);
-    }, 2500);
+    }, 1200);
   };
 
   if (cargando) {
@@ -297,7 +303,6 @@ export default function PerfilEstudiante() {
         <StudentPageHeader
           icon={User}
           title="Mi perfil"
-          subtitle="Consulta tu información personal y de residencia registrada en la plataforma."
         />
 
         {/* TARJETA CON AVATAR E IDENTIDAD DEL ESTUDIANTE */}

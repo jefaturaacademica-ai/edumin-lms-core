@@ -36,6 +36,7 @@ import { useTheme } from '@/context/theme-context';
 import { useProfile } from '@/context/profile-context';
 import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
 import { parseDiplomadosFromProfile, formatearCodigoModulo } from '@/lib/utils/profileParser';
+import { fetchWithClientCache, invalidateClientCache } from '@/lib/utils/clientCache';
 import { PreguntaExamenEstudiante, DetalleCalificacionPregunta } from '@/lib/types/examenes';
 import {
   ExamenBarraSuperior,
@@ -592,6 +593,7 @@ export default function ReproductorClasesPage() {
           dni: dniAlumno || '71234567'
         })
       });
+      invalidateClientCache('/api/dashboard/me');
     } catch (err) {
       console.error('Error al calificar y guardar examen:', err);
     } finally {
@@ -603,14 +605,13 @@ export default function ReproductorClasesPage() {
   const cargarDatosSupabase = useCallback(async () => {
     try {
       setLoading(true);
-      const [meRes, catRes, leccRes] = await Promise.all([
-        fetch('/api/dashboard/me').catch(() => null),
-        fetch('/api/admin/catalogo').catch(() => null),
-        fetch(`/api/admin/diplomados-lecciones?slug=${encodeURIComponent(diplomadoId)}`).catch(() => null)
+      const [meData, catData, leccData] = await Promise.all([
+        fetchWithClientCache('/api/dashboard/me').catch(() => null),
+        fetchWithClientCache('/api/admin/catalogo').catch(() => null),
+        fetchWithClientCache(`/api/admin/diplomados-lecciones?slug=${encodeURIComponent(diplomadoId)}`).catch(() => null)
       ]);
 
-      if (meRes && meRes.ok) {
-        const meData = await meRes.json();
+      if (meData) {
         const profile = meData.profile || meData;
         if (profile?.dni_ce || profile?.dni) setDniAlumno(profile.dni_ce || profile.dni);
         const diplomados = Array.isArray(profile?.diplomados_json) && profile.diplomados_json.length > 0
@@ -659,15 +660,11 @@ export default function ReproductorClasesPage() {
         }
       }
 
-      if (leccRes && leccRes.ok) {
-        const leccData = await leccRes.json();
-        if (leccData && Array.isArray(leccData.filas) && leccData.filas.length > 0) {
-          setLeccionesTabla(leccData.filas);
-        }
+      if (leccData && Array.isArray(leccData.filas) && leccData.filas.length > 0) {
+        setLeccionesTabla(leccData.filas);
       }
 
-      if (catRes && catRes.ok) {
-        const catData = await catRes.json();
+      if (catData) {
         const todos = catData.diplomados || catData.cursos || catData.todos || [];
         const targetSlugNorm = diplomadoId.toLowerCase().replace(/[^a-z0-9]+/g, '-');
         const catItem = todos.find((c: any) => 
@@ -1755,7 +1752,7 @@ export default function ReproductorClasesPage() {
                       onToggleRetroalimentacion={() => setMostrarRetroalimentacion(prev => !prev)}
                       fechaInicio={tiempoRegistroExamen.inicio}
                       fechaFin={tiempoRegistroExamen.fin}
-                      whatsappSustitutorioHref={`https://wa.me/51924400268?text=${encodeURIComponent(`Hola EDUMIN, revisé mi intento en el examen modular ${(examenActivoModal.moduloIdx + 1).toString().padStart(2, '0')} con nota ${notaFinalMostrar}/20 y deseo pagar los S/ 25.00 para rendir el examen sustitutorio.`)}`}
+                      whatsappSustitutorioHref={`https://wa.me/51980694497?text=${encodeURIComponent(`Hola EDUMIN, revisé mi intento en el examen modular ${(examenActivoModal.moduloIdx + 1).toString().padStart(2, '0')} con nota ${notaFinalMostrar}/20 y deseo pagar los S/ 25.00 para rendir el examen sustitutorio.`)}`}
                       formatearTexto={formatearTextoCientifico}
                     />
                   );
@@ -2713,7 +2710,7 @@ export default function ReproductorClasesPage() {
                           }`}>
                             {esModTotalmenteCompletado ? (
                               <Link
-                                href="/dashboard/certificados"
+                                href="/dashboard/certificados?tab=modulares"
                                 className="w-full inline-flex items-center justify-center gap-1.5 font-bold text-xs px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white shadow-2xs transition-colors"
                               >
                                 <Award className="w-3.5 h-3.5 shrink-0" />
@@ -2862,7 +2859,7 @@ export default function ReproductorClasesPage() {
 
                             {!examenDesaprobadoMod ? (
                               <Link
-                                href="/dashboard/certificados"
+                                href="/dashboard/certificados?tab=modulares"
                                 onClick={(e) => e.stopPropagation()}
                                 className={`flex-1 inline-flex items-center justify-center gap-1.5 font-bold text-xs px-2.5 py-1.5 rounded-xl border transition-colors shadow-2xs cursor-pointer truncate ${
                                   esExamenActivo
@@ -2876,7 +2873,7 @@ export default function ReproductorClasesPage() {
                               </Link>
                             ) : (
                               <a
-                                href={`https://wa.me/51924400268?text=${encodeURIComponent(`Hola EDUMIN, desaprobé el Examen Modular ${(modIdx + 1).toString().padStart(2, '0')} en ${diplomadoActual.titulo}. Deseo solicitar el Examen Sustitutorio.`)}`}
+                                href={`https://wa.me/51980694497?text=${encodeURIComponent(`Hola EDUMIN, desaprobé el Examen Modular ${(modIdx + 1).toString().padStart(2, '0')} en ${diplomadoActual.titulo}. Deseo solicitar el Examen Sustitutorio.`)}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={(e) => e.stopPropagation()}

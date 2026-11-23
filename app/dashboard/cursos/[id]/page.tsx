@@ -36,6 +36,7 @@ import { useTheme } from '@/context/theme-context';
 import { useProfile } from '@/context/profile-context';
 import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
 import { parseCursosFromProfile } from '@/lib/utils/profileParser';
+import { fetchWithClientCache, invalidateClientCache } from '@/lib/utils/clientCache';
 import { PreguntaExamenEstudiante, DetalleCalificacionPregunta } from '@/lib/types/examenes';
 import {
   ExamenBarraSuperior,
@@ -219,16 +220,15 @@ export default function ReproductorCursoPage() {
   const cargarDatosSupabase = useCallback(async () => {
     try {
       setLoading(true);
-      const [meRes, catRes, leccRes] = await Promise.all([
-        fetch('/api/dashboard/me').catch(() => null),
-        fetch('/api/admin/catalogo').catch(() => null),
-        fetch(`/api/admin/diplomados-lecciones?slug=${encodeURIComponent(cursoId)}&tipo=curso`).catch(() => null)
+      const [meData, catData, leccData] = await Promise.all([
+        fetchWithClientCache('/api/dashboard/me').catch(() => null),
+        fetchWithClientCache('/api/admin/catalogo').catch(() => null),
+        fetchWithClientCache(`/api/admin/diplomados-lecciones?slug=${encodeURIComponent(cursoId)}&tipo=curso`).catch(() => null)
       ]);
 
       let userDni = '71234567';
 
-      if (meRes && meRes.ok) {
-        const meData = await meRes.json();
+      if (meData) {
         const profile = meData.profile || meData;
         if (profile?.dni_ce || profile?.dni) {
           userDni = profile.dni_ce || profile.dni;
@@ -274,8 +274,7 @@ export default function ReproductorCursoPage() {
       }
 
       let resolvedCatItem: any = null;
-      if (catRes && catRes.ok) {
-        const catData = await catRes.json();
+      if (catData) {
         const todos = [
           ...(catData.cursosEspecializacion || []),
           ...(catData.talleres || []),
@@ -300,20 +299,16 @@ export default function ReproductorCursoPage() {
       }
 
       let leccionesValidas: LeccionRow[] = [];
-      if (leccRes && leccRes.ok) {
-        const leccData = await leccRes.json();
+      if (leccData) {
         if (leccData && Array.isArray(leccData.filas) && leccData.filas.length > 0) {
           leccionesValidas = leccData.filas.filter((f: any) => !String(f.CodigoDiplomado || '').toUpperCase().startsWith('DIP-'));
         }
       }
 
       if (leccionesValidas.length === 0 && resolvedCatItem?.codigo) {
-        const retryRes = await fetch(`/api/admin/diplomados-lecciones?codigo=${encodeURIComponent(resolvedCatItem.codigo)}&tipo=curso`).catch(() => null);
-        if (retryRes && retryRes.ok) {
-          const retryData = await retryRes.json();
-          if (retryData && Array.isArray(retryData.filas) && retryData.filas.length > 0) {
-            leccionesValidas = retryData.filas.filter((f: any) => !String(f.CodigoDiplomado || '').toUpperCase().startsWith('DIP-'));
-          }
+        const retryData = await fetchWithClientCache(`/api/admin/diplomados-lecciones?codigo=${encodeURIComponent(resolvedCatItem.codigo)}&tipo=curso`).catch(() => null);
+        if (retryData && Array.isArray(retryData.filas) && retryData.filas.length > 0) {
+          leccionesValidas = retryData.filas.filter((f: any) => !String(f.CodigoDiplomado || '').toUpperCase().startsWith('DIP-'));
         }
       }
 
@@ -978,6 +973,7 @@ export default function ReproductorCursoPage() {
               ...(aprobado ? { avancePorcentaje: 100 } : {})
             })
           });
+          invalidateClientCache('/api/dashboard/me');
         } catch (err) {
           console.error('Error sincronizando evaluación de curso con perfil:', err);
         }
@@ -1253,7 +1249,7 @@ export default function ReproductorCursoPage() {
                     onToggleRetroalimentacion={() => setMostrarRetroalimentacion(prev => !prev)}
                     fechaInicio={tiempoRegistroExamen.inicio}
                     fechaFin={tiempoRegistroExamen.fin}
-                    whatsappSustitutorioHref={`https://wa.me/51924400268?text=${encodeURIComponent(`Hola EDUMIN, revisé mi intento en el Examen de ${cursoEstructurado.titulo} con nota ${resultadoExamen.nota}/20 y deseo pagar los S/ 25.00 para rendir el Examen Sustitutorio.`)}`}
+                    whatsappSustitutorioHref={`https://wa.me/51980694497?text=${encodeURIComponent(`Hola EDUMIN, revisé mi intento en el Examen de ${cursoEstructurado.titulo} con nota ${resultadoExamen.nota}/20 y deseo pagar los S/ 25.00 para rendir el Examen Sustitutorio.`)}`}
                   />
                 )}
               </div>
@@ -2114,7 +2110,7 @@ export default function ReproductorCursoPage() {
                       }`}>
                         {completadoTotal ? (
                           <Link
-                            href="/dashboard/certificados"
+                            href="/dashboard/certificados?tab=cursos"
                             className="w-full inline-flex items-center justify-center gap-1.5 font-bold text-xs px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white shadow-2xs transition-colors"
                           >
                             <Award className="w-3.5 h-3.5 shrink-0" />
@@ -2251,7 +2247,7 @@ export default function ReproductorCursoPage() {
 
                         {!examenDesaprobado ? (
                           <Link
-                            href="/dashboard/certificados"
+                            href="/dashboard/certificados?tab=cursos"
                             onClick={(e) => e.stopPropagation()}
                             className={`flex-1 inline-flex items-center justify-center gap-1.5 font-bold text-xs px-2.5 py-1.5 rounded-xl border transition-colors shadow-2xs cursor-pointer truncate ${
                               esExamenActivo
@@ -2265,7 +2261,7 @@ export default function ReproductorCursoPage() {
                           </Link>
                         ) : (
                           <a
-                            href={`https://wa.me/51924400268?text=${encodeURIComponent(`Hola EDUMIN, revisé mi intento en el Examen de ${cursoEstructurado.titulo} con nota ${notaCurso}/20 y deseo solicitar el Examen Sustitutorio.`)}`}
+                            href={`https://wa.me/51980694497?text=${encodeURIComponent(`Hola EDUMIN, revisé mi intento en el Examen de ${cursoEstructurado.titulo} con nota ${notaCurso}/20 y deseo solicitar el Examen Sustitutorio.`)}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={(e) => e.stopPropagation()}

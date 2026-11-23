@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { createAdminClient } from "@/lib/supabase/admin";
-import { obtenerSiguienteCorrelativo } from "@/lib/utils/reciboCorrelativo";
+import { obtenerSiguienteCorrelativo, parsearNumeroCorrelativo, formatearNroRecibo } from "@/lib/utils/reciboCorrelativo";
+import { calcularFechasVencimientoPorDefecto, resolverFechaVencimiento } from "@/lib/utils/fechasCuotas";
 
 function parseCreditoRow(pag: any, auditLogs: any[]) {
   if (typeof pag.metodo === 'string' && pag.metodo.startsWith('CARGO_EXTRA|')) {
@@ -40,6 +41,7 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
   let parsedFromMetodo = false;
   let plan_cuotas: string[] | null = null;
   let cuotas_recibos: Record<number, { nro_recibo?: string; nro_operacion?: string; fecha?: string }> = {};
+  let fechas_vencimiento: string[] | null = null;
   let nro_pagare: string | undefined = pag.nro_pagare || undefined;
   let nro_recibo: string | undefined = pag.nro_recibo || undefined;
   let nro_operacion: string | undefined = pag.nro_operacion || undefined;
@@ -52,7 +54,10 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
       num_credito = parsed.num_credito || num_credito;
       if (parsed.nro_pagare) nro_pagare = parsed.nro_pagare;
       if (parsed.cuotas_recibos && typeof parsed.cuotas_recibos === 'object') {
-        cuotas_recibos = parsed.cuotas_recibos;
+        cuotas_recibos = { ...parsed.cuotas_recibos };
+      }
+      if (Array.isArray(parsed.fechas_vencimiento)) {
+        fechas_vencimiento = parsed.fechas_vencimiento;
       }
       if (parsed.ultimo_pago?.nro_recibo) nro_recibo = parsed.ultimo_pago.nro_recibo;
       if (parsed.ultimo_pago?.nro_operacion) nro_operacion = parsed.ultimo_pago.nro_operacion;
@@ -82,9 +87,44 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
       cuotas = auditEntry.detalles.cuotas || cuotas;
       if (auditEntry.detalles.nro_pagare) nro_pagare = auditEntry.detalles.nro_pagare;
       if (Array.isArray(auditEntry.detalles.plan_cuotas)) plan_cuotas = auditEntry.detalles.plan_cuotas;
+      if (Array.isArray(auditEntry.detalles.fechas_vencimiento)) fechas_vencimiento = auditEntry.detalles.fechas_vencimiento;
+      if (auditEntry.detalles.cuotas_recibos && typeof auditEntry.detalles.cuotas_recibos === 'object') {
+        cuotas_recibos = { ...auditEntry.detalles.cuotas_recibos };
+      }
       if (auditEntry.detalles.total_pagado !== undefined) total_pagado = Number(auditEntry.detalles.total_pagado);
       if (auditEntry.detalles.total_deuda !== undefined) explicitDeuda = Number(auditEntry.detalles.total_deuda);
     }
+  }
+
+  // Reconciliación forense desde audit_logs para cuotas pagadas sin recibo asignado
+  const studentAudits = (auditLogs || [])
+    .filter((a: any) => (a.detalles?.pago_id === pag.id || a.detalles?.dni_ce === pag.dni_ce) && a.accion === 'CUOTA_VALIDADA_MANUAL')
+    .sort((a: any, b: any) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime());
+
+  cuotas.forEach((val, idx) => {
+    if (val !== 'no corresponde' && Number(val) > 0) {
+      if (!cuotas_recibos[idx] || !cuotas_recibos[idx].nro_recibo) {
+        const auditMatch = studentAudits.find((a: any) => a.detalles?.cuota_index === idx) || studentAudits[idx];
+        if (auditMatch?.detalles?.nro_recibo) {
+          cuotas_recibos[idx] = {
+            nro_recibo: auditMatch.detalles.nro_recibo,
+            nro_operacion: auditMatch.detalles.nro_operacion || auditMatch.detalles.nro_recibo,
+            fecha: auditMatch.created_at
+          };
+        } else if (idx === 0 && pag.nro_recibo && !Object.values(cuotas_recibos).some(r => r.nro_recibo === pag.nro_recibo)) {
+          cuotas_recibos[idx] = {
+            nro_recibo: pag.nro_recibo,
+            nro_operacion: pag.nro_operacion || pag.nro_recibo,
+            fecha: pag.created_at
+          };
+        }
+      }
+    }
+  });
+
+  const cuotasActivasTotal = cuotas.filter(c => c !== 'no corresponde').length;
+  if (!fechas_vencimiento || fechas_vencimiento.length === 0) {
+    fechas_vencimiento = calcularFechasVencimientoPorDefecto(pag.created_at, Math.max(1, cuotasActivasTotal));
   }
 
   if (Array.isArray(cuotas)) {
@@ -118,6 +158,7 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
     cuotas,
     plan_cuotas,
     cuotas_recibos,
+    fechas_vencimiento,
     'cuota 01': cuotas[0],
     'cuota 02': cuotas[1],
     'cuota 03': cuotas[2],
@@ -392,13 +433,30 @@ export async function POST(request: Request) {
       const newTotalDeuda = Math.max(0, parsedCredito.monto - newTotalPagado);
 
       const currentCuotasRecibos = { ...(parsedCredito.cuotas_recibos || {}) };
-      if (cuotaIndex !== null) {
-        currentCuotasRecibos[cuotaIndex] = {
-          nro_recibo: nroReciboFinal,
+
+      // Identificar qué cuotas recibieron abono en esta operación
+      const cuotasAfectadas: number[] = [];
+      for (let i = 0; i < updatedCuotas.length; i++) {
+        if (updatedCuotas[i] !== 'no corresponde' && Number(updatedCuotas[i]) > (Number(parsedCredito.cuotas[i]) || 0)) {
+          cuotasAfectadas.push(i);
+        }
+      }
+      if (cuotasAfectadas.length === 0) {
+        cuotasAfectadas.push(cuotaIndex !== null ? cuotaIndex : targetIdx);
+      }
+
+      cuotasAfectadas.forEach((cIdx, aIdx) => {
+        let reciboCuota = nroReciboFinal;
+        if (aIdx > 0) {
+          const numCorrelativoBase = parsearNumeroCorrelativo(nroReciboFinal) || 1;
+          reciboCuota = formatearNroRecibo(numCorrelativoBase + aIdx);
+        }
+        currentCuotasRecibos[cIdx] = {
+          nro_recibo: reciboCuota,
           nro_operacion: nroOperacionFinal,
           fecha: new Date().toISOString()
         };
-      }
+      });
 
       const metadataMetodo = `CREDITO_${parsedCredito.num_credito}|${JSON.stringify({
         num_credito: parsedCredito.num_credito,
@@ -406,6 +464,7 @@ export async function POST(request: Request) {
         cuotas: updatedCuotas,
         plan_cuotas: parsedCredito.plan_cuotas || null,
         cuotas_recibos: currentCuotasRecibos,
+        fechas_vencimiento: parsedCredito.fechas_vencimiento || null,
         total_pagado: newTotalPagado,
         total_deuda: newTotalDeuda,
         ultimo_pago: {
@@ -632,7 +691,7 @@ export async function PATCH(request: Request) {
 
     // ACCIÓN 2: EDITAR CRONOGRAMA DE UN CRÉDITO ESPECÍFICO CON VALIDACIÓN DE SUMA
     if (body.action === "editar_cronograma" || (body.cuotas && !body.action)) {
-      const { pago_id, dni_ce, num_credito, monto_total, cuotas, nro_pagare } = body;
+      const { pago_id, dni_ce, num_credito, monto_total, cuotas, nro_pagare, fechas_vencimiento } = body;
 
       const { data: creditRow } = pago_id
         ? await admin.from("pagos").select("*").eq("id", pago_id).maybeSingle()
@@ -670,12 +729,15 @@ export async function PATCH(request: Request) {
 
       const totalDeudaCalculada = Math.max(0, totalMontoCredito - totalPagadoCalculado);
       const nroPagareFinal = nro_pagare || prevParsed.nro_pagare;
+      const fechasVencimientoFinal = Array.isArray(fechas_vencimiento) ? fechas_vencimiento : (prevParsed.fechas_vencimiento || null);
 
       const metadataMetodo = `CREDITO_${num_credito || creditRow.num_credito || 1}|${JSON.stringify({
         num_credito: num_credito || creditRow.num_credito || 1,
         nro_pagare: nroPagareFinal || undefined,
         cuotas: updatedCuotas,
         plan_cuotas: planCuotasArray,
+        cuotas_recibos: prevParsed.cuotas_recibos || {},
+        fechas_vencimiento: fechasVencimientoFinal,
         total_pagado: totalPagadoCalculado,
         total_deuda: totalDeudaCalculada
       })}`;
@@ -780,17 +842,39 @@ export async function DELETE(request: Request) {
 
     const newTotalDeuda = Math.max(0, parsedCredito.monto - newTotalPagado);
 
+    const currentCuotasRecibos = { ...(parsedCredito.cuotas_recibos || {}) };
+    delete currentCuotasRecibos[idxToReset];
+
+    // Determinar el último recibo restante tras la anulación
+    const remainingReceipts = Object.values(currentCuotasRecibos)
+      .map((r: any) => r.nro_recibo)
+      .filter(Boolean);
+    const lastRemainingReceipt = remainingReceipts.length > 0 ? remainingReceipts[remainingReceipts.length - 1] : null;
+
     const metadataMetodo = `CREDITO_${parsedCredito.num_credito}|${JSON.stringify({
       num_credito: parsedCredito.num_credito,
+      nro_pagare: parsedCredito.nro_pagare || undefined,
       cuotas: updatedCuotas,
+      plan_cuotas: parsedCredito.plan_cuotas || null,
+      cuotas_recibos: currentCuotasRecibos,
+      fechas_vencimiento: parsedCredito.fechas_vencimiento || null,
       total_pagado: newTotalPagado,
       total_deuda: newTotalDeuda
     })}`;
 
-    await admin.from("pagos").update({
+    const updateDeletePayload: Record<string, any> = {
       metodo: metadataMetodo,
-      estado: newTotalDeuda === 0 ? "Completado" : "Pendiente"
-    }).eq("id", parsedCredito.id);
+      estado: newTotalDeuda === 0 ? "Completado" : "Pendiente",
+      nro_recibo: lastRemainingReceipt,
+      nro_operacion: lastRemainingReceipt
+    };
+
+    const { error: delUpdErr } = await admin.from("pagos").update(updateDeletePayload).eq("id", parsedCredito.id);
+    if (delUpdErr) {
+      delete updateDeletePayload.nro_recibo;
+      delete updateDeletePayload.nro_operacion;
+      await admin.from("pagos").update(updateDeletePayload).eq("id", parsedCredito.id);
+    }
 
     // Auditoría forense
     try {

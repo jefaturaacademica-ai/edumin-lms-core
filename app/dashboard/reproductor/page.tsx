@@ -25,6 +25,7 @@ import { getDiplomadoByTitleOrSlug } from '@/lib/data/diplomadosData';
 import { parseDiplomadosFromProfile } from '@/lib/utils/profileParser';
 import { getDriveVideoForClass } from '@/lib/data/driveVideos';
 import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
+import { fetchWithClientCache } from '@/lib/utils/clientCache';
 
 function ReproductorContent() {
   const searchParams = useSearchParams();
@@ -64,20 +65,19 @@ function ReproductorContent() {
     async function cargarDatosCompleto() {
       setLoading(true);
       try {
-        // 1. Obtener Perfil del estudiante
-        const resMe = await fetch('/api/dashboard/me');
+        const [dataMe, dataCat] = await Promise.all([
+          fetchWithClientCache('/api/dashboard/me').catch(() => null),
+          fetchWithClientCache('/api/admin/catalogo').catch(() => null)
+        ]);
+
         let prof = null;
-        if (resMe.ok) {
-          const dataMe = await resMe.json();
+        if (dataMe) {
           prof = dataMe.profile;
           setPerfilEstudiante(prof);
         }
 
-        // 2. Obtener Catálogo desde Supabase
-        const resCat = await fetch('/api/admin/catalogo');
         let catItems: any[] = [];
-        if (resCat.ok) {
-          const dataCat = await resCat.json();
+        if (dataCat) {
           catItems = dataCat.cursos || [];
           setCatalogoSupabase(catItems);
         }

@@ -32,6 +32,7 @@ import { TarjetaBloqueoOverlay } from '@/components/dashboard/TarjetaBloqueoOver
 
 import { parseCursosFromProfile, parseDiplomadosFromProfile, filtrarCursosReales, esCursoTaller } from '@/lib/utils/profileParser';
 import { obtenerTallerParaDiplomado, TALLER_SOFT_SKILLS, TALLER_SEGURIDAD_BASADA } from '@/lib/utils/tallerAsignado';
+import { getClientCachedData, fetchWithClientCache } from '@/lib/utils/clientCache';
 
 export default function CursosPage() {
   const [paquete, setPaquete] = useState<string>('FULL');
@@ -72,7 +73,8 @@ export default function CursosPage() {
     }
     const examenRendido = Boolean(c.rendido || (c.nota !== undefined && c.nota !== null && Number(c.nota) > 0));
     const examenAprobado = examenRendido && c.nota !== undefined && c.nota !== null && Number(c.nota) >= notaMinima;
-    return (Number(c.avance) >= 100) && examenAprobado;
+    // Si ya aprobó el examen, el curso se considera completado
+    return examenAprobado || ((Number(c.avance) >= 100) && examenAprobado);
   };
 
   // Cursos reales cargados dinámicamente desde Supabase
@@ -183,156 +185,167 @@ export default function CursosPage() {
   const listaNiveles = ['Todos', 'Principiante', 'Intermedio', 'Avanzado'];
 
   useEffect(() => {
+    function procesarPayload(data: any, catData: any) {
+      if (!data) return;
+      let liveCatalogoCursos: any[] = [];
+      if (catData) {
+        liveCatalogoCursos = [
+          ...(catData.cursosEspecializacion || []),
+          ...(catData.talleres || [])
+        ];
+      }
+
+      const prof = data.profile;
+      const matriculas = data.matriculas || [];
+
+      if (data.eduminCredits?.cursos?.disponibles !== undefined) {
+        setCreditosCursosDisponibles(data.eduminCredits.cursos.disponibles);
+      }
+      if (data.eduminCredits?.cursos?.habilitados !== undefined) {
+        setCursosHabilitados(data.eduminCredits.cursos.habilitados);
+      }
+      if (prof) {
+        if (prof.nombres) setNombres(prof.nombres);
+        if (prof.paquete_adquirido) setPaquete(prof.paquete_adquirido.toUpperCase());
+
+        const cursosEnrolados: any[] = [];
+        const idsAgregados = new Set<string>();
+
+        const buscarMatchCatalogo = (codigo?: string, titulo?: string, id?: string) => {
+          const codUp = String(codigo || id || '').toUpperCase();
+          const titNorm = (titulo || '').normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
+          const liveMatch = liveCatalogoCursos.find((lc: any) =>
+            (codUp && String(lc.codigo || '').toUpperCase() === codUp) ||
+            (id && String(lc.id || '').toLowerCase() === String(id).toLowerCase()) ||
+            (titNorm && String(lc.titulo || '').normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase() === titNorm)
+          );
+          const localMatch = catalogoGeneralCursos.find(c =>
+            c.titulo.toUpperCase() === titulo?.toUpperCase() ||
+            (titNorm && c.titulo.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase() === titNorm)
+          );
+          return {
+            id: liveMatch?.id,
+            codigo: liveMatch?.codigo,
+            tipo: liveMatch?.tipo,
+            categoria: liveMatch?.categoria || localMatch?.categoria,
+            duracion: liveMatch?.duracion || localMatch?.duracion,
+            imagen: liveMatch?.imagen || localMatch?.imagen,
+            titulo: liveMatch?.titulo || titulo
+          };
+        };
+
+        // 1. Cursos y talleres del formato JSON de Supabase (orden cronológico de matrícula/canje)
+        const cursosJsonPerfil = Array.isArray(prof.cursos_json) && prof.cursos_json.length > 0
+          ? prof.cursos_json
+          : parseCursosFromProfile(prof);
+        cursosJsonPerfil.forEach((cj: any) => {
+          const catMatch = buscarMatchCatalogo(cj.codigo, cj.titulo, cj.id);
+          const idSlug = catMatch.id || cj.id || cj.codigo?.toLowerCase() || cj.titulo?.toLowerCase().replace(/[^a-z0-9]/g, '-');
+          if (!idsAgregados.has(idSlug)) {
+            idsAgregados.add(idSlug);
+            const tipoCat = String(catMatch.tipo || cj.tipo || '').toUpperCase();
+            const esTaller = Boolean(
+              tipoCat === 'TALLER' ||
+              esCursoTaller({ ...cj, id: idSlug, codigo: catMatch.codigo || cj.codigo, tipo: tipoCat })
+            );
+            cursosEnrolados.push({
+              id: idSlug,
+              codigo: catMatch.codigo || cj.codigo,
+              titulo: catMatch.titulo || cj.titulo,
+              tipo: esTaller ? 'TALLER' : 'CURSO',
+              categoria: esTaller ? (catMatch.categoria || 'Taller') : (catMatch.categoria || cj.categoria || 'Seguridad y prevención'),
+              duracion: catMatch.duracion || cj.duracion || (esTaller ? '20 Horas Académicas' : '40 horas'),
+              avance: cj.completado ? 100 : (typeof cj.avance === 'number' ? cj.avance : 0),
+              nota: cj.nota,
+              rendido: Boolean((cj as any).rendido || (cj.nota !== undefined && cj.nota !== null && Number(cj.nota) > 0)),
+              imagen: catMatch.imagen || cj.imagen || (esTaller ? '/assets/images/cursos/tal-02-taller-de-seguridad-basada-en-el-comportamiento.jpg' : 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'),
+              esRegalo: esTaller
+            });
+          }
+        });
+
+        // 2. Cursos matriculados explícitamente en la tabla matriculas (respaldo si no estuvieran en el perfil)
+        (matriculas || []).forEach((m: any) => {
+          if (m.tipo === 'CURSO' || m.tipo === 'curso' || m.tipo === 'TALLER' || m.tipo === 'taller') {
+            const catMatch = buscarMatchCatalogo(m.item_id, m.titulo, m.item_id);
+            const idSlug = catMatch.id || m.item_id || m.titulo.toLowerCase().replace(/[^a-z0-9]/g, '-');
+            if (!idsAgregados.has(idSlug)) {
+              idsAgregados.add(idSlug);
+              const tipoCat = String(catMatch.tipo || m.tipo || '').toUpperCase();
+              const esTaller = Boolean(tipoCat === 'TALLER' || m.es_regalo || idSlug.startsWith('tal-'));
+              cursosEnrolados.push({
+                id: idSlug,
+                codigo: catMatch.codigo,
+                titulo: catMatch.titulo || m.titulo || 'Curso de Especialización',
+                tipo: esTaller ? 'TALLER' : 'CURSO',
+                categoria: catMatch.categoria || (esTaller ? 'Taller' : 'Seguridad y prevención'),
+                duracion: catMatch.duracion || '20 Horas Académicas',
+                avance: m.avance_porcentaje ?? 0,
+                nota: m.nota,
+                rendido: Boolean(m.rendido || (m.nota !== undefined && m.nota !== null && Number(m.nota) > 0)),
+                imagen: catMatch.imagen || (esTaller ? '/assets/images/cursos/tal-02-taller-de-seguridad-basada-en-el-comportamiento.jpg' : 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'),
+                esRegalo: esTaller
+              });
+            }
+          }
+        });
+
+        // 3. Inyectar taller de regalo asignado según diplomados matriculados si no está en la lista
+        const diplomadosEstudiante = Array.isArray(prof.diplomados_json) && prof.diplomados_json.length > 0
+          ? prof.diplomados_json
+          : parseDiplomadosFromProfile(prof);
+        
+        const titulosDiplomados: string[] = [];
+        if (prof.diplomado_1) titulosDiplomados.push(prof.diplomado_1);
+        if (prof.diplomado_2) titulosDiplomados.push(prof.diplomado_2);
+        diplomadosEstudiante.forEach((d: any) => {
+          const t = d.titulo || d.slug;
+          if (t && !titulosDiplomados.includes(t)) titulosDiplomados.push(t);
+        });
+
+        titulosDiplomados.forEach((dipTitulo: string) => {
+          const taller = obtenerTallerParaDiplomado(dipTitulo);
+          if (taller && !idsAgregados.has(taller.id.toLowerCase())) {
+            idsAgregados.add(taller.id.toLowerCase());
+            const catMatch = buscarMatchCatalogo(taller.codigo, taller.titulo, taller.id);
+            cursosEnrolados.push({
+              id: taller.id,
+              codigo: taller.codigo,
+              titulo: catMatch.titulo || taller.titulo,
+              tipo: 'TALLER',
+              categoria: catMatch.categoria || 'Taller',
+              duracion: catMatch.duracion || taller.duracion || '20 Horas Académicas',
+              avance: 0,
+              nota: 0,
+              rendido: false,
+              imagen: catMatch.imagen || taller.imagen || '/assets/images/cursos/tal-02-taller-de-seguridad-basada-en-el-comportamiento.jpg',
+              esRegalo: true
+            });
+          }
+        });
+
+        // Asignar todos los cursos y talleres enrolados
+        setCursosEstudianteReal(cursosEnrolados);
+      }
+    }
+
+    // 1. Carga inmediata desde caché si existe
+    const cachedMe = getClientCachedData('/api/dashboard/me');
+    const cachedCat = getClientCachedData('/api/admin/catalogo');
+    if (cachedMe) {
+      procesarPayload(cachedMe, cachedCat);
+      setLoading(false);
+    }
+
+    // 2. Revalidación en segundo plano (stale-while-revalidate)
     async function cargarPerfilYSupabase() {
       try {
-        const [res, catRes] = await Promise.all([
-          fetch('/api/dashboard/me'),
-          fetch('/api/admin/catalogo').catch(() => null)
+        const [meData, catData] = await Promise.all([
+          fetchWithClientCache('/api/dashboard/me'),
+          fetchWithClientCache('/api/admin/catalogo').catch(() => null)
         ]);
-
-        let liveCatalogoCursos: any[] = [];
-        if (catRes && catRes.ok) {
-          const catData = await catRes.json();
-          liveCatalogoCursos = [
-            ...(catData.cursosEspecializacion || []),
-            ...(catData.talleres || [])
-          ];
-        }
-
-        if (res.ok) {
-          const data = await res.json();
-          const prof = data.profile;
-          const matriculas = data.matriculas || [];
-
-          if (data.eduminCredits?.cursos?.disponibles !== undefined) {
-            setCreditosCursosDisponibles(data.eduminCredits.cursos.disponibles);
-          }
-          if (data.eduminCredits?.cursos?.habilitados !== undefined) {
-            setCursosHabilitados(data.eduminCredits.cursos.habilitados);
-          }
-          if (prof) {
-            if (prof.nombres) setNombres(prof.nombres);
-            if (prof.paquete_adquirido) setPaquete(prof.paquete_adquirido.toUpperCase());
-
-            const cursosEnrolados: any[] = [];
-            const idsAgregados = new Set<string>();
-
-            const buscarMatchCatalogo = (codigo?: string, titulo?: string, id?: string) => {
-              const codUp = String(codigo || id || '').toUpperCase();
-              const titNorm = (titulo || '').normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
-              const liveMatch = liveCatalogoCursos.find((lc: any) =>
-                (codUp && String(lc.codigo || '').toUpperCase() === codUp) ||
-                (id && String(lc.id || '').toLowerCase() === String(id).toLowerCase()) ||
-                (titNorm && String(lc.titulo || '').normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase() === titNorm)
-              );
-              const localMatch = catalogoGeneralCursos.find(c =>
-                c.titulo.toUpperCase() === titulo?.toUpperCase() ||
-                (titNorm && c.titulo.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase() === titNorm)
-              );
-              return {
-                id: liveMatch?.id,
-                codigo: liveMatch?.codigo,
-                tipo: liveMatch?.tipo,
-                categoria: liveMatch?.categoria || localMatch?.categoria,
-                duracion: liveMatch?.duracion || localMatch?.duracion,
-                imagen: liveMatch?.imagen || localMatch?.imagen,
-                titulo: liveMatch?.titulo || titulo
-              };
-            };
-
-            // 1. Cursos y talleres del formato JSON de Supabase (orden cronológico de matrícula/canje)
-            const cursosJsonPerfil = Array.isArray(prof.cursos_json) && prof.cursos_json.length > 0
-              ? prof.cursos_json
-              : parseCursosFromProfile(prof);
-            cursosJsonPerfil.forEach((cj: any) => {
-              const catMatch = buscarMatchCatalogo(cj.codigo, cj.titulo, cj.id);
-              const idSlug = catMatch.id || cj.id || cj.codigo?.toLowerCase() || cj.titulo?.toLowerCase().replace(/[^a-z0-9]/g, '-');
-              if (!idsAgregados.has(idSlug)) {
-                idsAgregados.add(idSlug);
-                const tipoCat = String(catMatch.tipo || cj.tipo || '').toUpperCase();
-                const esTaller = Boolean(
-                  tipoCat === 'TALLER' ||
-                  esCursoTaller({ ...cj, id: idSlug, codigo: catMatch.codigo || cj.codigo, tipo: tipoCat })
-                );
-                cursosEnrolados.push({
-                  id: idSlug,
-                  codigo: catMatch.codigo || cj.codigo,
-                  titulo: catMatch.titulo || cj.titulo,
-                  tipo: esTaller ? 'TALLER' : 'CURSO',
-                  categoria: esTaller ? (catMatch.categoria || 'Taller') : (catMatch.categoria || cj.categoria || 'Seguridad y prevención'),
-                  duracion: catMatch.duracion || cj.duracion || (esTaller ? '20 Horas Académicas' : '40 horas'),
-                  avance: cj.completado ? 100 : (typeof cj.avance === 'number' ? cj.avance : 0),
-                  nota: cj.nota,
-                  rendido: Boolean((cj as any).rendido || (cj.nota !== undefined && cj.nota !== null && Number(cj.nota) > 0)),
-                  imagen: catMatch.imagen || cj.imagen || (esTaller ? '/assets/images/cursos/tal-02-taller-de-seguridad-basada-en-el-comportamiento.jpg' : 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'),
-                  esRegalo: esTaller
-                });
-              }
-            });
-
-            // 2. Cursos matriculados explícitamente en la tabla matriculas (respaldo si no estuvieran en el perfil)
-            (matriculas || []).forEach((m: any) => {
-              if (m.tipo === 'CURSO' || m.tipo === 'curso' || m.tipo === 'TALLER' || m.tipo === 'taller') {
-                const catMatch = buscarMatchCatalogo(m.item_id, m.titulo, m.item_id);
-                const idSlug = catMatch.id || m.item_id || m.titulo.toLowerCase().replace(/[^a-z0-9]/g, '-');
-                if (!idsAgregados.has(idSlug)) {
-                  idsAgregados.add(idSlug);
-                  const tipoCat = String(catMatch.tipo || m.tipo || '').toUpperCase();
-                  const esTaller = Boolean(tipoCat === 'TALLER' || m.es_regalo || idSlug.startsWith('tal-'));
-                  cursosEnrolados.push({
-                    id: idSlug,
-                    codigo: catMatch.codigo,
-                    titulo: catMatch.titulo || m.titulo || 'Curso de Especialización',
-                    tipo: esTaller ? 'TALLER' : 'CURSO',
-                    categoria: catMatch.categoria || (esTaller ? 'Taller' : 'Seguridad y prevención'),
-                    duracion: catMatch.duracion || '20 Horas Académicas',
-                    avance: m.avance_porcentaje ?? 0,
-                    nota: m.nota,
-                    rendido: Boolean(m.rendido || (m.nota !== undefined && m.nota !== null && Number(m.nota) > 0)),
-                    imagen: catMatch.imagen || (esTaller ? '/assets/images/cursos/tal-02-taller-de-seguridad-basada-en-el-comportamiento.jpg' : 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'),
-                    esRegalo: esTaller
-                  });
-                }
-              }
-            });
-
-            // 3. Inyectar taller de regalo asignado según diplomados matriculados si no está en la lista
-            const diplomadosEstudiante = Array.isArray(prof.diplomados_json) && prof.diplomados_json.length > 0
-              ? prof.diplomados_json
-              : parseDiplomadosFromProfile(prof);
-            
-            const titulosDiplomados: string[] = [];
-            if (prof.diplomado_1) titulosDiplomados.push(prof.diplomado_1);
-            if (prof.diplomado_2) titulosDiplomados.push(prof.diplomado_2);
-            diplomadosEstudiante.forEach((d: any) => {
-              const t = d.titulo || d.slug;
-              if (t && !titulosDiplomados.includes(t)) titulosDiplomados.push(t);
-            });
-
-            titulosDiplomados.forEach((dipTitulo: string) => {
-              const taller = obtenerTallerParaDiplomado(dipTitulo);
-              if (taller && !idsAgregados.has(taller.id.toLowerCase())) {
-                idsAgregados.add(taller.id.toLowerCase());
-                const catMatch = buscarMatchCatalogo(taller.codigo, taller.titulo, taller.id);
-                cursosEnrolados.push({
-                  id: taller.id,
-                  codigo: taller.codigo,
-                  titulo: catMatch.titulo || taller.titulo,
-                  tipo: 'TALLER',
-                  categoria: catMatch.categoria || 'Taller',
-                  duracion: catMatch.duracion || taller.duracion || '20 Horas Académicas',
-                  avance: 0,
-                  nota: 0,
-                  rendido: false,
-                  imagen: catMatch.imagen || taller.imagen || '/assets/images/cursos/tal-02-taller-de-seguridad-basada-en-el-comportamiento.jpg',
-                  esRegalo: true
-                });
-              }
-            });
-
-            // Asignar todos los cursos y talleres enrolados
-            setCursosEstudianteReal(cursosEnrolados);
-          }
+        if (meData) {
+          procesarPayload(meData, catData);
         }
       } catch (err) {
         console.error('Error al cargar cursos de Supabase:', err);
@@ -392,7 +405,6 @@ export default function CursosPage() {
         <StudentPageHeader
           icon={BookOpen}
           title="Mis cursos"
-          subtitle="Accede a tus cursos matriculados con seguimiento de avance o adquiere nuevas especializaciones."
         />
 
 
@@ -519,20 +531,22 @@ export default function CursosPage() {
                   const examenAprobado = examenRendido && curso.nota !== undefined && curso.nota !== null && Number(curso.nota) >= notaMinimaCurso;
                   const examenDesaprobado = !noAplicaExamen && examenRendido && !examenAprobado;
 
-                  const esCompletado = noAplicaExamen ? (curso.avance >= 100 || Boolean(curso.completado)) : (curso.avance >= 100 && examenAprobado);
-                  const esDesaprobado100 = !noAplicaExamen && curso.avance >= 100 && examenDesaprobado;
-                  const tieneExamenPendiente = !noAplicaExamen && curso.avance >= 100 && !examenRendido;
-                  const esPorIniciar = curso.avance === 0;
+                  const esCompletado = noAplicaExamen 
+                    ? (curso.avance >= 100 || Boolean(curso.completado)) 
+                    : (examenAprobado || ((curso.avance >= 100) && examenAprobado));
+                  const esDesaprobado100 = !noAplicaExamen && examenDesaprobado;
+                  const tieneExamenPendiente = !noAplicaExamen && !examenRendido && !examenAprobado && (curso.avance >= 100);
+                  const esPorIniciar = curso.avance === 0 && !examenRendido;
 
                   // Verificación de habilitación por cuotas pagadas (solo contando cursos reales por tipo !== 'TALLER')
                   const esTaller = esCursoTaller(curso);
                   const indexSoloCurso = esTaller ? -1 : listaSoloCursosReales.findIndex(cur => cur.id === curso.id);
                   const estaBloqueadoPorCuotas = !esTaller && indexSoloCurso !== -1 && indexSoloCurso >= cursosHabilitados;
 
-                  const whatsappCuotaUrl = `https://wa.me/51984512809?text=${encodeURIComponent(
+                  const whatsappCuotaUrl = `https://wa.me/51980694497?text=${encodeURIComponent(
                     `Hola EDUMIN, deseo orientación para pagar mi siguiente cuota y habilitar el curso: ${curso.titulo}.`
                   )}`;
-                  const whatsappSustitutorioUrl = `https://wa.me/51924400268?text=${encodeURIComponent(
+                  const whatsappSustitutorioUrl = `https://wa.me/51980694497?text=${encodeURIComponent(
                     `Hola EDUMIN, desaprobé el Examen de ${curso.titulo}. Deseo adquirir el Examen Sustitutorio.`
                   )}`;
 

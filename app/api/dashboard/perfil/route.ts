@@ -43,6 +43,7 @@ export async function POST(request: Request) {
           console.warn('Advertencia limpiando foto en Supabase Storage:', delErr);
         }
         updates.foto_perfil = null;
+        updates.avatar_url = null;
       } else if (foto_perfil) {
         let finalFotoUrl = foto_perfil;
 
@@ -92,6 +93,7 @@ export async function POST(request: Request) {
         }
 
         updates.foto_perfil = finalFotoUrl;
+        updates.avatar_url = finalFotoUrl;
       }
 
       if (celular) updates.telefono = celular;

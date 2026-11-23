@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { formatearFechaVisual, resolverFechaVencimiento } from '@/lib/utils/fechasCuotas';
 import { 
   X, Calendar, Plus, Settings, CreditCard, CheckCircle2, RefreshCw, 
   FileText, Download, Award, Send, AlertTriangle, Check, Coins, Receipt, Wallet,
@@ -1191,6 +1192,7 @@ export default function Ficha360Modal({
                               <th className="py-2.5 px-4 text-center">Cuota</th>
                               <th className="py-2.5 px-4">Concepto</th>
                               <th className="py-2.5 px-4">Monto Programado</th>
+                              <th className="py-2.5 px-4">Fecha Vencimiento</th>
                               <th className="py-2.5 px-4">Pagado</th>
                               <th className="py-2.5 px-4">N.º Recibo</th>
                               <th className="py-2.5 px-4">Estado cuota</th>
@@ -1206,8 +1208,19 @@ export default function Ficha360Modal({
                               const estaTotalmentePagada = pagadoNum >= planNum && planNum > 0;
                               const esPagoParcial = pagadoNum > 0 && pagadoNum < planNum;
 
+                              const fechaVencCuota = creditoSeleccionado?.fechas_vencimiento?.[idx] 
+                                ? formatearFechaVisual(creditoSeleccionado.fechas_vencimiento[idx]) 
+                                : formatearFechaVisual(resolverFechaVencimiento(idx, null, creditoSeleccionado?.created_at));
+
                               const reciboAsociado = creditoSeleccionado?.cuotas_recibos?.[idx];
-                              const nroReciboCuota = reciboAsociado?.nro_recibo || (pagadoNum > 0 ? creditoSeleccionado?.nro_recibo : null);
+                              let nroReciboCuota = reciboAsociado?.nro_recibo || null;
+                              if (!nroReciboCuota && pagadoNum > 0) {
+                                const otrosConMismoRecibo = Object.entries(creditoSeleccionado?.cuotas_recibos || {})
+                                  .some(([k, v]: [string, any]) => Number(k) !== idx && v?.nro_recibo === creditoSeleccionado?.nro_recibo);
+                                if (!otrosConMismoRecibo && (idx === 0 || !creditoSeleccionado?.cuotas_recibos?.[0]?.nro_recibo)) {
+                                  nroReciboCuota = creditoSeleccionado?.nro_recibo || null;
+                                }
+                              }
                               const nroOperacionCuota = reciboAsociado?.nro_operacion || (pagadoNum > 0 ? creditoSeleccionado?.nro_operacion : null);
 
                               return (
@@ -1220,6 +1233,9 @@ export default function Ficha360Modal({
                                   </td>
                                   <td className="py-3 px-4 tabular-nums font-bold text-slate-800 dark:text-slate-200">
                                     S/ {planNum.toFixed(2)}
+                                  </td>
+                                  <td className="py-3 px-4 tabular-nums text-slate-600 dark:text-slate-400 font-semibold">
+                                    {fechaVencCuota}
                                   </td>
                                   <td className="py-3 px-4 tabular-nums font-bold text-emerald-600 dark:text-emerald-400">
                                     S/ {pagadoNum.toFixed(2)}

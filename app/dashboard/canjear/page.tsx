@@ -16,6 +16,7 @@ import {
   CATALOGO_CURSOS 
 } from '@/lib/data/catalogoGeneral';
 import { ALL_DIPLOMADOS } from '@/lib/data/diplomadosData';
+import { getClientCachedData, fetchWithClientCache } from '@/lib/utils/clientCache';
 
 function normalizarTexto(texto: string): string {
   return (texto || '')
@@ -26,7 +27,7 @@ function normalizarTexto(texto: string): string {
 }
 
 function getWhatsAppComprarCreditos(tipo: 'diplomado' | 'curso', titulo?: string) {
-  const base = "https://wa.me/51924634568?text=";
+  const base = "https://wa.me/51980694497?text=";
   const msg = tipo === 'diplomado'
     ? `Hola EDUMIN, soy estudiante y deseo comprar 1 Crédito adicional de Diplomado${titulo ? ` para cursar: "${titulo}"` : ''}. Por favor bríndenme información y facilidades de pago.`
     : `Hola EDUMIN, soy estudiante y deseo adquirir Créditos adicionales de Cursos de Alta Especialización${titulo ? ` para llevar: "${titulo}"` : ''}. ¿Me podrían indicar los costos y promociones disponibles?`;
@@ -34,7 +35,7 @@ function getWhatsAppComprarCreditos(tipo: 'diplomado' | 'curso', titulo?: string
 }
 
 export default function CanjearBeneficiosPage() {
-  const [tabActual, setTabActual] = useState<'diplomados' | 'cursos' | 'reglas'>('diplomados');
+  const [tabActual, setTabActual] = useState<'diplomados' | 'cursos'>('diplomados');
   
   // Créditos EDUMIN
   const [eduminCredits, setEduminCredits] = useState<EduminCreditsCalculation | null>(null);
@@ -76,48 +77,52 @@ export default function CanjearBeneficiosPage() {
     setPuntosClaveModal({});
   }, [modalTemario]);
 
-  // Función para recargar datos del estudiante
+  // Función para procesar datos del estudiante
+  function procesarDatosEstudiante(data: any) {
+    if (!data?.profile) return;
+    // Extraer diplomados ya matriculados
+    const dipsSlugs: string[] = [];
+    if (data.profile.diplomado_1) dipsSlugs.push(normalizarTexto(data.profile.diplomado_1));
+    if (Array.isArray(data.profile.diplomados_json)) {
+      data.profile.diplomados_json.forEach((d: any) => {
+        if (d.slug) dipsSlugs.push(normalizarTexto(d.slug));
+        if (d.titulo) dipsSlugs.push(normalizarTexto(d.titulo));
+        if (d.id) dipsSlugs.push(normalizarTexto(d.id));
+      });
+    }
+    setDiplomadosMatriculadosSlugs(Array.from(new Set(dipsSlugs)));
+
+    // Extraer cursos ya matriculados
+    const cursTitulos: string[] = [];
+    if (Array.isArray(data.profile.cursos_json)) {
+      data.profile.cursos_json.forEach((c: any) => {
+        if (c.titulo) cursTitulos.push(normalizarTexto(c.titulo));
+        if (c.codigo) cursTitulos.push(normalizarTexto(c.codigo));
+        if (c.id) cursTitulos.push(normalizarTexto(String(c.id)));
+      });
+    }
+    if (Array.isArray(data.matriculas)) {
+      data.matriculas.forEach((m: any) => {
+        if (m.titulo) cursTitulos.push(normalizarTexto(m.titulo));
+        if (m.item_id) cursTitulos.push(normalizarTexto(String(m.item_id)));
+      });
+    }
+    setCursosMatriculadosTitulos(Array.from(new Set(cursTitulos)));
+
+    if (data.eduminCredits) {
+      setEduminCredits(data.eduminCredits);
+    }
+  }
+
+  // Función para recargar datos del estudiante tras canjes
   async function cargarDatosEstudiante() {
     try {
-      const res = await fetch('/api/dashboard/me');
-      if (res.ok) {
-        const data = await res.json();
-        if (data.profile) {
-          // Extraer diplomados ya matriculados
-          const dipsSlugs: string[] = [];
-          if (data.profile.diplomado_1) dipsSlugs.push(normalizarTexto(data.profile.diplomado_1));
-          if (Array.isArray(data.profile.diplomados_json)) {
-            data.profile.diplomados_json.forEach((d: any) => {
-              if (d.slug) dipsSlugs.push(normalizarTexto(d.slug));
-              if (d.titulo) dipsSlugs.push(normalizarTexto(d.titulo));
-              if (d.id) dipsSlugs.push(normalizarTexto(d.id));
-            });
-          }
-          setDiplomadosMatriculadosSlugs(Array.from(new Set(dipsSlugs)));
-
-          // Extraer cursos ya matriculados
-          const cursTitulos: string[] = [];
-          if (Array.isArray(data.profile.cursos_json)) {
-            data.profile.cursos_json.forEach((c: any) => {
-              if (c.titulo) cursTitulos.push(normalizarTexto(c.titulo));
-              if (c.codigo) cursTitulos.push(normalizarTexto(c.codigo));
-              if (c.id) cursTitulos.push(normalizarTexto(String(c.id)));
-            });
-          }
-          if (Array.isArray(data.matriculas)) {
-            data.matriculas.forEach((m: any) => {
-              if (m.titulo) cursTitulos.push(normalizarTexto(m.titulo));
-              if (m.item_id) cursTitulos.push(normalizarTexto(String(m.item_id)));
-            });
-          }
-          setCursosMatriculadosTitulos(Array.from(new Set(cursTitulos)));
-        }
-        if (data.eduminCredits) {
-          setEduminCredits(data.eduminCredits);
-        }
+      const data = await fetchWithClientCache('/api/dashboard/me', { forceRefresh: true });
+      if (data) {
+        procesarDatosEstudiante(data);
       }
     } catch (e) {
-      console.error('Error cargando datos de usuario:', e);
+      console.error('Error recargando datos de usuario:', e);
     }
   }
 
@@ -125,19 +130,28 @@ export default function CanjearBeneficiosPage() {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const tabParam = params.get('tab');
-    if (tabParam === 'cursos' || tabParam === 'diplomados' || tabParam === 'reglas') {
+    if (tabParam === 'cursos' || tabParam === 'diplomados') {
       setTabActual(tabParam);
     }
 
+    // 1. Carga inmediata desde caché
+    const cachedMe = getClientCachedData('/api/dashboard/me');
+    const cachedCat = getClientCachedData('/api/admin/catalogo');
+    if (cachedMe) {
+      procesarDatosEstudiante(cachedMe);
+      if (cachedCat) setCatalogoApi(cachedCat);
+      setLoading(false);
+    }
+
+    // 2. Revalidación en segundo plano
     async function inicializar() {
-      setLoading(true);
-      await cargarDatosEstudiante();
       try {
-        const catRes = await fetch('/api/admin/catalogo');
-        if (catRes.ok) {
-          const catData = await catRes.json();
-          setCatalogoApi(catData);
-        }
+        const [meData, catData] = await Promise.all([
+          fetchWithClientCache('/api/dashboard/me'),
+          fetchWithClientCache('/api/admin/catalogo').catch(() => null)
+        ]);
+        if (meData) procesarDatosEstudiante(meData);
+        if (catData) setCatalogoApi(catData);
       } catch (err) {
         console.error('Error cargando catálogo oficial:', err);
       } finally {
@@ -455,24 +469,24 @@ export default function CanjearBeneficiosPage() {
     <main className="min-h-screen bg-slate-50 dark:bg-slate-950 p-4 sm:p-8 lg:p-12 text-slate-900 dark:text-slate-100 pb-24 transition-colors">
       <div className="max-w-6xl mx-auto space-y-6">
         
-        {/* Cabecera compacta: Volver + Título + KPIs de créditos en una sola fila */}
-        <header className="bg-white dark:bg-slate-900 rounded-2xl px-4 sm:px-6 py-4 shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+        {/* Cabecera compacta: Volver + Título + KPIs de créditos directamente sobre el fondo */}
+        <header className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           <div className="flex flex-wrap items-center gap-3">
             <Link 
               href="/dashboard"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white bg-slate-50 dark:bg-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-800 px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 transition cursor-pointer shrink-0"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-800 shadow-xs transition cursor-pointer shrink-0"
             >
               <ArrowLeft className="size-4" /> Volver
             </Link>
 
-            <h1 className="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            <h1 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 dark:text-white">
               Mis créditos EDUMIN
             </h1>
           </div>
 
           {/* KPIs de créditos en una sola fila */}
           <div className="flex items-center gap-2 sm:gap-2.5 overflow-x-auto no-scrollbar shrink-0">
-            <div className="bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800 px-3.5 py-2 rounded-xl flex items-center gap-2.5 shrink-0">
+            <div className="bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200/80 dark:border-indigo-800 px-3.5 py-2 rounded-xl flex items-center gap-2.5 shrink-0 shadow-xs">
               <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 whitespace-nowrap">
                 Créditos diplomados
               </span>
@@ -481,7 +495,7 @@ export default function CanjearBeneficiosPage() {
               </span>
             </div>
 
-            <div className="bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 px-3.5 py-2 rounded-xl flex items-center gap-2.5 shrink-0">
+            <div className="bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200/80 dark:border-emerald-800 px-3.5 py-2 rounded-xl flex items-center gap-2.5 shrink-0 shadow-xs">
               <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 whitespace-nowrap">
                 Créditos cursos
               </span>
@@ -490,53 +504,41 @@ export default function CanjearBeneficiosPage() {
               </span>
             </div>
 
-            <div className="bg-slate-900 text-white dark:bg-slate-800 border border-slate-700 px-3.5 py-2 rounded-xl flex items-center gap-2.5 shrink-0">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 whitespace-nowrap">
+            <div className="bg-slate-100 dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 px-3.5 py-2 rounded-xl flex items-center gap-2.5 shrink-0 shadow-xs">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 whitespace-nowrap">
                 Total créditos
               </span>
-              <span className="text-sm sm:text-base font-black tabular-nums text-white">
+              <span className="text-sm sm:text-base font-black tabular-nums text-slate-900 dark:text-white">
                 {totalDisponibles}
               </span>
             </div>
           </div>
         </header>
 
-        {/* Navegación por Pestañas */}
-        <div className="flex border-b border-slate-200 dark:border-slate-800 gap-2 overflow-x-auto">
+        {/* PESTAÑAS DE NAVEGACIÓN */}
+        <div className="flex items-center gap-2 overflow-x-auto max-w-full touch-pan-x pb-2 pr-4 border-b border-slate-200 dark:border-slate-800 no-scrollbar shrink-0">
           <button
             onClick={() => { setTabActual('diplomados'); setMensajeExito(null); }}
-            className={`pb-3 px-5 font-bold text-xs sm:text-sm transition border-b-2 cursor-pointer flex items-center gap-2 whitespace-nowrap ${
+            className={`px-4 py-2.5 rounded-2xl text-xs font-bold border transition-colors flex items-center gap-2 cursor-pointer whitespace-nowrap shrink-0 ${
               tabActual === 'diplomados'
-                ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400'
-                : 'border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'
+                ? 'bg-indigo-600 text-white border-transparent shadow-md shadow-indigo-600/20'
+                : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white'
             }`}
           >
-            <GraduationCap className="w-4 h-4" />
-            Canjear mis diplomados
+            <GraduationCap className="w-3.5 h-3.5 shrink-0" />
+            <span>Canjear mis diplomados</span>
           </button>
 
           <button
             onClick={() => { setTabActual('cursos'); setMensajeExito(null); }}
-            className={`pb-3 px-5 font-bold text-xs sm:text-sm transition border-b-2 cursor-pointer flex items-center gap-2 whitespace-nowrap ${
+            className={`px-4 py-2.5 rounded-2xl text-xs font-bold border transition-colors flex items-center gap-2 cursor-pointer whitespace-nowrap shrink-0 ${
               tabActual === 'cursos'
-                ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400'
-                : 'border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'
+                ? 'bg-indigo-600 text-white border-transparent shadow-md shadow-indigo-600/20'
+                : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white'
             }`}
           >
-            <BookOpen className="w-4 h-4" />
-            Canjear mis cursos
-          </button>
-
-          <button
-            onClick={() => { setTabActual('reglas'); setMensajeExito(null); }}
-            className={`pb-3 px-5 font-bold text-xs sm:text-sm transition border-b-2 cursor-pointer flex items-center gap-2 whitespace-nowrap ${
-              tabActual === 'reglas'
-                ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400'
-                : 'border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'
-            }`}
-          >
-            <ShieldCheck className="w-4 h-4" />
-            Información de créditos
+            <BookOpen className="w-3.5 h-3.5 shrink-0" />
+            <span>Canjear mis cursos</span>
           </button>
         </div>
 
@@ -974,76 +976,7 @@ export default function CanjearBeneficiosPage() {
           </div>
         )}
 
-        {/* ================= PESTAÑA 3: REGLAS DE CRÉDITOS EDUMIN ================= */}
-        {tabActual === 'reglas' && (
-          <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-10 space-y-6">
-            <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 rounded-full text-xs font-bold mb-2">
-                <Sparkles className="w-3.5 h-3.5" /> Reglamento Oficial del Sistema de Créditos
-              </div>
-              <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-                ¿Cómo funcionan tus Créditos EDUMIN?
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
-                Tus créditos te permiten autogestionar tus cursos y diplomados a lo largo de tu formación profesional con total flexibilidad.
-              </p>
-            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50">
-                <div className="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">Paquete COMPLETO</div>
-                <div className="text-xl font-black text-slate-900 dark:text-white mt-1">4 Créditos EDUMIN</div>
-                <div className="text-xs text-slate-500 mt-2 space-y-1">
-                  <div>• <strong>1 Crédito Diplomado</strong> (Elegido en matrícula)</div>
-                  <div>• <strong>3 Créditos Cursos</strong> (Elegibles por el alumno)</div>
-                </div>
-              </div>
-
-              <div className="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50">
-                <div className="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">Paquete FULL</div>
-                <div className="text-xl font-black text-slate-900 dark:text-white mt-1">6 Créditos EDUMIN</div>
-                <div className="text-xs text-slate-500 mt-2 space-y-1">
-                  <div>• <strong>1 Crédito Diplomado</strong> (Elegido en matrícula)</div>
-                  <div>• <strong>5 Créditos Cursos</strong> (Elegibles por el alumno)</div>
-                </div>
-              </div>
-
-              <div className="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50">
-                <div className="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">Paquete ILIMITADO</div>
-                <div className="text-xl font-black text-slate-900 dark:text-white mt-1">18 Créditos EDUMIN</div>
-                <div className="text-xs text-slate-500 mt-2 space-y-1">
-                  <div>• <strong>3 Créditos Diplomados</strong> base (al consumirlos se abren +3 continuos)</div>
-                  <div>• <strong>15 Créditos Cursos</strong> de libre elección</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="border-t border-slate-100 dark:border-slate-800 pt-6 space-y-4">
-              <h3 className="text-sm font-bold text-slate-900 dark:text-white">
-                Reglas de Liberación según Forma de Pago:
-              </h3>
-              
-              <div className="space-y-3 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
-                  <strong className="text-slate-900 dark:text-white">1. Pago 100% Contado o Pago Total en la Primera Cuota:</strong>
-                  <p className="mt-1">
-                    Al abonar el 100% del monto del programa (ya sea al contado o cancelando el precio completo en la primera cuota), se liberan y habilitan de inmediato todos los Créditos de Diplomados y Cursos incluidos en tu paquete.
-                  </p>
-                </div>
-
-                <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
-                  <strong className="text-slate-900 dark:text-white">2. Pago en Cuotas:</strong>
-                  <ul className="list-disc pl-5 mt-2 space-y-1.5">
-                    <li><strong>Diplomados:</strong> Por el <strong>primer pago</strong> se habilita tu 1er diplomado; en el <strong>segundo pago</strong> se habilita el 2do diplomado (si cuentas con créditos disponibles); en la <strong>tercera cuota</strong> se habilita el 3er diplomado, y así sucesivamente según tus pagos y créditos.</li>
-                    <li><strong>Primera Cuota (Cursos):</strong> Se habilitan <strong>1 curso</strong> en Completo, <strong>2 cursos</strong> en Full, y <strong>3 cursos</strong> en Ilimitado.</li>
-                    <li><strong>Segunda Cuota (Cursos):</strong> Se liberan cursos adicionales: +1 en Completo (2 acumulados), +2 en Full (4 acumulados), y +3 en Ilimitado (6 acumulados). Si tu plan contempla únicamente 2 cuotas, al abonar esta última cuota se habilitan automáticamente todos los créditos restantes.</li>
-                    <li><strong>Cuota Final:</strong> Al cancelar la última cuota programada, se desbloquean todos los diplomados y cursos restantes contratados.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
 
         {/* Barra inferior compacta de confirmación tras canje exitoso */}
         {mensajeExito &&

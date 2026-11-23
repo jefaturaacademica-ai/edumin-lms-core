@@ -3,6 +3,13 @@ import { createAdminClient } from '@/lib/supabase/admin';
 
 export const runtime = 'nodejs';
 
+let modelosCache: { data: any; timestamp: number } | null = null;
+const MODELOS_TTL = 5 * 60 * 1000;
+
+function invalidateModelosCache() {
+  modelosCache = null;
+}
+
 const MODELOS_POR_DEFECTO = [
   {
     id: 'mod-avanza-dip',
@@ -36,6 +43,24 @@ const MODELOS_POR_DEFECTO = [
 
 export async function GET() {
   try {
+    if (modelosCache && Date.now() - modelosCache.timestamp < MODELOS_TTL) {
+      return NextResponse.json(modelosCache.data, {
+        headers: {
+          'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
+          'X-Cache': 'HIT'
+        }
+      });
+    }
+
+    const responder = (data: any) => {
+      modelosCache = { data, timestamp: Date.now() };
+      return NextResponse.json(data, {
+        headers: {
+          'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600'
+        }
+      });
+    };
+
     const admin = createAdminClient();
 
     // 1. Intentar consultar si existe tabla dedicada public.modelos_certificados
@@ -46,7 +71,7 @@ export async function GET() {
         .order('created_at', { ascending: false });
 
       if (!tableErr && tableData && tableData.length > 0) {
-        return NextResponse.json({ modelos: tableData, fuente: 'tabla_dedicada' });
+        return responder({ modelos: tableData, fuente: 'tabla_dedicada' });
       }
     } catch (e) {
       // Ignorar si la tabla aún no existe en el esquema
@@ -63,14 +88,14 @@ export async function GET() {
         .maybeSingle();
 
       if (!logErr && logData?.detalles?.modelos && Array.isArray(logData.detalles.modelos)) {
-        return NextResponse.json({ modelos: logData.detalles.modelos, fuente: 'supabase_audit_config' });
+        return responder({ modelos: logData.detalles.modelos, fuente: 'supabase_audit_config' });
       }
     } catch (e) {
       console.warn('Error leyendo audit_logs para modelos:', e);
     }
 
     // 3. Si no hay configuración previa en Supabase, devolver modelos oficiales por defecto
-    return NextResponse.json({ modelos: MODELOS_POR_DEFECTO, fuente: 'por_defecto' });
+    return responder({ modelos: MODELOS_POR_DEFECTO, fuente: 'por_defecto' });
   } catch (err: any) {
     return NextResponse.json({ error: err.message || 'Error al obtener modelos' }, { status: 500 });
   }
@@ -78,6 +103,7 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
+    invalidateModelosCache();
     const body = await request.json();
     const { modelos, usuarioEmail } = body;
 

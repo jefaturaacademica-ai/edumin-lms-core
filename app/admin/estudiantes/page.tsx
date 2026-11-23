@@ -1,11 +1,13 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import * as XLSX from 'xlsx';
 import { 
   Users, Search, RefreshCw, Eye, 
   CheckCircle2, AlertTriangle, UserCheck, GraduationCap, Download,
   UserPlus, Plus, Sparkles, BookOpen, CreditCard, AlertCircle, ArrowRight,
-  Check, Mail, Phone, Hash, Coins, Calendar
+  Check, Mail, Phone, Hash, Coins, Calendar,
+  FileSpreadsheet, UploadCloud, FileText, CheckCircle, XCircle, Trash2, Loader2
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
 import { useTabSlug } from '@/lib/hooks/useTabSlug';
@@ -15,6 +17,7 @@ import EditarCronogramaModal from '@/components/admin/editar-cronograma-modal';
 import Ficha360Modal from '@/components/admin/ficha-360-modal';
 import { EstudianteCompleto } from '@/lib/data/mockStudents';
 import { PaqueteDefinicion, PAQUETES_DEFAULT } from '@/lib/types/paquetes';
+import { getClientCachedData, fetchWithClientCache } from '@/lib/utils/clientCache';
 
 const DIPLOMADOS_EDUMIN = [
   "DERECHO MINERO",
@@ -42,7 +45,7 @@ const DIPLOMADOS_EDUMIN = [
 ];
 
 export default function AdminEstudiantesPage() {
-  const [activeTab, setActiveTab] = useTabSlug<'directorio' | 'nuevo'>('directorio', ['directorio', 'nuevo'] as const);
+  const [activeTab, setActiveTab] = useTabSlug<'directorio' | 'nuevo' | 'masivo'>('directorio', ['directorio', 'nuevo', 'masivo'] as const);
   const [estudiantes, setEstudiantes] = useState<EstudianteCompleto[]>([]);
   const [cargando, setCargando] = useState(true);
   
@@ -57,6 +60,280 @@ export default function AdminEstudiantesPage() {
   const [catalogoFull, setCatalogoFull] = useState<any[]>([]);
 
   // Estados Formulario Nuevo Estudiante
+  // Estados Carga Masiva Excel
+  const [archivoExcel, setArchivoExcel] = useState<File | null>(null);
+  const [filasPrevia, setFilasPrevia] = useState<any[]>([]);
+  const [analizandoArchivo, setAnalizandoArchivo] = useState(false);
+  const [procesandoMasivo, setProcesandoMasivo] = useState(false);
+  const [resultadoMasivo, setResultadoMasivo] = useState<{
+    success: boolean;
+    total: number;
+    creados: number;
+    omitidos: number;
+    errores: number;
+    mensaje?: string;
+    detalles: Array<{ dni_ce: string; nombre: string; estado: 'creado' | 'omitido' | 'error'; mensaje: string }>;
+  } | null>(null);
+  const [dragOver, setDragOver] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const descargarPlantillaExcel = () => {
+    const sampleRows = [
+      {
+        DNI_CE: '71234567',
+        NOMBRES: 'Carlos Alberto',
+        APELLIDOS: 'Quispe Ramos',
+        EMAIL: 'carlos.quispe@gmail.com',
+        TELEFONO: '987654321',
+        PAQUETE: 'COMPLETO',
+        DIPLOMADO_INICIAL: 'DERECHO MINERO',
+        TIPO_PAGO: 'CUOTAS',
+        TOTAL_CUOTAS: 3,
+        MONTO_TOTAL: 540,
+        MONTO_CUOTA: 180,
+        FECHA_NACIMIENTO: '1996-08-15'
+      },
+      {
+        DNI_CE: '72345678',
+        NOMBRES: 'María Elena',
+        APELLIDOS: 'Flores Vargas',
+        EMAIL: 'maria.flores@hotmail.com',
+        TELEFONO: '912345678',
+        PAQUETE: 'FULL',
+        DIPLOMADO_INICIAL: 'GESTIÓN DE SEGURIDAD MINERA Y SALUD OCUPACIONAL',
+        TIPO_PAGO: 'CUOTAS',
+        TOTAL_CUOTAS: 3,
+        MONTO_TOTAL: 900,
+        MONTO_CUOTA: 300,
+        FECHA_NACIMIENTO: '1994-03-22'
+      },
+      {
+        DNI_CE: '73456789',
+        NOMBRES: 'Jorge Luis',
+        APELLIDOS: 'Mendoza Chávez',
+        EMAIL: 'jorge.mendoza@outlook.com',
+        TELEFONO: '956789123',
+        PAQUETE: 'ILIMITADO',
+        DIPLOMADO_INICIAL: 'OPERACIONES MINERAS Y SOSTENIMIENTO DE LABORES',
+        TIPO_PAGO: 'CONTADO',
+        TOTAL_CUOTAS: 1,
+        MONTO_TOTAL: 1500,
+        MONTO_CUOTA: 1500,
+        FECHA_NACIMIENTO: '1992-11-05'
+      }
+    ];
+
+    const worksheet = XLSX.utils.json_to_sheet(sampleRows);
+    worksheet['!cols'] = [
+      { wch: 14 },
+      { wch: 22 },
+      { wch: 22 },
+      { wch: 28 },
+      { wch: 15 },
+      { wch: 14 },
+      { wch: 45 },
+      { wch: 12 },
+      { wch: 14 },
+      { wch: 14 },
+      { wch: 14 },
+      { wch: 18 }
+    ];
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Plantilla_Estudiantes');
+    XLSX.writeFile(workbook, 'Plantilla_Carga_Masiva_Estudiantes_EDUMIN.xlsx');
+  };
+
+  const descargarPlantillaCsv = () => {
+    const csvContent =
+      'DNI_CE,NOMBRES,APELLIDOS,EMAIL,TELEFONO,PAQUETE,DIPLOMADO_INICIAL,TIPO_PAGO,TOTAL_CUOTAS,MONTO_TOTAL,MONTO_CUOTA,FECHA_NACIMIENTO\n' +
+      '71234567,Carlos Alberto,Quispe Ramos,carlos.quispe@gmail.com,987654321,COMPLETO,DERECHO MINERO,CUOTAS,3,540,180,1996-08-15\n' +
+      '72345678,María Elena,Flores Vargas,maria.flores@hotmail.com,912345678,FULL,GESTIÓN DE SEGURIDAD MINERA Y SALUD OCUPACIONAL,CUOTAS,3,900,300,1994-03-22\n' +
+      '73456789,Jorge Luis,Mendoza Chávez,jorge.mendoza@outlook.com,956789123,ILIMITADO,OPERACIONES MINERAS Y SOSTENIMIENTO DE LABORES,CONTADO,1,1500,1500,1992-11-05';
+
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', 'Plantilla_Carga_Masiva_Estudiantes_EDUMIN.csv');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const procesarArchivoExcel = async (file: File) => {
+    try {
+      setAnalizandoArchivo(true);
+      setResultadoMasivo(null);
+      setArchivoExcel(file);
+
+      const buffer = await file.arrayBuffer();
+      const workbook = XLSX.read(buffer, { type: 'array' });
+      const firstSheetName = workbook.SheetNames[0];
+      const worksheet = workbook.Sheets[firstSheetName];
+      const rawRows: any[] = XLSX.utils.sheet_to_json(worksheet, { defval: '' });
+
+      if (!rawRows || rawRows.length === 0) {
+        alert('El archivo cargado está vacío o no contiene filas con datos.');
+        setFilasPrevia([]);
+        setAnalizandoArchivo(false);
+        return;
+      }
+
+      const setDnisExistentes = new Set(
+        estudiantes.map(e => String(e.dni_ce || '').trim().toLowerCase())
+      );
+      const setEmailsExistentes = new Set(
+        estudiantes.map(e => String(e.email || '').trim().toLowerCase())
+      );
+
+      const dnisEnLote = new Set<string>();
+      const emailsEnLote = new Set<string>();
+
+      const procesadas = rawRows.map((row, idx) => {
+        const dni_ce = String(
+          row.DNI_CE || row.DNI || row.dni || row.dni_ce || row['DNI / CE'] || row.DOCUMENTO || ''
+        ).trim();
+
+        const nombres = String(
+          row.NOMBRES || row.NOMBRE || row.nombres || row.nombre || ''
+        ).trim();
+
+        const apellidos = String(
+          row.APELLIDOS || row.APELLIDO || row.apellidos || row.apellido || ''
+        ).trim();
+
+        const email = String(
+          row.EMAIL || row.CORREO || row.email || row.correo || row['CORREO ELECTRÓNICO'] || ''
+        ).trim().toLowerCase();
+
+        const telefono = String(
+          row.TELEFONO || row.CELULAR || row.telefono || row.celular || ''
+        ).trim();
+
+        const paquete_adquirido = String(
+          row.PAQUETE || row.PAQUETE_ADQUIRIDO || row.paquete || 'COMPLETO'
+        ).trim().toUpperCase();
+
+        const diplomado_1 = String(
+          row.DIPLOMADO_INICIAL || row.DIPLOMADO || row.diplomado || row.diplomado_1 || 'DERECHO MINERO'
+        ).trim().toUpperCase();
+
+        const tipo_pago = String(
+          row.TIPO_PAGO || row.FORMA_PAGO || row.tipo_pago || 'CUOTAS'
+        ).trim().toUpperCase();
+
+        const cuotas_totales = Number(row.TOTAL_CUOTAS || row.CUOTAS || row.cuotas || (paquete_adquirido === 'ILIMITADO' ? 5 : 3));
+        const monto_total = Number(row.MONTO_TOTAL || (paquete_adquirido === 'ILIMITADO' ? 1500 : (paquete_adquirido === 'FULL' ? 900 : 540)));
+        const monto_cuota = Number(row.MONTO_CUOTA || (tipo_pago === 'CONTADO' ? monto_total : (paquete_adquirido === 'ILIMITADO' ? 300 : 180)));
+        const fecha_nacimiento = String(row.FECHA_NACIMIENTO || row.NACIMIENTO || row.fecha_nacimiento || '').trim();
+
+        let estadoFila: 'listo' | 'duplicado' | 'error' = 'listo';
+        let motivo = 'Listo para registrar';
+
+        if (!dni_ce || !nombres || !apellidos || !email) {
+          estadoFila = 'error';
+          motivo = 'Faltan datos obligatorios (DNI, nombres, apellidos o correo)';
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          estadoFila = 'error';
+          motivo = 'Formato de correo electrónico inválido';
+        } else if (setDnisExistentes.has(dni_ce.toLowerCase()) || setEmailsExistentes.has(email)) {
+          estadoFila = 'duplicado';
+          motivo = 'Ya registrado previamente en el sistema (se omitirá)';
+        } else if (dnisEnLote.has(dni_ce.toLowerCase()) || emailsEnLote.has(email)) {
+          estadoFila = 'duplicado';
+          motivo = 'Duplicado dentro del mismo archivo (se omitirá)';
+        } else {
+          dnisEnLote.add(dni_ce.toLowerCase());
+          emailsEnLote.add(email);
+        }
+
+        return {
+          filaNum: idx + 2,
+          dni_ce,
+          nombres,
+          apellidos,
+          email,
+          telefono,
+          paquete_adquirido,
+          diplomado_1,
+          tipo_pago,
+          cuotas_totales,
+          monto_total,
+          monto_cuota,
+          fecha_nacimiento,
+          estadoFila,
+          motivo
+        };
+      });
+
+      setFilasPrevia(procesadas);
+    } catch (err: any) {
+      console.error('Error al leer Excel:', err);
+      alert(`No se pudo procesar el archivo Excel: ${err.message}`);
+      setFilasPrevia([]);
+    } finally {
+      setAnalizandoArchivo(false);
+    }
+  };
+
+  const ejecutarRegistroMasivo = async () => {
+    const listos = filasPrevia.filter(f => f.estadoFila === 'listo');
+    if (listos.length === 0) {
+      alert('No hay estudiantes listos para registrar. Corrige los datos o carga otro archivo.');
+      return;
+    }
+
+    if (!confirm(`¿Confirmas el registro masivo de ${listos.length} estudiante(s)? Se crearán sus cuentas con contraseña = su número de DNI.`)) {
+      return;
+    }
+
+    setProcesandoMasivo(true);
+    setResultadoMasivo(null);
+
+    try {
+      const res = await fetch('/api/admin/estudiantes/bulk', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          estudiantes: listos.map(item => ({
+            dni_ce: item.dni_ce,
+            nombres: item.nombres,
+            apellidos: item.apellidos,
+            email: item.email,
+            telefono: item.telefono,
+            paquete_adquirido: item.paquete_adquirido,
+            diplomado_1: item.diplomado_1,
+            tipo_pago: item.tipo_pago,
+            cuotas_totales: item.cuotas_totales,
+            monto_total: item.monto_total,
+            monto_cuota: item.monto_cuota,
+            fecha_nacimiento: item.fecha_nacimiento || null
+          }))
+        })
+      });
+
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setResultadoMasivo(data);
+        await cargarEstudiantes();
+      } else {
+        alert(data.error || 'Ocurrió un error al procesar el lote.');
+      }
+    } catch (err: any) {
+      console.error('Error en carga masiva:', err);
+      alert(`Error de conexión: ${err.message}`);
+    } finally {
+      setProcesandoMasivo(false);
+    }
+  };
+
+  const limpiarCargaMasiva = () => {
+    setArchivoExcel(null);
+    setFilasPrevia([]);
+    setResultadoMasivo(null);
+    if (fileInputRef.current) fileInputRef.current.value = '';
+  };
+
   const [nuevoDni, setNuevoDni] = useState('');
   const [nuevoNombres, setNuevoNombres] = useState('');
   const [nuevoApellidos, setNuevoApellidos] = useState('');
@@ -74,19 +351,41 @@ export default function AdminEstudiantesPage() {
   const [mensajeNuevo, setMensajeNuevo] = useState<{ texto: string; tipo: 'exito' | 'error' } | null>(null);
 
   useEffect(() => {
+    // 1. Hidratación instantánea desde caché si existe
+    const cachedEst = getClientCachedData('/api/admin/estudiantes');
+    const cachedCat = getClientCachedData('/api/admin/catalogo');
+    const cachedPaq = getClientCachedData('/api/admin/configuracion-paquetes');
+
+    if (cachedEst?.estudiantes && Array.isArray(cachedEst.estudiantes)) {
+      setEstudiantes(cachedEst.estudiantes);
+      if (cachedEst.siguiente_recibo) setSiguienteRecibo(cachedEst.siguiente_recibo);
+      setCargando(false);
+    }
+    if (cachedCat) {
+      const todos = Array.isArray(cachedCat.todos)
+        ? cachedCat.todos
+        : [
+            ...(cachedCat.diplomados || []),
+            ...(cachedCat.cursosEspecializacion || cachedCat.cursos || []),
+            ...(cachedCat.talleres || [])
+          ];
+      setCatalogoFull(todos);
+    }
+    if (cachedPaq?.paquetes && typeof cachedPaq.paquetes === 'object') {
+      setPaquetesDisponibles(cachedPaq.paquetes);
+    }
+
+    // 2. Revalidación en segundo plano (stale-while-revalidate)
     cargarEstudiantes();
     cargarCatalogo();
     cargarConfigPaquetes();
   }, []);
 
-  const cargarConfigPaquetes = async () => {
+  const cargarConfigPaquetes = async (forceRefresh = false) => {
     try {
-      const res = await fetch('/api/admin/configuracion-paquetes');
-      if (res.ok) {
-        const data = await res.json();
-        if (data.paquetes && typeof data.paquetes === 'object') {
-          setPaquetesDisponibles(data.paquetes);
-        }
+      const data = await fetchWithClientCache('/api/admin/configuracion-paquetes', { forceRefresh });
+      if (data?.paquetes && typeof data.paquetes === 'object') {
+        setPaquetesDisponibles(data.paquetes);
       }
     } catch (e) {
       console.error('Error cargando paquetes configurados:', e);
@@ -136,11 +435,10 @@ export default function AdminEstudiantesPage() {
     }
   };
 
-  const cargarCatalogo = async () => {
+  const cargarCatalogo = async (forceRefresh = false) => {
     try {
-      const res = await fetch('/api/admin/catalogo');
-      if (res.ok) {
-        const data = await res.json();
+      const data = await fetchWithClientCache('/api/admin/catalogo', { forceRefresh });
+      if (data) {
         const todos = Array.isArray(data.todos)
           ? data.todos
           : [
@@ -155,20 +453,17 @@ export default function AdminEstudiantesPage() {
     }
   };
 
-  const cargarEstudiantes = async () => {
-    setCargando(true);
+  const cargarEstudiantes = async (forceRefresh = false) => {
+    if (!estudiantes.length) setCargando(true);
     try {
-      const res = await fetch('/api/admin/estudiantes');
-      if (res.ok) {
-        const data = await res.json();
-        if (Array.isArray(data.estudiantes)) {
-          setEstudiantes(data.estudiantes);
-          if (data.siguiente_recibo) setSiguienteRecibo(data.siguiente_recibo);
-          setAlumnoSeleccionado((prev) => {
-            if (!prev) return null;
-            return data.estudiantes.find((e: EstudianteCompleto) => e.id === prev.id || e.dni_ce === prev.dni_ce) || null;
-          });
-        }
+      const data = await fetchWithClientCache('/api/admin/estudiantes', { forceRefresh });
+      if (data && Array.isArray(data.estudiantes)) {
+        setEstudiantes(data.estudiantes);
+        if (data.siguiente_recibo) setSiguienteRecibo(data.siguiente_recibo);
+        setAlumnoSeleccionado((prev) => {
+          if (!prev) return null;
+          return data.estudiantes.find((e: EstudianteCompleto) => e.id === prev.id || e.dni_ce === prev.dni_ce) || null;
+        });
       }
     } catch (e) {
       console.error('Error cargando estudiantes:', e);
@@ -265,6 +560,7 @@ export default function AdminEstudiantesPage() {
   const [editMontoTotal, setEditMontoTotal] = useState<number>(1500);
   const [editNroPagare, setEditNroPagare] = useState<string>('');
   const [editCuotas6, setEditCuotas6] = useState<{ val: string }[]>(Array(6).fill({ val: 'no corresponde' }));
+  const [editFechas6, setEditFechas6] = useState<{ val: string }[]>(Array(6).fill({ val: '' }));
   const [enviandoAlertaWhatsApp, setEnviandoAlertaWhatsApp] = useState<boolean>(false);
 
   const registrarPago = async (
@@ -370,7 +666,8 @@ export default function AdminEstudiantesPage() {
           num_credito: creditoActual?.num_credito || 1,
           nro_pagare: editNroPagare,
           monto_total: editMontoTotal,
-          cuotas: editCuotas6.map(c => c.val)
+          cuotas: editCuotas6.map(c => c.val),
+          fechas_vencimiento: editFechas6.map(f => f.val)
         })
       });
 
@@ -460,7 +757,7 @@ export default function AdminEstudiantesPage() {
               </button>
 
               <button
-                onClick={cargarEstudiantes}
+                onClick={() => cargarEstudiantes(true)}
                 disabled={cargando}
                 className="bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-800 px-4 py-2.5 rounded-xl font-bold text-xs shadow-sm transition flex items-center gap-2 cursor-pointer disabled:opacity-50"
               >
@@ -496,6 +793,19 @@ export default function AdminEstudiantesPage() {
             >
               <UserPlus className="w-4 h-4 text-emerald-600" /> 
               Nuevo estudiante
+            </button>
+
+            {/* Pestaña 3: Carga masiva con Excel */}
+            <button
+              onClick={() => setActiveTab('masivo')}
+              className={`pb-3 px-5 font-bold text-xs sm:text-sm transition border-b-2 cursor-pointer flex items-center gap-2 whitespace-nowrap ${
+                activeTab === 'masivo' 
+                  ? 'border-emerald-600 text-emerald-600 dark:text-emerald-400' 
+                  : 'border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'
+              }`}
+            >
+              <FileSpreadsheet className="w-4 h-4 text-emerald-600" /> 
+              Carga masiva (Excel)
             </button>
           </div>
 
@@ -662,8 +972,32 @@ export default function AdminEstudiantesPage() {
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 rounded-full text-xs font-bold mb-2">
                   <UserPlus className="w-3.5 h-3.5" /> Formulario de alta y matrícula directa
                 </div>
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 bg-emerald-50/80 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 rounded-2xl mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="size-10 rounded-xl bg-emerald-600/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+                      <FileSpreadsheet className="size-5" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-bold text-slate-900 dark:text-white">
+                        ¿Tienes varios estudiantes por matricular?
+                      </p>
+                      <p className="text-[11px] text-slate-500 dark:text-slate-400">
+                        Usa la carga masiva con Excel (.xlsx) para inscribir decenas de estudiantes en segundos.
+                      </p>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setActiveTab('masivo')}
+                    className="text-xs font-bold px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white shadow-xs transition-colors cursor-pointer shrink-0 inline-flex items-center gap-1.5"
+                  >
+                    <span>Ir a Carga Masiva Excel</span>
+                    <ArrowRight className="size-3.5" />
+                  </button>
+                </div>
+
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-                  Registrar nuevo estudiante
+                  Registrar nuevo estudiante (Manual)
                 </h2>
                 <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
                   Crea la cuenta en Supabase Auth y el perfil en la base de datos. La contraseña inicial será automáticamente su número de DNI o carnet.
@@ -992,6 +1326,296 @@ export default function AdminEstudiantesPage() {
             </div>
           )}
 
+          {/* CONTENIDO PESTAÑA 3: CARGA MASIVA CON EXCEL */}
+          {activeTab === 'masivo' && (
+            <div className="space-y-8 max-w-5xl mx-auto">
+              {/* Encabezado de Carga Masiva */}
+              <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-sm">
+                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-slate-100 dark:border-slate-800">
+                  <div>
+                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 rounded-full text-xs font-bold mb-2">
+                      <FileSpreadsheet className="w-3.5 h-3.5" /> Importación Masiva Oficial
+                    </div>
+                    <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
+                      Carga masiva de estudiantes en lote
+                    </h2>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 max-w-2xl leading-relaxed">
+                      Descarga la plantilla oficial en Excel (.xlsx) o CSV, completa los datos de tus estudiantes y súbela aquí. El sistema creará sus cuentas en Supabase Auth, sus perfiles, sus cupos de créditos y su primer recibo oficial de forma automática.
+                    </p>
+                  </div>
+
+                  {/* Botones de Descarga de Plantillas */}
+                  <div className="flex flex-wrap sm:flex-nowrap gap-2.5 shrink-0">
+                    <button
+                      onClick={descargarPlantillaExcel}
+                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-sm transition-all cursor-pointer"
+                      title="Descargar Plantilla en formato Excel .XLSX"
+                    >
+                      <Download className="w-4 h-4" />
+                      <span>Descargar plantilla Excel (.xlsx)</span>
+                    </button>
+                    <button
+                      onClick={descargarPlantillaCsv}
+                      className="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold transition-all cursor-pointer"
+                      title="Descargar Plantilla en formato texto CSV"
+                    >
+                      <FileText className="w-4 h-4 text-slate-400" />
+                      <span>Plantilla CSV</span>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Zona de Arrastrar y Soltar Archivo */}
+                <div className="pt-6">
+                  <div
+                    onDragOver={(e) => {
+                      e.preventDefault();
+                      setDragOver(true);
+                    }}
+                    onDragLeave={() => setDragOver(false)}
+                    onDrop={(e) => {
+                      e.preventDefault();
+                      setDragOver(false);
+                      const file = e.dataTransfer.files?.[0];
+                      if (file) procesarArchivoExcel(file);
+                    }}
+                    onClick={() => fileInputRef.current?.click()}
+                    className={`border-2 border-dashed rounded-2xl p-8 sm:p-10 text-center cursor-pointer transition-all ${
+                      dragOver
+                        ? 'border-emerald-500 bg-emerald-50/50 dark:bg-emerald-950/20 scale-[0.99]'
+                        : archivoExcel
+                        ? 'border-emerald-400 dark:border-emerald-600 bg-emerald-50/30 dark:bg-emerald-950/10'
+                        : 'border-slate-300 dark:border-slate-700 hover:border-emerald-500 hover:bg-slate-50/50 dark:hover:bg-slate-800/40'
+                    }`}
+                  >
+                    <input
+                      ref={fileInputRef}
+                      type="file"
+                      accept=".xlsx, .xls, .csv"
+                      className="hidden"
+                      onChange={(e) => {
+                        const file = e.target.files?.[0];
+                        if (file) procesarArchivoExcel(file);
+                      }}
+                    />
+
+                    <div className="size-14 mx-auto rounded-2xl bg-emerald-600/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 grid place-items-center mb-3">
+                      <UploadCloud className="size-7" />
+                    </div>
+
+                    {archivoExcel ? (
+                      <div className="space-y-1">
+                        <p className="text-sm font-bold text-slate-900 dark:text-white">
+                          Archivo seleccionado: <span className="text-emerald-600 dark:text-emerald-400">{archivoExcel.name}</span>
+                        </p>
+                        <p className="text-xs text-slate-500 dark:text-slate-400">
+                          {(archivoExcel.size / 1024).toFixed(1)} KB • Haz clic o arrastra otro archivo para reemplazarlo
+                        </p>
+                      </div>
+                    ) : (
+                      <div className="space-y-1">
+                        <p className="text-sm font-bold text-slate-900 dark:text-white">
+                          Arrastra tu archivo Excel (.xlsx / .xls) o CSV aquí
+                        </p>
+                        <p className="text-xs text-slate-500 dark:text-slate-400">
+                          o haz clic para examinar desde tu equipo
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* Resultado del Registro Masivo tras procesar */}
+              {resultadoMasivo && (
+                <div className={`p-6 rounded-3xl border shadow-sm ${
+                  resultadoMasivo.errores === 0
+                    ? 'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-200 dark:border-emerald-800 text-emerald-950 dark:text-emerald-100'
+                    : 'bg-amber-50 dark:bg-amber-950/40 border-amber-200 dark:border-amber-800 text-amber-950 dark:text-amber-100'
+                }`}>
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="size-6 text-emerald-600 shrink-0" />
+                        <h3 className="text-base font-bold">
+                          {resultadoMasivo.mensaje || 'Carga masiva procesada exitosamente'}
+                        </h3>
+                      </div>
+                      <p className="text-xs text-slate-600 dark:text-slate-300">
+                        Todos los estudiantes creados ya cuentan con acceso habilitado y contraseña inicial (su número de DNI).
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-2 shrink-0">
+                      <button
+                        onClick={() => {
+                          setActiveTab('directorio');
+                          limpiarCargaMasiva();
+                        }}
+                        className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition shadow-xs cursor-pointer inline-flex items-center gap-1.5"
+                      >
+                        <Users className="size-3.5" />
+                        <span>Ver en Directorio</span>
+                      </button>
+                      <button
+                        onClick={limpiarCargaMasiva}
+                        className="px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-800 transition cursor-pointer"
+                      >
+                        Cargar otro lote
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Vista Previa de Filas Analizadas */}
+              {filasPrevia.length > 0 && !resultadoMasivo && (
+                <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-sm space-y-6">
+                  {/* Resumen de Estado de Validación */}
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-100 dark:border-slate-800">
+                    <div>
+                      <h3 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                        <UserCheck className="size-4 text-emerald-600" /> Previsualización del lote ({filasPrevia.length} filas detectadas)
+                      </h3>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                        Verifica los datos antes de ejecutar la matrícula automática en Supabase.
+                      </p>
+                    </div>
+
+                    {/* Contadores */}
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+                        🟢 {filasPrevia.filter(f => f.estadoFila === 'listo').length} listos
+                      </span>
+                      {filasPrevia.filter(f => f.estadoFila === 'duplicado').length > 0 && (
+                        <span className="px-3 py-1 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+                          🟡 {filasPrevia.filter(f => f.estadoFila === 'duplicado').length} duplicados (se omitirán)
+                        </span>
+                      )}
+                      {filasPrevia.filter(f => f.estadoFila === 'error').length > 0 && (
+                        <span className="px-3 py-1 rounded-full text-xs font-bold bg-rose-50 dark:bg-rose-950 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800">
+                          🔴 {filasPrevia.filter(f => f.estadoFila === 'error').length} con errores
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Tabla con Scroll Horizontal */}
+                  <div className="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800 max-h-96 overflow-y-auto">
+                    <table className="w-full text-left border-collapse text-xs">
+                      <thead className="bg-slate-50 dark:bg-slate-950 text-slate-700 dark:text-slate-300 font-bold sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800">
+                        <tr>
+                          <th className="py-3 px-4">Fila</th>
+                          <th className="py-3 px-4">Estado</th>
+                          <th className="py-3 px-4">DNI / CE</th>
+                          <th className="py-3 px-4">Estudiante</th>
+                          <th className="py-3 px-4">Correo</th>
+                          <th className="py-3 px-4">Paquete</th>
+                          <th className="py-3 px-4">Diplomado Inicial</th>
+                          <th className="py-3 px-4">Pago</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
+                        {filasPrevia.map((item, idx) => {
+                          const esListo = item.estadoFila === 'listo';
+                          const esDuplicado = item.estadoFila === 'duplicado';
+                          return (
+                            <tr
+                              key={idx}
+                              className={`transition-colors ${
+                                esListo
+                                  ? 'hover:bg-slate-50 dark:hover:bg-slate-800/40'
+                                  : esDuplicado
+                                  ? 'bg-amber-50/30 dark:bg-amber-950/10'
+                                  : 'bg-rose-50/40 dark:bg-rose-950/20'
+                              }`}
+                            >
+                              <td className="py-3 px-4 font-mono text-slate-400">
+                                #{item.filaNum}
+                              </td>
+                              <td className="py-3 px-4 whitespace-nowrap">
+                                {esListo ? (
+                                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-bold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+                                    <Check className="size-3" /> Listo
+                                  </span>
+                                ) : esDuplicado ? (
+                                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-bold bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800" title={item.motivo}>
+                                    <AlertTriangle className="size-3" /> Ya existe
+                                  </span>
+                                ) : (
+                                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-bold bg-rose-50 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800" title={item.motivo}>
+                                    <XCircle className="size-3" /> Error
+                                  </span>
+                                )}
+                              </td>
+                              <td className="py-3 px-4 font-mono font-bold text-slate-900 dark:text-white">
+                                {item.dni_ce || <span className="text-rose-500 italic">Vacío</span>}
+                              </td>
+                              <td className="py-3 px-4 font-semibold text-slate-900 dark:text-white">
+                                {item.nombres || item.apellidos ? (
+                                  `${item.nombres} ${item.apellidos}`.trim()
+                                ) : (
+                                  <span className="text-rose-500 italic">Falta nombre</span>
+                                )}
+                              </td>
+                              <td className="py-3 px-4 text-slate-600 dark:text-slate-300">
+                                {item.email || <span className="text-rose-500 italic">Vacío</span>}
+                              </td>
+                              <td className="py-3 px-4">
+                                <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 uppercase">
+                                  {item.paquete_adquirido}
+                                </span>
+                              </td>
+                              <td className="py-3 px-4 text-slate-700 dark:text-slate-300 max-w-xs truncate" title={item.diplomado_1}>
+                                {item.diplomado_1}
+                              </td>
+                              <td className="py-3 px-4 whitespace-nowrap text-slate-600 dark:text-slate-400">
+                                {item.tipo_pago === 'CONTADO' ? 'Contado' : `${item.cuotas_totales} cuotas`}
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+
+                  {/* Acciones de Procesamiento */}
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+                    <button
+                      type="button"
+                      onClick={limpiarCargaMasiva}
+                      disabled={procesandoMasivo}
+                      className="px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer"
+                    >
+                      Cancelar y descartar archivo
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={ejecutarRegistroMasivo}
+                      disabled={procesandoMasivo || filasPrevia.filter(f => f.estadoFila === 'listo').length === 0}
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white text-xs font-bold shadow-md transition-all cursor-pointer w-full sm:w-auto"
+                    >
+                      {procesandoMasivo ? (
+                        <>
+                          <Loader2 className="size-4 animate-spin" />
+                          <span>Inscribiendo estudiantes en Supabase...</span>
+                        </>
+                      ) : (
+                        <>
+                          <UserPlus className="size-4" />
+                          <span>
+                            Iniciar registro de {filasPrevia.filter(f => f.estadoFila === 'listo').length} estudiante(s)
+                          </span>
+                        </>
+                      )}
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
           </div>
         </main>
       </div>
@@ -1059,6 +1683,20 @@ export default function AdminEstudiantesPage() {
                 }
 
                 setEditCuotas6(arr);
+
+                // Poblar fechas de vencimiento guardadas o autocalcularlas mensualmente
+                const rawFechas = cred?.fechas_vencimiento || [];
+                const baseDate = cred?.created_at || new Date().toISOString();
+                const fechasArr = Array(6).fill(null).map((_, i) => {
+                  if (rawFechas[i]) return { val: rawFechas[i] };
+                  const d = new Date(baseDate);
+                  d.setMonth(d.getMonth() + i);
+                  const a = d.getFullYear();
+                  const m = String(d.getMonth() + 1).padStart(2, '0');
+                  const dia = String(d.getDate()).padStart(2, '0');
+                  return { val: `${a}-${m}-${dia}` };
+                });
+                setEditFechas6(fechasArr);
               } else {
                 setEditCuotas6([
                   { val: String(totalMonto) },
@@ -1068,6 +1706,12 @@ export default function AdminEstudiantesPage() {
                   { val: 'no corresponde' },
                   { val: 'no corresponde' }
                 ]);
+                const baseDate = cred?.created_at || new Date().toISOString();
+                const d = new Date(baseDate);
+                const a = d.getFullYear();
+                const m = String(d.getMonth() + 1).padStart(2, '0');
+                const dia = String(d.getDate()).padStart(2, '0');
+                setEditFechas6([{ val: `${a}-${m}-${dia}` }, { val: '' }, { val: '' }, { val: '' }, { val: '' }, { val: '' }]);
               }
             }
             setMostrarEditarCronogramaModal(true);
@@ -1120,6 +1764,8 @@ export default function AdminEstudiantesPage() {
         setEditNroPagare={setEditNroPagare}
         editCuotas6={editCuotas6}
         setEditCuotas6={setEditCuotas6}
+        editFechas6={editFechas6}
+        setEditFechas6={setEditFechas6}
         onClose={() => setMostrarEditarCronogramaModal(false)}
         onSave={handleGuardarCronogramaSubmit}
       />

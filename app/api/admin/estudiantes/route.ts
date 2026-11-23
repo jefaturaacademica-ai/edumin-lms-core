@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { createAdminClient } from '@/lib/supabase/admin';
 import { obtenerSiguienteCorrelativo } from '@/lib/utils/reciboCorrelativo';
+import { calcularFechasVencimientoPorDefecto, resolverFechaVencimiento } from '@/lib/utils/fechasCuotas';
 import {
   parseDiplomadosFromProfile,
   parseCursosFromProfile,
@@ -15,6 +16,13 @@ import { getDiplomadoByTitleOrSlug } from '@/lib/data/diplomadosData';
 import { obtenerTallerParaDiplomado, TALLER_SOFT_SKILLS, TALLER_SEGURIDAD_BASADA } from '@/lib/utils/tallerAsignado';
 import fs from 'fs';
 import path from 'path';
+
+let estudiantesCache: { data: any; timestamp: number } | null = null;
+const ESTUDIANTES_TTL = 25 * 1000; // 25 segundos para navegación ultra-rápida entre pestañas admin
+
+export function invalidateEstudiantesCache() {
+  estudiantesCache = null;
+}
 
 function normKey(s?: string | null): string {
   if (!s) return '';
@@ -69,6 +77,7 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
   let nro_operacion: string | undefined = pag.nro_operacion || undefined;
   let comprobante: string | undefined = pag.comprobante || undefined;
   let cuotas_recibos: Record<number, { nro_recibo?: string; nro_operacion?: string; fecha?: string }> = {};
+  let fechas_vencimiento: string[] | null = null;
 
   if (typeof pag.metodo === 'string' && pag.metodo.startsWith('CREDITO_')) {
     try {
@@ -76,6 +85,12 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
       const parsed = JSON.parse(jsonStr);
       num_credito = parsed.num_credito || num_credito;
       if (parsed.nro_pagare) nro_pagare = parsed.nro_pagare;
+      if (parsed.cuotas_recibos && typeof parsed.cuotas_recibos === 'object') {
+        cuotas_recibos = { ...parsed.cuotas_recibos };
+      }
+      if (Array.isArray(parsed.fechas_vencimiento)) {
+        fechas_vencimiento = parsed.fechas_vencimiento;
+      }
       if (parsed.ultimo_pago?.nro_recibo) nro_recibo = parsed.ultimo_pago.nro_recibo;
       if (parsed.ultimo_pago?.nro_operacion) nro_operacion = parsed.ultimo_pago.nro_operacion;
       if (parsed.ultimo_pago?.comprobante) comprobante = parsed.ultimo_pago.comprobante;
@@ -104,9 +119,47 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
       cuotas = auditEntry.detalles.cuotas || cuotas;
       if (auditEntry.detalles.nro_pagare) nro_pagare = auditEntry.detalles.nro_pagare;
       if (Array.isArray(auditEntry.detalles.plan_cuotas)) plan_cuotas = auditEntry.detalles.plan_cuotas;
+      if (Array.isArray(auditEntry.detalles.fechas_vencimiento)) fechas_vencimiento = auditEntry.detalles.fechas_vencimiento;
+      if (auditEntry.detalles.cuotas_recibos && typeof auditEntry.detalles.cuotas_recibos === 'object') {
+        cuotas_recibos = { ...auditEntry.detalles.cuotas_recibos };
+      }
       if (auditEntry.detalles.total_pagado !== undefined) total_pagado = Number(auditEntry.detalles.total_pagado);
       if (auditEntry.detalles.total_deuda !== undefined) explicitDeuda = Number(auditEntry.detalles.total_deuda);
     }
+  }
+
+  // Reconciliación forense desde audit_logs para cuotas pagadas que no tengan recibo registrado en el JSON
+  const studentAudits = (auditLogs || [])
+    .filter((a: any) => (a.detalles?.pago_id === pag.id || a.detalles?.dni_ce === pag.dni_ce) && a.accion === 'CUOTA_VALIDADA_MANUAL')
+    .sort((a: any, b: any) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime());
+
+  cuotas.forEach((val, idx) => {
+    if (val !== 'no corresponde' && Number(val) > 0) {
+      if (!cuotas_recibos[idx] || !cuotas_recibos[idx].nro_recibo) {
+        // Buscar en auditoría si hubo un pago explícito para este cuota_index o en orden de eventos
+        const auditMatch = studentAudits.find((a: any) => a.detalles?.cuota_index === idx) || studentAudits[idx];
+        if (auditMatch?.detalles?.nro_recibo) {
+          cuotas_recibos[idx] = {
+            nro_recibo: auditMatch.detalles.nro_recibo,
+            nro_operacion: auditMatch.detalles.nro_operacion || auditMatch.detalles.nro_recibo,
+            fecha: auditMatch.created_at
+          };
+        } else if (idx === 0 && pag.nro_recibo && !Object.values(cuotas_recibos).some(r => r.nro_recibo === pag.nro_recibo)) {
+          // Si es la cuota 0 y el recibo general no está asignado a otra cuota
+          cuotas_recibos[idx] = {
+            nro_recibo: pag.nro_recibo,
+            nro_operacion: pag.nro_operacion || pag.nro_recibo,
+            fecha: pag.created_at
+          };
+        }
+      }
+    }
+  });
+
+  // Asegurar fechas de vencimiento dinámicas por defecto
+  const cuotasActivasTotal = cuotas.filter(c => c !== 'no corresponde').length;
+  if (!fechas_vencimiento || fechas_vencimiento.length === 0) {
+    fechas_vencimiento = calcularFechasVencimientoPorDefecto(pag.created_at, Math.max(1, cuotasActivasTotal));
   }
 
   if (Array.isArray(cuotas)) {
@@ -140,6 +193,7 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
     cuotas,
     plan_cuotas,
     cuotas_recibos,
+    fechas_vencimiento,
     'cuota 01': cuotas[0],
     'cuota 02': cuotas[1],
     'cuota 03': cuotas[2],
@@ -159,8 +213,20 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
   };
 }
 
-export async function GET() {
+export async function GET(request?: Request) {
   try {
+    const url = request ? new URL(request.url) : null;
+    const forceFresh = url?.searchParams.get('fresh') === 'true';
+
+    if (!forceFresh && estudiantesCache && Date.now() - estudiantesCache.timestamp < ESTUDIANTES_TTL) {
+      return NextResponse.json(estudiantesCache.data, {
+        headers: {
+          'Cache-Control': 'private, max-age=15, stale-while-revalidate=30',
+          'X-Cache': 'HIT'
+        }
+      });
+    }
+
     const admin = createAdminClient();
     
     // Consultar perfiles activos (estudiantes o cuentas administrativas con acceso dual)
@@ -257,6 +323,7 @@ export async function GET() {
           cuotas: cuotasDefault,
           plan_cuotas: null,
           cuotas_recibos: {},
+          fechas_vencimiento: calcularFechasVencimientoPorDefecto(new Date(), esContado ? 1 : 3),
           'cuota 01': cuotasDefault[0],
           'cuota 02': cuotasDefault[1],
           'cuota 03': cuotasDefault[2],
@@ -473,7 +540,15 @@ export async function GET() {
       };
     });
 
-    return NextResponse.json({ estudiantes, siguiente_recibo: obtenerSiguienteCorrelativo(pagos || [], auditLogs || []) });
+    const payload = { estudiantes, siguiente_recibo: obtenerSiguienteCorrelativo(pagos || [], auditLogs || []) };
+    estudiantesCache = { data: payload, timestamp: Date.now() };
+
+    return NextResponse.json(payload, {
+      headers: {
+        'Cache-Control': 'private, max-age=15, stale-while-revalidate=30',
+        'X-Cache': 'MISS'
+      }
+    });
   } catch (err: any) {
     return NextResponse.json({ error: err.message || 'Error al obtener estudiantes' }, { status: 500 });
   }
@@ -481,6 +556,7 @@ export async function GET() {
 
 export async function PATCH(request: Request) {
   try {
+    invalidateEstudiantesCache();
     const body = await request.json();
     const { studentId, dni_ce, action, diplomados, cursos } = body;
 
@@ -1095,6 +1171,7 @@ export async function PATCH(request: Request) {
 
 export async function POST(request: Request) {
   try {
+    invalidateEstudiantesCache();
     const body = await request.json();
     const { 
       dni_ce, 
@@ -1262,7 +1339,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: `Error creando perfil: ${profileErr.message}` }, { status: 500 });
     }
 
-    // 5. Crear cronograma inicial en public.pagos
+    // 5. Crear cronograma inicial en public.pagos con correlativo único y fechas de vencimiento reales
     const cuotasArray = Array(6).fill('no corresponde');
     for (let i = 0; i < numCuotasTotales && i < 6; i++) {
       cuotasArray[i] = i === 0 ? String(montoCuotaNum) : '0';
@@ -1271,11 +1348,37 @@ export async function POST(request: Request) {
     const initialTotalPagado = montoCuotaNum;
     const initialDeuda = esContado ? 0 : Math.max(0, montoTotalNum - initialTotalPagado);
 
+    // Obtener siguiente correlativo único para la cuota 1
+    const [{ data: todosPagosExistentes }, { data: todosAuditsExistentes }] = await Promise.all([
+      admin.from("pagos").select("*"),
+      admin.from("audit_logs").select("*")
+    ]);
+    const initialRecibo = obtenerSiguienteCorrelativo(todosPagosExistentes || [], todosAuditsExistentes || []);
+    const fechasVencimientoIniciales = calcularFechasVencimientoPorDefecto(new Date(), numCuotasTotales);
+
+    const initialCuotasRecibos = {
+      0: {
+        nro_recibo: initialRecibo,
+        nro_operacion: initialRecibo,
+        fecha: new Date().toISOString()
+      }
+    };
+
     const initialMetodo = `CREDITO_1|${JSON.stringify({
       num_credito: 1,
       cuotas: cuotasArray,
+      cuotas_recibos: initialCuotasRecibos,
+      fechas_vencimiento: fechasVencimientoIniciales,
       total_pagado: initialTotalPagado,
-      total_deuda: initialDeuda
+      total_deuda: initialDeuda,
+      ultimo_pago: {
+        monto: montoCuotaNum,
+        metodo: 'Matrícula Inicial',
+        nro_recibo: initialRecibo,
+        nro_operacion: initialRecibo,
+        comprobante: initialRecibo,
+        fecha: new Date().toISOString()
+      }
     })}`;
 
     try {
@@ -1284,6 +1387,9 @@ export async function POST(request: Request) {
         dni_ce: normalizedDni,
         monto: montoTotalNum,
         metodo: initialMetodo,
+        nro_recibo: initialRecibo,
+        nro_operacion: initialRecibo,
+        comprobante: initialRecibo,
         estado: initialDeuda === 0 ? 'Completado' : 'Pendiente'
       });
     } catch (pagErr) {

@@ -2,10 +2,12 @@
 
 import React, { createContext, useContext, useEffect, useState, useCallback } from 'react';
 import { createClient } from '@/lib/supabase/client';
+import { fetchWithClientCache, invalidateClientCache } from '@/lib/utils/clientCache';
 
 export function limpiarSesionLocal() {
   if (typeof window === 'undefined') return;
   try {
+    invalidateClientCache();
     localStorage.removeItem('edumin_foto_perfil');
     localStorage.removeItem('edumin_nombres');
     localStorage.removeItem('edumin_apellidos');
@@ -64,44 +66,46 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
     setDebeCambiarPassword(false);
   }, []);
 
-  const recargarPerfil = useCallback(async () => {
+  const recargarPerfil = useCallback(async (forceRefresh = false) => {
     try {
-      setCargando(true);
-      const res = await fetch('/api/dashboard/me');
-      if (res.ok) {
-        const data = await res.json();
-        const profile = data.profile;
-        if (profile) {
-          const nom = profile.nombres || '';
-          const ape = profile.apellidos || '';
-          const userDni = profile.dni_ce || profile.dni || '';
-          const paq = profile.paquete_adquirido || 'PROGRAMA FULL';
-          const rolesObj = profile.roles && typeof profile.roles === 'object' ? profile.roles : null;
-          const rol = rolesObj?.administrativo || rolesObj?.academico || profile.role || 'ESTUDIANTE';
-          const foto = profile.foto_perfil || null;
+      const data = await fetchWithClientCache('/api/dashboard/me', { forceRefresh });
+      const profile = data?.profile;
+      if (profile) {
+        const nom = profile.nombres || '';
+        const ape = profile.apellidos || '';
+        const userDni = profile.dni_ce || profile.dni || '';
+        const paq = profile.paquete_adquirido || 'PROGRAMA FULL';
+        const rolesObj = profile.roles && typeof profile.roles === 'object' ? profile.roles : null;
+        const rol = rolesObj?.administrativo || rolesObj?.academico || profile.role || 'ESTUDIANTE';
+        const foto = profile.foto_perfil || profile.avatar_url || null;
 
-          setNombres(nom);
-          setApellidos(ape);
-          setDni(userDni);
-          setPaqueteContratado(paq);
-          setRole(rol);
-          setDebeCambiarPassword(Boolean(profile.debe_cambiar_password));
-
-          // Siempre sincronizar fotoPerfil: si el nuevo usuario no tiene foto, debe quedar en null y limpiar localStorage
-          setFotoPerfil(foto);
-          if (foto) {
-            localStorage.setItem('edumin_foto_perfil', foto);
-          } else {
-            localStorage.removeItem('edumin_foto_perfil');
-          }
-
-          if (profile.id) localStorage.setItem('edumin_user_id', profile.id);
-          if (nom) localStorage.setItem('edumin_nombres', nom);
-          if (ape) localStorage.setItem('edumin_apellidos', ape);
-          if (userDni) localStorage.setItem('edumin_dni', userDni);
-          if (paq) localStorage.setItem('edumin_paquete', paq);
-          if (rol) localStorage.setItem('edumin_role', rol);
+        // Si el DNI en sesión es distinto al guardado previamente, limpiar datos obsoletos de foto
+        const dniPrevio = localStorage.getItem('edumin_dni');
+        if (dniPrevio && userDni && dniPrevio !== userDni) {
+          localStorage.removeItem('edumin_foto_perfil');
         }
+
+        setNombres(nom);
+        setApellidos(ape);
+        setDni(userDni);
+        setPaqueteContratado(paq);
+        setRole(rol);
+        setDebeCambiarPassword(Boolean(profile.debe_cambiar_password));
+
+        // Siempre sincronizar fotoPerfil: si el nuevo usuario no tiene foto, debe quedar en null y limpiar localStorage
+        setFotoPerfil(foto);
+        if (foto) {
+          localStorage.setItem('edumin_foto_perfil', foto);
+        } else {
+          localStorage.removeItem('edumin_foto_perfil');
+        }
+
+        if (profile.id) localStorage.setItem('edumin_user_id', profile.id);
+        if (nom) localStorage.setItem('edumin_nombres', nom);
+        if (ape) localStorage.setItem('edumin_apellidos', ape);
+        if (userDni) localStorage.setItem('edumin_dni', userDni);
+        if (paq) localStorage.setItem('edumin_paquete', paq);
+        if (rol) localStorage.setItem('edumin_role', rol);
       } else {
         // Si no hay sesión válida
         setFotoPerfil(null);
@@ -139,8 +143,8 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
       // ignore
     }
 
-    // 2. Fetch directo a Supabase para sincronizar siempre con el perfil real logueado
-    recargarPerfil();
+    // 2. Fetch directo y fresco a Supabase para sincronizar siempre con el perfil real logueado sin caché obsoleta
+    recargarPerfil(true);
   }, [recargarPerfil]);
 
   // 3. Listener en tiempo real de cambios de autenticación (logout, login)
@@ -157,7 +161,8 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
           setRole('ESTUDIANTE');
           limpiarSesionLocal();
         } else if (event === 'SIGNED_IN') {
-          recargarPerfil();
+          limpiarSesionLocal();
+          recargarPerfil(true);
         }
       });
 

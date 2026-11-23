@@ -21,14 +21,16 @@ export default function ReciboModal({
       <div onClick={(e) => e.stopPropagation()} className="bg-white dark:bg-slate-900 w-full max-w-lg rounded-3xl shadow-2xl p-8 space-y-6 border border-slate-200 dark:border-slate-800 animate-in zoom-in-95 duration-200">
         <div className="flex justify-between items-start border-b border-slate-200 dark:border-slate-800 pb-4">
           <div>
-            <h2 className="text-xl font-black text-slate-900 dark:text-white tracking-tight">EDUMIN LMS CORE</h2>
-            <p className="text-[10px] text-slate-500 dark:text-slate-400">Educación Ejecutiva en Minería y Seguridad</p>
+            <h2 className="text-xl font-black text-slate-900 dark:text-white tracking-tight">EDUMIN</h2>
+            <p className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Comprobante oficial de pago</p>
           </div>
           <div className="text-right">
             <span className="bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 tabular-nums font-black text-xs px-2.5 py-1 rounded-md border border-indigo-200 dark:border-indigo-800 block">
-              RECIBO INTERNO - {reciboImprimir.id ? String(reciboImprimir.id).substring(0, 6) : '1187'}
+              RECIBO OFICIAL - {reciboImprimir.nro_recibo || reciboImprimir.comprobante || reciboImprimir.id || 'REC-2026-00001'}
             </span>
-            <span className="text-[10px] tabular-nums text-slate-400 block mt-1">{new Date().toLocaleDateString()}</span>
+            <span className="text-[10px] tabular-nums text-slate-400 block mt-1">
+              {reciboImprimir.fecha_pago || reciboImprimir.fecha || new Date().toLocaleDateString('es-PE')}
+            </span>
           </div>
         </div>
 
@@ -43,22 +45,30 @@ export default function ReciboModal({
           </div>
           <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
             <span className="text-slate-500 dark:text-slate-400 font-semibold">Programa:</span>
-            <strong className="text-indigo-600 dark:text-indigo-400">{alumnoSeleccionado?.diplomado_actual}</strong>
+            <strong className="text-indigo-600 dark:text-indigo-400">{alumnoSeleccionado?.diplomado_actual || alumnoSeleccionado?.diplomado_1 || 'Programa académico'}</strong>
           </div>
           <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
-            <span className="text-slate-500 dark:text-slate-400 font-semibold">N.º Recibo Oficial:</span>
-            <strong className="tabular-nums text-indigo-600 dark:text-indigo-400 font-bold">{reciboImprimir.nro_recibo || reciboImprimir.id || 'REC-2026-0001'}</strong>
+            <span className="text-slate-500 dark:text-slate-400 font-semibold">Concepto:</span>
+            <strong className="text-slate-900 dark:text-white">{reciboImprimir.concepto || 'Cuota del programa'}</strong>
           </div>
           <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
-            <span className="text-slate-500 dark:text-slate-400 font-semibold">Método de Pago:</span>
-            <strong className="text-slate-800 dark:text-slate-200">{reciboImprimir.metodo || 'Yape / Plin'}</strong>
+            <span className="text-slate-500 dark:text-slate-400 font-semibold">N.º de recibo oficial:</span>
+            <strong className="tabular-nums text-indigo-600 dark:text-indigo-400 font-bold">{reciboImprimir.nro_recibo || reciboImprimir.comprobante || reciboImprimir.id || 'REC-2026-00001'}</strong>
           </div>
           <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
-            <span className="text-slate-500 dark:text-slate-400 font-semibold">N.º Operación Bancaria:</span>
+            <span className="text-slate-500 dark:text-slate-400 font-semibold">Método de pago:</span>
+            <strong className="text-slate-800 dark:text-slate-200">{reciboImprimir.metodo || reciboImprimir.medio || 'Yape / Plin'}</strong>
+          </div>
+          <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+            <span className="text-slate-500 dark:text-slate-400 font-semibold">N.º de operación bancaria:</span>
             <strong className="tabular-nums text-slate-900 dark:text-white">{reciboImprimir.nro_operacion || 'No aplica (Efectivo)'}</strong>
           </div>
+          <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+            <span className="text-slate-500 dark:text-slate-400 font-semibold">Fecha de pago:</span>
+            <strong className="tabular-nums text-slate-900 dark:text-white">{reciboImprimir.fecha_pago || reciboImprimir.fecha || '-'}</strong>
+          </div>
           <div className="flex justify-between bg-emerald-50 dark:bg-emerald-950/40 p-3 rounded-xl border border-emerald-200 dark:border-emerald-800 text-sm">
-            <span className="text-emerald-900 dark:text-emerald-300 font-bold">Monto Total Pagado:</span>
+            <span className="text-emerald-900 dark:text-emerald-300 font-bold">Monto total pagado:</span>
             <strong className="text-emerald-700 dark:text-emerald-400 font-black tabular-nums">S/ {Number(reciboImprimir.monto || 150).toFixed(2)}</strong>
           </div>
         </div>

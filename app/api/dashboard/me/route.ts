@@ -11,6 +11,61 @@ import {
 } from '@/lib/utils/profileParser';
 import { getDiplomadoByTitleOrSlug } from '@/lib/data/diplomadosData';
 import { obtenerTallerParaDiplomado } from '@/lib/utils/tallerAsignado';
+import { calcularFechasVencimientoPorDefecto } from '@/lib/utils/fechasCuotas';
+
+async function resolverFotoPerfil(admin: any, profile: any): Promise<string | null> {
+  if (!profile) return null;
+  let foto: string | null = profile.foto_perfil || profile.avatar_url || null;
+  if (foto) return foto;
+
+  const profileId = profile.id;
+  if (!profileId) return null;
+
+  try {
+    // 1. Buscar si existe avatar en la carpeta del usuario en Supabase Storage (avatars/<id>/*)
+    const { data: avatarFiles } = await admin.storage
+      .from('avatars')
+      .list(profileId)
+      .catch(() => ({ data: [] }));
+
+    if (avatarFiles && avatarFiles.length > 0) {
+      const avatarFile = avatarFiles.find((f: any) => f.name && f.name.includes('avatar')) || avatarFiles[0];
+      const { data: urlData } = admin.storage
+        .from('avatars')
+        .getPublicUrl(`${profileId}/${avatarFile.name}`);
+      if (urlData?.publicUrl) {
+        foto = `${urlData.publicUrl}?v=${Date.now()}`;
+      }
+    } else {
+      // 2. Buscar en la raíz del bucket si coincide con el profileId
+      const { data: rootFiles } = await admin.storage
+        .from('avatars')
+        .list('', { search: profileId })
+        .catch(() => ({ data: [] }));
+      if (rootFiles && rootFiles.length > 0) {
+        const { data: urlData } = admin.storage
+          .from('avatars')
+          .getPublicUrl(rootFiles[0].name);
+        if (urlData?.publicUrl) {
+          foto = `${urlData.publicUrl}?v=${Date.now()}`;
+        }
+      }
+    }
+
+    // Si se recuperó desde Storage, sincronizar en el perfil para futuras consultas rápidas
+    if (foto) {
+      await admin
+        .from('profiles')
+        .update({ foto_perfil: foto, avatar_url: foto })
+        .eq('id', profileId)
+        .catch(() => {});
+    }
+  } catch (err) {
+    console.warn('Advertencia resolviendo foto de perfil en Storage:', err);
+  }
+
+  return foto;
+}
 
 function parseCreditoRow(pag: any) {
   const nro_recibo = pag.nro_recibo || undefined;
@@ -52,10 +107,12 @@ function parseCreditoRow(pag: any) {
   let total_pagado = Number(pag.total_pagado || pag['total pagado'] || 0);
   let explicitDeuda: number | undefined = undefined;
   let cuotas_recibos: Record<number, { nro_recibo?: string; nro_operacion?: string; fecha?: string }> = {};
+  let fechas_vencimiento: string[] | null = null;
   let rowNroRecibo = nro_recibo;
   let rowNroOperacion = nro_operacion;
   let rowComprobante = comprobante;
   let nro_pagare = pag.nro_pagare || undefined;
+  let ultimoMetodo = 'Yape / Plin';
 
   if (typeof pag.metodo === 'string' && pag.metodo.startsWith('CREDITO_')) {
     try {
@@ -64,7 +121,15 @@ function parseCreditoRow(pag: any) {
       num_credito = parsed.num_credito || num_credito;
       if (parsed.nro_pagare) nro_pagare = parsed.nro_pagare;
       if (parsed.cuotas_recibos && typeof parsed.cuotas_recibos === 'object') {
-        cuotas_recibos = parsed.cuotas_recibos;
+        cuotas_recibos = { ...parsed.cuotas_recibos };
+      }
+      if (Array.isArray(parsed.fechas_vencimiento)) {
+        fechas_vencimiento = parsed.fechas_vencimiento;
+      }
+      if (parsed.ultimo_pago?.metodo && parsed.ultimo_pago.metodo !== 'Por Pagar') {
+        ultimoMetodo = parsed.ultimo_pago.metodo;
+      } else if (parsed.metodo && parsed.metodo !== 'Por Pagar') {
+        ultimoMetodo = parsed.metodo;
       }
       if (parsed.ultimo_pago?.nro_recibo) rowNroRecibo = parsed.ultimo_pago.nro_recibo;
       if (parsed.ultimo_pago?.nro_operacion) rowNroOperacion = parsed.ultimo_pago.nro_operacion;
@@ -83,6 +148,15 @@ function parseCreditoRow(pag: any) {
     }
   }
 
+  const cuotasActivasTotal = cuotas.filter(c => c !== 'no corresponde').length;
+  if (!fechas_vencimiento || fechas_vencimiento.length === 0) {
+    fechas_vencimiento = calcularFechasVencimientoPorDefecto(pag.created_at, Math.max(1, cuotasActivasTotal));
+  }
+
+  const metodoResolved = pag.metodo && !pag.metodo.startsWith('CREDITO_') && pag.metodo !== 'Por Pagar'
+    ? pag.metodo
+    : (ultimoMetodo || 'Yape / Plin');
+
   if (Array.isArray(cuotas)) {
     const sumCuotasPagadas = cuotas.reduce((sum: number, val: string) => {
       return val !== 'no corresponde' ? sum + (Number(val) || 0) : sum;
@@ -90,6 +164,21 @@ function parseCreditoRow(pag: any) {
     if (sumCuotasPagadas > 0 || total_pagado === 0) {
       total_pagado = sumCuotasPagadas;
     }
+
+    // Asegurar fecha y método para cuotas pagadas
+    cuotas.forEach((val, idx) => {
+      if (val !== 'no corresponde' && Number(val) > 0) {
+        if (!cuotas_recibos[idx]) {
+          cuotas_recibos[idx] = {
+            nro_recibo: rowNroRecibo || `REC-2026-${String(idx + 1).padStart(5, '0')}`,
+            nro_operacion: rowNroOperacion || 'N/A',
+            fecha: pag.created_at
+          };
+        } else if (!cuotas_recibos[idx].fecha) {
+          cuotas_recibos[idx].fecha = pag.created_at;
+        }
+      }
+    });
   }
 
   let total_deuda = explicitDeuda !== undefined
@@ -108,8 +197,9 @@ function parseCreditoRow(pag: any) {
     nro_operacion: rowNroOperacion,
     comprobante: rowComprobante,
     cuotas_recibos,
+    fechas_vencimiento,
     monto: montoTotal,
-    metodo: pag.metodo && !pag.metodo.startsWith('CREDITO_') ? pag.metodo : 'Por Pagar',
+    metodo: metodoResolved,
     estado: total_deuda === 0 ? 'Completado' : (pag.estado || 'Pendiente'),
     created_at: pag.created_at,
     cuotas,
@@ -118,11 +208,22 @@ function parseCreditoRow(pag: any) {
   };
 }
 
+let cachedDiplomadosYCursos: { rows: any[]; timestamp: number } | null = null;
+const CAT_TABLE_TTL = 3 * 60 * 1000;
+
+async function getCachedDiplomadosYCursos(admin: any) {
+  if (cachedDiplomadosYCursos && Date.now() - cachedDiplomadosYCursos.timestamp < CAT_TABLE_TTL) {
+    return cachedDiplomadosYCursos.rows;
+  }
+  const { data } = await admin.from('diplomados_y_cursos').select('id, codigo, titulo, tipo');
+  const rows = Array.isArray(data) ? data : [];
+  cachedDiplomadosYCursos = { rows, timestamp: Date.now() };
+  return rows;
+}
+
 async function enriquecerCursosConTipoCatalogo(admin: any, cursos: any[]) {
   if (!Array.isArray(cursos) || cursos.length === 0) return cursos;
-  const { data: catRows } = await admin
-    .from('diplomados_y_cursos')
-    .select('id, codigo, titulo, tipo');
+  const catRows = await getCachedDiplomadosYCursos(admin);
 
   if (!Array.isArray(catRows) || catRows.length === 0) return cursos;
 
@@ -161,15 +262,13 @@ async function enriquecerConNotasModulos(
   if (!dni) return;
 
   try {
-    const [{ data: notasRows }, { data: catRows }] = await Promise.all([
+    const [{ data: notasRows }, catRows] = await Promise.all([
       admin
         .from('notas_modulos')
         .select('diplomado_numero, diplomado_nombre, tipo_programa, modulo_numero, modulo_nombre, nota, estado, updated_at')
         .eq('dni_ce', dni)
         .order('updated_at', { ascending: false }),
-      admin
-        .from('diplomados_y_cursos')
-        .select('id, codigo, titulo')
+      getCachedDiplomadosYCursos(admin)
     ]);
 
     if (!Array.isArray(notasRows) || notasRows.length === 0) return;
@@ -229,15 +328,45 @@ async function enriquecerConNotasModulos(
     });
 
     // Enriquecer cursos/talleres desde notas_modulos
+    const extraerCodigoCurso = (str?: string) => {
+      const m = String(str || '').match(/(?:^|[^a-z0-9])(cur|tal)[-_]?0*(\d+)/i);
+      return m ? `${m[1].toLowerCase()}${m[2].padStart(2, '0')}` : null;
+    };
+
     cursos.forEach((c: any) => {
-      const cat = catPorClave.get(norm(c.codigo)) || catPorClave.get(norm(c.id)) || catPorClave.get(norm(c.titulo));
+      const cCodSimple = extraerCodigoCurso(c.codigo) || extraerCodigoCurso(c.id);
+      const cat = catPorClave.get(norm(c.codigo)) || 
+                  catPorClave.get(norm(c.id)) || 
+                  catPorClave.get(norm(c.titulo)) ||
+                  (cCodSimple ? catPorClave.get(cCodSimple) : null);
+
       if (!c.codigo && cat?.codigo) c.codigo = cat.codigo;
-      const keys = [norm(c.codigo), norm(c.id), norm(cat?.codigo), norm(c.titulo)].filter(Boolean);
+      const catCodSimple = extraerCodigoCurso(cat?.codigo) || extraerCodigoCurso(cat?.id);
+
+      const keys = [
+        cCodSimple,
+        catCodSimple,
+        norm(c.codigo),
+        norm(c.id),
+        norm(cat?.codigo),
+        norm(cat?.id),
+        norm(c.titulo),
+        norm(cat?.titulo)
+      ].filter(Boolean);
+
       const match = notasRows.find((n: any) => {
-        const nNum = norm(n.diplomado_numero);
-        const nTit = norm(n.diplomado_nombre);
-        return keys.includes(nNum) || keys.includes(nTit);
+        const nNumNorm = norm(n.diplomado_numero);
+        const nNumSimple = extraerCodigoCurso(n.diplomado_numero);
+        const nTitNorm = norm(n.diplomado_nombre);
+        const nModNorm = norm(n.modulo_nombre);
+
+        if (nNumSimple && (nNumSimple === cCodSimple || nNumSimple === catCodSimple)) return true;
+        if (nNumNorm && keys.includes(nNumNorm)) return true;
+        if (nTitNorm && nTitNorm !== 'diplomado' && nTitNorm !== 'curso' && nTitNorm !== 'taller' && keys.includes(nTitNorm)) return true;
+        if (nModNorm && (nModNorm === norm(c.titulo) || nModNorm === norm(c.codigo))) return true;
+        return false;
       });
+
       if (match) {
         c.nota = Number(match.nota ?? c.nota ?? 0);
         c.rendido = true;
@@ -331,10 +460,14 @@ export async function GET() {
           creditosExtraCursos: cuposDemo.cursos.adicionales,
         });
 
+        const fotoPerfilDemo = await resolverFotoPerfil(admin, pByDni);
+
         return NextResponse.json({
           user: { id: pByDni.id, email: pByDni.email },
           profile: {
             ...pByDni,
+            foto_perfil: fotoPerfilDemo,
+            avatar_url: fotoPerfilDemo,
             role: getPrimaryRoleFromProfile(pByDni),
             cuotas_pagadas: paymentStateDemo.cuotasPagadas,
             cuotas_totales: paymentStateDemo.cuotasTotales,
@@ -489,10 +622,14 @@ export async function GET() {
       creditosExtraCursos: cupos.cursos.adicionales
     });
 
+    const fotoPerfilAutenticado = await resolverFotoPerfil(admin, profile);
+
     return NextResponse.json({
       user,
       profile: {
         ...profile,
+        foto_perfil: fotoPerfilAutenticado,
+        avatar_url: fotoPerfilAutenticado,
         role: getPrimaryRoleFromProfile(profile),
         cuotas_pagadas: paymentState.cuotasPagadas,
         cuotas_totales: paymentState.cuotasTotales,
@@ -507,6 +644,10 @@ export async function GET() {
       releasedCredits: eduminCredits.diplomados.liberados,
       availableCredits: eduminCredits.diplomados.disponibles,
       eduminCredits
+    }, {
+      headers: {
+        'Cache-Control': 'private, max-age=10, stale-while-revalidate=30'
+      }
     });
   } catch (err: any) {
     console.error('Error en /api/dashboard/me:', err);

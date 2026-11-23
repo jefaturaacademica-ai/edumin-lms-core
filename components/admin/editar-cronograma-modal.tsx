@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { X, CheckCircle2, Plus, Trash2 } from 'lucide-react';
+import { X, CheckCircle2, Plus, Trash2, Calendar } from 'lucide-react';
+import { formatearFechaISO, sumarMeses } from '@/lib/utils/fechasCuotas';
 
 interface EditarCronogramaModalProps {
   isOpen: boolean;
@@ -13,6 +14,8 @@ interface EditarCronogramaModalProps {
   setEditNroPagare?: (val: string) => void;
   editCuotas6: { val: string }[];
   setEditCuotas6: (val: { val: string }[]) => void;
+  editFechas6?: { val: string }[];
+  setEditFechas6?: (val: { val: string }[]) => void;
   onClose: () => void;
   onSave: (e: React.FormEvent) => Promise<void>;
 }
@@ -27,6 +30,8 @@ export default function EditarCronogramaModal({
   setEditNroPagare,
   editCuotas6,
   setEditCuotas6,
+  editFechas6 = Array(6).fill({ val: '' }),
+  setEditFechas6,
   onClose,
   onSave
 }: EditarCronogramaModalProps) {
@@ -47,6 +52,15 @@ export default function EditarCronogramaModal({
     const copy = [...editCuotas6];
     copy[siguienteIdx] = { val: '0' };
     setEditCuotas6(copy);
+
+    if (setEditFechas6) {
+      const copyFechas = [...editFechas6];
+      const fechaAnterior = copyFechas[siguienteIdx - 1]?.val;
+      const base = fechaAnterior ? new Date(fechaAnterior) : new Date();
+      const nuevaFecha = sumarMeses(base, 1);
+      copyFechas[siguienteIdx] = { val: formatearFechaISO(nuevaFecha) };
+      setEditFechas6(copyFechas);
+    }
   };
 
   const handleEliminarCuota = (targetIdx: number) => {
@@ -54,6 +68,20 @@ export default function EditarCronogramaModal({
     const copy = [...editCuotas6];
     copy[targetIdx] = { val: 'no corresponde' };
     setEditCuotas6(copy);
+  };
+
+  const handleAutocalcularFechas = () => {
+    if (!setEditFechas6) return;
+    const fechaInicialStr = editFechas6[0]?.val || creditoActual?.created_at || new Date().toISOString();
+    const base = new Date(fechaInicialStr);
+    const fechaValida = isNaN(base.getTime()) ? new Date() : base;
+
+    const copyFechas = [...editFechas6];
+    activasFinal.forEach((item, indexEnActivas) => {
+      const f = sumarMeses(fechaValida, indexEnActivas);
+      copyFechas[item.idx] = { val: formatearFechaISO(f) };
+    });
+    setEditFechas6(copyFechas);
   };
 
   const sumaCalculada = editCuotas6.reduce((acc, item) => {
@@ -69,13 +97,13 @@ export default function EditarCronogramaModal({
     >
       <div 
         onClick={(e) => e.stopPropagation()} 
-        className="bg-white dark:bg-slate-900 w-full max-w-lg rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-800 animate-in zoom-in-95 duration-200 max-h-[92vh] flex flex-col my-auto overflow-hidden"
+        className="bg-white dark:bg-slate-900 w-full max-w-xl rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-800 animate-in zoom-in-95 duration-200 max-h-[92vh] flex flex-col my-auto overflow-hidden"
       >
         {/* Header fijo */}
         <div className="flex justify-between items-start border-b border-slate-100 dark:border-slate-800 p-4 shrink-0">
           <div>
             <span className="bg-indigo-100 dark:bg-indigo-950/60 text-indigo-800 dark:text-indigo-300 font-black text-[10px] px-2.5 py-0.5 rounded-full uppercase border border-indigo-200 dark:border-indigo-800/50">
-              Configuración de Cuotas
+              Configuración de Cuotas y Vencimientos
             </span>
             <h3 className="text-base sm:text-lg font-black text-slate-900 dark:text-white mt-1">
               Editar Cronograma & Cuotas (Crédito #{creditoActual?.num_credito || (selectedCreditoIdx + 1)})
@@ -137,45 +165,55 @@ export default function EditarCronogramaModal({
             </div>
 
             <div className="space-y-2 border-t border-slate-200 dark:border-slate-800 pt-2.5">
-              <div className="flex justify-between items-center">
+              <div className="flex flex-wrap justify-between items-center gap-2">
                 <div>
                   <label className="block text-[11px] font-bold text-indigo-900 dark:text-indigo-300 uppercase">
-                    Plan de Cuotas ({activasFinal.length} cuota{activasFinal.length === 1 ? '' : 's'})
+                    Plan de Cuotas & Vencimientos ({activasFinal.length} cuota{activasFinal.length === 1 ? '' : 's'})
                   </label>
                   <p className="text-[10px] text-slate-500 dark:text-slate-400">
-                    Ajusta los montos o añade cuotas al cronograma:
+                    Ajusta los montos y fechas de vencimiento de cada cuota:
                   </p>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => {
-                    if (activasFinal.length > 0) {
-                      const cuotaBase = Math.floor(editMontoTotal / activasFinal.length);
-                      const resto = editMontoTotal - (cuotaBase * activasFinal.length);
-                      const copy = [...editCuotas6];
-                      activasFinal.forEach((x, idx) => {
-                        const valFinal = idx === activasFinal.length - 1 ? cuotaBase + resto : cuotaBase;
-                        copy[x.idx] = { val: String(valFinal) };
-                      });
-                      setEditCuotas6(copy);
-                    }
-                  }}
-                  className="text-[10px] font-bold text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300 underline cursor-pointer shrink-0"
-                >
-                  Distribuir equitativo
-                </button>
+                <div className="flex items-center gap-3">
+                  <button
+                    type="button"
+                    onClick={handleAutocalcularFechas}
+                    className="text-[10px] font-bold text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300 underline cursor-pointer shrink-0 flex items-center gap-1"
+                  >
+                    <Calendar className="size-3" /> Fechas mensuales
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (activasFinal.length > 0) {
+                        const cuotaBase = Math.floor(editMontoTotal / activasFinal.length);
+                        const resto = editMontoTotal - (cuotaBase * activasFinal.length);
+                        const copy = [...editCuotas6];
+                        activasFinal.forEach((x, idx) => {
+                          const valFinal = idx === activasFinal.length - 1 ? cuotaBase + resto : cuotaBase;
+                          copy[x.idx] = { val: String(valFinal) };
+                        });
+                        setEditCuotas6(copy);
+                      }
+                    }}
+                    className="text-[10px] font-bold text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300 underline cursor-pointer shrink-0"
+                  >
+                    Distribuir montos
+                  </button>
+                </div>
               </div>
 
-              {/* Lista vertical limpia de cuotas estilo timeline */}
+              {/* Lista vertical limpia de cuotas estilo timeline con monto y fecha */}
               <div className="space-y-2 pt-1">
                 {activasFinal.map((item, indexEnActivas) => {
                   const nroFmt = (item.idx + 1).toString().padStart(2, '0');
                   const esUltima = indexEnActivas === activasFinal.length - 1 && activasFinal.length > 1;
+                  const fechaActual = editFechas6?.[item.idx]?.val || '';
 
                   return (
                     <div 
                       key={item.idx} 
-                      className="flex items-center justify-between gap-3 bg-slate-50/80 dark:bg-slate-800/40 hover:bg-slate-100/70 dark:hover:bg-slate-800/70 p-2.5 rounded-xl border border-slate-200/80 dark:border-slate-700/80 transition-colors"
+                      className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 bg-slate-50/80 dark:bg-slate-800/40 hover:bg-slate-100/70 dark:hover:bg-slate-800/70 p-2.5 rounded-xl border border-slate-200/80 dark:border-slate-700/80 transition-colors"
                     >
                       <div className="flex items-center gap-2.5 min-w-0">
                         <span className="w-7 h-7 rounded-lg bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 font-black text-xs flex items-center justify-center shrink-0">
@@ -186,24 +224,31 @@ export default function EditarCronogramaModal({
                             Cuota {nroFmt}
                           </span>
                           <span className="text-[10px] text-slate-400">
-                            {indexEnActivas === 0 ? 'Cuota inicial' : `Vence periodo mensual ${indexEnActivas + 1}`}
+                            {indexEnActivas === 0 ? 'Matrícula / Cuota 01' : `Periodo mes ${indexEnActivas + 1}`}
                           </span>
                         </div>
                       </div>
                       
-                      <div className="flex items-center gap-2 shrink-0">
-                        {esUltima ? (
-                          <button
-                            type="button"
-                            onClick={() => handleEliminarCuota(item.idx)}
-                            className="p-1.5 text-slate-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-950/40 rounded-lg transition cursor-pointer shrink-0"
-                            title={`Eliminar Cuota ${nroFmt}`}
-                          >
-                            <Trash2 className="size-4" />
-                          </button>
-                        ) : (
-                          <div className="w-7 h-7 shrink-0" aria-hidden="true" />
-                        )}
+                      <div className="flex items-center justify-end gap-2 shrink-0">
+                        {/* Selector de Fecha de Vencimiento */}
+                        <div className="flex items-center gap-1">
+                          <label className="text-[10px] font-bold text-slate-400 uppercase hidden sm:inline">
+                            Vence:
+                          </label>
+                          <input
+                            type="date"
+                            value={fechaActual}
+                            onChange={(e) => {
+                              if (!setEditFechas6) return;
+                              const copy = [...editFechas6];
+                              copy[item.idx] = { val: e.target.value };
+                              setEditFechas6(copy);
+                            }}
+                            className="py-1 px-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-semibold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600 outline-none shadow-xs"
+                          />
+                        </div>
+
+                        {/* Input de Monto */}
                         <div className="relative flex items-center">
                           <span className="absolute left-2.5 text-slate-400 dark:text-slate-500 font-bold text-xs pointer-events-none">
                             S/
@@ -219,9 +264,22 @@ export default function EditarCronogramaModal({
                               copy[item.idx] = { val: newVal };
                               setEditCuotas6(copy);
                             }}
-                            className="w-28 pl-7 pr-2.5 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg text-xs tabular-nums font-black text-right text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-600 outline-none shadow-xs"
+                            className="w-24 pl-7 pr-2.5 py-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg text-xs tabular-nums font-black text-right text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-600 outline-none shadow-xs"
                           />
                         </div>
+
+                        {esUltima ? (
+                          <button
+                            type="button"
+                            onClick={() => handleEliminarCuota(item.idx)}
+                            className="p-1.5 text-slate-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-950/40 rounded-lg transition cursor-pointer shrink-0"
+                            title={`Eliminar Cuota ${nroFmt}`}
+                          >
+                            <Trash2 className="size-4" />
+                          </button>
+                        ) : (
+                          <div className="w-7 h-7 shrink-0 hidden sm:block" aria-hidden="true" />
+                        )}
                       </div>
                     </div>
                   );
@@ -241,7 +299,7 @@ export default function EditarCronogramaModal({
             </div>
           </div>
 
-          {/* Footer fijo que nunca se corta ni empuja la ventana */}
+          {/* Footer fijo */}
           <div className="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900/70 shrink-0 space-y-2.5">
             <div className={`p-2.5 rounded-xl border text-xs font-bold space-y-0.5 ${coincide ? 'bg-emerald-50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800' : 'bg-amber-50 dark:bg-amber-950/40 text-amber-900 dark:text-amber-300 border-amber-200 dark:border-amber-800'}`}>
               <div className="flex justify-between items-center text-[11px] sm:text-xs">
@@ -250,7 +308,7 @@ export default function EditarCronogramaModal({
               </div>
               {!coincide && (
                 <p className="text-[10px] text-amber-700 dark:text-amber-400 font-normal">
-                  La suma de las cuotas (S/ {sumaCalculada.toFixed(2)}) debe ser igual al total del crédito (S/ {editMontoTotal.toFixed(2)}) para poder guardar.
+                  La suma de las cuotas (S/ ${sumaCalculada.toFixed(2)}) debe ser igual al total del crédito (S/ ${editMontoTotal.toFixed(2)}) para poder guardar.
                 </p>
               )}
             </div>
