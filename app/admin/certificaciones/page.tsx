@@ -24,6 +24,7 @@ import AvanzaCertificateRenderer, {
   TipoFuenteCertificado,
   FormatoFechaCertificado,
   formatearFechaSegunEstilo,
+  capitalizarPalabras,
   resolverTextoHorasCreditos,
   resolverTextoHoras,
   resolverTextoCreditos
@@ -529,7 +530,7 @@ export default function CertificacionesAdminPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           accion: 'EMITIR_MANUAL',
-          estudiante: nombreManualInput.trim().toUpperCase(),
+          estudiante: capitalizarPalabras(nombreManualInput.trim()),
           dni: dniManualInput.trim(),
           programa: programaManual.trim(),
           modulo: tipoManual === 'MODULAR' ? moduloManual.trim() : null,

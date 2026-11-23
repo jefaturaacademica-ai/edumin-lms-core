@@ -147,11 +147,24 @@ export function normalizarCodigoCertificado(codigo?: string | null): string {
 }
 
 /**
- * Formatea el nombre del alumno en formato oficial (Apellidos, Nombres).
+ * Convierte un texto a Formato Título / Capitalizado (cada primera letra en mayúscula y lo demás en minúscula),
+ * respetando acentos, caracteres especiales (ñ, á, é, í, ó, ú, ü) y signos de puntuación.
+ */
+export function capitalizarPalabras(texto: string): string {
+  if (!texto) return '';
+  return texto
+    .toLowerCase()
+    .replace(/(^|[\s,.\-—/])([a-záéíóúüñ])/gi, (_, separador, letra) => {
+      return separador + letra.toUpperCase();
+    });
+}
+
+/**
+ * Formatea el nombre del alumno en formato oficial (Apellidos, Nombres con mayúscula inicial).
  */
 export function formatearNombreCertificado(nombres?: string, apellidos?: string): string {
-  const nom = (nombres || '').trim();
-  const ape = (apellidos || '').trim();
+  const nom = capitalizarPalabras((nombres || '').trim());
+  const ape = capitalizarPalabras((apellidos || '').trim());
   if (ape && nom) {
     if (ape.includes(',') || nom.includes(',')) {
       return `${ape} ${nom}`.replace(/\s+/g, ' ').trim();

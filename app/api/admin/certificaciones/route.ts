@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { createAdminClient } from '@/lib/supabase/admin';
 import { parseDiplomadosFromProfile, parseCursosFromProfile } from '@/lib/utils/profileParser';
-import { generarCodigoUnicoCertificado, formatearNombreCertificado, normalizarCodigoCertificado } from '@/lib/utils/certificateUtils';
+import { generarCodigoUnicoCertificado, formatearNombreCertificado, normalizarCodigoCertificado, capitalizarPalabras } from '@/lib/utils/certificateUtils';
 
 export async function GET(request?: Request) {
   try {
@@ -392,7 +392,7 @@ export async function POST(request: Request) {
           .from('certificaciones')
           .insert({
             codigo_verificacion: codigoGenerado,
-            estudiante_nombre: estudiante,
+            estudiante_nombre: capitalizarPalabras(estudiante || ''),
             dni_ce: dni,
             tipo: tipo || 'DIPLOMA',
             programa_titulo: programa,
@@ -586,7 +586,7 @@ export async function PATCH(request: Request) {
           await admin.from('certificaciones').insert({
             codigo_verificacion: normalizarCodigoCertificado(codigo || `EDM-CERT-${Date.now()}`),
             tipo: body.tipo || (body.modulo ? 'MODULAR' : 'DIPLOMA'),
-            estudiante_nombre: body.estudiante || 'ESTUDIANTE EDUMIN',
+            estudiante_nombre: capitalizarPalabras(body.estudiante || 'Estudiante EDUMIN'),
             dni_ce: body.dni || '71234567',
             programa_titulo: body.programa || 'DIPLOMADO',
             modulo_titulo: body.modulo || null,

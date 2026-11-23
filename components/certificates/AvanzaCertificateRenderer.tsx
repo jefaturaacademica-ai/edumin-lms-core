@@ -184,10 +184,23 @@ export function formatearFechaSegunEstilo(
 }
 
 /**
+ * Convierte un texto a Formato Título / Capitalizado (cada primera letra en mayúscula y lo demás en minúscula),
+ * respetando acentos, caracteres especiales (ñ, á, é, í, ó, ú, ü) y signos de puntuación.
+ */
+export function capitalizarPalabras(texto: string): string {
+  if (!texto) return '';
+  return texto
+    .toLowerCase()
+    .replace(/(^|[\s,.\-—/])([a-záéíóúüñ])/gi, (_, separador, letra) => {
+      return separador + letra.toUpperCase();
+    });
+}
+
+/**
  * Formatea el nombre del estudiante según el formato deseado en el certificado:
- * - 'apellidos-nombres': Quispe Ramos, Juan Carlos
- * - 'nombres-apellidos': Juan Carlos Quispe Ramos
- * - 'mayusculas': QUISPE RAMOS, JUAN CARLOS
+ * - 'apellidos-nombres': Quispe Ramos, Juan Carlos (Primera letra en mayúscula, resto en minúscula)
+ * - 'nombres-apellidos': Juan Carlos Quispe Ramos (Primera letra en mayúscula, resto en minúscula)
+ * - 'mayusculas': QUISPE RAMOS, JUAN CARLOS (Todo en mayúsculas)
  */
 export function formatearNombreSegunEstilo(
   nombre: string,
@@ -198,24 +211,29 @@ export function formatearNombreSegunEstilo(
   if (formato === 'mayusculas') {
     return limpio.toUpperCase();
   }
+
+  // Si no es mayúsculas, asegurar el estándar institucional: primera letra de cada palabra en mayúscula
+  const capitalizado = capitalizarPalabras(limpio);
+
   if (formato === 'nombres-apellidos') {
-    if (limpio.includes(',')) {
-      const [apellidos, nombres] = limpio.split(',').map(s => s.trim());
-      return nombres ? `${nombres} ${apellidos}` : limpio;
+    if (capitalizado.includes(',')) {
+      const [apellidos, nombres] = capitalizado.split(',').map(s => s.trim());
+      return nombres ? `${nombres} ${apellidos}` : capitalizado;
     }
-    return limpio;
+    return capitalizado;
   }
+
   // 'apellidos-nombres':
-  if (limpio.includes(',')) {
-    return limpio;
+  if (capitalizado.includes(',')) {
+    return capitalizado;
   }
-  const partes = limpio.split(/\s+/);
+  const partes = capitalizado.split(/\s+/);
   if (partes.length >= 3) {
     const apellidos = partes.slice(-2).join(' ');
     const nombres = partes.slice(0, -2).join(' ');
     return `${apellidos}, ${nombres}`;
   }
-  return limpio;
+  return capitalizado;
 }
 
 /**
