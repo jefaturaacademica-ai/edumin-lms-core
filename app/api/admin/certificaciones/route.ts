@@ -59,14 +59,16 @@ export async function GET(request?: Request) {
             codigo: c.codigo_verificacion,
             tipo: c.tipo,
             estudiante: c.estudiante_nombre,
-            dni: c.dni_ce,
-            email: `${c.dni_ce}@edumin.pe`,
+            dni: c.numero_documento || c.dni_ce,
+            numero_documento: c.numero_documento || c.dni_ce,
+            tipo_documento: c.tipo_documento || 'DNI',
+            email: `${c.numero_documento || c.dni_ce}@edumin.pe`,
             programa: c.programa_titulo,
             modulo: c.modulo_titulo,
             nota: c.nota_final !== null && c.nota_final !== undefined && Number(c.nota_final) > 0
               ? Math.round(Number(c.nota_final))
               : null,
-            horas: c.horas_lectivas || (c.tipo === 'MODULAR' ? '108 horas académicas' : '325 horas académicas y 13 créditos académicos'),
+            horas: c.horas_lectivas || (c.tipo === 'MODULAR' ? '108 horas académicas' : (c.tipo === 'CURSO' ? '40 horas académicas' : (c.tipo === 'TALLER' ? '20 horas académicas' : '325 horas académicas y 13 créditos académicos'))),
             fecha: c.fecha_emision ? String(c.fecha_emision) : new Date().toISOString().split('T')[0],
             estadoFinanciero: c.estado_financiero_al_dia ? 'AL_DIA' : 'DEUDA_PENDIENTE',
             habilitado: c.estado_financiero_al_dia !== false,
@@ -178,14 +180,37 @@ export async function GET(request?: Request) {
           fechaEmision: fechaVal,
         });
 
+        // Cargar catálogo de diplomados y cursos desde Supabase para leer la duración y créditos reales configurados por producto
+        const { data: catalogoBd } = await admin
+          .from('diplomados_y_cursos')
+          .select('id, codigo, titulo, tipo, horas, creditos');
+
+        const normalizarStr = (s: string) => (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
+
+        const buscarProductoEnCatalogo = (id?: string, codigo?: string, titulo?: string) => {
+          if (!catalogoBd || catalogoBd.length === 0) return null;
+          const idNorm = normalizarStr(id || '');
+          const codNorm = normalizarStr(codigo || '');
+          const titNorm = normalizarStr(titulo || '');
+          return catalogoBd.find((p: any) => {
+            if (idNorm && normalizarStr(p.id) === idNorm) return true;
+            if (codNorm && normalizarStr(p.codigo) === codNorm) return true;
+            if (titNorm && normalizarStr(p.titulo) === titNorm) return true;
+            if (titNorm && normalizarStr(p.titulo).includes(titNorm)) return true;
+            if (titNorm && titNorm.includes(normalizarStr(p.titulo))) return true;
+            return false;
+          }) || null;
+        };
+
         const { data: profiles } = await admin
           .from('profiles')
-          .select('id, dni_ce, nombres, apellidos, bloqueado, diplomados, cursos');
+          .select('id, dni_ce, numero_documento, tipo_documento, nombres, apellidos, bloqueado, diplomados, cursos');
 
         if (profiles && profiles.length > 0) {
           for (const p of profiles) {
-            const dni = p.dni_ce;
+            const dni = p.numero_documento || p.dni_ce;
             if (!dni) continue;
+            const docTipo = p.tipo_documento || 'DNI';
             const estudianteNombre = `${p.nombres || ''} ${p.apellidos || ''}`.trim() || 'Estudiante EDUMIN';
 
             // Sincronizar modulares
@@ -211,6 +236,8 @@ export async function GET(request?: Request) {
                       codigo_verificacion: cod,
                       profile_id: p.id,
                       dni_ce: dni,
+                      numero_documento: dni,
+                      tipo_documento: docTipo,
                       estudiante_nombre: estudianteNombre,
                       tipo: 'MODULAR',
                       programa_titulo: d.titulo,
@@ -233,6 +260,8 @@ export async function GET(request?: Request) {
                       tipo: 'MODULAR',
                       estudiante: estudianteNombre,
                       dni: dni,
+                      numero_documento: dni,
+                      tipo_documento: docTipo,
                       email: `${dni}@edumin.pe`,
                       programa: d.titulo,
                       modulo: modNombre,
@@ -264,7 +293,12 @@ export async function GET(request?: Request) {
                   codigosExistentes.add(key1);
                   codigosExistentes.add(key2);
                   const modeloVigenteCur = resolverModeloVigente(tipoCert, c.titulo, c.id);
-                  const horasCur = c.horas || modeloVigenteCur?.horas || (esTaller ? '16 horas académicas' : '24 horas académicas');
+                  const prodCatCur = buscarProductoEnCatalogo(c.id, c.codigo, c.titulo);
+                  const horasCatalogoCur = prodCatCur?.horas ? (String(prodCatCur.horas).toLowerCase().includes('hora') ? String(prodCatCur.horas) : `${prodCatCur.horas} horas académicas`) : '';
+                  const duracionRawCur = c.horas || c.duracion || horasCatalogoCur;
+                  const horasCur = duracionRawCur
+                    ? (String(duracionRawCur).toLowerCase().includes('hora') ? String(duracionRawCur) : `${duracionRawCur} horas académicas`)
+                    : (modeloVigenteCur?.horas && !modeloVigenteCur.horas.includes('325') ? modeloVigenteCur.horas : (esTaller ? '10 horas académicas' : '30 horas académicas'));
                   const creditosCur = resolverCreditosModelo(modeloVigenteCur, tipoCert);
                   const fechaCur = c.fecha || new Date().toISOString().split('T')[0];
                   const snapshotCur = construirSnapshot(modeloVigenteCur, 'mod-226455', 'vertical', horasCur, fechaCur, creditosCur);
@@ -273,6 +307,8 @@ export async function GET(request?: Request) {
                     codigo_verificacion: cod,
                     profile_id: p.id,
                     dni_ce: dni,
+                    numero_documento: dni,
+                    tipo_documento: docTipo,
                     estudiante_nombre: estudianteNombre,
                     tipo: tipoCert,
                     programa_titulo: c.titulo,
@@ -295,6 +331,8 @@ export async function GET(request?: Request) {
                     tipo: tipoCert,
                     estudiante: estudianteNombre,
                     dni: dni,
+                    numero_documento: dni,
+                    tipo_documento: docTipo,
                     email: `${dni}@edumin.pe`,
                     programa: c.titulo,
                     modulo: null,
@@ -403,12 +441,23 @@ export async function POST(request: Request) {
           }
         }
 
+        const { data: profDoc } = await admin
+          .from('profiles')
+          .select('tipo_documento, numero_documento')
+          .or(`dni_ce.eq.${dni},numero_documento.eq.${dni}`)
+          .limit(1)
+          .maybeSingle();
+
+        const docTipoManual = profDoc?.tipo_documento || (dni.length === 8 && /^\d+$/.test(dni) ? 'DNI' : 'OTRO');
+
         const { data: certInsertado, error: errInsert } = await admin
           .from('certificaciones')
           .insert({
             codigo_verificacion: codigoGenerado,
             estudiante_nombre: capitalizarPalabras(estudiante || ''),
             dni_ce: dni,
+            numero_documento: profDoc?.numero_documento || dni,
+            tipo_documento: docTipoManual,
             tipo: tipo || 'DIPLOMA',
             programa_titulo: programa,
             modulo_titulo: modulo || null,

@@ -535,7 +535,8 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
   }
 
   // 4. Código QR 1:1 estricto (ancho == alto)
-  if (cfg.qr.visible && (data.incluyeQr !== false)) {
+  const qrBloqueado = codigoCert === 'EDUMIN-BLOQUEADO';
+  if (cfg.qr.visible && !qrBloqueado) {
     const qrFinalSize = calcularTamanoPxCanvas(
       resolverTamanoQrPt(cfg.qr),
       orientacion,

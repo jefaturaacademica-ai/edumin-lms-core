@@ -7,7 +7,9 @@ import { obtenerTallerParaDiplomado } from '@/lib/utils/tallerAsignado';
 import { invalidateEstudiantesCache } from '@/app/api/admin/estudiantes/route';
 
 interface EstudianteBulkItem {
-  dni_ce: string;
+  dni_ce?: string;
+  numero_documento?: string;
+  tipo_documento?: string;
   nombres: string;
   apellidos: string;
   email: string;
@@ -81,7 +83,12 @@ export async function POST(request: Request) {
     // 2. Procesar cada estudiante en secuencia segura
     for (let idx = 0; idx < lista.length; idx++) {
       const item = lista[idx];
-      const normalizedDni = String(item.dni_ce || '').trim();
+      const docNumero = String(item.numero_documento || item.dni_ce || '').trim();
+      let docTipo = String(item.tipo_documento || '').toUpperCase().trim();
+      if (!['DNI', 'CE', 'PASAPORTE', 'OTRO'].includes(docTipo)) {
+        docTipo = (docNumero.length === 8 && /^\d+$/.test(docNumero)) ? 'DNI' : 'OTRO';
+      }
+      const normalizedDni = docNumero;
       const normalizedEmail = String(item.email || '').trim().toLowerCase();
       const nombresTrim = String(item.nombres || '').trim();
       const apellidosTrim = String(item.apellidos || '').trim();
@@ -210,6 +217,8 @@ export async function POST(request: Request) {
         const insertPayload: Record<string, any> = {
           id: studentId,
           dni_ce: normalizedDni,
+          numero_documento: normalizedDni,
+          tipo_documento: docTipo,
           nombres: nombresTrim,
           apellidos: apellidosTrim,
           email: normalizedEmail,

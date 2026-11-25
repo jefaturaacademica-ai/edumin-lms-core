@@ -204,7 +204,9 @@ export default function ValidarCertificadoPage() {
                     <span>Estudiante acreditado</span>
                   </div>
                   <p className="text-sm font-bold text-slate-900">{certificado.estudiante}</p>
-                  <p className="text-xs tabular-nums text-slate-500">DNI / CE: {certificado.dni}</p>
+                  <p className="text-xs tabular-nums text-slate-500">
+                    {certificado.tipo_documento === 'CE' ? 'Carné de Extranjería (C.E.)' : certificado.tipo_documento === 'PASAPORTE' ? 'Pasaporte' : certificado.tipo_documento === 'OTRO' ? 'Doc. de Identidad' : 'D.N.I.'}: {certificado.numero_documento || certificado.dni}
+                  </p>
                 </div>
 
                 {/* Programa / Diplomado */}

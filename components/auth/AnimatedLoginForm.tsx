@@ -178,7 +178,7 @@ export function AnimatedLoginForm({ className = "" }: AnimatedLoginFormProps) {
         {/* Campo DNI */}
         <div className="space-y-1.5">
           <label className="text-xs font-semibold text-slate-300 tracking-wide block" htmlFor="dni">
-            DNI o carnet de extranjería
+            Documento de identidad (DNI, CE o Pasaporte)
           </label>
           <div className="relative">
             <UserRound

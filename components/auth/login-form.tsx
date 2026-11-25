@@ -17,7 +17,7 @@ export function LoginForm() {
     <form action={formAction} className="space-y-5" noValidate>
       <div className="space-y-2">
         <label className="text-sm font-semibold text-slate-700" htmlFor="dni">
-          DNI o Carnet de Extranjería
+          Documento de identidad (DNI, Carné de extranjería o Pasaporte)
         </label>
         <div className="relative">
           <UserRound

@@ -967,6 +967,8 @@ export default function ReproductorCursoPage() {
             })
           });
           invalidateClientCache('/api/dashboard/me');
+          invalidateClientCache('/api/admin/certificaciones');
+          invalidateClientCache();
         } catch (err) {
           console.error('Error sincronizando evaluación de curso con perfil:', err);
         }

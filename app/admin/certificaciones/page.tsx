@@ -48,6 +48,7 @@ export interface ModeloCertificado {
   asignacionAlcance: 'SUPERPLANTILLA_GLOBAL' | 'PRODUCTO_ESPECIFICO';
   recursoAsignadoNombre?: string;
   recursoAsignadoId?: string;
+  recursoAsignadoCodigo?: string;
   disenoCoordenadas?: DisenoCoordenadas;
 }
 
@@ -200,6 +201,7 @@ export default function CertificacionesAdminPage() {
   const [estudianteManualSeleccionado, setEstudianteManualSeleccionado] = useState<string>('');
   const [nombreManualInput, setNombreManualInput] = useState('');
   const [dniManualInput, setDniManualInput] = useState('');
+  const [tipoDocManual, setTipoDocManual] = useState<string>('DNI');
   const [tipoManual, setTipoManual] = useState<'DIPLOMA' | 'MODULAR' | 'CURSO' | 'TALLER' | 'CIP' | 'MIAMI'>('DIPLOMA');
   const [programaManual, setProgramaManual] = useState('');
   const [moduloManual, setModuloManual] = useState('');
@@ -507,17 +509,18 @@ export default function CertificacionesAdminPage() {
 
   const handleSeleccionarEstudianteManual = (dni: string) => {
     setEstudianteManualSeleccionado(dni);
-    const est = listaEstudiantesPlataforma.find(e => e.dni_ce === dni);
+    const est = listaEstudiantesPlataforma.find(e => e.dni_ce === dni || e.numero_documento === dni);
     if (est) {
       setNombreManualInput(est.nombre || `${est.nombres || ''} ${est.apellidos || ''}`.trim());
-      setDniManualInput(est.dni_ce || dni);
+      setDniManualInput(est.numero_documento || est.dni_ce || dni);
+      setTipoDocManual((est.tipo_documento as any) || 'DNI');
     }
   };
 
   const guardarEmisionManual = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!nombreManualInput.trim() || !dniManualInput.trim() || !programaManual.trim()) {
-      alert('Por favor completa el nombre del estudiante, DNI y programa académico.');
+      alert('Por favor completa el nombre del estudiante, número de documento y programa académico.');
       return;
     }
 
@@ -532,6 +535,8 @@ export default function CertificacionesAdminPage() {
           accion: 'EMITIR_MANUAL',
           estudiante: capitalizarPalabras(nombreManualInput.trim()),
           dni: dniManualInput.trim(),
+          numero_documento: dniManualInput.trim(),
+          tipo_documento: tipoDocManual,
           programa: programaManual.trim(),
           modulo: tipoManual === 'MODULAR' ? moduloManual.trim() : null,
           tipo: tipoManual,
@@ -1074,6 +1079,31 @@ export default function CertificacionesAdminPage() {
          editorTipo === 'MIAMI' ? 'Todos los diplomados con Certificado Miami' : 'Todos los programas de esta categoría')
       : (editorRecursoEspecifico || 'Programa específico asignado');
 
+    const recursoEncontrado = catalogoDiplomados.find(d => d.titulo === editorRecursoEspecifico || d.codigo === editorRecursoEspecifico) ||
+                             catalogoCursos.find(c => c.titulo === editorRecursoEspecifico || c.codigo === editorRecursoEspecifico) ||
+                             catalogoTalleres.find(t => t.titulo === editorRecursoEspecifico || t.codigo === editorRecursoEspecifico);
+
+    const recursoAsignadoIdFinal = recursoEncontrado?.id || (editorAlcance === 'PRODUCTO_ESPECIFICO' ? editorRecursoEspecifico : undefined);
+    const recursoAsignadoCodigoFinal = recursoEncontrado?.codigo || undefined;
+    const recursoAsignadoNombreFinal = nombreRecursoFinal;
+
+    const horasCalculadas = (() => {
+      const coordH = editorDisenoCoordenadas?.horas;
+      if (coordH?.horasValor) {
+        const suf = coordH.sufijo || 'horas académicas';
+        return `${coordH.horasValor} ${suf}`.trim();
+      }
+      if (recursoEncontrado?.duracion || (recursoEncontrado as any)?.horas) {
+        const raw = String((recursoEncontrado as any)?.horas || recursoEncontrado?.duracion).trim();
+        return raw.toLowerCase().includes('hora') ? raw : `${raw} horas académicas`;
+      }
+      if (editorTipo === 'MODULAR') return '108 horas académicas';
+      if (editorTipo === 'DIPLOMA') return '325 horas académicas y 13 créditos académicos';
+      if (editorTipo === 'TALLER') return '20 horas académicas';
+      return '40 horas académicas';
+    })();
+
+    const qrDefinitivo = editorDisenoCoordenadas?.qr?.visible !== undefined ? Boolean(editorDisenoCoordenadas.qr.visible) : editorIncluyeQr;
     let listaActualizada: ModeloCertificado[] = [];
 
     if (modeloSeleccionadoId) {
@@ -1082,11 +1112,14 @@ export default function CertificacionesAdminPage() {
         nombre: editorNombre,
         tipo: editorTipo,
         orientacion: editorOrientacion,
+        horas: (m.horas && !m.horas.includes('325') && editorTipo === 'CURSO') ? m.horas : horasCalculadas,
         firmas: editorFirmas,
-        incluyeQr: editorIncluyeQr,
+        incluyeQr: qrDefinitivo,
         imagenFondoUrl: urlFondoFinal,
         asignacionAlcance: editorAlcance,
-        recursoAsignadoNombre: nombreRecursoFinal,
+        recursoAsignadoNombre: recursoAsignadoNombreFinal,
+        recursoAsignadoCodigo: recursoAsignadoCodigoFinal,
+        recursoAsignadoId: recursoAsignadoIdFinal,
         disenoCoordenadas: editorDisenoCoordenadas
       } : m);
       setMensajeExito(`¡Modelo "${editorNombre}" actualizado con éxito!`);
@@ -1097,12 +1130,14 @@ export default function CertificacionesAdminPage() {
         nombre: editorNombre,
         tipo: editorTipo,
         orientacion: editorOrientacion,
-        horas: editorTipo === 'MODULAR' ? '108 horas académicas' : '325 horas académicas y 13 créditos académicos',
+        horas: horasCalculadas,
         firmas: editorFirmas,
-        incluyeQr: editorIncluyeQr,
+        incluyeQr: qrDefinitivo,
         imagenFondoUrl: urlFondoFinal,
         asignacionAlcance: editorAlcance,
-        recursoAsignadoNombre: nombreRecursoFinal,
+        recursoAsignadoNombre: recursoAsignadoNombreFinal,
+        recursoAsignadoCodigo: recursoAsignadoCodigoFinal,
+        recursoAsignadoId: recursoAsignadoIdFinal,
         esPredeterminado: editorAlcance === 'SUPERPLANTILLA_GLOBAL',
         fechaCreacion: new Date().toISOString().split('T')[0],
         disenoCoordenadas: editorDisenoCoordenadas
@@ -1500,6 +1535,7 @@ export default function CertificacionesAdminPage() {
                         <th className="py-3.5 px-4">Estudiante / DNI</th>
                         <th className="py-3.5 px-4">Tipo y certificación</th>
                         <th className="py-3.5 px-4">Código de validación</th>
+                        <th className="py-3.5 px-4">Duración</th>
                         <th className="py-3.5 px-4">Calificación</th>
                         <th className="py-3.5 px-4">Fecha de emisión</th>
                         <th className="py-3.5 px-4">Estado</th>
@@ -1515,7 +1551,7 @@ export default function CertificacionesAdminPage() {
                             <td className="py-3.5 px-4">
                               <div className="font-bold text-slate-900 dark:text-white">{cert.estudiante}</div>
                               <div className="text-[10px] text-slate-400 tabular-nums mt-0.5">
-                                DNI: {cert.dni}
+                                {(cert as any).tipo_documento || 'DNI'}: {cert.dni}
                               </div>
                             </td>
 
@@ -1557,17 +1593,23 @@ export default function CertificacionesAdminPage() {
                               <div className="font-semibold text-slate-800 dark:text-slate-200 leading-snug truncate">
                                 {cert.modulo ? cert.modulo : cert.programa}
                               </div>
-                              {cert.modulo && (
-                                <div className="text-[10px] text-slate-400 truncate">
-                                  Diplomado: {cert.programa}
-                                </div>
-                              )}
+                              <div className="text-[10px] text-slate-400 truncate flex items-center gap-1 mt-0.5">
+                                {cert.modulo && <span>Diplomado: {cert.programa} •</span>}
+                                <span className="text-slate-500 dark:text-slate-400 font-medium">{cert.horas || '40 horas académicas'}</span>
+                              </div>
                             </td>
 
                             {/* Código de validación (texto limpio sin badge ni bordes) */}
                             <td className="py-3.5 px-4 tabular-nums">
                               <span className="text-xs font-semibold text-slate-700 dark:text-slate-300">
                                 {cert.codigo}
+                              </span>
+                            </td>
+
+                            {/* Duración académica oficial */}
+                            <td className="py-3.5 px-4">
+                              <span className="font-semibold text-xs text-slate-700 dark:text-slate-300 whitespace-nowrap">
+                                {cert.horas || '40 horas académicas'}
                               </span>
                             </td>
 
@@ -1747,7 +1789,7 @@ export default function CertificacionesAdminPage() {
                           codigo="EDM-2026-A4"
                           fecha="2026-10-20"
                           imagenFondoUrl={modelo.imagenFondoUrl}
-                          incluyeQr={modelo.incluyeQr !== false}
+                          incluyeQr={modelo.disenoCoordenadas?.qr?.visible !== undefined ? Boolean(modelo.disenoCoordenadas.qr.visible) : (modelo.incluyeQr !== false)}
                           diseno={modelo.disenoCoordenadas}
                           modoArrastrable={false}
                           className="rounded-lg border border-slate-300/80 dark:border-slate-700/80 shadow-md"
@@ -3229,7 +3271,7 @@ export default function CertificacionesAdminPage() {
                     Cambiar modelo de certificado asignado
                   </h3>
                   <p className="text-[11px] text-slate-500">
-                    Estudiante: {certificadoParaCambiarModelo.estudiante} (DNI: {certificadoParaCambiarModelo.dni})
+                    Estudiante: {certificadoParaCambiarModelo.estudiante} ({(certificadoParaCambiarModelo as any).tipo_documento || 'DNI'}: {certificadoParaCambiarModelo.dni})
                   </p>
                 </div>
               </div>
@@ -3451,7 +3493,7 @@ export default function CertificacionesAdminPage() {
                       fecha={new Date().toISOString().split('T')[0]}
                       codigo="HNYNXT2"
                       imagenFondoUrl={modeloParaPrevisualizar.imagenFondoUrl}
-                      incluyeQr={modeloParaPrevisualizar.incluyeQr !== false}
+                      incluyeQr={modeloParaPrevisualizar.disenoCoordenadas?.qr?.visible !== undefined ? Boolean(modeloParaPrevisualizar.disenoCoordenadas.qr.visible) : (modeloParaPrevisualizar.incluyeQr !== false)}
                       diseno={modeloParaPrevisualizar.disenoCoordenadas}
                     />
                   </div>
@@ -3482,7 +3524,7 @@ export default function CertificacionesAdminPage() {
                         fecha: new Date().toISOString().split('T')[0],
                         codigo: 'HNYNXT2',
                         imagenFondoUrl: modeloParaPrevisualizar.imagenFondoUrl,
-                        incluyeQr: modeloParaPrevisualizar.incluyeQr !== false,
+                        incluyeQr: modeloParaPrevisualizar.disenoCoordenadas?.qr?.visible !== undefined ? Boolean(modeloParaPrevisualizar.disenoCoordenadas.qr.visible) : (modeloParaPrevisualizar.incluyeQr !== false),
                         diseno: modeloParaPrevisualizar.disenoCoordenadas
                       }, `Modelo_${modeloParaPrevisualizar.nombre.replace(/[^a-zA-Z0-9_-]/g, '_')}_A4.pdf`);
                     } catch (e) {
@@ -3598,14 +3640,14 @@ export default function CertificacionesAdminPage() {
                       <option value="">-- Seleccionar un estudiante registrado --</option>
                       {listaEstudiantesPlataforma.map((est) => (
                         <option key={est.id || est.dni_ce} value={est.dni_ce}>
-                          {est.nombre || `${est.nombres || ''} ${est.apellidos || ''}`.trim()} — DNI: {est.dni_ce}
+                          {est.nombre || `${est.nombres || ''} ${est.apellidos || ''}`.trim()} — [{est.tipo_documento || 'DNI'}]: {est.numero_documento || est.dni_ce}
                         </option>
                       ))}
                     </select>
                   </div>
                 )}
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="space-y-3">
                   <div>
                     <label className="block text-[10px] font-bold text-slate-500 mb-1">
                       Nombre completo del estudiante *
@@ -3616,21 +3658,40 @@ export default function CertificacionesAdminPage() {
                       placeholder="Ej. QUISPE RAMOS, JUAN CARLOS"
                       value={nombreManualInput}
                       onChange={(e) => setNombreManualInput(e.target.value)}
-                      className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl font-bold uppercase text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                      className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl font-bold uppercase text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600 text-xs"
                     />
                   </div>
-                  <div>
-                    <label className="block text-[10px] font-bold text-slate-500 mb-1">
-                      DNI / Documento de identidad *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Ej. 74839201"
-                      value={dniManualInput}
-                      onChange={(e) => setDniManualInput(e.target.value)}
-                      className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl tabular-nums font-bold text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600"
-                    />
+
+                  <div className="grid grid-cols-1 sm:grid-cols-12 gap-3">
+                    <div className="sm:col-span-5">
+                      <label className="block text-[10px] font-bold text-slate-500 mb-1">
+                        Tipo de documento *
+                      </label>
+                      <select
+                        value={tipoDocManual}
+                        onChange={(e) => setTipoDocManual(e.target.value)}
+                        className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600 text-xs cursor-pointer"
+                      >
+                        <option value="DNI">DNI</option>
+                        <option value="CE">Carné de extranjería</option>
+                        <option value="PASAPORTE">Pasaporte</option>
+                        <option value="OTRO">Otro</option>
+                      </select>
+                    </div>
+
+                    <div className="sm:col-span-7">
+                      <label className="block text-[10px] font-bold text-slate-500 mb-1">
+                        Número de documento ({tipoDocManual}) *
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        placeholder={tipoDocManual === 'DNI' ? 'Ej. 74839201' : tipoDocManual === 'PASAPORTE' ? 'Ej. A8492019' : 'Ej. 001234567'}
+                        value={dniManualInput}
+                        onChange={(e) => setDniManualInput(e.target.value)}
+                        className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl tabular-nums font-bold text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600 font-mono text-xs"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>

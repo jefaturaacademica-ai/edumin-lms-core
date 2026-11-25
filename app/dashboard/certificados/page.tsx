@@ -150,16 +150,14 @@ function obtenerMetadatosTarjeta({
   const diseno = modelo?.disenoCoordenadas || {};
   const filas: Array<{ label: string; value: string; mono?: boolean }> = [];
 
-  // 1. Duración (respeta el sufijo de la plantilla si existe, o usa 'horas académicas' por defecto)
-  if (diseno?.horas?.visible !== false) {
-    const rawHoras = String(horas ?? modelo?.horas ?? diseno?.horas?.horasValor ?? '').trim();
-    const matchNumH = rawHoras.match(/\d+/);
-    const sufijoH = String(diseno?.horas?.sufijo ?? diseno?.horas?.sufijoHoras ?? '').trim() || 'horas académicas';
-    if (matchNumH) {
-      filas.push({ label: 'Duración', value: `${matchNumH[0]} ${sufijoH}` });
-    } else if (rawHoras) {
-      filas.push({ label: 'Duración', value: rawHoras });
-    }
+  // 1. Duración (siempre visible en la card según la duración oficial del producto/emisión)
+  const rawHoras = String(horas ?? modelo?.horas ?? diseno?.horas?.horasValor ?? '').trim();
+  const matchNumH = rawHoras.match(/\d+/);
+  const sufijoH = String(diseno?.horas?.sufijo ?? diseno?.horas?.sufijoHoras ?? '').trim() || 'horas académicas';
+  if (matchNumH) {
+    filas.push({ label: 'Duración', value: `${matchNumH[0]} ${sufijoH}` });
+  } else if (rawHoras) {
+    filas.push({ label: 'Duración', value: rawHoras });
   }
 
   // 2. Créditos (solo si el modelo tiene visible la variable de créditos)
@@ -389,7 +387,7 @@ function CertificadosContent() {
         const dni = meData?.profile?.dni_ce || meData?.profile?.dni;
         if (dni) {
           try {
-            certData = await fetchWithClientCache(`/api/admin/certificaciones?dni=${encodeURIComponent(dni)}`).catch(() => null);
+            certData = await fetchWithClientCache(`/api/admin/certificaciones?dni=${encodeURIComponent(dni)}`, { forceRefresh: true }).catch(() => null);
           } catch {
             // Continuar con datos del perfil
           }
@@ -496,41 +494,44 @@ function CertificadosContent() {
         });
       }
 
-      // 2. Buscar superplantilla/modelo de respaldo en caso el snapshot emitido no contenga un campo
+      // 2. Prioridad ABSOLUTA: Buscar si existe un modelo de producto específico asignado
       const snap = certDb?.plantilla_snapshot || null;
-      const modeloIdBuscado = snap?.modelo_id || certDb?.modelo_id || certParams.modelo_id;
-      let modeloSuperplantilla = (modelosCertificados || []).find((m: any) => m.id === modeloIdBuscado);
+      const limpiar = (s: string) => (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+      const titNorm = limpiar(certParams.titulo);
+      const codNorm = (certParams.codigo || '').trim().toUpperCase();
 
-      if (!modeloSuperplantilla && modelosCertificados && modelosCertificados.length > 0) {
-        const limpiar = (s: string) => (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
-        const titNorm = limpiar(certParams.titulo);
-        const codNorm = (certParams.codigo || '').trim().toUpperCase();
-
-        // A. Prioridad 1: Modelo de producto específico asignado
-        modeloSuperplantilla = modelosCertificados.find((m: any) => {
-          if (String(m.tipo).toUpperCase() !== tipoEsperado || m.asignacionAlcance !== 'PRODUCTO_ESPECIFICO') return false;
-          if (codNorm && (
-            m.recursoAsignadoCodigo?.toUpperCase() === codNorm ||
-            m.recursoAsignadoId?.toUpperCase() === codNorm
-          )) return true;
-          if (m.recursoAsignadoNombre) {
-            const nomNorm = limpiar(m.recursoAsignadoNombre);
-            if (nomNorm && titNorm && (titNorm.includes(nomNorm) || nomNorm.includes(titNorm))) return true;
-          }
-          if (m.nombre) {
-            const modNomNorm = limpiar(m.nombre);
-            if (modNomNorm && titNorm && (titNorm.includes(modNomNorm) || modNomNorm.includes(titNorm))) return true;
-          }
-          return false;
-        });
-
-        // B. Prioridad 2: Superplantilla global del tipo correspondiente
-        if (!modeloSuperplantilla) {
-          modeloSuperplantilla = modelosCertificados.find((m: any) =>
-            String(m.tipo).toUpperCase() === tipoEsperado &&
-            (m.asignacionAlcance === 'SUPERPLANTILLA_GLOBAL' || m.esPredeterminado)
-          );
+      let modeloSuperplantilla = (modelosCertificados || []).find((m: any) => {
+        if (String(m.tipo).toUpperCase() !== tipoEsperado || m.asignacionAlcance !== 'PRODUCTO_ESPECIFICO') return false;
+        if (codNorm && (
+          m.recursoAsignadoCodigo?.toUpperCase() === codNorm ||
+          m.recursoAsignadoId?.toUpperCase() === codNorm
+        )) return true;
+        if (m.recursoAsignadoNombre) {
+          const nomNorm = limpiar(m.recursoAsignadoNombre);
+          if (nomNorm && titNorm && (titNorm.includes(nomNorm) || nomNorm.includes(titNorm) || sonProgramasEquivalentes(m.recursoAsignadoNombre, certParams.titulo))) return true;
         }
+        if (m.nombre) {
+          const modNomNorm = limpiar(m.nombre);
+          if (modNomNorm && titNorm && (titNorm.includes(modNomNorm) || modNomNorm.includes(titNorm) || sonProgramasEquivalentes(m.nombre, certParams.titulo))) return true;
+        }
+        return false;
+      });
+
+      // 3. Si no hay modelo específico, buscar por snapshot congelado de BD o modelo_id explícito
+      if (!modeloSuperplantilla) {
+        const modeloIdBuscado = snap?.modelo_id || certDb?.modelo_id || certParams.modelo_id;
+        if (modeloIdBuscado) {
+          modeloSuperplantilla = (modelosCertificados || []).find((m: any) => m.id === modeloIdBuscado);
+        }
+      }
+
+      // 4. Superplantilla global del tipo correspondiente
+      if (!modeloSuperplantilla && modelosCertificados && modelosCertificados.length > 0) {
+        // A. Superplantilla global predeterminada
+        modeloSuperplantilla = modelosCertificados.find((m: any) =>
+          String(m.tipo).toUpperCase() === tipoEsperado &&
+          (m.asignacionAlcance === 'SUPERPLANTILLA_GLOBAL' || m.esPredeterminado)
+        );
 
         // Si es Taller y no hay específico, usar CURSO global
         if (!modeloSuperplantilla && tipoEsperado === 'TALLER') {
@@ -557,9 +558,9 @@ function CertificadosContent() {
                   : '/assets/certificates/plantilla_avanza_modular_bg.png'));
 
       const coordsFinal = snap?.disenoCoordenadas || modeloSuperplantilla?.disenoCoordenadas || null;
-      const incluyeQrFinal = snap?.incluyeQr !== undefined
-        ? snap.incluyeQr !== false
-        : (modeloSuperplantilla?.incluyeQr !== false);
+      const incluyeQrFinal = coordsFinal?.qr?.visible !== undefined
+        ? Boolean(coordsFinal.qr.visible)
+        : (snap?.incluyeQr !== undefined ? snap.incluyeQr !== false : (modeloSuperplantilla?.incluyeQr !== false));
 
       return {
         ...(modeloSuperplantilla || {}),
@@ -832,22 +833,40 @@ function CertificadosContent() {
       .forEach((c: any, idx: number) => {
         const certDb = certificadosEmitidosDb.find(cd =>
           (c.codigo_cert && cd.codigo_verificacion === c.codigo_cert) ||
-          ((cd.tipo === 'CURSO' || cd.tipo === 'TALLER') && cd.programa_titulo?.toLowerCase() === c.titulo?.toLowerCase())
+          ((cd.tipo === 'CURSO' || cd.tipo === 'TALLER') && sonProgramasEquivalentes(cd.programa_titulo, c.titulo))
         );
 
         const esTaller = esCursoTaller(c) || certDb?.tipo === 'TALLER';
-        const codFinal = certDb?.codigo_verificacion || c.codigo_cert || c.codigo || `EDUMIN-CUR-${perfilEstudiante.dni_ce || '71234567'}-${idx + 1}`;
+
+        // Buscar modelo de producto específico directamente en el catálogo de modelos
+        const modeloEspecifico = (modelosCertificados || []).find((m: any) =>
+          m.asignacionAlcance === 'PRODUCTO_ESPECIFICO' &&
+          (m.tipo === (esTaller ? 'TALLER' : 'CURSO')) &&
+          (
+            (c.codigo && m.recursoAsignadoCodigo?.toUpperCase() === c.codigo.toUpperCase()) ||
+            (c.id && m.recursoAsignadoId?.toUpperCase() === c.id.toUpperCase()) ||
+            (c.titulo && m.recursoAsignadoNombre && sonProgramasEquivalentes(m.recursoAsignadoNombre, c.titulo)) ||
+            (c.titulo && m.nombre && sonProgramasEquivalentes(m.nombre, c.titulo))
+          )
+        );
+
+        // NUNCA usar c.codigo (el código del curso como CUR-IA) como código de verificación de certificado
+        const codFinal = certDb?.codigo_verificacion || c.codigo_cert || `EDUMIN-${c.codigo || 'CUR'}-${perfilEstudiante.dni_ce || '71234567'}`;
 
         codigosVistos.add(codFinal);
         if (c.titulo) codigosVistos.add(c.titulo.toLowerCase());
+
+        const rawHoras = certDb?.horas_lectivas || c.horas || c.duracion || modeloEspecifico?.horas;
+        const horasFinal = normalizarHorasTexto(rawHoras, esTaller ? '20 horas académicas' : '40 horas académicas');
+        const modeloIdFinal = certDb?.plantilla_snapshot?.modelo_id || modeloEspecifico?.id || (c as any).modelo_id || 'mod-226455';
 
         result.push({
           id: c.id || `cur-${idx + 1}`,
           titulo: c.titulo,
           tipo: (esTaller ? 'Taller' : 'Curso') as 'Curso' | 'Taller',
           esRegalo: esTaller,
-          horas: normalizarHorasTexto(certDb?.horas_lectivas || c.horas, esTaller ? '20 horas académicas' : '24 horas académicas'),
-          modelo_id: certDb?.plantilla_snapshot?.modelo_id || (c as any).modelo_id || 'mod-226455',
+          horas: horasFinal,
+          modelo_id: modeloIdFinal,
           fecha: certDb?.fecha_emision ? String(certDb.fecha_emision) : (c.fecha || '18/02/2026'),
           nota: typeof certDb?.nota_final === 'number' && certDb.nota_final > 0
             ? Number(certDb.nota_final)
@@ -862,13 +881,21 @@ function CertificadosContent() {
       if ((cd.tipo === 'CURSO' || cd.tipo === 'TALLER') && !codigosVistos.has(cd.codigo_verificacion) && !codigosVistos.has(cd.programa_titulo?.toLowerCase())) {
         codigosVistos.add(cd.codigo_verificacion);
         const esTaller = cd.tipo === 'TALLER' || cd.programa_titulo?.toUpperCase().includes('TALLER');
+        const modeloEspecifico = (modelosCertificados || []).find((m: any) =>
+          m.asignacionAlcance === 'PRODUCTO_ESPECIFICO' &&
+          (m.tipo === (esTaller ? 'TALLER' : 'CURSO')) &&
+          (
+            (cd.programa_titulo && m.recursoAsignadoNombre && sonProgramasEquivalentes(m.recursoAsignadoNombre, cd.programa_titulo)) ||
+            (cd.programa_titulo && m.nombre && sonProgramasEquivalentes(m.nombre, cd.programa_titulo))
+          )
+        );
         result.push({
           id: cd.id || `db-cur-${idx + 1}`,
           titulo: cd.programa_titulo,
           tipo: (esTaller ? 'Taller' : 'Curso') as 'Curso' | 'Taller',
           esRegalo: esTaller,
-          horas: normalizarHorasTexto(cd.horas_lectivas, esTaller ? '20 horas académicas' : '24 horas académicas'),
-          modelo_id: cd.plantilla_snapshot?.modelo_id || 'mod-226455',
+          horas: normalizarHorasTexto(cd.horas_lectivas || modeloEspecifico?.horas, esTaller ? '20 horas académicas' : '40 horas académicas'),
+          modelo_id: cd.plantilla_snapshot?.modelo_id || modeloEspecifico?.id || 'mod-226455',
           fecha: cd.fecha_emision ? String(cd.fecha_emision) : '18/02/2026',
           nota: typeof cd.nota_final === 'number' && cd.nota_final > 0 ? Number(cd.nota_final) : undefined,
           codigo: cd.codigo_verificacion,

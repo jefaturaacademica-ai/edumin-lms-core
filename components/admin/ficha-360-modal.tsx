@@ -67,6 +67,7 @@ export default function Ficha360Modal({
   // Estado para edición de datos del estudiante
   const [editNombres, setEditNombres] = useState<string>('');
   const [editApellidos, setEditApellidos] = useState<string>('');
+  const [editTipoDoc, setEditTipoDoc] = useState<string>('DNI');
   const [editDni, setEditDni] = useState<string>('');
   const [editEmail, setEditEmail] = useState<string>('');
   const [editTelefono, setEditTelefono] = useState<string>('');
@@ -242,7 +243,8 @@ export default function Ficha360Modal({
     if (alumnoSeleccionado) {
       setEditNombres(alumnoSeleccionado.nombres || '');
       setEditApellidos(alumnoSeleccionado.apellidos || '');
-      setEditDni(alumnoSeleccionado.dni_ce || '');
+      setEditTipoDoc(alumnoSeleccionado.tipo_documento || 'DNI');
+      setEditDni(alumnoSeleccionado.numero_documento || alumnoSeleccionado.dni_ce || '');
       setEditEmail(alumnoSeleccionado.email || '');
       setEditTelefono(alumnoSeleccionado.telefono && alumnoSeleccionado.telefono !== 'Sin teléfono' ? alumnoSeleccionado.telefono : '');
       setEditFechaNacimiento(alumnoSeleccionado.fecha_nacimiento || '');
@@ -313,6 +315,8 @@ export default function Ficha360Modal({
           nombres: editNombres.trim(),
           apellidos: editApellidos.trim(),
           new_dni_ce: editDni.trim(),
+          numero_documento: editDni.trim(),
+          tipo_documento: editTipoDoc,
           email: editEmail.trim(),
           telefono: editTelefono.trim(),
           residencia: editResidencia.trim() || null,
@@ -517,8 +521,11 @@ export default function Ficha360Modal({
                 <span className="text-[10px] font-black uppercase tracking-wider bg-indigo-600 text-white px-2.5 py-0.5 rounded-full shrink-0">
                   Ficha 360° del estudiante
                 </span>
-                <span className="text-xs tabular-nums font-bold text-slate-300 shrink-0">
-                  DNI / CE: {alumnoSeleccionado.dni_ce}
+                <span className="text-xs tabular-nums font-bold text-slate-300 shrink-0 flex items-center gap-1.5">
+                  <span className="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-400/30 text-[10px] font-semibold">
+                    {alumnoSeleccionado.tipo_documento === 'CE' ? 'Carné de extranjería' : alumnoSeleccionado.tipo_documento === 'PASAPORTE' ? 'Pasaporte' : alumnoSeleccionado.tipo_documento === 'OTRO' ? 'Otro' : 'DNI'}
+                  </span>
+                  {alumnoSeleccionado.numero_documento || alumnoSeleccionado.dni_ce}
                 </span>
                 {alumnoSeleccionado.deuda_total_pendiente === 0 && (
                   <span className="text-[10px] font-bold bg-emerald-500 text-white px-2 py-0.5 rounded-full flex items-center gap-1 shrink-0">
@@ -639,14 +646,30 @@ export default function Ficha360Modal({
 
                     <div>
                       <label className="block text-[10px] font-bold text-slate-600 dark:text-slate-400 uppercase mb-1">
-                        DNI / CE (Identificación Oficial)
+                        Tipo de documento
+                      </label>
+                      <select
+                        value={editTipoDoc}
+                        onChange={(e) => setEditTipoDoc(e.target.value)}
+                        className="w-full px-3.5 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-900 dark:text-white outline-none focus:border-indigo-500 transition-colors cursor-pointer"
+                      >
+                        <option value="DNI">DNI</option>
+                        <option value="CE">Carné de extranjería</option>
+                        <option value="Pasaporte">Pasaporte</option>
+                        <option value="Otro">Otro</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-[10px] font-bold text-slate-600 dark:text-slate-400 uppercase mb-1">
+                        Número de documento
                       </label>
                       <input 
                         type="text"
                         value={editDni}
                         onChange={(e) => setEditDni(e.target.value)}
                         placeholder="Número de documento"
-                        className="w-full px-3.5 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold tabular-nums text-slate-900 dark:text-white outline-none focus:border-indigo-500 transition-colors"
+                        className="w-full px-3.5 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold tabular-nums text-slate-900 dark:text-white outline-none focus:border-indigo-500 transition-colors font-mono"
                         required
                       />
                     </div>

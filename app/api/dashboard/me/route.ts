@@ -427,13 +427,16 @@ export async function GET() {
       return NextResponse.json({ error: 'Perfil de estudiante no encontrado en Supabase.' }, { status: 404 });
     }
 
-    // 2. Obtener Pagos del estudiante buscando coincidencia por profile_id, dni_ce o coincidencia de DNI en metodo
+    const docNum = profile.numero_documento || profile.dni_ce || '';
+    profile.dni_ce = docNum;
+
+    // 2. Obtener Pagos del estudiante buscando coincidencia por profile_id, dni_ce en pagos o coincidencia de documento en metodo
     let rawPagos: any[] = [];
-    if (profile.dni_ce) {
+    if (docNum) {
       const { data: pData } = await admin
         .from('pagos')
         .select('*')
-        .or(`profile_id.eq.${profile.id},dni_ce.eq.${profile.dni_ce},metodo.ilike.%${profile.dni_ce}%`)
+        .or(`profile_id.eq.${profile.id},dni_ce.eq.${docNum},metodo.ilike.%${docNum}%`)
         .order('created_at', { ascending: true });
       rawPagos = pData || [];
     } else {

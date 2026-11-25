@@ -1,6 +1,8 @@
 export interface EstudianteCompleto {
   id: string;
   dni_ce: string;
+  numero_documento?: string;
+  tipo_documento?: 'DNI' | 'CE' | 'PASAPORTE' | 'OTRO' | string;
   nombres: string;
   apellidos: string;
   email: string;

@@ -23,7 +23,7 @@ export type UpdatePasswordState = {
 };
 
 const INVALID_CREDENTIALS: LoginState = {
-  error: "El DNI/Carnet o la contraseña no son válidos.",
+  error: "El documento de identidad o la contraseña no son válidos.",
 };
 
 export async function loginWithDni(
@@ -34,14 +34,14 @@ export async function loginWithDni(
   const password = formData.get("password")?.toString()?.trim();
 
   if (!dni || !password) {
-    return { error: "Ingresa tu DNI o carnet y contraseña para continuar." };
+    return { error: "Ingresa tu documento y contraseña para continuar." };
   }
 
   const admin = createAdminClient();
   const { data: profile, error: profileError } = await admin
     .from("profiles")
-    .select("id, email, dni_ce, contrasena, roles, bloqueado, nombres, apellidos, paquete_adquirido, diplomados, cursos")
-    .eq("dni_ce", dni)
+    .select("id, email, numero_documento, tipo_documento, contrasena, roles, bloqueado, nombres, apellidos, paquete_adquirido, diplomados, cursos")
+    .eq("numero_documento", dni)
     .maybeSingle();
 
   if (profileError || !profile) {
@@ -52,17 +52,17 @@ export async function loginWithDni(
     return { error: "Tu acceso ha sido bloqueado por el sistema. Por favor comunícate con administración." };
   }
 
-  // Verificar la contraseña proporcionada contra 'contrasena' (si existe) o contra el DNI
+  // Verificar la contraseña proporcionada contra 'contrasena' (si existe) o contra el documento
   const hasCustomPassword = Boolean(profile.contrasena && profile.contrasena.trim() !== "");
   const isMatchCustom = hasCustomPassword && password === profile.contrasena!.trim();
-  const isMatchDni = password === profile.dni_ce;
+  const isMatchDni = password === (profile as any).numero_documento;
 
   if (!isMatchCustom && !isMatchDni) {
     return INVALID_CREDENTIALS;
   }
 
   // Sincronizar o asegurar la existencia del usuario en auth.users de Supabase
-  const userEmail = profile.email || `${profile.dni_ce}@edumin.pe`;
+  const userEmail = profile.email || `${(profile as any).numero_documento}@edumin.pe`;
 
   // 1. Intentar iniciar sesión directamente con Supabase Auth primero.
   // Evitamos invocar updateUserById indiscriminadamente porque actualizar la clave
@@ -84,7 +84,7 @@ export async function loginWithDni(
         email: userEmail,
         password: password,
         email_confirm: true,
-        user_metadata: { dni_ce: profile.dni_ce },
+        user_metadata: { numero_documento: (profile as any).numero_documento },
       });
 
       if (createError) {

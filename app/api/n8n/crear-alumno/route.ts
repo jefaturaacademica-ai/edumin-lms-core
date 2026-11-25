@@ -13,18 +13,23 @@ export async function POST(request: Request) {
 
     // 2. Extraer datos enviados por n8n
     const body = await request.json();
-    const { dni_ce, email, nombres, apellidos, telefono, paquete_adquirido, programa } = body;
+    const { dni_ce, numero_documento, tipo_documento, email, nombres, apellidos, telefono, paquete_adquirido, programa } = body;
+    const numDoc = String(numero_documento || dni_ce || '').trim();
+    let tipoDoc = String(tipo_documento || '').toUpperCase().trim();
+    if (!['DNI', 'CE', 'PASAPORTE', 'OTRO'].includes(tipoDoc)) {
+      tipoDoc = (numDoc.length === 8 && /^\d+$/.test(numDoc)) ? 'DNI' : 'OTRO';
+    }
 
-    if (!dni_ce || !email || !nombres || !apellidos || !paquete_adquirido) {
-      return NextResponse.json({ error: 'Faltan campos requeridos (dni_ce, email, nombres, apellidos, paquete_adquirido)' }, { status: 400 });
+    if (!numDoc || !email || !nombres || !apellidos || !paquete_adquirido) {
+      return NextResponse.json({ error: 'Faltan campos requeridos (documento, email, nombres, apellidos, paquete_adquirido)' }, { status: 400 });
     }
 
     const admin = createAdminClient();
 
-    // 3. Crear el usuario en Auth de Supabase (Contraseña por defecto: El DNI)
+    // 3. Crear el usuario en Auth de Supabase (Contraseña por defecto: El Documento)
     const { data: authData, error: authError } = await admin.auth.admin.createUser({
       email: email.trim().toLowerCase(),
-      password: dni_ce.trim(),
+      password: numDoc,
       email_confirm: true
     });
 
@@ -42,7 +47,9 @@ export async function POST(request: Request) {
       .insert({
         id: studentId,
         roles: { administrativo: null, academico: 'ESTUDIANTE' },
-        dni_ce: dni_ce.trim(),
+        dni_ce: numDoc,
+        numero_documento: numDoc,
+        tipo_documento: tipoDoc,
         email: email.trim().toLowerCase(),
         nombres: nombres.trim(),
         apellidos: apellidos.trim(),

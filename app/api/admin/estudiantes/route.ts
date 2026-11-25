@@ -500,7 +500,9 @@ export async function GET(request?: Request) {
 
       return {
         id: p.id,
-        dni_ce: p.dni_ce,
+        dni_ce: p.numero_documento || p.dni_ce,
+        numero_documento: p.numero_documento || p.dni_ce,
+        tipo_documento: p.tipo_documento || 'DNI',
         nombres: p.nombres,
         apellidos: p.apellidos,
         email: p.email,
@@ -564,7 +566,7 @@ export async function PATCH(request: Request) {
     const admin = createAdminClient();
 
     if (action === 'update_perfil') {
-      const { nombres, apellidos, new_dni_ce, email, telefono, fecha_nacimiento, paquete_adquirido, bloqueado, prorroga_hasta, role, residencia } = body;
+      const { nombres, apellidos, new_dni_ce, numero_documento, tipo_documento, email, telefono, fecha_nacimiento, paquete_adquirido, bloqueado, prorroga_hasta, role, residencia } = body;
 
       let profileQuery = admin.from('profiles').select('*');
       if (studentId) profileQuery = profileQuery.eq('id', studentId);
@@ -579,7 +581,17 @@ export async function PATCH(request: Request) {
       const updateData: any = {};
       if (nombres !== undefined) updateData.nombres = String(nombres).trim();
       if (apellidos !== undefined) updateData.apellidos = String(apellidos).trim();
-      if (new_dni_ce !== undefined) updateData.dni_ce = String(new_dni_ce).trim();
+      const nuevoNumDoc = String(numero_documento !== undefined ? numero_documento : (new_dni_ce !== undefined ? new_dni_ce : '')).trim();
+      if (nuevoNumDoc) {
+        updateData.dni_ce = nuevoNumDoc;
+        updateData.numero_documento = nuevoNumDoc;
+      }
+      if (tipo_documento !== undefined) {
+        const tDoc = String(tipo_documento).trim().toUpperCase();
+        if (['DNI', 'CE', 'PASAPORTE', 'OTRO'].includes(tDoc)) {
+          updateData.tipo_documento = tDoc;
+        }
+      }
       if (email !== undefined) updateData.email = String(email).trim().toLowerCase();
       if (telefono !== undefined) updateData.telefono = String(telefono).trim();
       if (fecha_nacimiento !== undefined) updateData.fecha_nacimiento = fecha_nacimiento ? String(fecha_nacimiento).trim() : null;
@@ -1191,6 +1203,8 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { 
       dni_ce, 
+      numero_documento,
+      tipo_documento,
       nombres, 
       apellidos, 
       email, 
@@ -1206,32 +1220,38 @@ export async function POST(request: Request) {
       cupos_cursos_personalizados
     } = body;
 
-    if (!dni_ce || !nombres || !apellidos || !email) {
+    const docNumero = String(numero_documento || dni_ce || '').trim();
+    let docTipo = String(tipo_documento || '').toUpperCase().trim();
+    if (!['DNI', 'CE', 'PASAPORTE', 'OTRO'].includes(docTipo)) {
+      docTipo = (docNumero.length === 8 && /^\d+$/.test(docNumero)) ? 'DNI' : 'OTRO';
+    }
+
+    if (!docNumero || !nombres || !apellidos || !email) {
       return NextResponse.json(
-        { error: 'DNI/CE, nombres, apellidos y correo electrónico son obligatorios.' }, 
+        { error: 'El número de documento, nombres, apellidos y correo electrónico son obligatorios.' }, 
         { status: 400 }
       );
     }
 
     const admin = createAdminClient();
 
-    // 1. Verificar si ya existe en profiles por dni_ce o email
+    // 1. Verificar si ya existe en profiles por documento o email
     const { data: existente } = await admin
       .from('profiles')
-      .select('id, dni_ce, email')
-      .or(`dni_ce.eq.${dni_ce.trim()},email.eq.${email.trim().toLowerCase()}`)
+      .select('id, dni_ce, numero_documento, email')
+      .or(`dni_ce.eq.${docNumero},numero_documento.eq.${docNumero},email.eq.${email.trim().toLowerCase()}`)
       .maybeSingle();
 
     if (existente) {
       return NextResponse.json(
-        { error: `Ya existe un usuario registrado con ese DNI (${existente.dni_ce}) o correo (${existente.email}).` }, 
+        { error: `Ya existe un usuario registrado con ese documento (${existente.numero_documento || existente.dni_ce}) o correo (${existente.email}).` }, 
         { status: 400 }
       );
     }
 
-    // 2. Crear usuario en Auth de Supabase (contraseña inicial: su DNI)
+    // 2. Crear usuario en Auth de Supabase (contraseña inicial: su documento)
     const normalizedEmail = email.trim().toLowerCase();
-    const normalizedDni = dni_ce.trim();
+    const normalizedDni = docNumero;
     let studentId: string;
 
     const { data: authUser, error: authError } = await admin.auth.admin.createUser({
@@ -1326,6 +1346,8 @@ export async function POST(request: Request) {
     const insertPayload: Record<string, any> = {
       id: studentId,
       dni_ce: normalizedDni,
+      numero_documento: normalizedDni,
+      tipo_documento: docTipo,
       nombres: nombres.trim(),
       apellidos: apellidos.trim(),
       email: normalizedEmail,

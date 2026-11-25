@@ -1,6 +1,8 @@
 import { redirect } from "next/navigation";
 import {
+  ArrowRight,
   ArrowUpRight,
+  BookOpen,
   BookOpenCheck,
   GraduationCap,
   Rocket,
@@ -61,12 +63,13 @@ export default async function DashboardPage() {
     profile = profileByEmail;
   }
 
-  // Si aún no se encuentra, buscar por DNI en user_metadata si existiese
-  if (!profile && user.user_metadata?.dni_ce) {
+  // Si aún no se encuentra, buscar por documento en user_metadata si existiese
+  const docMeta = user.user_metadata?.numero_documento || user.user_metadata?.dni_ce;
+  if (!profile && docMeta) {
     const { data: profileByDni } = await admin
       .from("profiles")
       .select("*")
-      .eq("dni_ce", String(user.user_metadata.dni_ce))
+      .eq("numero_documento", String(docMeta))
       .maybeSingle();
     profile = profileByDni;
   }
@@ -76,7 +79,8 @@ export default async function DashboardPage() {
     role: 'ESTUDIANTE',
     nombres: user.user_metadata?.nombres || 'Estudiante',
     apellidos: user.user_metadata?.apellidos || '',
-    dni_ce: user.user_metadata?.dni_ce || 'Sin DNI',
+    numero_documento: docMeta || 'Sin documento',
+    dni_ce: docMeta || 'Sin documento',
     email: user.email || '',
     paquete_adquirido: 'FULL',
     cuotas_pagadas: 1,
@@ -100,35 +104,127 @@ export default async function DashboardPage() {
   const paqueteKey = (safeProfile.paquete_adquirido || 'FULL').toUpperCase();
   const configPaqueteActual = paquetesConfig[paqueteKey] || paquetesConfig['FULL'];
 
-  // Obtener Diplomado principal real
+  // 1. DIPLOMADO DINÁMICO DEL ESTUDIANTE:
   const parsedDips = parseDiplomadosFromProfile(safeProfile);
-  const targetDip = parsedDips[0];
-  const diplomadoNombre = targetDip?.titulo || (typeof safeProfile.diplomado_1 === 'string' && !safeProfile.diplomado_1.startsWith('DIPLOMADOS_LIST|') ? safeProfile.diplomado_1 : 'DERECHO MINERO');
-  const diplomadoPrincipal = getDiplomadoByTitleOrSlug(diplomadoNombre);
-  const avanceEstudiante = targetDip?.avance ?? 0;
+  
+  // Buscar prioritariamente el diplomado que esté EN CURSO (0 < avance < 100)
+  // Si no hay ninguno en curso, buscar el primero pendiente (avance < 100)
+  // Si todos están completados, tomar el último
+  const activeDip = parsedDips.find(d => (d.avance || 0) > 0 && (d.avance || 0) < 100)
+    || parsedDips.find(d => (d.avance || 0) < 100)
+    || parsedDips[0]
+    || null;
 
-  // Obtener Curso oficial real del estudiante
-  const parsedCursos = parseCursosFromProfile(safeProfile);
-  let cursoPrincipal: { titulo: string; sesionTexto?: string; avance: number; link: string } = {
-    titulo: '',
-    avance: 0,
-    link: '/dashboard/cursos'
+  let diplomadoData: {
+    tiene: boolean;
+    titulo: string;
+    slug: string;
+    avance: number;
+    moduloTexto: string;
+    link: string;
   };
 
-  if (parsedCursos.length > 0) {
-    const c = parsedCursos[0];
-    cursoPrincipal = {
-      titulo: c.titulo,
-      avance: Number(c.avance || 0),
-      link: `/dashboard/cursos/${c.id || c.codigo || 'cur-01'}`
+  if (activeDip) {
+    const matchedFullDip = getDiplomadoByTitleOrSlug(activeDip.slug || activeDip.id || activeDip.titulo);
+    const tituloOficial = activeDip.titulo || matchedFullDip?.titulo || 'Mi Diplomado';
+    const slugOficial = activeDip.slug || matchedFullDip?.slug || 'derecho-minero';
+    
+    // Obtener módulo actual según su progreso o primer módulo con nombre temático real
+    let moduloTexto = 'MÓDULO 01';
+    if (activeDip.modulos && activeDip.modulos.length > 0) {
+      const modIncompletoIdx = activeDip.modulos.findIndex((m: any) => !activeDip?.completadosMap?.[m.id || m.codigo || m.nombre]);
+      const targetIdx = modIncompletoIdx !== -1 ? modIncompletoIdx : 0;
+      const modToShow = activeDip.modulos[targetIdx];
+      const codigo = modToShow.codigo || (matchedFullDip?.modulos?.[targetIdx]?.codigo) || `MÓDULO ${String(targetIdx + 1).padStart(2, '0')}`;
+      
+      let nombre = (modToShow.nombre || '').trim();
+      const esNombreGenerico = !nombre || /^m[oó]dulo\s*\d+$/i.test(nombre) || nombre.toLowerCase() === codigo.toLowerCase();
+      
+      if (esNombreGenerico) {
+        const catalogMod = matchedFullDip?.modulos?.[targetIdx];
+        if (catalogMod?.nombre && !/^m[oó]dulo\s*\d+$/i.test(catalogMod.nombre)) {
+          nombre = catalogMod.nombre.trim();
+        }
+      }
+      
+      // Limpiar prefijo redundante "MÓDULO XX:" o similar si ya está contenido en el nombre
+      nombre = nombre.replace(/^m[oó]dulo\s*\d+\s*[:\-\–]?\s*/i, '').trim();
+      
+      moduloTexto = nombre && nombre.toLowerCase() !== codigo.toLowerCase() ? `${codigo}: ${nombre}` : codigo;
+    } else if (matchedFullDip?.modulos && matchedFullDip.modulos.length > 0) {
+      const m0 = matchedFullDip.modulos[0];
+      const codigo = m0.codigo || 'MÓDULO 01';
+      let nombre = (m0.nombre || '').replace(/^m[oó]dulo\s*\d+\s*[:\-\–]?\s*/i, '').trim();
+      moduloTexto = nombre && nombre.toLowerCase() !== codigo.toLowerCase() ? `${codigo}: ${nombre}` : codigo;
+    }
+
+    diplomadoData = {
+      tiene: true,
+      titulo: tituloOficial,
+      slug: slugOficial,
+      avance: Math.min(100, Math.max(0, Number(activeDip.avance || 0))),
+      moduloTexto,
+      link: `/dashboard/reproductor?slug=${slugOficial}`
     };
   } else {
-    // Si no tiene cursos asignados aún, el taller oficial asignado según su diplomado
-    const tallerOficial = obtenerTallerParaDiplomado(diplomadoNombre);
-    cursoPrincipal = {
-      titulo: tallerOficial.titulo,
+    diplomadoData = {
+      tiene: false,
+      titulo: 'Sin diplomado asignado',
+      slug: '',
       avance: 0,
+      moduloTexto: 'Explora nuestro catálogo y canjea tu diplomado oficial.',
+      link: '/dashboard/diplomados'
+    };
+  }
+
+  // 2. CURSO DINÁMICO DEL ESTUDIANTE:
+  const parsedCursos = parseCursosFromProfile(safeProfile);
+  
+  // Buscar prioritariamente el curso que esté EN CURSO (0 < avance < 100)
+  // Si no hay ninguno en curso, buscar el primero pendiente (avance < 100)
+  // Si todos están completados, tomar el último
+  const activeCur = parsedCursos.find(c => (Number(c.avance) || 0) > 0 && (Number(c.avance) || 0) < 100)
+    || parsedCursos.find(c => (Number(c.avance) || 0) < 100)
+    || parsedCursos[0]
+    || null;
+
+  let cursoData: {
+    tiene: boolean;
+    titulo: string;
+    id: string;
+    avance: number;
+    sesionTexto: string;
+    link: string;
+  };
+
+  if (activeCur) {
+    const curId = activeCur.id || activeCur.codigo || 'cur-01';
+    cursoData = {
+      tiene: true,
+      titulo: activeCur.titulo || 'Mi Curso',
+      id: curId,
+      avance: Math.min(100, Math.max(0, Number(activeCur.avance || 0))),
+      sesionTexto: activeCur.tipo ? `${activeCur.tipo} DE ESPECIALIZACIÓN` : 'CURSO DE ESPECIALIZACIÓN',
+      link: `/dashboard/cursos/${curId}`
+    };
+  } else if (diplomadoData.tiene) {
+    const tallerOficial = obtenerTallerParaDiplomado(diplomadoData.titulo);
+    cursoData = {
+      tiene: true,
+      titulo: tallerOficial.titulo,
+      id: tallerOficial.id,
+      avance: 0,
+      sesionTexto: 'TALLER OFICIAL DE REGALO',
       link: `/dashboard/cursos/${tallerOficial.id}`
+    };
+  } else {
+    cursoData = {
+      tiene: false,
+      titulo: 'Sin cursos canjeados',
+      id: '',
+      avance: 0,
+      sesionTexto: 'Canjea cursos libres de especialización con tus créditos.',
+      link: '/dashboard/canjear'
     };
   }
 
@@ -371,7 +467,7 @@ export default async function DashboardPage() {
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
             <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl drop-shadow-md [text-wrap:balance]">
-              ¡Hola, <span className="text-indigo-400 font-black">{primerNombre}</span>, bienvenid@ a tu ruta de aprendizaje!
+              ¡Hola, <span className="text-blue-400 font-black">{primerNombre}</span>, bienvenid@ a tu ruta de aprendizaje!
             </h1>
           </div>
         </div>
@@ -414,129 +510,174 @@ export default async function DashboardPage() {
         </section>
       )}
 
-      {/* SECCIÓN 1 (PRIMERA): PROGRESO ACADÉMICO */}
+      {/* SECCIÓN 1 (PRIMERA): PROGRESO ACADÉMICO - CONTINUAR DONDE TE QUEDASTE */}
       <section className="mx-auto max-w-6xl px-6 sm:px-10 lg:px-16 pt-10">
-        <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-sm border border-slate-200 dark:border-slate-800">
-          <div className="mb-6">
-            <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider block mb-1">
-              Progreso Académico
-            </span>
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-              Continuar donde te quedaste
-            </h2>
-          </div>
+        <div className="mb-6">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+            Continuar donde te quedaste
+          </h2>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            
-            {/* Tarjeta de Mis Diplomados */}
-            <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-4 hover:border-indigo-300 dark:hover:border-indigo-500/40 transition">
-              <div className="flex items-start gap-4">
-                <div className="size-12 rounded-xl bg-indigo-600 text-white grid place-items-center shrink-0 shadow-sm">
-                  <Award className="size-6" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider block mb-0.5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          {/* Tarjeta 1: Mis Diplomados (Recurso Académico - Azul Institucional) */}
+          <article className="relative rounded-3xl bg-white dark:bg-slate-900 p-6 sm:p-7 shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-blue-300 dark:hover:border-blue-500/40 transition">
+            <div>
+              {/* Encabezado: Icono a la izquierda y Título al lado */}
+              <div className="flex items-center justify-between gap-3 mb-5">
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className="grid size-10 place-items-center rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-100 dark:border-blue-900/50 shrink-0">
+                    <GraduationCap className="size-5" />
+                  </div>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white truncate">
                     Mis diplomados
-                  </span>
-                  <h3 className="font-bold text-base text-slate-900 dark:text-white mt-0.5 line-clamp-2 [text-wrap:balance]">
-                    {diplomadoPrincipal.titulo}
                   </h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-2">
-                    {diplomadoPrincipal.modulos[0] ? `${diplomadoPrincipal.modulos[0].codigo}: ${diplomadoPrincipal.modulos[0].nombre}` : 'MÓDULO 01'}
-                  </p>
                 </div>
+                {diplomadoData.tiene && (
+                  <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full border shrink-0 ${
+                    diplomadoData.avance === 100
+                      ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800'
+                      : diplomadoData.avance > 0
+                      ? 'bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800'
+                      : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700'
+                  }`}>
+                    {diplomadoData.avance === 100 ? 'Completado' : diplomadoData.avance > 0 ? 'En progreso' : 'Por iniciar'}
+                  </span>
+                )}
               </div>
 
+              {/* Título del diplomado y módulo integrado */}
+              <div className="min-h-[4.5rem] flex flex-col justify-center mb-2">
+                <h4 className="font-extrabold text-base sm:text-lg text-slate-900 dark:text-white leading-snug line-clamp-2 [text-wrap:balance]">
+                  {diplomadoData.titulo}
+                </h4>
+                <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 line-clamp-1 mt-1">
+                  {diplomadoData.moduloTexto}
+                </p>
+              </div>
+            </div>
+
+            {/* Zona inferior alineada: Avance + Barra + Acciones */}
+            <div className="mt-auto pt-5 border-t border-slate-100 dark:border-slate-800/80 space-y-4">
               {/* Barra de Avance */}
-              <div className="space-y-1.5 pt-2">
-                <div className="flex justify-between text-xs font-bold">
+              <div className="space-y-2">
+                <div className="flex justify-between items-center text-xs font-bold">
                   <span className="text-slate-600 dark:text-slate-400">Avance</span>
-                  <span className="text-indigo-600 dark:text-indigo-400">{avanceEstudiante}%</span>
+                  <span className="text-blue-600 dark:text-blue-400 tabular-nums">
+                    {diplomadoData.avance}%
+                  </span>
                 </div>
-                <div className="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
-                  <div className="bg-indigo-600 h-full rounded-full" style={{ width: `${avanceEstudiante}%` }} />
+                <div className="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                  <div 
+                    className="bg-blue-600 h-full rounded-full transition-all duration-500" 
+                    style={{ width: `${diplomadoData.avance}%` }} 
+                  />
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-slate-200 dark:border-slate-700/60 flex items-center justify-between gap-2">
+              {/* Acciones */}
+              <div className="flex items-center justify-between gap-3 pt-1">
                 <Link 
                   href={tieneDeudaVencida ? "/dashboard/pagos?bloqueado=deuda" : "/dashboard/diplomados"}
-                  className="text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline inline-flex items-center gap-1"
+                  className="text-xs font-bold text-slate-600 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition inline-flex items-center gap-1"
                 >
-                  Ver mis Diplomados <ArrowUpRight className="size-3.5" />
+                  Ver diplomados <ArrowUpRight className="size-3.5" />
                 </Link>
 
                 <Link 
-                  href={tieneDeudaVencida ? "/dashboard/pagos?bloqueado=deuda" : `/dashboard/reproductor?slug=${diplomadoPrincipal.slug}`}
-                  className="inline-flex items-center gap-2 text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-xl shadow-sm transition"
+                  href={tieneDeudaVencida ? "/dashboard/pagos?bloqueado=deuda" : diplomadoData.link}
+                  className="inline-flex items-center gap-2 text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl shadow-sm transition hover:shadow-blue-500/25 group cursor-pointer"
                 >
-                  <span className="grid size-5 place-items-center rounded-full bg-white text-indigo-600">
-                    <Play className="size-3 fill-indigo-600 ml-0.5" />
-                  </span>
-                  Reanudar clase
+                  <span>{diplomadoData.avance === 0 ? 'Comenzar diplomado' : 'Continuar diplomado'}</span>
+                  <ArrowRight className="size-4 group-hover:translate-x-0.5 transition-transform" />
                 </Link>
               </div>
             </div>
+          </article>
 
-            {/* Tarjeta de Mis Cursos */}
-            <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-4 hover:border-emerald-300 dark:hover:border-emerald-500/40 transition">
-              <div className="flex items-start gap-4">
-                <div className="size-12 rounded-xl bg-emerald-600 text-white grid place-items-center shrink-0 shadow-sm">
-                  <BookOpenCheck className="size-6" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider block mb-0.5">
+          {/* Tarjeta 2: Mis Cursos (Recurso Académico - Azul Institucional) */}
+          <article className="relative rounded-3xl bg-white dark:bg-slate-900 p-6 sm:p-7 shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-blue-300 dark:hover:border-blue-500/40 transition">
+            <div>
+              {/* Encabezado: Icono a la izquierda y Título al lado */}
+              <div className="flex items-center justify-between gap-3 mb-5">
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className="grid size-10 place-items-center rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-100 dark:border-blue-900/50 shrink-0">
+                    <BookOpen className="size-5" />
+                  </div>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white truncate">
                     Mis cursos
-                  </span>
-                  <h3 className="font-bold text-base text-slate-900 dark:text-white mt-0.5 line-clamp-2 [text-wrap:balance]">
-                    {cursoPrincipal.titulo}
                   </h3>
                 </div>
-              </div>
-
-              {/* Barra de Avance */}
-              <div className="space-y-1.5 pt-2">
-                <div className="flex justify-between text-xs font-bold">
-                  <span className="text-slate-600 dark:text-slate-400">Avance</span>
-                  <span className="text-emerald-600 dark:text-emerald-400">{cursoPrincipal.avance}%</span>
-                </div>
-                <div className="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
-                  <div className="bg-emerald-600 h-full rounded-full" style={{ width: `${cursoPrincipal.avance}%` }} />
-                </div>
-              </div>
-
-              <div className="pt-3 border-t border-slate-200 dark:border-slate-700/60 flex items-center justify-between gap-2">
-                <Link 
-                  href={tieneDeudaVencida ? "/dashboard/pagos?bloqueado=deuda" : "/dashboard/cursos"}
-                  className="text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-1"
-                >
-                  Ver mis Cursos <ArrowUpRight className="size-3.5" />
-                </Link>
-
-                <Link 
-                  href={tieneDeudaVencida ? "/dashboard/pagos?bloqueado=deuda" : cursoPrincipal.link}
-                  className="inline-flex items-center gap-2 text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-xl shadow-sm transition"
-                >
-                  <span className="grid size-5 place-items-center rounded-full bg-white text-emerald-600">
-                    <Play className="size-3 fill-emerald-600 ml-0.5" />
+                {cursoData.tiene && (
+                  <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full border shrink-0 ${
+                    cursoData.avance === 100
+                      ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800'
+                      : cursoData.avance > 0
+                      ? 'bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800'
+                      : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700'
+                  }`}>
+                    {cursoData.avance === 100 ? 'Completado' : cursoData.avance > 0 ? 'En progreso' : 'Por iniciar'}
                   </span>
-                  Continuar curso
-                </Link>
+                )}
+              </div>
+
+              {/* Título del curso limpio */}
+              <div className="min-h-[4.5rem] flex flex-col justify-center mb-2">
+                <h4 className="font-extrabold text-base sm:text-lg text-slate-900 dark:text-white leading-snug line-clamp-2 [text-wrap:balance]">
+                  {cursoData.titulo}
+                </h4>
               </div>
             </div>
 
-          </div>
+            {/* Zona inferior alineada: Avance + Barra + Acciones */}
+            <div className="mt-auto pt-5 border-t border-slate-100 dark:border-slate-800/80 space-y-4">
+              {/* Barra de Avance */}
+              <div className="space-y-2">
+                <div className="flex justify-between items-center text-xs font-bold">
+                  <span className="text-slate-600 dark:text-slate-400">Avance</span>
+                  <span className="text-blue-600 dark:text-blue-400 tabular-nums">
+                    {cursoData.avance}%
+                  </span>
+                </div>
+                <div className="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                  <div 
+                    className="bg-blue-600 h-full rounded-full transition-all duration-500" 
+                    style={{ width: `${cursoData.avance}%` }} 
+                  />
+                </div>
+              </div>
+
+              {/* Acciones */}
+              <div className="flex items-center justify-between gap-3 pt-1">
+                <Link 
+                  href={tieneDeudaVencida ? "/dashboard/pagos?bloqueado=deuda" : "/dashboard/cursos"}
+                  className="text-xs font-bold text-slate-600 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition inline-flex items-center gap-1"
+                >
+                  Ver cursos <ArrowUpRight className="size-3.5" />
+                </Link>
+
+                <Link 
+                  href={tieneDeudaVencida ? "/dashboard/pagos?bloqueado=deuda" : cursoData.link}
+                  className="inline-flex items-center gap-2 text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl shadow-sm transition hover:shadow-blue-500/25 group cursor-pointer"
+                >
+                  <span>{cursoData.avance === 0 ? 'Comenzar curso' : 'Continuar curso'}</span>
+                  <ArrowRight className="size-4 group-hover:translate-x-0.5 transition-transform" />
+                </Link>
+              </div>
+            </div>
+          </article>
+
         </div>
       </section>
 
       {/* SECCIÓN 2 (SEGUNDA): CRÉDITOS Y ESTADO DE CUENTA */}
       <section className="mx-auto grid max-w-6xl gap-6 px-6 py-10 sm:px-10 lg:grid-cols-3 lg:px-16">
         
-        {/* Widget 1: Créditos EDUMIN disponibles */}
-        <article className="relative rounded-3xl bg-white dark:bg-slate-900 p-6 sm:p-7 shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-indigo-300 dark:hover:border-indigo-500/40 transition">
+        {/* Widget 1: Créditos EDUMIN disponibles (Ámbar / Oro) */}
+        <article className="relative rounded-3xl bg-white dark:bg-slate-900 p-6 sm:p-7 shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-amber-300 dark:hover:border-amber-500/40 transition">
           <div>
             <div className="flex items-center gap-3 mb-5">
-              <div className="grid size-10 place-items-center rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-900/50 shrink-0">
+              <div className="grid size-10 place-items-center rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 border border-amber-100 dark:border-amber-900/50 shrink-0">
                 <BookOpenCheck className="size-5" />
               </div>
               <h3 className="text-lg font-bold text-slate-900 dark:text-white">Créditos EDUMIN</h3>
@@ -578,31 +719,23 @@ export default async function DashboardPage() {
           {eduminCredits.total.disponibles > 0 ? (
             <Link
               href={tieneDeudaVencida ? "/dashboard/pagos?bloqueado=deuda" : "/dashboard/canjear"}
-              className="mt-6 inline-flex h-11 w-full justify-center items-center gap-2 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white px-4 text-xs font-bold transition shadow-sm shadow-indigo-600/20"
+              className="mt-6 inline-flex h-11 w-full justify-center items-center gap-2 rounded-2xl bg-amber-600 hover:bg-amber-700 text-white px-4 text-xs font-bold transition shadow-sm shadow-amber-600/20"
             >
-              <Sparkles className="size-4 " /> Canjear mis cursos y diplomados
+              <Sparkles className="size-4" /> Canjear mis créditos
             </Link>
           ) : (
-            <div className="mt-5 space-y-2">
-              <a
-                href={whatsappComprarCreditosUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-11 w-full justify-center items-center gap-2 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white px-4 text-xs font-bold transition shadow-sm shadow-emerald-600/20 cursor-pointer"
-              >
-                <ShoppingBag className="size-4" /> Comprar más créditos
-              </a>
-              <Link
-                href={tieneDeudaVencida ? "/dashboard/pagos?bloqueado=deuda" : "/dashboard/canjear"}
-                className="inline-flex h-9 w-full justify-center items-center gap-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 px-3 text-xs font-semibold transition"
-              >
-                Ver mis créditos canjeados
-              </Link>
-            </div>
+            <a
+              href={whatsappComprarCreditosUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex h-11 w-full justify-center items-center gap-2 rounded-2xl bg-amber-600 hover:bg-amber-700 text-white px-4 text-xs font-bold transition shadow-sm shadow-amber-600/20 cursor-pointer"
+            >
+              <ShoppingBag className="size-4" /> Comprar más créditos
+            </a>
           )}
         </article>
 
-        {/* Widget 2: Estado Financiero */}
+        {/* Widget 2: Estado Financiero (Esmeralda) */}
         <article className="relative rounded-3xl bg-white dark:bg-slate-900 p-6 sm:p-7 shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-emerald-300 dark:hover:border-emerald-500/40 transition">
           <div>
             <div className="flex items-center gap-3 mb-5">
@@ -648,7 +781,7 @@ export default async function DashboardPage() {
 
             <Link
               href="/dashboard/pagos"
-              className="inline-flex h-11 w-full justify-center items-center gap-2 rounded-2xl bg-slate-900 hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700 text-white px-4 text-xs font-bold transition shadow-sm border border-slate-800 dark:border-slate-700"
+              className="inline-flex h-11 w-full justify-center items-center gap-2 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white px-4 text-xs font-bold transition shadow-sm shadow-emerald-600/20"
             >
               Ver mis pagos <ArrowUpRight className="size-4" />
             </Link>
@@ -658,11 +791,11 @@ export default async function DashboardPage() {
         {/* Widget 3: Bolsa de Trabajo y Certificados del Estudiante */}
         <div className="flex flex-col gap-4 sm:gap-5">
           
-          {/* Tarjeta Acceso Directo a Mis Certificados */}
-          <article className="relative flex-1 rounded-3xl bg-white dark:bg-slate-900 p-5 sm:p-6 shadow-sm border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white flex flex-col justify-between hover:border-indigo-300 dark:hover:border-indigo-500/40 transition">
+          {/* Tarjeta Acceso Directo a Mis Certificados (Cian) */}
+          <article className="relative flex-1 rounded-3xl bg-white dark:bg-slate-900 p-5 sm:p-6 shadow-sm border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white flex flex-col justify-between hover:border-cyan-300 dark:hover:border-cyan-500/40 transition">
             <div>
               <div className="flex items-center gap-3 mb-2">
-                <div className="grid size-10 place-items-center rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-900/50 shrink-0">
+                <div className="grid size-10 place-items-center rounded-xl bg-cyan-50 dark:bg-cyan-950/60 text-cyan-600 dark:text-cyan-400 border border-cyan-100 dark:border-cyan-900/50 shrink-0">
                   <Award className="size-5" />
                 </div>
                 <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
@@ -674,18 +807,18 @@ export default async function DashboardPage() {
               </p>
             </div>
             <Link
-              className="mt-4 inline-flex h-10 w-full items-center justify-center gap-2 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-4 text-xs shadow-sm shadow-indigo-600/20 transition"
+              className="mt-4 inline-flex h-10 w-full items-center justify-center gap-2 rounded-2xl bg-cyan-600 hover:bg-cyan-700 text-white font-bold px-4 text-xs shadow-sm shadow-cyan-600/20 transition"
               href={tieneDeudaVencida ? "/dashboard/pagos?bloqueado=deuda" : "/dashboard/certificados"}
             >
               Ver mis certificados <ArrowUpRight className="size-4" />
             </Link>
           </article>
 
-          {/* Tarjeta de Bolsas de Trabajo (Regular y Exclusiva) */}
-          <article className="relative flex-1 rounded-3xl bg-white dark:bg-slate-900 p-5 sm:p-6 shadow-sm border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white flex flex-col justify-between hover:border-emerald-300 dark:hover:border-emerald-500/40 transition">
+          {/* Tarjeta de Bolsas de Trabajo (Regular y Exclusiva) (Púrpura / Morado) */}
+          <article className="relative flex-1 rounded-3xl bg-white dark:bg-slate-900 p-5 sm:p-6 shadow-sm border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white flex flex-col justify-between hover:border-purple-300 dark:hover:border-purple-500/40 transition">
             <div>
               <div className="flex items-center gap-3 mb-2">
-                <div className="grid size-10 place-items-center rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-900/50 shrink-0">
+                <div className="grid size-10 place-items-center rounded-xl bg-purple-50 dark:bg-purple-950/60 text-purple-600 dark:text-purple-400 border border-purple-100 dark:border-purple-900/50 shrink-0">
                   <Briefcase className="size-5" />
                 </div>
                 <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
@@ -701,7 +834,7 @@ export default async function DashboardPage() {
               {/* Botón 1: Bolsa de Trabajo Regular */}
               {bolsaTrabajoRegularHabilitada ? (
                 <a
-                  className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white px-4 text-xs font-bold transition shadow-sm shadow-emerald-600/20"
+                  className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-2xl bg-purple-600 hover:bg-purple-700 text-white px-4 text-xs font-bold transition shadow-sm shadow-purple-600/20"
                   href={bolsaRegularUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -711,16 +844,16 @@ export default async function DashboardPage() {
               ) : (
                 <button
                   disabled
-                  className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-2xl bg-emerald-600/90 text-white px-4 text-xs font-bold shadow-sm cursor-not-allowed select-none opacity-80"
+                  className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-2xl bg-slate-200 dark:bg-slate-800 text-slate-400 dark:text-slate-500 px-4 text-xs font-bold shadow-sm cursor-not-allowed select-none"
                 >
                   Bolsa de trabajo regular <ArrowUpRight className="size-4" />
                 </button>
               )}
 
-              {/* Botón 2: Bolsa de Trabajo Exclusiva */}
+              {/* Botón 2: Bolsa de Trabajo Exclusiva (Mismo color) */}
               {bolsaTrabajoExclusivaHabilitada ? (
                 <a
-                  className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white px-4 text-xs font-bold transition shadow-sm shadow-emerald-600/20"
+                  className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-2xl bg-purple-600 hover:bg-purple-700 text-white px-4 text-xs font-bold transition shadow-sm shadow-purple-600/20"
                   href={bolsaExclusivaUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -730,7 +863,7 @@ export default async function DashboardPage() {
               ) : (
                 <button
                   disabled
-                  className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-2xl bg-emerald-600/90 text-white px-4 text-xs font-bold shadow-sm cursor-not-allowed select-none opacity-80"
+                  className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-2xl bg-slate-200 dark:bg-slate-800 text-slate-400 dark:text-slate-500 px-4 text-xs font-bold shadow-sm cursor-not-allowed select-none"
                 >
                   Bolsa de trabajo exclusiva <ArrowUpRight className="size-4" />
                 </button>

@@ -28,6 +28,15 @@ import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
 import { StudentPageHeader } from '@/components/dashboard/StudentPageHeader';
 import { getClientCachedData, invalidateClientCache } from '@/lib/utils/clientCache';
 
+function formatoTipoDocumento(tipo?: string) {
+  if (!tipo) return 'DNI';
+  const t = tipo.toLowerCase();
+  if (t.includes('extranjer') || t === 'ce') return 'Carné de extranjería';
+  if (t.includes('pasaporte')) return 'Pasaporte';
+  if (t === 'otro') return 'Otro';
+  return 'DNI';
+}
+
 export default function PerfilEstudiante() {
   const { esOscuro } = useTheme();
 
@@ -64,7 +73,8 @@ export default function PerfilEstudiante() {
   const [formEdicion, setFormEdicion] = useState({
     nombres: nombres || '',
     apellidos: apellidos || '',
-    dni_ce: cachedProf?.dni_ce || cachedProf?.dni || '',
+    tipo_documento: cachedProf?.tipo_documento || 'DNI',
+    dni_ce: cachedProf?.numero_documento || cachedProf?.dni_ce || cachedProf?.dni || '',
     email: cachedProf?.email || '',
     celular: cachedProf?.telefono || cachedProf?.celular || '',
     fechaNacimiento: cachedProf?.fecha_nacimiento || '',
@@ -85,7 +95,8 @@ export default function PerfilEstudiante() {
             setFormEdicion({
               nombres: p.nombres || '',
               apellidos: p.apellidos || '',
-              dni_ce: p.dni_ce || p.dni || '',
+              tipo_documento: p.tipo_documento || 'DNI',
+              dni_ce: p.numero_documento || p.dni_ce || p.dni || '',
               email: p.email || '',
               celular: p.telefono || p.celular || '',
               fechaNacimiento: p.fecha_nacimiento || '',
@@ -261,6 +272,7 @@ export default function PerfilEstudiante() {
           nombresSolicitados: formEdicion.nombres,
           apellidosSolicitados: formEdicion.apellidos,
           dniSolicitado: formEdicion.dni_ce,
+          tipoDocumentoSolicitado: formEdicion.tipo_documento,
           celular: formEdicion.celular,
           residencia: formEdicion.residencia,
           declaracionJurada
@@ -279,6 +291,8 @@ export default function PerfilEstudiante() {
       ...prev,
       nombres: formEdicion.nombres,
       apellidos: formEdicion.apellidos,
+      tipo_documento: formEdicion.tipo_documento,
+      numero_documento: formEdicion.dni_ce,
       dni_ce: formEdicion.dni_ce,
       email: formEdicion.email,
       celular: formEdicion.celular,
@@ -446,20 +460,33 @@ export default function PerfilEstudiante() {
                 />
               </div>
 
-              {/* DNI y Email */}
+              {/* Documento de Identidad y Tipo */}
               <div>
                 <label className={`flex items-center gap-2 text-sm font-semibold mb-2 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
-                  <FileText className="w-4 h-4 text-slate-400" /> DNI / Carnet de extranjería
+                  <FileText className="w-4 h-4 text-indigo-400" /> Tipo de documento
                 </label>
                 <input 
                   type="text" 
                   readOnly 
-                  value={perfil?.dni_ce || perfil?.dni || formEdicion.dni_ce || ''} 
-                  placeholder="No registrado"
+                  value={formatoTipoDocumento(perfil?.tipo_documento)} 
                   className={`w-full border rounded-xl px-4 py-3 cursor-not-allowed focus:outline-none font-medium ${esOscuro ? 'bg-slate-950/60 border-slate-800 text-slate-300' : 'bg-slate-50 border-slate-200 text-slate-700'}`}
                 />
               </div>
 
+              <div>
+                <label className={`flex items-center gap-2 text-sm font-semibold mb-2 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
+                  <FileText className="w-4 h-4 text-slate-400" /> Número de documento
+                </label>
+                <input 
+                  type="text" 
+                  readOnly 
+                  value={perfil?.numero_documento || perfil?.dni_ce || perfil?.dni || formEdicion.dni_ce || ''} 
+                  placeholder="No registrado"
+                  className={`w-full border rounded-xl px-4 py-3 cursor-not-allowed focus:outline-none font-medium font-mono ${esOscuro ? 'bg-slate-950/60 border-slate-800 text-slate-300' : 'bg-slate-50 border-slate-200 text-slate-700'}`}
+                />
+              </div>
+
+              {/* Correo electrónico */}
               <div>
                 <label className={`flex items-center gap-2 text-sm font-semibold mb-2 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
                   <Mail className="w-4 h-4 text-slate-400" /> Correo electrónico
@@ -596,10 +623,27 @@ export default function PerfilEstudiante() {
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {/* DNI / CE */}
+                      {/* Tipo de documento */}
                       <div>
                         <label className={`block text-xs font-bold uppercase tracking-wider mb-1.5 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
-                          DNI / Carnet de extranjería
+                          Tipo de documento
+                        </label>
+                        <select 
+                          value={formEdicion.tipo_documento}
+                          onChange={(e) => setFormEdicion({ ...formEdicion, tipo_documento: e.target.value })}
+                          className={`w-full border rounded-xl px-4 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
+                        >
+                          <option value="DNI">DNI</option>
+                          <option value="CE">Carné de extranjería</option>
+                          <option value="PASAPORTE">Pasaporte</option>
+                          <option value="OTRO">Otro</option>
+                        </select>
+                      </div>
+
+                      {/* Número de documento */}
+                      <div>
+                        <label className={`block text-xs font-bold uppercase tracking-wider mb-1.5 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
+                          Número de documento
                         </label>
                         <input 
                           type="text" 
@@ -609,7 +653,9 @@ export default function PerfilEstudiante() {
                           className={`w-full border rounded-xl px-4 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-600 ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
                         />
                       </div>
+                    </div>
 
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {/* Correo electrónico */}
                       <div>
                         <label className={`block text-xs font-bold uppercase tracking-wider mb-1.5 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
@@ -623,10 +669,8 @@ export default function PerfilEstudiante() {
                           className={`w-full border rounded-xl px-4 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-600 ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
                         />
                       </div>
-                    </div>
 
-                    {/* Fila 3: Celular (Único Campo) + Fecha de nacimiento */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {/* Celular */}
                       <div>
                         <label className={`block text-xs font-bold uppercase tracking-wider mb-1.5 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
                           Número de celular
@@ -639,7 +683,10 @@ export default function PerfilEstudiante() {
                           className={`w-full border rounded-xl px-4 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-600 ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
                         />
                       </div>
+                    </div>
 
+                    {/* Fecha de nacimiento */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className={`block text-xs font-bold uppercase tracking-wider mb-1.5 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
                           Fecha de nacimiento
@@ -651,20 +698,20 @@ export default function PerfilEstudiante() {
                           className={`w-full border rounded-xl px-4 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-600 ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
                         />
                       </div>
-                    </div>
 
-                    {/* Fila 4 Completa: Lugar de residencia */}
-                    <div>
-                      <label className={`block text-xs font-bold uppercase tracking-wider mb-1.5 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
-                        Lugar de residencia
-                      </label>
-                      <input 
-                        type="text" 
-                        placeholder="Ej. Lima, Perú"
-                        value={formEdicion.residencia}
-                        onChange={(e) => setFormEdicion({ ...formEdicion, residencia: e.target.value })}
-                        className={`w-full border rounded-xl px-4 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-600 ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
-                      />
+                      {/* Lugar de residencia */}
+                      <div>
+                        <label className={`block text-xs font-bold uppercase tracking-wider mb-1.5 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
+                          Lugar de residencia
+                        </label>
+                        <input 
+                          type="text" 
+                          placeholder="Ej. Lima, Perú"
+                          value={formEdicion.residencia}
+                          onChange={(e) => setFormEdicion({ ...formEdicion, residencia: e.target.value })}
+                          className={`w-full border rounded-xl px-4 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-600 ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
+                        />
+                      </div>
                     </div>
 
                     {/* CONFIRMACIÓN MEDIANTE CHECKBOX / DECLARACIÓN JURADA */}

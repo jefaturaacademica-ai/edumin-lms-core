@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import * as XLSX from 'xlsx';
 import { 
-  Users, Search, RefreshCw, Eye, 
+  Users, Search, RefreshCw, Eye, Pencil,
   CheckCircle2, AlertTriangle, UserCheck, GraduationCap, Download,
   UserPlus, Plus, Sparkles, BookOpen, CreditCard, AlertCircle, ArrowRight,
   Check, Mail, Phone, Hash, Coins, Calendar,
@@ -80,6 +80,7 @@ export default function AdminEstudiantesPage() {
   const descargarPlantillaExcel = () => {
     const sampleRows = [
       {
+        TIPO_DOC: 'DNI',
         DNI_CE: '71234567',
         NOMBRES: 'Carlos Alberto',
         APELLIDOS: 'Quispe Ramos',
@@ -94,7 +95,8 @@ export default function AdminEstudiantesPage() {
         FECHA_NACIMIENTO: '1996-08-15'
       },
       {
-        DNI_CE: '72345678',
+        TIPO_DOC: 'CE',
+        DNI_CE: '001234567',
         NOMBRES: 'María Elena',
         APELLIDOS: 'Flores Vargas',
         EMAIL: 'maria.flores@hotmail.com',
@@ -108,7 +110,8 @@ export default function AdminEstudiantesPage() {
         FECHA_NACIMIENTO: '1994-03-22'
       },
       {
-        DNI_CE: '73456789',
+        TIPO_DOC: 'PASAPORTE',
+        DNI_CE: 'A8492019',
         NOMBRES: 'Jorge Luis',
         APELLIDOS: 'Mendoza Chávez',
         EMAIL: 'jorge.mendoza@outlook.com',
@@ -125,7 +128,8 @@ export default function AdminEstudiantesPage() {
 
     const worksheet = XLSX.utils.json_to_sheet(sampleRows);
     worksheet['!cols'] = [
-      { wch: 14 },
+      { wch: 12 },
+      { wch: 16 },
       { wch: 22 },
       { wch: 22 },
       { wch: 28 },
@@ -145,10 +149,10 @@ export default function AdminEstudiantesPage() {
 
   const descargarPlantillaCsv = () => {
     const csvContent =
-      'DNI_CE,NOMBRES,APELLIDOS,EMAIL,TELEFONO,PAQUETE,DIPLOMADO_INICIAL,TIPO_PAGO,TOTAL_CUOTAS,MONTO_TOTAL,MONTO_CUOTA,FECHA_NACIMIENTO\n' +
-      '71234567,Carlos Alberto,Quispe Ramos,carlos.quispe@gmail.com,987654321,COMPLETO,DERECHO MINERO,CUOTAS,3,540,180,1996-08-15\n' +
-      '72345678,María Elena,Flores Vargas,maria.flores@hotmail.com,912345678,FULL,GESTIÓN DE SEGURIDAD MINERA Y SALUD OCUPACIONAL,CUOTAS,3,900,300,1994-03-22\n' +
-      '73456789,Jorge Luis,Mendoza Chávez,jorge.mendoza@outlook.com,956789123,ILIMITADO,OPERACIONES MINERAS Y SOSTENIMIENTO DE LABORES,CONTADO,1,1500,1500,1992-11-05';
+      'TIPO_DOC,DNI_CE,NOMBRES,APELLIDOS,EMAIL,TELEFONO,PAQUETE,DIPLOMADO_INICIAL,TIPO_PAGO,TOTAL_CUOTAS,MONTO_TOTAL,MONTO_CUOTA,FECHA_NACIMIENTO\n' +
+      'DNI,71234567,Carlos Alberto,Quispe Ramos,carlos.quispe@gmail.com,987654321,COMPLETO,DERECHO MINERO,CUOTAS,3,540,180,1996-08-15\n' +
+      'CE,001234567,María Elena,Flores Vargas,maria.flores@hotmail.com,912345678,FULL,GESTIÓN DE SEGURIDAD MINERA Y SALUD OCUPACIONAL,CUOTAS,3,900,300,1994-03-22\n' +
+      'PASAPORTE,A8492019,Jorge Luis,Mendoza Chávez,jorge.mendoza@outlook.com,956789123,ILIMITADO,OPERACIONES MINERAS Y SOSTENIMIENTO DE LABORES,CONTADO,1,1500,1500,1992-11-05';
 
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
@@ -191,8 +195,16 @@ export default function AdminEstudiantesPage() {
 
       const procesadas = rawRows.map((row, idx) => {
         const dni_ce = String(
-          row.DNI_CE || row.DNI || row.dni || row.dni_ce || row['DNI / CE'] || row.DOCUMENTO || ''
+          row.DNI_CE || row.DNI || row.dni || row.dni_ce || row['DNI / CE'] || row.DOCUMENTO || row.NUMERO_DOCUMENTO || ''
         ).trim();
+
+        const tipo_documento_raw = String(
+          row.TIPO_DOC || row.TIPO_DOCUMENTO || row['TIPO DOC'] || row['TIPO DE DOCUMENTO'] || ''
+        ).trim().toUpperCase();
+
+        const tipo_documento = ['DNI', 'CE', 'PASAPORTE', 'OTRO'].includes(tipo_documento_raw)
+          ? tipo_documento_raw
+          : (dni_ce.length === 8 && /^\d+$/.test(dni_ce) ? 'DNI' : 'OTRO');
 
         const nombres = String(
           row.NOMBRES || row.NOMBRE || row.nombres || row.nombre || ''
@@ -250,6 +262,8 @@ export default function AdminEstudiantesPage() {
         return {
           filaNum: idx + 2,
           dni_ce,
+          numero_documento: dni_ce,
+          tipo_documento,
           nombres,
           apellidos,
           email,
@@ -297,6 +311,8 @@ export default function AdminEstudiantesPage() {
         body: JSON.stringify({
           estudiantes: listos.map(item => ({
             dni_ce: item.dni_ce,
+            numero_documento: item.numero_documento || item.dni_ce,
+            tipo_documento: (item as any).tipo_documento || 'DNI',
             nombres: item.nombres,
             apellidos: item.apellidos,
             email: item.email,
@@ -334,6 +350,7 @@ export default function AdminEstudiantesPage() {
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
+  const [nuevoTipoDoc, setNuevoTipoDoc] = useState<'DNI' | 'CE' | 'PASAPORTE' | 'OTRO'>('DNI');
   const [nuevoDni, setNuevoDni] = useState('');
   const [nuevoNombres, setNuevoNombres] = useState('');
   const [nuevoApellidos, setNuevoApellidos] = useState('');
@@ -489,6 +506,8 @@ export default function AdminEstudiantesPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          tipo_documento: nuevoTipoDoc,
+          numero_documento: nuevoDni.trim(),
           dni_ce: nuevoDni.trim(),
           nombres: nuevoNombres.trim(),
           apellidos: nuevoApellidos.trim(),
@@ -510,11 +529,12 @@ export default function AdminEstudiantesPage() {
 
       if (res.ok && data.success) {
         setMensajeNuevo({
-          texto: `¡Estudiante ${nuevoNombres} ${nuevoApellidos} creado exitosamente! Credenciales por defecto: DNI ${nuevoDni.trim()}`,
+          texto: `¡Estudiante ${nuevoNombres} ${nuevoApellidos} creado exitosamente! Credenciales por defecto: [${nuevoTipoDoc}] ${nuevoDni.trim()}`,
           tipo: 'exito'
         });
 
         // Limpiar formulario
+        setNuevoTipoDoc('DNI');
         setNuevoDni('');
         setNuevoNombres('');
         setNuevoApellidos('');
@@ -862,7 +882,7 @@ export default function AdminEstudiantesPage() {
                   <table className="w-full text-left border-collapse">
                     <thead>
                       <tr className="border-b border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50 text-slate-400 text-[10px] uppercase tracking-wider font-bold">
-                        <th className="py-3 px-4">DNI / CE</th>
+                        <th className="py-3 px-4">Documento</th>
                         <th className="py-3 px-4">Estudiante</th>
                         <th className="py-3 px-4">Programa principal</th>
                         <th className="py-3 px-4">Paquete y créditos</th>
@@ -889,7 +909,20 @@ export default function AdminEstudiantesPage() {
                         estudiantesFiltrados.map((est) => (
                           <tr key={est.id || est.dni_ce} className="hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition">
                             <td className="py-3 px-4 font-mono font-bold text-slate-900 dark:text-white">
-                              {est.dni_ce}
+                              <div className="flex items-center gap-1.5 flex-wrap">
+                                <span className={`text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider border ${
+                                  est.tipo_documento === 'PASAPORTE'
+                                    ? 'bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-800'
+                                    : est.tipo_documento === 'CE'
+                                    ? 'bg-purple-50 dark:bg-purple-950/40 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800'
+                                    : est.tipo_documento === 'OTRO'
+                                    ? 'bg-cyan-50 dark:bg-cyan-950/40 text-cyan-700 dark:text-cyan-300 border-cyan-200 dark:border-cyan-800'
+                                    : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700'
+                                }`}>
+                                  {est.tipo_documento || 'DNI'}
+                                </span>
+                                <span>{est.numero_documento || est.dni_ce}</span>
+                              </div>
                             </td>
                             <td className="py-3 px-4">
                               <div className="flex items-center gap-2.5">
@@ -946,13 +979,24 @@ export default function AdminEstudiantesPage() {
                               </span>
                             </td>
                             <td className="py-3 px-4 text-center">
-                              <button
-                                onClick={() => setAlumnoSeleccionado(est)}
-                                className="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-indigo-50 dark:bg-slate-800 dark:hover:bg-indigo-950 text-indigo-600 dark:text-indigo-400 px-3 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer"
-                              >
-                                <Eye className="w-3.5 h-3.5" />
-                                Ficha 360°
-                              </button>
+                              <div className="flex items-center justify-center gap-1.5">
+                                <button
+                                  onClick={() => setAlumnoSeleccionado(est)}
+                                  className="inline-flex items-center gap-1 bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-950/60 dark:hover:bg-indigo-900/60 text-indigo-700 dark:text-indigo-300 px-2.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer border border-indigo-200/60 dark:border-indigo-800/60"
+                                  title="Ver y editar ficha completa del estudiante"
+                                >
+                                  <Pencil className="w-3.5 h-3.5" />
+                                  <span>Editar</span>
+                                </button>
+                                <button
+                                  onClick={() => setAlumnoSeleccionado(est)}
+                                  className="inline-flex items-center gap-1 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 px-2.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer"
+                                  title="Ver Ficha 360°"
+                                >
+                                  <Eye className="w-3.5 h-3.5 text-slate-400" />
+                                  <span>Ficha</span>
+                                </button>
+                              </div>
                             </td>
                           </tr>
                         ))
@@ -1026,20 +1070,37 @@ export default function AdminEstudiantesPage() {
                   <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-2">
                     <UserCheck className="w-4 h-4 text-indigo-500" /> 1. Datos personales del estudiante
                   </h3>
+                  
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
-                        DNI / Carnet de extranjería *
+                        Tipo de documento *
+                      </label>
+                      <select
+                        value={nuevoTipoDoc}
+                        onChange={(e) => setNuevoTipoDoc(e.target.value as any)}
+                        className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                      >
+                        <option value="DNI">DNI</option>
+                        <option value="CE">Carné de extranjería</option>
+                        <option value="PASAPORTE">Pasaporte</option>
+                        <option value="OTRO">Otro</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                        Número de documento *
                       </label>
                       <div className="relative">
                         <Hash className="w-4 h-4 text-slate-400 absolute left-3 top-3 pointer-events-none" />
                         <input 
                           type="text" 
                           required
-                          placeholder="Ej: 71234567"
+                          placeholder="Número de documento"
                           value={nuevoDni}
                           onChange={(e) => setNuevoDni(e.target.value)}
-                          className="w-full pl-9 pr-3 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                          className="w-full pl-9 pr-3 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-600 font-mono"
                         />
                       </div>
                     </div>
@@ -1105,7 +1166,7 @@ export default function AdminEstudiantesPage() {
                       </div>
                     </div>
 
-                    <div>
+                    <div className="sm:col-span-2">
                       <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                         Fecha de nacimiento (opcional)
                       </label>

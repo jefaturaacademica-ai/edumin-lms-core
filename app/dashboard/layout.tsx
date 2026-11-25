@@ -157,14 +157,14 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
                   }
                   if (setMobileMenuOpen) setMobileMenuOpen(false);
                 }}
-                className={`w-full flex items-center justify-between px-4 py-3 rounded-xl border text-sm leading-5 transition-colors duration-150 outline-none focus:outline-none focus-visible:ring-1 focus-visible:ring-indigo-400/50 ${
+                className={`w-full flex items-center justify-between px-4 py-3 rounded-xl border text-sm leading-5 transition-colors duration-150 outline-none focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-400/50 ${
                   isActive 
-                    ? 'bg-indigo-600/10 text-indigo-400 font-semibold border-indigo-500/20' 
+                    ? 'bg-blue-600/15 text-blue-400 font-semibold border-blue-500/30' 
                     : 'border-transparent font-medium hover:bg-white/5 hover:text-white text-slate-300'
                 }`}
               >
                 <div className="flex items-center gap-3 min-w-0">
-                  <Icon className={`w-5 h-5 shrink-0 ${isActive ? 'text-indigo-400' : 'text-slate-500'}`} />
+                  <Icon className={`w-5 h-5 shrink-0 ${isActive ? 'text-blue-400' : 'text-slate-500'}`} />
                   <span className="truncate">{item.name}</span>
                 </div>
               </Link>
@@ -225,14 +225,14 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
                   }
                   if (setMobileMenuOpen) setMobileMenuOpen(false);
                 }}
-                className={`w-full flex items-center justify-between px-4 py-3 rounded-xl border text-sm leading-5 transition-colors duration-150 outline-none focus:outline-none focus-visible:ring-1 focus-visible:ring-indigo-400/50 ${
+                className={`w-full flex items-center justify-between px-4 py-3 rounded-xl border text-sm leading-5 transition-colors duration-150 outline-none focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-400/50 ${
                   isActive 
-                    ? 'bg-indigo-600/10 text-indigo-400 font-semibold border-indigo-500/20' 
+                    ? 'bg-blue-600/15 text-blue-400 font-semibold border-blue-500/30' 
                     : 'border-transparent font-medium hover:bg-white/5 hover:text-white text-slate-300'
                 }`}
               >
                 <div className="flex items-center gap-3 min-w-0">
-                  <Icon className={`w-5 h-5 shrink-0 ${isActive ? 'text-indigo-400' : 'text-slate-500'}`} />
+                  <Icon className={`w-5 h-5 shrink-0 ${isActive ? 'text-blue-400' : 'text-slate-500'}`} />
                   <span className="truncate">{item.name}</span>
                 </div>
               </Link>

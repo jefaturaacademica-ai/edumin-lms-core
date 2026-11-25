@@ -700,7 +700,9 @@ export default function AvanzaCertificateRenderer({
   const [qrDataUrl, setQrDataUrl] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!incluyeQr || !cfg.qr.visible || !codigo) return;
+    const qrBloqueado = codigo === 'EDUMIN-BLOQUEADO';
+    const mostrarQr = !qrBloqueado && Boolean(cfg.qr.visible);
+    if (!mostrarQr || !codigo) return;
     try {
       const qrTargetUrl = generarUrlQRValidacion(codigo);
       QRCode.toDataURL(qrTargetUrl, {
@@ -1143,7 +1145,7 @@ export default function AvanzaCertificateRenderer({
       )}
 
       {/* 4. CÓDIGO QR 1:1 CON VALIDADOR */}
-      {incluyeQr && cfg.qr.visible && (
+      {codigo !== 'EDUMIN-BLOQUEADO' && cfg.qr.visible && (
         <div 
           onMouseDown={(e) => handleIniciarArrastre('qr', e)}
           onTouchStart={(e) => handleIniciarArrastre('qr', e)}

@@ -364,7 +364,9 @@ export async function POST(request: Request) {
               const payloadMod = {
                 codigo_verificacion: codVerifModular,
                 profile_id: profile.id,
-                dni_ce: profile.dni_ce,
+                dni_ce: profile.numero_documento || profile.dni_ce,
+                numero_documento: profile.numero_documento || profile.dni_ce,
+                tipo_documento: profile.tipo_documento || 'DNI',
                 estudiante_nombre: nombreEstudianteOficial,
                 tipo: 'MODULAR',
                 programa_titulo: targetDip.titulo,
@@ -446,7 +448,9 @@ export async function POST(request: Request) {
             const payloadDip = {
               codigo_verificacion: codVerifDip,
               profile_id: profile.id,
-              dni_ce: profile.dni_ce,
+              dni_ce: profile.numero_documento || profile.dni_ce,
+              numero_documento: profile.numero_documento || profile.dni_ce,
+              tipo_documento: profile.tipo_documento || 'DNI',
               estudiante_nombre: nombreEstudianteOficial,
               tipo: 'DIPLOMA',
               programa_titulo: targetDip.titulo,
@@ -477,6 +481,18 @@ export async function POST(request: Request) {
         const codCurso = targetCurso.codigo || targetCurso.id || '';
         const modeloCurso = resolverModeloCertificado(modelosConfig, 'CURSO', targetCurso.titulo, codCurso);
 
+        // Persistir inmediatamente el codigo_cert en el JSON de cursos del perfil del alumno
+        try {
+          await admin
+            .from('profiles')
+            .update({
+              cursos: `CURSOS_LIST|${JSON.stringify(cursosList)}`
+            })
+            .eq('id', profile.id);
+        } catch (eUpdCursos) {
+          console.warn('Advertencia actualizando codigo_cert en profiles.cursos:', eUpdCursos);
+        }
+
         const { data: certCursoExistente } = await admin
           .from('certificaciones')
           .select('id, plantilla_snapshot')
@@ -490,40 +506,65 @@ export async function POST(request: Request) {
           ? `${String(disCur?.creditos?.creditosValor || modeloCurso?.creditos || '2').match(/\d+/)?.[0] || '2'} ${String(disCur?.creditos?.sufijo ?? disCur?.creditos?.sufijoCreditos ?? '').trim() || 'créditos académicos'}`
           : null;
 
+        let horasCatBd = '';
+        try {
+          const { data: prodCatList } = await admin
+            .from('diplomados_y_cursos')
+            .select('horas, creditos')
+            .or(`id.eq.${targetCurso.id || 'none'},codigo.eq.${targetCurso.codigo || targetSlug || 'none'}`)
+            .limit(1);
+          if (prodCatList && prodCatList.length > 0 && prodCatList[0].horas) {
+            horasCatBd = String(prodCatList[0].horas).toLowerCase().includes('hora')
+              ? String(prodCatList[0].horas)
+              : `${prodCatList[0].horas} horas académicas`;
+          }
+        } catch (eCat) {
+          // Fallback silencioso si falla la consulta
+        }
+
+        const duracionRaw = targetCurso.horas || targetCurso.duracion || horasCatBd || '';
+        const horasCur = duracionRaw
+          ? (String(duracionRaw).toLowerCase().includes('hora') ? String(duracionRaw) : `${duracionRaw} horas académicas`)
+          : (modeloCurso?.horas && !modeloCurso.horas.includes('325') ? modeloCurso.horas : '40 horas académicas');
+
         const snapshotCurso = {
           modelo_id: modeloCurso?.id || 'mod-226455',
           nombrePlantilla: modeloCurso?.nombre || 'Certificado global para cursos cortos',
-          horas: targetCurso.horas || modeloCurso?.horas || '24 horas académicas',
+          horas: horasCur,
           ...(creditosCur ? { creditos: creditosCur } : {}),
           ciudad: 'Arequipa',
           orientacion: modeloCurso?.orientacion || 'vertical',
           imagenFondoUrl: modeloCurso?.imagenFondoUrl || 'https://wluuomwkxywpfotbngwf.supabase.co/storage/v1/object/public/certificados/fondos/plantilla_1792606225470_g6hsm1j.webp',
           disenoCoordenadas: modeloCurso?.disenoCoordenadas || null,
-          incluyeQr: modeloCurso?.incluyeQr !== false,
+          incluyeQr: modeloCurso?.disenoCoordenadas?.qr?.visible !== undefined ? Boolean(modeloCurso.disenoCoordenadas.qr.visible) : (modeloCurso?.incluyeQr !== false),
           fechaEmision: fechaEmisionHoy
         };
 
         if (certCursoExistente) {
           const tieneSnapshotCompleto = certCursoExistente.plantilla_snapshot?.imagenFondoUrl && certCursoExistente.plantilla_snapshot?.disenoCoordenadas;
+          const esModeloEspecificoNuevo = modeloCurso?.asignacionAlcance === 'PRODUCTO_ESPECIFICO' && certCursoExistente.plantilla_snapshot?.modelo_id !== modeloCurso.id;
           await admin
             .from('certificaciones')
             .update({
+              horas_lectivas: horasCur,
               nota_final: typeof targetCurso.nota === 'number' && targetCurso.nota > 0 ? Math.round(targetCurso.nota) : null,
               fecha_emision: fechaEmisionHoy,
               estado_financiero_al_dia: !profile.bloqueado,
-              ...(!tieneSnapshotCompleto ? { plantilla_snapshot: snapshotCurso } : {})
+              ...(esModeloEspecificoNuevo || !tieneSnapshotCompleto ? { plantilla_snapshot: snapshotCurso } : {})
             })
             .eq('id', certCursoExistente.id);
         } else {
           const payloadCur = {
             codigo_verificacion: codVerifCurso,
             profile_id: profile.id,
-            dni_ce: profile.dni_ce,
+            dni_ce: profile.numero_documento || profile.dni_ce,
+            numero_documento: profile.numero_documento || profile.dni_ce,
+            tipo_documento: profile.tipo_documento || 'DNI',
             estudiante_nombre: nombreEstudianteOficial,
             tipo: 'CURSO',
             programa_titulo: targetCurso.titulo,
             modulo_titulo: null,
-            horas_lectivas: targetCurso.horas || modeloCurso?.horas || '24 horas académicas',
+            horas_lectivas: horasCur,
             creditos: creditosCur,
             nota_final: typeof targetCurso.nota === 'number' && targetCurso.nota > 0 ? Math.round(targetCurso.nota) : null,
             fecha_emision: fechaEmisionHoy,
