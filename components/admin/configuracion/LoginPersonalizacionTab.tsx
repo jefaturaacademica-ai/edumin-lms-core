@@ -339,7 +339,7 @@ export function LoginPersonalizacionTab() {
             {/* Columna Izquierda: Textarea con Código HTML */}
             <div className="space-y-1.5">
               <div className="flex items-center justify-between text-xs text-slate-500 font-semibold px-1">
-                <span>Código HTML & Tailwind / CSS:</span>
+                <span>Código HTML y Tailwind / CSS:</span>
                 <span className="tabular-nums text-[10px] text-slate-400">
                   {htmlPersonalizado.length} caracteres
                 </span>

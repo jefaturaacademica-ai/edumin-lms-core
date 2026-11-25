@@ -870,7 +870,7 @@ export default function AvanzaCertificateRenderer({
   };
 
 
-  // Manejador interactivo de Drag & Drop para ubicar elementos directamente en el canvas A4
+  // Manejador interactivo de Arrastrar y Soltar (Drag and Drop) para ubicar elementos directamente en el canvas A4
   // REGLA SOLICITADA: Solo permite arrastrar la variable ACTIVA.
   // Si se presiona sobre otra variable, únicamente la selecciona en el editor para evitar movimientos involuntarios.
   const handleIniciarArrastre = (campo: keyof DisenoCoordenadas, e: React.MouseEvent | React.TouchEvent) => {

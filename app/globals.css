@@ -50,7 +50,7 @@ input[type="tel"] {
   scrollbar-width: none;
 }
 
-/* Scrollbar personalizado sutil y oscuro acorde al Sidebar (Estudiante & Admin) */
+/* Scrollbar personalizado sutil y oscuro acorde al Sidebar (Estudiante y Admin) */
 .sidebar-scroll {
   scrollbar-gutter: stable;
 }

@@ -528,6 +528,7 @@ export async function GET(request?: Request) {
         creditos_extra_diplomados: cupos.diplomados.adicionales,
         creditos_extra_cursos: cupos.cursos.adicionales,
         fecha_nacimiento: p.fecha_nacimiento || null,
+        residencia: p.residencia || null,
         avance_porcentaje: avanceCalculado,
         nota_promedio: p.nota_promedio ?? 0,
         ultima_conexion: p.ultima_conexion || 'Hace 1 hora',
@@ -563,7 +564,7 @@ export async function PATCH(request: Request) {
     const admin = createAdminClient();
 
     if (action === 'update_perfil') {
-      const { nombres, apellidos, new_dni_ce, email, telefono, fecha_nacimiento, paquete_adquirido, bloqueado, prorroga_hasta, role } = body;
+      const { nombres, apellidos, new_dni_ce, email, telefono, fecha_nacimiento, paquete_adquirido, bloqueado, prorroga_hasta, role, residencia } = body;
 
       let profileQuery = admin.from('profiles').select('*');
       if (studentId) profileQuery = profileQuery.eq('id', studentId);
@@ -582,6 +583,7 @@ export async function PATCH(request: Request) {
       if (email !== undefined) updateData.email = String(email).trim().toLowerCase();
       if (telefono !== undefined) updateData.telefono = String(telefono).trim();
       if (fecha_nacimiento !== undefined) updateData.fecha_nacimiento = fecha_nacimiento ? String(fecha_nacimiento).trim() : null;
+      if (residencia !== undefined) updateData.residencia = residencia ? String(residencia).trim() : null;
       if (paquete_adquirido !== undefined) updateData.paquete_adquirido = String(paquete_adquirido).trim().toUpperCase();
       if (bloqueado !== undefined) updateData.bloqueado = Boolean(bloqueado);
       if (prorroga_hasta !== undefined) updateData.prorroga_hasta = prorroga_hasta || null;
@@ -594,12 +596,25 @@ export async function PATCH(request: Request) {
         };
       }
 
-      const { data: updated, error: updateErr } = await admin
+      let { data: updated, error: updateErr } = await admin
         .from('profiles')
         .update(updateData)
         .eq('id', currentProfile.id)
         .select()
         .single();
+
+      // Si falla porque la columna residencia aún no existe en Supabase, reintentar sin residencia
+      if (updateErr && updateErr.message?.includes('residencia')) {
+        delete updateData.residencia;
+        const retryResult = await admin
+          .from('profiles')
+          .update(updateData)
+          .eq('id', currentProfile.id)
+          .select()
+          .single();
+        updated = retryResult.data;
+        updateErr = retryResult.error;
+      }
 
       if (updateErr) {
         return NextResponse.json({ error: `Error al actualizar perfil: ${updateErr.message}` }, { status: 500 });
@@ -819,7 +834,7 @@ export async function PATCH(request: Request) {
                 codigo: `CUR-${numStr}`,
                 titulo: tituloUp,
                 tipo: 'curso',
-                categoria: c.categoria || 'Cursos de Alta Especialización',
+                categoria: c.categoria || '',
                 duracion: '40 horas',
                 horas: '40 horas académicas'
               });
@@ -858,6 +873,7 @@ export async function PATCH(request: Request) {
               ...existing,
               id: catMatch?.id || existing.id,
               codigo: catMatch?.codigo || existing.codigo,
+              categoria: catMatch?.categoria !== undefined ? catMatch.categoria : (existing.categoria || ''),
               tipo: existing.tipo || (catMatch?.tipo ? String(catMatch.tipo).toUpperCase() : undefined)
             };
           }
@@ -872,7 +888,7 @@ export async function PATCH(request: Request) {
             id: catMatch?.id || (isObj && item.id) || `cur-${(idx + 1).toString().padStart(2, '0')}`,
             codigo: catMatch?.codigo || (isObj && item.codigo) || `CUR-${(idx + 1).toString().padStart(2, '0')}`,
             titulo: catMatch?.titulo || title,
-            categoria: catMatch?.categoria || (esTallerItem ? 'Taller' : 'Cursos de Alta Especialización'),
+            categoria: catMatch?.categoria !== undefined ? catMatch.categoria : (esTallerItem ? 'Taller' : ''),
             duracion: catMatch?.duracion || (esTallerItem ? '20 horas' : '40 horas'),
             tipo: esTallerItem ? 'TALLER' : 'CURSO',
             nota: 0,

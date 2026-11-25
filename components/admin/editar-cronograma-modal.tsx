@@ -106,7 +106,7 @@ export default function EditarCronogramaModal({
               Configuración de Cuotas y Vencimientos
             </span>
             <h3 className="text-base sm:text-lg font-black text-slate-900 dark:text-white mt-1">
-              Editar Cronograma & Cuotas (Crédito #{creditoActual?.num_credito || (selectedCreditoIdx + 1)})
+              Editar Cronograma y Cuotas (Crédito #{creditoActual?.num_credito || (selectedCreditoIdx + 1)})
             </h3>
           </div>
           <button 
@@ -168,7 +168,7 @@ export default function EditarCronogramaModal({
               <div className="flex flex-wrap justify-between items-center gap-2">
                 <div>
                   <label className="block text-[11px] font-bold text-indigo-900 dark:text-indigo-300 uppercase">
-                    Plan de Cuotas & Vencimientos ({activasFinal.length} cuota{activasFinal.length === 1 ? '' : 's'})
+                    Plan de Cuotas y Vencimientos ({activasFinal.length} cuota{activasFinal.length === 1 ? '' : 's'})
                   </label>
                   <p className="text-[10px] text-slate-500 dark:text-slate-400">
                     Ajusta los montos y fechas de vencimiento de cada cuota:

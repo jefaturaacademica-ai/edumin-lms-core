@@ -174,7 +174,7 @@ export default function InstitutionalUserDropdown({ className = '' }: Institutio
             </div>
           )}
 
-          {/* 4. Cambiar contraseña & 5. Cerrar sesión */}
+          {/* 4. Cambiar contraseña y 5. Cerrar sesión */}
           <div className="py-1">
             <Link
               href="/actualizar-credenciales"

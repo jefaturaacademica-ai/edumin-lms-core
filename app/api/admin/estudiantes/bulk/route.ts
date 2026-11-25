@@ -276,19 +276,31 @@ export async function POST(request: Request) {
           }
         })}`;
 
-        try {
-          await admin.from('pagos').insert({
-            profile_id: studentId,
-            dni_ce: normalizedDni,
-            monto: montoTotalNum,
-            metodo: initialMetodo,
-            nro_recibo: correlativoRecibo,
-            nro_operacion: correlativoRecibo,
-            comprobante: correlativoRecibo,
-            estado: initialDeuda === 0 ? 'Completado' : 'Pendiente'
+        const { error: pagErr } = await admin.from('pagos').insert({
+          profile_id: studentId,
+          dni_ce: normalizedDni,
+          monto: montoTotalNum,
+          metodo: initialMetodo,
+          nro_recibo: correlativoRecibo,
+          nro_operacion: correlativoRecibo,
+          estado: initialDeuda === 0 ? 'Completado' : 'Pendiente'
+        });
+
+        if (pagErr) {
+          console.error(`Error registrando pago en bulk para DNI ${normalizedDni}:`, pagErr);
+        } else {
+          // Registrar en auditoría para fijar el correlativo oficial
+          await admin.from('audit_logs').insert({
+            action: 'REGISTRO_PAGO_INICIAL_BULK',
+            performed_by: 'carga-masiva-admin',
+            details: {
+              profile_id: studentId,
+              dni_ce: normalizedDni,
+              nro_recibo: correlativoRecibo,
+              monto: montoCuotaNum,
+              modalidad: esContado ? 'CONTADO' : 'CUOTAS'
+            }
           });
-        } catch (pagErr) {
-          console.warn('Advertencia pago bulk:', pagErr);
         }
 
         // E. Registrar matrículas iniciales de diplomado y taller

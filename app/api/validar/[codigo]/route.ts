@@ -95,8 +95,21 @@ export async function GET(
           const modelos = logData?.detalles?.modelos || [];
           const tipoNorm = String(certData.tipo || '').toUpperCase();
           const tipoBusqueda = tipoNorm === 'DIPLOMADO' ? 'DIPLOMA' : (tipoNorm === 'TALLER' ? 'CURSO' : tipoNorm);
+          const limpiar = (s: string) => (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+          const titProgNorm = limpiar(certData.programa_titulo || '');
 
-          const modeloMatch = modelos.find((m: any) => 
+          const modeloMatch = modelos.find((m: any) => {
+            if (String(m.tipo).toUpperCase() !== tipoBusqueda || m.asignacionAlcance !== 'PRODUCTO_ESPECIFICO') return false;
+            if (m.recursoAsignadoNombre) {
+              const nomNorm = limpiar(m.recursoAsignadoNombre);
+              if (nomNorm && titProgNorm && (titProgNorm.includes(nomNorm) || nomNorm.includes(titProgNorm))) return true;
+            }
+            if (m.nombre) {
+              const modNomNorm = limpiar(m.nombre);
+              if (modNomNorm && titProgNorm && (titProgNorm.includes(modNomNorm) || modNomNorm.includes(titProgNorm))) return true;
+            }
+            return false;
+          }) || modelos.find((m: any) => 
             String(m.tipo).toUpperCase() === tipoBusqueda && (m.asignacionAlcance === 'SUPERPLANTILLA_GLOBAL' || m.esPredeterminado)
           ) || modelos.find((m: any) => String(m.tipo).toUpperCase() === tipoBusqueda);
 

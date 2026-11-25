@@ -223,11 +223,14 @@ export default function CursosPage() {
             c.titulo.toUpperCase() === titulo?.toUpperCase() ||
             (titNorm && c.titulo.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase() === titNorm)
           );
+          const catFinal = liveMatch
+            ? (liveMatch.categoria !== undefined && liveMatch.categoria !== null ? liveMatch.categoria : '')
+            : (localMatch?.categoria || '');
           return {
             id: liveMatch?.id,
             codigo: liveMatch?.codigo,
             tipo: liveMatch?.tipo,
-            categoria: liveMatch?.categoria || localMatch?.categoria,
+            categoria: catFinal,
             duracion: liveMatch?.duracion || localMatch?.duracion,
             imagen: liveMatch?.imagen || localMatch?.imagen,
             titulo: liveMatch?.titulo || titulo
@@ -248,12 +251,15 @@ export default function CursosPage() {
               tipoCat === 'TALLER' ||
               esCursoTaller({ ...cj, id: idSlug, codigo: catMatch.codigo || cj.codigo, tipo: tipoCat })
             );
+            const categoriaFinal = esTaller
+              ? (catMatch.categoria || 'Taller')
+              : (catMatch.id || catMatch.codigo ? (catMatch.categoria || '') : (cj.categoria || ''));
             cursosEnrolados.push({
               id: idSlug,
               codigo: catMatch.codigo || cj.codigo,
               titulo: catMatch.titulo || cj.titulo,
               tipo: esTaller ? 'TALLER' : 'CURSO',
-              categoria: esTaller ? (catMatch.categoria || 'Taller') : (catMatch.categoria || cj.categoria || 'Seguridad y prevención'),
+              categoria: categoriaFinal,
               duracion: catMatch.duracion || cj.duracion || (esTaller ? '20 Horas Académicas' : '40 horas'),
               avance: cj.completado ? 100 : (typeof cj.avance === 'number' ? cj.avance : 0),
               nota: cj.nota,
@@ -278,7 +284,7 @@ export default function CursosPage() {
                 codigo: catMatch.codigo,
                 titulo: catMatch.titulo || m.titulo || 'Curso de Especialización',
                 tipo: esTaller ? 'TALLER' : 'CURSO',
-                categoria: catMatch.categoria || (esTaller ? 'Taller' : 'Seguridad y prevención'),
+                categoria: catMatch.categoria || (esTaller ? 'Taller' : ''),
                 duracion: catMatch.duracion || '20 Horas Académicas',
                 avance: m.avance_porcentaje ?? 0,
                 nota: m.nota,
@@ -341,7 +347,7 @@ export default function CursosPage() {
     async function cargarPerfilYSupabase() {
       try {
         const [meData, catData] = await Promise.all([
-          fetchWithClientCache('/api/dashboard/me'),
+          fetchWithClientCache('/api/dashboard/me', { forceRefresh: true }),
           fetchWithClientCache('/api/admin/catalogo').catch(() => null)
         ]);
         if (meData) {
@@ -632,9 +638,11 @@ export default function CursosPage() {
                           }`}
                         />
                         <div className="absolute top-3 inset-x-3 flex flex-wrap items-center justify-between gap-1.5 pointer-events-none z-10">
-                          <span className="text-[11px] font-semibold text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 shrink-0">
-                            {curso.categoria}
-                          </span>
+                          {curso.categoria && curso.categoria.trim() ? (
+                            <span className="text-[11px] font-semibold text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 shrink-0">
+                              {curso.categoria}
+                            </span>
+                          ) : <span />}
                           <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-semibold border backdrop-blur-md shrink-0 ${infoEstado.badgeBg}`}>
                             <IconoEstado className="size-3.5" /> {infoEstado.label}
                           </span>
@@ -732,9 +740,11 @@ export default function CursosPage() {
                               className="object-cover w-full h-full transition-transform duration-300 opacity-90 group-hover:scale-105"
                             />
                             <div className="absolute top-3 inset-x-3 flex flex-wrap items-center justify-between gap-1.5 pointer-events-none z-10">
-                              <span className="text-[11px] font-semibold text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 shrink-0">
-                                {curso.categoria}
-                              </span>
+                              {curso.categoria && curso.categoria.trim() ? (
+                                <span className="text-[11px] font-semibold text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 shrink-0">
+                                  {curso.categoria}
+                                </span>
+                              ) : <span />}
                               <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-semibold border backdrop-blur-md shrink-0 ${infoEstado.badgeBg}`}>
                                 <IconoEstado className="size-3.5" /> {infoEstado.label}
                               </span>

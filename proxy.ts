@@ -55,6 +55,13 @@ export async function proxy(request: NextRequest) {
     return response;
   }
 
+  // Si el usuario ya cuenta con sesión activa e ingresa a /login, llevarlo al dashboard
+  if (user && pathname === LOGIN_PATH) {
+    const dashboardUrl = request.nextUrl.clone();
+    dashboardUrl.pathname = "/dashboard";
+    return NextResponse.redirect(dashboardUrl);
+  }
+
   // RLS del proyecto sólo da lectura propia al estudiante. Este acceso ocurre
   // tras validar el JWT y evita que DOCENTE quede bloqueado por esa política.
   const admin = createAdminClient();

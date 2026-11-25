@@ -13,7 +13,7 @@ function invalidateModelosCache() {
 const MODELOS_POR_DEFECTO = [
   {
     id: 'mod-avanza-dip',
-    nombre: 'Superplantilla Oficial Avanza & EDUMIN - Diploma de Alta Especialización',
+    nombre: 'Superplantilla Oficial Avanza y EDUMIN - Diploma de Alta Especialización',
     tipo: 'DIPLOMA',
     orientacion: 'horizontal',
     horas: '325 horas académicas y 13 créditos académicos',
@@ -27,7 +27,7 @@ const MODELOS_POR_DEFECTO = [
   },
   {
     id: 'mod-avanza-mod',
-    nombre: 'Superplantilla Oficial Avanza & EDUMIN - Certificado Modular',
+    nombre: 'Superplantilla Oficial Avanza y EDUMIN - Certificado Modular',
     tipo: 'MODULAR',
     orientacion: 'horizontal',
     horas: '108 horas académicas',

@@ -18,15 +18,16 @@ export function UserProfileCard({
   onNavigate
 }: UserProfileCardProps) {
   const router = useRouter();
-  const { nombres, apellidos, iniciales, fotoPerfil, role } = useProfile();
+  const { nombres, apellidos, iniciales, fotoPerfil, role, cargando } = useProfile();
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Solo se considera que tiene 2 o más roles si es ADMIN o SUPERADMIN (o si está en vista admin)
   const hasMultipleRoles = role === 'ADMIN' || role === 'SUPERADMIN' || currentView === 'admin';
 
-  const primerNombre = nombres ? nombres.trim().split(' ')[0] : (currentView === 'admin' ? 'Admin' : 'Estudiante');
-  const primerApellido = apellidos ? apellidos.trim().split(' ')[0] : '';
+  const primerNombre = nombres ? nombres.trim().split(/\s+/)[0] : '';
+  const primerApellido = apellidos ? apellidos.trim().split(/\s+/)[0] : '';
+  const nombreParaMostrar = [primerNombre, primerApellido].filter(Boolean).join(' ');
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -56,15 +57,23 @@ export function UserProfileCard({
         <div className="relative size-10 rounded-full bg-gradient-to-tr from-indigo-600 to-cyan-500 text-white font-extrabold flex items-center justify-center text-xs shadow-md ring-2 ring-indigo-400/30 shrink-0 overflow-hidden">
           {fotoPerfil ? (
             <img src={fotoPerfil} alt="Foto de perfil" className="w-full h-full object-cover" />
-          ) : (
+          ) : iniciales ? (
             iniciales
+          ) : cargando ? (
+            <div className="size-4 rounded-full bg-white/30 animate-pulse" />
+          ) : (
+            'U'
           )}
         </div>
         <div className="min-w-0 flex-1">
           {/* Fila 1: Nombre */}
-          <h4 className="text-xs font-bold text-white truncate group-hover:text-indigo-400 transition-colors">
-            {primerNombre} {primerApellido}
-          </h4>
+          {cargando && !nombreParaMostrar ? (
+            <div className="h-3.5 w-24 bg-white/20 rounded animate-pulse my-0.5" />
+          ) : (
+            <h4 className="text-xs font-bold text-white truncate group-hover:text-indigo-400 transition-colors">
+              {nombreParaMostrar || 'Mi Perfil'}
+            </h4>
+          )}
           {/* Fila 2: Rol del usuario */}
           <div className="flex items-center gap-1.5 mt-0.5">
             <span className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-semibold text-emerald-300 bg-emerald-500/15 rounded-md border border-emerald-500/25 truncate">
@@ -92,16 +101,24 @@ export function UserProfileCard({
         <div className="relative size-10 rounded-full bg-gradient-to-tr from-indigo-600 to-cyan-500 text-white font-extrabold flex items-center justify-center text-xs shadow-md ring-2 ring-indigo-400/30 shrink-0 overflow-hidden">
           {fotoPerfil ? (
             <img src={fotoPerfil} alt="Foto de perfil" className="w-full h-full object-cover" />
-          ) : (
+          ) : iniciales ? (
             iniciales
+          ) : cargando ? (
+            <div className="size-4 rounded-full bg-white/30 animate-pulse" />
+          ) : (
+            'U'
           )}
         </div>
 
         <div className="min-w-0 flex-1">
           {/* Fila 1: Nombre */}
-          <h4 className="text-xs font-bold text-white truncate group-hover:text-indigo-400 transition-colors">
-            {primerNombre} {primerApellido}
-          </h4>
+          {cargando && !nombreParaMostrar ? (
+            <div className="h-3.5 w-24 bg-white/20 rounded animate-pulse my-0.5" />
+          ) : (
+            <h4 className="text-xs font-bold text-white truncate group-hover:text-indigo-400 transition-colors">
+              {nombreParaMostrar || 'Mi Perfil'}
+            </h4>
+          )}
 
           {/* Fila 2: Badge del rol a la izquierda y Chevron a la derecha */}
           <div className="flex items-center justify-between gap-1.5 mt-0.5">

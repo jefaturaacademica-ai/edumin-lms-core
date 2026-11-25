@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { 
   CheckCircle2, 
   Circle,
+  BookOpen,
   FileText, 
   ChevronLeft, 
   ChevronRight, 
@@ -11,7 +12,6 @@ import {
   Folder,
   ArrowLeft, 
   Download, 
-  Send, 
   Video, 
   Headphones, 
   Sparkles, 
@@ -104,6 +104,7 @@ export default function ReproductorClasesPage() {
   const [temasAbiertosMap, setTemasAbiertosMap] = useState<Record<string, boolean>>({});
   const [dniAlumno, setDniAlumno] = useState<string>('71234567');
   const [modoCine, setModoCine] = useState(false);
+  const [temarioMovilAbierto, setTemarioMovilAbierto] = useState<boolean>(false);
 
   // Estados del Examen del Módulo
   const [notasModulosMap, setNotasModulosMap] = useState<Record<string, number>>({});
@@ -1177,13 +1178,9 @@ export default function ReproductorClasesPage() {
   // Estados de contenido principal y pestañas
   const [contenidoPrincipal, setContenidoPrincipal] = useState<'video_clase' | 'pdf_visor' | 'resumen_video' | 'resumen_audio' | 'resumen_interactivo' | 'mapamental'>('video_clase');
   const [recursoActivoInfo, setRecursoActivoInfo] = useState<string>('Clase principal en video');
-  const [tabActiva, setTabActiva] = useState<'resumen' | 'recursos' | 'foro'>('resumen');
+  const [tabActiva, setTabActiva] = useState<'resumen' | 'recursos'>('resumen');
   const [menuFormatoAbierto, setMenuFormatoAbierto] = useState<boolean>(false);
   
-  // Estados del foro
-  const [comentario, setComentario] = useState('');
-  const [listaComentarios, setListaComentarios] = useState<{ autor: string; texto: string; fecha: string }[]>([]);
-
   const [inicializadoNav, setInicializadoNav] = useState(false);
 
   // Sincronizar claseActual cuando diplomadoActual o modInicial se actualizan desde Supabase
@@ -1377,14 +1374,6 @@ export default function ReproductorClasesPage() {
   const totalTemas = todosLosTemas.length || 1;
   const numeroTemaActual = indiceTemaActual + 1;
 
-  const publicarComentario = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!comentario.trim()) return;
-    const nombreCompleto = [nombres, apellidos].filter(Boolean).join(' ') || 'Estudiante';
-    setListaComentarios([{ autor: nombreCompleto, texto: comentario, fecha: 'Justo ahora' }, ...listaComentarios]);
-    setComentario('');
-  };
-
   const activarRecursoEnVisor = (tipo: 'video_clase' | 'pdf_visor' | 'resumen_video' | 'resumen_audio' | 'resumen_interactivo' | 'mapamental', info: string, url?: string) => {
     setContenidoPrincipal(tipo);
     setRecursoActivoInfo(info);
@@ -1440,6 +1429,7 @@ export default function ReproductorClasesPage() {
 
   const seleccionarTema = (moduloId: string, temaObj: any) => {
     setExamenActivoModal(null);
+    setTemarioMovilAbierto(false);
     setModuloActivo(moduloId);
     if (temaObj.clases && temaObj.clases.length > 0) {
       const primeraClase = temaObj.clases[0];
@@ -1452,6 +1442,7 @@ export default function ReproductorClasesPage() {
 
   const seleccionarSesion = (moduloId: string, claseObj: ClaseCompleta) => {
     setExamenActivoModal(null);
+    setTemarioMovilAbierto(false);
     setModuloActivo(moduloId);
     setClaseActual(claseObj);
     setParteSeleccionada(1);
@@ -1461,6 +1452,7 @@ export default function ReproductorClasesPage() {
 
   const seleccionarClaseYParte = (moduloId: string, clase: ClaseCompleta, parteNum: number = 1) => {
     setModuloActivo(moduloId);
+    setTemarioMovilAbierto(false);
     setClaseActual(clase);
     setParteSeleccionada(parteNum);
     activarRecursoEnVisor('video_clase', clase.partes.length > 1 ? `Video de la Clase (Parte ${parteNum})` : 'Video de la Clase');
@@ -1502,24 +1494,25 @@ export default function ReproductorClasesPage() {
     }`}>
       
       {/* Top Bar FIJA EN EL ENCABEZADO */}
-      <header className={`sticky top-0 z-30 h-16 min-h-16 max-h-16 border-b px-4 sm:px-6 flex items-center justify-between shrink-0 backdrop-blur-md transition-colors ${
+      <header className={`sticky top-0 z-30 h-14 sm:h-16 min-h-14 sm:min-h-16 max-h-14 sm:max-h-16 border-b px-3 sm:px-6 flex items-center justify-between shrink-0 backdrop-blur-md transition-colors ${
         esOscuro ? 'border-slate-800 bg-slate-900/95' : 'border-slate-200 bg-white/95'
       }`}>
-        <div className="flex items-center gap-3 sm:gap-4 min-w-0 flex-1 pr-3">
+        <div className="flex items-center gap-2.5 sm:gap-4 min-w-0 flex-1 pr-2 sm:pr-3">
           <Link 
             href="/dashboard/diplomados"
-            className={`inline-flex items-center gap-2 text-xs sm:text-sm font-semibold transition-colors px-3 py-1.5 rounded-xl border shrink-0 ${
+            className={`inline-flex items-center justify-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-semibold transition-colors px-2.5 sm:px-3 py-1.5 rounded-xl border shrink-0 ${
               esOscuro 
                 ? 'text-slate-400 hover:text-white bg-slate-800/50 border-slate-700/50' 
                 : 'text-slate-600 hover:text-slate-900 bg-slate-100 border-slate-200 hover:bg-slate-200'
             }`}
+            title="Volver"
           >
             <ArrowLeft className="w-4 h-4" /> 
-            <span>Volver</span>
+            <span className="hidden sm:inline">Volver</span>
           </Link>
           <div className={`h-5 w-px hidden sm:block shrink-0 ${esOscuro ? 'bg-slate-800' : 'bg-slate-200'}`} />
           <div className="min-w-0">
-            <h1 className={`text-xs sm:text-sm font-bold line-clamp-2 leading-tight ${
+            <h1 className={`text-xs sm:text-sm font-bold line-clamp-1 sm:line-clamp-2 leading-tight ${
               esOscuro ? 'text-white' : 'text-slate-900'
             }`}>
               {diplomadoActual.titulo}
@@ -1527,38 +1520,62 @@ export default function ReproductorClasesPage() {
           </div>
         </div>
 
-        {/* Botón Ocultar / Mostrar Temario */}
-        <div className="flex items-center gap-2.5 shrink-0">
+        {/* Botón Temario: Con el mismo estilo e icono (PanelRight) en desktop y móvil */}
+        <div className="flex items-center gap-2 shrink-0">
           <button
             type="button"
-            onClick={() => setModoCine(!modoCine)}
-            className={`text-xs font-semibold px-3 py-1.5 rounded-xl border flex items-center gap-1.5 transition-all cursor-pointer ${
+            onClick={() => {
+              if (typeof window !== 'undefined' && window.innerWidth >= 1024) {
+                setModoCine(!modoCine);
+              } else {
+                setTemarioMovilAbierto(!temarioMovilAbierto);
+              }
+            }}
+            className={`text-xs font-semibold px-2.5 sm:px-3 py-1.5 rounded-xl border flex items-center gap-1.5 transition-all cursor-pointer ${
               esOscuro
                 ? 'bg-slate-800/80 hover:bg-slate-700 text-slate-300 border-slate-700'
                 : 'bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-200'
             }`}
-            title={modoCine ? 'Mostrar temario' : 'Ocultar temario'}
+            title="Temario"
           >
-            {modoCine ? (
-              <>
-                <PanelRightOpen className="w-4 h-4 text-slate-500 dark:text-slate-400" />
-                <span className="hidden sm:inline">Mostrar temario</span>
-              </>
-            ) : (
-              <>
-                <PanelRightClose className="w-4 h-4 text-slate-500 dark:text-slate-400" />
-                <span className="hidden sm:inline">Ocultar temario</span>
-              </>
-            )}
+            {/* Vista Desktop (≥ lg) */}
+            <span className="hidden lg:flex items-center gap-1.5">
+              {modoCine ? (
+                <>
+                  <PanelRightOpen className="w-4 h-4 text-slate-500 dark:text-slate-400" />
+                  <span>Mostrar temario</span>
+                </>
+              ) : (
+                <>
+                  <PanelRightClose className="w-4 h-4 text-slate-500 dark:text-slate-400" />
+                  <span>Ocultar temario</span>
+                </>
+              )}
+            </span>
+
+            {/* Vista Móvil (< lg) */}
+            <span className="lg:hidden flex items-center gap-1.5">
+              {temarioMovilAbierto ? (
+                <>
+                  <PanelRightClose className="w-4 h-4 text-slate-500 dark:text-slate-400" />
+                  <span className="hidden sm:inline">Ocultar temario</span>
+                </>
+              ) : (
+                <>
+                  <PanelRightOpen className="w-4 h-4 text-slate-500 dark:text-slate-400" />
+                  <span className="hidden sm:inline">Temario</span>
+                </>
+              )}
+            </span>
           </button>
         </div>
       </header>
 
       {/* Layout Principal */}
-      <div className="flex-1 min-h-0 flex flex-col lg:flex-row overflow-y-auto lg:overflow-hidden">
+      <div className="flex-1 min-h-0 flex flex-col lg:flex-row overflow-y-auto lg:overflow-hidden relative">
         
         {/* ZONA PRINCIPAL DE REPRODUCCIÓN (70%) O ENTORNO DE EVALUACIÓN */}
-        <div id="zona-reproductor-principal" className={`flex-1 lg:h-full min-h-0 p-4 sm:p-8 lg:p-10 ${modoCine ? 'lg:border-r-0' : 'lg:border-r'} ${
+        <div id="zona-reproductor-principal" className={`flex-1 lg:h-full min-h-0 p-3 sm:p-6 lg:p-10 ${modoCine ? 'lg:border-r-0' : 'lg:border-r'} ${
           examenActivoModal ? 'lg:overflow-hidden lg:flex lg:flex-col' : 'lg:overflow-y-auto space-y-6'
         } ${
           esOscuro ? 'lg:border-slate-800' : 'lg:border-slate-200'
@@ -2177,50 +2194,38 @@ export default function ReproductorClasesPage() {
             );
           })()}
 
-          {/* PESTAÑAS (TABS): RESUMEN, RECURSOS Y FORO */}
-          <div className="mt-4">
-            <div className={`flex flex-wrap items-center gap-2 border-b pb-3 ${
-              esOscuro ? 'border-slate-800' : 'border-slate-200'
-            }`}>
-              {tieneResumen && (
-                <button
-                  onClick={() => setTabActiva('resumen')}
-                  className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
-                    tabActiva === 'resumen' 
-                      ? 'bg-indigo-600 text-white shadow-sm' 
-                      : esOscuro 
-                        ? 'text-slate-400 hover:text-white hover:bg-slate-900' 
-                        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-                  }`}
-                >
-                  Resumen
-                </button>
-              )}
-              <button
-                onClick={() => setTabActiva('recursos')}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
-                  tabActiva === 'recursos' 
-                    ? 'bg-indigo-600 text-white shadow-sm' 
-                    : esOscuro 
-                      ? 'text-slate-400 hover:text-white hover:bg-slate-900' 
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-                }`}
-              >
-                Recursos multimedia
-              </button>
-              <button
-                onClick={() => setTabActiva('foro')}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
-                  tabActiva === 'foro' 
-                    ? 'bg-indigo-600 text-white shadow-sm' 
-                    : esOscuro 
-                      ? 'text-slate-400 hover:text-white hover:bg-slate-900' 
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-                }`}
-              >
-                Foro de consultas
-              </button>
-            </div>
+              {/* PESTAÑAS (TABS): RESUMEN Y RECURSOS */}
+              <div className="mt-4">
+                <div className={`flex flex-wrap items-center gap-2 border-b pb-3 ${
+                  esOscuro ? 'border-slate-800' : 'border-slate-200'
+                }`}>
+                  {tieneResumen && (
+                    <button
+                      onClick={() => setTabActiva('resumen')}
+                      className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+                        tabActiva === 'resumen' 
+                          ? 'bg-indigo-600 text-white shadow-sm' 
+                          : esOscuro 
+                            ? 'text-slate-400 hover:text-white hover:bg-slate-900' 
+                            : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                      }`}
+                    >
+                      Resumen
+                    </button>
+                  )}
+                  <button
+                    onClick={() => setTabActiva('recursos')}
+                    className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+                      tabActiva === 'recursos' 
+                        ? 'bg-indigo-600 text-white shadow-sm' 
+                        : esOscuro 
+                          ? 'text-slate-400 hover:text-white hover:bg-slate-900' 
+                          : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                    }`}
+                  >
+                    Recursos multimedia
+                  </button>
+                </div>
 
             <div className="mt-5 text-sm leading-relaxed">
               
@@ -2304,7 +2309,7 @@ export default function ReproductorClasesPage() {
                           </div>
                           <div className="min-w-0">
                             <h4 className={`font-bold text-xs sm:text-sm truncate ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                              Grabación de la clase {parteActiva.titulo ? `· ${parteActiva.titulo}` : ''}
+                              Grabación de la clase
                             </h4>
                             <span className={`text-[11px] block truncate ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
                               Clase magistral completa en video de alta definición.
@@ -2343,14 +2348,17 @@ export default function ReproductorClasesPage() {
                   {/* RESTO DE RECURSOS MULTIMEDIA */}
                   {parteActiva.recursos && parteActiva.recursos.length > 0 ? (
                     parteActiva.recursos.map((rec) => {
-                      const esRecursoActivo = (() => {
-                        if (rec.tipo === 'video' && contenidoPrincipal === 'resumen_video') return true;
-                        if (rec.tipo === 'audio' && contenidoPrincipal === 'resumen_audio') return true;
-                        if (rec.tipo === 'interactivo' && contenidoPrincipal === 'resumen_interactivo') return true;
-                        if (rec.tipo === 'mapamental' && contenidoPrincipal === 'mapamental') return true;
-                        if (rec.tipo === 'pdf' && contenidoPrincipal === 'pdf_visor') return true;
-                        return false;
-                      })();
+                      const visorTipo = 
+                        rec.tipo === 'video' ? 'resumen_video' :
+                        rec.tipo === 'audio' ? 'resumen_audio' :
+                        rec.tipo === 'interactivo' ? 'resumen_interactivo' :
+                        rec.tipo === 'mapamental' ? 'mapamental' : 'pdf_visor';
+
+                      const recUrl = rec.archivo || rec.url;
+                      const esRecursoActivo = (contenidoPrincipal === visorTipo) && (
+                        (Boolean(recursoUrlActivo) && recursoUrlActivo === recUrl) ||
+                        (Boolean(recursoActivoInfo) && recursoActivoInfo === rec.titulo)
+                      );
 
                       return (
                         <div 
@@ -2435,45 +2443,6 @@ export default function ReproductorClasesPage() {
                 </div>
               )}
 
-              {/* TAB FORO */}
-              {tabActiva === 'foro' && (
-                <div className="space-y-6">
-                  <form onSubmit={publicarComentario} className="flex flex-col sm:flex-row gap-3">
-                    <input 
-                      type="text"
-                      placeholder="Escribe una duda o consulta académica para el docente..."
-                      value={comentario}
-                      onChange={(e) => setComentario(e.target.value)}
-                      className={`flex-1 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-600 border transition-all ${
-                        esOscuro 
-                          ? 'bg-slate-900 border-slate-800 text-white placeholder:text-slate-500' 
-                          : 'bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 shadow-sm'
-                      }`}
-                    />
-                    <button type="submit" className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-5 py-3 rounded-xl transition-colors flex items-center justify-center gap-2 text-sm shrink-0 shadow">
-                      <Send className="w-4 h-4" /> Enviar comentario
-                    </button>
-                  </form>
-
-                  <div className="space-y-3">
-                    {listaComentarios.map((c, i) => (
-                      <div 
-                        key={i} 
-                        className={`p-4 rounded-2xl border transition-all ${
-                          esOscuro ? 'bg-slate-900/60 border-slate-800 text-slate-300' : 'bg-white border-slate-200 text-slate-800 shadow-sm'
-                        }`}
-                      >
-                        <div className="flex justify-between items-center mb-1">
-                          <span className="font-bold text-xs text-indigo-500">{c.autor}</span>
-                          <span className={`text-[10px] ${esOscuro ? 'text-slate-500' : 'text-slate-400'}`}>{c.fecha}</span>
-                        </div>
-                        <p className="text-xs sm:text-sm">{c.texto}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
             </div>
           </div>
             </>
@@ -2481,19 +2450,38 @@ export default function ReproductorClasesPage() {
 
         </div>
 
-        {/* SIDEBAR DERECHO (30%) - TEMARIO CONTINUO */}
-        {!modoCine && (
-        <aside className={`w-full lg:w-96 border-t lg:border-t-0 lg:border-l flex flex-col shrink-0 lg:h-full lg:overflow-y-auto transition-colors ${
-          esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'
-        }`}>
-          {/* Header del temario con avance integrado */}
+        {/* BACKDROP OSCURO PARA TEMARIO FLOTANTE EN MÓVIL (< lg) */}
+        {temarioMovilAbierto && (
+          <div
+            className="fixed inset-0 z-40 bg-slate-950/70 backdrop-blur-xs lg:hidden transition-opacity duration-300 animate-in fade-in"
+            onClick={() => setTemarioMovilAbierto(false)}
+          />
+        )}
+
+        {/* SIDEBAR DERECHO (30% EN DESKTOP) / DRAWER FLOTANTE EN MÓVIL */}
+        <aside className={`
+          fixed inset-y-0 right-0 z-50 w-[85vw] max-w-sm flex flex-col shadow-2xl transition-transform duration-300 ease-in-out
+          ${temarioMovilAbierto ? 'translate-x-0' : 'translate-x-full'}
+          lg:static lg:z-auto lg:w-96 lg:translate-x-0 lg:shadow-none lg:border-l lg:h-full lg:overflow-y-auto
+          ${modoCine ? 'lg:hidden' : 'lg:flex'}
+          ${esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'}
+        `}>
+          {/* Header del temario con avance integrado y botón de cierre en móvil */}
           <div className={`p-4 sm:p-5 border-b shrink-0 sticky top-0 z-10 backdrop-blur-md ${
             esOscuro ? 'border-slate-800 bg-slate-900/95' : 'border-slate-200 bg-white/95 shadow-2xs'
           }`}>
-            <div>
+            <div className="flex items-center justify-between gap-2">
               <h3 className={`font-bold text-base ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
                 Temario del diplomado
               </h3>
+              <button
+                type="button"
+                onClick={() => setTemarioMovilAbierto(false)}
+                className="lg:hidden p-1.5 rounded-xl text-slate-400 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+                aria-label="Cerrar temario"
+              >
+                <X className="w-5 h-5" />
+              </button>
             </div>
             
             {/* Barra de progreso real calculada */}
@@ -2897,7 +2885,6 @@ export default function ReproductorClasesPage() {
             })}
           </div>
         </aside>
-        )}
 
       </div>
     </div>

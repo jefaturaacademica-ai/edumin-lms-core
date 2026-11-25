@@ -362,13 +362,22 @@ export function parseCuposCreditosFromProfile(profile: any): CuposCreditosJSON {
 
   const existing = profile?.cupos_creditos;
   if (existing && typeof existing === 'object') {
+    let asignadosDip = Math.max(0, Number(existing.diplomados?.asignados ?? profile?.cupos_diplomados ?? defaultDip));
+    const canjeadosDip = tieneListaDip
+      ? parsedDipCount
+      : Math.max(0, Number(existing.diplomados?.canjeados ?? 0));
+
+    // Regla especial ILIMITADO: renovación automática de diplomados en bloques sucesivos de 3
+    if (pkg === 'ILIMITADO' && canjeadosDip >= 3) {
+      const tramosExtras = Math.floor((canjeadosDip - 3) / 3) + 1;
+      asignadosDip = Math.max(asignadosDip, 3 + tramosExtras * 3);
+    }
+
     return {
       diplomados: {
-        asignados: Math.max(0, Number(existing.diplomados?.asignados ?? profile?.cupos_diplomados ?? defaultDip)),
+        asignados: asignadosDip,
         adicionales: Math.max(0, Number(existing.diplomados?.adicionales ?? 0)),
-        canjeados: tieneListaDip
-          ? parsedDipCount
-          : Math.max(0, Number(existing.diplomados?.canjeados ?? 0)),
+        canjeados: canjeadosDip,
       },
       cursos: {
         asignados: Math.max(0, Number(existing.cursos?.asignados ?? defaultCur)),
@@ -381,9 +390,15 @@ export function parseCuposCreditosFromProfile(profile: any): CuposCreditosJSON {
     };
   }
 
+  let fallbackDip = Math.max(0, Number(profile?.cupos_diplomados ?? defaultDip));
+  if (pkg === 'ILIMITADO' && parsedDipCount >= 3) {
+    const tramosExtras = Math.floor((parsedDipCount - 3) / 3) + 1;
+    fallbackDip = Math.max(fallbackDip, 3 + tramosExtras * 3);
+  }
+
   return {
     diplomados: {
-      asignados: Math.max(0, Number(profile?.cupos_diplomados ?? defaultDip)),
+      asignados: fallbackDip,
       adicionales: 0,
       canjeados: parsedDipCount,
     },
@@ -408,11 +423,27 @@ export function buildUpdatedCuposCreditos(
   }
 ): CuposCreditosJSON {
   const current = parseCuposCreditosFromProfile(profile);
+  const pkg = String(profile?.paquete_adquirido || 'COMPLETO').toUpperCase();
+
+  let nextDipAsignados = updates.diplomadosAsignados !== undefined 
+    ? Math.max(0, updates.diplomadosAsignados) 
+    : current.diplomados.asignados;
+
+  const nextDipCanjeados = updates.diplomadosCanjeados !== undefined 
+    ? Math.max(0, updates.diplomadosCanjeados) 
+    : current.diplomados.canjeados;
+
+  // Si es paquete ILIMITADO y se canjearon 3 o más diplomados, renovar asignados en bloques sucesivos de 3
+  if (pkg === 'ILIMITADO' && nextDipCanjeados >= 3) {
+    const tramosExtras = Math.floor((nextDipCanjeados - 3) / 3) + 1;
+    nextDipAsignados = Math.max(nextDipAsignados, 3 + tramosExtras * 3);
+  }
+
   return {
     diplomados: {
-      asignados: updates.diplomadosAsignados !== undefined ? Math.max(0, updates.diplomadosAsignados) : current.diplomados.asignados,
+      asignados: nextDipAsignados,
       adicionales: updates.diplomadosAdicionales !== undefined ? Math.max(0, updates.diplomadosAdicionales) : current.diplomados.adicionales,
-      canjeados: updates.diplomadosCanjeados !== undefined ? Math.max(0, updates.diplomadosCanjeados) : current.diplomados.canjeados,
+      canjeados: nextDipCanjeados,
     },
     cursos: {
       asignados: updates.cursosAsignados !== undefined ? Math.max(0, updates.cursosAsignados) : current.cursos.asignados,

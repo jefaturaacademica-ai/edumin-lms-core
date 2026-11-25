@@ -8,6 +8,7 @@ import {
   Filter, ArrowUpDown
 } from 'lucide-react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
 import { EduminCreditsCalculation } from '@/lib/utils/credits';
 import { parsearResumenTexto, ResumenData, TemaClaveItem } from '@/lib/utils/resumenParser';
@@ -16,7 +17,7 @@ import {
   CATALOGO_CURSOS 
 } from '@/lib/data/catalogoGeneral';
 import { ALL_DIPLOMADOS } from '@/lib/data/diplomadosData';
-import { getClientCachedData, fetchWithClientCache } from '@/lib/utils/clientCache';
+import { getClientCachedData, fetchWithClientCache, invalidateClientCache } from '@/lib/utils/clientCache';
 
 function normalizarTexto(texto: string): string {
   return (texto || '')
@@ -35,6 +36,7 @@ function getWhatsAppComprarCreditos(tipo: 'diplomado' | 'curso', titulo?: string
 }
 
 export default function CanjearBeneficiosPage() {
+  const router = useRouter();
   const [tabActual, setTabActual] = useState<'diplomados' | 'cursos'>('diplomados');
   
   // Créditos EDUMIN
@@ -168,7 +170,9 @@ export default function CanjearBeneficiosPage() {
   // 1. Mapeo de Diplomados Oficiales (Directo desde Supabase o fallback local)
   const diplomadosOpciones = useMemo(() => {
     if (catalogoApi && Array.isArray(catalogoApi.diplomados) && catalogoApi.diplomados.length > 0) {
-      return catalogoApi.diplomados.map((d: any, idx: number) => {
+      return catalogoApi.diplomados
+        .filter((d: any) => d.mostrar_en_catalogo !== false)
+        .map((d: any, idx: number) => {
         const numId = d.numId || idx + 1;
         const slug = d.id || d.slug || `dip-${String(numId).padStart(2, '0')}`;
         const matchStatic = ALL_DIPLOMADOS.find(s => s.numId === numId || normalizarTexto(s.titulo) === normalizarTexto(d.titulo));
@@ -182,7 +186,7 @@ export default function CanjearBeneficiosPage() {
           numId,
           codigo: d.codigo || `DIP-${String(numId).padStart(2, '0')}`,
           titulo: d.titulo,
-          categoria: d.categoria || matchStatic?.categoria || 'Legal y cumplimiento',
+          categoria: typeof d.categoria === 'string' ? d.categoria : (matchStatic?.categoria || ''),
           modulosCount: Array.isArray(mods) ? mods.length : (d.num_modulos || 3),
           totalTemas,
           imagen: d.imagen || matchStatic?.imagen || '/assets/images/daem/gestion-minera.webp',
@@ -208,6 +212,7 @@ export default function CanjearBeneficiosPage() {
     if (catalogoApi && Array.isArray(catalogoApi.cursos) && catalogoApi.cursos.length > 0) {
       // Filtrar cursos reales: excluir talleres y diplomados
       const cursosPuros = catalogoApi.cursos.filter((c: any) => {
+        if (c.mostrar_en_catalogo === false) return false;
         const tipo = (c.tipo || '').toLowerCase();
         const cat = (c.categoria || '').toLowerCase();
         const cod = (c.codigo || '').toUpperCase();
@@ -225,7 +230,7 @@ export default function CanjearBeneficiosPage() {
           codigo: cod,
           slug,
           titulo: c.titulo,
-          categoria: c.categoria || localMatch?.categoria || 'Especialización',
+          categoria: typeof c.categoria === 'string' ? c.categoria : (localMatch?.categoria || ''),
           imagen: c.imagen || localMatch?.imagen || 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=80',
           duracion: c.duracion || `${c.horas || 20} Horas Académicas`,
           horas: c.horas || 20,
@@ -387,13 +392,18 @@ export default function CanjearBeneficiosPage() {
 
       const data = await res.json();
       if (res.ok && data.success) {
+        invalidateClientCache();
         const cant = diplomadosSeleccionados.length;
         setMensajeExito({
           tipo: 'diplomado',
           texto: `¡Felicitaciones! Has canjeado con éxito ${cant} Diplomado(s) Oficial(es). Ya se encuentran registrados en tu panel académico.`
         });
         setDiplomadosSeleccionados([]);
+        if (data.eduminCredits) {
+          setEduminCredits(data.eduminCredits);
+        }
         await cargarDatosEstudiante();
+        router.refresh();
       } else {
         alert(data.error || 'Error al procesar el canje de diplomado.');
       }
@@ -424,7 +434,7 @@ export default function CanjearBeneficiosPage() {
           id: cod,
           codigo: cod,
           titulo: item?.titulo || cod,
-          categoria: item?.categoria || 'Especialización',
+          categoria: item?.categoria || '',
           duracion: item?.duracion || '20 Horas Académicas',
           horas: item?.horas || 20,
           imagen: item?.imagen
@@ -443,13 +453,18 @@ export default function CanjearBeneficiosPage() {
 
       const data = await res.json();
       if (res.ok && data.success) {
+        invalidateClientCache();
         const cant = cursosSeleccionados.length;
         setMensajeExito({
           tipo: 'curso',
           texto: `¡Felicitaciones! Has canjeado exitosamente ${cant} Curso(s) de Alta Especialización. Ya puedes acceder a ellos en tu aula virtual.`
         });
         setCursosSeleccionados([]);
+        if (data.eduminCredits) {
+          setEduminCredits(data.eduminCredits);
+        }
         await cargarDatosEstudiante();
+        router.refresh();
       } else {
         alert(data.error || 'Error al procesar el canje de cursos.');
       }
@@ -664,9 +679,11 @@ export default function CanjearBeneficiosPage() {
                           className="object-cover w-full h-full opacity-90 transition-transform duration-300 hover:scale-105"
                         />
                         <div className="absolute top-3 inset-x-3 flex items-center justify-between pointer-events-none">
-                          <span className="text-[10px] font-bold text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10">
-                            {opcion.categoria}
-                          </span>
+                          {opcion.categoria ? (
+                            <span className="text-[10px] font-bold text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10">
+                              {opcion.categoria}
+                            </span>
+                          ) : <span />}
                           {estaSeleccionado && (
                             <span className="text-[10px] font-bold text-white bg-indigo-600 backdrop-blur-md px-2.5 py-1 rounded-lg border border-indigo-400/30 flex items-center gap-1">
                               <Check className="size-3" /> Seleccionado
@@ -881,9 +898,11 @@ export default function CanjearBeneficiosPage() {
                           className="object-cover w-full h-full opacity-90 transition-transform duration-300 hover:scale-105"
                         />
                         <div className="absolute top-3 inset-x-3 flex items-center justify-between pointer-events-none">
-                          <span className="text-[10px] font-bold text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10">
-                            {curso.categoria}
-                          </span>
+                          {curso.categoria ? (
+                            <span className="text-[10px] font-bold text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10">
+                              {curso.categoria}
+                            </span>
+                          ) : <span />}
                           {estaSeleccionado && (
                             <span className="text-[10px] font-bold text-white bg-indigo-600 backdrop-blur-md px-2.5 py-1 rounded-lg border border-indigo-400/30 flex items-center gap-1">
                               <Check className="size-3" /> Seleccionado

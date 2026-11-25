@@ -44,10 +44,16 @@ const LISTA_DIPLOMADOS_OFICIALES = [
 ];
 
 // Lista oficial de cursos desde JSON base
-const LISTA_CURSOS_OFICIALES = (CURSOS_RAW as any[]).map((c: any, index: number) => ({
-  codigo: `CUR-${(index + 1).toString().padStart(2, '0')}`,
-  nombre: (c.curso || c.nombre || '').trim().toUpperCase()
-}));
+const LISTA_CURSOS_OFICIALES = [
+  ...(CURSOS_RAW as any[]).map((c: any, index: number) => ({
+    codigo: `CUR-${(index + 1).toString().padStart(2, '0')}`,
+    nombre: (c.curso || c.nombre || '').trim().toUpperCase()
+  })),
+  {
+    codigo: 'CUR-IA',
+    nombre: 'ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100'
+  }
+];
 
 // Lista oficial de talleres
 const LISTA_TALLERES_OFICIALES = [
@@ -141,7 +147,7 @@ export default function AdminExamenesPage() {
       try {
         const res = await fetch('/api/admin/catalogo');
         const data = await res.json();
-        if (data.success) {
+        if (data && (data.success || Array.isArray(data.cursos) || Array.isArray(data.diplomados))) {
           if (Array.isArray(data.diplomados) && data.diplomados.length > 0) {
             const dips = data.diplomados.map((d: any) => ({
               codigo: d.codigo,
@@ -154,6 +160,12 @@ export default function AdminExamenesPage() {
               codigo: c.codigo,
               nombre: (c.titulo || c.nombre || c.curso || '').trim().toUpperCase()
             }));
+            if (!cursos.some((c: any) => c.codigo === 'CUR-IA')) {
+              cursos.push({
+                codigo: 'CUR-IA',
+                nombre: 'ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100'
+              });
+            }
             setListaCursos(cursos);
           }
           if (Array.isArray(data.talleres) && data.talleres.length > 0) {

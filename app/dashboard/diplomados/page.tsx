@@ -104,11 +104,16 @@ export default function DiplomadosPage() {
 
   const listaCategorias = [
     'Todas', 
-    'Minería & Geología', 
-    'Seguridad & SSOMA', 
-    'Gestión & Operaciones', 
-    'Logística & Cadena de Suministro', 
-    'Legal & Negocios'
+    'Procesamiento de minerales', 
+    'Seguridad y cumplimiento', 
+    'Operaciones y productividad', 
+    'Datos e inteligencia artificial', 
+    'Logística y abastecimiento', 
+    'Geología y geotecnia', 
+    'Dirección minera', 
+    'Ambiente y sostenibilidad', 
+    'Legal y cumplimiento', 
+    'Gestión social'
   ];
 
   const listaNiveles = ['Todos', 'Especialización', 'Avanzado', 'Gerencial'];
@@ -261,7 +266,7 @@ export default function DiplomadosPage() {
     async function cargarPerfilYSupabase() {
       try {
         const [meData, catData] = await Promise.all([
-          fetchWithClientCache('/api/dashboard/me'),
+          fetchWithClientCache('/api/dashboard/me', { forceRefresh: true }),
           fetchWithClientCache('/api/admin/catalogo').catch(() => null)
         ]);
 
@@ -302,7 +307,8 @@ export default function DiplomadosPage() {
         nivel: live.nivel ?? dip.nivel,
         modulosCount: Array.isArray(live.modulos) ? live.modulos.length : (live.num_modulos ?? dip.modulosCount),
         modulos: Array.isArray(live.modulos) && live.modulos.length > 0 ? live.modulos : dip.modulos,
-        imagen: live.imagen || dip.imagen
+        imagen: live.imagen || dip.imagen,
+        mostrar_en_catalogo: live.mostrar_en_catalogo !== false
       };
     });
 
@@ -314,7 +320,7 @@ export default function DiplomadosPage() {
       slug: c.id,
       numId: Number(String(c.codigo || '').replace(/[^0-9]/g, '')) || (base.length + idx + 1),
       titulo: c.titulo,
-      categoria: c.categoria || 'Legal y cumplimiento',
+      categoria: c.categoria || '',
       nivel: c.nivel ?? '',
       descripcion: '',
       precioRegular: c.precio || 150,
@@ -322,10 +328,11 @@ export default function DiplomadosPage() {
       listaModulosTitulos: [],
       modulosCount: Array.isArray(c.modulos) ? c.modulos.length : (c.num_modulos ?? 3),
       modulos: c.modulos || [],
-      imagen: c.imagen || '/assets/images/daem/gestion-minera.webp'
+      imagen: c.imagen || '/assets/images/daem/gestion-minera.webp',
+      mostrar_en_catalogo: c.mostrar_en_catalogo !== false
     }));
 
-    return [...base, ...extraSupabase];
+    return [...base, ...extraSupabase].filter((dip: any) => dip.mostrar_en_catalogo !== false);
   })();
 
   const diplomadosFiltrados = listaDiplomadosCatalogo.filter(dip => {
@@ -357,7 +364,6 @@ export default function DiplomadosPage() {
         <StudentPageHeader
           icon={GraduationCap}
           title="Mis diplomados"
-          iconClassName={esIlimitado ? 'text-amber-500' : 'text-indigo-600'}
         />
 
         {/* ZONA DIPLOMADOS ACTIVOS O ESTADO SIN DIPLOMADO */}

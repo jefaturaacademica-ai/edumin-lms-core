@@ -10,7 +10,6 @@ import {
   ChevronUp, 
   ArrowLeft, 
   Download,
-  Send,
   Video,
   Headphones,
   Sparkles,
@@ -56,9 +55,7 @@ function ReproductorContent() {
 
   const [contenidoPrincipal, setContenidoPrincipal] = useState<'video_clase' | 'pdf_visor' | 'resumen_video' | 'resumen_audio' | 'resumen_interactivo' | 'excel_visor'>('video_clase');
   const [recursoActivoInfo, setRecursoActivoInfo] = useState<string>('Clase Magistral en Video');
-  const [tabActiva, setTabActiva] = useState<'resumen' | 'recursos' | 'foro'>('resumen');
-  const [comentario, setComentario] = useState('');
-  const [listaComentarios, setListaComentarios] = useState<{ autor: string; texto: string; fecha: string }[]>([]);
+  const [tabActiva, setTabActiva] = useState<'resumen' | 'recursos'>('resumen');
 
   // Cargar datos de Supabase (/api/dashboard/me y /api/admin/catalogo)
   useEffect(() => {
@@ -219,13 +216,6 @@ function ReproductorContent() {
     } finally {
       setCompletando(false);
     }
-  };
-
-  const publicarComentario = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!comentario.trim()) return;
-    setListaComentarios([{ autor: perfilEstudiante ? `${perfilEstudiante.nombres} ${perfilEstudiante.apellidos}` : 'Estudiante EDUMIN', texto: comentario, fecha: 'Justo ahora' }, ...listaComentarios]);
-    setComentario('');
   };
 
   if (loading || !diplomadoObj) {
@@ -425,12 +415,6 @@ function ReproductorContent() {
               >
                 Recursos Multimedia, PDFs y Excel
               </button>
-              <button
-                onClick={() => setTabActiva('foro')}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${tabActiva === 'foro' ? 'bg-indigo-600 text-white' : 'text-slate-400 hover:bg-slate-900'}`}
-              >
-                Foro de Consultas
-              </button>
             </div>
 
             <div className="mt-6 text-slate-300 text-sm leading-relaxed">
@@ -491,35 +475,6 @@ function ReproductorContent() {
                     </div>
                   </div>
 
-                </div>
-              )}
-
-              {tabActiva === 'foro' && (
-                <div className="space-y-6">
-                  <form onSubmit={publicarComentario} className="flex gap-3">
-                    <input 
-                      type="text"
-                      placeholder="Escribe tu consulta o comentario..."
-                      value={comentario}
-                      onChange={(e) => setComentario(e.target.value)}
-                      className="flex-1 bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-indigo-600"
-                    />
-                    <button type="submit" className="bg-indigo-600 text-white font-bold px-5 py-3 rounded-xl flex items-center gap-2 text-sm shrink-0">
-                      <Send className="w-4 h-4" /> Enviar
-                    </button>
-                  </form>
-
-                  <div className="space-y-4">
-                    {listaComentarios.map((c, i) => (
-                      <div key={i} className="bg-slate-900/60 border border-slate-800 p-4 rounded-2xl">
-                        <div className="flex justify-between items-center mb-1">
-                          <span className="font-bold text-xs text-indigo-300">{c.autor}</span>
-                          <span className="text-[10px] text-slate-500">{c.fecha}</span>
-                        </div>
-                        <p className="text-sm text-slate-300">{c.texto}</p>
-                      </div>
-                    ))}
-                  </div>
                 </div>
               )}
             </div>

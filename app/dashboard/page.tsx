@@ -10,12 +10,16 @@ import {
   CalendarDays,
   CheckCircle2,
   Play,
-  Award
+  Award,
+  Lock,
+  AlertCircle,
+  PhoneCall,
+  ShoppingBag
 } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { calculateEduminCredits, derivePaymentStateForCredits } from "@/lib/utils/credits";
-import { formatearFechaVisual, resolverFechaVencimiento } from "@/lib/utils/fechasCuotas";
+import { formatearFechaVisual, resolverFechaVencimiento, evaluarEstadoDeuda } from "@/lib/utils/fechasCuotas";
 import { getDiplomadoByTitleOrSlug } from "@/lib/data/diplomadosData";
 import {
   parseDiplomadosFromProfile,
@@ -146,6 +150,10 @@ export default async function DashboardPage() {
     console.error('Error obteniendo pagos:', err);
   }
 
+  // Evaluación estricta de deuda y cuotas vencidas
+  const estadoDeuda = evaluarEstadoDeuda(safeProfile, pagosReales);
+  const tieneDeudaVencida = estadoDeuda.tieneDeudaVencida;
+
   // Cálculos de Créditos EDUMIN centralizados con `profiles.cupos_creditos` y estado real de pagos
   const cupos = parseCuposCreditosFromProfile(safeProfile);
   const paymentState = derivePaymentStateForCredits({
@@ -165,35 +173,34 @@ export default async function DashboardPage() {
   });
 
   // Motor Financiero Dinámico
-  let costoTotal = configPaqueteActual?.precioContado || 900;
-  let totalCuotas = configPaqueteActual?.cuotasSugeridas || 3;
-  if (safeProfile.paquete_adquirido === 'COMPLETO') {
-    costoTotal = configPaqueteActual?.precioContado || 540;
-    totalCuotas = 3;
-  } else if (safeProfile.paquete_adquirido === 'FULL') {
-    costoTotal = configPaqueteActual?.precioContado || 900;
-    totalCuotas = 3;
-  } else if (safeProfile.paquete_adquirido === 'ILIMITADO') {
-    costoTotal = configPaqueteActual?.precioContado || 1500;
-    totalCuotas = 5;
-  }
+  const esContado = 
+    safeProfile.tipo_pago === 'CONTADO' ||
+    String(safeProfile.paquete_adquirido || '').toUpperCase().includes('CONTADO');
+
+  let totalCuotas = configPaqueteActual?.cuotasSugeridas || (paqueteKey === 'ILIMITADO' ? 5 : 3);
+  const precioBasePaquete = Number(safeProfile.monto_total || 0) > 0 
+    ? Number(safeProfile.monto_total)
+    : (configPaqueteActual?.precioContado || (paqueteKey === 'ILIMITADO' ? 1500 : paqueteKey === 'COMPLETO' ? 540 : 900));
+  let costoTotal = precioBasePaquete;
 
   let montoPagado = 0;
   let saldoPendiente = costoTotal;
-  let deudaSaldada = false;
   let proximaFechaVencimiento: string | null = null;
 
   if (pagosReales.length > 0) {
     let totalAcumuladoPagado = 0;
     let totalAcumuladoDeuda = 0;
+    let totalAcumuladoPlan = 0;
     let tieneDeudaExplicit = false;
-    let montoTotalContratado = 0;
 
     pagosReales.forEach((p) => {
+      if (p.is_cargo_extra) return;
+
       let pagadoFila = 0;
       let deudaFila = 0;
       let cuotasArray: string[] = [p.cuota_01, p.cuota_02, p.cuota_03, p.cuota_04, p.cuota_05, p.cuota_06];
       let fechasVencimientoFila: string[] | null = null;
+      let planCuotasArray: string[] | null = null;
 
       if (typeof p.metodo === 'string' && p.metodo.startsWith('CREDITO_')) {
         try {
@@ -201,6 +208,9 @@ export default async function DashboardPage() {
           const parsed = JSON.parse(jsonStr);
           if (Array.isArray(parsed.cuotas)) {
             cuotasArray = parsed.cuotas;
+          }
+          if (Array.isArray(parsed.plan_cuotas)) {
+            planCuotasArray = parsed.plan_cuotas;
           }
           if (Array.isArray(parsed.fechas_vencimiento)) {
             fechasVencimientoFila = parsed.fechas_vencimiento;
@@ -217,6 +227,11 @@ export default async function DashboardPage() {
         }
       }
 
+      const cuotasValidas = cuotasArray.filter(v => v !== 'no corresponde');
+      if (cuotasValidas.length > 0) {
+        totalCuotas = cuotasValidas.length;
+      }
+
       if (pagadoFila === 0) {
         pagadoFila = cuotasArray.reduce((acc, c) => {
           return c && c !== 'no corresponde' ? acc + (Number(c) || 0) : acc;
@@ -227,21 +242,36 @@ export default async function DashboardPage() {
         pagadoFila = Number(p.monto) || 0;
       }
 
-      totalAcumuladoPagado += pagadoFila;
+      // Determinar el monto total del plan contratado real de esta fila de pago
+      let planFila = Number(p.monto) || 0;
+      if (planCuotasArray && Array.isArray(planCuotasArray)) {
+        const sumPlan = planCuotasArray.filter(c => c !== 'no corresponde').reduce((acc, c) => acc + (Number(c) || 0), 0);
+        if (sumPlan > 0) planFila = sumPlan;
+      }
+      if (planFila === 0 && cuotasValidas.length > 0 && cuotasValidas.some(c => Number(c) > 0)) {
+        const sumValidas = cuotasValidas.reduce((acc, c) => acc + (Number(c) || 0), 0);
+        if (sumValidas > pagadoFila) planFila = sumValidas;
+      }
+      if (planFila === 0) {
+        planFila = pagadoFila + (deudaFila || 0);
+      }
 
       if (!tieneDeudaExplicit) {
-        const montoBase = Number(p.monto) || costoTotal;
-        deudaFila = Math.max(0, montoBase - pagadoFila);
+        if (planFila > 0) {
+          deudaFila = Math.max(0, planFila - pagadoFila);
+        } else {
+          const cuotaMontoUnitario = precioBasePaquete / Math.max(1, totalCuotas);
+          const pendientesFila = cuotasValidas.filter(v => Number(v) === 0).length;
+          deudaFila = pendientesFila * cuotaMontoUnitario;
+        }
       }
-      totalAcumuladoDeuda += deudaFila;
 
-      const rowMonto = Number(p.monto) || (pagadoFila + deudaFila);
-      if (rowMonto > 0) {
-        montoTotalContratado = Math.max(montoTotalContratado, rowMonto);
-      }
+      totalAcumuladoPagado += pagadoFila;
+      totalAcumuladoDeuda += deudaFila;
+      totalAcumuladoPlan += (planFila > 0 ? planFila : (pagadoFila + deudaFila));
 
       // Buscar la primera cuota pendiente para su fecha de vencimiento real
-      if (!proximaFechaVencimiento && deudaFila > 0) {
+      if (!proximaFechaVencimiento && (deudaFila > 0 || cuotasArray.some(v => v !== 'no corresponde' && Number(v) === 0))) {
         const primerPendienteIdx = cuotasArray.findIndex(v => v !== 'no corresponde' && Number(v) === 0);
         if (primerPendienteIdx !== -1) {
           proximaFechaVencimiento = resolverFechaVencimiento(
@@ -253,40 +283,47 @@ export default async function DashboardPage() {
       }
     });
 
-    if (montoTotalContratado > 0) {
-      costoTotal = montoTotalContratado;
+    if (totalAcumuladoPlan > 0) {
+      costoTotal = totalAcumuladoPlan;
     }
-    montoPagado = totalAcumuladoPagado;
-    saldoPendiente = tieneDeudaExplicit ? totalAcumuladoDeuda : Math.max(0, costoTotal - montoPagado);
-    deudaSaldada = saldoPendiente <= 0;
+    montoPagado = esContado ? costoTotal : totalAcumuladoPagado;
+    saldoPendiente = esContado ? 0 : (tieneDeudaExplicit ? totalAcumuladoDeuda : Math.max(0, costoTotal - montoPagado));
   } else {
     // Estimación con base en cuotas_pagadas de su perfil
     const cuotaMonto = totalCuotas > 0 ? costoTotal / totalCuotas : 0;
-    const esContadoProfile = safeProfile.tipo_pago === 'CONTADO' || String(safeProfile.paquete_adquirido).includes('CONTADO');
-    const cuotasEfectivas = esContadoProfile ? totalCuotas : Math.min(safeProfile.cuotas_pagadas || 0, totalCuotas);
-    montoPagado = esContadoProfile ? costoTotal : cuotasEfectivas * cuotaMonto;
-    saldoPendiente = Math.max(0, costoTotal - montoPagado);
-    deudaSaldada = saldoPendiente <= 0;
+    const cuotasEfectivas = esContado ? totalCuotas : Math.min(safeProfile.cuotas_pagadas || 0, totalCuotas);
+    montoPagado = esContado ? costoTotal : cuotasEfectivas * cuotaMonto;
+    saldoPendiente = esContado ? 0 : Math.max(0, costoTotal - montoPagado);
   }
 
+  // Si tiene cuotas pendientes registradas en estadoDeuda, asegurar que saldoPendiente refleje la deuda real
+  if (!esContado && estadoDeuda.cuotasPendientesCount > 0 && saldoPendiente <= 0) {
+    const valorCuotaAprox = costoTotal / Math.max(1, totalCuotas);
+    saldoPendiente = estadoDeuda.cuotasPendientesCount * valorCuotaAprox;
+  }
+
+  // Deuda saldada real: solo si el paquete está 100% completado (sin cuotas pendientes ni deuda vencida)
+  const deudaSaldada = 
+    estadoDeuda.esCompletado || 
+    (esContado && !tieneDeudaVencida) || 
+    (saldoPendiente <= 0 && estadoDeuda.cuotasPendientesCount === 0);
+
   // Si no se encontró fecha en pagos pero aún hay saldo pendiente
-  if (!proximaFechaVencimiento && !deudaSaldada) {
+  const proximaFechaCalculada = estadoDeuda.proximaFechaPorVencer || proximaFechaVencimiento;
+  if (!proximaFechaCalculada && !deudaSaldada) {
     const idxPendiente = paymentState.cuotasPagadas;
     proximaFechaVencimiento = resolverFechaVencimiento(
       idxPendiente,
       null,
       safeProfile.created_at || new Date().toISOString()
     );
+  } else if (proximaFechaCalculada) {
+    proximaFechaVencimiento = proximaFechaCalculada;
   }
 
   let stringFechaPago = '';
   if (proximaFechaVencimiento) {
-    const fObj = new Date(proximaFechaVencimiento + 'T12:00:00');
-    if (!isNaN(fObj.getTime())) {
-      stringFechaPago = fObj.toLocaleDateString('es-PE', { day: 'numeric', month: 'long', year: 'numeric' });
-    } else {
-      stringFechaPago = formatearFechaVisual(proximaFechaVencimiento);
-    }
+    stringFechaPago = formatearFechaVisual(proximaFechaVencimiento);
   } else {
     const fechaProximoPago = new Date();
     fechaProximoPago.setDate(15);
@@ -316,6 +353,11 @@ export default async function DashboardPage() {
   const bolsaRegularUrl = process.env.NEXT_PUBLIC_BOLSA_REGULAR_URL ?? "https://chat.whatsapp.com/edumin-bolsa-regular";
   const bolsaExclusivaUrl = process.env.NEXT_PUBLIC_BOLSA_TRABAJO_URL ?? "https://chat.whatsapp.com/edumin-bolsa-exclusiva";
 
+  const nombreEstudianteCompleto = [safeProfile.nombres, safeProfile.apellidos].filter(Boolean).join(" ") || "estudiante";
+  const whatsappComprarCreditosUrl = `https://wa.me/51980694497?text=${encodeURIComponent(
+    `Hola EDUMIN, soy ${nombreEstudianteCompleto}${safeProfile.dni_ce ? ` (DNI: ${safeProfile.dni_ce})` : ''}. Ya he utilizado todos mis créditos en el aula virtual y deseo adquirir más Créditos EDUMIN para seguir especializándome. ¿Me podrían indicar los paquetes, costos y promociones disponibles?`
+  )}`;
+
   return (
     <main className="min-h-screen overflow-hidden bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 pb-20 transition-colors duration-150">
       {/* Hero Section */}
@@ -334,6 +376,43 @@ export default async function DashboardPage() {
           </div>
         </div>
       </section>
+
+      {/* Banner de alerta si tiene cuotas vencidas */}
+      {tieneDeudaVencida && (
+        <section className="mx-auto max-w-6xl px-6 sm:px-10 lg:px-16 pt-8 -mb-4">
+          <div className="rounded-3xl p-6 bg-gradient-to-r from-red-950 via-rose-950 to-slate-950 border border-red-500/40 text-white shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div className="space-y-1.5 max-w-2xl">
+              <div className="flex items-center gap-2">
+                <span className="bg-red-600 text-white text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                  <Lock className="size-3" /> Acceso restringido por cuota vencida
+                </span>
+              </div>
+              <h2 className="text-xl font-bold text-white tracking-tight">
+                Atención: Regulariza tu pago pendiente para desbloquear tu campus
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-medium">
+                Registras una cuota vencida{estadoDeuda.primeraFechaVencida ? ` (${formatearFechaVisual(estadoDeuda.primeraFechaVencida)})` : ''}. El acceso a tus diplomados, cursos y certificaciones ha sido pausado. Dirígete a Mis Pagos para regularizar tu situación financiera.
+              </p>
+            </div>
+            <div className="flex flex-wrap items-center gap-2 shrink-0">
+              <Link
+                href="/dashboard/pagos?bloqueado=deuda"
+                className="bg-red-600 hover:bg-red-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition shadow-md flex items-center gap-1.5 cursor-pointer"
+              >
+                <Wallet className="size-4" /> Ir a Mis pagos
+              </Link>
+              <a
+                href="https://wa.me/51980694497?text=Hola%20EDUMIN,%20deseo%20regularizar%20mi%20cuota%20vencida"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/10 hover:bg-white/20 text-white font-bold text-xs px-4 py-2.5 rounded-xl border border-white/20 transition flex items-center gap-1.5 cursor-pointer"
+              >
+                <PhoneCall className="size-4" /> Coordinar por WhatsApp
+              </a>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* SECCIÓN 1 (PRIMERA): PROGRESO ACADÉMICO */}
       <section className="mx-auto max-w-6xl px-6 sm:px-10 lg:px-16 pt-10">
@@ -381,14 +460,14 @@ export default async function DashboardPage() {
 
               <div className="pt-3 border-t border-slate-200 dark:border-slate-700/60 flex items-center justify-between gap-2">
                 <Link 
-                  href="/dashboard/diplomados"
+                  href={tieneDeudaVencida ? "/dashboard/pagos?bloqueado=deuda" : "/dashboard/diplomados"}
                   className="text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline inline-flex items-center gap-1"
                 >
                   Ver mis Diplomados <ArrowUpRight className="size-3.5" />
                 </Link>
 
                 <Link 
-                  href={`/dashboard/reproductor?slug=${diplomadoPrincipal.slug}`}
+                  href={tieneDeudaVencida ? "/dashboard/pagos?bloqueado=deuda" : `/dashboard/reproductor?slug=${diplomadoPrincipal.slug}`}
                   className="inline-flex items-center gap-2 text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-xl shadow-sm transition"
                 >
                   <span className="grid size-5 place-items-center rounded-full bg-white text-indigo-600">
@@ -428,14 +507,14 @@ export default async function DashboardPage() {
 
               <div className="pt-3 border-t border-slate-200 dark:border-slate-700/60 flex items-center justify-between gap-2">
                 <Link 
-                  href="/dashboard/cursos"
+                  href={tieneDeudaVencida ? "/dashboard/pagos?bloqueado=deuda" : "/dashboard/cursos"}
                   className="text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-1"
                 >
                   Ver mis Cursos <ArrowUpRight className="size-3.5" />
                 </Link>
 
                 <Link 
-                  href={cursoPrincipal.link}
+                  href={tieneDeudaVencida ? "/dashboard/pagos?bloqueado=deuda" : cursoPrincipal.link}
                   className="inline-flex items-center gap-2 text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-xl shadow-sm transition"
                 >
                   <span className="grid size-5 place-items-center rounded-full bg-white text-emerald-600">
@@ -454,10 +533,10 @@ export default async function DashboardPage() {
       <section className="mx-auto grid max-w-6xl gap-6 px-6 py-10 sm:px-10 lg:grid-cols-3 lg:px-16">
         
         {/* Widget 1: Créditos EDUMIN disponibles */}
-        <article className="relative rounded-3xl bg-white dark:bg-slate-900 p-7 sm:p-8 shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-indigo-300 dark:hover:border-indigo-500/40 transition">
+        <article className="relative rounded-3xl bg-white dark:bg-slate-900 p-6 sm:p-7 shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-indigo-300 dark:hover:border-indigo-500/40 transition">
           <div>
             <div className="flex items-center gap-3 mb-5">
-              <div className="grid size-10 place-items-center rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-900/50">
+              <div className="grid size-10 place-items-center rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-900/50 shrink-0">
                 <BookOpenCheck className="size-5" />
               </div>
               <h3 className="text-lg font-bold text-slate-900 dark:text-white">Créditos EDUMIN</h3>
@@ -487,35 +566,50 @@ export default async function DashboardPage() {
             <p className="mt-3 text-[11px] text-slate-400 dark:text-slate-500">
               {eduminCredits.total.liberados} liberados por pagos · {eduminCredits.total.consumidos} canjeados
             </p>
+
+            {eduminCredits.total.disponibles === 0 && (
+              <div className="mt-3.5 flex items-center gap-2 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200/80 dark:border-amber-800/40 p-2.5 text-[11px] text-amber-800 dark:text-amber-300 font-medium">
+                <Sparkles className="size-4 text-amber-600 dark:text-amber-400 shrink-0" />
+                <span>¡Has canjeado todos tus créditos! Adquiere más para seguir aprendiendo.</span>
+              </div>
+            )}
           </div>
 
           {eduminCredits.total.disponibles > 0 ? (
             <Link
-              href="/dashboard/canjear"
+              href={tieneDeudaVencida ? "/dashboard/pagos?bloqueado=deuda" : "/dashboard/canjear"}
               className="mt-6 inline-flex h-11 w-full justify-center items-center gap-2 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white px-4 text-xs font-bold transition shadow-sm shadow-indigo-600/20"
             >
-              <Sparkles className="size-4 animate-bounce" /> Canjear mis cursos y diplomados
+              <Sparkles className="size-4 " /> Canjear mis cursos y diplomados
             </Link>
           ) : (
-            <Link
-              href="/dashboard/canjear"
-              className="mt-6 inline-flex h-11 w-full justify-center items-center gap-2 rounded-2xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 px-4 text-xs font-bold transition"
-            >
-              Ver mis créditos canjeados
-            </Link>
+            <div className="mt-5 space-y-2">
+              <a
+                href={whatsappComprarCreditosUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-11 w-full justify-center items-center gap-2 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white px-4 text-xs font-bold transition shadow-sm shadow-emerald-600/20 cursor-pointer"
+              >
+                <ShoppingBag className="size-4" /> Comprar más créditos
+              </a>
+              <Link
+                href={tieneDeudaVencida ? "/dashboard/pagos?bloqueado=deuda" : "/dashboard/canjear"}
+                className="inline-flex h-9 w-full justify-center items-center gap-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 px-3 text-xs font-semibold transition"
+              >
+                Ver mis créditos canjeados
+              </Link>
+            </div>
           )}
         </article>
 
         {/* Widget 2: Estado Financiero */}
-        <article className="relative rounded-3xl bg-white dark:bg-slate-900 p-7 sm:p-8 shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-emerald-300 dark:hover:border-emerald-500/40 transition">
+        <article className="relative rounded-3xl bg-white dark:bg-slate-900 p-6 sm:p-7 shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-emerald-300 dark:hover:border-emerald-500/40 transition">
           <div>
-            <div className="flex items-center justify-between gap-3 mb-5">
-              <div className="flex items-center gap-3">
-                <div className="grid size-10 place-items-center rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-900/50">
-                  <Wallet className="size-5" />
-                </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white">Estado de cuenta</h3>
+            <div className="flex items-center gap-3 mb-5">
+              <div className="grid size-10 place-items-center rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-900/50 shrink-0">
+                <Wallet className="size-5" />
               </div>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white">Estado de cuenta</h3>
             </div>
             
             <div className="space-y-3.5">
@@ -535,10 +629,15 @@ export default async function DashboardPage() {
           </div>
 
           <div className="mt-6 space-y-3">
-            {deudaSaldada ? (
+            {tieneDeudaVencida ? (
+              <div className="flex items-center gap-2 bg-red-50 dark:bg-red-950/40 text-red-700 dark:text-red-300 px-4 py-2.5 rounded-xl text-xs font-bold border border-red-200 dark:border-red-800/50">
+                <AlertCircle className="size-4 shrink-0 text-red-600 dark:text-red-400" />
+                <span>Cuota vencida ({estadoDeuda.primeraFechaVencida ? formatearFechaVisual(estadoDeuda.primeraFechaVencida) : 'Pendiente'}) - Acceso bloqueado</span>
+              </div>
+            ) : deudaSaldada ? (
               <div className="flex items-center gap-2 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 px-4 py-2.5 rounded-xl text-xs font-semibold border border-emerald-200 dark:border-emerald-800/50">
                 <CheckCircle2 className="size-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
-                <span>Cuenta al día. ¡Gracias por tu puntualidad!</span>
+                <span>Deuda 100% cancelada · ¡Programa pagado!</span>
               </div>
             ) : (
               <div className="flex items-center gap-2.5 bg-amber-50 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 px-4 py-2.5 rounded-xl text-xs font-medium border border-amber-200 dark:border-amber-800/50">
@@ -557,58 +656,52 @@ export default async function DashboardPage() {
         </article>
 
         {/* Widget 3: Bolsa de Trabajo y Certificados del Estudiante */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-4 sm:gap-5">
           
           {/* Tarjeta Acceso Directo a Mis Certificados */}
-          <article className="relative flex-1 rounded-3xl bg-white dark:bg-slate-900 p-6 sm:p-7 shadow-sm border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white flex flex-col justify-between hover:border-indigo-300 dark:hover:border-indigo-500/40 transition">
+          <article className="relative flex-1 rounded-3xl bg-white dark:bg-slate-900 p-5 sm:p-6 shadow-sm border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white flex flex-col justify-between hover:border-indigo-300 dark:hover:border-indigo-500/40 transition">
             <div>
-              <div className="flex items-center justify-between">
-                <div className="grid size-10 place-items-center rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-900/50">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="grid size-10 place-items-center rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-900/50 shrink-0">
                   <Award className="size-5" />
                 </div>
-                <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-200/60 dark:border-indigo-800/60">
-                  Documentos oficiales
-                </span>
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
+                  Mis certificados
+                </h3>
               </div>
-              <h3 className="mt-3.5 text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                Mis certificados
-              </h3>
-              <p className="mt-1 text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+              <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
                 Descarga tus diplomas generales, certificados modulares y acreditaciones oficiales con QR.
               </p>
             </div>
             <Link
-              className="mt-5 inline-flex h-11 w-full items-center justify-center gap-2 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-4 text-xs shadow-sm shadow-indigo-600/20 transition"
-              href="/dashboard/certificados"
+              className="mt-4 inline-flex h-10 w-full items-center justify-center gap-2 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-4 text-xs shadow-sm shadow-indigo-600/20 transition"
+              href={tieneDeudaVencida ? "/dashboard/pagos?bloqueado=deuda" : "/dashboard/certificados"}
             >
               Ver mis certificados <ArrowUpRight className="size-4" />
             </Link>
           </article>
 
           {/* Tarjeta de Bolsas de Trabajo (Regular y Exclusiva) */}
-          <article className="relative flex-1 rounded-3xl bg-white dark:bg-slate-900 p-6 sm:p-7 shadow-sm border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white flex flex-col justify-between hover:border-emerald-300 dark:hover:border-emerald-500/40 transition">
+          <article className="relative flex-1 rounded-3xl bg-white dark:bg-slate-900 p-5 sm:p-6 shadow-sm border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white flex flex-col justify-between hover:border-emerald-300 dark:hover:border-emerald-500/40 transition">
             <div>
-              <div className="flex items-center justify-between">
-                <div className="grid size-10 place-items-center rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-900/50">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="grid size-10 place-items-center rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-900/50 shrink-0">
                   <Briefcase className="size-5" />
                 </div>
-                <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60">
-                  Oportunidades
-                </span>
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
+                  Bolsa de trabajo
+                </h3>
               </div>
-              <h3 className="mt-3.5 text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                Bolsa de trabajo
-              </h3>
-              <p className="mt-1 text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+              <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
                 Accede a convocatorias y vacantes laborales activas en minería e industria.
               </p>
             </div>
 
-            <div className="mt-5 space-y-2.5">
+            <div className="mt-4 space-y-2">
               {/* Botón 1: Bolsa de Trabajo Regular */}
               {bolsaTrabajoRegularHabilitada ? (
                 <a
-                  className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white px-4 text-xs font-bold transition shadow-sm shadow-emerald-600/20"
+                  className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white px-4 text-xs font-bold transition shadow-sm shadow-emerald-600/20"
                   href={bolsaRegularUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -618,7 +711,7 @@ export default async function DashboardPage() {
               ) : (
                 <button
                   disabled
-                  className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-2xl bg-emerald-600/90 text-white px-4 text-xs font-bold shadow-sm cursor-not-allowed select-none opacity-80"
+                  className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-2xl bg-emerald-600/90 text-white px-4 text-xs font-bold shadow-sm cursor-not-allowed select-none opacity-80"
                 >
                   Bolsa de trabajo regular <ArrowUpRight className="size-4" />
                 </button>
@@ -627,7 +720,7 @@ export default async function DashboardPage() {
               {/* Botón 2: Bolsa de Trabajo Exclusiva */}
               {bolsaTrabajoExclusivaHabilitada ? (
                 <a
-                  className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white px-4 text-xs font-bold transition shadow-sm shadow-emerald-600/20"
+                  className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white px-4 text-xs font-bold transition shadow-sm shadow-emerald-600/20"
                   href={bolsaExclusivaUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -637,7 +730,7 @@ export default async function DashboardPage() {
               ) : (
                 <button
                   disabled
-                  className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-2xl bg-emerald-600/90 text-white px-4 text-xs font-bold shadow-sm cursor-not-allowed select-none opacity-80"
+                  className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-2xl bg-emerald-600/90 text-white px-4 text-xs font-bold shadow-sm cursor-not-allowed select-none opacity-80"
                 >
                   Bolsa de trabajo exclusiva <ArrowUpRight className="size-4" />
                 </button>

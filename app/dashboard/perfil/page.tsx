@@ -62,13 +62,13 @@ export default function PerfilEstudiante() {
 
   // Estado del formulario en modo edición (celular en un único campo limpio)
   const [formEdicion, setFormEdicion] = useState({
-    nombres: nombres,
-    apellidos: apellidos,
-    dni_ce: '73849201',
-    email: 'alumno@edumin.pe',
-    celular: '+51 984 512 809',
-    fechaNacimiento: '1996-06-14',
-    residencia: 'Arequipa, Perú (Distrito de Yanahuara)',
+    nombres: nombres || '',
+    apellidos: apellidos || '',
+    dni_ce: cachedProf?.dni_ce || cachedProf?.dni || '',
+    email: cachedProf?.email || '',
+    celular: cachedProf?.telefono || cachedProf?.celular || '',
+    fechaNacimiento: cachedProf?.fecha_nacimiento || '',
+    residencia: cachedProf?.residencia || '',
   });
 
   const supabase = createClient();
@@ -82,15 +82,15 @@ export default function PerfilEstudiante() {
           const p = data.profile;
           if (p) {
             setPerfil(p);
-            setFormEdicion((prev) => ({
-              ...prev,
-              nombres: p.nombres || prev.nombres,
-              apellidos: p.apellidos || prev.apellidos,
-              dni_ce: p.dni_ce || prev.dni_ce,
-              email: p.email || prev.email,
-              celular: p.telefono || p.celular || prev.celular,
-              residencia: p.residencia || prev.residencia,
-            }));
+            setFormEdicion({
+              nombres: p.nombres || '',
+              apellidos: p.apellidos || '',
+              dni_ce: p.dni_ce || p.dni || '',
+              email: p.email || '',
+              celular: p.telefono || p.celular || '',
+              fechaNacimiento: p.fecha_nacimiento || '',
+              residencia: p.residencia || '',
+            });
             actualizarDatosUsuario({
               nombres: p.nombres || nombres,
               apellidos: p.apellidos || apellidos,
@@ -282,7 +282,7 @@ export default function PerfilEstudiante() {
       dni_ce: formEdicion.dni_ce,
       email: formEdicion.email,
       celular: formEdicion.celular,
-      fecha_nacimiento: formEdicion.fechaNacimiento.split('-').reverse().join('/'),
+      fecha_nacimiento: formEdicion.fechaNacimiento ? formEdicion.fechaNacimiento.split('-').reverse().join('/') : (prev?.fecha_nacimiento || ''),
       residencia: formEdicion.residencia,
     }));
 
@@ -418,9 +418,6 @@ export default function PerfilEstudiante() {
 
         {/* DATOS OFICIALES DEL PERFIL */}
         <div className={`rounded-3xl p-8 shadow-xl relative overflow-hidden transition-colors ${esOscuro ? 'bg-slate-900 text-slate-100 ring-1 ring-slate-800' : 'bg-white text-slate-900 shadow-slate-950/5 ring-1 ring-slate-200'}`}>
-          {/* Elemento decorativo */}
-          <div className={`absolute -right-20 -top-20 size-64 rounded-full border ${esOscuro ? 'bg-slate-800/30 border-slate-800' : 'bg-slate-50 border-slate-100'}`} />
-          
           <div className="relative">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
               
@@ -457,7 +454,8 @@ export default function PerfilEstudiante() {
                 <input 
                   type="text" 
                   readOnly 
-                  value={perfil?.dni_ce || formEdicion.dni_ce} 
+                  value={perfil?.dni_ce || perfil?.dni || formEdicion.dni_ce || ''} 
+                  placeholder="No registrado"
                   className={`w-full border rounded-xl px-4 py-3 cursor-not-allowed focus:outline-none font-medium ${esOscuro ? 'bg-slate-950/60 border-slate-800 text-slate-300' : 'bg-slate-50 border-slate-200 text-slate-700'}`}
                 />
               </div>
@@ -469,7 +467,8 @@ export default function PerfilEstudiante() {
                 <input 
                   type="text" 
                   readOnly 
-                  value={perfil?.email || formEdicion.email} 
+                  value={perfil?.email || formEdicion.email || ''} 
+                  placeholder="No registrado"
                   className={`w-full border rounded-xl px-4 py-3 cursor-not-allowed focus:outline-none font-medium ${esOscuro ? 'bg-slate-950/60 border-slate-800 text-slate-300' : 'bg-slate-50 border-slate-200 text-slate-700'}`}
                 />
               </div>
@@ -482,7 +481,8 @@ export default function PerfilEstudiante() {
                 <input 
                   type="text" 
                   readOnly 
-                  value={perfil?.celular || formEdicion.celular} 
+                  value={perfil?.celular || perfil?.telefono || formEdicion.celular || ''} 
+                  placeholder="No registrado"
                   className={`w-full border rounded-xl px-4 py-3 cursor-not-allowed focus:outline-none font-medium ${esOscuro ? 'bg-slate-950/60 border-slate-800 text-slate-300' : 'bg-slate-50 border-slate-200 text-slate-700'}`}
                 />
               </div>
@@ -494,7 +494,8 @@ export default function PerfilEstudiante() {
                 <input 
                   type="text" 
                   readOnly 
-                  value={perfil?.fecha_nacimiento || '14/06/1996'} 
+                  value={perfil?.fecha_nacimiento || formEdicion.fechaNacimiento || ''} 
+                  placeholder="No registrado"
                   className={`w-full border rounded-xl px-4 py-3 cursor-not-allowed focus:outline-none font-medium ${esOscuro ? 'bg-slate-950/60 border-slate-800 text-slate-300' : 'bg-slate-50 border-slate-200 text-slate-700'}`}
                 />
               </div>
@@ -506,7 +507,8 @@ export default function PerfilEstudiante() {
                 <input 
                   type="text" 
                   readOnly 
-                  value={perfil?.residencia || formEdicion.residencia} 
+                  value={perfil?.residencia || formEdicion.residencia || ''} 
+                  placeholder="No registrado"
                   className={`w-full border rounded-xl px-4 py-3 cursor-not-allowed focus:outline-none font-medium ${esOscuro ? 'bg-slate-950/60 border-slate-800 text-slate-300' : 'bg-slate-50 border-slate-200 text-slate-700'}`}
                 />
               </div>
@@ -631,8 +633,7 @@ export default function PerfilEstudiante() {
                         </label>
                         <input 
                           type="tel" 
-                          required
-                          placeholder="+51 984 512 809"
+                          placeholder="Ej. +51 912 345 678"
                           value={formEdicion.celular}
                           onChange={(e) => setFormEdicion({ ...formEdicion, celular: e.target.value })}
                           className={`w-full border rounded-xl px-4 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-600 ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
@@ -645,7 +646,6 @@ export default function PerfilEstudiante() {
                         </label>
                         <input 
                           type="date" 
-                          required
                           value={formEdicion.fechaNacimiento}
                           onChange={(e) => setFormEdicion({ ...formEdicion, fechaNacimiento: e.target.value })}
                           className={`w-full border rounded-xl px-4 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-600 ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
@@ -660,7 +660,7 @@ export default function PerfilEstudiante() {
                       </label>
                       <input 
                         type="text" 
-                        required
+                        placeholder="Ej. Lima, Perú"
                         value={formEdicion.residencia}
                         onChange={(e) => setFormEdicion({ ...formEdicion, residencia: e.target.value })}
                         className={`w-full border rounded-xl px-4 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-600 ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}

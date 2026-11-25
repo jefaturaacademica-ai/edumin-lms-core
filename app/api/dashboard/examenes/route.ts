@@ -13,32 +13,32 @@ import {
 import { createClient } from '@/lib/supabase/server';
 import { createAdminClient } from '@/lib/supabase/admin';
 
-async function resolverDniEstudiante(dniParam?: string | null): Promise<string> {
+async function resolverDniEstudiante(): Promise<string | null> {
   try {
     const supabase = await createClient();
-    const { data: { user } } = await supabase.auth.getUser();
-    if (user) {
-      const admin = createAdminClient();
-      const { data: p } = await admin
+    const { data: { user }, error: authError } = await supabase.auth.getUser();
+    if (authError || !user) return null;
+
+    const admin = createAdminClient();
+    const { data: p } = await admin
+      .from('profiles')
+      .select('dni_ce')
+      .eq('id', user.id)
+      .maybeSingle();
+    if (p?.dni_ce) return String(p.dni_ce).trim();
+
+    if (user.email) {
+      const { data: pEmail } = await admin
         .from('profiles')
         .select('dni_ce')
-        .eq('id', user.id)
+        .eq('email', user.email)
         .maybeSingle();
-      if (p?.dni_ce) return String(p.dni_ce).trim();
-
-      if (user.email) {
-        const { data: pEmail } = await admin
-          .from('profiles')
-          .select('dni_ce')
-          .eq('email', user.email)
-          .maybeSingle();
-        if (pEmail?.dni_ce) return String(pEmail.dni_ce).trim();
-      }
+      if (pEmail?.dni_ce) return String(pEmail.dni_ce).trim();
     }
   } catch {
-    // Fallback a parámetro explícito
+    return null;
   }
-  return (dniParam || '71234567').trim();
+  return null;
 }
 
 /**
@@ -50,7 +50,14 @@ export async function GET(request: NextRequest) {
     const codigoDiplomado = searchParams.get('codigoDiplomado');
     const modulo = searchParams.get('modulo');
     const accion = searchParams.get('accion');
-    const dni = await resolverDniEstudiante(searchParams.get('dni'));
+    const dni = await resolverDniEstudiante();
+
+    if (!dni) {
+      return NextResponse.json({
+        success: false,
+        error: 'No autorizado. Inicie sesión.'
+      }, { status: 401 });
+    }
 
     if (!codigoDiplomado) {
       return NextResponse.json({
@@ -214,7 +221,13 @@ export async function POST(request: NextRequest) {
       }, { status: 400 });
     }
 
-    const dni = await resolverDniEstudiante(dniBody);
+    const dni = await resolverDniEstudiante();
+    if (!dni) {
+      return NextResponse.json({
+        success: false,
+        error: 'No autorizado. Inicie sesión.'
+      }, { status: 401 });
+    }
     const config = obtenerConfiguracionExamen(codigoDiplomado, modulo);
     const intentosPermitidos = config.intentos_permitidos ?? 1;
 

@@ -13,17 +13,14 @@ import {
   Calendar,
   FileText,
   CreditCard,
-  Copy,
   Check,
   Send,
-  Building2,
-  Smartphone,
   ExternalLink
 } from 'lucide-react';
 import { useTheme } from '@/context/theme-context';
 import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
 import { StudentPageHeader } from '@/components/dashboard/StudentPageHeader';
-import { formatearFechaVisual, resolverFechaVencimiento } from '@/lib/utils/fechasCuotas';
+import { formatearFechaVisual, resolverFechaVencimiento, esFechaVencida, evaluarEstadoDeuda, EvaluacionEstadoDeuda } from '@/lib/utils/fechasCuotas';
 import { getClientCachedData, fetchWithClientCache } from '@/lib/utils/clientCache';
 
 export default function PagosEstudiantePage() {
@@ -33,6 +30,7 @@ export default function PagosEstudiantePage() {
   const [loading, setLoading] = useState(true);
   const [profile, setProfile] = useState<any>(null);
   const [pagosSupabase, setPagosSupabase] = useState<any[]>([]);
+  const [estadoDeudaEstudiante, setEstadoDeudaEstudiante] = useState<EvaluacionEstadoDeuda | null>(null);
 
   // Estados de simulación dev (para pruebas manuales si se activa el simulador)
   const [modoPrueba, setModoPrueba] = useState<'al_dia' | 'completado' | 'bloqueo'>('al_dia');
@@ -45,13 +43,6 @@ export default function PagosEstudiantePage() {
 
   // Estado para el modal de "Ir a pagar"
   const [cuotaParaPagar, setCuotaParaPagar] = useState<any>(null);
-  const [copiadoKey, setCopiadoKey] = useState<string | null>(null);
-
-  const copiarTexto = (texto: string, key: string) => {
-    navigator.clipboard.writeText(texto);
-    setCopiadoKey(key);
-    setTimeout(() => setCopiadoKey(null), 2000);
-  };
 
   useEffect(() => {
     function procesarPagosPayload(data: any) {
@@ -59,22 +50,28 @@ export default function PagosEstudiantePage() {
       setProfile(data.profile);
       setPagosSupabase(data.pagos || []);
       
-      // Evaluar estado financiero real del alumno desde Supabase
-      const totalDeudaReal = (data.pagos || []).reduce((acc: number, p: any) => acc + (p.total_deuda ?? 0), 0);
-      const cuotasPagadasCount = (data.pagos || []).reduce((acc: number, p: any) => {
-        if (Array.isArray(p.cuotas)) {
-          return acc + p.cuotas.filter((v: string) => v !== 'no corresponde' && Number(v) > 0).length;
-        }
-        return acc;
-      }, 0);
+      // Evaluar estado financiero real del alumno de forma integral
+      const evaluacion = evaluarEstadoDeuda(data.profile, data.pagos || []);
+      setEstadoDeudaEstudiante(evaluacion);
 
-      if (data.profile.tipo_pago === 'CONTADO' || String(data.profile.paquete_adquirido).includes('CONTADO')) {
+      const esPlanContado = 
+        data.profile?.tipo_pago === 'CONTADO' || 
+        String(data.profile?.paquete_adquirido).includes('CONTADO') ||
+        (data.pagos || []).some((p: any) => {
+          if (Array.isArray(p.cuotas)) {
+            const validas = p.cuotas.filter((c: string) => c !== 'no corresponde');
+            return validas.length === 1;
+          }
+          return false;
+        });
+
+      if (esPlanContado) {
         setTipoPlan('contado');
       }
 
-      if (data.profile.bloqueado) {
+      if (evaluacion.tieneDeudaVencida || data.profile.bloqueado) {
         setModoPrueba('bloqueo');
-      } else if (totalDeudaReal === 0 && cuotasPagadasCount > 0) {
+      } else if (evaluacion.esCompletado) {
         setModoPrueba('completado');
       } else {
         setModoPrueba('al_dia');
@@ -88,10 +85,10 @@ export default function PagosEstudiantePage() {
       setLoading(false);
     }
 
-    // 2. Revalidación en segundo plano (stale-while-revalidate)
+    // 2. Revalidación en segundo plano (stale-while-revalidate forzado)
     async function cargarDatosPagos() {
       try {
-        const data = await fetchWithClientCache('/api/dashboard/me');
+        const data = await fetchWithClientCache('/api/dashboard/me', { forceRefresh: true });
         if (data) {
           procesarPagosPayload(data);
         }
@@ -120,7 +117,7 @@ export default function PagosEstudiantePage() {
         const fechaCalculada = resolverFechaVencimiento(idx, null, fechaBase);
         const numCuota = idx + 1;
         const nroFmt = String(numCuota).padStart(2, '0');
-        const esPrimera = idx === 0;
+        const estaVencida = esFechaVencida(fechaCalculada);
 
         return {
           id: `sim-${numCuota}`,
@@ -129,12 +126,12 @@ export default function PagosEstudiantePage() {
           concepto: totalCuotas === 1 ? `Cuota única - ${nombrePrograma}` : `Cuota ${nroFmt} - ${nombrePrograma}`,
           monto: cuotaMonto,
           fecha_vencimiento: formatearFechaVisual(fechaCalculada),
-          fecha_pago: esPrimera ? formatearFechaVisual(fechaBase) : '-',
-          comprobante: esPrimera ? 'REC-2026-00001' : '-',
-          nro_operacion: esPrimera ? 'N/A' : null,
-          medio: esPrimera ? 'Yape / Plin' : '-',
-          estado: esPrimera ? 'Pagado' : 'Por vencer',
-          esPagada: esPrimera
+          fecha_pago: '-',
+          comprobante: '-',
+          nro_operacion: null,
+          medio: '-',
+          estado: estaVencida ? 'Vencido' : 'Por vencer',
+          esPagada: false
         };
       });
     }
@@ -172,12 +169,6 @@ export default function PagosEstudiantePage() {
         const nroFmt = String(numCuota).padStart(2, '0');
         const montoCuota = Number(cVal) > 0 ? Number(cVal) : montoBaseCuota;
         const esPagada = Number(cVal) > 0;
-        const estadoCuota = esPagada ? 'Pagado' : profile?.bloqueado ? 'Vencido' : 'Por vencer';
-
-        const reciboCuota = pago.cuotas_recibos?.[cIdx]?.nro_recibo || (esPagada ? (cIdx === 0 ? pago.nro_recibo : null) : null);
-        const operacionCuota = pago.cuotas_recibos?.[cIdx]?.nro_operacion || (esPagada ? (pago.nro_operacion || null) : null);
-        const fechaPagoRaw = pago.cuotas_recibos?.[cIdx]?.fecha || (esPagada ? (pago.created_at || profile?.created_at) : null);
-        const medioPagoCuota = pago.cuotas_recibos?.[cIdx]?.metodo || (pago.metodo && pago.metodo !== 'Por Pagar' && !pago.metodo.startsWith('CREDITO_') ? pago.metodo : 'Yape / Plin');
 
         // Fecha de vencimiento real obtenida del plan guardado o calculada mensualmente desde la inscripción
         const fechaCalculada = resolverFechaVencimiento(
@@ -185,6 +176,13 @@ export default function PagosEstudiantePage() {
           pago.fechas_vencimiento, 
           pago.created_at || profile?.created_at
         );
+        const estaVencida = !esPagada && esFechaVencida(fechaCalculada);
+        const estadoCuota = esPagada ? 'Pagado' : (estaVencida || profile?.bloqueado) ? 'Vencido' : 'Por vencer';
+
+        const reciboCuota = pago.cuotas_recibos?.[cIdx]?.nro_recibo || (esPagada ? (cIdx === 0 ? pago.nro_recibo : null) : null);
+        const operacionCuota = pago.cuotas_recibos?.[cIdx]?.nro_operacion || (esPagada ? (pago.nro_operacion || null) : null);
+        const fechaPagoRaw = pago.cuotas_recibos?.[cIdx]?.fecha || (esPagada ? (pago.created_at || profile?.created_at) : null);
+        const medioPagoCuota = pago.cuotas_recibos?.[cIdx]?.metodo || (pago.metodo && pago.metodo !== 'Por Pagar' && !pago.metodo.startsWith('CREDITO_') ? pago.metodo : 'Yape / Plin');
 
         items.push({
           id: `${pago.id}-c${numCuota}`,
@@ -194,7 +192,7 @@ export default function PagosEstudiantePage() {
           monto: montoCuota,
           fecha_vencimiento: formatearFechaVisual(fechaCalculada),
           fecha_pago: esPagada ? (fechaPagoRaw ? formatearFechaVisual(fechaPagoRaw) : formatearFechaVisual(pago.created_at)) : '-',
-          comprobante: esPagada ? (reciboCuota || `REC-2026-${String(numCuota).padStart(5, '0')}`) : '-',
+          comprobante: esPagada ? (reciboCuota || pago.nro_recibo || '-') : '-',
           nro_operacion: operacionCuota || (esPagada ? 'N/A' : null),
           medio: esPagada ? medioPagoCuota : '-',
           estado: estadoCuota,
@@ -242,7 +240,9 @@ export default function PagosEstudiantePage() {
                   ¡Tu cuenta se encuentra al día y en orden!
                 </h2>
                 <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-medium">
-                  Has completado tus cuotas programadas puntualmente. Recuerda mantener tus pagos al día para garantizar el acceso ininterrumpido a tus clases y certificaciones.
+                  {estadoDeudaEstudiante?.proximaFechaPorVencer
+                    ? `Has completado tus cuotas programadas puntualmente. Tu próxima cuota vence el ${formatearFechaVisual(estadoDeudaEstudiante.proximaFechaPorVencer)}. Recuerda mantener tus pagos al día para garantizar el acceso ininterrumpido a tus clases y certificaciones.`
+                    : 'Has completado tus cuotas programadas puntualmente. Recuerda mantener tus pagos al día para garantizar el acceso ininterrumpido a tus clases y certificaciones.'}
                 </p>
               </div>
 
@@ -298,7 +298,7 @@ export default function PagosEstudiantePage() {
             <div className="relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div className="space-y-1.5 max-w-2xl">
                 <div className="flex items-center gap-2">
-                  <span className="bg-red-600 text-white text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full flex items-center gap-1 animate-pulse">
+                  <span className="bg-red-600 text-white text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full flex items-center gap-1">
                     <AlertCircle className="size-3" /> Acceso restringido por cuota vencida
                   </span>
                 </div>
@@ -306,7 +306,9 @@ export default function PagosEstudiantePage() {
                   Atención: Regulariza tu cuota pendiente para reactivar tu campus
                 </h2>
                 <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-medium">
-                  Registras una cuota vencida. Regulariza tu pago vía WhatsApp o solicita una prórroga de pago con tu asesor financiero.
+                  {estadoDeudaEstudiante?.primeraFechaVencida
+                    ? `Registras una cuota vencida (fecha de vencimiento: ${formatearFechaVisual(estadoDeudaEstudiante.primeraFechaVencida)}). El acceso a tus programas, clases y certificaciones está restringido. Regulariza tu pago vía WhatsApp o solicita una prórroga para rehabilitar tus accesos.`
+                    : 'Registras una cuota vencida. Regulariza tu pago vía WhatsApp o solicita una prórroga de pago con tu asesor financiero para reactivar tus accesos.'}
                 </p>
               </div>
 
@@ -536,95 +538,27 @@ export default function PagosEstudiantePage() {
               </div>
             </div>
 
-            {/* Medios de pago institucionales */}
-            <div className="space-y-3">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
-                Selecciona tu medio de transferencia preferido:
-              </h4>
-
-              {/* Yape / Plin */}
-              <div className="p-3.5 rounded-2xl border border-purple-200 dark:border-purple-900/60 bg-purple-50/50 dark:bg-purple-950/20 flex items-center justify-between gap-3">
-                <div className="flex items-center gap-3">
-                  <div className="size-9 rounded-xl bg-purple-600 text-white flex items-center justify-center shrink-0 font-black text-xs">
-                    <Smartphone className="size-5" />
-                  </div>
-                  <div>
-                    <span className="font-bold text-slate-900 dark:text-white text-xs block">
-                      Yape / Plin oficial
-                    </span>
-                    <span className="text-[11px] text-purple-700 dark:text-purple-300 font-bold tabular-nums">
-                      984 512 809
-                    </span>
-                    <span className="text-[10px] text-slate-400 block">Titular: EDUMIN / Educación Minera</span>
-                  </div>
+            {/* Coordinación y canales oficiales de recaudación */}
+            <div className="p-4 rounded-2xl border border-indigo-100 dark:border-indigo-900/50 bg-indigo-50/40 dark:bg-indigo-950/20 space-y-3">
+              <div className="flex items-start gap-3">
+                <div className="size-9 rounded-xl bg-indigo-600 text-white flex items-center justify-center shrink-0 font-bold text-xs shadow-xs">
+                  <CreditCard className="size-5" />
                 </div>
-                <button
-                  type="button"
-                  onClick={() => copiarTexto('984512809', 'yape')}
-                  className="px-3 py-1.5 bg-white dark:bg-slate-900 hover:bg-purple-100 dark:hover:bg-purple-900/40 border border-purple-200 dark:border-purple-800 text-purple-700 dark:text-purple-300 rounded-xl text-xs font-bold transition flex items-center gap-1 cursor-pointer shrink-0"
-                >
-                  {copiadoKey === 'yape' ? <Check className="size-3 text-emerald-500" /> : <Copy className="size-3" />}
-                  {copiadoKey === 'yape' ? '¡Copiado!' : 'Copiar'}
-                </button>
-              </div>
-
-              {/* BCP */}
-              <div className="p-3.5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30 flex items-center justify-between gap-3">
-                <div className="flex items-center gap-3">
-                  <div className="size-9 rounded-xl bg-orange-600 text-white flex items-center justify-center shrink-0 font-black text-xs">
-                    <Building2 className="size-5" />
-                  </div>
-                  <div>
-                    <span className="font-bold text-slate-900 dark:text-white text-xs block">
-                      Banco de Crédito (BCP) - Cuenta corriente
-                    </span>
-                    <span className="text-[11px] text-slate-700 dark:text-slate-300 font-mono font-bold">
-                      191-98451280-0-12
-                    </span>
-                    <span className="text-[10px] text-slate-400 block font-mono">CCI: 002-191-009845128001-23</span>
-                  </div>
+                <div>
+                  <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">
+                    Canales oficiales de pago y tesorería
+                  </h4>
+                  <p className="mt-1 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                    Para garantizar la seguridad de tu abono y proporcionarte los números de cuenta bancaria o código QR oficial vigentes, coordina directamente con el área de finanzas a través de nuestro canal institucional de WhatsApp.
+                  </p>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => copiarTexto('19198451280012', 'bcp')}
-                  className="px-3 py-1.5 bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-xl text-xs font-bold transition flex items-center gap-1 cursor-pointer shrink-0"
-                >
-                  {copiadoKey === 'bcp' ? <Check className="size-3 text-emerald-500" /> : <Copy className="size-3" />}
-                  {copiadoKey === 'bcp' ? '¡Copiado!' : 'Copiar'}
-                </button>
-              </div>
-
-              {/* Interbank */}
-              <div className="p-3.5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30 flex items-center justify-between gap-3">
-                <div className="flex items-center gap-3">
-                  <div className="size-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0 font-black text-xs">
-                    <Building2 className="size-5" />
-                  </div>
-                  <div>
-                    <span className="font-bold text-slate-900 dark:text-white text-xs block">
-                      Interbank - Cuenta en soles
-                    </span>
-                    <span className="text-[11px] text-slate-700 dark:text-slate-300 font-mono font-bold">
-                      200-3001234567
-                    </span>
-                    <span className="text-[10px] text-slate-400 block font-mono">CCI: 003-200-003001234567-89</span>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => copiarTexto('2003001234567', 'ibk')}
-                  className="px-3 py-1.5 bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-xl text-xs font-bold transition flex items-center gap-1 cursor-pointer shrink-0"
-                >
-                  {copiadoKey === 'ibk' ? <Check className="size-3 text-emerald-500" /> : <Copy className="size-3" />}
-                  {copiadoKey === 'ibk' ? '¡Copiado!' : 'Copiar'}
-                </button>
               </div>
             </div>
 
             {/* Aviso y acción WhatsApp */}
             <div className="pt-2 border-t border-slate-100 dark:border-slate-800 space-y-3">
               <p className="text-[11px] text-slate-500 dark:text-slate-400">
-                Una vez realizado el abono, notifícalo de inmediato adjuntando tu constancia o voucher para la emisión de tu recibo oficial.
+                Una vez realizado el abono, notifícalo adjuntando tu constancia o comprobante para la emisión y validación de tu recibo oficial.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-2.5">
@@ -637,14 +571,14 @@ export default function PagosEstudiantePage() {
                 </button>
                 <a
                   href={`https://wa.me/51980694497?text=${encodeURIComponent(
-                    `Hola EDUMIN, soy ${profile?.nombres || ''} ${profile?.apellidos || ''} (DNI: ${profile?.dni_ce || ''}). Acabo de realizar el pago de la ${cuotaParaPagar.cuota} por el monto de S/ ${Number(cuotaParaPagar.monto).toFixed(2)} correspondiente a mi programa ${profile?.diplomado_actual || profile?.diplomados_json?.[0]?.titulo || profile?.diplomado_1 || 'EDUMIN'}. Adjunto mi comprobante para su validación.`
+                    `Hola EDUMIN, soy ${profile?.nombres || ''} ${profile?.apellidos || ''} (DNI: ${profile?.dni_ce || ''}). Deseo solicitar los números de cuenta oficiales para realizar el abono de la ${cuotaParaPagar.cuota} por el monto de S/ ${Number(cuotaParaPagar.monto).toFixed(2)} de mi programa ${profile?.diplomado_actual || profile?.diplomados_json?.[0]?.titulo || profile?.diplomado_1 || 'EDUMIN'}.`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 rounded-xl text-xs font-bold shadow-md transition flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <Send className="size-4" />
-                  <span>Notificar constancia por WhatsApp</span>
+                  <span>Solicitar cuentas y coordinar pago por WhatsApp</span>
                 </a>
               </div>
             </div>

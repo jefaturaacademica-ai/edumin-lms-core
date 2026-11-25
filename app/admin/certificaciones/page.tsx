@@ -242,7 +242,7 @@ export default function CertificacionesAdminPage() {
   const [modelosCertificados, setModelosCertificados] = useState<ModeloCertificado[]>([
     {
       id: 'mod-avanza-dip',
-      nombre: 'Superplantilla Oficial Avanza & EDUMIN - Diploma de Alta Especialización',
+      nombre: 'Superplantilla Oficial Avanza y EDUMIN - Diploma de Alta Especialización',
       tipo: 'DIPLOMA',
       orientacion: 'horizontal',
       horas: '325 horas académicas y 13 créditos académicos',
@@ -256,7 +256,7 @@ export default function CertificacionesAdminPage() {
     },
     {
       id: 'mod-avanza-mod',
-      nombre: 'Superplantilla Oficial Avanza & EDUMIN - Certificado Modular',
+      nombre: 'Superplantilla Oficial Avanza y EDUMIN - Certificado Modular',
       tipo: 'MODULAR',
       orientacion: 'horizontal',
       horas: '108 horas académicas',
@@ -655,8 +655,19 @@ export default function CertificacionesAdminPage() {
   const forzarActualizacionDisenoCertificado = async (cert: any) => {
     const tipoUpper = String(cert.tipo || 'DIPLOMA').toUpperCase();
     const modeloIdActual = cert.plantilla_snapshot?.modelo_id || cert.modelo_id;
+    const limpiar = (s: string) => (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+    const progNorm = limpiar(cert.programa || '');
+
     const modeloVigente =
       modelosCertificados.find(m => m.id === modeloIdActual) ||
+      modelosCertificados.find(m => {
+        if (String(m.tipo).toUpperCase() !== tipoUpper || m.asignacionAlcance !== 'PRODUCTO_ESPECIFICO') return false;
+        if (m.recursoAsignadoNombre) {
+          const nomNorm = limpiar(m.recursoAsignadoNombre);
+          if (nomNorm && progNorm && (progNorm.includes(nomNorm) || nomNorm.includes(progNorm))) return true;
+        }
+        return false;
+      }) ||
       modelosCertificados.find(m => String(m.tipo).toUpperCase() === tipoUpper && (m.asignacionAlcance === 'SUPERPLANTILLA_GLOBAL' || m.esPredeterminado)) ||
       (tipoUpper === 'TALLER'
         ? modelosCertificados.find(m => String(m.tipo).toUpperCase() === 'CURSO' && (m.asignacionAlcance === 'SUPERPLANTILLA_GLOBAL' || m.esPredeterminado))
@@ -2973,7 +2984,7 @@ export default function CertificacionesAdminPage() {
                     )}
                   </div>
 
-                  {/* Lienzo del certificado A4 con Drag & Drop interactivo */}
+                  {/* Lienzo del certificado A4 con Arrastrar y Soltar interactivo */}
                   {(() => {
                     const esNombreAlcanceGlobal = (nombre?: string) => 
                       !nombre || nombre.startsWith('TODOS LOS') || nombre.startsWith('SUPERPLANTILLA');

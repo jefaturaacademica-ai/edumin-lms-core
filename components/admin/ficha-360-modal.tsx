@@ -6,7 +6,8 @@ import {
   X, Calendar, Plus, Settings, CreditCard, CheckCircle2, RefreshCw, 
   FileText, Download, Award, Send, AlertTriangle, Check, Coins, Receipt, Wallet,
   User, UserCheck, Phone, Mail, Sparkles, BookOpen, Clock, ShieldAlert,
-  ChevronRight, Layers, Lock, Unlock, Trash2, ChevronDown, ChevronUp
+  ChevronRight, Layers, Lock, Unlock, Trash2, ChevronDown, ChevronUp,
+  ExternalLink, Copy
 } from 'lucide-react';
 
 interface Ficha360ModalProps {
@@ -61,7 +62,7 @@ export default function Ficha360Modal({
   siguienteRecibo
 }: Ficha360ModalProps) {
   // Pestañas modernas
-  const [modalTab, setModalTab] = useState<'datos' | 'cronograma' | 'creditos' | 'academico' | 'retencion'>('datos');
+  const [modalTab, setModalTab] = useState<'datos' | 'cronograma' | 'certificaciones' | 'creditos' | 'academico' | 'retencion'>('datos');
 
   // Estado para edición de datos del estudiante
   const [editNombres, setEditNombres] = useState<string>('');
@@ -70,11 +71,17 @@ export default function Ficha360Modal({
   const [editEmail, setEditEmail] = useState<string>('');
   const [editTelefono, setEditTelefono] = useState<string>('');
   const [editFechaNacimiento, setEditFechaNacimiento] = useState<string>('');
+  const [editResidencia, setEditResidencia] = useState<string>('');
   const [editPaquete, setEditPaquete] = useState<string>('FULL');
   const [editBloqueado, setEditBloqueado] = useState<boolean>(false);
   const [editProrroga, setEditProrroga] = useState<string>('');
   const [guardandoPerfil, setGuardandoPerfil] = useState<boolean>(false);
   const [mensajePerfil, setMensajePerfil] = useState<{ texto: string; tipo: 'exito' | 'error' } | null>(null);
+
+  // Estado para certificaciones emitidas del estudiante
+  const [certificaciones, setCertificaciones] = useState<any[]>([]);
+  const [cargandoCerts, setCargandoCerts] = useState<boolean>(false);
+  const [codigoCopiado, setCodigoCopiado] = useState<string | null>(null);
 
   // Estado para gestión de créditos EDUMIN adicionales
   const [extraDip, setExtraDip] = useState<number>(0);
@@ -239,6 +246,7 @@ export default function Ficha360Modal({
       setEditEmail(alumnoSeleccionado.email || '');
       setEditTelefono(alumnoSeleccionado.telefono && alumnoSeleccionado.telefono !== 'Sin teléfono' ? alumnoSeleccionado.telefono : '');
       setEditFechaNacimiento(alumnoSeleccionado.fecha_nacimiento || '');
+      setEditResidencia(alumnoSeleccionado.residencia || '');
       setEditPaquete(alumnoSeleccionado.paquete_adquirido || 'FULL');
       setEditBloqueado(Boolean(alumnoSeleccionado.bloqueado));
       setEditProrroga(alumnoSeleccionado.prorroga_hasta || '');
@@ -248,6 +256,33 @@ export default function Ficha360Modal({
       setMensajeCreditosExtra(null);
     }
   }, [alumnoSeleccionado]);
+
+  // Cargar certificaciones oficiales del estudiante desde la base de datos
+  useEffect(() => {
+    if (!alumnoSeleccionado?.dni_ce) {
+      setCertificaciones([]);
+      return;
+    }
+    let cancelado = false;
+    setCargandoCerts(true);
+    fetch(`/api/admin/certificaciones?dni=${encodeURIComponent(alumnoSeleccionado.dni_ce)}`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (cancelado) return;
+        const certsDb = Array.isArray(data?.certificaciones) ? data.certificaciones : [];
+        setCertificaciones(certsDb);
+      })
+      .catch((err) => {
+        console.error('Error cargando certificaciones en Ficha 360:', err);
+      })
+      .finally(() => {
+        if (!cancelado) setCargandoCerts(false);
+      });
+
+    return () => {
+      cancelado = true;
+    };
+  }, [alumnoSeleccionado?.dni_ce]);
 
   if (!alumnoSeleccionado) return null;
 
@@ -280,6 +315,7 @@ export default function Ficha360Modal({
           new_dni_ce: editDni.trim(),
           email: editEmail.trim(),
           telefono: editTelefono.trim(),
+          residencia: editResidencia.trim() || null,
           fecha_nacimiento: editFechaNacimiento.trim() || null,
           paquete_adquirido: editPaquete,
           bloqueado: editBloqueado,
@@ -395,15 +431,60 @@ export default function Ficha360Modal({
   };
 
   interface TabItem {
-    id: 'datos' | 'cronograma' | 'creditos' | 'academico' | 'retencion';
+    id: 'datos' | 'cronograma' | 'certificaciones' | 'creditos' | 'academico' | 'retencion';
     label: string;
     icon: any;
     badge?: string | number;
   }
 
+  // Consolidar certificaciones de la base de datos + módulos/cursos completados con certificado
+  const todasCertificaciones = React.useMemo(() => {
+    const list: any[] = [...certificaciones];
+    const codigosExistentes = new Set(certificaciones.map(c => String(c.codigo_verificacion || c.codigo || '').toUpperCase()));
+
+    (alumnoSeleccionado.diplomados_json || []).forEach((dip: any) => {
+      (dip.modulos || []).forEach((mod: any) => {
+        if (mod.codigo_cert && !codigosExistentes.has(String(mod.codigo_cert).toUpperCase())) {
+          codigosExistentes.add(String(mod.codigo_cert).toUpperCase());
+          list.push({
+            id: `cert-mod-${mod.codigo_cert}`,
+            codigo_verificacion: mod.codigo_cert,
+            tipo: 'MODULAR',
+            programa_titulo: dip.titulo,
+            modulo_titulo: mod.nombre || mod.codigo,
+            horas_lectivas: '108 horas académicas',
+            nota_final: mod.nota || 20,
+            fecha_emision: mod.fecha_emision || alumnoSeleccionado.created_at?.split('T')[0] || new Date().toISOString().split('T')[0],
+            estado_financiero_al_dia: !alumnoSeleccionado.bloqueado
+          });
+        }
+      });
+    });
+
+    (alumnoSeleccionado.cursos_json || []).forEach((cur: any) => {
+      if (cur.codigo_cert && !codigosExistentes.has(String(cur.codigo_cert).toUpperCase())) {
+        codigosExistentes.add(String(cur.codigo_cert).toUpperCase());
+        list.push({
+          id: `cert-cur-${cur.codigo_cert}`,
+          codigo_verificacion: cur.codigo_cert,
+          tipo: cur.tipo === 'TALLER' ? 'TALLER' : 'CURSO',
+          programa_titulo: cur.titulo,
+          modulo_titulo: null,
+          horas_lectivas: cur.horas || '20 horas académicas',
+          nota_final: cur.nota || 20,
+          fecha_emision: cur.fecha_emision || alumnoSeleccionado.created_at?.split('T')[0] || new Date().toISOString().split('T')[0],
+          estado_financiero_al_dia: !alumnoSeleccionado.bloqueado
+        });
+      }
+    });
+
+    return list;
+  }, [certificaciones, alumnoSeleccionado]);
+
   const tabsConfig: TabItem[] = [
     { id: 'datos', label: 'Datos del estudiante', icon: User },
-    { id: 'cronograma', label: 'Cronograma y Finanzas', icon: Calendar, badge: Number(alumnoSeleccionado.deuda_total_pendiente || 0) > 0 ? `Deuda: S/ ${Number(alumnoSeleccionado.deuda_total_pendiente).toFixed(0)}` : 'Al día' },
+    { id: 'cronograma', label: 'Cronograma y finanzas', icon: Calendar, badge: Number(alumnoSeleccionado.deuda_total_pendiente || 0) > 0 ? `Deuda: S/ ${Number(alumnoSeleccionado.deuda_total_pendiente).toFixed(0)}` : 'Al día' },
+    { id: 'certificaciones', label: 'Certificaciones', icon: Award, badge: todasCertificaciones.length },
     { id: 'academico', label: 'Avance académico', icon: Award, badge: `${alumnoSeleccionado.avance_porcentaje || 0}%` },
     { id: 'retencion', label: 'Deserción cero', icon: Send, badge: alumnoSeleccionado.nivel_riesgo_churn }
   ];
@@ -607,6 +688,19 @@ export default function Ficha360Modal({
                         className="w-full px-3.5 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold tabular-nums text-slate-900 dark:text-white outline-none focus:border-indigo-500 transition-colors"
                       />
                     </div>
+
+                    <div className="sm:col-span-2">
+                      <label className="block text-[10px] font-bold text-slate-600 dark:text-slate-400 uppercase mb-1">
+                        Lugar de residencia
+                      </label>
+                      <input 
+                        type="text"
+                        value={editResidencia}
+                        onChange={(e) => setEditResidencia(e.target.value)}
+                        placeholder="Ej. Lima, Perú (Ciudad / País / Distrito)"
+                        className="w-full px-3.5 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-900 dark:text-white outline-none focus:border-indigo-500 transition-colors"
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -687,7 +781,7 @@ export default function Ficha360Modal({
           {modalTab === 'cronograma' && (
             <div className="space-y-6">
               
-              {/* Header Pagaré & Información del Programa */}
+              {/* Header Pagaré e Información del Programa */}
               <div className="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
                   <div>
@@ -1271,11 +1365,11 @@ export default function Ficha360Modal({
                                           <button
                                             type="button"
                                             onClick={() => onSetReciboImprimir({
-                                              id: nroReciboCuota || `REC-2026-${String(idx + 1).padStart(5, '0')}`,
+                                              id: nroReciboCuota || creditoSeleccionado?.nro_recibo || 'Sin recibo',
                                               monto: pagadoNum,
                                               metodo: creditoSeleccionado?.metodo || 'Yape / Plin',
-                                              comprobante: nroReciboCuota || `REC-2026-${String(idx + 1).padStart(5, '0')}`,
-                                              nro_recibo: nroReciboCuota || `REC-2026-${String(idx + 1).padStart(5, '0')}`,
+                                              comprobante: nroReciboCuota || creditoSeleccionado?.nro_recibo || 'Sin recibo',
+                                              nro_recibo: nroReciboCuota || creditoSeleccionado?.nro_recibo || 'Sin recibo',
                                               nro_operacion: nroOperacionCuota || 'N/A'
                                             })}
                                             className="text-[10px] text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300 font-bold underline cursor-pointer"
@@ -1412,7 +1506,179 @@ export default function Ficha360Modal({
             </div>
           )}
 
-          {/* TAB 4: AVANCE ACADÉMICO SEPARADO (DIPLOMADOS, CURSOS Y TALLERES) Y CRÉDITOS EXTRA */}
+          {/* TAB 3: CERTIFICACIONES Y DIPLOMAS ASIGNADOS */}
+          {modalTab === 'certificaciones' && (
+            <div className="space-y-6">
+              
+              {/* Encabezado y Métricas de Certificaciones */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <div className="p-4 rounded-2xl bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-900/60">
+                  <span className="text-[10px] uppercase font-bold text-indigo-700 dark:text-indigo-400 block tracking-wider">
+                    Total emitidas
+                  </span>
+                  <strong className="text-2xl font-black text-indigo-900 dark:text-indigo-200 block mt-1 tabular-nums">
+                    {todasCertificaciones.length}
+                  </strong>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-900/60">
+                  <span className="text-[10px] uppercase font-bold text-emerald-700 dark:text-emerald-400 block tracking-wider">
+                    Modulares
+                  </span>
+                  <strong className="text-2xl font-black text-emerald-900 dark:text-emerald-200 block mt-1 tabular-nums">
+                    {todasCertificaciones.filter((c: any) => c.tipo === 'MODULAR').length}
+                  </strong>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-purple-50 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-900/60">
+                  <span className="text-[10px] uppercase font-bold text-purple-700 dark:text-purple-400 block tracking-wider">
+                    Diplomas
+                  </span>
+                  <strong className="text-2xl font-black text-purple-900 dark:text-purple-200 block mt-1 tabular-nums">
+                    {todasCertificaciones.filter((c: any) => c.tipo === 'DIPLOMA').length}
+                  </strong>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-cyan-50 dark:bg-cyan-950/40 border border-cyan-200 dark:border-cyan-900/60">
+                  <span className="text-[10px] uppercase font-bold text-cyan-700 dark:text-cyan-400 block tracking-wider">
+                    Cursos / Talleres
+                  </span>
+                  <strong className="text-2xl font-black text-cyan-900 dark:text-cyan-200 block mt-1 tabular-nums">
+                    {todasCertificaciones.filter((c: any) => c.tipo !== 'MODULAR' && c.tipo !== 'DIPLOMA').length}
+                  </strong>
+                </div>
+              </div>
+
+              {/* Contenido: Tabla de certificaciones o Estado Vacío */}
+              {cargandoCerts ? (
+                <div className="py-16 text-center text-slate-500 dark:text-slate-400">
+                  <RefreshCw className="size-6 animate-spin mx-auto mb-2 text-indigo-600" />
+                  <p className="text-xs font-semibold">Cargando certificaciones del estudiante...</p>
+                </div>
+              ) : todasCertificaciones.length === 0 ? (
+                <div className="py-16 px-6 text-center border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-3xl bg-slate-50/50 dark:bg-slate-900/30">
+                  <div className="size-14 rounded-2xl bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mx-auto mb-3 shadow-inner">
+                    <Award className="size-7" />
+                  </div>
+                  <h4 className="text-sm font-bold text-slate-900 dark:text-white">
+                    Sin certificaciones emitidas aún
+                  </h4>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 max-w-md mx-auto mt-1 leading-relaxed">
+                    Este estudiante no registra certificados emitidos hasta el momento. Las certificaciones se generan automáticamente conforme el estudiante apruebe los módulos de sus diplomados o talleres.
+                  </p>
+                </div>
+              ) : (
+                <div className="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-white dark:bg-slate-900 shadow-sm">
+                  <div className="px-5 py-3.5 border-b border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-950/60 flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <Award className="size-4 text-indigo-600 dark:text-indigo-400" />
+                      <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">
+                        Certificados y Diplomas Asignados
+                      </h4>
+                    </div>
+                    <span className="text-[10px] text-slate-400 font-semibold tabular-nums">
+                      {todasCertificaciones.length} registro(s)
+                    </span>
+                  </div>
+
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-left border-collapse text-xs">
+                      <thead>
+                        <tr className="border-b border-slate-200 dark:border-slate-800 bg-slate-100/60 dark:bg-slate-800/60 text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider">
+                          <th className="py-3 px-4">Código QR</th>
+                          <th className="py-3 px-4">Tipo</th>
+                          <th className="py-3 px-4">Programa / Módulo</th>
+                          <th className="py-3 px-4 text-center">Nota</th>
+                          <th className="py-3 px-4">Horas</th>
+                          <th className="py-3 px-4">Emisión</th>
+                          <th className="py-3 px-4 text-right">Acción</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
+                        {todasCertificaciones.map((cert: any, idx: number) => {
+                          const codigo = cert.codigo_verificacion || cert.codigo || '-';
+                          const esModular = cert.tipo === 'MODULAR';
+                          const esDiploma = cert.tipo === 'DIPLOMA';
+
+                          return (
+                            <tr key={cert.id || idx} className="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors">
+                              <td className="py-3 px-4 font-mono font-bold text-indigo-600 dark:text-indigo-400 tabular-nums">
+                                <div className="flex items-center gap-1.5">
+                                  <span>{codigo}</span>
+                                  <button
+                                    type="button"
+                                    onClick={() => {
+                                      navigator.clipboard.writeText(codigo);
+                                      setCodigoCopiado(codigo);
+                                      setTimeout(() => setCodigoCopiado(null), 2000);
+                                    }}
+                                    className="p-1 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 rounded transition-colors cursor-pointer"
+                                    title="Copiar código de verificación"
+                                  >
+                                    {codigoCopiado === codigo ? <Check className="size-3 text-emerald-500" /> : <Copy className="size-3" />}
+                                  </button>
+                                </div>
+                              </td>
+
+                              <td className="py-3 px-4">
+                                <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold ${
+                                  esModular
+                                    ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800'
+                                    : esDiploma
+                                    ? 'bg-purple-50 text-purple-700 dark:bg-purple-950/60 dark:text-purple-300 border border-purple-200 dark:border-purple-800'
+                                    : 'bg-cyan-50 text-cyan-700 dark:bg-cyan-950/60 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-800'
+                                }`}>
+                                  {cert.tipo || 'CERTIFICADO'}
+                                </span>
+                              </td>
+
+                              <td className="py-3 px-4">
+                                <p className="font-bold text-slate-900 dark:text-white leading-tight">
+                                  {cert.programa_titulo || 'Sin título'}
+                                </p>
+                                {cert.modulo_titulo && (
+                                  <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">
+                                    {cert.modulo_titulo}
+                                  </p>
+                                )}
+                              </td>
+
+                              <td className="py-3 px-4 text-center tabular-nums">
+                                <span className="font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-800 text-[11px]">
+                                  {Number(cert.nota_final ?? cert.nota ?? 20)}
+                                </span>
+                              </td>
+
+                              <td className="py-3 px-4 text-slate-600 dark:text-slate-300 tabular-nums text-[11px]">
+                                {cert.horas_lectivas || '108 horas'}
+                              </td>
+
+                              <td className="py-3 px-4 text-slate-500 dark:text-slate-400 tabular-nums text-[11px]">
+                                {cert.fecha_emision ? String(cert.fecha_emision).split('T')[0] : '-'}
+                              </td>
+
+                              <td className="py-3 px-4 text-right">
+                                <a
+                                  href={`/validar/${codigo}`}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-950/50 dark:hover:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 text-[11px] font-bold transition-colors border border-indigo-200/60 dark:border-indigo-800/60 cursor-pointer"
+                                >
+                                  <span>Validar</span>
+                                  <ExternalLink className="size-3" />
+                                </a>
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              )}
+
+            </div>
+          )}
           {modalTab === 'academico' && (() => {
             const normStr = (s?: string | null) =>
               (s || '')
@@ -2495,7 +2761,7 @@ export default function Ficha360Modal({
             );
           })()}
 
-          {/* TAB 5: RETENCIÓN & DESERCIÓN CERO */}
+          {/* TAB 5: RETENCIÓN Y DESERCIÓN CERO */}
           {modalTab === 'retencion' && (
             <div className="space-y-6">
               <div className="bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 p-6 rounded-2xl space-y-3">

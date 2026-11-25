@@ -3,6 +3,7 @@
 import React, { createContext, useContext, useEffect, useState, useCallback } from 'react';
 import { createClient } from '@/lib/supabase/client';
 import { fetchWithClientCache, invalidateClientCache } from '@/lib/utils/clientCache';
+import { evaluarEstadoDeuda, EvaluacionEstadoDeuda } from '@/lib/utils/fechasCuotas';
 
 export function limpiarSesionLocal() {
   if (typeof window === 'undefined') return;
@@ -29,6 +30,8 @@ type ProfileContextType = {
   role: string;
   fotoPerfil: string | null;
   debeCambiarPassword: boolean;
+  tieneDeudaVencida: boolean;
+  estadoDeuda: EvaluacionEstadoDeuda | null;
   cargando: boolean;
   actualizarFotoPerfil: (nuevaFoto: string | null) => void;
   actualizarDatosUsuario: (datos: { nombres: string; apellidos: string; paqueteContratado?: string; dni?: string }) => void;
@@ -45,6 +48,8 @@ const ProfileContext = createContext<ProfileContextType>({
   role: 'ESTUDIANTE',
   fotoPerfil: null,
   debeCambiarPassword: false,
+  tieneDeudaVencida: false,
+  estadoDeuda: null,
   cargando: true,
   actualizarFotoPerfil: () => {},
   actualizarDatosUsuario: () => {},
@@ -60,6 +65,8 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
   const [role, setRole] = useState('ESTUDIANTE');
   const [fotoPerfil, setFotoPerfil] = useState<string | null>(null);
   const [debeCambiarPassword, setDebeCambiarPassword] = useState(false);
+  const [tieneDeudaVencida, setTieneDeudaVencida] = useState(false);
+  const [estadoDeuda, setEstadoDeuda] = useState<EvaluacionEstadoDeuda | null>(null);
   const [cargando, setCargando] = useState(true);
 
   const marcarPasswordActualizada = useCallback(() => {
@@ -106,6 +113,10 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
         if (userDni) localStorage.setItem('edumin_dni', userDni);
         if (paq) localStorage.setItem('edumin_paquete', paq);
         if (rol) localStorage.setItem('edumin_role', rol);
+
+        const evDeuda = evaluarEstadoDeuda(profile, data.pagos || []);
+        setTieneDeudaVencida(evDeuda.tieneDeudaVencida);
+        setEstadoDeuda(evDeuda);
       } else {
         // Si no hay sesión válida
         setFotoPerfil(null);
@@ -114,6 +125,8 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
         setDni('');
         setPaqueteContratado('');
         setRole('ESTUDIANTE');
+        setTieneDeudaVencida(false);
+        setEstadoDeuda(null);
         limpiarSesionLocal();
       }
     } catch (e) {
@@ -214,6 +227,8 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
       role,
       fotoPerfil,
       debeCambiarPassword,
+      tieneDeudaVencida,
+      estadoDeuda,
       cargando,
       actualizarFotoPerfil,
       actualizarDatosUsuario,

@@ -213,7 +213,7 @@ export default function ReportesPage() {
               <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
                 <div>
                   <FileSpreadsheet className="w-8 h-8 text-emerald-600 mb-3" />
-                  <h4 className="font-bold text-slate-900 text-sm">Reporte de Recaudación & Pagos</h4>
+                  <h4 className="font-bold text-slate-900 text-sm">Reporte de Recaudación y Pagos</h4>
                   <p className="text-xs text-slate-500 mt-1">Historial detallado de cuotas validadas por DNI, pasarelas y montos recaudados.</p>
                 </div>
                 <button

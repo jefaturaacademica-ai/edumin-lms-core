@@ -26,53 +26,33 @@ export async function POST(request: Request) {
       dni 
     } = body;
 
-    // 1. Obtener usuario autenticado o buscar por DNI/email si está en sesión demo
+    // 1. Obtener usuario autenticado estrictamente
+    const supabase = await createClient();
+    const { data: { user }, error: authError } = await supabase.auth.getUser();
+
+    if (authError || !user) {
+      return NextResponse.json({ error: 'No autorizado. Inicie sesión.' }, { status: 401 });
+    }
+
     let profile: any = null;
-    try {
-      const supabase = await createClient();
-      const { data: { user } } = await supabase.auth.getUser();
-      if (user) {
-        const { data: p } = await admin
-          .from('profiles')
-          .select('*')
-          .eq('id', user.id)
-          .maybeSingle();
-        profile = p;
+    const { data: p } = await admin
+      .from('profiles')
+      .select('*')
+      .eq('id', user.id)
+      .maybeSingle();
+    profile = p;
 
-        if (!profile && user.email) {
-          const { data: pByEmail } = await admin
-            .from('profiles')
-            .select('*')
-            .eq('email', user.email)
-            .maybeSingle();
-          profile = pByEmail;
-        }
-      }
-    } catch {
-      // Demo session fallback
-    }
-
-    if (!profile) {
-      const targetDni = dni || '71234567';
-      const { data: pByDni } = await admin
+    if (!profile && user.email) {
+      const { data: pByEmail } = await admin
         .from('profiles')
         .select('*')
-        .eq('dni_ce', targetDni)
+        .eq('email', user.email)
         .maybeSingle();
-      profile = pByDni;
+      profile = pByEmail;
     }
 
     if (!profile) {
-      const { data: pFirst } = await admin
-        .from('profiles')
-        .select('*')
-        .limit(1)
-        .maybeSingle();
-      profile = pFirst;
-    }
-
-    if (!profile) {
-      return NextResponse.json({ error: 'Perfil no encontrado en Supabase.' }, { status: 404 });
+      return NextResponse.json({ error: 'Perfil de estudiante no encontrado en Supabase.' }, { status: 404 });
     }
 
     // 2. Parsear diplomados y cursos del perfil
@@ -280,15 +260,29 @@ export async function POST(request: Request) {
     function resolverModeloCertificado(modelos: any[], tipo: string, productoTitulo?: string, productoId?: string) {
       if (!modelos || modelos.length === 0) return null;
       const tipoUpper = tipo.toUpperCase();
+      const limpiar = (s: string) => (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+      const titNorm = limpiar(productoTitulo || '');
+      const idNorm = (productoId || '').trim().toUpperCase();
 
       // 1. Asignación específica por producto
       if (productoTitulo || productoId) {
-        const porProducto = modelos.find((m: any) => 
-          String(m.tipo).toUpperCase() === tipoUpper &&
-          m.asignacionAlcance === 'PRODUCTO_ESPECIFICO' &&
-          ((productoTitulo && m.recursoAsignadoNombre?.toLowerCase().includes(productoTitulo.toLowerCase())) ||
-           (productoId && m.recursoAsignadoId === productoId))
-        );
+        const porProducto = modelos.find((m: any) => {
+          if (String(m.tipo).toUpperCase() !== tipoUpper || m.asignacionAlcance !== 'PRODUCTO_ESPECIFICO') return false;
+          if (idNorm && (
+            m.recursoAsignadoCodigo?.toUpperCase() === idNorm ||
+            m.recursoAsignadoId?.toUpperCase() === idNorm ||
+            m.recursoAsignadoId === productoId
+          )) return true;
+          if (m.recursoAsignadoNombre) {
+            const nomNorm = limpiar(m.recursoAsignadoNombre);
+            if (nomNorm && titNorm && (titNorm.includes(nomNorm) || nomNorm.includes(titNorm))) return true;
+          }
+          if (m.nombre) {
+            const modNomNorm = limpiar(m.nombre);
+            if (modNomNorm && titNorm && (titNorm.includes(modNomNorm) || modNomNorm.includes(titNorm))) return true;
+          }
+          return false;
+        });
         if (porProducto) return porProducto;
       }
 
@@ -344,7 +338,7 @@ export async function POST(request: Request) {
 
             const snapshotModular = {
               modelo_id: modeloMod?.id || 'mod-avanza-mod',
-              nombrePlantilla: modeloMod?.nombre || 'Superplantilla Oficial Avanza & EDUMIN - Certificado Modular',
+              nombrePlantilla: modeloMod?.nombre || 'Superplantilla Oficial Avanza y EDUMIN - Certificado Modular',
               horas: modItem.horas || modeloMod?.horas || '108 horas académicas',
               ...(creditosMod ? { creditos: creditosMod } : {}),
               ciudad: 'Arequipa',
@@ -426,7 +420,7 @@ export async function POST(request: Request) {
 
           const snapshotDiploma = {
             modelo_id: modeloDip?.id || 'mod-avanza-dip',
-            nombrePlantilla: modeloDip?.nombre || 'Superplantilla Oficial Avanza & EDUMIN - Diploma de Alta Especialización',
+            nombrePlantilla: modeloDip?.nombre || 'Superplantilla Oficial Avanza y EDUMIN - Diploma de Alta Especialización',
             horas: modeloDip?.horas || '325 horas académicas y 13 créditos académicos',
             ...(creditosDip ? { creditos: creditosDip } : {}),
             ciudad: 'Arequipa',

@@ -47,7 +47,7 @@ export default function AdminDashboard360() {
   // Webhook de Retención / Wasapi
   const [enviandoAlertaWhatsApp, setEnviandoAlertaWhatsApp] = useState(false);
 
-  // Anulación de pagos con justificación & n8n
+  // Anulación de pagos con justificación y n8n
   const [pagoParaAnular, setPagoParaAnular] = useState<any | null>(null);
   const [motivoAnulacion, setMotivoAnulacion] = useState<string>('');
   const [cargandoAnulacion, setCargandoAnulacion] = useState(false);
@@ -370,7 +370,7 @@ export default function AdminDashboard360() {
                   <div className="flex items-center gap-2">
                     <Filter className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
                     <h3 className="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white">
-                      Filtros Múltiples & Cruzados de Data
+                      Filtros Múltiples y Cruzados de Data
                     </h3>
                   </div>
                   <button 
@@ -541,7 +541,7 @@ export default function AdminDashboard360() {
               <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800 p-6 space-y-6">
                 <div className="flex justify-between items-center border-b border-slate-100 dark:border-slate-800 pb-4">
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-white">Consolidado Estudiantil 360° & Control de Deserción</h3>
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-white">Consolidado Estudiantil 360° y Control de Deserción</h3>
                     <p className="text-xs text-slate-500 dark:text-slate-400">Haz clic en cualquier alumno para abrir su Ficha 360° (Académica, Financiera y Retención).</p>
                   </div>
                   <span className="text-xs font-bold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full flex items-center gap-1.5">
@@ -556,7 +556,7 @@ export default function AdminDashboard360() {
                       <tr className="border-b border-slate-100 dark:border-slate-800 text-slate-400 dark:text-slate-500 text-[10px] uppercase tracking-wider font-bold">
                         <th className="pb-3 px-4">DNI / CE</th>
                         <th className="pb-3 px-4">Estudiante</th>
-                        <th className="pb-3 px-4">Paquete & Programa</th>
+                        <th className="pb-3 px-4">Paquete y Programa</th>
                         <th className="pb-3 px-4">Última Conexión</th>
                         <th className="pb-3 px-4">% Pago Completado</th>
                         <th className="pb-3 px-4">Estado Pago</th>
@@ -723,7 +723,7 @@ export default function AdminDashboard360() {
                         <tr className="border-b border-slate-100 dark:border-slate-800 text-slate-400 dark:text-slate-500 text-[10px] uppercase tracking-wider font-bold">
                           <th className="pb-3 px-4">Fecha y Hora</th>
                           <th className="pb-3 px-4">N.º Operación</th>
-                          <th className="pb-3 px-4">Estudiante & DNI</th>
+                          <th className="pb-3 px-4">Estudiante y DNI</th>
                           <th className="pb-3 px-4">Programa</th>
                           <th className="pb-3 px-4">Concepto / Cuota</th>
                           <th className="pb-3 px-4">Monto Pagado</th>
@@ -984,7 +984,7 @@ export default function AdminDashboard360() {
       )}
 
       {/* ========================================================= */}
-      {/* MODAL: ANULACIÓN DE PAGO CON JUSTIFICACIÓN OBLIGATORIA & N8N */}
+      {/* MODAL: ANULACIÓN DE PAGO CON JUSTIFICACIÓN OBLIGATORIA Y N8N */}
       {/* ========================================================= */}
       <AnularPagoModal
         pagoParaAnular={pagoParaAnular}

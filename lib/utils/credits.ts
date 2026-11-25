@@ -126,6 +126,12 @@ export function calculateEduminCredits(params: {
       curLiberados = Math.min(15, Math.max(5, cuotasPagadas * 3));
       // En cuotas: 1er pago = 1 diplomado, 2do pago = 2 diplomados, 3er pago = 3 diplomados y así sucesivamente
       dipLiberados = cuotasPagadas * 1;
+
+      // Regla especial ILIMITADO: cuando consume sus diplomados liberados (al menos 3), se liberan bloques sucesivos de 3
+      if (dipConsumidos >= 3) {
+        const tramosExtras = Math.floor((dipConsumidos - 3) / 3) + 1;
+        dipLiberados += tramosExtras * 3;
+      }
       dipContratados = Math.max(dipContratados, dipLiberados);
     }
   }
@@ -255,6 +261,9 @@ export function getDiplomadosHabilitadosPorCuotas(params: {
   if (cuotasPagadas === 0) return 0;
 
   if (params.totalCreditos !== undefined && params.totalCreditos !== null) {
+    if (paquete === 'ILIMITADO' && cuotasPagadas >= 1) {
+      return Math.max(cuotasPagadas, Number(params.totalCreditos));
+    }
     return Math.min(Math.max(0, Number(params.totalCreditos)), cuotasPagadas);
   }
   return cuotasPagadas;
@@ -337,7 +346,13 @@ export function derivePaymentStateForCredits(params: {
       }
 
       const rowMonto = Math.max(Number(row.monto || 0), rowPagado);
-      const rowDeuda = explicitDeuda !== undefined ? explicitDeuda : Math.max(0, rowMonto - rowPagado);
+      let rowDeuda = explicitDeuda !== undefined ? explicitDeuda : Math.max(0, rowMonto - rowPagado);
+
+      // Si tiene cronograma con cuotas pendientes por pagar y la deuda calculada dio 0, calcular la deuda real
+      if (tieneCronograma && totalCuotasAplicables > cuotasPagadasReales && rowDeuda === 0) {
+        const montoCuotaEst = cuotasPagadasReales > 0 ? (rowPagado / cuotasPagadasReales) : (rowMonto / totalCuotasAplicables);
+        rowDeuda = Math.round(montoCuotaEst * (totalCuotasAplicables - cuotasPagadasReales));
+      }
 
       montoTotalPagado += rowPagado;
       deudaTotalPendiente += rowDeuda;
@@ -353,7 +368,7 @@ export function derivePaymentStateForCredits(params: {
 
     const pagadoTodo =
       profileEsContado ||
-      (tieneCronograma && deudaTotalPendiente <= 0 && montoTotalPagado > 0) ||
+      (tieneCronograma && totalCuotasAplicables > 0 && cuotasPagadasFinal >= totalCuotasAplicables && deudaTotalPendiente <= 0) ||
       (tieneCronograma && cuotasTotalesFinal === 1 && cuotasPagadasFinal >= 1) ||
       (cuotasTotalesFinal > 0 && cuotasPagadasFinal >= cuotasTotalesFinal);
 

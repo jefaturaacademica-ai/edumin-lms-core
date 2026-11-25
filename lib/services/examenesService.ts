@@ -121,6 +121,7 @@ const MAPA_BANCOS_LOCALES: Record<string, string> = {
   'CUR-74': 'banco_preguntas_curso_74.json',
   'CUR-75': 'banco_preguntas_curso_75.json',
   'CUR-76': 'banco_preguntas_curso_76.json',
+  'CUR-IA': 'banco_preguntas_inteligencia_artificial.json',
   'TAL-01': 'banco_preguntas_taller_soft_skills.json',
   'TAL-02': 'banco_preguntas_taller_seguridad_basada.json'
 };
@@ -227,7 +228,13 @@ export async function obtenerPreguntasBanco(filtros?: {
           query = query.eq('activo', true);
         }
         if (filtros?.busqueda && filtros.busqueda.trim()) {
-          query = query.ilike('pregunta', `%${filtros.busqueda.trim()}%`);
+          const rawTerm = filtros.busqueda.trim();
+          const esBusquedaIA = /\b(ia|inteligencia\s*artificial)\b/i.test(rawTerm);
+          if (esBusquedaIA && /\b(0\s*a\s*100|100)\b/i.test(rawTerm)) {
+            query = query.or(`codigo_diplomado.eq.CUR-IA,diplomado.ilike.%inteligencia artificial%,pregunta.ilike.%${rawTerm}%`);
+          } else {
+            query = query.or(`pregunta.ilike.%${rawTerm}%,diplomado.ilike.%${rawTerm}%,codigo_diplomado.ilike.%${rawTerm}%`);
+          }
         }
 
         const { data, error } = await query;
@@ -273,8 +280,19 @@ export async function obtenerPreguntasBanco(filtros?: {
     locales = locales.filter(p => p.activo);
   }
   if (filtros?.busqueda && filtros.busqueda.trim()) {
-    const term = filtros.busqueda.toLowerCase();
-    locales = locales.filter(p => p.pregunta.toLowerCase().includes(term));
+    const rawTerm = filtros.busqueda.trim();
+    const term = rawTerm.toLowerCase();
+    const esBusquedaIA = /\b(ia|inteligencia\s*artificial)\b/i.test(rawTerm) && /\b(0\s*a\s*100|100)\b/i.test(rawTerm);
+    locales = locales.filter(p => {
+      if (esBusquedaIA && (p.codigo_diplomado === 'CUR-IA' || (p.diplomado && p.diplomado.toLowerCase().includes('inteligencia artificial')))) {
+        return true;
+      }
+      return (
+        (p.pregunta && p.pregunta.toLowerCase().includes(term)) ||
+        (p.diplomado && p.diplomado.toLowerCase().includes(term)) ||
+        (p.codigo_diplomado && p.codigo_diplomado.toLowerCase().includes(term))
+      );
+    });
   }
 
   return locales;

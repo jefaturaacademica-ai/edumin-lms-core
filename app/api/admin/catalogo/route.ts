@@ -389,7 +389,7 @@ function reconstruirDiplomadosDesdeLecciones(leccionesRows: any[], cursosSupabas
       ano: cursoExistente?.ano || localDip?.ano || 2026,
       titulo,
       tipo: 'diplomado',
-      categoria: cursoExistente?.categoria || localDip?.categoria || 'Legal y cumplimiento',
+      categoria: typeof cursoExistente?.categoria === 'string' ? cursoExistente.categoria : (localDip?.categoria || ''),
       num_modulos: cursoExistente?.num_modulos ?? (modulos.length || 3),
       taller_aplicable: cursoExistente
         ? (cursoExistente.taller_aplicable || 'Ninguno')
@@ -411,6 +411,7 @@ function reconstruirDiplomadosDesdeLecciones(leccionesRows: any[], cursosSupabas
       })(),
       nivel: cursoExistente?.nivel ?? null,
       precio: cursoExistente?.precio ?? localDip?.precio ?? 150.00,
+      mostrar_en_catalogo: cursoExistente?.mostrar_en_catalogo !== false,
       modulos
     };
   });
@@ -517,7 +518,7 @@ export async function GET(request?: Request) {
         ano: c.ano || localItem?.ano || 2026,
         titulo: c.titulo,
         tipo,
-        categoria: c.categoria || localItem?.categoria || (tipo === 'taller' ? 'Taller' : 'Cursos de Alta Especialización'),
+        categoria: typeof c.categoria === 'string' ? c.categoria : (localItem?.categoria || ''),
         num_modulos: (c.num_modulos !== undefined && c.num_modulos !== null) ? Number(c.num_modulos) : 0,
         taller_aplicable: c.taller_aplicable ?? null,
         docente: c.docente || localItem?.docente || '',
@@ -527,6 +528,7 @@ export async function GET(request?: Request) {
         imagen: c.imagen || '/assets/images/daem/gestion-minera.webp',
         nivel: c.nivel ?? null,
         precio: c.precio ?? (tipo === 'taller' ? 100.00 : 150.00),
+        mostrar_en_catalogo: c.mostrar_en_catalogo !== false,
         modulos: [],
         temas: temasOficiales,
         lecciones: leccionesDetalladas
@@ -621,7 +623,7 @@ export async function POST(request: Request) {
           ano: c.ano || localItem?.ano || 2026,
           titulo: c.titulo,
           tipo,
-          categoria: c.categoria || localItem?.categoria || (tipo === 'taller' ? 'Taller' : ''),
+          categoria: typeof c.categoria === 'string' ? c.categoria : (localItem?.categoria || (tipo === 'taller' ? 'Taller' : '')),
           num_modulos: tipo === 'diplomado' ? (c.num_modulos || localItem?.num_modulos || 3) : 0,
           taller_aplicable: tipo === 'diplomado' ? (c.taller_aplicable || localItem?.taller_aplicable || null) : null,
           docente: c.docente || localItem?.docente || '',
@@ -665,7 +667,7 @@ export async function POST(request: Request) {
       ano: Number(ano) || 2026,
       titulo: titulo.toUpperCase(),
       tipo: tipoNormalizado,
-      categoria: categoria || (tipoNormalizado === 'diplomado' ? 'Legal y cumplimiento' : tipoNormalizado === 'taller' ? 'Taller' : 'Seguridad y prevención'),
+      categoria: typeof categoria === 'string' ? categoria.trim() : (tipoNormalizado === 'taller' ? 'Taller' : ''),
       num_modulos: tipoNormalizado === 'diplomado' ? (Number(num_modulos) || (Array.isArray(modulos) ? modulos.length : 3)) : 0,
       taller_aplicable: tipoNormalizado === 'diplomado'
         ? (taller_aplicable || `${obtenerTallerParaDiplomado(titulo)?.codigo}: ${obtenerTallerParaDiplomado(titulo)?.titulo}`)
@@ -675,7 +677,8 @@ export async function POST(request: Request) {
       creditos: (body.creditos !== undefined && body.creditos !== null && body.creditos !== '') ? Number(body.creditos) : (tipoNormalizado === 'diplomado' ? 13 : null),
       imagen: '/assets/images/daem/gestion-minera.webp',
       nivel: nivel !== undefined && nivel !== '' ? nivel : null,
-      precio: Number(precio) || 150.00
+      precio: Number(precio) || 150.00,
+      mostrar_en_catalogo: body.mostrar_en_catalogo !== undefined ? Boolean(body.mostrar_en_catalogo) : true
     };
 
     let { data, error } = await admin
@@ -685,17 +688,28 @@ export async function POST(request: Request) {
       .maybeSingle();
 
     if (error) {
-      // Fallback a columnas estándar de Supabase
-      const basicData = {
-        id: productoData.id,
-        titulo: productoData.titulo,
-        categoria: productoData.categoria,
-        imagen: productoData.imagen,
-        nivel: productoData.nivel,
-        precio: productoData.precio
-      };
-      const basicRes = await admin.from('diplomados_y_cursos').upsert(basicData).select().maybeSingle();
-      data = basicRes.data || productoData;
+      // Si la columna mostrar_en_catalogo aún no existe en Supabase, reintentar sin ella
+      if (error.message?.includes('mostrar_en_catalogo') || error.code === 'PGRST204') {
+        const withoutMostrar = { ...productoData };
+        delete withoutMostrar.mostrar_en_catalogo;
+        const retry = await admin.from('diplomados_y_cursos').upsert(withoutMostrar).select().maybeSingle();
+        if (!retry.error) {
+          data = retry.data || withoutMostrar;
+        }
+      }
+      if (!data) {
+        // Fallback a columnas estándar de Supabase
+        const basicData = {
+          id: productoData.id,
+          titulo: productoData.titulo,
+          categoria: productoData.categoria,
+          imagen: productoData.imagen,
+          nivel: productoData.nivel,
+          precio: productoData.precio
+        };
+        const basicRes = await admin.from('diplomados_y_cursos').upsert(basicData).select().maybeSingle();
+        data = basicRes.data || productoData;
+      }
     }
 
     // Si es un diplomado y no se solicitó omitir la sincronización (ej. durante importación masiva directa de filas)
@@ -714,6 +728,7 @@ export async function POST(request: Request) {
       console.error(e);
     }
 
+    invalidateCatalogoCache();
     return NextResponse.json({ success: true, producto: data || productoData });
   } catch (err: any) {
     return NextResponse.json({ error: err.message || 'Error inesperado' }, { status: 500 });
@@ -742,7 +757,7 @@ export async function PUT(request: Request) {
     if (version !== undefined) updateFields.version = version;
     if (ano !== undefined) updateFields.ano = Number(ano);
     if (titulo !== undefined) updateFields.titulo = titulo.toUpperCase();
-    if (categoria !== undefined) updateFields.categoria = categoria;
+    if (categoria !== undefined) updateFields.categoria = typeof categoria === 'string' ? categoria.trim() : '';
     if (nivel !== undefined) updateFields.nivel = nivel === '' ? null : nivel;
     if (num_modulos !== undefined) updateFields.num_modulos = esDiplomado ? Number(num_modulos) : 0;
     if (taller_aplicable !== undefined) updateFields.taller_aplicable = esDiplomado ? taller_aplicable : null;
@@ -757,6 +772,9 @@ export async function PUT(request: Request) {
     if (esDiplomado && Array.isArray(modulos)) {
       updateFields.num_modulos = modulos.length;
     }
+    if (body.mostrar_en_catalogo !== undefined) {
+      updateFields.mostrar_en_catalogo = Boolean(body.mostrar_en_catalogo);
+    }
 
     let { data, error } = await admin
       .from('diplomados_y_cursos')
@@ -766,13 +784,23 @@ export async function PUT(request: Request) {
       .maybeSingle();
 
     if (error) {
-      // Fallback básico
-      const basicFields: any = {};
-      if (titulo !== undefined) basicFields.titulo = titulo.toUpperCase();
-      if (precio !== undefined) basicFields.precio = Number(precio);
+      if (error.message?.includes('mostrar_en_catalogo') || error.code === 'PGRST204') {
+        const withoutMostrar = { ...updateFields };
+        delete withoutMostrar.mostrar_en_catalogo;
+        const retry = await admin.from('diplomados_y_cursos').update(withoutMostrar).eq('id', id).select().maybeSingle();
+        if (!retry.error) {
+          data = retry.data || { id, ...withoutMostrar };
+        }
+      }
+      if (!data) {
+        // Fallback básico
+        const basicFields: any = {};
+        if (titulo !== undefined) basicFields.titulo = titulo.toUpperCase();
+        if (precio !== undefined) basicFields.precio = Number(precio);
 
-      const basicRes = await admin.from('diplomados_y_cursos').update(basicFields).eq('id', id).select().maybeSingle();
-      data = basicRes.data || { id, ...updateFields };
+        const basicRes = await admin.from('diplomados_y_cursos').update(basicFields).eq('id', id).select().maybeSingle();
+        data = basicRes.data || { id, ...updateFields };
+      }
     }
 
     // Si es un diplomado y se proporcionaron módulos, sincronizar la tabla lecciones
@@ -816,6 +844,7 @@ export async function PUT(request: Request) {
       console.error(e);
     }
 
+    invalidateCatalogoCache();
     return NextResponse.json({ success: true, producto: data || { id, ...updateFields } });
   } catch (err: any) {
     return NextResponse.json({ error: err.message || 'Error inesperado' }, { status: 500 });

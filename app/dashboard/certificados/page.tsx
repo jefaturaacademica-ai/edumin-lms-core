@@ -95,6 +95,15 @@ function normalizarProgramaTitulo(titulo?: string | null): string {
     .trim();
 }
 
+export function limpiarTituloDiplomado(titulo?: string | null): string {
+  if (!titulo) return '';
+  return String(titulo)
+    .replace(/^(?:diplomado|programa)\s+(?:de\s+alta\s+especializaci[oó]n\s+)?en\s+/i, '')
+    .replace(/^(?:diplomado|programa)\s+en\s+/i, '')
+    .replace(/^(?:diplomado|programa)\s+/i, '')
+    .trim();
+}
+
 function sonProgramasEquivalentes(p1?: string | null, p2?: string | null): boolean {
   if (!p1 || !p2) return false;
   const n1 = normalizarProgramaTitulo(p1);
@@ -493,10 +502,35 @@ function CertificadosContent() {
       let modeloSuperplantilla = (modelosCertificados || []).find((m: any) => m.id === modeloIdBuscado);
 
       if (!modeloSuperplantilla && modelosCertificados && modelosCertificados.length > 0) {
-        modeloSuperplantilla = modelosCertificados.find((m: any) =>
-          String(m.tipo).toUpperCase() === tipoEsperado &&
-          (m.asignacionAlcance === 'SUPERPLANTILLA_GLOBAL' || m.esPredeterminado)
-        );
+        const limpiar = (s: string) => (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+        const titNorm = limpiar(certParams.titulo);
+        const codNorm = (certParams.codigo || '').trim().toUpperCase();
+
+        // A. Prioridad 1: Modelo de producto específico asignado
+        modeloSuperplantilla = modelosCertificados.find((m: any) => {
+          if (String(m.tipo).toUpperCase() !== tipoEsperado || m.asignacionAlcance !== 'PRODUCTO_ESPECIFICO') return false;
+          if (codNorm && (
+            m.recursoAsignadoCodigo?.toUpperCase() === codNorm ||
+            m.recursoAsignadoId?.toUpperCase() === codNorm
+          )) return true;
+          if (m.recursoAsignadoNombre) {
+            const nomNorm = limpiar(m.recursoAsignadoNombre);
+            if (nomNorm && titNorm && (titNorm.includes(nomNorm) || nomNorm.includes(titNorm))) return true;
+          }
+          if (m.nombre) {
+            const modNomNorm = limpiar(m.nombre);
+            if (modNomNorm && titNorm && (titNorm.includes(modNomNorm) || modNomNorm.includes(titNorm))) return true;
+          }
+          return false;
+        });
+
+        // B. Prioridad 2: Superplantilla global del tipo correspondiente
+        if (!modeloSuperplantilla) {
+          modeloSuperplantilla = modelosCertificados.find((m: any) =>
+            String(m.tipo).toUpperCase() === tipoEsperado &&
+            (m.asignacionAlcance === 'SUPERPLANTILLA_GLOBAL' || m.esPredeterminado)
+          );
+        }
 
         // Si es Taller y no hay específico, usar CURSO global
         if (!modeloSuperplantilla && tipoEsperado === 'TALLER') {
@@ -595,7 +629,7 @@ function CertificadosContent() {
 
       return {
         id: d.id || d.slug || `dip-${idx + 1}`,
-        titulo: certDbDip?.programa_titulo || d.titulo || 'Diplomado',
+        titulo: limpiarTituloDiplomado(certDbDip?.programa_titulo || d.titulo || 'Diplomado'),
         modularesAprobados,
         modularesTotales,
         promedio: certDbDip?.nota_final !== undefined && certDbDip.nota_final !== null ? Number(certDbDip.nota_final) : (d.promedio || promedio),
@@ -615,7 +649,7 @@ function CertificadosContent() {
       if (cd.tipo === 'DIPLOMA' && !mapeados.some((m: any) => m.codigo === cd.codigo_verificacion || sonProgramasEquivalentes(m.titulo, cd.programa_titulo))) {
         mapeados.push({
           id: cd.id || `db-dip-${idx + 1}`,
-          titulo: cd.programa_titulo || 'Diplomado',
+          titulo: limpiarTituloDiplomado(cd.programa_titulo || 'Diplomado'),
           modularesAprobados: 3,
           modularesTotales: 3,
           promedio: cd.nota_final !== undefined && cd.nota_final !== null ? Number(cd.nota_final) : 18,
@@ -685,7 +719,7 @@ function CertificadosContent() {
             moduloIdx: mIdx,
             modulo: modNombre,
             moduloNombreSolo: m.nombre || m.codigo || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`,
-            diplomado: d.titulo,
+            diplomado: limpiarTituloDiplomado(d.titulo),
             nota: certDb?.nota_final !== undefined && certDb.nota_final !== null ? Number(certDb.nota_final) : evalMod.nota,
             horas: certDb?.horas_lectivas || m.horas || '108 horas académicas',
             modelo_id: certDb?.plantilla_snapshot?.modelo_id || (m as any).modelo_id || 'mod-avanza-mod',
@@ -708,7 +742,7 @@ function CertificadosContent() {
           moduloIdx: counter,
           modulo: /^M[ÓO]DULO\b/i.test(c.modulo_titulo || '') ? c.modulo_titulo : `MÓDULO: ${c.modulo_titulo}`,
           moduloNombreSolo: c.modulo_titulo,
-          diplomado: c.programa_titulo,
+          diplomado: limpiarTituloDiplomado(c.programa_titulo),
           nota: Number(c.nota_final) || 16,
           horas: c.horas_lectivas || '108 horas académicas',
           modelo_id: c.plantilla_snapshot?.modelo_id || 'mod-avanza-mod',
@@ -1214,8 +1248,8 @@ function CertificadosContent() {
                               </span>
                             )}
                           </div>
-                          <h3 title={dip.titulo} className={`text-sm font-bold uppercase leading-snug line-clamp-2 min-h-[2.45rem] ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                            {dip.titulo}
+                          <h3 title={limpiarTituloDiplomado(dip.titulo)} className={`text-sm font-bold uppercase leading-snug line-clamp-2 min-h-[2.45rem] ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                            {limpiarTituloDiplomado(dip.titulo)}
                           </h3>
                           <div className={`text-[11px] space-y-1 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
                             {filasDip.map((fila) => (
@@ -1297,8 +1331,8 @@ function CertificadosContent() {
                               </span>
                             )}
                           </div>
-                          <h3 title={dip.titulo} className={`text-sm font-bold uppercase leading-snug line-clamp-2 min-h-[2.45rem] ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                            {dip.titulo}
+                          <h3 title={limpiarTituloDiplomado(dip.titulo)} className={`text-sm font-bold uppercase leading-snug line-clamp-2 min-h-[2.45rem] ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                            {limpiarTituloDiplomado(dip.titulo)}
                           </h3>
                           <div className={`text-[11px] space-y-1 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
                             {filasDipBloq.map((fila) => (
@@ -1340,8 +1374,8 @@ function CertificadosContent() {
                           {dip.modularesAprobados} / {dip.modularesTotales} módulos
                         </span>
                       </div>
-                      <h3 title={dip.titulo} className={`text-sm font-bold uppercase leading-snug line-clamp-2 min-h-[2.45rem] ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                        {dip.titulo}
+                      <h3 title={limpiarTituloDiplomado(dip.titulo)} className={`text-sm font-bold uppercase leading-snug line-clamp-2 min-h-[2.45rem] ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                        {limpiarTituloDiplomado(dip.titulo)}
                       </h3>
                       
                       <div className="pt-1">
@@ -1410,7 +1444,7 @@ function CertificadosContent() {
                       <div className="flex items-center justify-between gap-3 pb-2 border-b border-slate-100 dark:border-slate-800/80">
                         <div className="flex items-center gap-2">
                           <h3 className={`text-xs sm:text-sm font-bold uppercase tracking-wide ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                            {diplomadoNombre}
+                            {limpiarTituloDiplomado(diplomadoNombre)}
                           </h3>
                         </div>
 

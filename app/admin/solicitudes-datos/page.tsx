@@ -509,9 +509,8 @@ export default function SolicitudesDatosAdminPage() {
                 {/* Membrete Oficial */}
                 <div className="flex justify-between items-center border-b-2 border-indigo-900 pb-4 mb-6">
                   <div className="text-left">
-                    <span className="text-[9px] tabular-nums font-bold tracking-widest text-indigo-900 uppercase block">ESCUELA DE POSTGRADO & MINERÍA</span>
                     <h4 className="text-sm font-black tracking-tight text-slate-900">INSTITUTO INTERNACIONAL EDUMIN</h4>
-                    <span className="text-[8px] text-slate-500 block">RUC: 20608945123 • Registro de Secretaría Académica</span>
+                    <span className="text-[8px] text-slate-500 block">Registro de Secretaría Académica</span>
                   </div>
                   <div className="size-10 rounded-xl bg-indigo-900 text-white flex items-center justify-center font-black text-sm shadow-md">
                     EDM

@@ -2848,5 +2848,24 @@
     "updated_at": "2026-11-02T19:24:57.858Z",
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
+  },
+  "CUR-IA_Examen del curso": {
+    "id": "CUR-IA_Examen del curso",
+    "codigo_programa": "CUR-IA",
+    "nombre_programa": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "tipo_programa": "curso",
+    "modulo": "Examen del curso",
+    "aplica_examen": true,
+    "tiempo_minutos": 30,
+    "cantidad_preguntas": 10,
+    "preguntas_facil": 7,
+    "preguntas_medio": 3,
+    "preguntas_dificil": 0,
+    "nota_minima": 12,
+    "intentos_permitidos": 1,
+    "activo": true,
+    "updated_at": "2026-11-24T21:56:24.604Z",
+    "preguntas_opcion_unica": 7,
+    "preguntas_opcion_multiple": 3
   }
 }

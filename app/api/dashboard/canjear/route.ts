@@ -102,7 +102,7 @@ export async function POST(request: Request) {
         const itemTitulo = (programaTitulos && programaTitulos[itemId]) 
           ? programaTitulos[itemId] 
           : (typeof item === 'object' ? item.titulo || item.curso : `CURSO ${itemId}`);
-        const categoria = (typeof item === 'object' && item.categoria) ? item.categoria : 'Curso Libre';
+        const categoria = (typeof item === 'object' && typeof item.categoria === 'string') ? item.categoria : '';
         const duracion = (typeof item === 'object' && item.duracion) ? item.duracion : '25 Horas Académicas';
         const horas = (typeof item === 'object' && item.horas) ? item.horas : '25';
         const imagen = (typeof item === 'object' && item.imagen) ? item.imagen : undefined;
@@ -168,11 +168,23 @@ export async function POST(request: Request) {
         console.error(e);
       }
 
+      const updatedCredits = calculateEduminCredits({
+        paqueteAdquirido: profile.paquete_adquirido || 'COMPLETO',
+        cuotasPagadas: paymentState.cuotasPagadas,
+        cuotasTotales: paymentState.cuotasTotales,
+        tipoPago: paymentState.tipoPago,
+        diplomadosConsumidos: diplomadosActuales.length,
+        cursosConsumidos: filtrarCursosReales(cursosNuevos).length,
+        creditosExtraDiplomados: cuposActuales.diplomados.adicionales,
+        creditosExtraCursos: cuposActuales.cursos.adicionales
+      });
+
       return NextResponse.json({
         success: true,
         message: `¡${seleccionados.length} curso(s) libre(s) canjeado(s) exitosamente!`,
         cuposConsumidos: seleccionados.length,
-        cuposDisponiblesRestantes: Math.max(0, disponibles - seleccionados.length),
+        cuposDisponiblesRestantes: updatedCredits.cursos.disponibles,
+        eduminCredits: updatedCredits,
         matriculas: nuevasMatriculas
       });
     }
@@ -285,11 +297,23 @@ export async function POST(request: Request) {
       console.error(e);
     }
 
+    const updatedCredits = calculateEduminCredits({
+      paqueteAdquirido: profile.paquete_adquirido || 'COMPLETO',
+      cuotasPagadas: paymentState.cuotasPagadas,
+      cuotasTotales: paymentState.cuotasTotales,
+      tipoPago: paymentState.tipoPago,
+      diplomadosConsumidos: diplomadosNuevos.length,
+      cursosConsumidos: filtrarCursosReales(cursosNuevos).length,
+      creditosExtraDiplomados: cuposActuales.diplomados.adicionales,
+      creditosExtraCursos: cuposActuales.cursos.adicionales
+    });
+
     return NextResponse.json({
       success: true,
       message: `¡${seleccionados.length} diplomado(s) canjeado(s) exitosamente!`,
       cuposConsumidos: seleccionados.length,
-      cuposDisponiblesRestantes: Math.max(0, disponibles - seleccionados.length),
+      cuposDisponiblesRestantes: updatedCredits.diplomados.disponibles,
+      eduminCredits: updatedCredits,
       matriculas: nuevasMatriculas
     });
   } catch (err: any) {

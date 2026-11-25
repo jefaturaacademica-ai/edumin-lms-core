@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   BookOpen, Users, Settings, LogOut, 
-  ShieldCheck, Activity, X, Layers, ChevronRight, ChevronDown, ChevronUp, UploadCloud, Plus, Loader2, AlertCircle, CheckCircle2, FileSpreadsheet, Download, Search, Edit3, Trash2, Code, Sparkles, Folder, Table, PlayCircle, Video, FileText
+  ShieldCheck, Activity, X, Layers, ChevronRight, ChevronDown, ChevronUp, UploadCloud, Plus, Loader2, AlertCircle, CheckCircle2, FileSpreadsheet, Download, Search, Edit3, Trash2, Code, Sparkles, Folder, Table, PlayCircle, Video, FileText, Eye, EyeOff
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
 import { useTabSlug } from '@/lib/hooks/useTabSlug';
@@ -45,12 +45,15 @@ export default function CatalogoAdminPage() {
   const [nuevaVersion, setNuevaVersion] = useState('Versión 1');
   const [nuevoAno, setNuevoAno] = useState('2026');
   const [nuevoTitulo, setNuevoTitulo] = useState('');
+  const [nuevaCategoria, setNuevaCategoria] = useState('');
+  const [nuevaCategoriaPersonalizada, setNuevaCategoriaPersonalizada] = useState('');
   const [nuevoDocente, setNuevoDocente] = useState('');
   const [nuevoNumModulos, setNuevoNumModulos] = useState('3');
   const [nuevoTallerAplicable, setNuevoTallerAplicable] = useState('TAL-02: Taller de Seguridad Basada en el Comportamiento');
   const [nuevoPrecio, setNuevoPrecio] = useState('150.00');
   const [nuevaDuracion, setNuevaDuracion] = useState('325 horas académicas');
   const [nuevosCreditos, setNuevosCreditos] = useState('13');
+  const [nuevoMostrarEnCatalogo, setNuevoMostrarEnCatalogo] = useState(true);
 
   // Estado para archivo CSV
   const [archivoImportado, setArchivoImportado] = useState<File | null>(null);
@@ -67,7 +70,7 @@ export default function CatalogoAdminPage() {
   const cargarCatalogoSupabase = async () => {
     setCargandoSupabase(true);
     try {
-      const res = await fetch('/api/admin/catalogo');
+      const res = await fetch('/api/admin/catalogo?fresh=true');
       if (res.ok) {
         const data = await res.json();
         const dips = (data.diplomados || []).filter((d: any) => 
@@ -103,11 +106,7 @@ export default function CatalogoAdminPage() {
     const idGenerado = `${nuevoTipo}-${nuevoCodigo.toLowerCase().replace(/[^a-z0-9]/g, '')}`;
     
     try {
-      const categoriaMap = {
-        diplomado: 'Legal y cumplimiento',
-        curso: 'Seguridad y prevención',
-        taller: 'Taller'
-      };
+      const categoriaFinal = (nuevaCategoria === 'OTRA' ? nuevaCategoriaPersonalizada : nuevaCategoria).trim();
 
       const numModulos = nuevoTipo === 'diplomado' ? Number(nuevoNumModulos) || 3 : 0;
 
@@ -116,23 +115,13 @@ export default function CatalogoAdminPage() {
           codigo: `MÓDULO ${(i + 1).toString().padStart(2, '0')}`,
           nombre: `MÓDULO ${(i + 1).toString().padStart(2, '0')}`,
           docente: nuevoDocente,
-          temas: [
-            {
-              titulo: `Tema ${(i * 3 + 1).toString().padStart(2, '0')}: Fundamentos y Marco Teórico`,
-              clases: [
-                { titulo: 'Clase 1: Introducción y Conceptos Clave', videoUrl: '', iframe_url: '' },
-                { titulo: 'Clase 2: Aplicación Práctica I', videoUrl: '', iframe_url: '' }
-              ]
-            }
-          ]
+          temas: []
         };
       }) : [
         {
           codigo: 'Clases',
           nombre: 'Clases del Programa',
-          clases: [
-            { id: 'parte-1', titulo: 'Parte 1', videoUrl: '', iframe_url: '', material1: '', material2: '', pdfUrl: '', excelUrl: '' }
-          ]
+          clases: []
         }
       ];
 
@@ -150,7 +139,7 @@ export default function CatalogoAdminPage() {
           ano: Number(nuevoAno) || 2026,
           titulo: nuevoTitulo.toUpperCase(),
           tipo: nuevoTipo,
-          categoria: categoriaMap[nuevoTipo],
+          categoria: categoriaFinal,
           num_modulos: numModulos,
           taller_aplicable: nuevoTipo === 'diplomado' ? nuevoTallerAplicable : null,
           docente: nuevoDocente,
@@ -158,6 +147,7 @@ export default function CatalogoAdminPage() {
           creditos: Number(nuevosCreditos) || 0,
           nivel: null,
           precio: Number(nuevoPrecio) || 150.00,
+          mostrar_en_catalogo: nuevoMostrarEnCatalogo,
           modulos: modsProcesados
         })
       });
@@ -202,6 +192,7 @@ export default function CatalogoAdminPage() {
           horas: itemEditando.horas !== undefined ? itemEditando.horas : 30,
           creditos: Number(itemEditando.creditos) || 0,
           precio: itemEditando.precio,
+          mostrar_en_catalogo: itemEditando.mostrar_en_catalogo !== false,
           modulos: itemEditando.modulos || [],
           lecciones: itemEditando.lecciones || []
         })
@@ -525,7 +516,7 @@ export default function CatalogoAdminPage() {
     const nuevoNum = (leccionesActuales.length + 1).toString().padStart(2, '0');
     leccionesActuales.push({
       id: `temp-${Date.now()}`,
-      tema: `Tema ${nuevoNum}: Nuevo Tema Oficial`,
+      tema: `Tema ${nuevoNum}: `,
       sesion: 'Parte 1',
       videoUrl: '',
       pdfUrl: '',
@@ -991,6 +982,30 @@ export default function CatalogoAdminPage() {
       }
     } else {
       procesarCargaCsvExcel(bulkModulesJson);
+    }
+  };
+
+  const alternarVisibilidadCatalogo = async (item: any) => {
+    const nuevoValor = item.mostrar_en_catalogo === false ? true : false;
+    try {
+      const res = await fetch('/api/admin/catalogo', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          id: item.id,
+          tipo: item.tipo,
+          mostrar_en_catalogo: nuevoValor
+        })
+      });
+      if (res.ok) {
+        await cargarCatalogoSupabase();
+        setMensajeExito(`El programa "${item.titulo}" ahora está ${nuevoValor ? 'visible en el catálogo de estudiantes' : 'configurado como SOLO INTERNO (oculto para estudiantes)'}.`);
+        setTimeout(() => setMensajeExito(null), 4000);
+      } else {
+        alert("Error al actualizar la visibilidad en Supabase.");
+      }
+    } catch (e: any) {
+      alert(`Error de red: ${e.message}`);
     }
   };
 
@@ -1539,7 +1554,7 @@ export default function CatalogoAdminPage() {
                   onClick={eliminarSeleccionados}
                   className="bg-red-600 text-white px-4 py-2.5 rounded-xl font-bold text-xs hover:bg-red-700 transition shadow-md flex items-center gap-2 cursor-pointer animate-pulse"
                 >
-                  <Trash2 className="w-4 h-4" /> Eliminar Seleccionados ({seleccionados.length})
+                  <Trash2 className="w-4 h-4" /> Eliminar seleccionados ({seleccionados.length})
                 </button>
               )}
               
@@ -1564,7 +1579,7 @@ export default function CatalogoAdminPage() {
                 onClick={() => setShowCsvModal(true)} 
                 className="bg-indigo-50 border border-indigo-200 text-indigo-700 px-4 py-2.5 rounded-xl font-bold text-xs hover:bg-indigo-100 transition shadow-sm flex items-center gap-2 cursor-pointer"
               >
-                <UploadCloud className="w-4 h-4 text-indigo-600" /> Carga Masiva (.xlsx / .csv)
+                <UploadCloud className="w-4 h-4 text-indigo-600" /> Carga masiva (.xlsx / .csv)
               </button>
               
               <button 
@@ -1576,25 +1591,25 @@ export default function CatalogoAdminPage() {
                 }} 
                 className="bg-indigo-600 text-white px-5 py-2.5 rounded-xl font-bold text-xs hover:bg-indigo-700 transition shadow-md flex items-center gap-2 cursor-pointer"
               >
-                <Plus className="w-4 h-4" /> Agregar Producto
+                <Plus className="w-4 h-4" /> Agregar producto
               </button>
             </div>
           </div>
 
-          {/* Navegación por Pestañas */}
+          {/* Navegación por pestañas */}
           <div className="flex border-b border-slate-200 mb-6 justify-between items-center">
             <div className="flex">
               <button 
                 onClick={() => { setActiveTab('diplomados'); setSeleccionados([]); }} 
                 className={`pb-3 px-5 font-bold text-sm transition border-b-2 cursor-pointer ${activeTab === 'diplomados' ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
               >
-                Diplomados Oficiales ({catalogoDiplomados.length})
+                Diplomados oficiales ({catalogoDiplomados.length})
               </button>
               <button 
                 onClick={() => { setActiveTab('cursos'); setSeleccionados([]); }} 
                 className={`pb-3 px-5 font-bold text-sm transition border-b-2 cursor-pointer ${activeTab === 'cursos' ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
               >
-                Cursos de Alta Especialización ({catalogoCursos.length})
+                Cursos de alta especialización ({catalogoCursos.length})
               </button>
               <button 
                 onClick={() => { setActiveTab('talleres'); setSeleccionados([]); }} 
@@ -1649,6 +1664,7 @@ export default function CatalogoAdminPage() {
                       </>
                     )}
 
+                    <th className="pb-3 px-4 text-center">Catálogo Alumnos</th>
                     <th className="pb-3 px-4 text-right">Acción</th>
                   </tr>
                 </thead>
@@ -1721,6 +1737,31 @@ export default function CatalogoAdminPage() {
                           </>
                         )}
 
+                        <td className="py-4 px-4 text-center">
+                          <button
+                            type="button"
+                            onClick={() => alternarVisibilidadCatalogo(item)}
+                            title={item.mostrar_en_catalogo !== false ? "Visible en catálogo de estudiantes. Clic para ocultar (hacerlo interno)." : "Producto interno (oculto para estudiantes). Clic para mostrarlo en el catálogo."}
+                            className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold border transition-colors cursor-pointer ${
+                              item.mostrar_en_catalogo !== false
+                                ? 'bg-emerald-50 text-emerald-700 border-emerald-200 hover:bg-emerald-100'
+                                : 'bg-amber-50 text-amber-800 border-amber-200 hover:bg-amber-100'
+                            }`}
+                          >
+                            {item.mostrar_en_catalogo !== false ? (
+                              <>
+                                <Eye className="size-3.5 text-emerald-600 shrink-0" />
+                                Visible
+                              </>
+                            ) : (
+                              <>
+                                <EyeOff className="size-3.5 text-amber-600 shrink-0" />
+                                Solo interno
+                              </>
+                            )}
+                          </button>
+                        </td>
+
                         <td className="py-4 px-4 text-right">
                           <button 
                             onClick={() => { 
@@ -1742,12 +1783,7 @@ export default function CatalogoAdminPage() {
                                           resumenVideoUrl: '',
                                           resumenTexto: ''
                                         }))
-                                      : [
-                                          { id: 'temp-1', tema: 'Tema 01: Fundamentos y marco normativo', sesion: 'Parte 1', videoUrl: '', pdfUrl: '', resumenVideoUrl: '', resumenTexto: '' },
-                                          { id: 'temp-2', tema: 'Tema 02: Procedimientos técnicos operativos', sesion: 'Parte 1', videoUrl: '', pdfUrl: '', resumenVideoUrl: '', resumenTexto: '' },
-                                          { id: 'temp-3', tema: 'Tema 03: Metodologías de control y mitigación', sesion: 'Parte 1', videoUrl: '', pdfUrl: '', resumenVideoUrl: '', resumenTexto: '' },
-                                          { id: 'temp-4', tema: 'Tema 04: Implementación práctica y evaluación', sesion: 'Parte 1', videoUrl: '', pdfUrl: '', resumenVideoUrl: '', resumenTexto: '' }
-                                        ]
+                                      : []
                                     );
                                 setItemEditando({ ...item, lecciones: leccionesInit });
                               }
@@ -1763,7 +1799,7 @@ export default function CatalogoAdminPage() {
                     })
                   ) : (
                     <tr>
-                      <td colSpan={7} className="text-center py-12 text-slate-400 font-medium">
+                      <td colSpan={8} className="text-center py-12 text-slate-400 font-medium">
                         {cargandoSupabase ? 'Cargando catálogo desde Supabase...' : `No se encontraron registros para "${busqueda}".`}
                       </td>
                     </tr>
@@ -1793,7 +1829,7 @@ export default function CatalogoAdminPage() {
                       ? 'text-amber-700 bg-amber-50 border-amber-200'
                       : 'text-emerald-700 bg-emerald-50 border-emerald-200'
                   }`}>
-                    {itemEditando.tipo === 'diplomado' ? 'Diplomado Oficial' : itemEditando.tipo === 'taller' ? 'Taller Práctico' : 'Curso de Alta Especialización'}
+                    {itemEditando.tipo === 'diplomado' ? 'Diplomado oficial' : itemEditando.tipo === 'taller' ? 'Taller práctico' : 'Curso de especialización'}
                   </span>
                   <span className="text-[10px] font-bold text-slate-500 uppercase">
                     Código: <strong className="text-slate-800">{itemEditando.codigo}</strong>
@@ -1876,12 +1912,12 @@ export default function CatalogoAdminPage() {
                 </div>
 
                 <div className="md:col-span-2">
-                  <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">Categoría</label>
+                  <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">Categoría (Opcional / Dejar en blanco si no aplica)</label>
                   <input 
                     type="text" 
                     value={itemEditando.categoria || ''}
                     onChange={(e) => setItemEditando({ ...itemEditando, categoria: e.target.value })}
-                    placeholder={itemEditando.tipo === 'taller' ? 'Taller' : 'Categoría oficial'}
+                    placeholder="Sin categoría (dejar vacío)"
                     className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-900"
                   />
                 </div>
@@ -1955,6 +1991,26 @@ export default function CatalogoAdminPage() {
                   </>
                 )}
 
+                <div className="md:col-span-3 p-3.5 bg-slate-50 border border-slate-200 rounded-2xl flex items-start gap-3">
+                  <input 
+                    type="checkbox" 
+                    id="editMostrarEnCatalogo"
+                    checked={itemEditando.mostrar_en_catalogo !== false}
+                    onChange={(e) => setItemEditando({ ...itemEditando, mostrar_en_catalogo: e.target.checked })}
+                    className="mt-0.5 size-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer shrink-0"
+                  />
+                  <label htmlFor="editMostrarEnCatalogo" className="cursor-pointer">
+                    <span className="block text-xs font-bold text-slate-900">
+                      Mostrar en catálogo de estudiantes (Libre elección / Canje)
+                    </span>
+                    <span className="block text-[11px] text-slate-500 mt-0.5">
+                      {itemEditando.mostrar_en_catalogo !== false 
+                        ? 'Visible para los estudiantes en el catálogo público y canjes.' 
+                        : 'Producto interno (oculto para estudiantes). No aparecerá para canjes ni libre elección.'}
+                    </span>
+                  </label>
+                </div>
+
               </div>
 
               {/* Sección de Módulos y Temas (Solo para Diplomados con acordeón progresivo UIX) */}
@@ -1963,10 +2019,10 @@ export default function CatalogoAdminPage() {
                   <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-slate-200 pb-3">
                     <div>
                       <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                        <Layers className="w-4 h-4 text-indigo-600" /> Estructura de Módulos ({itemEditando.modulos ? itemEditando.modulos.length : 0})
+                        <Layers className="w-4 h-4 text-indigo-600" /> Estructura de módulos ({itemEditando.modulos ? itemEditando.modulos.length : 0})
                       </h4>
                       <p className="text-[11px] text-slate-500">
-                        Los módulos inician colapsados. Haz clic en &ldquo;Ver Temas&rdquo; para explorar y editar los temas y sesiones de cada módulo.
+                        Los módulos inician colapsados. Haz clic en &ldquo;Ver temas&rdquo; para explorar y editar los temas y sesiones de cada módulo.
                       </p>
                     </div>
 
@@ -2053,7 +2109,7 @@ export default function CatalogoAdminPage() {
                                   }`}
                                 >
                                   {estaModuloAbierto ? <ChevronUp className="size-4" /> : <ChevronDown className="size-4" />}
-                                  <span>{estaModuloAbierto ? 'Ocultar Temas' : `Ver Temas (${cantTemas})`}</span>
+                                  <span>{estaModuloAbierto ? 'Ocultar temas' : `Ver temas (${cantTemas})`}</span>
                                 </button>
 
                                 <button
@@ -2073,16 +2129,16 @@ export default function CatalogoAdminPage() {
                                 <div className="flex justify-between items-center pb-2 border-b border-slate-200">
                                   <div>
                                     <span className="text-xs font-bold text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
-                                      <Folder className="size-4 text-indigo-600" /> Temas y Sesiones de {formatearCodigoModulo(mod.codigo, mIdx)} ({cantTemas} temas)
+                                      <Folder className="size-4 text-indigo-600" /> Temas y sesiones de {formatearCodigoModulo(mod.codigo, mIdx)} ({cantTemas} temas)
                                     </span>
-                                    <p className="text-[10px] text-slate-500 mt-0.5">Haz clic en &ldquo;Editar Contenido&rdquo; de un tema para ver o modificar sus enlaces, videos y materiales.</p>
+                                    <p className="text-[10px] text-slate-500 mt-0.5">Haz clic en &ldquo;Editar contenidos&rdquo; de un tema para ver o modificar sus enlaces, videos y materiales.</p>
                                   </div>
                                   <button
                                     type="button"
                                     onClick={() => agregarTemaAModulo(mIdx)}
                                     className="text-xs font-bold bg-indigo-50 hover:bg-indigo-100 text-indigo-700 px-3 py-1.5 rounded-xl border border-indigo-200 transition flex items-center gap-1 cursor-pointer shadow-xs"
                                   >
-                                    <Plus className="size-3.5" /> + Agregar Tema
+                                    <Plus className="size-3.5" /> Agregar tema
                                   </button>
                                 </div>
 
@@ -2124,7 +2180,7 @@ export default function CatalogoAdminPage() {
                                                 }`}
                                               >
                                                 {estaTemaAbierto ? <ChevronUp className="size-3" /> : <ChevronDown className="size-3" />}
-                                                <span>{estaTemaAbierto ? 'Cerrar' : 'Editar Contenidos'}</span>
+                                                <span>{estaTemaAbierto ? 'Cerrar' : 'Editar contenidos'}</span>
                                               </button>
                                               <button
                                                 type="button"
@@ -2292,7 +2348,7 @@ export default function CatalogoAdminPage() {
                         onClick={agregarTemaCurso}
                         className="bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-sm cursor-pointer"
                       >
-                        <Plus className="size-3.5" /> + Agregar Tema
+                        <Plus className="size-3.5" /> Agregar tema
                       </button>
                     </div>
 
@@ -2335,7 +2391,7 @@ export default function CatalogoAdminPage() {
                                     }`}
                                   >
                                     {estaAbierto ? <ChevronUp className="size-3.5" /> : <ChevronDown className="size-3.5" />}
-                                    <span>{estaAbierto ? 'Cerrar' : 'Editar Contenidos'}</span>
+                                    <span>{estaAbierto ? 'Cerrar' : 'Editar contenidos'}</span>
                                   </button>
 
                                   <button
@@ -2445,7 +2501,7 @@ export default function CatalogoAdminPage() {
                   type="submit"
                   className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2.5 rounded-xl text-xs font-bold transition shadow-md cursor-pointer"
                 >
-                  Guardar Cambios en Supabase
+                  Guardar cambios en Supabase
                 </button>
               </div>
 
@@ -2462,7 +2518,7 @@ export default function CatalogoAdminPage() {
           <div onClick={(e) => e.stopPropagation()} className="bg-white w-full max-w-3xl rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-slate-100 animate-in fade-in zoom-in-95 duration-200">
             <div className="px-6 py-5 border-b border-slate-100 flex items-center justify-between bg-slate-50">
               <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
-                <FileSpreadsheet className="w-5 h-5 text-indigo-600" /> Carga Masiva de Módulos, Temas y Sesiones (Excel / CSV)
+                <FileSpreadsheet className="w-5 h-5 text-indigo-600" /> Carga masiva de módulos, temas y sesiones (Excel / CSV)
               </h3>
               <button onClick={() => setShowBulkModulesModal(false)} className="p-1.5 hover:bg-slate-200 rounded-full transition-colors text-slate-500 cursor-pointer">
                 <X className="w-5 h-5" />
@@ -2481,14 +2537,14 @@ export default function CatalogoAdminPage() {
                     onClick={descargarPlantillaEjemploExcel}
                     className="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1.5 rounded-xl text-xs font-bold transition inline-flex items-center gap-1.5 cursor-pointer shadow-xs"
                   >
-                    <FileSpreadsheet className="size-3.5" /> Plantilla Excel (.XLSX)
+                    <FileSpreadsheet className="size-3.5" /> Plantilla Excel (.xlsx)
                   </button>
                   <button
                     type="button"
                     onClick={descargarPlantillaEjemploCsv}
                     className="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-1.5 rounded-xl text-xs font-bold transition inline-flex items-center gap-1.5 cursor-pointer shadow-xs"
                   >
-                    <Download className="size-3.5" /> Plantilla CSV (.CSV)
+                    <Download className="size-3.5" /> Plantilla CSV (.csv)
                   </button>
                 </div>
               </div>
@@ -2538,7 +2594,7 @@ export default function CatalogoAdminPage() {
                   onClick={procesarCargaMasivaModulos}
                   className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-xl text-xs font-bold shadow-md transition cursor-pointer"
                 >
-                  Procesar e Importar Estructura
+                  Procesar e importar estructura
                 </button>
               </div>
             </div>
@@ -2553,7 +2609,7 @@ export default function CatalogoAdminPage() {
         <div onClick={(e) => { if (e.target === e.currentTarget) setShowCreateModal(false); }} className="fixed inset-0 bg-slate-950/70 backdrop-blur-md z-[9999] flex items-center justify-center p-4">
           <div onClick={(e) => e.stopPropagation()} className="bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-slate-100 animate-in fade-in zoom-in-95 duration-200">
             <div className="px-6 py-5 border-b border-slate-100 flex items-center justify-between bg-slate-50">
-              <h3 className="text-base font-bold text-slate-900">Agregar Producto a Supabase</h3>
+              <h3 className="text-base font-bold text-slate-900">Agregar producto a Supabase</h3>
               <button onClick={() => setShowCreateModal(false)} className="p-1.5 hover:bg-slate-200 rounded-full transition-colors text-slate-500 cursor-pointer">
                 <X className="w-5 h-5" />
               </button>
@@ -2569,20 +2625,20 @@ export default function CatalogoAdminPage() {
                     setNuevoTipo(tipo);
                     setNuevoCodigo(tipo === 'diplomado' ? `DIP-${catalogoDiplomados.length + 1}` : tipo === 'taller' ? `TAL-03` : `CUR-${catalogoCursos.length + 1}`);
                     if (tipo === 'diplomado') { setNuevaDuracion('325'); setNuevosCreditos('13'); }
-                    else if (tipo === 'taller') { setNuevaDuracion('10'); setNuevosCreditos(''); }
+                    else if (tipo === 'taller') { setNuevaDuracion('10'); setNuevosCreditos(''); if (!nuevaCategoria) setNuevaCategoria('Taller'); }
                     else { setNuevaDuracion('30'); setNuevosCreditos(''); }
                   }}
                   className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-semibold bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-600 text-slate-800"
                 >
-                  <option value="diplomado">Diplomado Oficial</option>
-                  <option value="curso">Curso de Alta Especialización</option>
-                  <option value="taller">Taller Práctico</option>
+                  <option value="diplomado">Diplomado oficial</option>
+                  <option value="curso">Curso de especialización</option>
+                  <option value="taller">Taller práctico</option>
                 </select>
               </div>
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Código Único</label>
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Código único</label>
                   <input 
                     type="text" 
                     required
@@ -2637,6 +2693,41 @@ export default function CatalogoAdminPage() {
                   onChange={(e) => setNuevoTitulo(e.target.value)}
                   className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-semibold bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-600 text-slate-800"
                 />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Categoría del Programa (Opcional)</label>
+                <div className="space-y-2">
+                  <select 
+                    value={nuevaCategoria} 
+                    onChange={(e) => setNuevaCategoria(e.target.value)}
+                    className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-semibold bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-600 text-slate-800"
+                  >
+                    <option value="">Sin categoría (Dejar en blanco)</option>
+                    <option value="Inteligencia de datos">Inteligencia de datos e IA</option>
+                    <option value="Tecnología e innovación">Tecnología e innovación</option>
+                    <option value="Seguridad y prevención">Seguridad y prevención</option>
+                    <option value="Operaciones y procesos">Operaciones y procesos</option>
+                    <option value="Logística y almacenes">Logística y almacenes</option>
+                    <option value="Legislación y normativa">Legislación y normativa</option>
+                    <option value="Medio ambiente">Medio ambiente</option>
+                    <option value="Mantenimiento industrial">Mantenimiento industrial</option>
+                    <option value="Legal y cumplimiento">Legal y cumplimiento</option>
+                    <option value="Dirección y gestión">Dirección y gestión</option>
+                    <option value="Taller">Taller</option>
+                    <option value="OTRA">Otra categoría (escribir personalizada)...</option>
+                  </select>
+                  {nuevaCategoria === 'OTRA' && (
+                    <input 
+                      type="text" 
+                      required
+                      placeholder="Escribe el nombre de la categoría personalizada..." 
+                      value={nuevaCategoriaPersonalizada}
+                      onChange={(e) => setNuevaCategoriaPersonalizada(e.target.value)}
+                      className="w-full px-4 py-2.5 border border-indigo-300 rounded-xl text-xs font-semibold bg-white focus:outline-none focus:ring-2 focus:ring-indigo-600 text-slate-800 animate-in fade-in"
+                    />
+                  )}
+                </div>
               </div>
 
               {nuevoTipo !== 'diplomado' ? (
@@ -2697,6 +2788,26 @@ export default function CatalogoAdminPage() {
                 />
               </div>
 
+              <div className="p-3.5 bg-slate-50 border border-slate-200 rounded-2xl flex items-start gap-3">
+                <input 
+                  type="checkbox" 
+                  id="nuevoMostrarEnCatalogo"
+                  checked={nuevoMostrarEnCatalogo}
+                  onChange={(e) => setNuevoMostrarEnCatalogo(e.target.checked)}
+                  className="mt-0.5 size-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer shrink-0"
+                />
+                <label htmlFor="nuevoMostrarEnCatalogo" className="cursor-pointer">
+                  <span className="block text-xs font-bold text-slate-900">
+                    Mostrar en catálogo de estudiantes (Libre elección / Canje)
+                  </span>
+                  <span className="block text-[11px] text-slate-500 mt-0.5">
+                    {nuevoMostrarEnCatalogo
+                      ? 'Visible para los estudiantes en el catálogo público y canjes.'
+                      : 'Producto interno (oculto en catálogo). Solo seleccionable de forma interna por administración.'}
+                  </span>
+                </label>
+              </div>
+
               <div className="pt-4 flex justify-end gap-3 border-t border-slate-100">
                 <button 
                   type="button" 
@@ -2725,7 +2836,7 @@ export default function CatalogoAdminPage() {
           <div onClick={(e) => e.stopPropagation()} className="bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-slate-100 animate-in fade-in zoom-in-95 duration-200">
             <div className="px-6 py-5 border-b border-slate-100 flex items-center justify-between bg-slate-50">
               <div>
-                <h3 className="text-base font-bold text-slate-900">Carga Masiva de Diplomados y Módulos</h3>
+                <h3 className="text-base font-bold text-slate-900">Carga masiva de diplomados y módulos</h3>
                 <p className="text-[11px] text-slate-500">Formatos compatibles: Excel (.xlsx, .xls) y CSV (.csv)</p>
               </div>
               <button onClick={() => setShowCsvModal(false)} className="p-1.5 hover:bg-slate-200 rounded-full transition-colors text-slate-500 cursor-pointer">
@@ -2785,7 +2896,7 @@ export default function CatalogoAdminPage() {
                   className="bg-indigo-600 text-white px-5 py-2 rounded-xl text-xs font-bold hover:bg-indigo-700 transition shadow-md cursor-pointer disabled:opacity-50 flex items-center gap-2"
                 >
                   {cargandoSupabase && <Loader2 className="w-4 h-4 animate-spin" />}
-                  Subir e Insertar en Supabase
+                  Subir e insertar en Supabase
                 </button>
               </div>
             </form>

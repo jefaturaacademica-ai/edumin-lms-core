@@ -105,13 +105,28 @@ export async function GET(request?: Request) {
 
         const resolverModeloVigente = (tipo: string, productoTitulo?: string, productoId?: string) => {
           const tipoUpper = tipo.toUpperCase();
+          const limpiar = (s: string) => (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+          const titNorm = limpiar(productoTitulo || '');
+          const idNorm = (productoId || '').trim().toUpperCase();
+
           if (productoTitulo || productoId) {
-            const porProducto = modelosConfig.find((m: any) =>
-              String(m.tipo).toUpperCase() === tipoUpper &&
-              m.asignacionAlcance === 'PRODUCTO_ESPECIFICO' &&
-              ((productoTitulo && m.recursoAsignadoNombre?.toLowerCase().includes(productoTitulo.toLowerCase())) ||
-               (productoId && m.recursoAsignadoId === productoId))
-            );
+            const porProducto = modelosConfig.find((m: any) => {
+              if (String(m.tipo).toUpperCase() !== tipoUpper || m.asignacionAlcance !== 'PRODUCTO_ESPECIFICO') return false;
+              if (idNorm && (
+                m.recursoAsignadoCodigo?.toUpperCase() === idNorm ||
+                m.recursoAsignadoId?.toUpperCase() === idNorm ||
+                m.recursoAsignadoId === productoId
+              )) return true;
+              if (m.recursoAsignadoNombre) {
+                const nomNorm = limpiar(m.recursoAsignadoNombre);
+                if (nomNorm && titNorm && (titNorm.includes(nomNorm) || nomNorm.includes(titNorm))) return true;
+              }
+              if (m.nombre) {
+                const modNomNorm = limpiar(m.nombre);
+                if (modNomNorm && titNorm && (titNorm.includes(modNomNorm) || modNomNorm.includes(titNorm))) return true;
+              }
+              return false;
+            });
             if (porProducto) return porProducto;
           }
           const superplantilla = modelosConfig.find((m: any) =>

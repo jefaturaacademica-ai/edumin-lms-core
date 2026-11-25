@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { Home, BookOpen, Award, LogOut, GraduationCap, Wallet, Menu, X, User } from 'lucide-react';
+import { Home, BookOpen, Award, LogOut, GraduationCap, Wallet, Menu, X, User, Lock, AlertCircle } from 'lucide-react';
 import { createBrowserClient } from '@supabase/ssr';
 import { cerrarSesionUsuario } from '@/lib/auth/logout';
 import { ThemeProvider } from '@/context/theme-context';
@@ -16,7 +16,15 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { debeCambiarPassword, nombres, dni, marcarPasswordActualizada } = useProfile();
+  const { debeCambiarPassword, nombres, dni, marcarPasswordActualizada, tieneDeudaVencida } = useProfile();
+
+  const RUTAS_RESTRINGIDAS_SET = new Set([
+    '/dashboard/diplomados',
+    '/dashboard/cursos',
+    '/dashboard/certificados',
+    '/dashboard/canjear',
+    '/dashboard/reproductor'
+  ]);
 
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -25,6 +33,23 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     setMobileMenuOpen(false);
+
+    // Verificar sesión activa en cliente
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      if (!user) {
+        router.replace('/login');
+      }
+    });
+
+    // Si el estudiante tiene cuotas vencidas, restringir acceso a secciones académicas
+    if (tieneDeudaVencida) {
+      const intentaAcceder = Array.from(RUTAS_RESTRINGIDAS_SET).some(
+        r => pathname === r || pathname.startsWith(r + '/')
+      );
+      if (intentaAcceder) {
+        router.replace('/dashboard/pagos?bloqueado=deuda');
+      }
+    }
 
     const TITLES_MAP: Record<string, string> = {
       '/dashboard': 'Inicio',
@@ -119,20 +144,29 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
             const Icon = item.icon;
             const esCanjearEnInicio = item.path === '/dashboard' && (pathname === '/dashboard/canjear' || pathname?.startsWith('/dashboard/canjear') || pathname === '/canjear');
             const isActive = pathname === item.path || esCanjearEnInicio;
+            const isRestricted = tieneDeudaVencida && RUTAS_RESTRINGIDAS_SET.has(item.path);
             
             return (
               <Link 
                 key={item.name} 
-                href={item.path}
-                onClick={() => setMobileMenuOpen(false)}
-                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl border text-sm leading-5 transition-colors duration-150 outline-none focus:outline-none focus-visible:ring-1 focus-visible:ring-indigo-400/50 ${
+                href={isRestricted ? '/dashboard/pagos?bloqueado=deuda' : item.path}
+                onClick={(e) => {
+                  if (isRestricted) {
+                    e.preventDefault();
+                    router.push('/dashboard/pagos?bloqueado=deuda');
+                  }
+                  if (setMobileMenuOpen) setMobileMenuOpen(false);
+                }}
+                className={`w-full flex items-center justify-between px-4 py-3 rounded-xl border text-sm leading-5 transition-colors duration-150 outline-none focus:outline-none focus-visible:ring-1 focus-visible:ring-indigo-400/50 ${
                   isActive 
                     ? 'bg-indigo-600/10 text-indigo-400 font-semibold border-indigo-500/20' 
-                    : 'border-transparent font-medium hover:bg-white/5 hover:text-white'
+                    : 'border-transparent font-medium hover:bg-white/5 hover:text-white text-slate-300'
                 }`}
               >
-                <Icon className={`w-5 h-5 shrink-0 ${isActive ? 'text-indigo-400' : 'text-slate-500'}`} />
-                <span className="truncate">{item.name}</span>
+                <div className="flex items-center gap-3 min-w-0">
+                  <Icon className={`w-5 h-5 shrink-0 ${isActive ? 'text-indigo-400' : 'text-slate-500'}`} />
+                  <span className="truncate">{item.name}</span>
+                </div>
               </Link>
             );
           })}
@@ -178,19 +212,29 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
             const Icon = item.icon;
             const esCanjearEnInicio = item.path === '/dashboard' && (pathname === '/dashboard/canjear' || pathname?.startsWith('/dashboard/canjear') || pathname === '/canjear');
             const isActive = pathname === item.path || esCanjearEnInicio;
+            const isRestricted = tieneDeudaVencida && RUTAS_RESTRINGIDAS_SET.has(item.path);
             
             return (
               <Link 
                 key={item.name} 
-                href={item.path}
-                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl border text-sm leading-5 transition-colors duration-150 outline-none focus:outline-none focus-visible:ring-1 focus-visible:ring-indigo-400/50 ${
+                href={isRestricted ? '/dashboard/pagos?bloqueado=deuda' : item.path}
+                onClick={(e) => {
+                  if (isRestricted) {
+                    e.preventDefault();
+                    router.push('/dashboard/pagos?bloqueado=deuda');
+                  }
+                  if (setMobileMenuOpen) setMobileMenuOpen(false);
+                }}
+                className={`w-full flex items-center justify-between px-4 py-3 rounded-xl border text-sm leading-5 transition-colors duration-150 outline-none focus:outline-none focus-visible:ring-1 focus-visible:ring-indigo-400/50 ${
                   isActive 
                     ? 'bg-indigo-600/10 text-indigo-400 font-semibold border-indigo-500/20' 
-                    : 'border-transparent font-medium hover:bg-white/5 hover:text-white'
+                    : 'border-transparent font-medium hover:bg-white/5 hover:text-white text-slate-300'
                 }`}
               >
-                <Icon className={`w-5 h-5 shrink-0 ${isActive ? 'text-indigo-400' : 'text-slate-500'}`} />
-                <span className="truncate">{item.name}</span>
+                <div className="flex items-center gap-3 min-w-0">
+                  <Icon className={`w-5 h-5 shrink-0 ${isActive ? 'text-indigo-400' : 'text-slate-500'}`} />
+                  <span className="truncate">{item.name}</span>
+                </div>
               </Link>
             );
           })}
@@ -215,11 +259,7 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
         className="flex-1 flex flex-col overflow-hidden min-w-0 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-200"
         suppressHydrationWarning
       >
-        <div className={`flex-1 min-h-0 ${
-          pathname.startsWith('/dashboard/diplomados/') || pathname.startsWith('/dashboard/cursos/')
-            ? 'h-full overflow-hidden flex flex-col'
-            : 'overflow-y-auto'
-        }`}>
+        <div className="flex-1 min-h-0 overflow-y-auto">
           {children}
         </div>
       </div>

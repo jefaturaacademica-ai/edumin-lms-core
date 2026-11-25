@@ -1,0 +1,1902 @@
+[
+  {
+    "id": "local-CUR-IA-1",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de la inteligencia artificial como herramienta de soporte?",
+    "opciones": [
+      {
+        "text": "Funcionar como un asistente virtual continuo.",
+        "isCorrect": true,
+        "rationale": "La tecnología está diseñada para actuar como un soporte constante que optimiza el tiempo del usuario ejecutando instrucciones directas."
+      },
+      {
+        "text": "Tomar decisiones morales de forma autónoma.",
+        "isCorrect": false,
+        "rationale": "El sistema carece de criterio propio o juicio ético, por lo que las decisiones finales corresponden siempre al usuario."
+      },
+      {
+        "text": "Reemplazar el pensamiento crítico del humano.",
+        "isCorrect": false,
+        "rationale": "El análisis final y la dirección de las tareas dependen de la supervisión y habilidad humana, no del sistema."
+      },
+      {
+        "text": "Sentir emociones humanas durante la tarea.",
+        "isCorrect": false,
+        "rationale": "La inteligencia artificial procesa información mediante patrones de datos sin experimentar sentimientos ni conciencia."
+      },
+      {
+        "text": "Generar su propia conciencia sin supervisión.",
+        "isCorrect": false,
+        "rationale": "Los modelos funcionan estrictamente bajo las directrices e instrucciones proporcionadas por las personas que los operan."
+      }
+    ],
+    "hint": "Piensa en el propósito principal de tener un asistente digital que opera sin descanso.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-2",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué afirmación describe una realidad sobre la inteligencia artificial y desmiente un mito común?",
+    "opciones": [
+      {
+        "text": "Puede predecir palabras mediante patrones.",
+        "isCorrect": false,
+        "rationale": "Esta afirmación describe una realidad técnica del funcionamiento de los modelos de lenguaje y no un mito desmentido."
+      },
+      {
+        "text": "Posee conciencia propia y sentimientos reales.",
+        "isCorrect": true,
+        "rationale": "Es un mito recurrente creer que el sistema siente o piensa; en realidad solo procesa datos y responde a patrones."
+      },
+      {
+        "text": "Ayuda a resumir gran cantidad de lecturas.",
+        "isCorrect": false,
+        "rationale": "Esta es una capacidad real del sistema para procesar grandes volúmenes de texto y no un mito falso."
+      },
+      {
+        "text": "Carece de capacidad para razonar como humano.",
+        "isCorrect": false,
+        "rationale": "Se trata de una limitación real del sistema informático y no de una creencia falsa."
+      },
+      {
+        "text": "Procesa datos en base a reglas de usuario.",
+        "isCorrect": false,
+        "rationale": "Esta afirmación corresponde al funcionamiento operativo real de la herramienta informática."
+      }
+    ],
+    "hint": "Considera si la IA experimenta emociones humanas o si solo procesa patrones de texto.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-3",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica distintiva principal de ChatGPT frente a otros asistentes?",
+    "opciones": [
+      {
+        "text": "Funcionar únicamente como buscador de Google.",
+        "isCorrect": false,
+        "rationale": "Esta función de integración con motores de búsqueda en tiempo real caracteriza principalmente a otras herramientas integradas a la web."
+      },
+      {
+        "text": "Editar imágenes en 3D de forma profesional.",
+        "isCorrect": false,
+        "rationale": "La edición tridimensional especializada requiere programas dedicados de diseño visual y no un modelo conversacional de texto."
+      },
+      {
+        "text": "Destacar por su creatividad y tono coloquial.",
+        "isCorrect": true,
+        "rationale": "Esta herramienta resalta por su versatilidad en la generación de ideas, redacción fluida y estilo conversacional amigable."
+      },
+      {
+        "text": "Analizar contratos únicamente en idioma chino.",
+        "isCorrect": false,
+        "rationale": "El sistema es multilingüe y no está restringido a un único idioma ni a un solo tipo de documento."
+      },
+      {
+        "text": "Crear clips de video realistas sin redacción.",
+        "isCorrect": false,
+        "rationale": "La generación directa de metraje audiovisual corresponde a generadores de video especializados y no a un chat de texto."
+      }
+    ],
+    "hint": "Recuerda qué herramienta destaca por ser ideal para generar ideas y conversar de forma natural.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-4",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué aspecto diferencia principalmente a Gemini dentro del conjunto de herramientas de IA?",
+    "opciones": [
+      {
+        "text": "Redactar cuentos con un tono hipereducado.",
+        "isCorrect": false,
+        "rationale": "El estilo de redacción formal y detallista en investigación larga es más característico de otros modelos de lectura profunda."
+      },
+      {
+        "text": "Funcionar sin ninguna conexión a internet.",
+        "isCorrect": false,
+        "rationale": "Las herramientas en la nube requieren conectividad continua para acceder a su base de datos y modelos."
+      },
+      {
+        "text": "Reemplazar por completo el uso del código.",
+        "isCorrect": false,
+        "rationale": "El sistema asiste en la creación de comandos pero no elimina la necesidad de programar o supervisar instrucciones."
+      },
+      {
+        "text": "Estar integrada al ecosistema de datos Google.",
+        "isCorrect": true,
+        "rationale": "Su ventaja clave radica en la sincronización directa con las aplicaciones de búsqueda y herramientas en la nube de Google."
+      },
+      {
+        "text": "Editar archivos de audio en formato de disco.",
+        "isCorrect": false,
+        "rationale": "El procesamiento y edición directa de archivos sonoros utiliza herramientas de edición de audio especializadas."
+      }
+    ],
+    "hint": "Piensa en la empresa desarrolladora de esta herramienta y sus servicios integrados de búsqueda.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-5",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Para qué tarea se recomienda de manera particular el uso de la herramienta Claude?",
+    "opciones": [
+      {
+        "text": "Generar únicamente música en formato estéreo.",
+        "isCorrect": false,
+        "rationale": "La composición de archivos sonoros se realiza mediante sintetizadores de audio dedicados."
+      },
+      {
+        "text": "Reemplazar cámaras de video para televisión.",
+        "isCorrect": false,
+        "rationale": "La captura de metraje físico requiere dispositivos ópticos de grabación y no un asistente de procesamiento de texto."
+      },
+      {
+        "text": "Buscar eventos informativos en tiempo real.",
+        "isCorrect": false,
+        "rationale": "La actualización inmediata de eventos en la red es una fortaleza de los buscadores integrados a internet."
+      },
+      {
+        "text": "Dibujar logotipos vectoriales en segundos.",
+        "isCorrect": false,
+        "rationale": "La ilustración gráfica vectorial utiliza software de diseño visual especializado."
+      },
+      {
+        "text": "Analizar y resumir textos largos y complejos.",
+        "isCorrect": true,
+        "rationale": "Destaca por su alta capacidad de lectura, análisis detallado y redacción estructurada de documentos de gran extensión."
+      }
+    ],
+    "hint": "Enfócate en la capacidad de procesar volúmenes extensos de información y redactar con tono educado.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-6",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son los tres componentes fundamentales de la fórmula básica para estructurar un prompt?",
+    "opciones": [
+      {
+        "text": "Definición del rol, la tarea y el formato.",
+        "isCorrect": true,
+        "rationale": "Asignar una identidad al sistema, establecer la acción requerida y especificar la forma de entrega garantiza una respuesta precisa."
+      },
+      {
+        "text": "Nombre del usuario, la fecha y la sintaxis.",
+        "isCorrect": false,
+        "rationale": "Los datos temporales del usuario y la gramática general no constituyen los pilares de la estructura de una instrucción efectiva."
+      },
+      {
+        "text": "El idioma oficial, el código y la imagen.",
+        "isCorrect": false,
+        "rationale": "Aunque se pueden incluir archivos o idiomas, estos elementos no forman la triada conceptual básica del prompt."
+      },
+      {
+        "text": "La velocidad, el algoritmo y la memoria.",
+        "isCorrect": false,
+        "rationale": "Estos términos se refieren a parámetros técnicos del procesamiento informático y no a la redacción del usuario."
+      },
+      {
+        "text": "El software usado, la red y el hardware.",
+        "isCorrect": false,
+        "rationale": "La infraestructura tecnológica no forma parte de la estructura de la instrucción enviada al modelo."
+      }
+    ],
+    "hint": "Piensa en la estructura que define a quién representa la IA, qué debe hacer y cómo presentar la respuesta.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-7",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué consecuencia ocurre cuando no se asigna un rol claro al formular una instrucción a la IA?",
+    "opciones": [
+      {
+        "text": "El sistema detiene su ejecución inmediatamente.",
+        "isCorrect": false,
+        "rationale": "La falta de rol no interrumpe el procesamiento del software, sino que afecta el enfoque del contenido."
+      },
+      {
+        "text": "La respuesta generada puede ser muy vaga.",
+        "isCorrect": true,
+        "rationale": "Sin una perspectiva definida, el sistema asume una posición genérica y ofrece información amplia o poco especializada."
+      },
+      {
+        "text": "La plataforma cancela la cuenta del usuario.",
+        "isCorrect": false,
+        "rationale": "Las cuentas se mantienen activas independientemente del nivel de precisión técnica de la consulta."
+      },
+      {
+        "text": "El algoritmo genera un error de programación.",
+        "isCorrect": false,
+        "rationale": "Una instrucción ambigua produce un texto general, pero no causa un fallo en el código del sistema."
+      },
+      {
+        "text": "Se borran los datos almacenados previamente.",
+        "isCorrect": false,
+        "rationale": "El historial guardado en la plataforma no se altera por enviar preguntas imprecisas."
+      }
+    ],
+    "hint": "Considera lo que ocurre cuando el sistema debe responder de forma predeterminada sin una guía específica.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-8",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal de aplicar un prompt de refinamiento?",
+    "opciones": [
+      {
+        "text": "Cambiar el idioma original de la plataforma.",
+        "isCorrect": false,
+        "rationale": "La configuración de idioma de la interfaz es una opción global del sistema y no el propósito de afinar el texto."
+      },
+      {
+        "text": "Eliminar la cuenta del usuario en el sistema.",
+        "isCorrect": false,
+        "rationale": "La gestión del perfil de usuario se realiza desde el menú de ajustes de la cuenta."
+      },
+      {
+        "text": "Ajustar y perfeccionar la respuesta previa.",
+        "isCorrect": true,
+        "rationale": "Permite corregir sesgos, añadir detalles específicos o pulir la primera propuesta entregada por la herramienta."
+      },
+      {
+        "text": "Crear un diseño gráfico desde cero en web.",
+        "isCorrect": false,
+        "rationale": "El refinamiento aplica a la mejora del contenido textual o conceptual dentro de la conversación."
+      },
+      {
+        "text": "Traducir códigos de programación complejos.",
+        "isCorrect": false,
+        "rationale": "La traducción de código es un caso de uso particular y no la definición general del proceso de ajuste iterativo."
+      }
+    ],
+    "hint": "Piensa en la acción de mejorar o ajustar una respuesta obtenida previamente del sistema.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-9",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la anatomía de un prompt para generación de imágenes, ¿qué función cumple el elemento 'fondo'?",
+    "opciones": [
+      {
+        "text": "El sujeto principal seleccionado por el usuario.",
+        "isCorrect": false,
+        "rationale": "El sujeto corresponde al personaje u objeto central y no al entorno espacial que lo rodea."
+      },
+      {
+        "text": "El estilo gráfico o renderizado de la imagen.",
+        "isCorrect": false,
+        "rationale": "El estilo determina el acabado artístico de la ilustración, no la locación física representada."
+      },
+      {
+        "text": "La paleta de colores especificada en texto.",
+        "isCorrect": false,
+        "rationale": "Los tonos de color definen la cromatografía y no la ambientación del lugar."
+      },
+      {
+        "text": "El fondo o locación donde ocurre la escena.",
+        "isCorrect": true,
+        "rationale": "Establece el escenario, contexto temporal, clima o lugar específico donde se posiciona el sujeto."
+      },
+      {
+        "text": "La resolución requerida para el documento.",
+        "isCorrect": false,
+        "rationale": "Las dimensiones y nitidez son parámetros técnicos del archivo y no un componente descriptivo de la escena."
+      }
+    ],
+    "hint": "Identifica el componente del prompt que describe el lugar y el entorno de la imagen.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-10",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué elemento del prompt de imagen especifica si el resultado debe parecer una pintura, fotografía o 3D?",
+    "opciones": [
+      {
+        "text": "La hora del día elegida para el escenario.",
+        "isCorrect": false,
+        "rationale": "La hora influye en la iluminación del entorno dentro de la escena, no en el medio visual de representación."
+      },
+      {
+        "text": "El sujeto o personaje central de la escena.",
+        "isCorrect": false,
+        "rationale": "El personaje define la figura en torno a la cual gira la composición visual."
+      },
+      {
+        "text": "El fondo o entorno donde ocurre la acción.",
+        "isCorrect": false,
+        "rationale": "El entorno define la ambientación geográfica o espacial de la toma."
+      },
+      {
+        "text": "La paleta cromática aplicada en el marco.",
+        "isCorrect": false,
+        "rationale": "Los colores guían los tonos predominantes de la imagen pero no la textura ni la técnica artística."
+      },
+      {
+        "text": "El estilo visual o técnica de renderizado.",
+        "isCorrect": true,
+        "rationale": "Determina la estética final del gráfico, orientando al algoritmo sobre la técnica de representación requerida."
+      }
+    ],
+    "hint": "Piensa en el atributo del prompt que indica la técnica artística o apariencia visual de la imagen.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-11",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función principal cumple la herramienta de capas o estudio mágico en la edición visual de Canva?",
+    "opciones": [
+      {
+        "text": "Modificar u omitir objetos de una imagen.",
+        "isCorrect": true,
+        "rationale": "Permite seleccionar elementos específicos de una fotografía para borrarlos, moverlos o sustituirlos sin alterar el resto del diseño."
+      },
+      {
+        "text": "Crear códigos de programación en servidor.",
+        "isCorrect": false,
+        "rationale": "El diseño gráfico se enfoca en la manipulación estética de lienzos y no en la escritura de software backend."
+      },
+      {
+        "text": "Convertir textos en archivos de audio MP3.",
+        "isCorrect": false,
+        "rationale": "La edición de lienzo gráfico no realiza síntesis de voz a partir de bloques de texto."
+      },
+      {
+        "text": "Grabar llamadas telefónicas en directo.",
+        "isCorrect": false,
+        "rationale": "Las herramientas de diseño visual no capturan transmisiones de voz sobre redes de telefonía."
+      },
+      {
+        "text": "Diseñar motores de búsqueda de internet.",
+        "isCorrect": false,
+        "rationale": "La plataforma permite maquetar gráficos pero no programar arquitecturas de indexación web."
+      }
+    ],
+    "hint": "Recuerda la función que permite borrar o modificar elementos específicos dentro de una imagen.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-12",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la utilidad principal de la plataforma Renderforest en la producción digital?",
+    "opciones": [
+      {
+        "text": "Corregir errores ortográficos en libros.",
+        "isCorrect": false,
+        "rationale": "La corrección de gramática y estilo se lleva a cabo en procesadores de texto y modelos de lenguaje."
+      },
+      {
+        "text": "Generar videos usando plantillas dinámicas.",
+        "isCorrect": true,
+        "rationale": "Facilita la producción audiovisual mediante la automatización de escenas, locución sintética y maquetas preconcebidas."
+      },
+      {
+        "text": "Escribir códigos de bases de datos web.",
+        "isCorrect": false,
+        "rationale": "La administración de datos estructurados emplea gestores de bases de datos y no editores de video."
+      },
+      {
+        "text": "Traducir documentos de texto escaneados.",
+        "isCorrect": false,
+        "rationale": "El reconocimiento óptico de caracteres y su traducción utilizan herramientas documentales específicas."
+      },
+      {
+        "text": "Diseñar circuitos electrónicos complejos.",
+        "isCorrect": false,
+        "rationale": "La ingeniería electrónica utiliza programas CAD especializados y no plataformas de video."
+      }
+    ],
+    "hint": "Considera la función principal de esta plataforma al trabajar con secuencias de imágenes y plantillas.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-13",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué característica distingue a la herramienta TTS Maker dentro del flujo de trabajo?",
+    "opciones": [
+      {
+        "text": "Microsoft Designer para gráficos web.",
+        "isCorrect": false,
+        "rationale": "Esta aplicación de diseño se orienta a la creación visual y no a la locación sonora directa."
+      },
+      {
+        "text": "Canva para presentaciones digitales.",
+        "isCorrect": false,
+        "rationale": "Canva es un software de maquetación gráfica y producción visual predominantemente."
+      },
+      {
+        "text": "TTS Maker para archivos de audio MP3.",
+        "isCorrect": true,
+        "rationale": "Es una plataforma orientada al procesamiento inmediato de escrito a voz sintética descargable."
+      },
+      {
+        "text": "Claude para la lectura de contratos.",
+        "isCorrect": false,
+        "rationale": "Claude es un modelo conversacional de análisis textual y no un sintetizador directo de archivos de sonido."
+      },
+      {
+        "text": "Gemini para búsquedas en internet.",
+        "isCorrect": false,
+        "rationale": "Gemini integra información web conversacional en lugar de ser un generador especializado de voz aislada."
+      }
+    ],
+    "hint": "Identifica la herramienta especializada en sintetizar voz a partir de un texto sin requerir usuario.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-14",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué ventaja clave aporta el uso de CapCut en el procesamiento audiovisual?",
+    "opciones": [
+      {
+        "text": "Diseñar planos arquitectónicos en 3D.",
+        "isCorrect": false,
+        "rationale": "El modelado tridimensional espacial corresponde a herramientas especializadas de arquitectura e ingeniería."
+      },
+      {
+        "text": "Programar bases de datos en servidores.",
+        "isCorrect": false,
+        "rationale": "El desarrollo backend requiere lenguajes de programación y entornos de base de datos."
+      },
+      {
+        "text": "Redactar leyes laborales de un país.",
+        "isCorrect": false,
+        "rationale": "La producción normativa corresponde a procesadores de texto y análisis jurídico."
+      },
+      {
+        "text": "Generar subtítulos automáticos en video.",
+        "isCorrect": true,
+        "rationale": "Su algoritmo analiza la pista de voz y sincroniza automáticamente el texto en pantalla durante la edición."
+      },
+      {
+        "text": "Crear hojas de cálculo con fórmulas.",
+        "isCorrect": false,
+        "rationale": "El análisis numérico estructurado utiliza software de hojas de cálculo."
+      }
+    ],
+    "hint": "Piensa en la función de edición que transcribe la voz de un archivo audiovisual en texto en pantalla.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-15",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué define a la tecnología TTS (Text-to-Speech) en los procesos digitales actuales?",
+    "opciones": [
+      {
+        "text": "Un sistema de diseño gráfico vectorial.",
+        "isCorrect": false,
+        "rationale": "El diseño de trazados vectoriales pertenece al campo de la ilustración digital."
+      },
+      {
+        "text": "Un motor de búsqueda para internet libre.",
+        "isCorrect": false,
+        "rationale": "La indexación y consulta de sitios web corresponde a motores de búsqueda."
+      },
+      {
+        "text": "Un editor de bases de datos relacionales.",
+        "isCorrect": false,
+        "rationale": "La gestión de tablas de datos utiliza modelos relacionales de software."
+      },
+      {
+        "text": "Un programa para traducir videos a texto.",
+        "isCorrect": false,
+        "rationale": "La transcripción realiza el proceso inverso de voz a escrito (Speech-to-Text)."
+      },
+      {
+        "text": "Una tecnología para convertir texto en voz.",
+        "isCorrect": true,
+        "rationale": "Esta solución tecnológica sintetiza narraciones sonoras automatizadas a partir de caracteres redactados."
+      }
+    ],
+    "hint": "Recuerda el significado de la sigla en inglés que define la síntesis de voz a partir de escritura.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-16",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué es beneficioso solicitar a la IA que formule preguntas antes de entregar un trabajo extenso?",
+    "opciones": [
+      {
+        "text": "Asegurar que se entienda la necesidad real.",
+        "isCorrect": true,
+        "rationale": "Permite verificar los criterios del requerimiento y recopilar variables necesarias antes de generar la respuesta final."
+      },
+      {
+        "text": "Reducir el consumo de energía del equipo.",
+        "isCorrect": false,
+        "rationale": "La iteración de mensajes procesa peticiones en el servidor sin reducir el gasto eléctrico local."
+      },
+      {
+        "text": "Aumentar la velocidad del internet usado.",
+        "isCorrect": false,
+        "rationale": "El ancho de banda contratado depende exclusivamente del proveedor de telecomunicaciones."
+      },
+      {
+        "text": "Cancelar las solicitudes previas del sistema.",
+        "isCorrect": false,
+        "rationale": "La consulta interactiva afina la respuesta actual pero no elimina el historial archivado."
+      },
+      {
+        "text": "Bloquear la cuenta de usuarios no registrados.",
+        "isCorrect": false,
+        "rationale": "Las reglas de acceso a la plataforma son gestionadas por la seguridad del servidor."
+      }
+    ],
+    "hint": "Considera por qué es útil que el sistema aclare dudas antes de entregar un trabajo final.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-17",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué acción se debe tomar cuando la IA proporciona información que parece inventada o imprecisa?",
+    "opciones": [
+      {
+        "text": "Aceptar los resultados sin realizar cambios.",
+        "isCorrect": false,
+        "rationale": "Adoptar información no verificada puede generar inconsistencias graves en las tareas desarrolladas."
+      },
+      {
+        "text": "Solicitar las fuentes y validar los datos.",
+        "isCorrect": true,
+        "rationale": "El usuario debe actuar como filtro crítico, pidiendo referencias para constatar la veracidad del contenido."
+      },
+      {
+        "text": "Eliminar el software de la computadora.",
+        "isCorrect": false,
+        "rationale": "Las imprecisiones son inherentes a los modelos probabilísticos y no implican una falla del dispositivo."
+      },
+      {
+        "text": "Pagar una suscripción mensual obligatoria.",
+        "isCorrect": false,
+        "rationale": "La contratación de planes de pago amplía cuotas de uso pero no elimina completamente la posibilidad de alucinación."
+      },
+      {
+        "text": "Reiniciar la red de internet inmediatamente.",
+        "isCorrect": false,
+        "rationale": "La exactitud conceptual de la respuesta no se relaciona con la estabilidad de la conexión de red."
+      }
+    ],
+    "hint": "Piensa en la actitud crítica necesaria respecto a la veracidad de la información en internet.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-18",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la técnica avanzada conocida como 'prompt de oro'?",
+    "opciones": [
+      {
+        "text": "Generar imágenes vectoriales de alta calidad.",
+        "isCorrect": false,
+        "rationale": "El prompt de oro es un método de interacción textual y no un comando de renderizado de ilustración."
+      },
+      {
+        "text": "Traducir documentos a varios idiomas locales.",
+        "isCorrect": false,
+        "rationale": "La traducción es una tarea regular del sistema y no la estructura de evaluación del prompt de oro."
+      },
+      {
+        "text": "Indicar al sistema que evalúe sus respuestas.",
+        "isCorrect": true,
+        "rationale": "Busca que la herramienta efectúe un proceso de autocritica y formulación de preguntas de validación antes de concluir."
+      },
+      {
+        "text": "Formatear el disco duro del equipo utilizado.",
+        "isCorrect": false,
+        "rationale": "Las instrucciones en modelos de lenguaje operan dentro del entorno seguro de la aplicación en la nube."
+      },
+      {
+        "text": "Crear contraseñas seguras para los usuarios.",
+        "isCorrect": false,
+        "rationale": "La generación de credenciales es una tarea de ciberseguridad y no una técnica de autoevaluación conversacional."
+      }
+    ],
+    "hint": "Considera la técnica que consiste en pedirle a la herramienta que evalúe y cuestione su propia propuesta.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-19",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué especialización funcional ofrece Microsoft Designer a los usuarios?",
+    "opciones": [
+      {
+        "text": "Analizar contratos legales largos en PDF.",
+        "isCorrect": false,
+        "rationale": "La revisión documental extensa es una capacidad de asistentes conversacionales especializados en lectura."
+      },
+      {
+        "text": "Traducir audios de voz a texto escrito.",
+        "isCorrect": false,
+        "rationale": "La transcripción sonora utiliza modelos de reconocimiento de voz (Speech-to-Text)."
+      },
+      {
+        "text": "Calcular fórmulas de contabilidad en web.",
+        "isCorrect": false,
+        "rationale": "Las operaciones financieras se realizan en hojas de cálculo o programas contables."
+      },
+      {
+        "text": "Crear piezas visuales mediante instrucciones.",
+        "isCorrect": true,
+        "rationale": "Esta aplicación se centra en interpretar comandos descriptivos para generar piezas gráficas e ilustraciones."
+      },
+      {
+        "text": "Editar archivos de sonido en formato MP3.",
+        "isCorrect": false,
+        "rationale": "La producción de audio utiliza editores de ondas sonoras dedicados."
+      }
+    ],
+    "hint": "Recuerda qué tipo de contenido principal genera esta aplicación de Microsoft a partir de prompts.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-20",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué aspecto de privacidad se debe considerar al usar plataformas gratuitas de IA?",
+    "opciones": [
+      {
+        "text": "Que el hardware sufra fallas mecánicas.",
+        "isCorrect": false,
+        "rationale": "El procesamiento en servidores remotos no genera desgaste físico en los componentes de la computadora local."
+      },
+      {
+        "text": "Que la red de internet pierda velocidad.",
+        "isCorrect": false,
+        "rationale": "El tráfico de texto consumido por las consultas web es mínimo y no ralentiza la conexión."
+      },
+      {
+        "text": "Que el sistema borre archivos locales.",
+        "isCorrect": false,
+        "rationale": "Las plataformas web trabajan de forma aislada sin acceso a la eliminación de archivos del disco local."
+      },
+      {
+        "text": "Que la pantalla cambie de resolución.",
+        "isCorrect": false,
+        "rationale": "Las variables de hardware de pantalla no se modifican al interactuar con aplicaciones de inteligencia artificial."
+      },
+      {
+        "text": "Que los datos ingresados queden guardados.",
+        "isCorrect": true,
+        "rationale": "La información ingresada en cuentas estándar puede almacenarse en los servidores de la empresa para entrenar los modelos."
+      }
+    ],
+    "hint": "Piensa en la privacidad de los textos o archivos subidos a plataformas de acceso público.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-21",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a asistentes conversacionales basados en texto?",
+    "opciones": [
+      {
+        "text": "ChatGPT para redacción y lluvia de ideas.",
+        "isCorrect": true,
+        "rationale": "Es una plataforma de lenguaje orientada a la conversación, creación narrativa y resolución de problemas."
+      },
+      {
+        "text": "Gemini para búsqueda conectada a Google.",
+        "isCorrect": true,
+        "rationale": "Funciona como un asistente conversacional capaz de sintetizar información e interactuar mediante lenguaje natural."
+      },
+      {
+        "text": "Claude para análisis de textos complejos.",
+        "isCorrect": true,
+        "rationale": "Sobresale por su capacidad conversacional enfocada en la comprensión y resumen de documentos extensos."
+      },
+      {
+        "text": "TTS Maker para crear piezas de audio MP3.",
+        "isCorrect": false,
+        "rationale": "Se trata de un motor de conversión unilateral de texto a voz, no de un entorno conversacional."
+      },
+      {
+        "text": "Renderforest para la creación de video.",
+        "isCorrect": false,
+        "rationale": "Es una plataforma dedicada a la producción y renderizado audiovisual, no al diálogo textual."
+      }
+    ],
+    "hint": "Identifica los tres asistentes conversacionales principales explicados en las sesiones.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-22",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué elementos componen la estructura recomendada de un prompt para la generación de imágenes?",
+    "opciones": [
+      {
+        "text": "Especificar el sujeto central de la escena.",
+        "isCorrect": true,
+        "rationale": "Define la figura o elemento principal que debe destacar dentro de la composición visual."
+      },
+      {
+        "text": "Definir el fondo o entorno de la locación.",
+        "isCorrect": true,
+        "rationale": "Aporta el escenario contextual y las condiciones físicas donde se sitúa el elemento principal."
+      },
+      {
+        "text": "Incluir el código de programación del software.",
+        "isCorrect": false,
+        "rationale": "La IA generativa de imágenes interpreta lenguaje descriptivo natural y no líneas de código de programación."
+      },
+      {
+        "text": "Seleccionar el estilo gráfico o renderizado.",
+        "isCorrect": true,
+        "rationale": "Guía el acabado estético deseado, como ilustración, fotografía realista o estética tridimensional."
+      },
+      {
+        "text": "Ingresar el número de serie de la máquina.",
+        "isCorrect": false,
+        "rationale": "La identificación de hardware del equipo es un dato irrelevante para la creación del gráfico."
+      }
+    ],
+    "hint": "Recuerda los componentes clave del prompt para imágenes: quién aparece, dónde está y su acabado visual.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-23",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué funcionalidades destacan en la plataforma Canva para la edición gráfica?",
+    "opciones": [
+      {
+        "text": "Compilar código fuente para aplicaciones.",
+        "isCorrect": false,
+        "rationale": "La compilación de software se realiza en entornos de desarrollo integrado para programadores."
+      },
+      {
+        "text": "Remover el fondo de fotografías subidas.",
+        "isCorrect": true,
+        "rationale": "Su motor de procesamiento gráfico aísla los objetos centrales eliminando el fondo con un solo clic."
+      },
+      {
+        "text": "Modificar elementos mediante capas mágicas.",
+        "isCorrect": true,
+        "rationale": "Facilita la selección, borrado o sustitución de objetos específicos integrados en una fotografía."
+      },
+      {
+        "text": "Personalizar plantillas para documentos.",
+        "isCorrect": true,
+        "rationale": "Ofrece un catálogo maquetado adaptable para la creación de piezas gráficas y formatos corporativos."
+      },
+      {
+        "text": "Reparar fallas de hardware en computadoras.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento físico del equipo informático requiere soporte técnico presencial."
+      }
+    ],
+    "hint": "Piensa en las funciones de manipulación visual y plantillas personalizables de esta herramienta.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-24",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué características corresponden a las herramientas de edición audiovisual como CapCut?",
+    "opciones": [
+      {
+        "text": "Generar subtítulos en video de forma automática.",
+        "isCorrect": true,
+        "rationale": "Posee la capacidad de reconocer la voz del metraje y convertirla en subtítulos sincronizados."
+      },
+      {
+        "text": "Reemplazar el uso de los servidores web locales.",
+        "isCorrect": false,
+        "rationale": "Las soluciones de edición audiovisual no sustituyen la infraestructura de almacenamiento de red."
+      },
+      {
+        "text": "Redactar contratos de compraventa de inmuebles.",
+        "isCorrect": false,
+        "rationale": "La redacción de instrumentos jurídicos se lleva a cabo en procesadores textuales."
+      },
+      {
+        "text": "Permitir la edición y corte de clips de video.",
+        "isCorrect": true,
+        "rationale": "Ofrece herramientas de edición temporal para dividir, reorganizar y unir fragmentos de video."
+      },
+      {
+        "text": "Añadir efectos de voz sobre las pistas de audio.",
+        "isCorrect": true,
+        "rationale": "Permite aplicar moduladores y filtros sonoros sobre los canales de voz integrados en la secuencia."
+      }
+    ],
+    "hint": "Considera las capacidades de edición audiovisual y procesamiento de voz que ofrece este software.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-25",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué prácticas son recomendables para estructurar prompts efectivos al interactuar con la IA?",
+    "opciones": [
+      {
+        "text": "Escribir instrucciones ambiguas y muy breves.",
+        "isCorrect": false,
+        "rationale": "La falta de especificidad promueve respuestas generales que no se ajustan a las expectativas concretas."
+      },
+      {
+        "text": "Proporcionar un contexto claro sobre la tarea.",
+        "isCorrect": true,
+        "rationale": "Explicar el marco, la audiencia y el objetivo ayuda a que el algoritmo adapte el tono y la información."
+      },
+      {
+        "text": "Asignar un rol específico al iniciar el chat.",
+        "isCorrect": true,
+        "rationale": "Permite adoptar la perspectiva técnica de un especialista o profesión determinada según el caso."
+      },
+      {
+        "text": "Asumir que toda la información es cien real.",
+        "isCorrect": false,
+        "rationale": "Es indispensable auditar los datos entregados, ya que los modelos pueden cometer imprecisiones."
+      },
+      {
+        "text": "Solicitar revisiones y formatos determinados.",
+        "isCorrect": true,
+        "rationale": "Especificar si se requiere una lista, tabla o informe garantiza recibir el resultado en la estructura buscada."
+      }
+    ],
+    "hint": "Piensa en las mejores prácticas de la fórmula del prompt para guiar eficazmente al sistema.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-26",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué herramienta de inteligencia artificial se destaca principalmente por su enfoque en el análisis profundo y resumen riguroso de documentos extensos o contratos?",
+    "opciones": [
+      {
+        "text": "Claude es la herramienta orientada al análisis de textos largos.",
+        "isCorrect": true,
+        "rationale": "Su arquitectura destaca por procesar grandes volúmenes de texto manteniendo coherencia y detalle interpretativo."
+      },
+      {
+        "text": "Gemini es la herramienta orientada al análisis de textos largos.",
+        "isCorrect": false,
+        "rationale": "Su punto fuerte es la búsqueda en tiempo real e integración con el ecosistema de Google."
+      },
+      {
+        "text": "ChatGPT es la herramienta orientada al análisis de textos largos.",
+        "isCorrect": false,
+        "rationale": "Se caracteriza principalmente por su versatilidad conversacional y generación creativa."
+      },
+      {
+        "text": "Copilot es la herramienta orientada al análisis de textos largos.",
+        "isCorrect": false,
+        "rationale": "Está enfocado en la productividad dentro de la suite ofimática tradicional."
+      },
+      {
+        "text": "Canva IA es la herramienta orientada al análisis de textos largos.",
+        "isCorrect": false,
+        "rationale": "Su diseño está orientado al desarrollo visual e ilustración gráfica."
+      }
+    ],
+    "hint": "Piensa en el asistente diseñado para leer textos largos y mantener un tono educado.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-27",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al estructurar un prompt eficaz para la generación de texto, ¿cuáles son los tres elementos fundamentales que deben configurarse obligatoriamente?",
+    "opciones": [
+      {
+        "text": "El presupuesto, la herramienta utilizada y el número final.",
+        "isCorrect": false,
+        "rationale": "Estos factores corresponden a la gestión de proyecto y no a la estructura lógica de la instrucción."
+      },
+      {
+        "text": "El rol asignado, el contexto del problema y el formato.",
+        "isCorrect": true,
+        "rationale": "Establecer la identidad de la IA, el trasfondo de la necesidad y la estructura de salida garantiza una respuesta precisa."
+      },
+      {
+        "text": "El diseño gráfico, la fecha límite y el idioma fuente.",
+        "isCorrect": false,
+        "rationale": "Representan parámetros secundarios que no definen el comportamiento central del modelo de lenguaje."
+      },
+      {
+        "text": "La velocidad del procesador, la red y la interfaz visual.",
+        "isCorrect": false,
+        "rationale": "Pertenecen a especificaciones de hardware e infraestructura técnica ajenas a la redacción del prompt."
+      },
+      {
+        "text": "El nombre del usuario, la clave de acceso y la plantilla.",
+        "isCorrect": false,
+        "rationale": "Son datos de autenticación y recursos externos que no guían la generación lógica del contenido."
+      }
+    ],
+    "hint": "Considera la fórmula que define la identidad de la IA, el trasfondo y el producto final.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-28",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para generar una imagen hiperrealista mediante inteligencia artificial, ¿qué combinación de cuatro elementos debe incluir la instrucción?",
+    "opciones": [
+      {
+        "text": "La resolución de pantalla, el peso en megabytes, la marca y el tipo.",
+        "isCorrect": false,
+        "rationale": "Corresponden a propiedades de exportación digital y no a la descripción conceptual de la escena."
+      },
+      {
+        "text": "El código de barras, la fecha de creación, la tipografía y la red.",
+        "isCorrect": false,
+        "rationale": "Representan metadatos administrativos sin impacto en la generación gráfica del modelo."
+      },
+      {
+        "text": "El sujeto principal, el fondo detallado, el color y el estilo.",
+        "isCorrect": true,
+        "rationale": "Definir al protagonista, su entorno, la paleta cromática y el acabado artístico permite al algoritmo construir una escena coherente."
+      },
+      {
+        "text": "El nombre del archivo, la carpeta de destino, la licencia y el uso.",
+        "isCorrect": false,
+        "rationale": "Son atributos de almacenamiento y derechos que no intervienen en el renderizado generativo."
+      },
+      {
+        "text": "El motor de búsqueda, el nombre del sistema, el sistema y la web.",
+        "isCorrect": false,
+        "rationale": "Hacen referencia a la plataforma informática y no al contenido compositivo de la ilustración."
+      }
+    ],
+    "hint": "Recuerda la fórmula de cuatro pasos que especifica quién aparece, dónde está, los tonos y el acabado.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-29",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la técnica conocida como el \"prompt de oro\" durante la interacción interactiva con un modelo de lenguaje?",
+    "opciones": [
+      {
+        "text": "En solicitar a la IA que traduzca el texto ingresado a cinco idiomas.",
+        "isCorrect": false,
+        "rationale": "Esta es una tarea convencional de traducción multilingüe que no altera el flujo de comunicación."
+      },
+      {
+        "text": "En exigir a la IA que dibuje una ilustración vectorial con capas.",
+        "isCorrect": false,
+        "rationale": "Se trata de una solicitud de diseño gráfico y no de una estrategia de refinamiento textual."
+      },
+      {
+        "text": "En pedir a la IA que busque enlaces patrocinados en la web global.",
+        "isCorrect": false,
+        "rationale": "Describe una consulta de exploración comercial que no involucra la clarificación de requerimientos."
+      },
+      {
+        "text": "En instruir a la IA para que formule preguntas antes de responder.",
+        "isCorrect": true,
+        "rationale": "Obliga al sistema a identificar ambigüedades y solicitar datos clave antes de redactar el borrador final."
+      },
+      {
+        "text": "En ordenar a la IA que reescriba el prompt utilizando rimas cortas.",
+        "isCorrect": false,
+        "rationale": "Es una modificación estilística que no aporta precisión funcional al contenido del informe."
+      }
+    ],
+    "hint": "Esta técnica evita suposiciones por parte del sistema solicitando validaciones al usuario antes de generar la respuesta.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-30",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito principal de incorporar una fase de autocrítica en una secuencia de refinamiento de prompts?",
+    "opciones": [
+      {
+        "text": "Reducir la velocidad de procesamiento del servidor de la herramienta.",
+        "isCorrect": false,
+        "rationale": "La velocidad de cómputo depende de la infraestructura del servidor y no de la estrategia de consulta."
+      },
+      {
+        "text": "Eliminar la necesidad de utilizar cuentas registradas en las plataformas.",
+        "isCorrect": false,
+        "rationale": "La autenticación de usuario es un requisito de acceso independiente de las instrucciones enviadas."
+      },
+      {
+        "text": "Aumentar el número de palabras en el documento sin aportar contenido.",
+        "isCorrect": false,
+        "rationale": "El objetivo del refinamiento es elevar la calidad sintáctica y conceptual, no diluir la información."
+      },
+      {
+        "text": "Generar hipervínculos automáticos hacia sitios web comerciales de red.",
+        "isCorrect": false,
+        "rationale": "La inserción de enlaces publicitarios no guarda relación con la evaluación interna de un borrador."
+      },
+      {
+        "text": "Evaluar los sesgos, riesgos o vacíos del borrador inicial generado.",
+        "isCorrect": true,
+        "rationale": "Permite que el modelo analice objetivamente su propia respuesta para detectar incoherencias o falta de rigurosidad."
+      }
+    ],
+    "hint": "Se enfoca en la revisión analítica del primer borrador por parte del propio modelo.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-31",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué característica diferencial posee Gemini debido a su arquitectura de desarrollo dentro del ecosistema tecnológico?",
+    "opciones": [
+      {
+        "text": "Sincronización directa con los servicios y la información de Google.",
+        "isCorrect": true,
+        "rationale": "Al estar integrado nativamente en dicha infraestructura, accede a información actualizada y herramientas de la misma suite."
+      },
+      {
+        "text": "Eliminación total de la necesidad de ingresar instrucciones escritas.",
+        "isCorrect": false,
+        "rationale": "El modelo requiere comandos de entrada de texto o voz para procesar cualquier solicitud."
+      },
+      {
+        "text": "Capacidad exclusiva para generar archivos ejecutables de programación.",
+        "isCorrect": false,
+        "rationale": "Diversos modelos de lenguaje comparten la facultad de redactar y depurar código informático."
+      },
+      {
+        "text": "Creación automática de videos cinematográficos en formato de cine 4K.",
+        "isCorrect": false,
+        "rationale": "La generación de video requiere motores dedicados distintos a la interfaz principal del asistente."
+      },
+      {
+        "text": "Procesamiento de datos sin conexión a la red pública de internet.",
+        "isCorrect": false,
+        "rationale": "El sistema opera mediante servidores en la nube y exige conectividad para recopilar información."
+      }
+    ],
+    "hint": "Piensa en el motor de búsqueda y la suite en la nube con la que se conecta este asistente.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-32",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al generar un video corporativo con animación a partir de un guion escrito, ¿qué ventaja ofrece el uso de Renderforest frente a editores convencionales?",
+    "opciones": [
+      {
+        "text": "Permite editar secuencias de audio sin utilizar conexión a internet.",
+        "isCorrect": false,
+        "rationale": "La plataforma opera en entorno web y requiere conexión activa para procesar proyectos."
+      },
+      {
+        "text": "Genera escenas prediseñadas y locuciones sincronizadas automáticamente.",
+        "isCorrect": true,
+        "rationale": "Sintetiza la instrucción de texto convirtiéndola en secuencias visuales organizadas con soporte narrativo."
+      },
+      {
+        "text": "Diseña aplicaciones móviles personalizadas para redes de alta velocidad.",
+        "isCorrect": false,
+        "rationale": "Su enfoque exclusivo radica en la producción audiovisual y material de branding digital."
+      },
+      {
+        "text": "Elimina el requerimiento de registro o autenticación de usuario final.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento de proyectos exige la creación y gestión de una cuenta de usuario."
+      },
+      {
+        "text": "Modifica el hardware de la computadora para renderizar en menor tiempo.",
+        "isCorrect": false,
+        "rationale": "El procesamiento ocurre en la nube y no altera los componentes físicos del equipo local."
+      }
+    ],
+    "hint": "Considera la plataforma automatizada que estructura guiones en plantillas de animación con voz encriptada.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-33",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple la tecnología conocida como TTS (Text-to-Speech) dentro del flujo de producción de contenidos digitales?",
+    "opciones": [
+      {
+        "text": "Convierte archivos de video comprimidos en imágenes vectoriales 2D.",
+        "isCorrect": false,
+        "rationale": "El procesamiento sintético de audio no interviene en la conversión de formatos de imagen."
+      },
+      {
+        "text": "Diseña logotipos empresariales basados en bocetos dibujados a mano.",
+        "isCorrect": false,
+        "rationale": "Esta tarea corresponde a modelos generativos de gráficos y herramientas de diseño."
+      },
+      {
+        "text": "Transforma textos escritos en archivos de audio con voces sintéticas.",
+        "isCorrect": true,
+        "rationale": "Convierte datos de texto en archivos hablados permitiendo narraciones automatizadas sin locutor humano."
+      },
+      {
+        "text": "Traduce sitios web completos a lenguajes de programación estructurados.",
+        "isCorrect": false,
+        "rationale": "Su ámbito de aplicación se limita al procesamiento fonético y no a la reestructuración de código informático."
+      },
+      {
+        "text": "Modifica la velocidad del procesador gráfico durante la renderización.",
+        "isCorrect": false,
+        "rationale": "No influye en el rendimiento del hardware informático."
+      }
+    ],
+    "hint": "Su sigla en inglés describe literalmente la conversión de escritura en sonido verbal.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-34",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué procedimiento técnico permite generar subtítulos automáticos sincronizados en un editor de video como CapCut o Clipchamp?",
+    "opciones": [
+      {
+        "text": "Redactar manualmente cada palabra del video sobre la línea de tiempo.",
+        "isCorrect": false,
+        "rationale": "La transcripción manual invalida el proceso de automatización característico del software moderno."
+      },
+      {
+        "text": "Capturar fotografías de la pantalla e importar el texto como gráfico.",
+        "isCorrect": false,
+        "rationale": "Convertir imágenes estáticas no genera bloques de texto editables ni sincronizados temporales."
+      },
+      {
+        "text": "Traducir el guion mediante un documento impreso escaneado en formato PDF.",
+        "isCorrect": false,
+        "rationale": "El escaneo de documentos físicos no establece marcas de tiempo en la pista audiovisual."
+      },
+      {
+        "text": "Procesar la pista de audio mediante el reconocimiento del habla automático.",
+        "isCorrect": true,
+        "rationale": "La herramienta analiza las ondas de sonido expresadas para generar y alinear los bloques de texto en el tiempo."
+      },
+      {
+        "text": "Subir un archivo de audio diferente para reemplazar las voces existentes.",
+        "isCorrect": false,
+        "rationale": "Reemplazar el audio no produce por sí mismo la conversión a subtítulos legibles en pantalla."
+      }
+    ],
+    "hint": "El sistema analiza la onda sonora para convertir la voz hablada en texto sincronizado.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-35",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué capacidad ofrece la función de \"capas mágicas\" o edición avanzada en plataformas de diseño visual como Canva?",
+    "opciones": [
+      {
+        "text": "Convertir un documento de texto plano en un archivo de sonido MP3.",
+        "isCorrect": false,
+        "rationale": "La transformación de texto a voz se ejecuta mediante herramientas fonéticas TTS específicas."
+      },
+      {
+        "text": "Crear scripts de código fuente para aplicaciones de servidor web.",
+        "isCorrect": false,
+        "rationale": "Las plataformas de diseño gráfico no están orientadas al desarrollo de código de programación."
+      },
+      {
+        "text": "Reducir el consumo de memoria RAM del equipo durante la navegación.",
+        "isCorrect": false,
+        "rationale": "La asignación de memoria depende del navegador y los recursos del sistema operativo."
+      },
+      {
+        "text": "Transmitir secuencias de video en vivo a través de satélites globales.",
+        "isCorrect": false,
+        "rationale": "El servicio de diseño gráfico no ofrece infraestructura para telecomunicaciones satelitales."
+      },
+      {
+        "text": "Quitar el fondo, aislar y desplazar elementos individuales de una foto.",
+        "isCorrect": true,
+        "rationale": "Permite segmentar los componentes visuales de una composición para manipularlos por separado sin rehacer la imagen."
+      }
+    ],
+    "hint": "Facilita la modificación independiente de elementos visuales sin rehacer toda la imagen.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-36",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué acciones contribuyen directamente a mejorar la calidad de un borrador de informe gerencial producido por una IA?",
+    "opciones": [
+      {
+        "text": "Solicitar una revisión de autocrítica sobre sesgos en los datos.",
+        "isCorrect": true,
+        "rationale": "Obliga al modelo a evaluar la coherencia lógica y señalar posibles vacíos de información en su propia propuesta."
+      },
+      {
+        "text": "Cambiar la tipografía del documento a un estilo manuscrito 3D.",
+        "isCorrect": false,
+        "rationale": "Modificar la apariencia tipográfica no altera la rigurosidad ni la precisión técnica de los datos del reporte."
+      },
+      {
+        "text": "Incorporar preguntas de aclaración antes de la entrega final.",
+        "isCorrect": true,
+        "rationale": "Permite resolver ambigüedades de contexto garantizando que la estructura responda exactamente al objetivo."
+      },
+      {
+        "text": "Definir con precisión el rol del analista y el formato de salida.",
+        "isCorrect": true,
+        "rationale": "Establecer la perspectiva profesional del modelo guía el uso de terminología técnica y la profundidad del análisis."
+      },
+      {
+        "text": "Desconectar el equipo de la red eléctrica antes de guardar el texto.",
+        "isCorrect": false,
+        "rationale": "Interrumpir la energía provoca la pérdida del trabajo en curso y carece de sentido analítico."
+      }
+    ],
+    "hint": "Elige las opciones centradas en la precisión contextual, la autoevaluación lógica y la definición técnica del prompt.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-37",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Respecto a las capacidades reales de los modelos de lenguaje actuales, ¿cuál de las siguientes afirmaciones describe una limitación real del sistema?",
+    "opciones": [
+      {
+        "text": "Los modelos poseen conciencia propia y experimentan emociones reales.",
+        "isCorrect": false,
+        "rationale": "Los modelos operan mediante algoritmos matemáticos probabilísticos y carecen de vida afectiva o conciencia."
+      },
+      {
+        "text": "Pueden generar datos inexactos o inventar hechos al carecer de filtro.",
+        "isCorrect": true,
+        "rationale": "Al predecir secuencias de palabras sin validación objetiva de la verdad, pueden incurrir en alucinaciones informativas."
+      },
+      {
+        "text": "Reemplazan por completo la necesidad del criterio de supervisión humana.",
+        "isCorrect": false,
+        "rationale": "La validación y el juicio humano son indispensables para verificar la exactitud y ética de los resultados."
+      },
+      {
+        "text": "Operan únicamente cuando un operador humano redacta en código binario.",
+        "isCorrect": false,
+        "rationale": "Las interfaces modernas están procesadas para interpretar lenguaje natural en múltiples idiomas."
+      },
+      {
+        "text": "Actualizan su base de datos biológica de forma consciente cada segundo.",
+        "isCorrect": false,
+        "rationale": "Las herramientas de IA no poseen componentes biológicos ni actualizan su conocimiento sin reentrenamiento técnico."
+      }
+    ],
+    "hint": "Las herramientas de IA procesan patrones estadísticos de lenguaje pero requieren validación humana contra información falsa.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-38",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al construir la instrucción para un generador de imágenes como Bing Image Creator o DALL-E, ¿por qué es insuficiente ingresar únicamente la palabra \"perro\"?",
+    "opciones": [
+      {
+        "text": "Porque el sistema rechazará la palabra por violar políticas de uso.",
+        "isCorrect": false,
+        "rationale": "Los términos comunes no transgreden los términos de servicio de las plataformas."
+      },
+      {
+        "text": "Porque la herramienta transformará la solicitud en un archivo de texto.",
+        "isCorrect": false,
+        "rationale": "El motor gráfico procesará la instrucción creando una imagen, no devolviendo un documento."
+      },
+      {
+        "text": "Porque el sistema asumirá al azar el fondo, estilo y paleta cromática.",
+        "isCorrect": true,
+        "rationale": "Al carecer de especificaciones sobre la toma, iluminación o entorno, el algoritmo selecciona variables aleatorias."
+      },
+      {
+        "text": "Porque se requiere obligatoriamente incluir el nombre científico canino.",
+        "isCorrect": false,
+        "rationale": "Los modelos comprenden vocabulario coloquial y no exigen nomenclatura científica."
+      },
+      {
+        "text": "Porque los servidores requieren un mínimo de quinientas palabras de texto.",
+        "isCorrect": false,
+        "rationale": "Los algoritmos generativos aceptan descripciones breves aunque los resultados sean imprecisos."
+      }
+    ],
+    "hint": "Cuando falta precisión en la instrucción, el algoritmo completa los vacíos de forma aleatoria.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-39",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Si se requiere que la IA procese una lista desordenada de transacciones y entregue un formato estructurado para hoja de cálculo, ¿qué instrucción es la adecuada?",
+    "opciones": [
+      {
+        "text": "Solicitar un poema abstracto en verso libre sobre contabilidad.",
+        "isCorrect": false,
+        "rationale": "La estructura lírica no permite organizar valores numéricos ni celdas editables."
+      },
+      {
+        "text": "Pedir la creación de un archivo de audio sintético en tres idiomas.",
+        "isCorrect": false,
+        "rationale": "La síntesis de voz no sustituye la organización tabular requerida en administración."
+      },
+      {
+        "text": "Ordenes la generación de un boceto fotográfico en blanco y negro.",
+        "isCorrect": false,
+        "rationale": "Un gráfico artístico no facilita el análisis financiero cuantitativo."
+      },
+      {
+        "text": "Indicar la entrega en formato de tabla con columnas y separar filas.",
+        "isCorrect": true,
+        "rationale": "Especificar la salida estructurada en columnas garantiza que los datos puedan ser importados directamente en programas de cálculo."
+      },
+      {
+        "text": "Exigir un resumen ejecutivo narrado en formato de obra dramática.",
+        "isCorrect": false,
+        "rationale": "La prosa teatral dificulta la extracción limpia de importes y fechas contables."
+      }
+    ],
+    "hint": "Enfócate en el parámetro del prompt que define la organización visual de la información de salida.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-40",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al utilizar asistentes virtuales para traducir documentos técnicos a idiomas desconocidos por el usuario, ¿cuál es el procedimiento recomendado para verificar la fidelidad del texto?",
+    "opciones": [
+      {
+        "text": "Confiar ciegamente en la primera versión devuelta por la herramienta.",
+        "isCorrect": false,
+        "rationale": "Omitir la revisión expone al usuario a errores de interpretación o pérdidas de contexto técnico."
+      },
+      {
+        "text": "Convertir el texto traducido en una imagen animada de alta resolución.",
+        "isCorrect": false,
+        "rationale": "La representación visual no valida la precisión gramatical ni la corrección conceptual de la traducción."
+      },
+      {
+        "text": "Imprimir el documento y leerlo en voz alta sin realizar modificaciones.",
+        "isCorrect": false,
+        "rationale": "La lectura oral en un idioma desconocido no revela sesgos ni errores en el texto."
+      },
+      {
+        "text": "Cambiar el tamaño de la letra del archivo traducido a formato negrita.",
+        "isCorrect": false,
+        "rationale": "El formato tipográfico no modifica la precisión sintáctica del pasaje traducido."
+      },
+      {
+        "text": "Hacer validar el resultado cruzando la traducción con otra IA distinta.",
+        "isCorrect": true,
+        "rationale": "Someter la traducción a una segunda plataforma permite detectar inconsistencias léxicas o fallas estructurales."
+      }
+    ],
+    "hint": "Implica la contrastación cruzada de resultados entre plataformas independientes.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-41",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes tareas corresponden a aplicaciones prácticas de los asistentes de inteligencia artificial en el entorno profesional?",
+    "opciones": [
+      {
+        "text": "Resumir extensos reportes técnicos y extraer conclusiones clave.",
+        "isCorrect": true,
+        "rationale": "Agiliza la lectura crítica extrayendo los puntos centrales de volúmenes extensos de información."
+      },
+      {
+        "text": "Redactar borradores de correos institucionales adaptando el tono.",
+        "isCorrect": true,
+        "rationale": "Permite estructurar mensajes formales e informales optimizando el tiempo de respuesta."
+      },
+      {
+        "text": "Tomar decisiones finales sobre la contratación de personal laboral.",
+        "isCorrect": false,
+        "rationale": "La selección definitiva requiere evaluación ética y juicio crítico reservado a los profesionales humanos."
+      },
+      {
+        "text": "Reemplazar el juicio crítico del profesional ante problemas legales.",
+        "isCorrect": false,
+        "rationale": "Los modelos aportan referencias pero no sustituyen la responsabilidad legal del profesional."
+      },
+      {
+        "text": "Organizar y estructurar lluvias de ideas para campañas comerciales.",
+        "isCorrect": true,
+        "rationale": "Funciona como motor creativo proponiendo esquemas conceptuales y enfoques comunicacionales."
+      }
+    ],
+    "hint": "Identifica aquellas actividades enfocadas en la optimización del tiempo de redacción, síntesis y estructuración de ideas.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-42",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de plataformas especializadas en gestión de conocimiento como NotebookLM al cargar múltiples fuentes documentales?",
+    "opciones": [
+      {
+        "text": "Generar automáticamente códigos de programación para videojuegos 3D.",
+        "isCorrect": false,
+        "rationale": "No está diseñada para el desarrollo de motores gráficos ni programación interactiva."
+      },
+      {
+        "text": "Crear cuadernos interactivos que responden consultas basadas en la data.",
+        "isCorrect": true,
+        "rationale": "Sintetiza y responde preguntas limitándose rigurosamente al cuerpo documental suministrado por el usuario."
+      },
+      {
+        "text": "Reemplazar las conexiones de red local por sistemas satelitales de voz.",
+        "isCorrect": false,
+        "rationale": "Carece de funciones relacionadas con la infraestructura de hardware o redes de comunicación."
+      },
+      {
+        "text": "Diseñar logotipos vectoriales sin intervención de instrucciones de texto.",
+        "isCorrect": false,
+        "rationale": "No es un motor generador de ilustraciones o gráficos identitarios."
+      },
+      {
+        "text": "Eliminar las cuentas de correo electrónico de los usuarios registrados.",
+        "isCorrect": false,
+        "rationale": "No administra la gestión de usuarios ni la infraestructura de correo de servidores."
+      }
+    ],
+    "hint": "Esta herramienta actúa como un centro de estudio enfocado únicamente en los archivos que el usuario proporciona.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-43",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante el proceso de creación de un video automatizado en Renderforest, ¿qué paso sigue inmediatamente después de ingresar el guion textual?",
+    "opciones": [
+      {
+        "text": "El envío automático de una copia impresa por correo postal.",
+        "isCorrect": false,
+        "rationale": "La producción y distribución del material se mantiene íntegramente en formato digital."
+      },
+      {
+        "text": "La desconexión inmediata de la cuenta de usuario del sistema.",
+        "isCorrect": false,
+        "rationale": "El sistema mantiene la sesión activa para continuar con la fase de diseño."
+      },
+      {
+        "text": "La selección del estilo visual de las escenas prediseñadas.",
+        "isCorrect": true,
+        "rationale": "Una vez establecido el texto, se debe definir la estética (2D, 3D o fotorealista) que representará los conceptos."
+      },
+      {
+        "text": "La eliminación permanente de las pistas de audio de la red.",
+        "isCorrect": false,
+        "rationale": "La plataforma conserva recursos sonoros para acompañar la narración visual."
+      },
+      {
+        "text": "El formateo completo de la memoria rígida de la computadora.",
+        "isCorrect": false,
+        "rationale": "La herramienta web opera en la nube sin afectar los datos del equipo personal."
+      }
+    ],
+    "hint": "Se refiere a la elección de la estética gráfica (2D, 3D, realista) que vestirá las frases del guion.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-44",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué medida práctica debe tomar un usuario cuando una herramienta de IA en versión gratuita alcanza su límite de procesamiento de mensajes o archivos?",
+    "opciones": [
+      {
+        "text": "Eliminar la cuenta de correo electrónico corporativo de la empresa.",
+        "isCorrect": false,
+        "rationale": "Borrar el correo no resuelve la cuota temporal de uso de una plataforma externa."
+      },
+      {
+        "text": "Formatear el sistema operativo del computador personal por completo.",
+        "isCorrect": false,
+        "rationale": "El límite de uso se registra en los servidores del servicio y no en el disco local."
+      },
+      {
+        "text": "Redactar una queja formal enviada por correo físico al proveedor.",
+        "isCorrect": false,
+        "rationale": "Las restricciones corresponden a las condiciones de servicio gratuitas preestablecidas."
+      },
+      {
+        "text": "Alternar el flujo de trabajo hacia otra herramienta gratuita equivalente.",
+        "isCorrect": true,
+        "rationale": "Diversificar el trabajo entre asistentes similares (como ChatGPT, Gemini o Claude) permite mantener la productividad."
+      },
+      {
+        "text": "Reiniciar el módem de internet para duplicar la memoria del servidor.",
+        "isCorrect": false,
+        "rationale": "La dirección IP o la conexión local no modifican la cuota asignada a la cuenta."
+      }
+    ],
+    "hint": "Recuerda la estrategia de diversificación entre múltiples asistentes de IA equivalentes.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-45",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al solicitar a un modelo de lenguaje que adapte un texto informal para una presentación ejecutiva, ¿qué aspecto del prompt debe ser ajustado?",
+    "opciones": [
+      {
+        "text": "La resolución de los píxeles en la pantalla de la computadora.",
+        "isCorrect": false,
+        "rationale": "La configuración del monitor no altera la sintaxis ni el estilo de la redacción textual."
+      },
+      {
+        "text": "La tasa de refresco del monitor y el contraste de la imagen visual.",
+        "isCorrect": false,
+        "rationale": "Los parámetros de hardware visual no afectan el nivel estilístico de un modelo de lenguaje."
+      },
+      {
+        "text": "La velocidad de conexión a la red de fibra óptica del usuario.",
+        "isCorrect": false,
+        "rationale": "La tasa de transferencia de datos influye en el tiempo de carga, pero no en el contenido formal."
+      },
+      {
+        "text": "El tipo de cable utilizado para conectar el ratón al sistema local.",
+        "isCorrect": false,
+        "rationale": "Los periféricos de entrada no tienen relación con las directrices de comunicación."
+      },
+      {
+        "text": "El tono de comunicación y el perfil del destinatario final deseado.",
+        "isCorrect": true,
+        "rationale": "Definir el grado de formalidad y la audiencia guía la selección léxica adecuada para un entorno profesional."
+      }
+    ],
+    "hint": "Corresponde a los parámetros que guían el estilo lingüístico y el registro verbal de la respuesta.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-46",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al redactar un prompt para la generación de imágenes publicitarias, ¿cuáles de los siguientes descriptores ayudan a definir el estilo visual del renderizado?",
+    "opciones": [
+      {
+        "text": "Iluminación cinemática de neón y estilo fotorrealista 8K.",
+        "isCorrect": true,
+        "rationale": "Orienta el tipo de luz y la calidad estética general de la escena digital."
+      },
+      {
+        "text": "Número de palabras contenidas en el informe de auditoría.",
+        "isCorrect": false,
+        "rationale": "La longitud de un documento de texto no define parámetros de composición gráfica."
+      },
+      {
+        "text": "Ilustración vectorial minimalista en tonos pasteles suaves.",
+        "isCorrect": true,
+        "rationale": "Especifica el formato del arte gráfico y la paleta de colores requerida."
+      },
+      {
+        "text": "Boceto hecho a mano en lápiz de grafito con sombras 3D.",
+        "isCorrect": true,
+        "rationale": "Define la técnica artística tradicional que debe simular el algoritmo visual."
+      },
+      {
+        "text": "Velocidad de descarga del archivo adjunto en formato zip.",
+        "isCorrect": false,
+        "rationale": "El tiempo de transferencia digital no repercute en los atributos artísticos de la ilustración."
+      }
+    ],
+    "hint": "Busca las opciones que describan técnicas artísticas, paletas cromáticas o tipos de iluminación visual.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-47",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la utilidad principal de importar una grabación de voz larga a una herramienta con función de transcripción automática?",
+    "opciones": [
+      {
+        "text": "Reducir automáticamente la temperatura física del procesador.",
+        "isCorrect": false,
+        "rationale": "El procesamiento de audio no regula la temperatura interna del hardware informático."
+      },
+      {
+        "text": "Obtener el texto limpio para generar resúmenes o actas de reunión.",
+        "isCorrect": true,
+        "rationale": "Transformar el lenguaje hablado en texto estructurado facilita la extracción rápida de acuerdos e informes formales."
+      },
+      {
+        "text": "Eliminar las cuentas de usuario de la plataforma de edición activa.",
+        "isCorrect": false,
+        "rationale": "El procesamiento de sonido no cierra sesiones registradas en el navegador."
+      },
+      {
+        "text": "Aumentar la duración del archivo de audio original al doble de tiempo.",
+        "isCorrect": false,
+        "rationale": "La transcripción analiza el contenido fonético sin extender la longitud temporal del sonido."
+      },
+      {
+        "text": "Convertir el audio en un archivo de imagen estática de alta calidad.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la herramienta es extraer texto redactado y no generar recursos gráficos."
+      }
+    ],
+    "hint": "Facilita la conversión del lenguaje hablado a formato escrito para su posterior síntesis.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-48",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Si la primera respuesta generada por una IA resulta demasiado extensa y compleja para una audiencia infantil, ¿cuál es la acción de refinamiento correcta?",
+    "opciones": [
+      {
+        "text": "Borrar la cuenta registrada e instalar un nuevo navegador de red.",
+        "isCorrect": false,
+        "rationale": "Cambiar de software de navegación no modifica el enfoque de la instrucción textual previa."
+      },
+      {
+        "text": "Comprar una nueva tarjeta gráfica para acelerar la pantalla visual.",
+        "isCorrect": false,
+        "rationale": "El hardware visual no influye en la complejidad léxica generada por un modelo de lenguaje."
+      },
+      {
+        "text": "Solicitar que explique el concepto adaptándolo como si tuviera 10 años.",
+        "isCorrect": true,
+        "rationale": "Establecer una restricción de audiencia mediante una analogía sencilla ajusta el lenguaje a explicaciones accesibles."
+      },
+      {
+        "text": "Cambiar el idioma del sistema operativo de la laptop a alemán técnico.",
+        "isCorrect": false,
+        "rationale": "Modificar el idioma del sistema no simplifica la estructura de una respuesta en español."
+      },
+      {
+        "text": "Imprimir el texto y recortar los párrafos utilizando tijeras físicas.",
+        "isCorrect": false,
+        "rationale": "La manipulación física del papel no reescribe la idea para adaptarla a la comprensión infantil."
+      }
+    ],
+    "hint": "Consiste en dar una nueva directriz de simplificación manteniendo la idea central.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-49",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En un flujo de trabajo digital eficiente, ¿cuál es la secuencia lógica para producir un cartel publicitario utilizando herramientas de IA?",
+    "opciones": [
+      {
+        "text": "Publicar la imagen vacía en redes, redactar el texto y buscar el tema.",
+        "isCorrect": false,
+        "rationale": "Invertir el proceso publicando marcos vacíos carece de estrategia de diseño."
+      },
+      {
+        "text": "Imprimir la hoja en blanco, pintar con acuarelas y tomar una fotografía.",
+        "isCorrect": false,
+        "rationale": "No incorpora las fases de generación automatizada ni diagramación digital explicadas."
+      },
+      {
+        "text": "Generar la voz de audio, descargar el archivo MP3 y formatear la laptop.",
+        "isCorrect": false,
+        "rationale": "Las pistas de sonido no son la base primaria para componer gráficos estáticos."
+      },
+      {
+        "text": "Redactar el concepto, generar la imagen con IA y compilar en Canva.",
+        "isCorrect": true,
+        "rationale": "El orden ideal inicia estructurando la propuesta conceptual, creando la ilustración generativa e integrando tipografías en el editor."
+      },
+      {
+        "text": "Editar un video completo de diez minutos e importar el audio a texto.",
+        "isCorrect": false,
+        "rationale": "La edición extensa de video representa una línea de trabajo distinta a la creación de carteles publicitarios."
+      }
+    ],
+    "hint": "Considera el orden que va desde la idea inicial y la generación visual hasta el ensamblaje tipográfico final.",
+    "activo": true
+  },
+  {
+    "id": "local-CUR-IA-50",
+    "codigo_diplomado": "CUR-IA",
+    "diplomado": "ESPECIALÍZATE EN INTELIGENCIA ARTIFICIAL DE 0 A 100",
+    "modulo": "Examen del curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al utilizar plataformas gratuitas de IA en línea para tareas de oficina, ¿qué precaución fundamental se debe observar respecto a la privacidad?",
+    "opciones": [
+      {
+        "text": "No utilizar teclados físicos durante la redacción de las preguntas.",
+        "isCorrect": false,
+        "rationale": "El medio físico de entrada de datos no altera los términos de privacidad de los servidores."
+      },
+      {
+        "text": "Evitar encender la pantalla del monitor mientras se carga la página.",
+        "isCorrect": false,
+        "rationale": "Apagar la pantalla no afecta la transmisión digital de datos entre el equipo y la nube."
+      },
+      {
+        "text": "Apagar el enrutador de internet cada cinco minutos de trabajo continuo.",
+        "isCorrect": false,
+        "rationale": "Interrumpir la conexión genera errores de red sin proteger la información enviada previamente."
+      },
+      {
+        "text": "Utilizar únicamente letras mayúsculas al escribir las instrucciones.",
+        "isCorrect": false,
+        "rationale": "El uso de mayúsculas no encripta ni protege los datos confidenciales ingresados."
+      },
+      {
+        "text": "Evitar ingresar información confidencial, datos personales o claves.",
+        "isCorrect": true,
+        "rationale": "Los modelos de acceso abierto pueden almacenar y utilizar la información de entrada para el reentrenamiento de sus algoritmos."
+      }
+    ],
+    "hint": "Se refiere a la protección de datos sensibles e institucionales en entornos de acceso abierto.",
+    "activo": true
+  }
+]

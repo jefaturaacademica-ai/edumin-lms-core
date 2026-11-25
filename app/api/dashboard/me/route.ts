@@ -170,7 +170,7 @@ function parseCreditoRow(pag: any) {
       if (val !== 'no corresponde' && Number(val) > 0) {
         if (!cuotas_recibos[idx]) {
           cuotas_recibos[idx] = {
-            nro_recibo: rowNroRecibo || `REC-2026-${String(idx + 1).padStart(5, '0')}`,
+            nro_recibo: rowNroRecibo || null,
             nro_operacion: rowNroOperacion || 'N/A',
             fecha: pag.created_at
           };
@@ -181,9 +181,21 @@ function parseCreditoRow(pag: any) {
     });
   }
 
+  const cuotasActivas = Array.isArray(cuotas) ? cuotas.filter(c => c !== 'no corresponde') : [];
+  const cuotasNoPagadas = cuotasActivas.filter(c => Number(c) === 0);
+  const cuotasPagadas = cuotasActivas.filter(c => Number(c) > 0);
+
   let total_deuda = explicitDeuda !== undefined
     ? explicitDeuda
     : Math.max(0, Number(pag.monto || 0) - total_pagado);
+
+  // Si hay cuotas activas pendientes de pago (con valor 0) y total_deuda dio 0, calcular la deuda real pendiente
+  if (cuotasNoPagadas.length > 0 && total_deuda === 0) {
+    const montoCuotaEst = cuotasPagadas.length > 0
+      ? (total_pagado / cuotasPagadas.length)
+      : (Number(pag.monto || 0) / Math.max(1, cuotasActivas.length));
+    total_deuda = Math.round(montoCuotaEst * cuotasNoPagadas.length);
+  }
 
   const montoTotal = Math.max(Number(pag.monto || 0), total_pagado + total_deuda);
 
@@ -390,101 +402,6 @@ export async function GET() {
     const { data: { user }, error: authError } = await supabase.auth.getUser();
 
     if (authError || !user) {
-      // Fallback para sesión demo estudiante 71234567 (Juan Carlos Quispe Ramos)
-      const admin = createAdminClient();
-      const { data: pByDni } = await admin
-        .from('profiles')
-        .select('*')
-        .eq('dni_ce', '71234567')
-        .maybeSingle();
-
-      if (pByDni) {
-        const { data: rawPagos } = await admin
-          .from('pagos')
-          .select('*')
-          .or(`profile_id.eq.${pByDni.id},dni_ce.eq.71234567,metodo.ilike.%71234567%`)
-          .order('created_at', { ascending: true });
-        
-        const parsedPagos = (rawPagos || []).map(p => parseCreditoRow(p));
-        const diplomados_json = parseDiplomadosFromProfile(pByDni);
-        let cursos_json = parseCursosFromProfile(pByDni);
-
-        const dipTitulosDemo: string[] = [];
-        if (pByDni.diplomado_1) dipTitulosDemo.push(pByDni.diplomado_1);
-        if (pByDni.diplomado_2) dipTitulosDemo.push(pByDni.diplomado_2);
-        diplomados_json.forEach((d: any) => {
-          const t = d.titulo || d.slug;
-          if (t && !dipTitulosDemo.includes(t)) dipTitulosDemo.push(t);
-        });
-// Inyectar el taller que viene incluido en cada diplomado matriculado
-        dipTitulosDemo.forEach(dipTitulo => {
-          const taller = obtenerTallerParaDiplomado(dipTitulo);
-          if (taller && !cursos_json.some((c: any) => c.id === taller.id || c.codigo === taller.codigo)) {
-            cursos_json.push({
-              id: taller.id,
-              codigo: taller.codigo,
-              titulo: taller.titulo,
-              tipo: 'TALLER',
-              categoria: 'Taller',
-              esRegalo: true,
-              duracion: taller.duracion,
-              imagen: taller.imagen,
-              color: 'slate',
-              nota: 0,
-              completado: false,
-              avance: 0,
-              leccionesTotal: 1,
-              leccionesCompletadas: 0,
-              activo: true
-            });
-          }
-        });
-
-        cursos_json = await enriquecerCursosConTipoCatalogo(admin, cursos_json);
-        await enriquecerConNotasModulos(admin, pByDni.dni_ce, diplomados_json, cursos_json);
-
-        const paymentStateDemo = derivePaymentStateForCredits({
-          pagos: rawPagos || [],
-          profile: pByDni,
-        });
-        const cuposDemo = parseCuposCreditosFromProfile(pByDni);
-
-        const eduminCredits = calculateEduminCredits({
-          paqueteAdquirido: pByDni.paquete_adquirido || 'COMPLETO',
-          cuotasPagadas: paymentStateDemo.cuotasPagadas,
-          cuotasTotales: paymentStateDemo.cuotasTotales,
-          tipoPago: paymentStateDemo.tipoPago,
-          diplomadosConsumidos: cuposDemo.diplomados.canjeados,
-          cursosConsumidos: filtrarCursosReales(cursos_json).length,
-          creditosExtraDiplomados: cuposDemo.diplomados.adicionales,
-          creditosExtraCursos: cuposDemo.cursos.adicionales,
-        });
-
-        const fotoPerfilDemo = await resolverFotoPerfil(admin, pByDni);
-
-        return NextResponse.json({
-          user: { id: pByDni.id, email: pByDni.email },
-          profile: {
-            ...pByDni,
-            foto_perfil: fotoPerfilDemo,
-            avatar_url: fotoPerfilDemo,
-            role: getPrimaryRoleFromProfile(pByDni),
-            cuotas_pagadas: paymentStateDemo.cuotasPagadas,
-            cuotas_totales: paymentStateDemo.cuotasTotales,
-            tipo_pago: paymentStateDemo.tipoPago,
-            diplomados_json,
-            cursos_json
-          },
-          pagos: parsedPagos,
-          rawPagos: rawPagos || [],
-          matriculas: [],
-          solicitudes: [],
-          releasedCredits: eduminCredits.diplomados.liberados,
-          availableCredits: eduminCredits.diplomados.disponibles,
-          eduminCredits
-        });
-      }
-
       return NextResponse.json({ error: 'No autorizado. Inicie sesión.' }, { status: 401 });
     }
 
