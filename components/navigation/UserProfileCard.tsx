@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { ChevronDown, ShieldCheck, GraduationCap, Check } from 'lucide-react';
+import { ChevronDown, ShieldCheck, GraduationCap, Check, ArrowRight } from 'lucide-react';
 import { useProfile } from '@/context/profile-context';
 
 interface UserProfileCardProps {
@@ -55,12 +55,14 @@ export function UserProfileCard({
         title="Ver mi perfil"
       >
         <div className="relative size-10 rounded-full bg-gradient-to-tr from-indigo-600 to-cyan-500 text-white font-extrabold flex items-center justify-center text-xs shadow-md ring-2 ring-indigo-400/30 shrink-0 overflow-hidden">
-          {fotoPerfil ? (
+          {cargando && !fotoPerfil && !iniciales ? (
+            <div className="w-full h-full bg-slate-800/80 animate-pulse flex items-center justify-center">
+              <div className="size-3.5 rounded-full bg-indigo-400/30 animate-ping" />
+            </div>
+          ) : fotoPerfil ? (
             <img src={fotoPerfil} alt="Foto de perfil" className="w-full h-full object-cover" />
           ) : iniciales ? (
             iniciales
-          ) : cargando ? (
-            <div className="size-4 rounded-full bg-white/30 animate-pulse" />
           ) : (
             'U'
           )}
@@ -99,12 +101,14 @@ export function UserProfileCard({
         title="Cambiar rol"
       >
         <div className="relative size-10 rounded-full bg-gradient-to-tr from-indigo-600 to-cyan-500 text-white font-extrabold flex items-center justify-center text-xs shadow-md ring-2 ring-indigo-400/30 shrink-0 overflow-hidden">
-          {fotoPerfil ? (
+          {cargando && !fotoPerfil && !iniciales ? (
+            <div className="w-full h-full bg-slate-800/80 animate-pulse flex items-center justify-center">
+              <div className="size-3.5 rounded-full bg-indigo-400/30 animate-ping" />
+            </div>
+          ) : fotoPerfil ? (
             <img src={fotoPerfil} alt="Foto de perfil" className="w-full h-full object-cover" />
           ) : iniciales ? (
             iniciales
-          ) : cargando ? (
-            <div className="size-4 rounded-full bg-white/30 animate-pulse" />
           ) : (
             'U'
           )}
@@ -160,14 +164,14 @@ export function UserProfileCard({
             <Link
               href="/dashboard"
               onClick={handleLinkClick}
-              className="flex items-center justify-between px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 transition-colors font-medium"
+              className="flex items-center justify-between px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 transition-colors font-medium group"
             >
               <div className="flex items-center gap-2">
-                <GraduationCap className="size-4 text-slate-400" />
-                <span>Ver como estudiante</span>
+                <GraduationCap className="size-4 text-slate-400 group-hover:text-emerald-400 transition-colors" />
+                <span>Estudiante</span>
               </div>
-              <span className="text-[10px] font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">
-                Ir →
+              <span className="flex items-center justify-center p-1 rounded-md text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 group-hover:bg-emerald-500/20 transition-all">
+                <ArrowRight className="size-3.5" />
               </span>
             </Link>
           )}
@@ -185,14 +189,14 @@ export function UserProfileCard({
             <Link
               href="/admin"
               onClick={handleLinkClick}
-              className="flex items-center justify-between px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 transition-colors font-medium mt-1"
+              className="flex items-center justify-between px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 transition-colors font-medium mt-1 group"
             >
               <div className="flex items-center gap-2">
-                <ShieldCheck className="size-4 text-slate-400" />
-                <span>Panel administrador</span>
+                <ShieldCheck className="size-4 text-slate-400 group-hover:text-indigo-400 transition-colors" />
+                <span>Administrador</span>
               </div>
-              <span className="text-[10px] font-bold text-indigo-400 bg-indigo-500/10 px-1.5 py-0.5 rounded border border-indigo-500/20">
-                Ir →
+              <span className="flex items-center justify-center p-1 rounded-md text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 group-hover:bg-indigo-500/20 transition-all">
+                <ArrowRight className="size-3.5" />
               </span>
             </Link>
           )}

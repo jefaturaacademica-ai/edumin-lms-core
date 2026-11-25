@@ -213,9 +213,11 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
-  const inicialN = nombres.trim().charAt(0) || 'E';
-  const inicialA = apellidos.trim().charAt(0) || 'D';
-  const iniciales = (inicialN + inicialA).toUpperCase();
+  const inicialN = nombres.trim().charAt(0);
+  const inicialA = apellidos.trim().charAt(0);
+  const iniciales = (inicialN || inicialA)
+    ? `${inicialN}${inicialA}`.toUpperCase()
+    : (cargando ? '' : 'U');
 
   return (
     <ProfileContext.Provider value={{

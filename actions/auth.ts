@@ -16,6 +16,7 @@ export type LoginState = {
   requiresRoleSelection?: boolean;
   userRoles?: UserRoleOption[];
   userName?: string;
+  userPhoto?: string | null;
 };
 
 export type UpdatePasswordState = {
@@ -23,8 +24,43 @@ export type UpdatePasswordState = {
 };
 
 const INVALID_CREDENTIALS: LoginState = {
-  error: "El documento de identidad o la contraseña no son válidos.",
+  error: "El usuario o la contraseña no son válidos.",
 };
+
+async function resolverFotoPerfil(admin: any, profile: any): Promise<string | null> {
+  if (!profile) return null;
+  let foto: string | null = profile.foto_perfil || profile.avatar_url || null;
+  if (foto) return foto;
+
+  const profileId = profile.id;
+  if (!profileId) return null;
+
+  try {
+    const { data: avatarFiles } = await admin.storage
+      .from('avatars')
+      .list(profileId)
+      .catch(() => ({ data: [] }));
+
+    if (avatarFiles && avatarFiles.length > 0) {
+      const avatarFile = avatarFiles.find((f: any) => f.name && f.name.includes('avatar')) || avatarFiles[0];
+      const { data: urlData } = admin.storage
+        .from('avatars')
+        .getPublicUrl(`${profileId}/${avatarFile.name}`);
+      if (urlData?.publicUrl) {
+        foto = `${urlData.publicUrl}?v=${Date.now()}`;
+        await admin
+          .from('profiles')
+          .update({ foto_perfil: foto, avatar_url: foto })
+          .eq('id', profileId)
+          .catch(() => {});
+      }
+    }
+  } catch (err) {
+    console.warn('Error resolviendo foto de perfil en storage:', err);
+  }
+
+  return foto;
+}
 
 export async function loginWithDni(
   _previousState: LoginState,
@@ -34,13 +70,13 @@ export async function loginWithDni(
   const password = formData.get("password")?.toString()?.trim();
 
   if (!dni || !password) {
-    return { error: "Ingresa tu documento y contraseña para continuar." };
+    return { error: "Ingresa tu usuario y contraseña para continuar." };
   }
 
   const admin = createAdminClient();
   const { data: profile, error: profileError } = await admin
     .from("profiles")
-    .select("id, email, numero_documento, tipo_documento, contrasena, roles, bloqueado, nombres, apellidos, paquete_adquirido, diplomados, cursos")
+    .select("id, email, numero_documento, tipo_documento, contrasena, roles, bloqueado, nombres, apellidos, paquete_adquirido, diplomados, cursos, foto_perfil, avatar_url")
     .eq("numero_documento", dni)
     .maybeSingle();
 
@@ -125,9 +161,11 @@ export async function loginWithDni(
     // Solo si tiene acceso dual (Administrador + Estudiante con matrícula) le sale el selector
     if (tienePerfilEstudiante) {
       const nombreCompleto = `${profile.nombres || ''} ${profile.apellidos || ''}`.trim() || 'Usuario';
+      const foto = await resolverFotoPerfil(admin, profile);
       return {
         requiresRoleSelection: true,
         userName: nombreCompleto,
+        userPhoto: foto,
         userRoles: [
           {
             id: 'estudiante',

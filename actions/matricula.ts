@@ -36,7 +36,7 @@ export async function matricularCurso(
     const admin = createAdminClient();
     let enrolledStudent:
       | {
-          dni_ce: string;
+          numero_documento: string;
           nombres: string;
           paquete_adquirido: string;
           cuotas_pagadas: number;
@@ -49,7 +49,7 @@ export async function matricularCurso(
     for (let attempt = 0; attempt < MAX_UPDATE_ATTEMPTS; attempt += 1) {
       const { data: profile, error: profileError } = await admin
         .from("profiles")
-        .select("id, roles, dni_ce, nombres, paquete_adquirido, cuotas_pagadas, cupos_creditos, diplomados, cursos")
+        .select("id, roles, numero_documento, nombres, paquete_adquirido, cuotas_pagadas, cupos_creditos, diplomados, cursos")
         .eq("id", user.id)
         .maybeSingle();
 
@@ -84,7 +84,7 @@ export async function matricularCurso(
         .from("profiles")
         .update({ cupos_creditos: nuevosCupos })
         .eq("id", profile.id)
-        .select("dni_ce, nombres, paquete_adquirido, cuotas_pagadas, cupos_creditos")
+        .select("numero_documento, nombres, paquete_adquirido, cuotas_pagadas, cupos_creditos")
         .maybeSingle();
 
       if (updateError) {
@@ -116,7 +116,8 @@ export async function matricularCurso(
             evento: "curso_matriculado",
             alumno: {
               nombre: enrolledStudent.nombres,
-              dni_ce: enrolledStudent.dni_ce,
+              dni_ce: enrolledStudent.numero_documento,
+              numero_documento: enrolledStudent.numero_documento,
               paquete: enrolledStudent.paquete_adquirido,
               cuotas_pagadas: enrolledStudent.cuotas_pagadas,
               cupos_creditos: enrolledStudent.cupos_creditos,
