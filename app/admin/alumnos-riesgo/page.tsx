@@ -47,7 +47,7 @@ export default function AlumnosRiesgoPage() {
             const cuotasPend = Math.max(0, 3 - (e.cuotas_pagadas || 1));
             return {
               id: e.id,
-              dni: e.dni_ce,
+              dni: e.numero_documento || e.dni_ce || '',
               nombre: `${e.nombres} ${e.apellidos}`,
               email: e.email,
               programa: e.paquete_adquirido ? `PAQUETE ${e.paquete_adquirido}` : 'DIPLOMADO OFICIAL',
@@ -155,6 +155,10 @@ export default function AlumnosRiesgoPage() {
     return coincideTexto && coincideMes;
   });
 
+  const totalAlumnos = estudiantes.length;
+  const conDeudaActiva = estudiantes.filter(e => e.cuotasPendientes > 0 && !e.bloqueado).length;
+  const bloqueadosSistema = estudiantes.filter(e => e.bloqueado).length;
+
   return (
     <div className="min-h-screen md:h-screen md:overflow-hidden bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col md:flex-row font-sans relative transition-colors">
       
@@ -196,7 +200,7 @@ export default function AlumnosRiesgoPage() {
                   <AlertTriangle className="size-5" />
                 </div>
               </div>
-              <h3 className="text-3xl font-black text-red-600 mt-3">14</h3>
+              <h3 className="text-3xl font-black text-red-600 mt-3">{cargando ? '...' : conDeudaActiva}</h3>
             </div>
             
             <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
@@ -206,7 +210,7 @@ export default function AlumnosRiesgoPage() {
                   <UserX className="size-5" />
                 </div>
               </div>
-              <h3 className="text-3xl font-black text-amber-600 mt-3">6</h3>
+              <h3 className="text-3xl font-black text-amber-600 mt-3">{cargando ? '...' : bloqueadosSistema}</h3>
             </div>
 
             <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
@@ -216,7 +220,7 @@ export default function AlumnosRiesgoPage() {
                   <Users className="size-5" />
                 </div>
               </div>
-              <h3 className="text-3xl font-black text-slate-900 mt-3">128</h3>
+              <h3 className="text-3xl font-black text-slate-900 mt-3">{cargando ? '...' : totalAlumnos}</h3>
             </div>
           </div>
 

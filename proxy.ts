@@ -62,23 +62,34 @@ export async function proxy(request: NextRequest) {
     return NextResponse.redirect(dashboardUrl);
   }
 
-  // RLS del proyecto sólo da lectura propia al estudiante. Este acceso ocurre
-  // tras validar el JWT y evita que DOCENTE quede bloqueado por esa política.
-  const admin = createAdminClient();
-  const { data: profile } = await admin
-    .from("profiles")
-    .select("roles, debe_cambiar_password")
-    .eq("id", user.id)
-    .maybeSingle();
+  try {
+    const admin = createAdminClient();
+    const { data: profile } = await admin
+      .from("profiles")
+      .select("roles, debe_cambiar_password")
+      .eq("id", user.id)
+      .maybeSingle();
 
-  const rolesObj = profile?.roles && typeof profile.roles === "object" ? (profile.roles as any) : null;
-  const isPrivilegedAdmin = Boolean(rolesObj?.administrativo);
+    const rolesObj = profile?.roles && typeof profile.roles === "object" ? (profile.roles as any) : null;
+    const adminRole = rolesObj?.administrativo;
+    const isPrivilegedAdmin = Boolean(adminRole);
 
-  // Si un estudiante o usuario sin privilegios intenta entrar a /admin, bloquear y redirigir al aula virtual
-  if (isAdminRoute && !isPrivilegedAdmin) {
-    const dashboardUrl = request.nextUrl.clone();
-    dashboardUrl.pathname = "/dashboard";
-    return NextResponse.redirect(dashboardUrl);
+    // Si un estudiante o usuario sin privilegios intenta entrar a /admin, bloquear y redirigir al aula virtual
+    if (isAdminRoute && !isPrivilegedAdmin) {
+      const dashboardUrl = request.nextUrl.clone();
+      dashboardUrl.pathname = "/dashboard";
+      return NextResponse.redirect(dashboardUrl);
+    }
+
+    // Proteger rutas exclusivas de Superadministrador (/admin/configuracion, /admin/auditoria)
+    const isSuperAdminRoute = pathname.startsWith("/admin/configuracion") || pathname.startsWith("/admin/auditoria");
+    if (isSuperAdminRoute && adminRole !== "SUPERADMIN") {
+      const adminHomeUrl = request.nextUrl.clone();
+      adminHomeUrl.pathname = "/admin";
+      return NextResponse.redirect(adminHomeUrl);
+    }
+  } catch (err) {
+    console.error("Error en validación de roles en proxy:", err);
   }
 
   return response;

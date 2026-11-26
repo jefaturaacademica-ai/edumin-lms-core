@@ -9,7 +9,7 @@ export async function GET() {
     // Obtener usuarios de profiles (roles duales directamente en profiles.roles)
     const { data: usuarios, error } = await admin
       .from('profiles')
-      .select('id, dni_ce, nombres, apellidos, email, roles, paquete_adquirido')
+      .select('id, numero_documento, tipo_documento, nombres, apellidos, email, roles, paquete_adquirido')
       .order('nombres', { ascending: true });
 
     if (error) {
@@ -47,6 +47,7 @@ export async function GET() {
 
       return {
         ...u,
+        dni_ce: u.numero_documento || u.dni_ce || '',
         role: getPrimaryRoleFromProfile(u),
         rolAdministrativo,
         rolAcademico,
@@ -105,7 +106,7 @@ export async function PATCH(request: Request) {
         roles: rolesPayload,
       })
       .eq('id', userId)
-      .select('id, dni_ce, nombres, apellidos, email, roles')
+      .select('id, numero_documento, tipo_documento, nombres, apellidos, email, roles')
       .single();
 
     if (error) {
@@ -136,6 +137,7 @@ export async function PATCH(request: Request) {
       success: true, 
       usuario: {
         ...updatedUser,
+        dni_ce: updatedUser.numero_documento || '',
         role: resolvedRole,
         rolAdministrativo: targetAdminRole || null,
         rolAcademico: targetAcadRole || null
