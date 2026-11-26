@@ -166,12 +166,6 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
       const supabase = createClient();
       const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
         if (event === 'SIGNED_OUT' || !session) {
-          setFotoPerfil(null);
-          setNombres('');
-          setApellidos('');
-          setDni('');
-          setPaqueteContratado('');
-          setRole('ESTUDIANTE');
           limpiarSesionLocal();
         } else if (event === 'SIGNED_IN') {
           limpiarSesionLocal();
@@ -217,7 +211,7 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
   const inicialA = apellidos.trim().charAt(0);
   const iniciales = (inicialN || inicialA)
     ? `${inicialN}${inicialA}`.toUpperCase()
-    : (cargando ? '' : 'U');
+    : '';
 
   return (
     <ProfileContext.Provider value={{

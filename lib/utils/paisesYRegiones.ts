@@ -99,8 +99,8 @@ export function parsearResidencia(rawResidencia?: string | null): {
   departamento: string;
   ciudad: string;
 } {
-  if (!rawResidencia) {
-    return { pais: 'Perú', departamento: 'Lima', ciudad: '' };
+  if (!rawResidencia || rawResidencia.trim() === '') {
+    return { pais: '', departamento: '', ciudad: '' };
   }
 
   const partes = String(rawResidencia)
@@ -131,25 +131,25 @@ export function parsearResidencia(rawResidencia?: string | null): {
     const texto = partes[0];
     const esPais = LISTA_PAISES.some(p => p.nombre.toLowerCase() === texto.toLowerCase());
     if (esPais) {
-      return { pais: texto, departamento: 'Lima', ciudad: '' };
+      return { pais: texto, departamento: '', ciudad: '' };
     }
     const esDep = DEPARTAMENTOS_PERU.some(d => d.toLowerCase() === texto.toLowerCase());
     if (esDep) {
       return { pais: 'Perú', departamento: texto, ciudad: texto };
     }
-    return { pais: 'Perú', departamento: 'Lima', ciudad: texto };
+    return { pais: 'Perú', departamento: '', ciudad: texto };
   }
 
-  return { pais: 'Perú', departamento: 'Lima', ciudad: '' };
+  return { pais: '', departamento: '', ciudad: '' };
 }
 
 /**
  * Empaqueta Ciudad, Departamento y País en una sola cadena limpia para guardar en la BD.
  */
 export function formatearResidenciaGuardar(pais: string, departamento: string, ciudad: string): string {
-  const p = pais?.trim() || 'Perú';
-  const d = departamento?.trim();
-  const c = ciudad?.trim();
+  const p = pais?.trim() || '';
+  const d = departamento?.trim() || '';
+  const c = ciudad?.trim() || '';
 
   const componentes = [c, d, p].filter(Boolean);
   return componentes.join(', ');

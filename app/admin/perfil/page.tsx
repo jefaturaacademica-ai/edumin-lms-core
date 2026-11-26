@@ -11,6 +11,7 @@ import { createBrowserClient } from '@supabase/ssr';
 import AdminSidebar from '@/components/admin/admin-sidebar';
 import { useTheme } from '@/context/theme-context';
 import { useProfile } from '@/context/profile-context';
+import { invalidateClientCache } from '@/lib/utils/clientCache';
 import { 
   LISTA_PAISES, 
   DEPARTAMENTOS_PERU, 
@@ -263,20 +264,21 @@ export default function AdminPerfilPage() {
     const residenciaFinal = formatearResidenciaGuardar(resPais, resDepartamento, resCiudad);
 
     try {
-      const { data: { user } } = await supabase.auth.getUser();
-      if (!user) throw new Error('Sesión no encontrada.');
-
-      const { error } = await supabase
-        .from('profiles')
-        .update({
-          telefono: celularFinal,
+      const res = await fetch('/api/dashboard/perfil', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'actualizar_contacto',
+          celular: celularFinal,
           residencia: residenciaFinal,
-          fecha_nacimiento: fechaNacimiento || null,
-          updated_at: new Date().toISOString()
+          fecha_nacimiento: fechaNacimiento || null
         })
-        .eq('id', user.id);
+      });
 
-      if (error) throw error;
+      if (!res.ok) {
+        const errJson = await res.json();
+        throw new Error(errJson.error || 'Error al guardar los datos.');
+      }
 
       setCelular(celularFinal);
       setResidencia(residenciaFinal);
@@ -287,6 +289,7 @@ export default function AdminPerfilPage() {
         residencia: residenciaFinal,
         fecha_nacimiento: fechaNacimiento || prev?.fecha_nacimiento
       }));
+      invalidateClientCache('/api/dashboard/me');
 
       setMensajeExito('Datos de perfil actualizados correctamente.');
       setModalEdicionAbierto(false);
@@ -583,7 +586,7 @@ export default function AdminPerfilPage() {
                       const raw = residencia || perfil?.residencia;
                       if (!raw) return 'No registrado';
                       const parsed = parsearResidencia(raw);
-                      const partes = Array.from(new Set([parsed.departamento, parsed.ciudad].filter(Boolean)));
+                      const partes = [parsed.departamento, parsed.ciudad].filter(Boolean);
                       return partes.length > 0 ? partes.join(' - ') : (parsed.pais ? 'No especificado' : 'No registrado');
                     })()}
                   </span>
@@ -694,10 +697,13 @@ export default function AdminPerfilPage() {
                         setResPais(nuevoP);
                         if (nuevoP === 'Perú' && !DEPARTAMENTOS_PERU.includes(resDepartamento)) {
                           setResDepartamento('Lima');
+                        } else if (!nuevoP) {
+                          setResDepartamento('');
                         }
                       }}
                       className={`w-full border rounded-xl px-3 py-2 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
                     >
+                      <option value="">Selecciona un país</option>
                       {LISTA_PAISES.map((p) => (
                         <option key={p.codigo} value={p.nombre}>
                           {p.nombre}
@@ -716,6 +722,7 @@ export default function AdminPerfilPage() {
                         onChange={(e) => setResDepartamento(e.target.value)}
                         className={`w-full border rounded-xl px-3 py-2 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
                       >
+                        <option value="">Selecciona un departamento</option>
                         {DEPARTAMENTOS_PERU.map((dep) => (
                           <option key={dep} value={dep}>{dep}</option>
                         ))}
@@ -725,7 +732,7 @@ export default function AdminPerfilPage() {
                         type="text"
                         value={resDepartamento}
                         onChange={(e) => setResDepartamento(e.target.value)}
-                        placeholder="Ej. Cundinamarca"
+                        placeholder={resPais ? "Ej. Cundinamarca" : "Selecciona primero un país"}
                         className={`w-full border rounded-xl px-3 py-2 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-600 ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
                       />
                     )}

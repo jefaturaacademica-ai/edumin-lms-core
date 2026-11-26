@@ -68,7 +68,7 @@ export function UserProfileCard({
           ) : iniciales ? (
             iniciales
           ) : (
-            'U'
+            ''
           )}
         </div>
         <div className="min-w-0 flex-1">
@@ -77,7 +77,7 @@ export function UserProfileCard({
             <div className="h-3.5 w-24 bg-white/20 rounded animate-pulse my-0.5" />
           ) : (
             <h4 className="text-xs font-bold text-white truncate group-hover:text-indigo-400 transition-colors">
-              {nombreParaMostrar || 'Mi Perfil'}
+              {nombreParaMostrar || 'Mi perfil'}
             </h4>
           )}
           {/* Fila 2: Rol del usuario */}

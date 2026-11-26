@@ -606,14 +606,16 @@ export function AnimatedLoginForm({ className = "" }: AnimatedLoginFormProps) {
         )}
 
         {/* Botón Principal de Acceso en Indigo Institucional */}
-        <button
-          className="w-full mt-2 py-3 px-6 rounded-xl text-sm font-bold text-white transition-colors duration-200 cursor-pointer shadow-lg disabled:cursor-not-allowed disabled:opacity-60 flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 border border-indigo-500 shadow-[0_6px_20px_rgba(79,70,229,0.35)]"
-          disabled={isPending}
-          type="submit"
-        >
-          {isPending && <LoaderCircle aria-hidden="true" className="size-4 animate-spin text-white" />}
-          {isPending ? "Verificando acceso..." : "Ingresar al aula virtual"}
-        </button>
+        <div className="pt-2">
+          <button
+            className="w-full h-12 py-3 px-6 rounded-xl text-sm font-bold text-white transition-colors duration-200 cursor-pointer shadow-lg disabled:cursor-not-allowed disabled:opacity-60 flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 border border-indigo-500 shadow-[0_6px_20px_rgba(79,70,229,0.35)]"
+            disabled={isPending}
+            type="submit"
+          >
+            {isPending && <LoaderCircle aria-hidden="true" className="size-4 animate-spin text-white" />}
+            {isPending ? "Verificando acceso..." : "Ingresar al aula virtual"}
+          </button>
+        </div>
       </form>
     </div>
   );

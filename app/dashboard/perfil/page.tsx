@@ -623,7 +623,7 @@ export default function PerfilEstudiante() {
                   {(() => {
                     if (!perfil?.residencia) return 'No registrado';
                     const parsed = parsearResidencia(perfil.residencia);
-                    const partes = Array.from(new Set([parsed.departamento, parsed.ciudad].filter(Boolean)));
+                    const partes = [parsed.departamento, parsed.ciudad].filter(Boolean);
                     return partes.length > 0 ? partes.join(' - ') : (parsed.pais ? 'No especificado' : 'No registrado');
                   })()}
                 </span>
@@ -884,10 +884,13 @@ export default function PerfilEstudiante() {
                               setResPais(nuevoP);
                               if (nuevoP === 'Perú' && !DEPARTAMENTOS_PERU.includes(resDepartamento)) {
                                 setResDepartamento('Lima');
+                              } else if (!nuevoP) {
+                                setResDepartamento('');
                               }
                             }}
                             className={`w-full border rounded-xl px-3 py-2 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-600 cursor-pointer ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
                           >
+                            <option value="">Selecciona un país</option>
                             {LISTA_PAISES.map((p) => (
                               <option key={p.codigo} value={p.nombre}>
                                 {p.nombre}
@@ -906,6 +909,7 @@ export default function PerfilEstudiante() {
                               onChange={(e) => setResDepartamento(e.target.value)}
                               className={`w-full border rounded-xl px-3 py-2 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-600 cursor-pointer ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
                             >
+                              <option value="">Selecciona un departamento</option>
                               {DEPARTAMENTOS_PERU.map((dep) => (
                                 <option key={dep} value={dep}>{dep}</option>
                               ))}
@@ -915,7 +919,7 @@ export default function PerfilEstudiante() {
                               type="text"
                               value={resDepartamento}
                               onChange={(e) => setResDepartamento(e.target.value)}
-                              placeholder="Ej. Cundinamarca"
+                              placeholder={resPais ? "Ej. Cundinamarca" : "Selecciona primero un país"}
                               className={`w-full border rounded-xl px-3 py-2 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-600 ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
                             />
                           )}
