@@ -15,7 +15,7 @@ import { calcularFechasVencimientoPorDefecto } from '@/lib/utils/fechasCuotas';
 
 async function resolverFotoPerfil(admin: any, profile: any): Promise<string | null> {
   if (!profile) return null;
-  let foto: string | null = profile.foto_perfil || profile.avatar_url || null;
+  let foto: string | null = profile.foto_perfil || null;
   if (foto) return foto;
 
   const profileId = profile.id;
@@ -56,7 +56,7 @@ async function resolverFotoPerfil(admin: any, profile: any): Promise<string | nu
     if (foto) {
       await admin
         .from('profiles')
-        .update({ foto_perfil: foto, avatar_url: foto })
+        .update({ foto_perfil: foto })
         .eq('id', profileId)
         .catch(() => {});
     }
@@ -73,18 +73,29 @@ function parseCreditoRow(pag: any) {
   const comprobante = pag.comprobante || undefined;
 
   if (typeof pag.metodo === 'string' && pag.metodo.startsWith('CARGO_EXTRA|')) {
-    const concepto = pag.metodo.replace('CARGO_EXTRA|', '');
+    const rawContent = pag.metodo.replace('CARGO_EXTRA|', '');
+    let concepto = rawContent;
+    let extraRecibo = nro_recibo;
+    let extraOperacion = nro_operacion;
+    if (rawContent.startsWith('{')) {
+      try {
+        const parsedCargo = JSON.parse(rawContent);
+        concepto = parsedCargo.concepto || concepto;
+        extraRecibo = parsedCargo.nro_recibo || extraRecibo;
+        extraOperacion = parsedCargo.nro_operacion || extraOperacion;
+      } catch {}
+    }
     return {
       id: pag.id,
       profile_id: pag.profile_id,
       dni_ce: pag.dni_ce,
       is_cargo_extra: true,
       concepto,
-      nro_cuota: `Cargo Extra (${concepto})`,
+      nro_cuota: `Cargo extra (${concepto})`,
       num_credito: 99,
-      nro_recibo,
-      nro_operacion,
-      comprobante,
+      nro_recibo: extraRecibo,
+      nro_operacion: extraOperacion,
+      comprobante: extraRecibo || comprobante,
       monto: Number(pag.monto || 0),
       metodo: 'Yape / Plin',
       estado: pag.estado || 'APROBADO',
@@ -549,7 +560,6 @@ export async function GET() {
       profile: {
         ...profile,
         foto_perfil: fotoPerfilAutenticado,
-        avatar_url: fotoPerfilAutenticado,
         role: getPrimaryRoleFromProfile(profile),
         cuotas_pagadas: paymentState.cuotasPagadas,
         cuotas_totales: paymentState.cuotasTotales,

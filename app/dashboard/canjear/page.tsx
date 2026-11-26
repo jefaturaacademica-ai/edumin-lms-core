@@ -17,6 +17,7 @@ import {
   CATALOGO_CURSOS 
 } from '@/lib/data/catalogoGeneral';
 import { ALL_DIPLOMADOS } from '@/lib/data/diplomadosData';
+import { StudentPageHeader } from '@/components/dashboard/StudentPageHeader';
 import { getClientCachedData, fetchWithClientCache, invalidateClientCache } from '@/lib/utils/clientCache';
 
 function normalizarTexto(texto: string): string {
@@ -481,12 +482,15 @@ export default function CanjearBeneficiosPage() {
   }
 
   return (
-    <main className="min-h-screen bg-slate-50 dark:bg-slate-950 p-4 sm:p-8 lg:p-12 text-slate-900 dark:text-slate-100 pb-24 transition-colors">
-      <div className="max-w-6xl mx-auto space-y-6">
+    <main className="min-h-screen bg-slate-50 dark:bg-slate-950 p-6 sm:p-10 lg:p-16 text-slate-900 dark:text-slate-100 pb-24 transition-colors duration-200">
+      <div className="max-w-7xl mx-auto space-y-6 sm:space-y-8">
         
-        {/* Cabecera compacta: Volver + Título + KPIs de créditos directamente sobre el fondo */}
-        <header className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-          <div className="flex flex-wrap items-center gap-3">
+        {/* Cabecera Unificada */}
+        <StudentPageHeader
+          icon={Sparkles}
+          title="Mis créditos EDUMIN"
+        >
+          <div className="flex flex-wrap items-center gap-2.5">
             <Link 
               href="/dashboard"
               className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-800 shadow-xs transition cursor-pointer shrink-0"
@@ -494,13 +498,7 @@ export default function CanjearBeneficiosPage() {
               <ArrowLeft className="size-4" /> Volver
             </Link>
 
-            <h1 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 dark:text-white">
-              Mis créditos EDUMIN
-            </h1>
-          </div>
-
-          {/* KPIs de créditos en una sola fila */}
-          <div className="flex items-center gap-2 sm:gap-2.5 overflow-x-auto no-scrollbar shrink-0">
+            {/* KPIs de créditos en una sola fila */}
             <div className="bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200/80 dark:border-indigo-800 px-3.5 py-2 rounded-xl flex items-center gap-2.5 shrink-0 shadow-xs">
               <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 whitespace-nowrap">
                 Créditos diplomados
@@ -528,7 +526,7 @@ export default function CanjearBeneficiosPage() {
               </span>
             </div>
           </div>
-        </header>
+        </StudentPageHeader>
 
         {/* PESTAÑAS DE NAVEGACIÓN */}
         <div className="flex items-center gap-2 overflow-x-auto max-w-full touch-pan-x pb-2 pr-4 border-b border-slate-200 dark:border-slate-800 no-scrollbar shrink-0">

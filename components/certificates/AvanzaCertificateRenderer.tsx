@@ -634,6 +634,9 @@ export interface AvanzaCertificateProps {
   onSeleccionarElemento?: (campo: keyof DisenoCoordenadas) => void;
 }
 
+// Cache en memoria para URLs de QR generados (evita parpadeos y re-cálculos)
+const QR_CACHE = new Map<string, string>();
+
 export default function AvanzaCertificateRenderer({
   tipo,
   estudiante,
@@ -697,12 +700,19 @@ export default function AvanzaCertificateRenderer({
     qr: { ...baseDefaults.qr, ...(diseno?.qr || {}) }
   };
 
-  const [qrDataUrl, setQrDataUrl] = useState<string | null>(null);
+  const [qrDataUrl, setQrDataUrl] = useState<string | null>(() => {
+    if (!codigo || codigo === 'EDUMIN-BLOQUEADO') return null;
+    return QR_CACHE.get(codigo) || null;
+  });
 
   useEffect(() => {
     const qrBloqueado = codigo === 'EDUMIN-BLOQUEADO';
     const mostrarQr = !qrBloqueado && Boolean(cfg.qr.visible);
     if (!mostrarQr || !codigo) return;
+    if (QR_CACHE.has(codigo)) {
+      setQrDataUrl(QR_CACHE.get(codigo)!);
+      return;
+    }
     try {
       const qrTargetUrl = generarUrlQRValidacion(codigo);
       QRCode.toDataURL(qrTargetUrl, {
@@ -711,6 +721,7 @@ export default function AvanzaCertificateRenderer({
         errorCorrectionLevel: 'M',
         color: { dark: '#0f172a', light: '#ffffff' }
       }).then(url => {
+        QR_CACHE.set(codigo, url);
         setQrDataUrl(url);
       }).catch(err => {
         console.error('Error generando QR oficial:', err);
@@ -923,7 +934,9 @@ export default function AvanzaCertificateRenderer({
   return (
     <div 
       ref={containerRef}
-      className={`relative w-full ${a4AspectClass} bg-white text-slate-900 select-none overflow-hidden rounded-xl shadow-2xl transition-all duration-300 border border-slate-200/80 ${className}`}
+      className={`relative w-full ${a4AspectClass} bg-white text-slate-900 select-none overflow-hidden rounded-xl shadow-2xl ${
+        modoArrastrable ? 'transition-all duration-300' : ''
+      } border border-slate-200/80 ${className}`}
       style={{
         containerType: 'inline-size',
         containerName: 'certificadoA4',
@@ -933,11 +946,6 @@ export default function AvanzaCertificateRenderer({
         backgroundRepeat: 'no-repeat'
       }}
     >
-      {/* Carga e inyección explícita de Google Fonts para garantizar Outfit, Playfair, Cinzel, Cormorant, Lora, etc. */}
-      <link 
-        rel="stylesheet" 
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" 
-      />
       {/* Guía si no tiene fondo */}
       {!bgImg && (
         <div className="absolute inset-0 flex flex-col items-center justify-between p-6 pointer-events-none bg-radial from-slate-50 via-white to-slate-100/60 border-2 border-dashed border-slate-300 rounded-xl m-2">
@@ -969,7 +977,7 @@ export default function AvanzaCertificateRenderer({
             e.stopPropagation();
             if (onSeleccionarElemento) onSeleccionarElemento('estudiante');
           }}
-          className={`absolute z-10 transition-all duration-150 flex items-center ${
+          className={`absolute z-10 ${modoArrastrable ? 'transition-all duration-150' : ''} flex items-center ${
             modoArrastrable ? 'cursor-grab active:cursor-grabbing pointer-events-auto' : 'pointer-events-none'
           } ${
             cfg.estudiante.alineacion === 'center' ? 'justify-center text-center' :
@@ -1014,7 +1022,7 @@ export default function AvanzaCertificateRenderer({
             e.stopPropagation();
             if (onSeleccionarElemento) onSeleccionarElemento('programa');
           }}
-          className={`absolute z-10 transition-all duration-150 flex flex-col justify-center ${
+          className={`absolute z-10 ${modoArrastrable ? 'transition-all duration-150' : ''} flex flex-col justify-center ${
             modoArrastrable ? 'cursor-grab active:cursor-grabbing pointer-events-auto' : 'pointer-events-none'
           } ${
             cfg.programa.alineacion === 'center' ? 'items-center text-center' :
@@ -1061,7 +1069,7 @@ export default function AvanzaCertificateRenderer({
             e.stopPropagation();
             if (onSeleccionarElemento) onSeleccionarElemento('horas');
           }}
-          className={`absolute z-10 transition-all duration-150 flex items-center ${
+          className={`absolute z-10 ${modoArrastrable ? 'transition-all duration-150' : ''} flex items-center ${
             modoArrastrable ? 'cursor-grab active:cursor-grabbing pointer-events-auto' : 'pointer-events-none'
           } ${
             cfg.horas.alineacion === 'center' ? 'justify-center text-center' :
@@ -1107,7 +1115,7 @@ export default function AvanzaCertificateRenderer({
             e.stopPropagation();
             if (onSeleccionarElemento) onSeleccionarElemento('creditos');
           }}
-          className={`absolute z-10 transition-all duration-150 flex items-center ${
+          className={`absolute z-10 ${modoArrastrable ? 'transition-all duration-150' : ''} flex items-center ${
             modoArrastrable ? 'cursor-grab active:cursor-grabbing pointer-events-auto' : 'pointer-events-none'
           } ${
             cfg.creditos.alineacion === 'center' ? 'justify-center text-center' :
@@ -1153,7 +1161,7 @@ export default function AvanzaCertificateRenderer({
             e.stopPropagation();
             if (onSeleccionarElemento) onSeleccionarElemento('qr');
           }}
-          className={`absolute z-20 flex flex-col items-center justify-center bg-white p-[0.35cqw] rounded-[0.45cqw] border border-slate-200/80 aspect-square transition-all duration-150 ${
+          className={`absolute z-20 flex flex-col items-center justify-center bg-white p-[0.35cqw] rounded-[0.45cqw] border border-slate-200/80 aspect-square ${modoArrastrable ? 'transition-all duration-150' : ''} ${
             modoArrastrable ? 'cursor-grab active:cursor-grabbing pointer-events-auto' : 'pointer-events-auto'
           } ${
             elementoActivo === 'qr' ? 'outline outline-2 outline-indigo-500 outline-offset-4 rounded-lg bg-indigo-500/[0.04]' : ''
@@ -1190,7 +1198,7 @@ export default function AvanzaCertificateRenderer({
             e.stopPropagation();
             if (onSeleccionarElemento) onSeleccionarElemento('fecha');
           }}
-          className={`absolute z-20 transition-all duration-150 flex items-center ${
+          className={`absolute z-20 ${modoArrastrable ? 'transition-all duration-150' : ''} flex items-center ${
             modoArrastrable ? 'cursor-grab active:cursor-grabbing pointer-events-auto' : 'pointer-events-none'
           } ${
             cfg.fecha.alineacion === 'center' ? 'justify-center text-center' :
@@ -1236,7 +1244,7 @@ export default function AvanzaCertificateRenderer({
             e.stopPropagation();
             if (onSeleccionarElemento) onSeleccionarElemento('codigo');
           }}
-          className={`absolute z-20 transition-all duration-150 flex items-center ${
+          className={`absolute z-20 ${modoArrastrable ? 'transition-all duration-150' : ''} flex items-center ${
             modoArrastrable ? 'cursor-grab active:cursor-grabbing pointer-events-auto' : 'pointer-events-none'
           } ${
             cfg.codigo.alineacion === 'center' ? 'justify-center text-center' :

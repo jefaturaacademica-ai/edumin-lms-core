@@ -445,7 +445,10 @@ export function AnimatedLoginForm({ className = "" }: AnimatedLoginFormProps) {
               <button
                 key={rol.id}
                 type="button"
-                onClick={() => router.push(rol.ruta)}
+                onClick={() => {
+                  document.cookie = `edumin_active_view=${esEstudiante ? 'estudiante' : 'admin'}; path=/; max-age=31536000; SameSite=Lax`;
+                  router.push(rol.ruta);
+                }}
                 className="w-full group bg-slate-900/90 hover:bg-slate-800/90 border border-slate-800 hover:border-indigo-500/50 p-4 rounded-2xl transition-all duration-200 shadow-lg cursor-pointer flex items-center justify-between text-left"
               >
                 <div className="flex items-center gap-3.5">
@@ -604,7 +607,7 @@ export function AnimatedLoginForm({ className = "" }: AnimatedLoginFormProps) {
 
         {/* Botón Principal de Acceso en Indigo Institucional */}
         <button
-          className="w-full mt-2 py-3 px-6 rounded-xl text-sm font-bold text-white transition-all duration-200 cursor-pointer shadow-lg disabled:cursor-not-allowed disabled:opacity-60 flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 border border-indigo-500 shadow-[0_6px_20px_rgba(79,70,229,0.35)] hover:-translate-y-0.5"
+          className="w-full mt-2 py-3 px-6 rounded-xl text-sm font-bold text-white transition-colors duration-200 cursor-pointer shadow-lg disabled:cursor-not-allowed disabled:opacity-60 flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 border border-indigo-500 shadow-[0_6px_20px_rgba(79,70,229,0.35)]"
           disabled={isPending}
           type="submit"
         >

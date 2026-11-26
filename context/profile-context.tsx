@@ -84,7 +84,7 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
         const paq = profile.paquete_adquirido || 'PROGRAMA FULL';
         const rolesObj = profile.roles && typeof profile.roles === 'object' ? profile.roles : null;
         const rol = rolesObj?.administrativo || rolesObj?.academico || profile.role || 'ESTUDIANTE';
-        const foto = profile.foto_perfil || profile.avatar_url || null;
+        const foto = profile.foto_perfil || null;
 
         // Si el DNI en sesión es distinto al guardado previamente, limpiar datos obsoletos de foto
         const dniPrevio = localStorage.getItem('edumin_dni');

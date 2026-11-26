@@ -214,16 +214,57 @@ export default function PagosEstudiantePage() {
   }
 
   return (
-    <main className={`min-h-screen p-6 sm:p-10 lg:p-16 relative pb-28 transition-colors ${
+    <main className={`min-h-screen p-6 sm:p-10 lg:p-16 relative pb-28 transition-colors duration-200 ${
       esOscuro ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'
     }`}>
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto space-y-6 sm:space-y-8">
         
         {/* Encabezado unificado */}
         <StudentPageHeader
           icon={Wallet}
           title="Mis pagos"
         />
+
+        {/* PESTAÑAS DE NAVEGACIÓN (CRONOGRAMA VS HISTORIAL) */}
+        <div className="flex items-center gap-2 overflow-x-auto max-w-full touch-pan-x pb-2 pr-4 border-b border-slate-200 dark:border-slate-800 no-scrollbar shrink-0">
+          <button
+            onClick={() => setPestanaActiva('cronograma')}
+            className={`px-4 py-2.5 rounded-2xl text-xs font-bold border transition-colors flex items-center gap-2 cursor-pointer whitespace-nowrap shrink-0 ${
+              pestanaActiva === 'cronograma'
+                ? 'bg-indigo-600 text-white border-transparent shadow-md shadow-indigo-600/20'
+                : (esOscuro ? 'bg-slate-900 text-slate-400 border-slate-800 hover:text-white hover:bg-slate-800' : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-100')
+            }`}
+          >
+            <Calendar className="w-3.5 h-3.5 shrink-0" />
+            <span>Cronograma de pagos</span>
+            <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
+              pestanaActiva === 'cronograma'
+                ? 'bg-white/20 text-white'
+                : (esOscuro ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-700')
+            }`}>
+              {cronogramaActual.length}
+            </span>
+          </button>
+
+          <button
+            onClick={() => setPestanaActiva('historial')}
+            className={`px-4 py-2.5 rounded-2xl text-xs font-bold border transition-colors flex items-center gap-2 cursor-pointer whitespace-nowrap shrink-0 ${
+              pestanaActiva === 'historial'
+                ? 'bg-indigo-600 text-white border-transparent shadow-md shadow-indigo-600/20'
+                : (esOscuro ? 'bg-slate-900 text-slate-400 border-slate-800 hover:text-white hover:bg-slate-800' : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-100')
+            }`}
+          >
+            <FileText className="w-3.5 h-3.5 shrink-0" />
+            <span>Comprobantes de pago</span>
+            <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
+              pestanaActiva === 'historial'
+                ? 'bg-white/20 text-white'
+                : (esOscuro ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-700')
+            }`}>
+              {historialComprobantes.length}
+            </span>
+          </button>
+        </div>
 
         {/* BANNERS DE ESTADO FINANCIERO REAL */}
         {modoPrueba === 'al_dia' && (
@@ -324,47 +365,6 @@ export default function PagosEstudiantePage() {
             </div>
           </div>
         )}
-
-        {/* PESTAÑAS DE NAVEGACIÓN (CRONOGRAMA VS HISTORIAL) */}
-        <div className="flex items-center gap-2 overflow-x-auto max-w-full touch-pan-x pb-2 pr-4 border-b border-slate-200 dark:border-slate-800 no-scrollbar shrink-0 mb-6">
-          <button
-            onClick={() => setPestanaActiva('cronograma')}
-            className={`px-4 py-2.5 rounded-2xl text-xs font-bold border transition-colors flex items-center gap-2 cursor-pointer whitespace-nowrap shrink-0 ${
-              pestanaActiva === 'cronograma'
-                ? 'bg-indigo-600 text-white border-transparent shadow-md shadow-indigo-600/20'
-                : (esOscuro ? 'bg-slate-900 text-slate-400 border-slate-800 hover:text-white hover:bg-slate-800' : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-100')
-            }`}
-          >
-            <Calendar className="w-3.5 h-3.5 shrink-0" />
-            <span>Cronograma de pagos</span>
-            <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
-              pestanaActiva === 'cronograma'
-                ? 'bg-white/20 text-white'
-                : (esOscuro ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-700')
-            }`}>
-              {cronogramaActual.length}
-            </span>
-          </button>
-
-          <button
-            onClick={() => setPestanaActiva('historial')}
-            className={`px-4 py-2.5 rounded-2xl text-xs font-bold border transition-colors flex items-center gap-2 cursor-pointer whitespace-nowrap shrink-0 ${
-              pestanaActiva === 'historial'
-                ? 'bg-indigo-600 text-white border-transparent shadow-md shadow-indigo-600/20'
-                : (esOscuro ? 'bg-slate-900 text-slate-400 border-slate-800 hover:text-white hover:bg-slate-800' : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-100')
-            }`}
-          >
-            <FileText className="w-3.5 h-3.5 shrink-0" />
-            <span>Comprobantes de pago</span>
-            <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
-              pestanaActiva === 'historial'
-                ? 'bg-white/20 text-white'
-                : (esOscuro ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-700')
-            }`}>
-              {historialComprobantes.length}
-            </span>
-          </button>
-        </div>
 
         {/* TABLA DE CRONOGRAMA */}
         {pestanaActiva === 'cronograma' && (

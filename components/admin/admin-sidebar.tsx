@@ -208,28 +208,28 @@ export default function AdminSidebar() {
           mobileOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="p-4 border-b border-white/5 shrink-0 flex items-center justify-between">
-          <Link href="/admin" onClick={() => setMobileOpen(false)} className="flex items-center">
+        <div className="px-4 py-2.5 border-b border-white/5 shrink-0 flex items-center justify-between">
+          <Link href="/admin/catalogo" onClick={() => setMobileOpen(false)} className="flex items-center">
             <img 
               src="/logo-blanco.png" 
               alt="Edumin Logo" 
-              className="h-9 w-auto object-contain" 
+              className="h-8 w-auto object-contain" 
             />
           </Link>
           <button
             onClick={() => setMobileOpen(false)}
-            className="p-2 rounded-xl text-slate-400 hover:bg-white/10 hover:text-white transition-colors cursor-pointer"
+            className="p-1.5 rounded-xl text-slate-400 hover:bg-white/10 hover:text-white transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Tarjeta de Usuario Admin en Móvil */}
-        <div className="p-4 border-b border-white/5 shrink-0">
+        <div className="p-2.5 border-b border-white/5 shrink-0">
           <UserProfileCard currentView="admin" onNavigate={() => setMobileOpen(false)} />
         </div>
 
-        <nav className="flex-1 py-3 px-3 space-y-4 overflow-y-auto sidebar-scroll">
+        <nav className="flex-1 p-2.5 space-y-3 overflow-y-auto sidebar-scroll">
           {navGroupsFiltrados.map((grupo) => (
             <div key={grupo.categoria} className="space-y-1">
               <div className="px-3 pt-1 pb-1 text-[10px] font-black uppercase tracking-wider text-slate-400">
@@ -284,23 +284,23 @@ export default function AdminSidebar() {
       {/* Sidebar Fijo Desktop */}
       <aside className="w-64 h-screen bg-slate-950 text-slate-300 flex flex-col hidden md:flex shrink-0 z-20 border-r border-slate-900 sticky top-0">
         {/* Header Logo Desktop */}
-        <div className="p-5 flex items-center justify-start border-b border-white/5 shrink-0">
-          <Link href="/admin" className="flex items-center">
+        <div className="px-4 py-3 flex items-center justify-start border-b border-white/5 shrink-0">
+          <Link href="/admin/catalogo" className="flex items-center">
             <img 
               src="/logo-blanco.png" 
               alt="Edumin Logo" 
-              className="h-12 w-auto object-contain" 
+              className="h-9 w-auto object-contain" 
             />
           </Link>
         </div>
 
         {/* Tarjeta Admin Desktop */}
-        <div className="p-4 border-b border-white/5 shrink-0">
+        <div className="p-2.5 border-b border-white/5 shrink-0">
           <UserProfileCard currentView="admin" />
         </div>
         
         {/* Navegación Desktop Categorizada */}
-        <nav className="flex-1 py-4 px-3 space-y-4 overflow-y-auto sidebar-scroll">
+        <nav className="flex-1 p-2.5 space-y-3 overflow-y-auto sidebar-scroll">
           {navGroupsFiltrados.map((grupo) => (
             <div key={grupo.categoria} className="space-y-1">
               <div className="px-3 pt-1 pb-1 text-[10px] font-black uppercase tracking-wider text-slate-400/80 dark:text-slate-500">

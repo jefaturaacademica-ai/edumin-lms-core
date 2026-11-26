@@ -46,17 +46,6 @@ export function useTabSlug<T extends string>(
       setActiveTabState(tabFromUrl);
     }
 
-    // Actualizar la URL de forma silenciosa para reflejar la pestaña actual
-    try {
-      const url = new URL(window.location.href);
-      if (!url.searchParams.has(paramKey)) {
-        url.searchParams.set(paramKey, tabFromUrl);
-        window.history.replaceState(null, '', url.pathname + url.search + url.hash);
-      }
-    } catch {
-      // Ignorar en entornos restringidos
-    }
-
     isMountedRef.current = true;
 
     // Escuchar eventos de navegación del navegador (Atrás / Adelante)
@@ -69,7 +58,7 @@ export function useTabSlug<T extends string>(
     return () => {
       window.removeEventListener('popstate', handlePopState);
     };
-  }, [getTabFromUrl, paramKey]);
+  }, [getTabFromUrl]);
 
   // Modificador de pestaña que actualiza tanto el estado como la URL en vivo
   const setActiveTab = useCallback(
@@ -80,17 +69,23 @@ export function useTabSlug<T extends string>(
 
       try {
         const url = new URL(window.location.href);
-        url.searchParams.set(paramKey, newTab);
+        if (newTab === defaultTab) {
+          url.searchParams.delete(paramKey);
+        } else {
+          url.searchParams.set(paramKey, newTab);
+        }
         // Limpiar hash si coincidía con una pestaña anterior
         if (url.hash) {
           url.hash = '';
         }
-        window.history.replaceState(null, '', url.pathname + url.search + url.hash);
+        const newSearch = url.searchParams.toString();
+        const newPath = url.pathname + (newSearch ? `?${newSearch}` : '') + url.hash;
+        window.history.replaceState(null, '', newPath);
       } catch (err) {
         console.error('Error al actualizar el slug de la pestaña en la URL:', err);
       }
     },
-    [paramKey]
+    [defaultTab, paramKey]
   );
 
   return [activeTab, setActiveTab];

@@ -18,6 +18,7 @@ import Ficha360Modal from '@/components/admin/ficha-360-modal';
 import { EstudianteCompleto } from '@/lib/data/mockStudents';
 import { PaqueteDefinicion, PAQUETES_DEFAULT } from '@/lib/types/paquetes';
 import { getClientCachedData, fetchWithClientCache } from '@/lib/utils/clientCache';
+import { LISTA_PAISES, formatearCelularGuardar } from '@/lib/utils/paisesYRegiones';
 
 const DIPLOMADOS_EDUMIN = [
   "DERECHO MINERO",
@@ -355,6 +356,7 @@ export default function AdminEstudiantesPage() {
   const [nuevoNombres, setNuevoNombres] = useState('');
   const [nuevoApellidos, setNuevoApellidos] = useState('');
   const [nuevoEmail, setNuevoEmail] = useState('');
+  const [nuevoCodigoPais, setNuevoCodigoPais] = useState('+51');
   const [nuevoTelefono, setNuevoTelefono] = useState('');
   const [nuevoFechaNacimiento, setNuevoFechaNacimiento] = useState('');
   const [paquetesDisponibles, setPaquetesDisponibles] = useState<Record<string, PaqueteDefinicion>>(PAQUETES_DEFAULT);
@@ -512,7 +514,7 @@ export default function AdminEstudiantesPage() {
           nombres: nuevoNombres.trim(),
           apellidos: nuevoApellidos.trim(),
           email: nuevoEmail.trim(),
-          telefono: nuevoTelefono.trim(),
+          telefono: nuevoTelefono.trim() ? formatearCelularGuardar(nuevoCodigoPais, nuevoTelefono) : '',
           fecha_nacimiento: nuevoFechaNacimiento ? nuevoFechaNacimiento.trim() : null,
           paquete_adquirido: nuevoPaquete,
           tipo_pago: nuevoTipoPago,
@@ -593,7 +595,7 @@ export default function AdminEstudiantesPage() {
     setMensaje(null);
     try {
       const nroReciboFinal = datosExtraParam?.nro_recibo || comprobante || siguienteRecibo || 'REC-2026-00001';
-      const nroOperacionFinal = datosExtraParam?.nro_operacion || (metodo === 'Efectivo en Caja' ? 'N/A' : (comprobante || nroReciboFinal));
+      const nroOperacionFinal = datosExtraParam?.nro_operacion?.trim() ? datosExtraParam.nro_operacion.trim() : (metodo === 'Efectivo en Caja' ? 'N/A' : null);
 
       const payload: any = {
         dni_ce: alumnoSeleccionado.dni_ce,
@@ -1154,15 +1156,28 @@ export default function AdminEstudiantesPage() {
                       <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                         Teléfono / WhatsApp (opcional)
                       </label>
-                      <div className="relative">
-                        <Phone className="w-4 h-4 text-slate-400 absolute left-3 top-3 pointer-events-none" />
-                        <input 
-                          type="text" 
-                          placeholder="+51 987654321"
-                          value={nuevoTelefono}
-                          onChange={(e) => setNuevoTelefono(e.target.value)}
-                          className="w-full pl-9 pr-3 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-600"
-                        />
+                      <div className="flex gap-2">
+                        <select
+                          value={nuevoCodigoPais}
+                          onChange={(e) => setNuevoCodigoPais(e.target.value)}
+                          className="w-32 px-2 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer shrink-0"
+                        >
+                          {LISTA_PAISES.map((p) => (
+                            <option key={`${p.codigo}-${p.dialCode}`} value={p.dialCode}>
+                              {p.codigo} ({p.dialCode})
+                            </option>
+                          ))}
+                        </select>
+                        <div className="relative flex-1 min-w-0">
+                          <Phone className="w-4 h-4 text-slate-400 absolute left-3 top-3 pointer-events-none" />
+                          <input 
+                            type="tel" 
+                            placeholder="987654321"
+                            value={nuevoTelefono}
+                            onChange={(e) => setNuevoTelefono(e.target.value)}
+                            className="w-full pl-9 pr-3 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                          />
+                        </div>
                       </div>
                     </div>
 

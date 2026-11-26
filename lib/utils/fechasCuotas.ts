@@ -8,6 +8,8 @@
  * - Cuota N: (N - 1) meses después de la Cuota 1.
  */
 
+import { formatearFechaSlash } from './paisesYRegiones';
+
 export function sumarMeses(fecha: Date, meses: number): Date {
   const d = new Date(fecha.getTime());
   const diaOriginal = d.getDate();
@@ -26,23 +28,8 @@ export function formatearFechaISO(fecha: Date): string {
   return `${anio}-${mes}-${dia}`;
 }
 
-export function formatearFechaVisual(fechaStr: string | null | undefined): string {
-  if (!fechaStr) return '-';
-  // Si viene en formato YYYY-MM-DD
-  const partes = String(fechaStr).split('T')[0].split('-');
-  if (partes.length === 3) {
-    const [anio, mes, dia] = partes;
-    return `${dia}/${mes}/${anio}`;
-  }
-  try {
-    const d = new Date(fechaStr);
-    if (!isNaN(d.getTime())) {
-      return d.toLocaleDateString('es-PE', { day: '2-digit', month: '2-digit', year: 'numeric' });
-    }
-  } catch {
-    // fallback
-  }
-  return fechaStr;
+export function formatearFechaVisual(fechaStr: string | Date | null | undefined): string {
+  return formatearFechaSlash(fechaStr);
 }
 
 export function calcularFechasVencimientoPorDefecto(

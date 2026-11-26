@@ -11,6 +11,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import AdminSidebar from '@/components/admin/admin-sidebar';
 import { useTabSlug } from '@/lib/hooks/useTabSlug';
+import { formatearFechaSlash } from '@/lib/utils/paisesYRegiones';
 
 export default function AlumnosRiesgoPage() {
   const [busqueda, setBusqueda] = useState('');
@@ -138,7 +139,7 @@ export default function AlumnosRiesgoPage() {
 
     setShowProrrogaModal(false);
     setAlumnoSeleccionadoProrroga(null);
-    setMensajeExito(`¡Prórroga de ${dias} días concedida con éxito! Vence el ${fechaFormateada}`);
+    setMensajeExito(`¡Prórroga de ${dias} días concedida con éxito! Vence el ${formatearFechaSlash(fechaFormateada)}`);
     setTimeout(() => setMensajeExito(null), 5000);
   };
 
@@ -324,7 +325,7 @@ export default function AlumnosRiesgoPage() {
                           </span>
                           {est.prorrogaHasta && (
                             <span className="block text-[10px] text-indigo-600 font-semibold mt-0.5 flex items-center gap-1">
-                              <Clock className="size-3" /> Expira: {est.prorrogaHasta}
+                              <Clock className="size-3" /> Expira: {formatearFechaSlash(est.prorrogaHasta)}
                             </span>
                           )}
                         </td>

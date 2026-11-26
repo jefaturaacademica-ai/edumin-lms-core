@@ -29,7 +29,7 @@ const INVALID_CREDENTIALS: LoginState = {
 
 async function resolverFotoPerfil(admin: any, profile: any): Promise<string | null> {
   if (!profile) return null;
-  let foto: string | null = profile.foto_perfil || profile.avatar_url || null;
+  let foto: string | null = profile.foto_perfil || null;
   if (foto) return foto;
 
   const profileId = profile.id;
@@ -50,7 +50,7 @@ async function resolverFotoPerfil(admin: any, profile: any): Promise<string | nu
         foto = `${urlData.publicUrl}?v=${Date.now()}`;
         await admin
           .from('profiles')
-          .update({ foto_perfil: foto, avatar_url: foto })
+          .update({ foto_perfil: foto })
           .eq('id', profileId)
           .catch(() => {});
       }
@@ -76,7 +76,7 @@ export async function loginWithDni(
   const admin = createAdminClient();
   const { data: profile, error: profileError } = await admin
     .from("profiles")
-    .select("id, email, numero_documento, tipo_documento, contrasena, roles, bloqueado, nombres, apellidos, paquete_adquirido, diplomados, cursos, foto_perfil, avatar_url")
+    .select("id, email, numero_documento, tipo_documento, contrasena, roles, bloqueado, nombres, apellidos, paquete_adquirido, diplomados, cursos, foto_perfil")
     .eq("numero_documento", dni)
     .maybeSingle();
 
@@ -177,19 +177,19 @@ export async function loginWithDni(
             id: 'admin',
             titulo: 'Ingresar como administrador',
             subtitulo: '',
-            ruta: '/admin',
+            ruta: '/admin/catalogo',
           },
         ],
       };
     }
 
     // Si es personal administrativo puro (sin rol de estudiante), entra directo a /admin
-    redirect("/admin");
+    redirect("/admin/catalogo");
   }
 
   // Si tiene un solo rol, redirige directamente sin mostrar selector
   if (esDocente) {
-    redirect("/admin");
+    redirect("/admin/catalogo");
   }
 
   redirect("/dashboard");

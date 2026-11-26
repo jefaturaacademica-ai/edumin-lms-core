@@ -12,7 +12,18 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    const { action, foto_perfil, celular, residencia, nombresSolicitados, apellidosSolicitados, dniSolicitado, motivo, declaracionJurada } = body;
+    const { 
+      action, 
+      foto_perfil, 
+      celular, 
+      residencia, 
+      fecha_nacimiento,
+      nombresSolicitados, 
+      apellidosSolicitados, 
+      dniSolicitado, 
+      motivo, 
+      declaracionJurada 
+    } = body;
 
     const admin = createAdminClient();
 
@@ -27,97 +38,105 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Perfil de estudiante no encontrado.' }, { status: 404 });
     }
 
-    // ACCIÓN A: Actualizar Foto de Perfil o Datos Secundarios (celular, residencia)
-    if (action === 'actualizar_foto' || foto_perfil || celular || residencia) {
-      const updates: any = {};
+    // 2. Procesar actualización de foto de perfil
+    let finalFotoUrl = profile.foto_perfil || null;
+    let fotoActualizada = false;
 
-      // Manejo de eliminación explícita de foto de perfil
-      if (action === 'actualizar_foto' && (!foto_perfil || foto_perfil === '')) {
+    if (action === 'actualizar_foto') {
+      fotoActualizada = true;
+      if (!foto_perfil || foto_perfil === '') {
         try {
           const { data: files } = await admin.storage.from('avatars').list(profile.id);
           if (files && files.length > 0) {
-            const filePaths = files.map((f) => `${profile.id}/${f.name}`);
+            const filePaths = files.map((f: any) => `${profile.id}/${f.name}`);
             await admin.storage.from('avatars').remove(filePaths);
           }
         } catch (delErr) {
           console.warn('Advertencia limpiando foto en Supabase Storage:', delErr);
         }
-        updates.foto_perfil = null;
-        updates.avatar_url = null;
-      } else if (foto_perfil) {
-        let finalFotoUrl = foto_perfil;
+        finalFotoUrl = null;
+      } else if (typeof foto_perfil === 'string' && foto_perfil.startsWith('data:image/')) {
+        try {
+          const matches = foto_perfil.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/);
+          if (matches && matches.length === 3) {
+            const contentType = matches[1];
+            const base64Data = matches[2];
+            const buffer = Buffer.from(base64Data, 'base64');
+            const fileName = `${profile.id}/avatar.jpg`;
 
-        // Si viene como Data URL Base64 (data:image/...), subir al Storage de Supabase
-        if (typeof foto_perfil === 'string' && foto_perfil.startsWith('data:image/')) {
-          try {
-            const matches = foto_perfil.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/);
-            if (matches && matches.length === 3) {
-              const contentType = matches[1];
-              const base64Data = matches[2];
-              const buffer = Buffer.from(base64Data, 'base64');
-              // Usar ruta fija por usuario para no acumular archivos duplicados
-              const fileName = `${profile.id}/avatar.jpg`;
-
-              // 1. Asegurar existencia de bucket público 'avatars'
-              const { data: buckets } = await admin.storage.listBuckets();
-              const bucketExiste = buckets?.some((b) => b.name === 'avatars');
-              if (!bucketExiste) {
-                await admin.storage.createBucket('avatars', {
-                  public: true,
-                  fileSizeLimit: 5242880, // 5MB
-                  allowedMimeTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/jpg']
-                });
-              }
-
-              // 2. Subir imagen al Storage de Supabase sobrescribiendo la anterior
-              const { error: uploadErr } = await admin.storage
-                .from('avatars')
-                .upload(fileName, buffer, {
-                  contentType: 'image/jpeg',
-                  upsert: true
-                });
-
-              if (!uploadErr) {
-                const { data: { publicUrl } } = admin.storage
-                  .from('avatars')
-                  .getPublicUrl(fileName);
-                // Parámetro de versión para forzar refresco en navegadores al cambiar de foto
-                finalFotoUrl = `${publicUrl}?v=${Date.now()}`;
-              } else {
-                console.warn('Advertencia al subir a Supabase Storage (usando fallback):', uploadErr.message);
-              }
+            const { data: buckets } = await admin.storage.listBuckets();
+            const bucketExiste = buckets?.some((b: any) => b.name === 'avatars');
+            if (!bucketExiste) {
+              await admin.storage.createBucket('avatars', {
+                public: true,
+                fileSizeLimit: 5242880,
+                allowedMimeTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/jpg']
+              });
             }
-          } catch (storageErr) {
-            console.error('Error procesando imagen para Supabase Storage:', storageErr);
+
+            const { error: uploadErr } = await admin.storage
+              .from('avatars')
+              .upload(fileName, buffer, {
+                contentType: 'image/jpeg',
+                upsert: true
+              });
+
+            if (!uploadErr) {
+              const { data: { publicUrl } } = admin.storage
+                .from('avatars')
+                .getPublicUrl(fileName);
+              finalFotoUrl = `${publicUrl}?v=${Date.now()}`;
+            } else {
+              console.warn('Advertencia subiendo foto a storage:', uploadErr.message);
+            }
           }
+        } catch (storageErr) {
+          console.error('Error procesando imagen para Supabase Storage:', storageErr);
         }
-
-        updates.foto_perfil = finalFotoUrl;
-        updates.avatar_url = finalFotoUrl;
       }
+    }
 
-      if (celular) updates.telefono = celular;
-      if (residencia) updates.residencia = residencia;
+    // 3. Actualizar datos de contacto directos (celular/teléfono y residencia) en profiles
+    const profileUpdates: any = {};
+    if (fotoActualizada) {
+      profileUpdates.foto_perfil = finalFotoUrl;
+    }
+    if (celular !== undefined && celular !== null) {
+      profileUpdates.telefono = celular;
+    }
+    if (residencia !== undefined && residencia !== null) {
+      profileUpdates.residencia = residencia;
+    }
+    if (fecha_nacimiento !== undefined && fecha_nacimiento !== null) {
+      profileUpdates.fecha_nacimiento = fecha_nacimiento ? String(fecha_nacimiento).trim() : null;
+    }
 
-      const { data: updatedProfile, error: updateErr } = await admin
+    let updatedProfile = profile;
+    if (Object.keys(profileUpdates).length > 0) {
+      const { data: up, error: updateErr } = await admin
         .from('profiles')
-        .update(updates)
+        .update(profileUpdates)
         .eq('id', profile.id)
         .select()
         .single();
 
-      if (updateErr) {
-        return NextResponse.json({ error: `Error al actualizar perfil: ${updateErr.message}` }, { status: 500 });
+      if (!updateErr && up) {
+        updatedProfile = up;
+      } else if (updateErr) {
+        console.error('Error actualizando profiles:', updateErr);
       }
+    }
 
+    if (action === 'actualizar_contacto') {
       return NextResponse.json({
         success: true,
-        message: 'Foto y datos de perfil actualizados en Supabase.',
+        message: 'Datos de contacto actualizados correctamente.',
         profile: updatedProfile
       });
     }
 
-    // ACCIÓN B: Crear Solicitud de Modificación de Datos de Perfil (DNI / Nombres)
+    // 4. Si es solicitud de cambio de datos personales (nombres / DNI)
+    let solicitudCreada = null;
     if (action === 'solicitud_cambio_datos' || nombresSolicitados || dniSolicitado) {
       const nuevaSolicitud = {
         profile_id: profile.id,
@@ -139,6 +158,8 @@ export async function POST(request: Request) {
 
       if (solError) {
         console.warn('Advertencia al insertar en solicitudes_cambio_datos:', solError.message);
+      } else if (insertedSolicitud) {
+        solicitudCreada = insertedSolicitud[0];
       }
 
       // Audit Log
@@ -151,15 +172,14 @@ export async function POST(request: Request) {
       } catch (e) {
         console.error(e);
       }
-
-      return NextResponse.json({
-        success: true,
-        message: 'Solicitud de modificación enviada correctamente a Administración.',
-        solicitud: insertedSolicitud ? insertedSolicitud[0] : nuevaSolicitud
-      });
     }
 
-    return NextResponse.json({ error: 'Acción no especificada' }, { status: 400 });
+    return NextResponse.json({
+      success: true,
+      message: 'Datos procesados correctamente.',
+      profile: updatedProfile,
+      solicitud: solicitudCreada
+    });
   } catch (err: any) {
     console.error('Error en /api/dashboard/perfil:', err);
     return NextResponse.json({ error: err.message || 'Error al procesar solicitud de perfil' }, { status: 500 });

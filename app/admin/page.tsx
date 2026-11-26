@@ -248,7 +248,7 @@ export default function AdminDashboard360() {
         metodo: cargoExtraParam ? ((cargoExtraParam as any).metodo || `Cargo Extra: ${cargoExtraParam.concepto}`) : metodo,
         comprobante: nroReciboValido,
         nro_recibo: nroReciboValido,
-        nro_operacion: cargoExtraParam ? ((datosExtraParam as any)?.nro_operacion || 'N/A') : (metodo === 'Efectivo en Caja' ? 'N/A' : comprobante),
+        nro_operacion: (datosExtraParam as any)?.nro_operacion?.trim() ? (datosExtraParam as any).nro_operacion.trim() : (metodo === 'Efectivo en Caja' ? 'N/A' : null),
         pago_id: pagoIdParaValidar,
         descuento: Number(descuento)
       };

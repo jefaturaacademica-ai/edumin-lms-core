@@ -39,27 +39,14 @@ export async function proxy(request: NextRequest) {
   const isDashboardRoute = pathname.startsWith("/dashboard");
   const isAdminRoute = pathname.startsWith("/admin");
 
-  if (pathname === "/") {
-    const redirectUrl = request.nextUrl.clone();
-    redirectUrl.pathname = user ? "/dashboard" : LOGIN_PATH;
-    return NextResponse.redirect(redirectUrl);
-  }
-
   if (!user) {
-    if (isDashboardRoute || isAdminRoute) {
+    if (pathname === "/" || isDashboardRoute || isAdminRoute) {
       const loginUrl = request.nextUrl.clone();
       loginUrl.pathname = LOGIN_PATH;
       return NextResponse.redirect(loginUrl);
     }
 
     return response;
-  }
-
-  // Si el usuario ya cuenta con sesión activa e ingresa a /login, llevarlo al dashboard
-  if (user && pathname === LOGIN_PATH) {
-    const dashboardUrl = request.nextUrl.clone();
-    dashboardUrl.pathname = "/dashboard";
-    return NextResponse.redirect(dashboardUrl);
   }
 
   try {
@@ -73,6 +60,34 @@ export async function proxy(request: NextRequest) {
     const rolesObj = profile?.roles && typeof profile.roles === "object" ? (profile.roles as any) : null;
     const adminRole = rolesObj?.administrativo;
     const isPrivilegedAdmin = Boolean(adminRole);
+    const activeViewCookie = request.cookies.get("edumin_active_view")?.value;
+
+    // Determinar la vista activa (admin vs estudiante)
+    let targetHome = "/dashboard";
+    if (isPrivilegedAdmin) {
+      if (activeViewCookie === "admin") {
+        targetHome = "/admin/catalogo";
+      } else if (activeViewCookie === "estudiante") {
+        targetHome = "/dashboard";
+      } else {
+        // Por defecto si es admin y no ha seleccionado estudiante
+        targetHome = "/admin/catalogo";
+      }
+    }
+
+    // Redirección de raíz (/) y de /login para usuarios con sesión activa
+    if (pathname === "/" || pathname === LOGIN_PATH) {
+      const redirectUrl = request.nextUrl.clone();
+      redirectUrl.pathname = targetHome;
+      const redirectResponse = NextResponse.redirect(redirectUrl);
+      const cookieValue = targetHome.startsWith("/admin") ? "admin" : "estudiante";
+      redirectResponse.cookies.set("edumin_active_view", cookieValue, {
+        path: "/",
+        maxAge: 31536000,
+        sameSite: "lax"
+      });
+      return redirectResponse;
+    }
 
     // Si un estudiante o usuario sin privilegios intenta entrar a /admin, bloquear y redirigir al aula virtual
     if (isAdminRoute && !isPrivilegedAdmin) {
@@ -85,8 +100,23 @@ export async function proxy(request: NextRequest) {
     const isSuperAdminRoute = pathname.startsWith("/admin/configuracion") || pathname.startsWith("/admin/auditoria");
     if (isSuperAdminRoute && adminRole !== "SUPERADMIN") {
       const adminHomeUrl = request.nextUrl.clone();
-      adminHomeUrl.pathname = "/admin";
+      adminHomeUrl.pathname = "/admin/catalogo";
       return NextResponse.redirect(adminHomeUrl);
+    }
+
+    // Mantener sincronizada la cookie según la ruta que el usuario está navegando
+    if (isAdminRoute) {
+      response.cookies.set("edumin_active_view", "admin", {
+        path: "/",
+        maxAge: 31536000,
+        sameSite: "lax"
+      });
+    } else if (isDashboardRoute) {
+      response.cookies.set("edumin_active_view", "estudiante", {
+        path: "/",
+        maxAge: 31536000,
+        sameSite: "lax"
+      });
     }
   } catch (err) {
     console.error("Error en validación de roles en proxy:", err);

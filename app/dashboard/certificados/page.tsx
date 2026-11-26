@@ -362,14 +362,14 @@ function CertificadosContent() {
       }
     }
 
-    // 1. Hidratación instantánea desde caché si existe
+    // 1. Hidratación instantánea desde caché si existe (solo si los modelos también están en caché para evitar parpadeo)
     const cachedMe = getClientCachedData('/api/dashboard/me');
     const cachedModelos = getClientCachedData('/api/admin/certificaciones/modelos');
     const cachedPaquetes = getClientCachedData('/api/admin/configuracion-paquetes');
     const cachedDni = cachedMe?.profile?.dni_ce || cachedMe?.profile?.dni;
     const cachedCerts = cachedDni ? getClientCachedData(`/api/admin/certificaciones?dni=${encodeURIComponent(cachedDni)}`) : null;
 
-    if (cachedMe) {
+    if (cachedMe && cachedModelos && Array.isArray(cachedModelos.modelos) && cachedModelos.modelos.length > 0) {
       procesarCertificadosPayload(cachedMe, cachedModelos, cachedPaquetes, cachedCerts);
       setLoading(false);
     }
@@ -1127,8 +1127,8 @@ function CertificadosContent() {
   }
 
   return (
-    <main className={`min-h-screen p-6 sm:p-10 lg:p-16 pb-24 transition-colors duration-300 ${esOscuro ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'}`}>
-      <div className="max-w-6xl mx-auto space-y-6">
+    <main className={`min-h-screen p-6 sm:p-10 lg:p-16 pb-24 transition-colors duration-200 ${esOscuro ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'}`}>
+      <div className="max-w-7xl mx-auto space-y-6 sm:space-y-8">
         
         {/* Encabezado Unificado */}
         <StudentPageHeader
@@ -1137,41 +1137,37 @@ function CertificadosContent() {
         />
 
         {/* NAVEGACIÓN POR PESTAÑAS (TABS) */}
-        <div className="border-b border-slate-200 dark:border-slate-800">
-          <nav className="flex items-center gap-2 overflow-x-auto pt-1.5 pb-4 px-1.5 scrollbar-none" aria-label="Categorías de Certificados">
-            {tabsOrdenadas.map((tab) => {
-              const Icon = tab.icon;
-              const esActiva = tabActiva === tab.id;
-              const esTabTodos = tab.id === 'TODOS';
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => cambiarTab(tab.id as TabTipo)}
-                  className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap shrink-0 border transition-colors cursor-pointer ${
-                    esActiva
-                      ? esTabTodos
-                        ? 'bg-slate-800 text-white dark:bg-slate-700 border-transparent shadow-sm shadow-slate-900/20'
-                        : (esOscuro 
-                            ? 'bg-indigo-600 text-white border-indigo-400/30 shadow-md shadow-indigo-600/20' 
-                            : 'bg-indigo-600 text-white border-transparent shadow-md shadow-indigo-600/20')
-                      : (esOscuro 
-                          ? 'bg-slate-900/80 text-slate-400 hover:text-slate-200 hover:bg-slate-800 border-slate-800' 
-                          : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-100 border-slate-200 shadow-2xs')
-                  }`}
-                >
-                  <Icon className={`size-4 shrink-0 ${esActiva ? 'text-white' : (esOscuro ? 'text-slate-400' : 'text-slate-500')}`} />
-                  <span>{tab.label}</span>
-                  <span className={`px-2 py-0.5 rounded-full text-[11px] font-extrabold ${
-                    esActiva 
-                      ? 'bg-white/20 text-white' 
-                      : (esOscuro ? 'bg-slate-800 text-slate-400' : 'bg-slate-100 text-slate-600')
-                  }`}>
-                    {tab.badge}
-                  </span>
-                </button>
-              );
-            })}
-          </nav>
+        <div className="flex items-center gap-2 overflow-x-auto max-w-full touch-pan-x pb-2 pr-4 border-b border-slate-200 dark:border-slate-800 no-scrollbar shrink-0">
+          {tabsOrdenadas.map((tab) => {
+            const Icon = tab.icon;
+            const esActiva = tabActiva === tab.id;
+            const esTabTodos = tab.id === 'TODOS';
+            return (
+              <button
+                key={tab.id}
+                onClick={() => cambiarTab(tab.id as TabTipo)}
+                className={`px-4 py-2.5 rounded-2xl text-xs font-bold border transition-colors flex items-center gap-2 cursor-pointer whitespace-nowrap shrink-0 ${
+                  esActiva
+                    ? esTabTodos
+                      ? 'bg-slate-800 text-white dark:bg-slate-700 border-transparent shadow-md shadow-slate-900/20'
+                      : 'bg-indigo-600 text-white border-transparent shadow-md shadow-indigo-600/20'
+                    : (esOscuro 
+                        ? 'bg-slate-900 text-slate-400 border-slate-800 hover:text-white hover:bg-slate-800' 
+                        : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-100')
+                }`}
+              >
+                <Icon className="w-3.5 h-3.5 shrink-0" />
+                <span>{tab.label}</span>
+                <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
+                  esActiva 
+                    ? 'bg-white/20 text-white' 
+                    : (esOscuro ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-700')
+                }`}>
+                  {tab.badge}
+                </span>
+              </button>
+            );
+          })}
         </div>
 
         {/* ==========================================

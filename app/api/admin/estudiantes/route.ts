@@ -141,14 +141,14 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
         if (auditMatch?.detalles?.nro_recibo) {
           cuotas_recibos[idx] = {
             nro_recibo: auditMatch.detalles.nro_recibo,
-            nro_operacion: auditMatch.detalles.nro_operacion || auditMatch.detalles.nro_recibo,
+            nro_operacion: auditMatch.detalles.nro_operacion || null,
             fecha: auditMatch.created_at
           };
         } else if (idx === 0 && pag.nro_recibo && !Object.values(cuotas_recibos).some(r => r.nro_recibo === pag.nro_recibo)) {
           // Si es la cuota 0 y el recibo general no está asignado a otra cuota
           cuotas_recibos[idx] = {
             nro_recibo: pag.nro_recibo,
-            nro_operacion: pag.nro_operacion || pag.nro_recibo,
+            nro_operacion: pag.nro_operacion || null,
             fecha: pag.created_at
           };
         }
@@ -507,7 +507,7 @@ export async function GET(request?: Request) {
         apellidos: p.apellidos,
         email: p.email,
         telefono: p.telefono || 'Sin teléfono',
-        foto_perfil: p.foto_perfil || p.avatar_url || (avatarUserIds.has(p.id) ? `${supabaseUrl}/storage/v1/object/public/avatars/${p.id}/avatar.jpg` : null),
+        foto_perfil: p.foto_perfil || (avatarUserIds.has(p.id) ? `${supabaseUrl}/storage/v1/object/public/avatars/${p.id}/avatar.jpg` : null),
         role: getPrimaryRoleFromProfile(p),
         roles: p.roles || null,
         paquete_adquirido: p.paquete_adquirido || 'FULL',
@@ -1397,7 +1397,7 @@ export async function POST(request: Request) {
     const initialCuotasRecibos = {
       0: {
         nro_recibo: initialRecibo,
-        nro_operacion: initialRecibo,
+        nro_operacion: null,
         fecha: new Date().toISOString()
       }
     };
@@ -1413,7 +1413,7 @@ export async function POST(request: Request) {
         monto: montoCuotaNum,
         metodo: 'Matrícula Inicial',
         nro_recibo: initialRecibo,
-        nro_operacion: initialRecibo,
+        nro_operacion: null,
         comprobante: initialRecibo,
         fecha: new Date().toISOString()
       }
@@ -1425,9 +1425,6 @@ export async function POST(request: Request) {
         dni_ce: normalizedDni,
         monto: montoTotalNum,
         metodo: initialMetodo,
-        nro_recibo: initialRecibo,
-        nro_operacion: initialRecibo,
-        comprobante: initialRecibo,
         estado: initialDeuda === 0 ? 'Completado' : 'Pendiente'
       });
     } catch (pagErr) {

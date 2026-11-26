@@ -8,6 +8,7 @@ interface StudentPageHeaderProps {
   title: string;
   subtitle?: string;
   iconClassName?: string;
+  className?: string;
   children?: React.ReactNode;
 }
 
@@ -16,10 +17,11 @@ export function StudentPageHeader({
   title,
   subtitle,
   iconClassName,
+  className,
   children
 }: StudentPageHeaderProps) {
   return (
-    <header className="mb-8 sm:mb-10 flex flex-col md:flex-row md:items-end justify-between gap-4">
+    <header className={`flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 sm:mb-8 ${className || ''}`}>
       <div>
         <h1 className="text-2xl sm:text-3xl font-bold tracking-tight flex items-center gap-3 text-slate-900 dark:text-white">
           <Icon className={`w-7 h-7 sm:w-8 sm:h-8 shrink-0 ${

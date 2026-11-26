@@ -268,7 +268,7 @@ export async function POST(request: Request) {
           cuotas_recibos: {
             0: {
               nro_recibo: correlativoRecibo,
-              nro_operacion: correlativoRecibo,
+              nro_operacion: null,
               fecha: new Date().toISOString()
             }
           },
@@ -279,7 +279,7 @@ export async function POST(request: Request) {
             monto: montoCuotaNum,
             metodo: 'Matrícula Inicial (Carga Masiva)',
             nro_recibo: correlativoRecibo,
-            nro_operacion: correlativoRecibo,
+            nro_operacion: null,
             comprobante: correlativoRecibo,
             fecha: new Date().toISOString()
           }
@@ -290,8 +290,6 @@ export async function POST(request: Request) {
           dni_ce: normalizedDni,
           monto: montoTotalNum,
           metodo: initialMetodo,
-          nro_recibo: correlativoRecibo,
-          nro_operacion: correlativoRecibo,
           estado: initialDeuda === 0 ? 'Completado' : 'Pendiente'
         });
 

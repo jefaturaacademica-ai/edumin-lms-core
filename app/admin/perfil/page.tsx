@@ -3,14 +3,34 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { 
-  ShieldCheck, User, Mail, Phone, MapPin, FileText, KeyRound, 
+  ShieldCheck, User, Mail, Phone, MapPin, Globe, FileText, KeyRound, 
   Camera, Check, X, Trash2, ArrowUpRight, Lock, CheckCircle2,
-  Calendar, ShieldAlert, Sparkles, GraduationCap
+  Calendar, ShieldAlert, Sparkles, GraduationCap, Edit3
 } from 'lucide-react';
 import { createBrowserClient } from '@supabase/ssr';
 import AdminSidebar from '@/components/admin/admin-sidebar';
 import { useTheme } from '@/context/theme-context';
 import { useProfile } from '@/context/profile-context';
+import { 
+  LISTA_PAISES, 
+  DEPARTAMENTOS_PERU, 
+  parsearCelular, 
+  formatearCelularGuardar, 
+  parsearResidencia, 
+  formatearResidenciaGuardar, 
+  formatearFechaSlash,
+  formatearFechaInput,
+  formatearCelularVisual 
+} from '@/lib/utils/paisesYRegiones';
+
+function formatoTipoDocumento(tipo?: string) {
+  if (!tipo) return 'DNI';
+  const t = tipo.toLowerCase();
+  if (t.includes('extranjer') || t === 'ce') return 'Carné de extranjería';
+  if (t.includes('pasaporte')) return 'Pasaporte';
+  if (t === 'otro') return 'Otro';
+  return 'DNI';
+}
 
 export default function AdminPerfilPage() {
   const { esOscuro } = useTheme();
@@ -26,9 +46,18 @@ export default function AdminPerfilPage() {
   const [mensajeExito, setMensajeExito] = useState<string | null>(null);
   const [mensajeError, setMensajeError] = useState<string | null>(null);
 
-  // Formulario de edición de contacto
+  // Formulario de datos de contacto
   const [celular, setCelular] = useState('');
   const [residencia, setResidencia] = useState('');
+
+  // Modal de edición
+  const [modalEdicionAbierto, setModalEdicionAbierto] = useState(false);
+  const [codigoPaisCelular, setCodigoPaisCelular] = useState('+51');
+  const [numeroCelular, setNumeroCelular] = useState('');
+  const [resPais, setResPais] = useState('Perú');
+  const [resDepartamento, setResDepartamento] = useState('Lima');
+  const [resCiudad, setResCiudad] = useState('');
+  const [fechaNacimiento, setFechaNacimiento] = useState('');
 
   // Manejo de foto
   const [fotoTemporal, setFotoTemporal] = useState<string | null>(null);
@@ -64,7 +93,7 @@ export default function AdminPerfilPage() {
           if (data) {
             setPerfil(data);
             setEmail(data.email || user.email || '');
-            setCelular(data.celular || '');
+            setCelular(data.celular || data.telefono || '');
             setResidencia(data.residencia || '');
           }
         }
@@ -155,7 +184,6 @@ export default function AdminPerfilPage() {
         .upload(filePath, fileFotoTemporal, { upsert: true });
 
       if (uploadError) {
-        // Fallback a perfiles si avatars no existe
         const { error: fallbackError } = await supabase.storage
           .from('perfiles')
           .upload(filePath, fileFotoTemporal, { upsert: true });
@@ -210,11 +238,29 @@ export default function AdminPerfilPage() {
     }
   };
 
-  const handleGuardarContacto = async (e: React.FormEvent) => {
+  const abrirModalEdicion = () => {
+    const parsedCel = parsearCelular(celular);
+    setCodigoPaisCelular(parsedCel.dialCode);
+    setNumeroCelular(parsedCel.numero);
+
+    const parsedRes = parsearResidencia(residencia);
+    setResPais(parsedRes.pais);
+    setResDepartamento(parsedRes.departamento);
+    setResCiudad(parsedRes.ciudad);
+
+    setFechaNacimiento(formatearFechaInput(perfil?.fecha_nacimiento));
+
+    setModalEdicionAbierto(true);
+  };
+
+  const handleGuardarDatos = async (e: React.FormEvent) => {
     e.preventDefault();
     setGuardandoDatos(true);
     setMensajeExito(null);
     setMensajeError(null);
+
+    const celularFinal = formatearCelularGuardar(codigoPaisCelular, numeroCelular);
+    const residenciaFinal = formatearResidenciaGuardar(resPais, resDepartamento, resCiudad);
 
     try {
       const { data: { user } } = await supabase.auth.getUser();
@@ -223,15 +269,27 @@ export default function AdminPerfilPage() {
       const { error } = await supabase
         .from('profiles')
         .update({
-          celular: celular.trim(),
-          residencia: residencia.trim(),
+          telefono: celularFinal,
+          residencia: residenciaFinal,
+          fecha_nacimiento: fechaNacimiento || null,
           updated_at: new Date().toISOString()
         })
         .eq('id', user.id);
 
       if (error) throw error;
 
-      setMensajeExito('Datos de contacto actualizados correctamente.');
+      setCelular(celularFinal);
+      setResidencia(residenciaFinal);
+      setPerfil((prev: any) => ({
+        ...prev,
+        celular: celularFinal,
+        telefono: celularFinal,
+        residencia: residenciaFinal,
+        fecha_nacimiento: fechaNacimiento || prev?.fecha_nacimiento
+      }));
+
+      setMensajeExito('Datos de perfil actualizados correctamente.');
+      setModalEdicionAbierto(false);
       setTimeout(() => setMensajeExito(null), 4000);
     } catch (err: any) {
       setMensajeError(err.message || 'Error al guardar los datos.');
@@ -284,8 +342,8 @@ export default function AdminPerfilPage() {
     <div className="min-h-screen md:h-screen md:overflow-hidden bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col md:flex-row font-sans relative transition-colors">
       <AdminSidebar />
 
-      <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0">
-        <div className="max-w-5xl mx-auto space-y-6">
+      <main className="flex-1 p-6 sm:p-10 lg:p-16 overflow-y-auto z-10 min-w-0 pb-24">
+        <div className="max-w-5xl mx-auto space-y-6 sm:space-y-8">
 
           {/* Notificaciones Flash */}
           {mensajeExito && (
@@ -302,13 +360,15 @@ export default function AdminPerfilPage() {
             </div>
           )}
 
-          {/* Tarjeta Hero / Perfil de Administrador */}
-          <div className="rounded-3xl p-6 sm:p-8 relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-900 to-indigo-950 border border-slate-800 text-white shadow-xl">
-            <div className="flex flex-col sm:flex-row items-center gap-6 relative z-10">
+          {/* Tarjeta Hero / Perfil de Administrador (Armonizada con Perfil Estudiante) */}
+          <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-950 rounded-3xl p-6 sm:p-8 shadow-xl text-white relative overflow-hidden border border-slate-800">
+            <div className="absolute -right-10 -bottom-10 w-72 h-72 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="relative z-10 flex flex-col sm:flex-row items-center sm:items-start gap-6">
               
               {/* Avatar con botón de subida */}
               <div className="relative group shrink-0">
-                <div className="size-24 sm:size-28 rounded-full bg-gradient-to-tr from-indigo-600 to-cyan-500 text-white font-black flex items-center justify-center text-3xl shadow-xl ring-4 ring-indigo-400/30 overflow-hidden">
+                <div className={`size-24 sm:size-28 rounded-full bg-gradient-to-tr from-indigo-500 via-indigo-600 to-cyan-400 text-white text-3xl sm:text-4xl font-black flex items-center justify-center shadow-2xl ring-4 ${fotoTemporal ? 'ring-emerald-400' : 'ring-indigo-500/30'} shrink-0 overflow-hidden transition-all`}>
                   {fotoTemporal ? (
                     <img src={fotoTemporal} alt="Vista previa" className="w-full h-full object-cover" />
                   ) : fotoPerfil ? (
@@ -320,10 +380,10 @@ export default function AdminPerfilPage() {
 
                 <label 
                   htmlFor="input-foto-admin" 
-                  className="absolute bottom-0 right-0 p-2.5 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg cursor-pointer transition-all transform group-hover:scale-105"
+                  className="absolute bottom-0 right-0 p-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full shadow-lg border-2 border-slate-900 transition-transform hover:scale-110 cursor-pointer"
                   title="Cambiar foto de perfil"
                 >
-                  <Camera className="size-4" />
+                  <Camera className="w-4 h-4" />
                   <input 
                     type="file" 
                     id="input-foto-admin" 
@@ -335,35 +395,28 @@ export default function AdminPerfilPage() {
               </div>
 
               {/* Información y Acciones Principales */}
-              <div className="flex-1 text-center sm:text-left space-y-2.5 min-w-0">
+              <div className="min-w-0 flex-1 flex flex-col items-center sm:items-start text-center sm:text-left gap-2.5">
                 
-                {/* Badges de Rol */}
+                {/* 1. Arriba: Badge de Rol con rounded-md exactamente igual al sidebar */}
                 <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-400/30">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-indigo-300 bg-indigo-500/15 rounded-md border border-indigo-500/25">
                     <ShieldCheck className="size-3.5" />
                     <span>{rolLabel}</span>
                   </span>
-
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white/10 text-slate-300 border border-white/10">
-                    <span>Cuenta de administración</span>
-                  </span>
                 </div>
 
-                {/* Nombre Completo */}
-                <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight truncate">
+                {/* 2. El Nombre Completo */}
+                <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
                   {nombres} {apellidos}
                 </h1>
-                <p className="text-xs text-slate-400 truncate">
-                  {email || 'administrador@edumin.edu.pe'}
-                </p>
 
-                {/* Botones de Acción */}
-                <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 pt-2">
+                {/* 3. Botones Auxiliares */}
+                <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 pt-1">
                   <button
                     onClick={() => setModalPasswordAbierto(true)}
-                    className="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/15 font-semibold text-xs transition-all shadow-md flex items-center gap-2 cursor-pointer"
+                    className="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/15 font-semibold text-xs transition-all shadow-md flex items-center gap-2 cursor-pointer"
                   >
-                    <KeyRound className="size-4 text-amber-400" />
+                    <KeyRound className="w-4 h-4 text-amber-400" />
                     <span>Cambiar contraseña</span>
                   </button>
 
@@ -373,15 +426,15 @@ export default function AdminPerfilPage() {
                       <button
                         onClick={guardarNuevaFoto}
                         disabled={guardandoFoto}
-                        className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 disabled:opacity-60 text-white font-semibold text-xs transition-all shadow-md flex items-center gap-2 cursor-pointer"
+                        className="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 disabled:opacity-60 text-white font-semibold text-xs transition-all shadow-md flex items-center gap-2 cursor-pointer"
                       >
-                        <Check className="size-4" />
-                        <span>{guardandoFoto ? 'Guardando...' : 'Guardar foto'}</span>
+                        <Check className="w-4 h-4" />
+                        <span>{guardandoFoto ? 'Guardando en Storage...' : 'Guardar foto'}</span>
                       </button>
                       <button
                         onClick={cancelarFotoTemporal}
                         disabled={guardandoFoto}
-                        className="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 disabled:opacity-60 text-slate-300 font-semibold text-xs transition-all border border-slate-700 cursor-pointer"
+                        className="px-3.5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 disabled:opacity-60 text-slate-300 font-semibold text-xs transition-all border border-slate-700 cursor-pointer"
                       >
                         <span>Cancelar</span>
                       </button>
@@ -390,24 +443,13 @@ export default function AdminPerfilPage() {
                     fotoPerfil && (
                       <button
                         onClick={handleQuitarFoto}
-                        className="px-3.5 py-2 rounded-xl text-xs text-rose-400 hover:bg-rose-500/10 hover:text-rose-300 font-semibold inline-flex items-center gap-1.5 transition-colors border border-rose-500/20 cursor-pointer"
+                        className="px-3.5 py-2.5 rounded-xl text-xs text-rose-400 hover:bg-rose-500/10 hover:text-rose-300 font-semibold inline-flex items-center gap-1.5 transition-colors border border-rose-500/20 cursor-pointer"
                       >
-                        <Trash2 className="size-3.5" />
+                        <Trash2 className="w-3.5 h-3.5" />
                         <span>Quitar foto</span>
                       </button>
                     )
                   )}
-
-                  {/* Enlace opcional al campus estudiantil si tiene acceso dual */}
-                  <Link
-                    href="/dashboard"
-                    className="px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700 font-semibold text-xs transition-all inline-flex items-center gap-2"
-                    title="Ir a mi campus de estudiante"
-                  >
-                    <GraduationCap className="size-4 text-emerald-400" />
-                    <span>Ver como estudiante</span>
-                    <ArrowUpRight className="size-3 text-slate-400" />
-                  </Link>
                 </div>
 
                 {errorFoto && (
@@ -420,264 +462,309 @@ export default function AdminPerfilPage() {
             </div>
           </div>
 
-          {/* Grid de Secciones: Datos Oficiales y Permisos */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-
-            {/* Columna 1 y 2: Datos Personales y de Contacto */}
-            <div className="lg:col-span-2 space-y-6">
-              
-              {/* Datos Institucionales Oficiales */}
-              <div className={`p-6 sm:p-7 rounded-3xl border transition-colors ${
-                esOscuro ? 'bg-slate-900 border-slate-800 text-slate-100' : 'bg-white border-slate-200 text-slate-900 shadow-sm'
-              }`}>
-                <div className="flex items-center gap-2.5 mb-5 border-b pb-4 border-slate-200 dark:border-slate-800">
-                  <User className="size-5 text-indigo-500" />
-                  <div>
-                    <h2 className="text-base font-bold text-slate-900 dark:text-white">
-                      Datos institucionales
-                    </h2>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">
-                      Identificación registrada del administrador en el sistema.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1">
-                      Nombres
-                    </label>
-                    <input 
-                      type="text" 
-                      readOnly 
-                      value={nombres} 
-                      className={`w-full border rounded-xl px-3.5 py-2.5 text-xs font-semibold cursor-not-allowed focus:outline-none ${
-                        esOscuro ? 'bg-slate-950/70 border-slate-800 text-slate-300' : 'bg-slate-100 border-slate-200 text-slate-700'
-                      }`}
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1">
-                      Apellidos
-                    </label>
-                    <input 
-                      type="text" 
-                      readOnly 
-                      value={apellidos} 
-                      className={`w-full border rounded-xl px-3.5 py-2.5 text-xs font-semibold cursor-not-allowed focus:outline-none ${
-                        esOscuro ? 'bg-slate-950/70 border-slate-800 text-slate-300' : 'bg-slate-100 border-slate-200 text-slate-700'
-                      }`}
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1">
-                      Documento de identidad (DNI / CE)
-                    </label>
-                    <div className="relative">
-                      <FileText className="size-4 text-slate-400 absolute left-3 top-3" />
-                      <input 
-                        type="text" 
-                        readOnly 
-                        value={dni || perfil?.dni_ce || 'No registrado'} 
-                        className={`w-full border rounded-xl pl-9 pr-3.5 py-2.5 text-xs font-semibold cursor-not-allowed focus:outline-none ${
-                          esOscuro ? 'bg-slate-950/70 border-slate-800 text-slate-300' : 'bg-slate-100 border-slate-200 text-slate-700'
-                        }`}
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1">
-                      Correo institucional
-                    </label>
-                    <div className="relative">
-                      <Mail className="size-4 text-slate-400 absolute left-3 top-3" />
-                      <input 
-                        type="text" 
-                        readOnly 
-                        value={email || perfil?.email || ''} 
-                        className={`w-full border rounded-xl pl-9 pr-3.5 py-2.5 text-xs font-semibold cursor-not-allowed focus:outline-none ${
-                          esOscuro ? 'bg-slate-950/70 border-slate-800 text-slate-300' : 'bg-slate-100 border-slate-200 text-slate-700'
-                        }`}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Formulario de Datos de Contacto Editables */}
-              <form 
-                onSubmit={handleGuardarContacto}
-                className={`p-6 sm:p-7 rounded-3xl border transition-colors ${
-                  esOscuro ? 'bg-slate-900 border-slate-800 text-slate-100' : 'bg-white border-slate-200 text-slate-900 shadow-sm'
-                }`}
-              >
-                <div className="flex items-center gap-2.5 mb-5 border-b pb-4 border-slate-200 dark:border-slate-800">
-                  <Phone className="size-5 text-emerald-500" />
-                  <div>
-                    <h2 className="text-base font-bold text-slate-900 dark:text-white">
-                      Datos de contacto
-                    </h2>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">
-                      Mantén actualizados tu número celular y tu ubicación de residencia.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
-                  <div>
-                    <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                      Número celular
-                    </label>
-                    <div className="relative">
-                      <Phone className="size-4 text-slate-400 absolute left-3 top-3" />
-                      <input 
-                        type="tel"
-                        value={celular}
-                        onChange={(e) => setCelular(e.target.value)}
-                        placeholder="Ej. 987654321"
-                        className={`w-full border rounded-xl pl-9 pr-3.5 py-2.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 ${
-                          esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'
-                        }`}
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                      Lugar de residencia (ciudad / país)
-                    </label>
-                    <div className="relative">
-                      <MapPin className="size-4 text-slate-400 absolute left-3 top-3" />
-                      <input 
-                        type="text"
-                        value={residencia}
-                        onChange={(e) => setResidencia(e.target.value)}
-                        placeholder="Ej. Lima, Perú"
-                        className={`w-full border rounded-xl pl-9 pr-3.5 py-2.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 ${
-                          esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'
-                        }`}
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex justify-end">
-                  <button
-                    type="submit"
-                    disabled={guardandoDatos}
-                    className="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 text-white font-semibold text-xs transition-all shadow-md flex items-center gap-2 cursor-pointer"
-                  >
-                    <Check className="size-4" />
-                    <span>{guardandoDatos ? 'Guardando...' : 'Actualizar contacto'}</span>
-                  </button>
-                </div>
-              </form>
-
+          {/* BLOQUE 1: DATOS INSTITUCIONALES */}
+          <div className={`rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden transition-colors ${esOscuro ? 'bg-slate-900 text-slate-100 ring-1 ring-slate-800' : 'bg-white text-slate-900 shadow-slate-950/5 ring-1 ring-slate-200'}`}>
+            <div className="flex items-center gap-3 mb-6 border-b pb-4 border-slate-200 dark:border-slate-800">
+              <User className="w-5 h-5 text-indigo-500" />
+              <h3 className="text-base font-bold text-slate-900 dark:text-white">Datos institucionales</h3>
             </div>
 
-            {/* Columna 3: Tarjeta de Privilegios y Seguridad */}
-            <div className="space-y-6">
-              
-              <div className={`p-6 rounded-3xl border transition-colors ${
-                esOscuro ? 'bg-slate-900 border-slate-800 text-slate-100' : 'bg-white border-slate-200 text-slate-900 shadow-sm'
-              }`}>
-                <div className="flex items-center gap-2.5 mb-4">
-                  <ShieldCheck className="size-5 text-indigo-500" />
-                  <h3 className="text-sm font-bold text-slate-900 dark:text-white">
-                    Permisos de tu rol
-                  </h3>
-                </div>
-
-                <p className="text-xs text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">
-                  Tu usuario cuenta con el rol institucional de <strong className="text-indigo-400">{rolLabel}</strong>. Tus accesos en la plataforma son:
-                </p>
-
-                <div className="space-y-2.5">
-                  {role === 'SUPERADMIN' ? (
-                    <>
-                      <div className="flex items-start gap-2 text-xs text-slate-300">
-                        <CheckCircle2 className="size-4 text-emerald-400 shrink-0 mt-0.5" />
-                        <span>Acceso total a todos los módulos y funciones.</span>
-                      </div>
-                      <div className="flex items-start gap-2 text-xs text-slate-300">
-                        <CheckCircle2 className="size-4 text-emerald-400 shrink-0 mt-0.5" />
-                        <span>Gestión de roles y permisos institucionales (RBAC).</span>
-                      </div>
-                      <div className="flex items-start gap-2 text-xs text-slate-300">
-                        <CheckCircle2 className="size-4 text-emerald-400 shrink-0 mt-0.5" />
-                        <span>Auditoría de eventos y webhooks en tiempo real.</span>
-                      </div>
-                      <div className="flex items-start gap-2 text-xs text-slate-300">
-                        <CheckCircle2 className="size-4 text-emerald-400 shrink-0 mt-0.5" />
-                        <span>Gestión académica completa, exámenes y catálogo.</span>
-                      </div>
-                    </>
-                  ) : role === 'ADMIN' ? (
-                    <>
-                      <div className="flex items-start gap-2 text-xs text-slate-300">
-                        <CheckCircle2 className="size-4 text-emerald-400 shrink-0 mt-0.5" />
-                        <span>Gestión académica (catálogo, evaluaciones y estudiantes).</span>
-                      </div>
-                      <div className="flex items-start gap-2 text-xs text-slate-300">
-                        <CheckCircle2 className="size-4 text-emerald-400 shrink-0 mt-0.5" />
-                        <span>Dashboard financiero y retención estudiantil.</span>
-                      </div>
-                      <div className="flex items-start gap-2 text-xs text-slate-300">
-                        <CheckCircle2 className="size-4 text-emerald-400 shrink-0 mt-0.5" />
-                        <span>Descarga y generación de reportes ejecutivos CSV.</span>
-                      </div>
-                    </>
-                  ) : (
-                    <div className="flex items-start gap-2 text-xs text-slate-300">
-                      <CheckCircle2 className="size-4 text-emerald-400 shrink-0 mt-0.5" />
-                      <span>Acceso al módulo de finanzas y retención de alumnos.</span>
-                    </div>
-                  )}
-                </div>
-
-                <div className="mt-5 pt-4 border-t border-slate-800">
-                  <Link
-                    href="/admin/configuracion?tab=permisos"
-                    className="text-xs text-indigo-400 hover:text-indigo-300 font-semibold inline-flex items-center gap-1.5 transition-colors"
-                  >
-                    <span>Consultar matriz de permisos</span>
-                    <ArrowUpRight className="size-3.5" />
-                  </Link>
-                </div>
-              </div>
-
-              {/* Tarjeta de Seguridad */}
-              <div className={`p-6 rounded-3xl border transition-colors ${
-                esOscuro ? 'bg-slate-900 border-slate-800 text-slate-100' : 'bg-white border-slate-200 text-slate-900 shadow-sm'
-              }`}>
-                <div className="flex items-center gap-2.5 mb-3">
-                  <Lock className="size-5 text-amber-500" />
-                  <h3 className="text-sm font-bold text-slate-900 dark:text-white">
-                    Seguridad de la cuenta
-                  </h3>
-                </div>
-                <p className="text-xs text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">
-                  Para mantener protegidos los datos institucionales, recomendamos renovar periódicamente tu contraseña.
-                </p>
-                <button
-                  type="button"
-                  onClick={() => setModalPasswordAbierto(true)}
-                  className="w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs transition-colors border border-slate-700 flex items-center justify-center gap-2 cursor-pointer"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Nombres y Apellidos */}
+              <div>
+                <label className={`flex items-center gap-2 text-sm font-semibold mb-2 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
+                  <User className="w-4 h-4 text-slate-400" /> Nombres
+                </label>
+                <div 
+                  className={`w-full border rounded-xl px-4 py-3 cursor-default select-text font-medium min-h-[48px] flex items-center ${esOscuro ? 'bg-slate-950/60 border-slate-800 text-slate-200' : 'bg-slate-50 border-slate-200 text-slate-700'}`}
                 >
-                  <KeyRound className="size-4 text-amber-400" />
-                  <span>Modificar contraseña</span>
-                </button>
+                  <span className="truncate">{nombres || 'No registrado'}</span>
+                </div>
               </div>
 
+              <div>
+                <label className={`flex items-center gap-2 text-sm font-semibold mb-2 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
+                  <User className="w-4 h-4 text-slate-400" /> Apellidos
+                </label>
+                <div 
+                  className={`w-full border rounded-xl px-4 py-3 cursor-default select-text font-medium min-h-[48px] flex items-center ${esOscuro ? 'bg-slate-950/60 border-slate-800 text-slate-200' : 'bg-slate-50 border-slate-200 text-slate-700'}`}
+                >
+                  <span className="truncate">{apellidos || 'No registrado'}</span>
+                </div>
+              </div>
+
+              {/* Documento de Identidad (Tipo + Número en estilo estándar homogéneo) */}
+              <div>
+                <label className={`flex items-center gap-2 text-sm font-semibold mb-2 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
+                  <FileText className="w-4 h-4 text-slate-400" /> Documento de identidad
+                </label>
+                <div 
+                  className={`w-full border rounded-xl px-4 py-3 cursor-default select-text font-medium min-h-[48px] flex items-center ${esOscuro ? 'bg-slate-950/60 border-slate-800 text-slate-200' : 'bg-slate-50 border-slate-200 text-slate-700'}`}
+                >
+                  <span className="truncate">
+                    {dni || perfil?.numero_documento || perfil?.dni_ce || perfil?.dni
+                      ? `${formatoTipoDocumento(perfil?.tipo_documento)} - ${dni || perfil?.numero_documento || perfil?.dni_ce || perfil?.dni}`
+                      : 'No registrado'}
+                  </span>
+                </div>
+              </div>
+
+              {/* Correo electrónico (1 sola columna) */}
+              <div>
+                <label className={`flex items-center gap-2 text-sm font-semibold mb-2 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
+                  <Mail className="w-4 h-4 text-slate-400" /> Correo electrónico
+                </label>
+                <div 
+                  className={`w-full border rounded-xl px-4 py-3 cursor-default select-text font-medium min-h-[48px] flex items-center ${esOscuro ? 'bg-slate-950/60 border-slate-800 text-slate-200' : 'bg-slate-50 border-slate-200 text-slate-700'}`}
+                >
+                  <span className="truncate">{email || perfil?.email || 'No registrado'}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* BLOQUE 2: DATOS DE CONTACTO */}
+          <div className={`rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden transition-colors ${esOscuro ? 'bg-slate-900 text-slate-100 ring-1 ring-slate-800' : 'bg-white text-slate-900 shadow-slate-950/5 ring-1 ring-slate-200'}`}>
+            <div className="flex items-center gap-3 mb-6 border-b pb-4 border-slate-200 dark:border-slate-800">
+              <Phone className="w-5 h-5 text-emerald-500" />
+              <h3 className="text-base font-bold text-slate-900 dark:text-white">Datos de contacto</h3>
             </div>
 
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              {/* Celular (con código de país) */}
+              <div>
+                <label className={`flex items-center gap-2 text-sm font-semibold mb-2 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
+                  <Phone className="w-4 h-4 text-slate-400" /> Número de celular
+                </label>
+                <div 
+                  className={`w-full border rounded-xl px-4 py-3 cursor-default select-text font-medium min-h-[48px] flex items-center ${esOscuro ? 'bg-slate-950/60 border-slate-800 text-slate-200' : 'bg-slate-50 border-slate-200 text-slate-700'}`}
+                >
+                  <span>{formatearCelularVisual(celular || perfil?.celular || perfil?.telefono)}</span>
+                </div>
+              </div>
+
+              {/* Fecha de nacimiento */}
+              <div>
+                <label className={`flex items-center gap-2 text-sm font-semibold mb-2 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
+                  <Calendar className="w-4 h-4 text-slate-400" /> Fecha de nacimiento
+                </label>
+                <div 
+                  className={`w-full border rounded-xl px-4 py-3 cursor-default select-text font-medium min-h-[48px] flex items-center ${esOscuro ? 'bg-slate-950/60 border-slate-800 text-slate-200' : 'bg-slate-50 border-slate-200 text-slate-700'}`}
+                >
+                  <span>{formatearFechaSlash(perfil?.fecha_nacimiento) || 'No registrada'}</span>
+                </div>
+              </div>
+
+              {/* País de residencia */}
+              <div>
+                <label className={`flex items-center gap-2 text-sm font-semibold mb-2 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
+                  <Globe className="w-4 h-4 text-slate-400" /> País de residencia
+                </label>
+                <div 
+                  className={`w-full border rounded-xl px-4 py-3 cursor-default select-text font-medium min-h-[48px] flex items-center ${esOscuro ? 'bg-slate-950/60 border-slate-800 text-slate-200' : 'bg-slate-50 border-slate-200 text-slate-700'}`}
+                >
+                  <span>{(() => {
+                    const raw = residencia || perfil?.residencia;
+                    return raw ? parsearResidencia(raw).pais || 'No registrado' : 'No registrado';
+                  })()}</span>
+                </div>
+              </div>
+
+              {/* Departamento y ciudad */}
+              <div>
+                <label className={`flex items-center gap-2 text-sm font-semibold mb-2 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
+                  <MapPin className="w-4 h-4 text-slate-400" /> Departamento y ciudad
+                </label>
+                <div 
+                  className={`w-full border rounded-xl px-4 py-3 cursor-default select-text font-medium min-h-[48px] flex items-center ${esOscuro ? 'bg-slate-950/60 border-slate-800 text-slate-200' : 'bg-slate-50 border-slate-200 text-slate-700'}`}
+                >
+                  <span>
+                    {(() => {
+                      const raw = residencia || perfil?.residencia;
+                      if (!raw) return 'No registrado';
+                      const parsed = parsearResidencia(raw);
+                      const partes = Array.from(new Set([parsed.departamento, parsed.ciudad].filter(Boolean)));
+                      return partes.length > 0 ? partes.join(' - ') : (parsed.pais ? 'No especificado' : 'No registrado');
+                    })()}
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Barra inferior de acciones */}
+            <div className={`pt-6 border-t flex flex-col sm:flex-row items-center justify-between gap-4 ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
+              <div className="flex items-center gap-3 flex-1 min-w-0">
+                <ShieldCheck className="w-5 h-5 text-emerald-500 shrink-0" />
+                <p className={`text-sm leading-relaxed ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
+                  Perfil institucional verificado. Tus datos oficiales son gestionados con estrictos protocolos de seguridad corporativa.
+                </p>
+              </div>
+              <button 
+                onClick={abrirModalEdicion}
+                className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-xl font-bold transition-all shadow-md flex items-center gap-2 shrink-0 cursor-pointer"
+              >
+                <Edit3 className="w-4 h-4" /> Editar perfil
+              </button>
+            </div>
           </div>
 
         </div>
       </main>
+
+      {/* MODAL DE EDICIÓN DE DATOS (Mismo estándar que estudiante: país + celular + 3 niveles residencia) */}
+      {modalEdicionAbierto && (
+        <div 
+          onClick={(e) => { if (e.target === e.currentTarget) setModalEdicionAbierto(false); }} 
+          className="fixed inset-0 z-50 flex items-start sm:items-center justify-center p-3 sm:p-6 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-200 overflow-y-auto"
+        >
+          <div 
+            onClick={(e) => e.stopPropagation()} 
+            className={`rounded-3xl w-full max-w-2xl p-6 sm:p-8 shadow-2xl relative my-auto max-h-[90vh] overflow-y-auto animate-in zoom-in-95 duration-200 border ${esOscuro ? 'bg-slate-900 border-slate-800 text-slate-100' : 'bg-white border-slate-200 text-slate-900'}`}
+          >
+            <button 
+              onClick={() => setModalEdicionAbierto(false)}
+              className={`absolute right-4 top-4 sm:right-6 sm:top-6 transition-colors p-2 rounded-full z-10 ${esOscuro ? 'text-slate-400 hover:text-white hover:bg-slate-800' : 'text-slate-400 hover:text-slate-700 hover:bg-slate-100'}`}
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            <div className={`mb-6 border-b pb-4 pr-8 ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
+              <h3 className={`text-2xl font-bold ${esOscuro ? 'text-white' : 'text-slate-900'}`}>Editar perfil institucional</h3>
+              <p className={`text-sm mt-1 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
+                Actualiza tu número celular de contacto y tu ubicación de residencia.
+              </p>
+            </div>
+
+            <form onSubmit={handleGuardarDatos} className="space-y-5">
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {/* Celular con selector de país */}
+                <div>
+                  <label className={`block text-xs font-bold uppercase tracking-wider mb-1.5 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
+                    Número de celular
+                  </label>
+                  <div className="flex gap-2">
+                    <select
+                      value={codigoPaisCelular}
+                      onChange={(e) => setCodigoPaisCelular(e.target.value)}
+                      className={`w-36 border rounded-xl px-2.5 py-2.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer shrink-0 ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
+                    >
+                      {LISTA_PAISES.map((p) => (
+                        <option key={`${p.codigo}-${p.dialCode}`} value={p.dialCode}>
+                          {p.nombre} ({p.dialCode})
+                        </option>
+                      ))}
+                    </select>
+                    <input 
+                      type="tel" 
+                      placeholder="Ej. 987654321"
+                      value={numeroCelular}
+                      onChange={(e) => setNumeroCelular(e.target.value)}
+                      className={`flex-1 min-w-0 border rounded-xl px-4 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-600 ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
+                    />
+                  </div>
+                </div>
+
+                {/* Fecha de nacimiento */}
+                <div>
+                  <label className={`block text-xs font-bold uppercase tracking-wider mb-1.5 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
+                    Fecha de nacimiento
+                  </label>
+                  <input 
+                    type="date" 
+                    value={fechaNacimiento}
+                    onChange={(e) => setFechaNacimiento(e.target.value)}
+                    className={`w-full border rounded-xl px-4 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-600 ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
+                  />
+                </div>
+              </div>
+
+              {/* Lugar de residencia en 3 niveles (País, Departamento/Región, Ciudad) */}
+              <div className="border-t pt-4 border-slate-200 dark:border-slate-800">
+                <label className={`block text-xs font-bold uppercase tracking-wider mb-2.5 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
+                  Lugar de residencia
+                </label>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <div>
+                    <label className="block text-[11px] font-semibold text-slate-500 mb-1">País</label>
+                    <select
+                      value={resPais}
+                      onChange={(e) => {
+                        const nuevoP = e.target.value;
+                        setResPais(nuevoP);
+                        if (nuevoP === 'Perú' && !DEPARTAMENTOS_PERU.includes(resDepartamento)) {
+                          setResDepartamento('Lima');
+                        }
+                      }}
+                      className={`w-full border rounded-xl px-3 py-2 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
+                    >
+                      {LISTA_PAISES.map((p) => (
+                        <option key={p.codigo} value={p.nombre}>
+                          {p.nombre}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-[11px] font-semibold text-slate-500 mb-1">
+                      {resPais === 'Perú' ? 'Departamento' : 'Departamento / Región'}
+                    </label>
+                    {resPais === 'Perú' ? (
+                      <select
+                        value={resDepartamento}
+                        onChange={(e) => setResDepartamento(e.target.value)}
+                        className={`w-full border rounded-xl px-3 py-2 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
+                      >
+                        {DEPARTAMENTOS_PERU.map((dep) => (
+                          <option key={dep} value={dep}>{dep}</option>
+                        ))}
+                      </select>
+                    ) : (
+                      <input
+                        type="text"
+                        value={resDepartamento}
+                        onChange={(e) => setResDepartamento(e.target.value)}
+                        placeholder="Ej. Cundinamarca"
+                        className={`w-full border rounded-xl px-3 py-2 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-600 ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
+                      />
+                    )}
+                  </div>
+
+                  <div>
+                    <label className="block text-[11px] font-semibold text-slate-500 mb-1">Ciudad / Localidad</label>
+                    <input
+                      type="text"
+                      value={resCiudad}
+                      onChange={(e) => setResCiudad(e.target.value)}
+                      placeholder="Ej. Lima, Trujillo"
+                      className={`w-full border rounded-xl px-3 py-2 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-600 ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-2 flex gap-3">
+                <button 
+                  type="submit"
+                  disabled={guardandoDatos}
+                  className="flex-1 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white py-3 rounded-xl font-bold transition-all shadow-md text-sm cursor-pointer"
+                >
+                  {guardandoDatos ? 'Guardando cambios...' : 'Guardar cambios'}
+                </button>
+                <button 
+                  type="button"
+                  onClick={() => setModalEdicionAbierto(false)}
+                  className={`py-3 px-5 rounded-xl font-bold text-sm transition-colors cursor-pointer ${esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-slate-200' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'}`}
+                >
+                  Cancelar
+                </button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      )}
 
       {/* Modal Cambiar Contraseña */}
       {modalPasswordAbierto && (
@@ -703,7 +790,7 @@ export default function AdminPerfilPage() {
                 setPasswordExito(false);
                 setPasswordError('');
               }}
-              className="absolute right-4 top-4 p-2 rounded-full text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+              className="absolute right-4 top-4 p-2 rounded-full text-slate-400 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer"
             >
               <X className="size-5" />
             </button>

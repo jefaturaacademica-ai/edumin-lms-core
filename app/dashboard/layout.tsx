@@ -120,26 +120,29 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
           mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        {/* Header / Logo + Avatar Opción 2 */}
-        <div className="p-4 border-b border-white/5 shrink-0 flex flex-col gap-3">
-          <div className="flex items-center justify-between">
+        {/* Header Logo Móvil */}
+        <div className="px-4 py-2.5 border-b border-white/5 shrink-0 flex items-center justify-between">
+          <Link href="/dashboard" onClick={() => setMobileMenuOpen(false)} className="flex items-center">
             <img 
               src="/logo-blanco.png" 
               alt="Edumin Logo" 
-              className="h-9 w-auto object-contain" 
+              className="h-8 w-auto object-contain" 
             />
-            <button
-              onClick={() => setMobileMenuOpen(false)}
-              className="p-2 rounded-xl text-slate-400 hover:bg-white/10 hover:text-white transition-colors"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          </div>
+          </Link>
+          <button
+            onClick={() => setMobileMenuOpen(false)}
+            className="p-1.5 rounded-xl text-slate-400 hover:bg-white/10 hover:text-white transition-colors cursor-pointer"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
 
+        {/* Tarjeta de Usuario Estudiante en Móvil */}
+        <div className="p-2.5 border-b border-white/5 shrink-0">
           <UserProfileCard currentView="estudiante" onNavigate={() => setMobileMenuOpen(false)} />
         </div>
 
-        <nav className="flex-1 py-4 px-4 space-y-2 overflow-y-auto sidebar-scroll">
+        <nav className="flex-1 p-2.5 space-y-1 overflow-y-auto sidebar-scroll">
           {menuItems.map((item) => {
             const Icon = item.icon;
             const esCanjearEnInicio = item.path === '/dashboard' && (pathname === '/dashboard/canjear' || pathname?.startsWith('/dashboard/canjear') || pathname === '/canjear');
@@ -190,24 +193,25 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
       </aside>
 
       {/* Sidebar Oscuro Fijo en Pantalla para Escritorio (Desktop) */}
-      <aside className="w-64 h-screen bg-slate-950 text-slate-300 flex flex-col hidden md:flex border-r border-slate-900 sticky top-0 shrink-0">
-        {/* Header / Logo + Avatar */}
-        <div className="p-5 flex flex-col gap-4 border-b border-white/5 shrink-0">
-          <div className="flex items-center justify-start">
-            <Link href="/dashboard" className="flex items-center">
-              <img 
-                src="/logo-blanco.png" 
-                alt="Edumin Logo" 
-                className="h-12 w-auto object-contain" 
-              />
-            </Link>
-          </div>
-          
+      <aside className="w-64 h-screen bg-slate-950 text-slate-300 flex flex-col hidden md:flex shrink-0 z-20 border-r border-slate-900 sticky top-0">
+        {/* Header Logo Desktop */}
+        <div className="px-4 py-3 flex items-center justify-start border-b border-white/5 shrink-0">
+          <Link href="/dashboard" className="flex items-center">
+            <img 
+              src="/logo-blanco.png" 
+              alt="Edumin Logo" 
+              className="h-9 w-auto object-contain" 
+            />
+          </Link>
+        </div>
+
+        {/* Tarjeta Estudiante Desktop */}
+        <div className="p-2.5 border-b border-white/5 shrink-0">
           <UserProfileCard currentView="estudiante" />
         </div>
         
         {/* Links de Navegación Scrollable */}
-        <nav className="flex-1 py-6 px-4 space-y-2 overflow-y-auto sidebar-scroll">
+        <nav className="flex-1 p-2.5 space-y-1 overflow-y-auto sidebar-scroll">
           {menuItems.map((item) => {
             const Icon = item.icon;
             const esCanjearEnInicio = item.path === '/dashboard' && (pathname === '/dashboard/canjear' || pathname?.startsWith('/dashboard/canjear') || pathname === '/canjear');

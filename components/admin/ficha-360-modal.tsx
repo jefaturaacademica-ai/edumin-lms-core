@@ -112,8 +112,8 @@ export default function Ficha360Modal({
   }, [alumnoSeleccionado?.id]);
 
   const supabasePublicUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://wluuomwkxywpfotbngwf.supabase.co';
-  const fotoEstudiante = (!fotoError && (alumnoSeleccionado?.foto_perfil || alumnoSeleccionado?.avatar_url))
-    ? (alumnoSeleccionado.foto_perfil || alumnoSeleccionado.avatar_url)
+  const fotoEstudiante = (!fotoError && alumnoSeleccionado?.foto_perfil)
+    ? alumnoSeleccionado.foto_perfil
     : (!fotoError && alumnoSeleccionado?.id 
         ? `${supabasePublicUrl}/storage/v1/object/public/avatars/${alumnoSeleccionado.id}/avatar.jpg`
         : null);
@@ -1030,7 +1030,7 @@ export default function Ficha360Modal({
                                 { concepto: conceptoExtra, monto: Number(montoExtra) },
                                 {
                                   nro_recibo: nroReciboExtra,
-                                  nro_operacion: metodoExtra === 'Efectivo en Caja' ? 'N/A' : (nroOperacionExtra || nroReciboExtra)
+                                  nro_operacion: metodoExtra === 'Efectivo en Caja' ? 'N/A' : (nroOperacionExtra?.trim() || undefined)
                                 }
                               );
                               setMostrarFormCargoExtra(false);
@@ -1277,7 +1277,7 @@ export default function Ficha360Modal({
                                   undefined,
                                   {
                                     nro_recibo: comprobante,
-                                    nro_operacion: metodo === 'Efectivo en Caja' ? 'N/A' : (nroOperacion || comprobante)
+                                    nro_operacion: metodo === 'Efectivo en Caja' ? 'N/A' : (nroOperacion?.trim() || undefined)
                                   }
                                 );
                                 setMostrarFormPago(false);

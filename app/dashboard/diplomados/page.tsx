@@ -357,8 +357,8 @@ export default function DiplomadosPage() {
   }
 
   return (
-    <main className={`min-h-screen p-6 sm:p-10 lg:p-16 pb-24 transition-colors duration-300 ${esOscuro ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'}`}>
-      <div className="max-w-7xl mx-auto space-y-12">
+    <main className={`min-h-screen p-6 sm:p-10 lg:p-16 pb-24 transition-colors duration-200 ${esOscuro ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'}`}>
+      <div className="max-w-7xl mx-auto space-y-6 sm:space-y-8">
         
         {/* Encabezado Unificado con StudentPageHeader */}
         <StudentPageHeader

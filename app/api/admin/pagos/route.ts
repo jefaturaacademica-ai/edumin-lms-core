@@ -5,18 +5,29 @@ import { calcularFechasVencimientoPorDefecto, resolverFechaVencimiento } from "@
 
 function parseCreditoRow(pag: any, auditLogs: any[]) {
   if (typeof pag.metodo === 'string' && pag.metodo.startsWith('CARGO_EXTRA|')) {
-    const concepto = pag.metodo.replace('CARGO_EXTRA|', '');
+    const rawContent = pag.metodo.replace('CARGO_EXTRA|', '');
+    let concepto = rawContent;
+    let nro_recibo: string | undefined = pag.nro_recibo || undefined;
+    let nro_operacion: string | undefined = pag.nro_operacion || undefined;
+    if (rawContent.startsWith('{')) {
+      try {
+        const parsedCargo = JSON.parse(rawContent);
+        concepto = parsedCargo.concepto || concepto;
+        nro_recibo = parsedCargo.nro_recibo || nro_recibo;
+        nro_operacion = parsedCargo.nro_operacion || nro_operacion;
+      } catch {}
+    }
     return {
       id: pag.id,
       profile_id: pag.profile_id,
       dni_ce: pag.dni_ce,
       is_cargo_extra: true,
       concepto,
-      nro_cuota: `Cargo Extra (${concepto})`,
+      nro_cuota: `Cargo extra (${concepto})`,
       num_credito: 99,
-      nro_recibo: pag.nro_recibo || undefined,
-      nro_operacion: pag.nro_operacion || undefined,
-      comprobante: pag.comprobante || undefined,
+      nro_recibo,
+      nro_operacion,
+      comprobante: nro_recibo || pag.comprobante || undefined,
       monto: Number(pag.monto || 0),
       metodo: 'Yape / Plin',
       estado: pag.estado || 'APROBADO',
@@ -108,13 +119,13 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
         if (auditMatch?.detalles?.nro_recibo) {
           cuotas_recibos[idx] = {
             nro_recibo: auditMatch.detalles.nro_recibo,
-            nro_operacion: auditMatch.detalles.nro_operacion || auditMatch.detalles.nro_recibo,
+            nro_operacion: auditMatch.detalles.nro_operacion || null,
             fecha: auditMatch.created_at
           };
         } else if (idx === 0 && pag.nro_recibo && !Object.values(cuotas_recibos).some(r => r.nro_recibo === pag.nro_recibo)) {
           cuotas_recibos[idx] = {
             nro_recibo: pag.nro_recibo,
-            nro_operacion: pag.nro_operacion || pag.nro_recibo,
+            nro_operacion: pag.nro_operacion || null,
             fecha: pag.created_at
           };
         }
@@ -260,18 +271,24 @@ export async function POST(request: Request) {
       nroReciboFinal = siguienteCorrelativo;
     }
 
-    const nroOperacionFinal = nro_operacion || (metodo === 'Efectivo en Caja' ? 'N/A' : (comprobante || nroReciboFinal));
+    const nroOperacionFinal = nro_operacion && nro_operacion.trim() !== '' ? nro_operacion.trim() : null;
 
     // CASO ESPECIAL: REGISTRAR CARGO EXTRA (Examen sustitutorio, mora, etc.)
     if (isCargoExtra) {
+      const cargoMetadata = JSON.stringify({
+        concepto: conceptoCargo,
+        nro_recibo: nroReciboFinal,
+        nro_operacion: nroOperacionFinal,
+        metodo_pago: metodo,
+        fecha: new Date().toISOString()
+      });
+
       const extraPayload: Record<string, any> = {
         profile_id: student.id,
         dni_ce: student.dni_ce,
         monto: montoPago,
-        metodo: `CARGO_EXTRA|${conceptoCargo}`,
-        estado: "APROBADO",
-        nro_recibo: nroReciboFinal,
-        nro_operacion: nroOperacionFinal
+        metodo: `CARGO_EXTRA|${cargoMetadata}`,
+        estado: "APROBADO"
       };
 
       const res = await admin.from("pagos").insert(extraPayload).select().single();
@@ -479,17 +496,12 @@ export async function POST(request: Request) {
 
       const updatePayload: Record<string, any> = {
         metodo: metadataMetodo,
-        estado: newTotalDeuda === 0 ? "Completado" : "Pendiente",
-        nro_recibo: nroReciboFinal,
-        nro_operacion: nroOperacionFinal
+        estado: newTotalDeuda === 0 ? "Completado" : "Pendiente"
       };
 
       const { error: updErr } = await admin.from("pagos").update(updatePayload).eq("id", parsedCredito.id);
       if (updErr) {
         console.warn('Advertencia al actualizar pagos:', updErr.message);
-        delete updatePayload.nro_recibo;
-        delete updatePayload.nro_operacion;
-        await admin.from("pagos").update(updatePayload).eq("id", parsedCredito.id);
       }
 
       parsedCredito.cuotas = updatedCuotas;
@@ -845,12 +857,6 @@ export async function DELETE(request: Request) {
     const currentCuotasRecibos = { ...(parsedCredito.cuotas_recibos || {}) };
     delete currentCuotasRecibos[idxToReset];
 
-    // Determinar el último recibo restante tras la anulación
-    const remainingReceipts = Object.values(currentCuotasRecibos)
-      .map((r: any) => r.nro_recibo)
-      .filter(Boolean);
-    const lastRemainingReceipt = remainingReceipts.length > 0 ? remainingReceipts[remainingReceipts.length - 1] : null;
-
     const metadataMetodo = `CREDITO_${parsedCredito.num_credito}|${JSON.stringify({
       num_credito: parsedCredito.num_credito,
       nro_pagare: parsedCredito.nro_pagare || undefined,
@@ -864,16 +870,12 @@ export async function DELETE(request: Request) {
 
     const updateDeletePayload: Record<string, any> = {
       metodo: metadataMetodo,
-      estado: newTotalDeuda === 0 ? "Completado" : "Pendiente",
-      nro_recibo: lastRemainingReceipt,
-      nro_operacion: lastRemainingReceipt
+      estado: newTotalDeuda === 0 ? "Completado" : "Pendiente"
     };
 
     const { error: delUpdErr } = await admin.from("pagos").update(updateDeletePayload).eq("id", parsedCredito.id);
     if (delUpdErr) {
-      delete updateDeletePayload.nro_recibo;
-      delete updateDeletePayload.nro_operacion;
-      await admin.from("pagos").update(updateDeletePayload).eq("id", parsedCredito.id);
+      console.warn('Advertencia al anular pago:', delUpdErr.message);
     }
 
     // Auditoría forense

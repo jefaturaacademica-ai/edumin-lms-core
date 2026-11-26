@@ -29,6 +29,10 @@ export function UserProfileCard({
   const primerApellido = apellidos ? apellidos.trim().split(/\s+/)[0] : '';
   const nombreParaMostrar = [primerNombre, primerApellido].filter(Boolean).join(' ');
 
+  const rolLabel = role === 'SUPERADMIN' 
+    ? 'Superadministrador' 
+    : (role === 'ADMIN' ? 'Administrador' : (role === 'FINANCIERO' ? 'Financiero' : 'Personal institucional'));
+
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
@@ -132,7 +136,7 @@ export function UserProfileCard({
                 : 'bg-emerald-500/15 text-emerald-300 border-emerald-500/25'
             }`}>
               <span className={`size-1.5 rounded-full shrink-0 ${currentView === 'admin' ? 'bg-indigo-400' : 'bg-emerald-400 animate-pulse'}`} />
-              {currentView === 'admin' ? 'Administrador' : 'Estudiante'}
+              {currentView === 'admin' ? rolLabel : 'Estudiante'}
             </span>
 
             <ChevronDown
@@ -163,7 +167,10 @@ export function UserProfileCard({
           ) : (
             <Link
               href="/dashboard"
-              onClick={handleLinkClick}
+              onClick={() => {
+                document.cookie = "edumin_active_view=estudiante; path=/; max-age=31536000; SameSite=Lax";
+                handleLinkClick();
+              }}
               className="flex items-center justify-between px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 transition-colors font-medium group"
             >
               <div className="flex items-center gap-2">
@@ -181,19 +188,22 @@ export function UserProfileCard({
             <div className="flex items-center justify-between px-3 py-2 rounded-xl bg-indigo-500/10 text-indigo-300 font-semibold cursor-default mt-1">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="size-4 text-indigo-400" />
-                <span>Administrador</span>
+                <span>{rolLabel}</span>
               </div>
               <Check className="size-3.5 text-indigo-400" />
             </div>
           ) : (
             <Link
-              href="/admin"
-              onClick={handleLinkClick}
+              href="/admin/catalogo"
+              onClick={() => {
+                document.cookie = "edumin_active_view=admin; path=/; max-age=31536000; SameSite=Lax";
+                handleLinkClick();
+              }}
               className="flex items-center justify-between px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 transition-colors font-medium mt-1 group"
             >
               <div className="flex items-center gap-2">
                 <ShieldCheck className="size-4 text-slate-400 group-hover:text-indigo-400 transition-colors" />
-                <span>Administrador</span>
+                <span>{rolLabel}</span>
               </div>
               <span className="flex items-center justify-center p-1 rounded-md text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 group-hover:bg-indigo-500/20 transition-all">
                 <ArrowRight className="size-3.5" />
