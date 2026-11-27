@@ -306,7 +306,46 @@ export default function CertificacionesAdminPage() {
   const [editorDisenoCoordenadas, setEditorDisenoCoordenadas] = useState<DisenoCoordenadas>(DISENO_DEFAULT_HORIZONTAL);
   const [elementoSeleccionado, setElementoSeleccionado] = useState<keyof DisenoCoordenadas>('estudiante');
   const [zoomEditor, setZoomEditor] = useState<number>(1);
+  const [mostrarSimulacionEditor, setMostrarSimulacionEditor] = useState<boolean>(false);
   const pinchZoomRef = useRef<{ dist: number; startZoom: number } | null>(null);
+  const previewViewportRef = useRef<HTMLDivElement | null>(null);
+
+  // Interceptar Ctrl+rueda / pellizco de trackpad y 2 dedos con passive: false para evitar zoom global del navegador
+  useEffect(() => {
+    const el = previewViewportRef.current;
+    if (!el || activeTab !== 'editor') return;
+
+    const handleNativeWheel = (e: WheelEvent) => {
+      if (e.ctrlKey || e.metaKey) {
+        e.preventDefault();
+        e.stopPropagation();
+        setZoomEditor((prev) =>
+          Math.min(3, Math.max(0.5, Number((prev - e.deltaY * 0.0025).toFixed(2))))
+        );
+      }
+    };
+
+    const handleNativeTouchMove = (e: TouchEvent) => {
+      if (e.touches.length === 2 && pinchZoomRef.current) {
+        e.preventDefault();
+        e.stopPropagation();
+        const dx = e.touches[0].clientX - e.touches[1].clientX;
+        const dy = e.touches[0].clientY - e.touches[1].clientY;
+        const newDist = Math.hypot(dx, dy);
+        const ratio = newDist / Math.max(1, pinchZoomRef.current.dist);
+        setZoomEditor(
+          Math.min(3, Math.max(0.5, Number((pinchZoomRef.current.startZoom * ratio).toFixed(2))))
+        );
+      }
+    };
+
+    el.addEventListener('wheel', handleNativeWheel, { passive: false });
+    el.addEventListener('touchmove', handleNativeTouchMove, { passive: false });
+    return () => {
+      el.removeEventListener('wheel', handleNativeWheel);
+      el.removeEventListener('touchmove', handleNativeTouchMove);
+    };
+  }, [activeTab]);
 
   // Medidas físicas de la hoja A4 (Landscape: 29.7 x 21.0 cm | Portrait: 21.0 x 29.7 cm)
   const anchoHojaCm = editorOrientacion === 'vertical' ? 21.0 : 29.7;
@@ -948,6 +987,22 @@ export default function CertificacionesAdminPage() {
     }
   };
 
+  // Sincronizar el ID/slug del modelo en la URL (?modelo=...) para sobrevivir recargas (F5)
+  const actualizarUrlModelo = useCallback((modeloId: string | null) => {
+    if (typeof window === 'undefined') return;
+    try {
+      const url = new URL(window.location.href);
+      if (modeloId) {
+        url.searchParams.set('modelo', modeloId);
+      } else {
+        url.searchParams.delete('modelo');
+      }
+      window.history.replaceState({}, '', url.toString());
+    } catch {
+      // Ignorar errores de URL
+    }
+  }, []);
+
   // Cargar modelo seleccionado al editor visual
   const cargarModeloEnEditor = (modelo: ModeloCertificado) => {
     if (activeTab === 'editor' && modeloSeleccionadoId !== modelo.id && hayCambiosSinGuardar()) {
@@ -957,6 +1012,7 @@ export default function CertificacionesAdminPage() {
     }
     const coordsFinales = modelo.disenoCoordenadas || (modelo.orientacion === 'vertical' ? { ...DISENO_DEFAULT_VERTICAL } : { ...DISENO_DEFAULT_HORIZONTAL });
     setModeloSeleccionadoId(modelo.id);
+    actualizarUrlModelo(modelo.id);
     setEditorNombre(modelo.nombre);
     setEditorTipo(modelo.tipo);
     setEditorOrientacion(modelo.orientacion || 'horizontal');
@@ -982,8 +1038,6 @@ export default function CertificacionesAdminPage() {
     setActiveTab('editor');
   };
 
-
-
   const iniciarNuevoModelo = () => {
     if (activeTab === 'editor' && hayCambiosSinGuardar()) {
       if (!window.confirm('¿Deseas descartar la edición actual para iniciar un nuevo modelo en blanco?')) {
@@ -1003,6 +1057,7 @@ export default function CertificacionesAdminPage() {
     };
 
     setModeloSeleccionadoId(null);
+    actualizarUrlModelo(null);
     setEditorNombre(nombreNuevo);
     setEditorTipo('DIPLOMA');
     setEditorOrientacion('horizontal');
@@ -1028,6 +1083,18 @@ export default function CertificacionesAdminPage() {
     ));
     setActiveTab('editor');
   };
+
+  // Al recargar la página (F5) en la pestaña 'editor', restaurar automáticamente el modelo indicado en ?modelo=<id>
+  useEffect(() => {
+    if (typeof window === 'undefined' || activeTab !== 'editor' || modeloSeleccionadoId) return;
+    const modeloParam = new URLSearchParams(window.location.search).get('modelo');
+    if (!modeloParam) return;
+    const encontrado = modelosCertificados.find(m => m.id === modeloParam);
+    if (encontrado) {
+      cargarModeloEnEditor(encontrado);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [modelosCertificados, activeTab, modeloSeleccionadoId]);
 
   const abrirPrevisualizacionModelo = (modelo: ModeloCertificado) => {
     setModeloParaPrevisualizar(modelo);
@@ -1163,6 +1230,7 @@ export default function CertificacionesAdminPage() {
       };
       listaActualizada = [nuevoModelo, ...modelosCertificados];
       setModeloSeleccionadoId(nuevoId);
+      actualizarUrlModelo(nuevoId);
       setMensajeExito(`¡Nuevo modelo guardado y asignado a: ${nombreRecursoFinal}!`);
     }
 
@@ -1936,9 +2004,9 @@ export default function CertificacionesAdminPage() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
                 
-                {/* Panel de Configuración Lateral */}
+                {/* Panel de Configuración Lateral (Scroll independiente) */}
                 <form
                   onSubmit={guardarModeloEnGaleria}
                   onKeyDown={(e) => {
@@ -1946,7 +2014,7 @@ export default function CertificacionesAdminPage() {
                       e.preventDefault();
                     }
                   }}
-                  className="lg:col-span-5 space-y-4 bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm"
+                  className="lg:col-span-5 space-y-4 bg-white dark:bg-slate-900 p-5 sm:p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm lg:max-h-[calc(100vh-9.5rem)] lg:overflow-y-auto"
                 >
                   <h4 className="text-xs font-black uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-1.5">
                     <Settings className="w-3.5 h-3.5" /> Configuración y asignación
@@ -2816,23 +2884,37 @@ export default function CertificacionesAdminPage() {
                   </div>
                 </form>
 
-                {/* Columna de Previsualización A4 Fija / Sticky (Permite hacer scroll libre en la configuración) */}
-                <div className="lg:col-span-7 lg:sticky lg:top-4 self-start">
-                  <div className="bg-slate-950 p-5 sm:p-6 rounded-3xl flex flex-col items-center justify-start border border-slate-800 shadow-xl max-h-[calc(100vh-2rem)] overflow-y-auto">
-                    <div className="w-full flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 px-2">
-                    <div>
-                      <span className="text-[10px] tabular-nums text-slate-400 uppercase tracking-widest flex items-center gap-1.5">
-                        <Eye className="w-3.5 h-3.5 text-indigo-400" /> Vista previa lienzo A4 {editorOrientacion === 'vertical' ? 'Vertical (21.0×29.7 cm)' : 'Horizontal (29.7×21.0 cm)'}
-                      </span>
-                      <p className="text-[11px] text-slate-500">
-                        Arrastra cualquier variable directamente sobre el lienzo para ubicarla libremente
-                      </p>
-                    </div>
+                {/* Columna de Previsualización A4 Independiente (Scroll propio y máxima altura para el lienzo) */}
+                <div className="lg:col-span-7 lg:h-[calc(100vh-9.5rem)] flex flex-col">
+                  <div className="bg-slate-950 p-4 sm:p-5 rounded-3xl flex flex-col border border-slate-800 shadow-xl h-full overflow-hidden">
+                    <div className="w-full flex flex-wrap items-center justify-between gap-2 mb-3 shrink-0">
+                      <div>
+                        <span className="text-[10px] tabular-nums text-slate-400 uppercase tracking-widest flex items-center gap-1.5">
+                          <Eye className="w-3.5 h-3.5 text-indigo-400" /> Vista previa lienzo A4 {editorOrientacion === 'vertical' ? 'Vertical (21.0×29.7 cm)' : 'Horizontal (29.7×21.0 cm)'}
+                        </span>
+                        <p className="text-[11px] text-slate-500">
+                          Arrastra cualquier variable o pellizca para hacer zoom
+                        </p>
+                      </div>
 
-                    <button
-                      type="button"
-                      disabled={descargandoPdf}
-                      onClick={async () => {
+                      <div className="flex flex-wrap items-center gap-2">
+                        <button
+                          type="button"
+                          onClick={() => setMostrarSimulacionEditor((v) => !v)}
+                          className={`px-3 py-1.5 rounded-xl text-xs font-bold border transition cursor-pointer flex items-center gap-1.5 ${
+                            mostrarSimulacionEditor
+                              ? 'bg-indigo-600 border-indigo-500 text-white'
+                              : 'bg-slate-900 border-slate-700 text-slate-300 hover:bg-slate-800'
+                          }`}
+                        >
+                          <Type className="w-3.5 h-3.5" />
+                          <span>{mostrarSimulacionEditor ? 'Ocultar datos de prueba' : 'Simular datos'}</span>
+                        </button>
+
+                        <button
+                          type="button"
+                          disabled={descargandoPdf}
+                          onClick={async () => {
                         try {
                           setDescargandoPdf(true);
                           const esNombreAlcanceGlobal = (nombre?: string) => 
@@ -2881,12 +2963,14 @@ export default function CertificacionesAdminPage() {
                       title="Descargar este modelo de certificado en PDF A4 exacto"
                     >
                       {descargandoPdf ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Download className="w-3.5 h-3.5" />}
-                      <span>Descargar PDF</span>
-                    </button>
-                  </div>
+                          <span>Descargar PDF</span>
+                        </button>
+                      </div>
+                    </div>
 
-                  {/* Barra de Simulación Interactiva (Nombres manuales y Selección de programas reales) */}
-                  <div className="w-full mb-4 p-3 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-2.5">
+                  {/* Barra de Simulación Interactiva colapsable para dar máxima altura al lienzo */}
+                  {mostrarSimulacionEditor && (
+                  <div className="w-full mb-3 p-3 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-2.5 shrink-0 max-h-56 overflow-y-auto">
                     {/* Simulación manual de nombre */}
                     <div>
                       <div className="flex items-center justify-between mb-1">
@@ -3064,9 +3148,10 @@ export default function CertificacionesAdminPage() {
                       </div>
                     )}
                   </div>
+                  )}
 
                   {/* Controles de zoom para edición milimétrica */}
-                  <div className="w-full mb-2.5 flex flex-wrap items-center justify-between gap-2 px-3 py-1.5 bg-slate-900/90 border border-slate-800 rounded-xl">
+                  <div className="w-full mb-2.5 flex flex-wrap items-center justify-between gap-2 px-3 py-1.5 bg-slate-900/90 border border-slate-800 rounded-xl shrink-0">
                     <span className="text-[11px] font-medium text-slate-400">
                       Pellizca con dos dedos o usa Ctrl + rueda para acercar el certificado
                     </span>
@@ -3115,37 +3200,18 @@ export default function CertificacionesAdminPage() {
                             ? (catalogoTalleres[0]?.titulo || 'PRIMEROS AUXILIOS Y EMERGENCIAS MINERAS')
                             : (catalogoDiplomados[0]?.titulo || 'SEGURIDAD Y SALUD OCUPACIONAL EN MINERÍA'))
                     );
-                    const baseWidthPx = editorOrientacion === 'vertical' ? 384 : 576;
+                    const baseWidthPx = editorOrientacion === 'vertical' ? 420 : 680;
                     const zoomedWidthPx = Math.round(baseWidthPx * zoomEditor);
                     return (
                       <div
-                        className="w-full max-h-[74vh] overflow-auto rounded-2xl border border-slate-800/80 bg-slate-950/60 p-3 flex items-start justify-center"
+                        ref={previewViewportRef}
+                        className="w-full flex-1 min-h-0 overflow-auto rounded-2xl border border-slate-800/80 bg-slate-950/60 p-3 flex items-start justify-center"
                         style={{ touchAction: 'pan-x pan-y' }}
-                        onWheel={(e) => {
-                          if (e.ctrlKey || e.metaKey) {
-                            e.preventDefault();
-                            setZoomEditor((prev) =>
-                              Math.min(3, Math.max(0.5, Number((prev - e.deltaY * 0.0025).toFixed(2))))
-                            );
-                          }
-                        }}
                         onTouchStart={(e) => {
                           if (e.touches.length === 2) {
                             const dx = e.touches[0].clientX - e.touches[1].clientX;
                             const dy = e.touches[0].clientY - e.touches[1].clientY;
                             pinchZoomRef.current = { dist: Math.hypot(dx, dy), startZoom: zoomEditor };
-                          }
-                        }}
-                        onTouchMove={(e) => {
-                          if (e.touches.length === 2 && pinchZoomRef.current) {
-                            e.preventDefault();
-                            const dx = e.touches[0].clientX - e.touches[1].clientX;
-                            const dy = e.touches[0].clientY - e.touches[1].clientY;
-                            const newDist = Math.hypot(dx, dy);
-                            const ratio = newDist / Math.max(1, pinchZoomRef.current.dist);
-                            setZoomEditor(
-                              Math.min(3, Math.max(0.5, Number((pinchZoomRef.current.startZoom * ratio).toFixed(2))))
-                            );
                           }
                         }}
                         onTouchEnd={(e) => {
