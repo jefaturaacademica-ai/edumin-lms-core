@@ -1022,6 +1022,7 @@ export default function AvanzaCertificateRenderer({
               fontWeight: cfg.estudiante.negrita ? 'bold' : 'normal',
               fontStyle: cfg.estudiante.cursiva && fuenteSoportaCursiva(cfg.estudiante.fuente) ? 'italic' : 'normal',
               textDecoration: cfg.estudiante.subrayado ? 'underline' : 'none',
+              lineHeight: 1,
               textAlign: cfg.estudiante.alineacion
             }}
           >
@@ -1115,6 +1116,7 @@ export default function AvanzaCertificateRenderer({
             style={{ 
               fontFamily: obtenerFontFamily(cfg.horas.fuente, '"Segoe UI", Arial, sans-serif'),
               fontSize: calcularTamanoCqw(tamanoHorasPt, orientacion),
+              lineHeight: 1,
               textAlign: cfg.horas.alineacion 
             }}
           >
@@ -1161,6 +1163,7 @@ export default function AvanzaCertificateRenderer({
             style={{ 
               fontFamily: obtenerFontFamily(cfg.creditos.fuente, '"Segoe UI", Arial, sans-serif'),
               fontSize: calcularTamanoCqw(tamanoCreditosPt, orientacion),
+              lineHeight: 1,
               textAlign: cfg.creditos.alineacion 
             }}
           >
@@ -1244,6 +1247,7 @@ export default function AvanzaCertificateRenderer({
               fontWeight: cfg.fecha.negrita ? 'bold' : 'normal',
               fontStyle: cfg.fecha.cursiva && fuenteSoportaCursiva(cfg.fecha.fuente) ? 'italic' : 'normal',
               textDecoration: cfg.fecha.subrayado ? 'underline' : 'none',
+              lineHeight: 1,
               textAlign: cfg.fecha.alineacion
             }}
           >
@@ -1289,6 +1293,7 @@ export default function AvanzaCertificateRenderer({
               fontWeight: cfg.codigo.negrita ? 'bold' : 'normal',
               fontStyle: cfg.codigo.cursiva && fuenteSoportaCursiva(cfg.codigo.fuente) ? 'italic' : 'normal',
               textDecoration: cfg.codigo.subrayado ? 'underline' : 'none',
+              lineHeight: 1,
               textAlign: cfg.codigo.alineacion
             }}
           >

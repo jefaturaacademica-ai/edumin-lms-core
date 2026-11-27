@@ -464,9 +464,11 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
       progDrawX = progX + maxProgW;
     }
 
-    const lineSpacing = progFontSize * (cfg.programa.interlineado || 1.25);
+    const interlineadoProg = cfg.programa.interlineado || 1.25;
+    const lineSpacing = progFontSize * interlineadoProg;
+    const halfLeadingProg = ((interlineadoProg - 1) * progFontSize) / 2;
     progLineas.forEach((lin, idx) => {
-      drawStyledText(ctx, lin, progDrawX, progY + (idx * lineSpacing), progFontSize, cfg.programa.subrayado);
+      drawStyledText(ctx, lin, progDrawX, progY + halfLeadingProg + (idx * lineSpacing), progFontSize, cfg.programa.subrayado);
     });
   }
 
@@ -543,13 +545,14 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
 
     const qrX = (cfg.qr.x / 100) * canvasW;
     const qrTop = (cfg.qr.y / 100) * canvasH;
+    const qrPad = Math.round(canvasW * 0.0035);
 
-    // Contenedor blanco para el QR
+    // Contenedor blanco para el QR (misma esquina superior izquierda y tamaño exacto que la vista previa)
     ctx.fillStyle = '#ffffff';
     ctx.strokeStyle = '#e2e8f0';
     ctx.lineWidth = 2;
     ctx.beginPath();
-    ctx.roundRect(qrX - 8, qrTop - 8, qrFinalSize + 16, qrFinalSize + 16, 8);
+    ctx.roundRect(qrX, qrTop, qrFinalSize, qrFinalSize, 8);
     ctx.fill();
     ctx.stroke();
 
@@ -568,7 +571,7 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
         qrImg.onload = () => resolve();
         qrImg.onerror = () => resolve();
       });
-      ctx.drawImage(qrImg, qrX, qrTop, qrFinalSize, qrFinalSize);
+      ctx.drawImage(qrImg, qrX + qrPad, qrTop + qrPad, qrFinalSize - (qrPad * 2), qrFinalSize - (qrPad * 2));
     } catch (e) {
       console.error('Error dibujando QR en PDF:', e);
     }
