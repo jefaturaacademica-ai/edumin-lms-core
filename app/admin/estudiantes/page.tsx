@@ -981,24 +981,15 @@ export default function AdminEstudiantesPage() {
                               </span>
                             </td>
                             <td className="py-3 px-4 text-center">
-                              <div className="flex items-center justify-center gap-1.5">
-                                <button
-                                  onClick={() => setAlumnoSeleccionado(est)}
-                                  className="inline-flex items-center gap-1 bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-950/60 dark:hover:bg-indigo-900/60 text-indigo-700 dark:text-indigo-300 px-2.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer border border-indigo-200/60 dark:border-indigo-800/60"
-                                  title="Ver y editar ficha completa del estudiante"
-                                >
-                                  <Pencil className="w-3.5 h-3.5" />
-                                  <span>Editar</span>
-                                </button>
-                                <button
-                                  onClick={() => setAlumnoSeleccionado(est)}
-                                  className="inline-flex items-center gap-1 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 px-2.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer"
-                                  title="Ver Ficha 360°"
-                                >
-                                  <Eye className="w-3.5 h-3.5 text-slate-400" />
-                                  <span>Ficha</span>
-                                </button>
-                              </div>
+                              <button
+                                type="button"
+                                onClick={() => setAlumnoSeleccionado(est)}
+                                className="inline-flex items-center gap-1.5 bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-950/60 dark:hover:bg-indigo-900/60 text-indigo-700 dark:text-indigo-300 px-3 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer border border-indigo-200/60 dark:border-indigo-800/60"
+                                title="Ver y editar ficha completa del estudiante"
+                              >
+                                <Eye className="w-3.5 h-3.5" />
+                                <span>Ver ficha</span>
+                              </button>
                             </td>
                           </tr>
                         ))

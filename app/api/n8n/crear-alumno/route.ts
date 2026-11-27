@@ -56,6 +56,7 @@ export async function POST(request: Request) {
         paquete_adquirido: paqueteUpper,
         diplomado_1: programa || 'Diplomado en Seguridad y Salud Ocupacional en Minería',
         cuotas_pagadas: 1, // Entra con la 1ra cuota pagada
+        created_at: new Date().toISOString(),
         cupos_creditos: {
           diplomados: { asignados: cuposDipBase, adicionales: 0, canjeados: 0 },
           cursos: { asignados: cuposCurBase, adicionales: 0, canjeados: 0 },

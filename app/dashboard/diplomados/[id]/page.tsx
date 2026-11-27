@@ -1790,6 +1790,7 @@ export default function ReproductorClasesPage() {
                       onToggleRetroalimentacion={() => setMostrarRetroalimentacion(prev => !prev)}
                       fechaInicio={tiempoRegistroExamen.inicio}
                       fechaFin={tiempoRegistroExamen.fin}
+                      certificadoHref="/dashboard/certificados?tab=modulares"
                       whatsappSustitutorioHref={`https://wa.me/51980694497?text=${encodeURIComponent(`Hola EDUMIN, revisé mi intento en el examen modular ${(examenActivoModal.moduloIdx + 1).toString().padStart(2, '0')} con nota ${notaFinalMostrar}/20 y deseo pagar los S/ 25.00 para rendir el examen sustitutorio.`)}`}
                       formatearTexto={formatearTextoCientifico}
                     />

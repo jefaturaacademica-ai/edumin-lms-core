@@ -274,6 +274,7 @@ interface ExamenResultadoYRetroalimentacionProps {
   mostrarRetroalimentacion: boolean;
   onToggleRetroalimentacion: () => void;
   whatsappSustitutorioHref: string;
+  certificadoHref?: string;
   fechaInicio?: string | null;
   fechaFin?: string | null;
   formatearTexto?: (texto: string) => React.ReactNode;
@@ -325,6 +326,7 @@ export function ExamenResultadoYRetroalimentacion({
   mostrarRetroalimentacion,
   onToggleRetroalimentacion,
   whatsappSustitutorioHref,
+  certificadoHref = '/dashboard/certificados',
   fechaInicio = null,
   fechaFin = null,
   formatearTexto = (texto: string) => texto
@@ -363,10 +365,6 @@ export function ExamenResultadoYRetroalimentacion({
                   }`}
                 >
                   {aprobado ? 'Examen aprobado' : 'Evaluación no aprobada'}
-                </span>
-                <span className="text-xs text-slate-400">·</span>
-                <span className={`text-xs font-medium ${esOscuro ? 'text-slate-300' : 'text-slate-600'}`}>
-                  Mínimo {notaMinima}/20
                 </span>
               </div>
               <h3
@@ -466,7 +464,7 @@ export function ExamenResultadoYRetroalimentacion({
 
         {aprobado ? (
           <Link
-            href="/dashboard/certificados"
+            href={certificadoHref}
             className="h-10 px-4 rounded-xl text-xs sm:text-sm font-bold bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm transition-colors inline-flex items-center gap-2 cursor-pointer"
           >
             <Award className="w-4 h-4 shrink-0" />

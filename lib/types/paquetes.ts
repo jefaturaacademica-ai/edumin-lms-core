@@ -7,6 +7,8 @@ export interface PaqueteDefinicion {
   cuotasSugeridas: number;
   creditosDiplomados: number;
   creditosCursos: number;
+  duracionMeses?: number; // Duración predeterminada de acceso a la plataforma (en meses)
+  diplomadosRenovables?: boolean; // Renovación automática de créditos de diplomado en bloques sucesivos (tipo Ilimitado)
   modulares: number;
   diplomas: number;
   certCip: boolean;
@@ -28,6 +30,8 @@ export const PAQUETES_DEFAULT: Record<string, PaqueteDefinicion> = {
     cuotasSugeridas: 3,
     creditosDiplomados: 1,
     creditosCursos: 3,
+    duracionMeses: 12,
+    diplomadosRenovables: false,
     modulares: 3,
     diplomas: 1,
     certCip: false,
@@ -47,6 +51,8 @@ export const PAQUETES_DEFAULT: Record<string, PaqueteDefinicion> = {
     cuotasSugeridas: 3,
     creditosDiplomados: 1,
     creditosCursos: 5,
+    duracionMeses: 12,
+    diplomadosRenovables: false,
     modulares: 3,
     diplomas: 1,
     certCip: true,
@@ -66,6 +72,8 @@ export const PAQUETES_DEFAULT: Record<string, PaqueteDefinicion> = {
     cuotasSugeridas: 5,
     creditosDiplomados: 3,
     creditosCursos: 15,
+    duracionMeses: 24,
+    diplomadosRenovables: true,
     modulares: 10,
     diplomas: 5,
     certCip: true,

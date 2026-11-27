@@ -64,6 +64,9 @@ export function calculateEduminCredits(params: {
   cursosConsumidos?: number;
   creditosExtraDiplomados?: number;
   creditosExtraCursos?: number;
+  diplomadosRenovables?: boolean;
+  creditosDiplomadosBase?: number;
+  creditosCursosBase?: number;
 }): EduminCreditsCalculation {
   const rawPkg = (params.paqueteAdquirido || 'COMPLETO').toUpperCase();
   const paquete: PaqueteAdquirido = (PAQUETES_ADQUIRIDOS as readonly string[]).includes(rawPkg)
@@ -104,33 +107,32 @@ export function calculateEduminCredits(params: {
       dipLiberados = 1;
       curLiberados = 5;
     }
-  } else if (paquete === 'ILIMITADO') {
-    curContratados = 15;
-    dipContratados = 3;
+  } else if (paquete === 'ILIMITADO' || params.diplomadosRenovables) {
+    const baseDip = Math.max(1, Number(params.creditosDiplomadosBase ?? (paquete === 'ILIMITADO' ? 3 : 1)));
+    const baseCur = Math.max(0, Number(params.creditosCursosBase ?? (paquete === 'ILIMITADO' ? 15 : 3)));
+    curContratados = baseCur;
+    dipContratados = baseDip;
 
     if (cuotasPagadas === 0) {
       dipLiberados = 0;
       curLiberados = 0;
     } else if (esContado) {
-      curLiberados = 15;
-      dipLiberados = 3;
+      curLiberados = baseCur;
+      dipLiberados = baseDip;
 
-      // Regla especial ILIMITADO (al contado o sin deuda):
-      // Una vez que consume sus 3 créditos iniciales de diplomados, se liberan 3 créditos más sucesivamente
-      if (dipConsumidos >= 3) {
-        const tramosExtras = Math.floor((dipConsumidos - 3) / 3) + 1;
-        dipLiberados += tramosExtras * 3;
+      // Regla de renovación automática (tipo ILIMITADO): al consumir el bloque inicial de diplomados, se renuevan bloques sucesivos
+      if (dipConsumidos >= baseDip) {
+        const tramosExtras = Math.floor((dipConsumidos - baseDip) / baseDip) + 1;
+        dipLiberados += tramosExtras * baseDip;
         dipContratados = Math.max(dipContratados, dipLiberados);
       }
     } else {
-      curLiberados = Math.min(15, Math.max(5, cuotasPagadas * 3));
-      // En cuotas: 1er pago = 1 diplomado, 2do pago = 2 diplomados, 3er pago = 3 diplomados y así sucesivamente
-      dipLiberados = cuotasPagadas * 1;
+      curLiberados = baseCur > 0 ? Math.min(baseCur, Math.max(Math.min(5, baseCur), cuotasPagadas * 3)) : 0;
+      dipLiberados = Math.min(baseDip, cuotasPagadas * 1);
 
-      // Regla especial ILIMITADO: cuando consume sus diplomados liberados (al menos 3), se liberan bloques sucesivos de 3
-      if (dipConsumidos >= 3) {
-        const tramosExtras = Math.floor((dipConsumidos - 3) / 3) + 1;
-        dipLiberados += tramosExtras * 3;
+      if (dipConsumidos >= baseDip) {
+        const tramosExtras = Math.floor((dipConsumidos - baseDip) / baseDip) + 1;
+        dipLiberados += tramosExtras * baseDip;
       }
       dipContratados = Math.max(dipContratados, dipLiberados);
     }

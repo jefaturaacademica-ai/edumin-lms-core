@@ -216,7 +216,6 @@ export async function POST(request: Request) {
         // C. Insertar perfil en Supabase
         const insertPayload: Record<string, any> = {
           id: studentId,
-          dni_ce: normalizedDni,
           numero_documento: normalizedDni,
           tipo_documento: docTipo,
           nombres: nombresTrim,
@@ -234,7 +233,8 @@ export async function POST(request: Request) {
           diplomados: `DIPLOMADOS_LIST|${JSON.stringify(diplomadosJson)}`,
           cursos: `CURSOS_LIST|${JSON.stringify(cursosJson)}`,
           debe_cambiar_password: true,
-          fecha_nacimiento: item.fecha_nacimiento ? String(item.fecha_nacimiento).trim() : null
+          fecha_nacimiento: item.fecha_nacimiento ? String(item.fecha_nacimiento).trim() : null,
+          created_at: new Date().toISOString()
         };
 
         const { error: profileErr } = await admin

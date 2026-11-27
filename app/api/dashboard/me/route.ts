@@ -527,14 +527,26 @@ export async function GET() {
     cursos_json = await enriquecerCursosConTipoCatalogo(admin, cursos_json);
     await enriquecerConNotasModulos(admin, profile.dni_ce, diplomados_json, cursos_json);
 
-    // Cálculo centralizado de Créditos EDUMIN desde `profiles.cupos_creditos`
-    const cupos = parseCuposCreditosFromProfile(profile);
+    // Cálculo centralizado de Créditos EDUMIN desde `profiles.cupos_creditos` y configuración de paquetes
+    const { obtenerConfiguracionPaquetes } = await import('@/lib/services/paquetesService');
+    const paquetesMap = await obtenerConfiguracionPaquetes().catch(() => ({} as Record<string, any>));
+    const pkgKey = String(profile.paquete_adquirido || 'COMPLETO').toUpperCase().trim();
+    const pkgCfg = paquetesMap[pkgKey];
+
+    const cupos = parseCuposCreditosFromProfile(profile, pkgCfg ? {
+      diplomadosRenovables: pkgCfg.diplomadosRenovables,
+      creditosDiplomadosBase: pkgCfg.creditosDiplomados,
+      creditosCursosBase: pkgCfg.creditosCursos,
+    } : undefined);
     const tieneDatosEstudiante = Boolean(
       profile.paquete_adquirido || 
       (profile.diplomados && profile.diplomados !== '[]' && profile.diplomados !== '') ||
       cupos.diplomados.adicionales > 0 ||
       cupos.cursos.adicionales > 0
     );
+
+    const effectivePkgKey = profile.paquete_adquirido ? pkgKey : (esAdmin && !tieneDatosEstudiante ? 'ILIMITADO' : 'COMPLETO');
+    const effectivePkgCfg = paquetesMap[effectivePkgKey];
 
     const paymentState = derivePaymentStateForCredits({
       pagos: rawPagos,
@@ -543,14 +555,17 @@ export async function GET() {
     });
 
     const eduminCredits = calculateEduminCredits({
-      paqueteAdquirido: profile.paquete_adquirido || (esAdmin && !tieneDatosEstudiante ? 'ILIMITADO' : 'COMPLETO'),
+      paqueteAdquirido: effectivePkgKey,
       cuotasPagadas: paymentState.cuotasPagadas,
       cuotasTotales: paymentState.cuotasTotales,
       tipoPago: paymentState.tipoPago,
       diplomadosConsumidos: cupos.diplomados.canjeados,
       cursosConsumidos: filtrarCursosReales(cursos_json).length,
       creditosExtraDiplomados: cupos.diplomados.adicionales,
-      creditosExtraCursos: cupos.cursos.adicionales
+      creditosExtraCursos: cupos.cursos.adicionales,
+      diplomadosRenovables: effectivePkgCfg?.diplomadosRenovables,
+      creditosDiplomadosBase: effectivePkgCfg?.creditosDiplomados,
+      creditosCursosBase: effectivePkgCfg?.creditosCursos,
     });
 
     const fotoPerfilAutenticado = await resolverFotoPerfil(admin, profile);

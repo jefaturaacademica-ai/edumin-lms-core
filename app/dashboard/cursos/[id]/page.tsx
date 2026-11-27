@@ -1275,6 +1275,7 @@ export default function ReproductorCursoPage() {
                     onToggleRetroalimentacion={() => setMostrarRetroalimentacion(prev => !prev)}
                     fechaInicio={tiempoRegistroExamen.inicio}
                     fechaFin={tiempoRegistroExamen.fin}
+                    certificadoHref="/dashboard/certificados?tab=cursos"
                     whatsappSustitutorioHref={`https://wa.me/51980694497?text=${encodeURIComponent(`Hola EDUMIN, revisé mi intento en el Examen de ${cursoEstructurado.titulo} con nota ${resultadoExamen.nota}/20 y deseo pagar los S/ 25.00 para rendir el Examen Sustitutorio.`)}`}
                   />
                 )}

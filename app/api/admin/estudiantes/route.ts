@@ -1345,7 +1345,6 @@ export async function POST(request: Request) {
     // 4. Insertar en profiles usando `roles` y `cupos_creditos` JSONB
     const insertPayload: Record<string, any> = {
       id: studentId,
-      dni_ce: normalizedDni,
       numero_documento: normalizedDni,
       tipo_documento: docTipo,
       nombres: nombres.trim(),
@@ -1363,7 +1362,8 @@ export async function POST(request: Request) {
       diplomados: diplomadosSerialized,
       cursos: cursosSerialized,
       debe_cambiar_password: true,
-      fecha_nacimiento: fecha_nacimiento ? fecha_nacimiento.trim() : null
+      fecha_nacimiento: fecha_nacimiento ? fecha_nacimiento.trim() : null,
+      created_at: new Date().toISOString()
     };
 
     const { data: newProfile, error: profileErr } = await admin

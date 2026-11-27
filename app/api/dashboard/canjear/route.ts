@@ -47,7 +47,14 @@ export async function POST(request: Request) {
     // 2. Verificar Créditos Disponibles desde `profiles.cupos_creditos` y pagos reales
     const diplomadosActuales: DiplomadoJSON[] = parseDiplomadosFromProfile(profile);
     const cursosPerfilActuales: CursoJSON[] = parseCursosFromProfile(profile);
-    const cuposActuales = parseCuposCreditosFromProfile(profile);
+    const { obtenerConfiguracionPaquetes } = await import('@/lib/services/paquetesService');
+    const paquetesMap = await obtenerConfiguracionPaquetes().catch(() => ({} as Record<string, any>));
+    const pkgCfg = paquetesMap[String(profile.paquete_adquirido || 'COMPLETO').toUpperCase().trim()];
+    const cuposActuales = parseCuposCreditosFromProfile(profile, pkgCfg ? {
+      diplomadosRenovables: pkgCfg.diplomadosRenovables,
+      creditosDiplomadosBase: pkgCfg.creditosDiplomados,
+      creditosCursosBase: pkgCfg.creditosCursos,
+    } : undefined);
 
     let rawPagos: any[] = [];
     if (profile.dni_ce) {

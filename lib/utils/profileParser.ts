@@ -350,10 +350,18 @@ export function parseCreditosExtraFromProfile(profile: any): { creditosExtraDipl
  * Obtiene la estructura centralizada `cupos_creditos` desde `profiles`,
  * con respaldo automático para perfiles aún no migrados.
  */
-export function parseCuposCreditosFromProfile(profile: any): CuposCreditosJSON {
+export function parseCuposCreditosFromProfile(
+  profile: any,
+  options?: {
+    diplomadosRenovables?: boolean;
+    creditosDiplomadosBase?: number;
+    creditosCursosBase?: number;
+  }
+): CuposCreditosJSON {
   const pkg = String(profile?.paquete_adquirido || 'COMPLETO').toUpperCase();
-  const defaultDip = pkg === 'ILIMITADO' ? 3 : 1;
-  const defaultCur = pkg === 'ILIMITADO' ? 15 : pkg === 'FULL' ? 5 : 3;
+  const defaultDip = options?.creditosDiplomadosBase ?? (pkg === 'ILIMITADO' ? 3 : 1);
+  const defaultCur = options?.creditosCursosBase ?? (pkg === 'ILIMITADO' ? 15 : pkg === 'FULL' ? 5 : 3);
+  const esRenovable = options?.diplomadosRenovables ?? (pkg === 'ILIMITADO' || Boolean(profile?.cupos_creditos?.diplomados_renovables));
 
   const parsedDipCount = parseDiplomadosFromProfile(profile).length;
   const parsedCursosRealesCount = filtrarCursosReales(parseCursosFromProfile(profile)).length;
@@ -367,10 +375,11 @@ export function parseCuposCreditosFromProfile(profile: any): CuposCreditosJSON {
       ? parsedDipCount
       : Math.max(0, Number(existing.diplomados?.canjeados ?? 0));
 
-    // Regla especial ILIMITADO: renovación automática de diplomados en bloques sucesivos de 3
-    if (pkg === 'ILIMITADO' && canjeadosDip >= 3) {
-      const tramosExtras = Math.floor((canjeadosDip - 3) / 3) + 1;
-      asignadosDip = Math.max(asignadosDip, 3 + tramosExtras * 3);
+    // Regla de renovación automática de diplomados en bloques sucesivos (ej. ILIMITADO o paquetes con diplomadosRenovables)
+    const bloqueBase = Math.max(1, Number(options?.creditosDiplomadosBase ?? (pkg === 'ILIMITADO' ? 3 : defaultDip)));
+    if (esRenovable && canjeadosDip >= bloqueBase) {
+      const tramosExtras = Math.floor((canjeadosDip - bloqueBase) / bloqueBase) + 1;
+      asignadosDip = Math.max(asignadosDip, bloqueBase + tramosExtras * bloqueBase);
     }
 
     return {
@@ -391,9 +400,10 @@ export function parseCuposCreditosFromProfile(profile: any): CuposCreditosJSON {
   }
 
   let fallbackDip = Math.max(0, Number(profile?.cupos_diplomados ?? defaultDip));
-  if (pkg === 'ILIMITADO' && parsedDipCount >= 3) {
-    const tramosExtras = Math.floor((parsedDipCount - 3) / 3) + 1;
-    fallbackDip = Math.max(fallbackDip, 3 + tramosExtras * 3);
+  const bloqueBaseFallback = Math.max(1, Number(options?.creditosDiplomadosBase ?? (pkg === 'ILIMITADO' ? 3 : defaultDip)));
+  if (esRenovable && parsedDipCount >= bloqueBaseFallback) {
+    const tramosExtras = Math.floor((parsedDipCount - bloqueBaseFallback) / bloqueBaseFallback) + 1;
+    fallbackDip = Math.max(fallbackDip, bloqueBaseFallback + tramosExtras * bloqueBaseFallback);
   }
 
   return {
@@ -433,10 +443,12 @@ export function buildUpdatedCuposCreditos(
     ? Math.max(0, updates.diplomadosCanjeados) 
     : current.diplomados.canjeados;
 
-  // Si es paquete ILIMITADO y se canjearon 3 o más diplomados, renovar asignados en bloques sucesivos de 3
-  if (pkg === 'ILIMITADO' && nextDipCanjeados >= 3) {
-    const tramosExtras = Math.floor((nextDipCanjeados - 3) / 3) + 1;
-    nextDipAsignados = Math.max(nextDipAsignados, 3 + tramosExtras * 3);
+  // Si es paquete ILIMITADO o con diplomados renovables y se canjearon los créditos del bloque, renovar en bloques sucesivos
+  const esRenovable = pkg === 'ILIMITADO' || Boolean(profile?.cupos_creditos?.diplomados_renovables);
+  const bloqueBase = Math.max(1, Number(pkg === 'ILIMITADO' ? 3 : current.diplomados.asignados || 1));
+  if (esRenovable && nextDipCanjeados >= bloqueBase) {
+    const tramosExtras = Math.floor((nextDipCanjeados - bloqueBase) / bloqueBase) + 1;
+    nextDipAsignados = Math.max(nextDipAsignados, bloqueBase + tramosExtras * bloqueBase);
   }
 
   return {

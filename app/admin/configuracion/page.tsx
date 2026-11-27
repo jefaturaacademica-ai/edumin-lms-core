@@ -44,6 +44,8 @@ export default function ConfiguracionRolesPage() {
   const [nuevoPkgCuotas, setNuevoPkgCuotas] = useState(1);
   const [nuevoPkgCreditosDip, setNuevoPkgCreditosDip] = useState(1);
   const [nuevoPkgCreditosCur, setNuevoPkgCreditosCur] = useState(3);
+  const [nuevoPkgDuracionMeses, setNuevoPkgDuracionMeses] = useState(12);
+  const [nuevoPkgDiplomadosRenovables, setNuevoPkgDiplomadosRenovables] = useState(false);
   const [nuevoPkgModulares, setNuevoPkgModulares] = useState(3);
   const [nuevoPkgDiplomas, setNuevoPkgDiplomas] = useState(1);
   const [nuevoPkgCertCip, setNuevoPkgCertCip] = useState(false);
@@ -313,7 +315,7 @@ export default function ConfiguracionRolesPage() {
     }
   };
 
-  const handleCrearNuevoPaquete = (e: React.FormEvent) => {
+  const handleCrearNuevoPaquete = async (e: React.FormEvent) => {
     e.preventDefault();
     const cleanId = nuevoPkgId.trim().toUpperCase().replace(/[^A-Z0-9_]/g, '_');
     if (!cleanId) {
@@ -330,6 +332,8 @@ export default function ConfiguracionRolesPage() {
       cuotasSugeridas: Number(nuevoPkgCuotas) || 1,
       creditosDiplomados: Number(nuevoPkgCreditosDip) || 1,
       creditosCursos: Number(nuevoPkgCreditosCur) || 0,
+      duracionMeses: Math.max(1, Number(nuevoPkgDuracionMeses) || 12),
+      diplomadosRenovables: Boolean(nuevoPkgDiplomadosRenovables),
       modulares: Number(nuevoPkgModulares) || 3,
       diplomas: Number(nuevoPkgDiplomas) || 1,
       certCip: Boolean(nuevoPkgCertCip),
@@ -346,26 +350,39 @@ export default function ConfiguracionRolesPage() {
       [cleanId]: nuevoPaquete
     };
 
-    setPaquetesConfig(updated);
-    setMostrarModalNuevoPaquete(false);
-    setNuevoPkgId('');
-    setNuevoPkgNombre('');
-    setNuevoPkgDescripcion('');
-    setNuevoPkgPrecioContado(0);
-    setNuevoPkgPrecioCuotas(0);
+    setGuardandoPaquetes(true);
+    try {
+      const res = await fetch('/api/admin/configuracion-paquetes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ paquetes: updated })
+      });
+      if (!res.ok) {
+        alert('No se pudo guardar el nuevo paquete. Intenta nuevamente.');
+        return;
+      }
 
-    // Guardar inmediatamente
-    fetch('/api/admin/configuracion-paquetes', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ paquetes: updated })
-    });
+      setPaquetesConfig(updated);
+      setMostrarModalNuevoPaquete(false);
+      setNuevoPkgId('');
+      setNuevoPkgNombre('');
+      setNuevoPkgDescripcion('');
+      setNuevoPkgPrecioContado(0);
+      setNuevoPkgPrecioCuotas(0);
+      setNuevoPkgDuracionMeses(12);
+      setNuevoPkgDiplomadosRenovables(false);
 
-    setMensajeExito(`¡Paquete ${cleanId} creado con éxito y disponible para matrículas!`);
-    setTimeout(() => setMensajeExito(null), 4000);
+      setMensajeExito(`¡Paquete ${cleanId} creado y guardado con éxito!`);
+      setTimeout(() => setMensajeExito(null), 4000);
+    } catch (err) {
+      console.error('Error creando paquete:', err);
+      alert('Error de red al guardar el nuevo paquete.');
+    } finally {
+      setGuardandoPaquetes(false);
+    }
   };
 
-  const handleEliminarPaquetePersonalizado = (pkgId: string) => {
+  const handleEliminarPaquetePersonalizado = async (pkgId: string) => {
     if (['COMPLETO', 'FULL', 'ILIMITADO'].includes(pkgId)) {
       alert('Los paquetes base COMPLETO, FULL e ILIMITADO no se pueden eliminar.');
       return;
@@ -374,16 +391,27 @@ export default function ConfiguracionRolesPage() {
     if (confirm(`¿Estás seguro de eliminar el paquete "${pkgId}"?`)) {
       const copy = { ...paquetesConfig };
       delete copy[pkgId];
-      setPaquetesConfig(copy);
 
-      fetch('/api/admin/configuracion-paquetes', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ paquetes: copy })
-      });
-
-      setMensajeExito(`Paquete ${pkgId} eliminado correctamente.`);
-      setTimeout(() => setMensajeExito(null), 4000);
+      setGuardandoPaquetes(true);
+      try {
+        const res = await fetch('/api/admin/configuracion-paquetes', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ paquetes: copy })
+        });
+        if (!res.ok) {
+          alert('No se pudo eliminar el paquete.');
+          return;
+        }
+        setPaquetesConfig(copy);
+        setMensajeExito(`Paquete ${pkgId} eliminado correctamente.`);
+        setTimeout(() => setMensajeExito(null), 4000);
+      } catch (err) {
+        console.error('Error eliminando paquete:', err);
+        alert('Error de red al eliminar el paquete.');
+      } finally {
+        setGuardandoPaquetes(false);
+      }
     }
   };
 
@@ -619,7 +647,7 @@ export default function ConfiguracionRolesPage() {
                     onClick={() => setMostrarModalNuevoPaquete(true)}
                     className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-xl font-bold text-xs shadow-md transition inline-flex items-center gap-2 cursor-pointer"
                   >
-                    <Plus className="w-4 h-4" /> + Crear paquete personalizado
+                    <Plus className="w-4 h-4" /> Crear paquete personalizado
                   </button>
                   <button
                     onClick={guardarConfigPaquetes}
@@ -628,61 +656,6 @@ export default function ConfiguracionRolesPage() {
                   >
                     <Save className="w-4 h-4" /> {guardandoPaquetes ? 'Guardando...' : 'Guardar cambios'}
                   </button>
-                </div>
-              </div>
-
-              {/* Sección de Edición de Mensaje de Bienvenida y Portada */}
-              <div className="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-4">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                  <div>
-                    <h3 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-indigo-500" /> Mensaje de Bienvenida y Portada del Estudiante
-                    </h3>
-                    <p className="text-xs text-slate-500 mt-0.5">
-                      Personaliza el saludo en el Hero principal del dashboard del alumno. Usa la variable <code className="text-indigo-600 dark:text-indigo-400 font-bold bg-indigo-50 dark:bg-indigo-950/60 px-1 py-0.5 rounded">{'{nombre}'}</code> para insertar dinámicamente el primer nombre del alumno.
-                    </p>
-                  </div>
-                  <button
-                    onClick={guardarConfigBienvenida}
-                    disabled={guardandoBienvenida}
-                    className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-xl font-bold text-xs shadow-md transition inline-flex items-center gap-2 cursor-pointer disabled:opacity-50"
-                  >
-                    <Save className="w-4 h-4" /> {guardandoBienvenida ? 'Guardando...' : 'Guardar portada'}
-                  </button>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
-                      Mensaje de bienvenida (Hero)
-                    </label>
-                    <input
-                      type="text"
-                      value={bienvenidaPlantilla}
-                      onChange={(e) => setBienvenidaPlantilla(e.target.value)}
-                      placeholder="¡Hola, {nombre}, bienvenid@ a tu ruta de aprendizaje!"
-                      className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-600"
-                    />
-                    <p className="text-[11px] text-slate-400 mt-1">
-                      Vista previa: {bienvenidaPlantilla.replace('{nombre}', 'Manuel')}
-                    </p>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
-                      URL de Imagen de Fondo de Portada
-                    </label>
-                    <input
-                      type="text"
-                      value={bienvenidaFondo}
-                      onChange={(e) => setBienvenidaFondo(e.target.value)}
-                      placeholder="https://..."
-                      className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-600"
-                    />
-                    <p className="text-[11px] text-slate-400 mt-1">
-                      Proporciona la URL de la imagen que se mostrará como banner superior.
-                    </p>
-                  </div>
                 </div>
               </div>
 
@@ -793,6 +766,35 @@ export default function ConfiguracionRolesPage() {
                           </div>
 
                           <div className="flex justify-between items-center">
+                            <span className="text-slate-600 dark:text-slate-300 font-bold">Duración de acceso (meses):</span>
+                            <input 
+                              type="number" 
+                              min={1}
+                              value={pkg.duracionMeses ?? (pkg.id === 'ILIMITADO' ? 24 : 12)}
+                              onChange={(e) => setPaquetesConfig({
+                                ...paquetesConfig,
+                                [pkg.id]: { ...pkg, duracionMeses: Math.max(1, parseInt(e.target.value) || 1) }
+                              })}
+                              className="w-16 px-2 py-1 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 rounded-lg text-right font-black"
+                            />
+                          </div>
+
+                          <div className="flex justify-between items-center pt-1">
+                            <span className="text-slate-600 dark:text-slate-300 font-bold" title="Renueva automáticamente los créditos de diplomado en bloques sucesivos al consumirlos (comportamiento tipo Ilimitado)">
+                              Diplomados renovables (tipo Ilimitado):
+                            </span>
+                            <input 
+                              type="checkbox"
+                              checked={Boolean(pkg.diplomadosRenovables ?? (pkg.id === 'ILIMITADO'))}
+                              onChange={(e) => setPaquetesConfig({
+                                ...paquetesConfig,
+                                [pkg.id]: { ...pkg, diplomadosRenovables: e.target.checked }
+                              })}
+                              className="w-4 h-4 text-purple-600 rounded cursor-pointer"
+                            />
+                          </div>
+
+                          <div className="flex justify-between items-center">
                             <span className="text-slate-500">Certificados Modulares:</span>
                             <input 
                               type="number" 
@@ -892,17 +894,6 @@ export default function ConfiguracionRolesPage() {
                   );
                 })}
               </div>
-
-              {/* Botón Guardar Inferior */}
-              <div className="flex justify-end pt-4">
-                <button
-                  onClick={guardarConfigPaquetes}
-                  disabled={guardandoPaquetes}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-xl font-bold text-xs shadow-md transition inline-flex items-center gap-2 cursor-pointer disabled:opacity-50"
-                >
-                  <Save className="w-4 h-4" /> {guardandoPaquetes ? 'Guardando...' : 'Guardar todas las plantillas'}
-                </button>
-              </div>
             </div>
           ) : activeTab === 'simulador' ? (
             /* TAB: SIMULADOR DE VISTA ESTUDIANTE FULL */
@@ -945,8 +936,65 @@ export default function ConfiguracionRolesPage() {
               </div>
             </div>
           ) : (
-            /* TAB: PERSONALIZACIÓN DEL LOGIN */
-            <LoginPersonalizacionTab />
+            /* TAB: PERSONALIZACIÓN DEL LOGIN Y PORTADA */
+            <div className="space-y-6">
+              <LoginPersonalizacionTab />
+
+              {/* Sección de Edición de Mensaje de Bienvenida y Portada */}
+              <div className="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-4">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                  <div>
+                    <h3 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                      <Sparkles className="w-4 h-4 text-indigo-500" /> Mensaje de bienvenida y portada del estudiante
+                    </h3>
+                    <p className="text-xs text-slate-500 mt-0.5">
+                      Personaliza el saludo en el Hero principal del dashboard del alumno. Usa la variable <code className="text-indigo-600 dark:text-indigo-400 font-bold bg-indigo-50 dark:bg-indigo-950/60 px-1 py-0.5 rounded">{'{nombre}'}</code> para insertar dinámicamente el primer nombre del alumno.
+                    </p>
+                  </div>
+                  <button
+                    onClick={guardarConfigBienvenida}
+                    disabled={guardandoBienvenida}
+                    className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-xl font-bold text-xs shadow-md transition inline-flex items-center gap-2 cursor-pointer disabled:opacity-50"
+                  >
+                    <Save className="w-4 h-4" /> {guardandoBienvenida ? 'Guardando...' : 'Guardar portada'}
+                  </button>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                      Mensaje de bienvenida (Hero)
+                    </label>
+                    <input
+                      type="text"
+                      value={bienvenidaPlantilla}
+                      onChange={(e) => setBienvenidaPlantilla(e.target.value)}
+                      placeholder="¡Hola, {nombre}, bienvenid@ a tu ruta de aprendizaje!"
+                      className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                    />
+                    <p className="text-[11px] text-slate-400 mt-1">
+                      Vista previa: {bienvenidaPlantilla.replace('{nombre}', 'Manuel')}
+                    </p>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                      URL de imagen de fondo de portada
+                    </label>
+                    <input
+                      type="text"
+                      value={bienvenidaFondo}
+                      onChange={(e) => setBienvenidaFondo(e.target.value)}
+                      placeholder="https://..."
+                      className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                    />
+                    <p className="text-[11px] text-slate-400 mt-1">
+                      Proporciona la URL de la imagen que se mostrará como banner superior.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           )}
 
           </div>
@@ -1062,8 +1110,30 @@ export default function ConfiguracionRolesPage() {
                 </div>
               </div>
 
+              <div>
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  Duración predeterminada de acceso (meses)
+                </label>
+                <input
+                  type="number"
+                  min={1}
+                  value={nuevoPkgDuracionMeses}
+                  onChange={(e) => setNuevoPkgDuracionMeses(Math.max(1, Number(e.target.value) || 1))}
+                  className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-bold"
+                />
+              </div>
+
               {/* Checkboxes de beneficios */}
               <div className="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-800 text-xs">
+                <label className="flex items-center gap-2 font-bold text-purple-700 dark:text-purple-300 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={nuevoPkgDiplomadosRenovables}
+                    onChange={(e) => setNuevoPkgDiplomadosRenovables(e.target.checked)}
+                    className="rounded text-purple-600"
+                  />
+                  <span>Créditos de diplomados renovables (tipo Ilimitado)</span>
+                </label>
                 <label className="flex items-center gap-2 font-medium cursor-pointer">
                   <input
                     type="checkbox"
