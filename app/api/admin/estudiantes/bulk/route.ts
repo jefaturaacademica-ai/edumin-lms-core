@@ -45,7 +45,7 @@ export async function POST(request: Request) {
       { data: todosPagosExistentes },
       { data: todosAuditsExistentes }
     ] = await Promise.all([
-      admin.from('profiles').select('id, dni_ce, email'),
+      admin.from('profiles').select('id, numero_documento, email'),
       admin.auth.admin.listUsers({ perPage: 1000 }).catch(() => ({ data: { users: [] as any[] } })),
       admin.from('pagos').select('*'),
       admin.from('audit_logs').select('*')
@@ -55,7 +55,7 @@ export async function POST(request: Request) {
     const existingEmails = new Set<string>();
 
     (existingProfiles || []).forEach((p: any) => {
-      if (p.dni_ce) existingDnis.add(String(p.dni_ce).trim().toLowerCase());
+      if (p.numero_documento) existingDnis.add(String(p.numero_documento).trim().toLowerCase());
       if (p.email) existingEmails.add(String(p.email).trim().toLowerCase());
     });
 

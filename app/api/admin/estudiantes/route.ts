@@ -570,7 +570,7 @@ export async function PATCH(request: Request) {
 
       let profileQuery = admin.from('profiles').select('*');
       if (studentId) profileQuery = profileQuery.eq('id', studentId);
-      else if (dni_ce) profileQuery = profileQuery.eq('dni_ce', dni_ce);
+      else if (dni_ce) profileQuery = profileQuery.eq('numero_documento', dni_ce);
       else return NextResponse.json({ error: 'Se requiere studentId o dni_ce.' }, { status: 400 });
 
       const { data: currentProfile, error: pErr } = await profileQuery.maybeSingle();
@@ -640,7 +640,7 @@ export async function PATCH(request: Request) {
 
       let profileQuery = admin.from('profiles').select('*');
       if (studentId) profileQuery = profileQuery.eq('id', studentId);
-      else if (dni_ce) profileQuery = profileQuery.eq('dni_ce', dni_ce);
+      else if (dni_ce) profileQuery = profileQuery.eq('numero_documento', dni_ce);
       else return NextResponse.json({ error: 'Se requiere studentId o dni_ce.' }, { status: 400 });
 
       const { data: currentProfile, error: pErr } = await profileQuery.maybeSingle();
@@ -677,7 +677,7 @@ export async function PATCH(request: Request) {
     if (action === 'update_diplomados') {
       let profileQuery = admin.from('profiles').select('*');
       if (studentId) profileQuery = profileQuery.eq('id', studentId);
-      else if (dni_ce) profileQuery = profileQuery.eq('dni_ce', dni_ce);
+      else if (dni_ce) profileQuery = profileQuery.eq('numero_documento', dni_ce);
       else return NextResponse.json({ error: 'Se requiere studentId o dni_ce.' }, { status: 400 });
 
       const { data: currentProfile, error: pErr } = await profileQuery.maybeSingle();
@@ -816,7 +816,7 @@ export async function PATCH(request: Request) {
     if (action === 'update_cursos') {
       let profileQuery = admin.from('profiles').select('*');
       if (studentId) profileQuery = profileQuery.eq('id', studentId);
-      else if (dni_ce) profileQuery = profileQuery.eq('dni_ce', dni_ce);
+      else if (dni_ce) profileQuery = profileQuery.eq('numero_documento', dni_ce);
       else return NextResponse.json({ error: 'Se requiere studentId o dni_ce.' }, { status: 400 });
 
       const { data: currentProfile, error: pErr } = await profileQuery.maybeSingle();
@@ -966,7 +966,7 @@ export async function PATCH(request: Request) {
 
       let profileQuery = admin.from('profiles').select('*');
       if (studentId) profileQuery = profileQuery.eq('id', studentId);
-      else profileQuery = profileQuery.eq('dni_ce', dni_ce);
+      else profileQuery = profileQuery.eq('numero_documento', dni_ce);
 
       const { data: profile, error: pErr } = await profileQuery.maybeSingle();
       if (pErr || !profile) {
@@ -1015,7 +1015,7 @@ export async function PATCH(request: Request) {
 
         // Eliminar intento guardado en notas_modulos para que el alumno pueda volver a rendirlo
         try {
-          const dniTarget = String(profile.dni_ce || dni_ce || '').trim();
+          const dniTarget = String(profile.numero_documento || dni_ce || '').trim();
           const { data: notasExistentes } = await admin
             .from('notas_modulos')
             .select('id, diplomado_numero, diplomado_nombre')
@@ -1127,7 +1127,7 @@ export async function PATCH(request: Request) {
       });
 
       if (studentId) updateQuery = updateQuery.eq('id', studentId);
-      else updateQuery = updateQuery.eq('dni_ce', dni_ce);
+      else updateQuery = updateQuery.eq('numero_documento', dni_ce);
 
       const { data: updated, error: updErr } = await updateQuery.select().single();
       if (updErr) {
@@ -1238,13 +1238,13 @@ export async function POST(request: Request) {
     // 1. Verificar si ya existe en profiles por documento o email
     const { data: existente } = await admin
       .from('profiles')
-      .select('id, dni_ce, numero_documento, email')
-      .or(`dni_ce.eq.${docNumero},numero_documento.eq.${docNumero},email.eq.${email.trim().toLowerCase()}`)
+      .select('id, numero_documento, email')
+      .or(`numero_documento.eq.${docNumero},email.eq.${email.trim().toLowerCase()}`)
       .maybeSingle();
 
     if (existente) {
       return NextResponse.json(
-        { error: `Ya existe un usuario registrado con ese documento (${existente.numero_documento || existente.dni_ce}) o correo (${existente.email}).` }, 
+        { error: `Ya existe un usuario registrado con ese documento (${existente.numero_documento}) o correo (${existente.email}).` }, 
         { status: 400 }
       );
     }

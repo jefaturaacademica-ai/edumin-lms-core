@@ -12,7 +12,7 @@ export async function GET(request?: Request) {
       const { data: certsDni } = await admin
         .from('certificaciones')
         .select('*')
-        .eq('dni_ce', dniParam)
+        .eq('numero_documento', dniParam)
         .order('created_at', { ascending: false });
 
       return NextResponse.json({
@@ -28,7 +28,7 @@ export async function GET(request?: Request) {
     const solicitudes = (profiles || []).map((p, idx) => ({
       id: `sol-${p.id.substring(0, 6)}`,
       estudiante: `${p.nombres || ''} ${p.apellidos || ''}`.trim() || 'Estudiante',
-      dni: p.dni_ce,
+      dni: p.numero_documento || p.dni_ce,
       email: p.email,
       programa: p.diplomado_1 || 'DERECHO MINERO',
       tipo: idx % 2 === 0 ? 'CIP (Nacional)' : 'MIAMI (Internacional)',
@@ -49,7 +49,7 @@ export async function GET(request?: Request) {
         cData.forEach(c => {
           const cod = c.codigo_verificacion || String(c.id);
           codigosExistentes.add(cod);
-          codigosExistentes.add(`${c.dni_ce}-${c.tipo}-${c.programa_titulo}-${c.modulo_titulo || 'GENERAL'}`);
+          codigosExistentes.add(`${c.numero_documento || c.dni_ce}-${c.tipo}-${c.programa_titulo}-${c.modulo_titulo || 'GENERAL'}`);
 
           const snapshot = c.plantilla_snapshot || {};
           const defaultModeloId = c.tipo === 'MODULAR' ? 'mod-avanza-mod' : (c.tipo === 'DIPLOMA' ? 'mod-avanza-dip' : 'mod-03');
@@ -204,11 +204,11 @@ export async function GET(request?: Request) {
 
         const { data: profiles } = await admin
           .from('profiles')
-          .select('id, dni_ce, numero_documento, tipo_documento, nombres, apellidos, bloqueado, diplomados, cursos');
+          .select('id, numero_documento, tipo_documento, nombres, apellidos, bloqueado, diplomados, cursos');
 
         if (profiles && profiles.length > 0) {
           for (const p of profiles) {
-            const dni = p.numero_documento || p.dni_ce;
+            const dni = p.numero_documento;
             if (!dni) continue;
             const docTipo = p.tipo_documento || 'DNI';
             const estudianteNombre = `${p.nombres || ''} ${p.apellidos || ''}`.trim() || 'Estudiante EDUMIN';
@@ -444,7 +444,7 @@ export async function POST(request: Request) {
         const { data: profDoc } = await admin
           .from('profiles')
           .select('tipo_documento, numero_documento')
-          .or(`dni_ce.eq.${dni},numero_documento.eq.${dni}`)
+          .eq('numero_documento', dni)
           .limit(1)
           .maybeSingle();
 
@@ -455,7 +455,6 @@ export async function POST(request: Request) {
           .insert({
             codigo_verificacion: codigoGenerado,
             estudiante_nombre: capitalizarPalabras(estudiante || ''),
-            dni_ce: dni,
             numero_documento: profDoc?.numero_documento || dni,
             tipo_documento: docTipoManual,
             tipo: tipo || 'DIPLOMA',
@@ -488,7 +487,7 @@ export async function POST(request: Request) {
         const { data: profile } = await admin
           .from('profiles')
           .select('id, diplomados, cursos')
-          .eq('dni_ce', dni)
+          .eq('numero_documento', dni)
           .maybeSingle();
 
         if (profile) {
@@ -651,7 +650,7 @@ export async function PATCH(request: Request) {
             codigo_verificacion: normalizarCodigoCertificado(codigo || `EDM-CERT-${Date.now()}`),
             tipo: body.tipo || (body.modulo ? 'MODULAR' : 'DIPLOMA'),
             estudiante_nombre: capitalizarPalabras(body.estudiante || 'Estudiante EDUMIN'),
-            dni_ce: body.dni || '71234567',
+            numero_documento: body.dni || '71234567',
             programa_titulo: body.programa || 'DIPLOMADO',
             modulo_titulo: body.modulo || null,
             horas_lectivas: horas || '108 horas académicas',

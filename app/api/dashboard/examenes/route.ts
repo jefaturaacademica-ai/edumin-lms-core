@@ -22,18 +22,18 @@ async function resolverDniEstudiante(): Promise<string | null> {
     const admin = createAdminClient();
     const { data: p } = await admin
       .from('profiles')
-      .select('dni_ce')
+      .select('numero_documento')
       .eq('id', user.id)
       .maybeSingle();
-    if (p?.dni_ce) return String(p.dni_ce).trim();
+    if (p?.numero_documento) return String(p.numero_documento).trim();
 
     if (user.email) {
       const { data: pEmail } = await admin
         .from('profiles')
-        .select('dni_ce')
+        .select('numero_documento')
         .eq('email', user.email)
         .maybeSingle();
-      if (pEmail?.dni_ce) return String(pEmail.dni_ce).trim();
+      if (pEmail?.numero_documento) return String(pEmail.numero_documento).trim();
     }
   } catch {
     return null;

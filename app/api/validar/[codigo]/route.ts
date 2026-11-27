@@ -12,20 +12,19 @@ async function verificarHabilitacionCertificado(admin: ReturnType<typeof createA
     return true;
   }
 
-  if (!certData.dni_ce) return true;
+  const docCert = certData.numero_documento || certData.dni_ce;
+  if (!docCert) return true;
 
   try {
     const { data: profile } = await admin
       .from('profiles')
-      .select('id, dni_ce, bloqueado, cuotas_pagadas, cuotas_totales, tipo_pago')
-      .eq('dni_ce', certData.dni_ce)
+      .select('id, numero_documento, bloqueado, cuotas_pagadas')
+      .eq('numero_documento', docCert)
       .maybeSingle();
 
     if (!profile) return true;
     const reglas = evaluarReglasCertificados({
       cuotasPagadas: profile.cuotas_pagadas,
-      cuotasTotales: profile.cuotas_totales,
-      tipoPago: profile.tipo_pago,
     });
     if (reglas.sinRestriccionPago) return true;
 
@@ -37,7 +36,7 @@ async function verificarHabilitacionCertificado(admin: ReturnType<typeof createA
     const { data: modularesDni } = await admin
       .from('certificaciones')
       .select('codigo_verificacion, fecha_emision, created_at')
-      .eq('dni_ce', certData.dni_ce)
+      .eq('numero_documento', docCert)
       .eq('tipo', 'MODULAR');
 
     if (Array.isArray(modularesDni) && modularesDni.length > 0) {

@@ -181,12 +181,23 @@ async function seedEstudiantes() {
     const resultados = [];
 
     for (const data of alumnosSeed) {
-      const { pagos: pagosData, ...profileFields } = data;
+      const { pagos: pagosData } = data;
+      const profileFields = {
+        numero_documento: data.dni_ce,
+        tipo_documento: 'DNI',
+        nombres: data.nombres,
+        apellidos: data.apellidos,
+        email: data.email,
+        telefono: data.telefono,
+        paquete_adquirido: data.paquete_adquirido,
+        cuotas_pagadas: data.cuotas_pagadas,
+        roles: { administrativo: null, academico: 'ESTUDIANTE' }
+      };
 
-      // 1. Upsert en public.profiles
+      // 1. Upsert en public.profiles por email
       const { data: profile, error: profileError } = await admin
         .from('profiles')
-        .upsert(profileFields, { onConflict: 'dni_ce' })
+        .upsert(profileFields, { onConflict: 'email' })
         .select()
         .single();
 

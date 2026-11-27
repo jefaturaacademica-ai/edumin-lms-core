@@ -8,18 +8,18 @@ export async function GET() {
     // 1. Obtener perfiles de estudiantes de la base de datos
     const { data: profiles, error: profileErr } = await admin
       .from('profiles')
-      .select('id, dni_ce, nombres, apellidos, email, telefono, diplomado_1, paquete_adquirido, created_at')
+      .select('id, numero_documento, nombres, apellidos, email, telefono, paquete_adquirido, created_at')
       .order('nombres', { ascending: true })
       .limit(100);
 
     const listaEstudiantes = (profiles && profiles.length > 0) ? profiles.map(p => ({
       id: p.id,
-      dni_ce: p.dni_ce || '74589210',
+      dni_ce: p.numero_documento || '74589210',
       nombres: p.nombres || 'Estudiante',
       apellidos: p.apellidos || 'EDUMIN',
       email: p.email || 'alumno@edumin.pe',
       telefono: p.telefono || '+51 987 654 321',
-      programa: p.diplomado_1 || 'Diplomado en seguridad y salud ocupacional en minería',
+      programa: 'Diplomado en seguridad y salud ocupacional en minería',
       paquete: p.paquete_adquirido || 'PRO',
       fechaIngreso: p.created_at ? new Date(p.created_at).toISOString().split('T')[0] : '2026-08-15',
       estado: 'Activo'
@@ -144,13 +144,13 @@ export async function PATCH(request: Request) {
       let query = admin.from('profiles').update({
         nombres: nombres ? nombres.trim() : undefined,
         apellidos: apellidos ? apellidos.trim() : undefined,
-        dni_ce: dni_ce ? dni_ce.trim() : undefined
+        numero_documento: dni_ce ? dni_ce.trim() : undefined
       });
 
       if (studentId) {
         query = query.eq('id', studentId);
       } else {
-        query = query.eq('dni_ce', dni_ce);
+        query = query.eq('numero_documento', dni_ce);
       }
 
       const { data: updated, error } = await query.select().maybeSingle();

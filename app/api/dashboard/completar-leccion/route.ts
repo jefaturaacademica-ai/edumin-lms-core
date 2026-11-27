@@ -325,7 +325,7 @@ export async function POST(request: Request) {
             const { data: certModExistente } = await admin
               .from('certificaciones')
               .select('id, plantilla_snapshot')
-              .eq('dni_ce', profile.dni_ce)
+              .eq('numero_documento', profile.numero_documento)
               .eq('tipo', 'MODULAR')
               .eq('programa_titulo', targetDip.titulo)
               .eq('modulo_titulo', moduloNombreFinal)
@@ -364,8 +364,7 @@ export async function POST(request: Request) {
               const payloadMod = {
                 codigo_verificacion: codVerifModular,
                 profile_id: profile.id,
-                dni_ce: profile.numero_documento || profile.dni_ce,
-                numero_documento: profile.numero_documento || profile.dni_ce,
+                numero_documento: profile.numero_documento,
                 tipo_documento: profile.tipo_documento || 'DNI',
                 estudiante_nombre: nombreEstudianteOficial,
                 tipo: 'MODULAR',
@@ -410,7 +409,7 @@ export async function POST(request: Request) {
           const { data: certDipExistente } = await admin
             .from('certificaciones')
             .select('id, plantilla_snapshot')
-            .eq('dni_ce', profile.dni_ce)
+            .eq('numero_documento', profile.numero_documento)
             .eq('tipo', 'DIPLOMA')
             .eq('programa_titulo', targetDip.titulo)
             .maybeSingle();
@@ -448,8 +447,7 @@ export async function POST(request: Request) {
             const payloadDip = {
               codigo_verificacion: codVerifDip,
               profile_id: profile.id,
-              dni_ce: profile.numero_documento || profile.dni_ce,
-              numero_documento: profile.numero_documento || profile.dni_ce,
+              numero_documento: profile.numero_documento,
               tipo_documento: profile.tipo_documento || 'DNI',
               estudiante_nombre: nombreEstudianteOficial,
               tipo: 'DIPLOMA',
@@ -496,7 +494,7 @@ export async function POST(request: Request) {
         const { data: certCursoExistente } = await admin
           .from('certificaciones')
           .select('id, plantilla_snapshot')
-          .eq('dni_ce', profile.dni_ce)
+          .eq('numero_documento', profile.numero_documento)
           .eq('tipo', 'CURSO')
           .eq('programa_titulo', targetCurso.titulo)
           .maybeSingle();
@@ -557,8 +555,7 @@ export async function POST(request: Request) {
           const payloadCur = {
             codigo_verificacion: codVerifCurso,
             profile_id: profile.id,
-            dni_ce: profile.numero_documento || profile.dni_ce,
-            numero_documento: profile.numero_documento || profile.dni_ce,
+            numero_documento: profile.numero_documento,
             tipo_documento: profile.tipo_documento || 'DNI',
             estudiante_nombre: nombreEstudianteOficial,
             tipo: 'CURSO',

@@ -47,7 +47,6 @@ export async function POST(request: Request) {
       .insert({
         id: studentId,
         roles: { administrativo: null, academico: 'ESTUDIANTE' },
-        dni_ce: numDoc,
         numero_documento: numDoc,
         tipo_documento: tipoDoc,
         email: email.trim().toLowerCase(),

@@ -113,6 +113,7 @@ export default function ReproductorClasesPage() {
   const [respuestasExamen, setRespuestasExamen] = useState<Record<number, number>>({});
   const [respuestasExamenDinamicas, setRespuestasExamenDinamicas] = useState<Record<string, number[]>>({});
   const [preguntasExamenDinamicas, setPreguntasExamenDinamicas] = useState<PreguntaExamenEstudiante[]>([]);
+  const [errorCargaExamen, setErrorCargaExamen] = useState<string | null>(null);
   const [cargandoPreguntasExamen, setCargandoPreguntasExamen] = useState(false);
   const [cargandoConfigExamen, setCargandoConfigExamen] = useState(false);
   const [detallesCalificacionExamen, setDetallesCalificacionExamen] = useState<DetalleCalificacionPregunta[] | null>(null);
@@ -387,6 +388,7 @@ export default function ReproductorClasesPage() {
     setPasoModalExamen('cuestionario');
     setRespuestasExamenDinamicas({});
     setPreguntasExamenDinamicas([]);
+    setErrorCargaExamen(null);
     setMostrarRetroalimentacion(false);
     setCargandoPreguntasExamen(true);
     fechaInicioExamenRef.current = new Date().toISOString();
@@ -419,7 +421,10 @@ export default function ReproductorClasesPage() {
         setPasoModalExamen('ver_intento');
         return;
       }
-      if (data.success && data.preguntas && data.preguntas.length > 0) {
+      if (!res.ok || !data.success) {
+        setErrorCargaExamen(data?.error || 'No se pudo cargar el examen. Verifica tu sesión e intenta nuevamente.');
+        setPreguntasExamenDinamicas([]);
+      } else if (data.preguntas && data.preguntas.length > 0) {
         fechaInicioExamenRef.current = new Date().toISOString();
         setPreguntasExamenDinamicas(data.preguntas);
       } else {
@@ -427,6 +432,7 @@ export default function ReproductorClasesPage() {
       }
     } catch (err) {
       console.error('Error al cargar preguntas de examen:', err);
+      setErrorCargaExamen('Error de conexión al cargar el examen. Intenta nuevamente.');
       setPreguntasExamenDinamicas([]);
     } finally {
       setCargandoPreguntasExamen(false);
@@ -1624,6 +1630,21 @@ export default function ReproductorClasesPage() {
                       <div className="py-14 text-center text-slate-400 space-y-3">
                         <Loader2 className="w-8 h-8 animate-spin mx-auto text-indigo-500" />
                         <p className="text-sm font-semibold">Cargando las preguntas oficiales de tu diplomado...</p>
+                      </div>
+                    ) : errorCargaExamen ? (
+                      <div className="p-10 text-center space-y-3 border rounded-2xl border-dashed border-rose-300 dark:border-rose-800/60 bg-rose-50/40 dark:bg-rose-950/20">
+                        <AlertCircle className="w-10 h-10 text-rose-500 mx-auto" />
+                        <h4 className="font-bold text-sm text-rose-700 dark:text-rose-300">No se pudo cargar el examen</h4>
+                        <p className="text-xs text-slate-600 dark:text-slate-400 max-w-md mx-auto">
+                          {errorCargaExamen}
+                        </p>
+                        <button
+                          type="button"
+                          onClick={() => setExamenActivoModal(null)}
+                          className="mt-2 text-xs font-bold px-4 py-2 bg-indigo-600 text-white rounded-xl cursor-pointer"
+                        >
+                          Volver a las clases
+                        </button>
                       </div>
                     ) : preguntasExamenDinamicas.length === 0 ? (
                       <div className="p-10 text-center space-y-3 border rounded-2xl border-dashed border-slate-300 dark:border-slate-800">

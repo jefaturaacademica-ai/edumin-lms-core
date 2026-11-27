@@ -244,8 +244,8 @@ export async function POST(request: Request) {
     // 1. Buscar estudiante en profiles
     const { data: student, error: studentError } = await admin
       .from("profiles")
-      .select("id, dni_ce, nombres, apellidos, paquete_adquirido, cuotas_pagadas")
-      .eq("dni_ce", dni)
+      .select("id, numero_documento, nombres, apellidos, paquete_adquirido, cuotas_pagadas")
+      .eq("numero_documento", dni)
       .maybeSingle();
 
     if (studentError || !student) {
@@ -285,7 +285,7 @@ export async function POST(request: Request) {
 
       const extraPayload: Record<string, any> = {
         profile_id: student.id,
-        dni_ce: student.dni_ce,
+        dni_ce: student.numero_documento,
         monto: montoPago,
         metodo: `CARGO_EXTRA|${cargoMetadata}`,
         estado: "APROBADO"
@@ -305,7 +305,7 @@ export async function POST(request: Request) {
           accion: "CARGO_EXTRA_REGISTRADO",
           detalles: {
             pago_id: newCargo.id,
-            dni_ce: student.dni_ce,
+            dni_ce: student.numero_documento,
             estudiante: `${student.nombres} ${student.apellidos}`,
             concepto: conceptoCargo,
             monto: montoPago,
@@ -330,7 +330,7 @@ export async function POST(request: Request) {
             body: JSON.stringify({
               evento: "cargo_extra_registrado",
               nombre_alumno: `${student.nombres} ${student.apellidos}`,
-              dni_ce: student.dni_ce,
+              dni_ce: student.numero_documento,
               concepto: conceptoCargo,
               monto: montoPago,
               metodo,
@@ -392,7 +392,7 @@ export async function POST(request: Request) {
 
       const { data: newPago } = await admin.from("pagos").insert({
         profile_id: student.id,
-        dni_ce: student.dni_ce,
+        dni_ce: student.numero_documento,
         monto: montoPago,
         metodo: metadataMetodo,
         estado: "Pendiente"
@@ -516,7 +516,7 @@ export async function POST(request: Request) {
         accion: "CUOTA_VALIDADA_MANUAL",
         detalles: {
           pago_id: parsedCredito.id,
-          dni_ce: student.dni_ce,
+          dni_ce: student.numero_documento,
           num_credito: parsedCredito.num_credito,
           estudiante: `${student.nombres} ${student.apellidos}`,
           cuotas: parsedCredito.cuotas,
@@ -545,7 +545,7 @@ export async function POST(request: Request) {
           body: JSON.stringify({
             evento: "pago_registrado",
             nombre_alumno: `${student.nombres} ${student.apellidos}`,
-            dni_ce: student.dni_ce,
+            dni_ce: student.numero_documento,
             num_credito: parsedCredito.num_credito,
             total_pagado: parsedCredito.total_pagado,
             total_deuda: parsedCredito.total_deuda,
