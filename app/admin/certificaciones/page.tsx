@@ -135,6 +135,12 @@ function ControlPasoNumero({
           step={paso}
           min={min}
           max={max}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              e.currentTarget.blur();
+            }
+          }}
           onChange={(e) => {
             const val = parseFloat(e.target.value);
             if (!isNaN(val)) {
@@ -299,6 +305,8 @@ export default function CertificacionesAdminPage() {
   // Sistema de coordenadas y posicionamiento milimétrico A4
   const [editorDisenoCoordenadas, setEditorDisenoCoordenadas] = useState<DisenoCoordenadas>(DISENO_DEFAULT_HORIZONTAL);
   const [elementoSeleccionado, setElementoSeleccionado] = useState<keyof DisenoCoordenadas>('estudiante');
+  const [zoomEditor, setZoomEditor] = useState<number>(1);
+  const pinchZoomRef = useRef<{ dist: number; startZoom: number } | null>(null);
 
   // Medidas físicas de la hoja A4 (Landscape: 29.7 x 21.0 cm | Portrait: 21.0 x 29.7 cm)
   const anchoHojaCm = editorOrientacion === 'vertical' ? 21.0 : 29.7;
@@ -1931,7 +1939,15 @@ export default function CertificacionesAdminPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
                 
                 {/* Panel de Configuración Lateral */}
-                <form onSubmit={guardarModeloEnGaleria} className="lg:col-span-5 space-y-4 bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                <form
+                  onSubmit={guardarModeloEnGaleria}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' && (e.target as HTMLElement).tagName === 'INPUT') {
+                      e.preventDefault();
+                    }
+                  }}
+                  className="lg:col-span-5 space-y-4 bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm"
+                >
                   <h4 className="text-xs font-black uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-1.5">
                     <Settings className="w-3.5 h-3.5" /> Configuración y asignación
                   </h4>
@@ -3049,7 +3065,44 @@ export default function CertificacionesAdminPage() {
                     )}
                   </div>
 
-                  {/* Lienzo del certificado A4 con Arrastrar y Soltar interactivo */}
+                  {/* Controles de zoom para edición milimétrica */}
+                  <div className="w-full mb-2.5 flex flex-wrap items-center justify-between gap-2 px-3 py-1.5 bg-slate-900/90 border border-slate-800 rounded-xl">
+                    <span className="text-[11px] font-medium text-slate-400">
+                      Pellizca con dos dedos o usa Ctrl + rueda para acercar el certificado
+                    </span>
+                    <div className="flex items-center gap-1.5">
+                      <button
+                        type="button"
+                        onClick={() => setZoomEditor((z) => Math.max(0.5, Number((z - 0.25).toFixed(2))))}
+                        className="px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-bold cursor-pointer"
+                        title="Alejar"
+                      >
+                        -
+                      </button>
+                      <span className="min-w-[44px] text-center text-xs font-bold tabular-nums text-white">
+                        {Math.round(zoomEditor * 100)}%
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() => setZoomEditor((z) => Math.min(3, Number((z + 0.25).toFixed(2))))}
+                        className="px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-bold cursor-pointer"
+                        title="Acercar"
+                      >
+                        +
+                      </button>
+                      {zoomEditor !== 1 && (
+                        <button
+                          type="button"
+                          onClick={() => setZoomEditor(1)}
+                          className="px-2 py-0.5 bg-indigo-600/80 hover:bg-indigo-600 text-white rounded-lg text-[10px] font-bold cursor-pointer"
+                        >
+                          100%
+                        </button>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Lienzo del certificado A4 con Arrastrar y Soltar interactivo y Zoom táctil/trackpad */}
                   {(() => {
                     const esNombreAlcanceGlobal = (nombre?: string) => 
                       !nombre || nombre.startsWith('TODOS LOS') || nombre.startsWith('SUPERPLANTILLA');
@@ -3062,8 +3115,49 @@ export default function CertificacionesAdminPage() {
                             ? (catalogoTalleres[0]?.titulo || 'PRIMEROS AUXILIOS Y EMERGENCIAS MINERAS')
                             : (catalogoDiplomados[0]?.titulo || 'SEGURIDAD Y SALUD OCUPACIONAL EN MINERÍA'))
                     );
+                    const baseWidthPx = editorOrientacion === 'vertical' ? 384 : 576;
+                    const zoomedWidthPx = Math.round(baseWidthPx * zoomEditor);
                     return (
-                      <div className={`w-full flex items-center justify-center ${editorOrientacion === 'vertical' ? 'max-w-sm' : 'max-w-xl'}`}>
+                      <div
+                        className="w-full max-h-[74vh] overflow-auto rounded-2xl border border-slate-800/80 bg-slate-950/60 p-3 flex items-start justify-center"
+                        style={{ touchAction: 'pan-x pan-y' }}
+                        onWheel={(e) => {
+                          if (e.ctrlKey || e.metaKey) {
+                            e.preventDefault();
+                            setZoomEditor((prev) =>
+                              Math.min(3, Math.max(0.5, Number((prev - e.deltaY * 0.0025).toFixed(2))))
+                            );
+                          }
+                        }}
+                        onTouchStart={(e) => {
+                          if (e.touches.length === 2) {
+                            const dx = e.touches[0].clientX - e.touches[1].clientX;
+                            const dy = e.touches[0].clientY - e.touches[1].clientY;
+                            pinchZoomRef.current = { dist: Math.hypot(dx, dy), startZoom: zoomEditor };
+                          }
+                        }}
+                        onTouchMove={(e) => {
+                          if (e.touches.length === 2 && pinchZoomRef.current) {
+                            e.preventDefault();
+                            const dx = e.touches[0].clientX - e.touches[1].clientX;
+                            const dy = e.touches[0].clientY - e.touches[1].clientY;
+                            const newDist = Math.hypot(dx, dy);
+                            const ratio = newDist / Math.max(1, pinchZoomRef.current.dist);
+                            setZoomEditor(
+                              Math.min(3, Math.max(0.5, Number((pinchZoomRef.current.startZoom * ratio).toFixed(2))))
+                            );
+                          }
+                        }}
+                        onTouchEnd={(e) => {
+                          if (e.touches.length < 2) {
+                            pinchZoomRef.current = null;
+                          }
+                        }}
+                      >
+                      <div
+                        className="shrink-0 mx-auto"
+                        style={{ width: `${zoomedWidthPx}px`, minWidth: `${zoomedWidthPx}px` }}
+                      >
                         {(() => {
                           // Extraer horas y créditos reales y dinámicos del programa seleccionado
                           const itemProg = (
@@ -3099,6 +3193,7 @@ export default function CertificacionesAdminPage() {
                             />
                           );
                         })()}
+                      </div>
                       </div>
                     );
                   })()}

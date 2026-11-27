@@ -493,7 +493,7 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
     }
 
     ctx.fillStyle = colorHoras;
-    ctx.textAlign = 'left';
+    ctx.textAlign = cfg.horas.alineacion;
     drawStyledText(ctx, horasTexto, horasX, horasY, fontSizeHoras, cfg.horas.subrayado);
   }
 
@@ -524,7 +524,7 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
     }
 
     ctx.fillStyle = colorCred;
-    ctx.textAlign = 'left';
+    ctx.textAlign = cfg.creditos.alineacion;
     drawStyledText(ctx, creditosTexto, credX, credY, fontSizeCred, cfg.creditos.subrayado);
   }
 
@@ -595,7 +595,7 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
       ctx.font = buildCanvasFont(fontSizeFecha, fontFecha, !!cfg.fecha.negrita, !!cfg.fecha.cursiva && fuenteSoportaCursiva(cfg.fecha.fuente));
     }
 
-    ctx.textAlign = 'left';
+    ctx.textAlign = cfg.fecha.alineacion;
     drawStyledText(ctx, fechaTextoFinal, fechaX, fechaY, fontSizeFecha, cfg.fecha.subrayado);
   }
 
@@ -625,7 +625,7 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
       ctx.font = buildCanvasFont(fontSizeCod, fontCod, cfg.codigo.negrita !== false, !!cfg.codigo.cursiva && fuenteSoportaCursiva(cfg.codigo.fuente));
     }
 
-    ctx.textAlign = 'left';
+    ctx.textAlign = cfg.codigo.alineacion;
     ctx.fillStyle = colorCod;
     drawStyledText(ctx, textoCod, codX, codY, fontSizeCod, cfg.codigo.subrayado);
   }

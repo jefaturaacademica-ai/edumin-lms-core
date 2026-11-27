@@ -600,20 +600,20 @@ export interface DisenoCoordenadas {
 export const DISENO_DEFAULT_HORIZONTAL: DisenoCoordenadas = {
   estudiante: { x: 7.9, y: 32, alineacion: 'center', visible: true, fuente: 'serif-institucional', formatoNombre: 'apellidos-nombres', anchoMaximoCm: 25.0, tamanoFuente: 36, color: '#000000', negrita: false, interlineado: 1.25 },
   programa: { x: 7.1, y: 50, alineacion: 'center', visible: true, fuente: 'sans-moderna', anchoMaximoCm: 25.5, tamanoFuente: 22, color: '#000000', negrita: false, interlineado: 1.25 },
-  horas: { x: 38, y: 61, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: '', sufijo: 'horas académicas', tamanoFuente: 12, color: '#000000' },
-  creditos: { x: 38, y: 65, alineacion: 'center', visible: false, fuente: 'sans-formal', textoPrefijo: '', sufijo: 'créditos académicos', tamanoFuente: 12, color: '#000000' },
-  fecha: { x: 65, y: 86, alineacion: 'right', visible: true, fuente: 'sans-formal', textoPrefijo: 'Fecha de emisión: ', formatoFecha: 'larga', tamanoFuente: 10, color: '#000000' },
-  codigo: { x: 75, y: 92, alineacion: 'right', visible: true, fuente: 'sans-formal', textoPrefijo: 'CÓD.: ', tamanoFuente: 11, color: '#000000', negrita: false },
+  horas: { x: 50, y: 61, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: '', sufijo: 'horas académicas', tamanoFuente: 12, color: '#000000' },
+  creditos: { x: 50, y: 65, alineacion: 'center', visible: false, fuente: 'sans-formal', textoPrefijo: '', sufijo: 'créditos académicos', tamanoFuente: 12, color: '#000000' },
+  fecha: { x: 86, y: 86, alineacion: 'right', visible: true, fuente: 'sans-formal', textoPrefijo: 'Fecha de emisión: ', formatoFecha: 'larga', tamanoFuente: 10, color: '#000000' },
+  codigo: { x: 86, y: 92, alineacion: 'right', visible: true, fuente: 'sans-formal', textoPrefijo: 'CÓD.: ', tamanoFuente: 11, color: '#000000', negrita: false },
   qr: { x: 82, y: 70, alineacion: 'right', tamano: 56, tamanoCm: 2.0, visible: true }
 };
 
 export const DISENO_DEFAULT_VERTICAL: DisenoCoordenadas = {
   estudiante: { x: 6.0, y: 35, alineacion: 'center', visible: true, fuente: 'serif-institucional', formatoNombre: 'apellidos-nombres', anchoMaximoCm: 18.5, tamanoFuente: 30, color: '#000000', negrita: false, interlineado: 1.25 },
   programa: { x: 6.0, y: 49, alineacion: 'center', visible: true, fuente: 'sans-moderna', anchoMaximoCm: 18.5, tamanoFuente: 18, color: '#000000', negrita: false, interlineado: 1.25 },
-  horas: { x: 35, y: 59, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: '', sufijo: 'horas académicas', tamanoFuente: 10, color: '#000000' },
-  creditos: { x: 35, y: 63, alineacion: 'center', visible: false, fuente: 'sans-formal', textoPrefijo: '', sufijo: 'créditos académicos', tamanoFuente: 10, color: '#000000' },
-  fecha: { x: 35, y: 85, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: 'Fecha de emisión: ', formatoFecha: 'larga', tamanoFuente: 10, color: '#000000' },
-  codigo: { x: 40, y: 91, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: 'CÓD.: ', tamanoFuente: 11, color: '#000000', negrita: false },
+  horas: { x: 50, y: 59, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: '', sufijo: 'horas académicas', tamanoFuente: 10, color: '#000000' },
+  creditos: { x: 50, y: 63, alineacion: 'center', visible: false, fuente: 'sans-formal', textoPrefijo: '', sufijo: 'créditos académicos', tamanoFuente: 10, color: '#000000' },
+  fecha: { x: 50, y: 85, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: 'Fecha de emisión: ', formatoFecha: 'larga', tamanoFuente: 10, color: '#000000' },
+  codigo: { x: 50, y: 91, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: 'CÓD.: ', tamanoFuente: 11, color: '#000000', negrita: false },
   qr: { x: 45, y: 72, alineacion: 'center', tamano: 56, tamanoCm: 2.0, visible: true }
 };
 
@@ -872,9 +872,17 @@ export default function AvanzaCertificateRenderer({
   // Relaciones de aspecto A4 exactas:
   const a4AspectClass = esVertical ? 'aspect-[210/297]' : 'aspect-[297/210]';
 
-  // El punto (x, y) representa estrictamente la esquina superior izquierda del elemento (0cm, 0cm = esquina superior izquierda del área de trabajo A4).
+  // El punto (x, y) parte de la esquina superior izquierda (0cm, 0cm = esquina superior izquierda del área de trabajo A4).
+  // Para elementos de ancho automático (horas, créditos, fecha, código), la alineación fija el borde de anclaje horizontal:
+  // - left: borde izquierdo fijo en x (crece hacia la derecha)
+  // - center: centro horizontal fijo en x (crece simétricamente)
+  // - right: borde derecho fijo en x (crece hacia la izquierda)
   const getTransform = () => 'none';
-  const getTransformAuto = (_alineacion: ElementoAlineacion = 'center') => 'none';
+  const getTransformAuto = (alineacion: ElementoAlineacion = 'left') => {
+    if (alineacion === 'right') return 'translateX(-100%)';
+    if (alineacion === 'center') return 'translateX(-50%)';
+    return 'none';
+  };
 
   // Manejador interactivo de Arrastrar y Soltar (Drag and Drop) para ubicar elementos directamente en el canvas A4
   // REGLA SOLICITADA: Solo permite arrastrar la variable ACTIVA.
@@ -895,7 +903,14 @@ export default function AvanzaCertificateRenderer({
     const elRect = targetEl.getBoundingClientRect();
     const startClientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
     const startClientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
-    const grabOffsetX = startClientX - elRect.left;
+    const esAuto = campo === 'horas' || campo === 'creditos' || campo === 'fecha' || campo === 'codigo';
+    const alin = cfg[campo]?.alineacion || 'left';
+    const anchorX = esAuto && alin === 'right'
+      ? elRect.right
+      : esAuto && alin === 'center'
+        ? (elRect.left + elRect.right) / 2
+        : elRect.left;
+    const grabOffsetX = startClientX - anchorX;
     const grabOffsetY = startClientY - elRect.top;
 
     const actualizarPosicion = (clientX: number, clientY: number) => {
