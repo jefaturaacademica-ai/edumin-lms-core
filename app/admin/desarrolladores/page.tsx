@@ -292,30 +292,32 @@ print(response.json())`
       metodo: 'GET',
       ruta: '/api/v1/certificados/{codigo}',
       titulo: 'Verificación pública de autenticidad de diplomas',
-      descripcion: 'Permite a empresas mineras y empleadores comprobar la validez oficial de un diploma emitido por EDUMIN mediante su código alfanumérico.',
+      descripcion: 'Permite a empresas mineras y empleadores comprobar la validez oficial de un diploma emitido por EDUMIN mediante su código de verificación alfanumérico o consultando el DNI del egresado.',
       requiereAuth: false,
       parametros: [
-        { nombre: 'codigo', tipo: 'string', requerido: true, descripcion: 'Código de verificación del certificado (ej. EDU-2026-9812)' }
+        { nombre: 'codigo', tipo: 'string', requerido: true, descripcion: 'Código de verificación del certificado (ej. DM2DNSC) o DNI del estudiante (ej. 71234567)' }
       ],
       ejemploRespuesta: JSON.stringify({
         success: true,
         valido: true,
+        tipo_busqueda: "CODIGO_VERIFICACION",
         certificado: {
-          codigo_verificacion: "EDU-2026-9812",
-          estudiante: "Carlos Alberto Quispe Ramos",
-          programa: "DIPLOMADO EN DERECHO MINERO",
+          codigo_verificacion: "DM2DNSC",
+          estudiante: "Quispe Ramos, Juan Carlos",
+          documento_identidad: "71234567",
+          programa: "DERECHO MINERO",
           horas_academicas: 420,
           estado: "AUTENTICADO_OFICIAL",
           institucion: "ESCUELA DE MINERÍA DEL PERÚ (EDUMIN)"
         }
       }, null, 2),
-      snippetCurl: (key, host) => `curl -X GET "${host}/api/v1/certificados/EDU-2026-9812"`,
-      snippetJs: (key, host) => `const response = await fetch("${host}/api/v1/certificados/EDU-2026-9812");
+      snippetCurl: (key, host) => `curl -X GET "${host}/api/v1/certificados/DM2DNSC"`,
+      snippetJs: (key, host) => `const response = await fetch("${host}/api/v1/certificados/DM2DNSC");
 const data = await response.json();
 console.log(data);`,
       snippetPython: (key, host) => `import requests
 
-response = requests.get("${host}/api/v1/certificados/EDU-2026-9812")
+response = requests.get("${host}/api/v1/certificados/DM2DNSC")
 print(response.json())`
     }
   ];

@@ -20,13 +20,32 @@ export async function GET(request: Request) {
 
     if (error) throw error;
 
-    const diplomados = (catalogo || []).filter((c: any) => c.categoria === 'DIPLOMADO' || !c.categoria);
-    const cursos = (catalogo || []).filter((c: any) => c.categoria === 'CURSO_LIBRE' || c.categoria === 'CURSO');
-    const talleres = (catalogo || []).filter((c: any) => c.categoria === 'TALLER');
+    const diplomados = (catalogo || []).filter((c: any) => {
+      const t = String(c.tipo || '').toLowerCase();
+      const code = String(c.codigo || '').toUpperCase();
+      return t === 'diplomado' || code.startsWith('DIP-');
+    });
+
+    const cursos = (catalogo || []).filter((c: any) => {
+      const t = String(c.tipo || '').toLowerCase();
+      const code = String(c.codigo || '').toUpperCase();
+      return (t === 'curso' || code.startsWith('CUR-')) && !code.startsWith('DIP-') && !code.startsWith('TAL-');
+    });
+
+    const talleres = (catalogo || []).filter((c: any) => {
+      const t = String(c.tipo || '').toLowerCase();
+      const code = String(c.codigo || '').toUpperCase();
+      return t === 'taller' || code.startsWith('TAL-');
+    });
 
     return NextResponse.json({
       success: true,
       total_programas: (catalogo || []).length,
+      resumen: {
+        total_diplomados: diplomados.length,
+        total_cursos_libres: cursos.length,
+        total_talleres: talleres.length
+      },
       data: {
         diplomados,
         cursos,
