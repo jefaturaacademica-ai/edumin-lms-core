@@ -65,7 +65,7 @@ export async function POST(request: Request) {
 
     if (authError) {
       // Si el email ya existía en auth pero no en profiles, buscar el usuario
-      if (authError.message.includes('already registered')) {
+      if (authError.message.toLowerCase().includes('already')) {
         const { data: listUsers } = await admin.auth.admin.listUsers();
         const found = listUsers?.users?.find(u => u.email === cleanEmail);
         if (!found) throw authError;
@@ -78,6 +78,8 @@ export async function POST(request: Request) {
     }
 
     const dipTitulo = diplomado_inicial ? String(diplomado_inicial).trim().toUpperCase() : 'DERECHO MINERO';
+    const dipSlug = dipTitulo.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    const diplomadosStr = `DIPLOMADOS_LIST|[{"id":"${dipSlug}","slug":"${dipSlug}","titulo":"${dipTitulo}","avance":0,"modulos":[]}]`;
 
     // 3. Crear el registro en profiles
     const { error: profileError } = await admin
@@ -92,7 +94,7 @@ export async function POST(request: Request) {
         email: cleanEmail,
         telefono: telefono ? String(telefono).trim() : '',
         paquete_adquirido: cleanPaquete,
-        diplomado_1: dipTitulo,
+        diplomados: diplomadosStr,
         cuotas_pagadas: cuota_inicial_pagada ? 1 : 0,
         bloqueado: false,
         created_at: new Date().toISOString()

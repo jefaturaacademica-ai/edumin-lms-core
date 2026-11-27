@@ -49,14 +49,13 @@ export async function POST(request: Request) {
     }
 
     // 2. Obtener contrato principal en pagos
-    const { data: pagoRow } = await admin
+    const { data: pagosList } = await admin
       .from('pagos')
       .select('*')
       .or(`dni_ce.eq.${numDoc},profile_id.eq.${profile.id}`)
-      .eq('is_cargo_extra', false)
-      .order('created_at', { ascending: false })
-      .limit(1)
-      .maybeSingle();
+      .order('created_at', { ascending: false });
+
+    const pagoRow = (pagosList || []).find((p: any) => !String(p.metodo || '').startsWith('CARGO_EXTRA'));
 
     if (!pagoRow) {
       return NextResponse.json({

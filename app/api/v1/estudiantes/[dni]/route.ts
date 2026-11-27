@@ -46,7 +46,7 @@ export async function GET(
     // 2. Consultar pagos asociados
     const { data: pagos } = await admin
       .from('pagos')
-      .select('id, monto, metodo, estado, created_at, is_cargo_extra')
+      .select('id, monto, metodo, estado, created_at')
       .or(`dni_ce.eq.${cleanDni},profile_id.eq.${profile.id}`);
 
     const listaPagos = pagos || [];
@@ -56,7 +56,8 @@ export async function GET(
     let cuotasPagadas = 0;
 
     listaPagos.forEach((p: any) => {
-      if (p.is_cargo_extra) return;
+      const esCargoExtra = typeof p.metodo === 'string' && p.metodo.startsWith('CARGO_EXTRA');
+      if (esCargoExtra) return;
       const m = Number(p.monto) || 0;
       totalFacturado += m;
 

@@ -27,7 +27,7 @@ interface EndpointDoc {
 
 export default function AdminDesarrolladoresPage() {
   const { role } = useProfile();
-  const [apiKey, setApiKey] = useState<string>('edumin_live_6cba7f9e1a2b3c4d5e6f8a9b0c1d2e3f');
+  const [apiKey, setApiKey] = useState<string>('edumin_live_6cbaca499252f3eb4e928c1862eeb75c28b7bc2c');
   const [cargandoKey, setCargandoKey] = useState(false);
   const [mostrarKey, setMostrarKey] = useState(false);
   const [copiadoKey, setCopiadoKey] = useState(false);

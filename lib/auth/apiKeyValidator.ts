@@ -3,7 +3,7 @@
  * Admite autenticación vía header 'x-api-key' o 'Authorization: Bearer <key>'.
  */
 
-export const MASTER_FALLBACK_API_KEY = 'edumin_live_6cba7f9e1a2b3c4d5e6f8a9b0c1d2e3f';
+export const MASTER_FALLBACK_API_KEY = 'edumin_live_6cbaca499252f3eb4e928c1862eeb75c28b7bc2c';
 
 export function getMasterApiKey(): string {
   const envKey = process.env.EDUMIN_API_KEY || process.env.N8N_API_SECRET_KEY;
