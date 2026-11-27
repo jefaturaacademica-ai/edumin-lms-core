@@ -12,6 +12,7 @@ import type { ConfiguracionExamenItem } from '@/lib/types/examenes';
 
 interface ConfiguracionExamenesTabProps {
   onNotificacion?: (msg: string) => void;
+  onTotalConfiguraciones?: (total: number) => void;
 }
 
 interface DisponibilidadBanco {
@@ -23,7 +24,7 @@ interface DisponibilidadBanco {
   total: number;
 }
 
-export default function ConfiguracionExamenesTab({ onNotificacion }: ConfiguracionExamenesTabProps) {
+export default function ConfiguracionExamenesTab({ onNotificacion, onTotalConfiguraciones }: ConfiguracionExamenesTabProps) {
   const [configuraciones, setConfiguraciones] = useState<ConfiguracionExamenItem[]>([]);
   const [cargando, setCargando] = useState(true);
   const [errorMensaje, setErrorMensaje] = useState<string | null>(null);
@@ -56,6 +57,7 @@ export default function ConfiguracionExamenesTab({ onNotificacion }: Configuraci
       const data = await res.json();
       if (data.success && Array.isArray(data.data)) {
         setConfiguraciones(data.data);
+        onTotalConfiguraciones?.(data.data.length);
       } else {
         setErrorMensaje(data.error || 'Error al cargar configuraciones');
       }

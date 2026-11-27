@@ -33,6 +33,18 @@ export default function AlumnosRiesgoPage() {
   const [estudiantes, setEstudiantes] = useState<any[]>([]);
   const [cargando, setCargando] = useState(true);
 
+  const proximaFechaCorte = React.useMemo(() => {
+    const hoy = new Date();
+    let corte = new Date(hoy.getFullYear(), hoy.getMonth(), 28);
+    if (hoy.getDate() > 28) {
+      corte = new Date(hoy.getFullYear(), hoy.getMonth() + 1, 28);
+    }
+    const dia = corte.getDate().toString().padStart(2, '0');
+    const mes = (corte.getMonth() + 1).toString().padStart(2, '0');
+    const anio = corte.getFullYear();
+    return `${dia}/${mes}/${anio}`;
+  }, []);
+
   React.useEffect(() => {
     cargarEstudiantes();
   }, []);
@@ -180,7 +192,7 @@ export default function AlumnosRiesgoPage() {
               <Calendar className="w-5 h-5 text-amber-600 shrink-0" />
               <div className="text-xs">
                 <span className="font-bold block">Corte automático programado</span>
-                <span>Bloqueo masivo el <strong className="tabular-nums underline">24/09/2026</strong></span>
+                <span>Bloqueo masivo el <strong className="tabular-nums underline">{proximaFechaCorte}</strong></span>
               </div>
             </div>
           </div>
@@ -196,7 +208,7 @@ export default function AlumnosRiesgoPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
               <div className="flex justify-between items-center">
-                <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Alumnos con Deuda Activa</p>
+                <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Alumnos con deuda activa</p>
                 <div className="p-2.5 bg-red-50 text-red-600 rounded-2xl">
                   <AlertTriangle className="size-5" />
                 </div>
@@ -206,7 +218,7 @@ export default function AlumnosRiesgoPage() {
             
             <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
               <div className="flex justify-between items-center">
-                <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Bloqueados por Sistema</p>
+                <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Bloqueados por sistema</p>
                 <div className="p-2.5 bg-amber-50 text-amber-600 rounded-2xl">
                   <UserX className="size-5" />
                 </div>
@@ -216,7 +228,7 @@ export default function AlumnosRiesgoPage() {
 
             <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
               <div className="flex justify-between items-center">
-                <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Total Base Estudiantil</p>
+                <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Total base estudiantil</p>
                 <div className="p-2.5 bg-indigo-50 text-indigo-600 rounded-2xl">
                   <Users className="size-5" />
                 </div>

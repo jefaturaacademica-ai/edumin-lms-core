@@ -70,7 +70,7 @@ export default function ReportesPage() {
       let rows = "ID,DNI_CE,MONTO,METODO,ESTADO,FECHA\n";
       if (reporteData.pagos.length > 0) {
         reporteData.pagos.forEach(p => {
-          rows += `${p.id},${p.dni_ce || ''},${p.monto || 150.00},${p.metodo || 'Yape/Plin'},${p.estado || 'Completado'},${p.created_at || new Date().toISOString()}\n`;
+          rows += `${p.id},${p.dni_ce || ''},${p.monto ?? 0},${p.metodo || 'No registrado'},${p.estado || 'Registrado'},${p.created_at || ''}\n`;
         });
       }
       
@@ -92,7 +92,8 @@ export default function ReportesPage() {
       let rows = "DNI_CE,NOMBRES,APELLIDOS,EMAIL,PAQUETE,CUOTAS_PAGADAS,BLOQUEADO,PRORROGA_HASTA\n";
       if (reporteData.alumnosRiesgo.length > 0) {
         reporteData.alumnosRiesgo.forEach(a => {
-          rows += `${a.dni_ce},"${a.nombres}","${a.apellidos}",${a.email},${a.paquete_adquirido},${a.cuotas_pagadas},${a.bloqueado ? 'SI' : 'NO'},${a.prorroga_hasta || 'NINGUNA'}\n`;
+          const doc = a.numero_documento || a.dni_ce || '';
+          rows += `${doc},"${a.nombres || ''}","${a.apellidos || ''}",${a.email || ''},${a.paquete_adquirido || ''},${a.cuotas_pagadas ?? 0},${a.bloqueado ? 'SI' : 'NO'},${a.prorroga_hasta || 'NINGUNA'}\n`;
         });
       }
       
@@ -114,7 +115,7 @@ export default function ReportesPage() {
       let rows = "ID,TITULO,CATEGORIA,DURACION,PRECIO,NIVEL\n";
       if (reporteData.cursos.length > 0) {
         reporteData.cursos.forEach(c => {
-          rows += `${c.id},"${c.titulo}","${c.categoria}",${c.duracion || '40 horas'},${c.precio || 150.00},${c.nivel || 'Especialización'}\n`;
+          rows += `${c.id},"${c.titulo || ''}","${c.categoria || ''}",${c.duracion || ''},${c.precio ?? 0},${c.nivel || ''}\n`;
         });
       }
       

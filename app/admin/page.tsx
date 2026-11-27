@@ -12,7 +12,7 @@ import AnularPagoModal from '@/components/admin/anular-pago-modal';
 import ReciboModal from '@/components/admin/recibo-modal';
 import EditarCronogramaModal from '@/components/admin/editar-cronograma-modal';
 import Ficha360Modal from '@/components/admin/ficha-360-modal';
-import { EstudianteCompleto } from '@/lib/data/mockStudents';
+import { EstudianteCompleto } from '@/lib/types/estudiante';
 import { useTabSlug } from '@/lib/hooks/useTabSlug';
 import { getClientCachedData, fetchWithClientCache, invalidateClientCache } from '@/lib/utils/clientCache';
 
@@ -220,10 +220,11 @@ export default function AdminDashboard360() {
 
     // 6. Filtro Inactividad
     let coincideInactividad = true;
-    if (filtroInactividad === 'hoy') coincideInactividad = e.dias_inactivo === 0;
-    if (filtroInactividad === '3d') coincideInactividad = e.dias_inactivo >= 3;
-    if (filtroInactividad === '7d') coincideInactividad = e.dias_inactivo >= 7;
-    if (filtroInactividad === '14d') coincideInactividad = e.dias_inactivo >= 14;
+    const dias = e.dias_inactivo ?? 0;
+    if (filtroInactividad === 'hoy') coincideInactividad = dias === 0;
+    if (filtroInactividad === '3d') coincideInactividad = dias >= 3;
+    if (filtroInactividad === '7d') coincideInactividad = dias >= 7;
+    if (filtroInactividad === '14d') coincideInactividad = dias >= 14;
 
     return coincideTexto && coincideMes && coincidePaquete && coincideEstado && coincideRiesgo && coincideInactividad;
   });
@@ -602,7 +603,7 @@ export default function AdminDashboard360() {
                               </td>
                               <td className="py-4 px-4 tabular-nums text-[11px] text-slate-600 dark:text-slate-400">
                                 <span className="flex items-center gap-1">
-                                  <Clock className="w-3 h-3 text-slate-400 dark:text-slate-500" /> {e.ultima_conexion}
+                                  <Clock className="w-3 h-3 text-slate-400 dark:text-slate-500" /> {e.ultima_conexion || 'Sin registro'}
                                 </span>
                               </td>
                               

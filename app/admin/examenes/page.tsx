@@ -66,6 +66,7 @@ export default function AdminExamenesPage() {
 
   // Pestaña principal activa: 'banco' | 'configuracion'
   const [activeMainTab, setActiveMainTab] = useTabSlug<'banco' | 'configuracion'>('banco', ['banco', 'configuracion'] as const);
+  const [totalConfiguraciones, setTotalConfiguraciones] = useState<number | null>(null);
 
   // Catálogos separados de diplomados, cursos y talleres
   const [listaDiplomados, setListaDiplomados] = useState(LISTA_DIPLOMADOS_OFICIALES);
@@ -181,6 +182,16 @@ export default function AdminExamenesPage() {
       }
     };
     cargarCatalogoCompleto();
+
+    // Obtener total dinámico de configuraciones de exámenes
+    fetch('/api/admin/examenes/configuracion')
+      .then(res => res.json())
+      .then(data => {
+        if (data.success && Array.isArray(data.data)) {
+          setTotalConfiguraciones(data.data.length);
+        }
+      })
+      .catch(() => {});
   }, []);
 
   // Catálogo unificado
@@ -608,7 +619,7 @@ export default function AdminExamenesPage() {
                   ? 'bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400'
                   : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400'
               }`}>
-                150
+                {totalConfiguraciones !== null ? totalConfiguraciones : '...'}
               </span>
             </button>
           </div>
@@ -1456,7 +1467,7 @@ export default function AdminExamenesPage() {
             </section>
           </div>
           ) : (
-            <ConfiguracionExamenesTab onNotificacion={mostrarNotificacion} />
+            <ConfiguracionExamenesTab onNotificacion={mostrarNotificacion} onTotalConfiguraciones={setTotalConfiguraciones} />
           )}
         </main>
       </div>

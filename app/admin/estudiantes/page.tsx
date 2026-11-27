@@ -15,7 +15,7 @@ import AnularPagoModal from '@/components/admin/anular-pago-modal';
 import ReciboModal from '@/components/admin/recibo-modal';
 import EditarCronogramaModal from '@/components/admin/editar-cronograma-modal';
 import Ficha360Modal from '@/components/admin/ficha-360-modal';
-import { EstudianteCompleto } from '@/lib/data/mockStudents';
+import { EstudianteCompleto } from '@/lib/types/estudiante';
 import { PaqueteDefinicion, PAQUETES_DEFAULT } from '@/lib/types/paquetes';
 import { getClientCachedData, fetchWithClientCache } from '@/lib/utils/clientCache';
 import { LISTA_PAISES, formatearCelularGuardar } from '@/lib/utils/paisesYRegiones';

@@ -841,24 +841,34 @@ export default function Ficha360Modal({
                     <strong className="text-indigo-600 dark:text-indigo-400 truncate block font-bold">{alumnoSeleccionado.diplomado_actual}</strong>
                   </div>
                   <div>
-                    <span className="tabular-nums text-[10px] text-slate-400 uppercase block font-semibold">Total Créditos Alumno</span>
+                    <span className="tabular-nums text-[10px] text-slate-400 uppercase block font-semibold">Total de contratos</span>
                     <strong className="text-slate-800 dark:text-slate-200 font-bold tabular-nums text-sm">
-                      {creditosAlumno.length} Contrato{creditosAlumno.length === 1 ? '' : 's'}
+                      {creditosAlumno.length} contrato{creditosAlumno.length === 1 ? '' : 's'}
                     </strong>
                   </div>
                   <div>
-                    <span className="tabular-nums text-[10px] text-slate-400 uppercase block font-semibold">Estado Global Alumno</span>
+                    <span className="tabular-nums text-[10px] text-slate-400 uppercase block font-semibold">Estado global del estudiante</span>
                     <span className={`inline-block font-black text-xs px-2.5 py-0.5 rounded-full mt-0.5 ${
                       alumnoSeleccionado.deuda_total_pendiente === 0 
                         ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300' 
                         : 'bg-amber-100 text-amber-800 dark:bg-amber-950/60 dark:text-amber-300'
                     }`}>
-                      {alumnoSeleccionado.deuda_total_pendiente === 0 ? 'Sin Deuda Global' : `Deuda Global: S/ ${alumnoSeleccionado.deuda_total_pendiente.toFixed(2)}`}
+                      {alumnoSeleccionado.deuda_total_pendiente === 0 ? 'Sin deuda global' : `Deuda global: S/ ${alumnoSeleccionado.deuda_total_pendiente.toFixed(2)}`}
                     </span>
                   </div>
                 </div>
               </div>
 
+              {creditosAlumno.length === 0 ? (
+                <div className="text-center py-12 bg-slate-50 dark:bg-slate-800/40 rounded-3xl border border-slate-200 dark:border-slate-800 p-8 my-4">
+                  <CreditCard className="size-12 mx-auto text-slate-300 dark:text-slate-600 mb-3" />
+                  <h3 className="text-base font-bold text-slate-800 dark:text-slate-200">Sin plan de pagos registrado</h3>
+                  <p className="text-sm text-slate-500 dark:text-slate-400 mt-1 max-w-md mx-auto">
+                    Este estudiante no cuenta con un contrato de crédito o registro formal de pagos en el sistema.
+                  </p>
+                </div>
+              ) : (
+                <>
               {/* Selector de Créditos / Contratos del Alumno (si posee más de 1) */}
               {creditosAlumno.length > 1 && (
                 <div className="bg-indigo-50/70 dark:bg-indigo-950/40 p-3 rounded-2xl border border-indigo-100 dark:border-indigo-900 flex items-center gap-2">
@@ -1548,6 +1558,8 @@ export default function Ficha360Modal({
                   </div>
                 );
               })()}
+                </>
+              )}
 
             </div>
           )}
@@ -2820,7 +2832,7 @@ export default function Ficha360Modal({
                   </span>
                 </div>
                 <p className="text-xs text-amber-800 dark:text-amber-200">
-                  El estudiante registra <strong className="font-bold">{alumnoSeleccionado.dias_inactivo} días de inactividad</strong>. Última conexión: {alumnoSeleccionado.ultima_conexion}.
+                  El estudiante registra <strong className="font-bold">{alumnoSeleccionado.dias_inactivo ?? 0} días de inactividad</strong>. Última conexión: {alumnoSeleccionado.ultima_conexion || 'Sin registro'}.
                 </p>
               </div>
 

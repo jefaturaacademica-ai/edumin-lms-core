@@ -304,45 +304,6 @@ export async function GET(request?: Request) {
 
       const cargosExtras = parsedRows.filter((r: any) => r.is_cargo_extra);
 
-      if (creditosAlumno.length === 0) {
-        const montoBase = esContado ? (p.paquete_adquirido === 'ILIMITADO' ? 1500 : 900) : (p.paquete_adquirido === 'ILIMITADO' ? 1500 : p.paquete_adquirido === 'FULL' ? 900 : 540);
-        const cuotasDefault = esContado ? ['0', 'no corresponde', 'no corresponde', 'no corresponde', 'no corresponde', 'no corresponde'] : ['0', '0', '0', 'no corresponde', 'no corresponde', 'no corresponde'];
-        creditosAlumno.push({
-          id: `sim-credito-${p.dni_ce}-1`,
-          profile_id: p.id,
-          dni_ce: p.dni_ce,
-          num_credito: 1,
-          nro_pagare: undefined,
-          nro_recibo: undefined,
-          nro_operacion: undefined,
-          comprobante: undefined,
-          monto: montoBase,
-          metodo: 'Por Pagar',
-          estado: 'Pendiente',
-          created_at: new Date().toISOString(),
-          cuotas: cuotasDefault,
-          plan_cuotas: null,
-          cuotas_recibos: {},
-          fechas_vencimiento: calcularFechasVencimientoPorDefecto(new Date(), esContado ? 1 : 3),
-          'cuota 01': cuotasDefault[0],
-          'cuota 02': cuotasDefault[1],
-          'cuota 03': cuotasDefault[2],
-          'cuota 04': cuotasDefault[3],
-          'cuota 05': cuotasDefault[4],
-          'cuota 06': cuotasDefault[5],
-          cuota_01: cuotasDefault[0],
-          cuota_02: cuotasDefault[1],
-          cuota_03: cuotasDefault[2],
-          cuota_04: cuotasDefault[3],
-          cuota_05: cuotasDefault[4],
-          cuota_06: cuotasDefault[5],
-          total_pagado: 0,
-          total_deuda: montoBase,
-          'total pagado': 0,
-          'total deuda': montoBase
-        });
-      }
-
       const montoTotalPrograma = creditosAlumno.reduce((acc, c) => acc + c.monto, 0);
       const montoTotalPagado = creditosAlumno.reduce((acc, c) => acc + c.total_pagado, 0);
       const deudaTotalPendiente = creditosAlumno.reduce((acc, c) => acc + c.total_deuda, 0);
@@ -390,21 +351,25 @@ export async function GET(request?: Request) {
         });
       });
 
-      let estado = 'Al Día';
-      if (deudaTotalPendiente === 0 || (esContado && cuotasPagadas >= 1)) {
+      let estado = 'Al día';
+      if (creditosAlumno.length === 0) {
+        estado = p.bloqueado ? 'Bloqueado por sistema' : 'Sin plan de pagos registrado';
+      } else if (deudaTotalPendiente === 0 || (esContado && cuotasPagadas >= 1)) {
         estado = 'Constancia de no adeudo';
       } else if (p.bloqueado) {
-        estado = 'Bloqueado por Sistema';
+        estado = 'Bloqueado por sistema';
       } else if (p.prorroga_hasta) {
         const fechaProrroga = new Date(p.prorroga_hasta);
         const hoy = new Date();
-        estado = fechaProrroga >= hoy ? 'Prórroga Activa' : 'Prórroga Vencida';
+        estado = fechaProrroga >= hoy ? 'Prórroga activa' : 'Prórroga vencida';
       } else if (cuotasPendientes > 0) {
-        estado = 'Deuda Activa';
+        estado = 'Deuda activa';
       }
 
       let nivelRiesgoChurn = 'BAJO';
-      if (p.bloqueado || estado === 'Prórroga Vencida') {
+      if (creditosAlumno.length === 0) {
+        nivelRiesgoChurn = p.bloqueado ? 'CRÍTICO' : 'BAJO';
+      } else if (p.bloqueado || estado === 'Prórroga vencida') {
         nivelRiesgoChurn = 'CRÍTICO';
       } else if (cuotasPendientes >= 2) {
         nivelRiesgoChurn = 'ALTO';
@@ -533,10 +498,10 @@ export async function GET(request?: Request) {
         residencia: p.residencia || null,
         avance_porcentaje: avanceCalculado,
         nota_promedio: p.nota_promedio ?? 0,
-        ultima_conexion: p.ultima_conexion || 'Hace 1 hora',
-        dias_inactivo: p.dias_inactivo ?? (p.bloqueado ? 14 : 1),
-        mes_inscripcion: p.mes_inscripcion || 'septiembre',
-        canal_adquisicion: p.canal_adquisicion || 'Facebook Ads',
+        ultima_conexion: p.ultima_conexion || null,
+        dias_inactivo: p.dias_inactivo ?? (p.bloqueado ? 14 : null),
+        mes_inscripcion: p.mes_inscripcion || (p.created_at ? new Date(p.created_at).toLocaleDateString('es-PE', { month: 'long' }) : null),
+        canal_adquisicion: p.canal_adquisicion || null,
         creditos: creditosAlumno,
         cargos_extras: cargosExtras,
         historial_pagos: historialTransacciones
