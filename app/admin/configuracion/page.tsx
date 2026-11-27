@@ -33,6 +33,7 @@ export default function ConfiguracionRolesPage() {
   // Estado para la configuración de plantillas de paquetes
   const [paquetesConfig, setPaquetesConfig] = useState<Record<string, PaqueteDefinicion>>(PAQUETES_DEFAULT);
   const [guardandoPaquetes, setGuardandoPaquetes] = useState(false);
+  const [guardandoPaqueteId, setGuardandoPaqueteId] = useState<string | null>(null);
 
   // Modal / Formulario para crear un nuevo paquete personalizado
   const [mostrarModalNuevoPaquete, setMostrarModalNuevoPaquete] = useState(false);
@@ -290,6 +291,30 @@ export default function ConfiguracionRolesPage() {
     setUsuarioParaAsignar(null);
     setMensajeExito('¡Roles de usuario actualizados correctamente!');
     setTimeout(() => setMensajeExito(null), 4000);
+  };
+
+  const guardarPaqueteIndividual = async (pkgId: string) => {
+    setGuardandoPaqueteId(pkgId);
+    try {
+      const res = await fetch('/api/admin/configuracion-paquetes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ paquetes: paquetesConfig })
+      });
+
+      if (res.ok) {
+        const nombrePkg = paquetesConfig[pkgId]?.nombre || pkgId;
+        setMensajeExito(`¡${nombrePkg} guardado con éxito!`);
+        setTimeout(() => setMensajeExito(null), 4000);
+      } else {
+        alert('No se pudo guardar el paquete.');
+      }
+    } catch (e) {
+      console.error('Error guardando paquete:', e);
+      alert('Error de red al guardar el paquete.');
+    } finally {
+      setGuardandoPaqueteId(null);
+    }
   };
 
   const guardarConfigPaquetes = async () => {
@@ -649,13 +674,6 @@ export default function ConfiguracionRolesPage() {
                   >
                     <Plus className="w-4 h-4" /> Crear paquete personalizado
                   </button>
-                  <button
-                    onClick={guardarConfigPaquetes}
-                    disabled={guardandoPaquetes}
-                    className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-xl font-bold text-xs shadow-md transition inline-flex items-center gap-2 cursor-pointer disabled:opacity-50"
-                  >
-                    <Save className="w-4 h-4" /> {guardandoPaquetes ? 'Guardando...' : 'Guardar cambios'}
-                  </button>
                 </div>
               </div>
 
@@ -698,12 +716,26 @@ export default function ConfiguracionRolesPage() {
                           </div>
                         </div>
 
-                        <h3 className="text-xl font-black text-slate-900 dark:text-white mb-1">
-                          {pkg.nombre}
-                        </h3>
-                        <p className="text-xs text-slate-500 mb-4 line-clamp-2">
-                          {pkg.descripcion}
-                        </p>
+                        <input
+                          type="text"
+                          value={pkg.nombre}
+                          onChange={(e) => setPaquetesConfig({
+                            ...paquetesConfig,
+                            [pkg.id]: { ...pkg, nombre: e.target.value }
+                          })}
+                          aria-label={`Nombre de ${pkg.id}`}
+                          className="w-full text-lg font-black text-slate-900 dark:text-white mb-1.5 bg-transparent border border-transparent hover:border-slate-200 dark:hover:border-slate-700 focus:border-indigo-500 focus:bg-slate-50 dark:focus:bg-slate-950 rounded-lg px-1.5 py-0.5 -mx-1.5 focus:outline-none transition"
+                        />
+                        <textarea
+                          rows={2}
+                          value={pkg.descripcion}
+                          onChange={(e) => setPaquetesConfig({
+                            ...paquetesConfig,
+                            [pkg.id]: { ...pkg, descripcion: e.target.value }
+                          })}
+                          aria-label={`Descripción de ${pkg.id}`}
+                          className="w-full text-xs text-slate-500 dark:text-slate-400 mb-3 bg-transparent border border-transparent hover:border-slate-200 dark:hover:border-slate-700 focus:border-indigo-500 focus:bg-slate-50 dark:focus:bg-slate-950 rounded-lg px-1.5 py-1 -mx-1.5 focus:outline-none resize-none transition"
+                        />
 
                         {/* Precios y Cuotas sugeridas */}
                         <div className="bg-slate-50 dark:bg-slate-950/50 p-3 rounded-2xl mb-4 border border-slate-100 dark:border-slate-800 space-y-2 text-xs">
@@ -887,8 +919,19 @@ export default function ConfiguracionRolesPage() {
                         </div>
                       </div>
 
-                      <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] text-slate-400">
-                        Código interno: <code className="font-mono font-bold text-slate-600 dark:text-slate-300">{pkg.id}</code>
+                      <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2">
+                        <span className="text-[11px] text-slate-400">
+                          Código interno: <code className="font-mono font-bold text-slate-600 dark:text-slate-300">{pkg.id}</code>
+                        </span>
+                        <button
+                          type="button"
+                          onClick={() => guardarPaqueteIndividual(pkg.id)}
+                          disabled={guardandoPaqueteId === pkg.id || guardandoPaquetes}
+                          className="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-1.5 rounded-xl font-bold text-xs shadow-sm transition inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+                        >
+                          <Save className="w-3.5 h-3.5" />
+                          {guardandoPaqueteId === pkg.id ? 'Guardando...' : 'Guardar paquete'}
+                        </button>
                       </div>
                     </div>
                   );
