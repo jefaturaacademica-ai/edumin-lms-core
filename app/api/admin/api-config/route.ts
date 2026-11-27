@@ -1,12 +1,12 @@
 import { NextResponse } from 'next/server';
+import { getMasterApiKey } from '@/lib/auth/apiKeyValidator';
 
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
-    const rawKey = process.env.EDUMIN_API_KEY || process.env.N8N_API_SECRET_KEY || '';
+    const rawKey = getMasterApiKey();
     
-    // Devolvemos la clave real para que el administrador autenticado pueda verla o copiarla
     return NextResponse.json({
       success: true,
       apiKey: rawKey,
