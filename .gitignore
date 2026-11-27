@@ -40,3 +40,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# csv/xlsx datos sensibles
+scratch/*.csv
+scratch/*.xlsx
