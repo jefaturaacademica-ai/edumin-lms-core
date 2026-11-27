@@ -6,7 +6,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { 
   ShieldCheck, Users, BookOpen, Settings, LogOut,
   Activity, Award, UserCheck, Server, LayoutDashboard,
-  Menu, X, Sun, Moon, Sparkles, FileQuestion, User
+  Menu, X, Sun, Moon, Sparkles, FileQuestion, User, BarChart3
 } from 'lucide-react';
 import { createBrowserClient } from '@supabase/ssr';
 import { cerrarSesionUsuario } from '@/lib/auth/logout';
@@ -50,6 +50,7 @@ export default function AdminSidebar() {
       '/admin/estudiantes': 'Estudiantes',
       '/admin/certificaciones': 'Certificaciones',
       '/admin/alumnos-riesgo': 'Alumnos en Riesgo',
+      '/admin/resultados': 'Resultados y Métricas',
       '/admin/reportes': 'Reportes y Datos',
       '/admin/auditoria': 'Auditoría y Webhooks',
       '/admin/configuracion': 'Configuración y Roles',
@@ -118,6 +119,12 @@ export default function AdminSidebar() {
     {
       categoria: 'Informes y datos',
       items: [
+        {
+          href: '/admin/resultados',
+          label: 'Resultados',
+          icon: BarChart3,
+          color: 'text-cyan-400'
+        },
         {
           href: '/admin/reportes',
           label: 'Reportes y datos (CSV)',
