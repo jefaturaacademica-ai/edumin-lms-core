@@ -452,12 +452,14 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
       baseProgPt,
       cfg.programa.fuente,
       esNegritaProg,
-      esCursivaProg
+      esCursivaProg,
+      cfg.programa.letterSpacing || 0
     );
 
     const progFontSize = calcularTamanoPxCanvas(progSizePt, orientacion, canvasW);
 
     ctx.font = buildCanvasFont(progFontSize, fontProg, esNegritaProg, esCursivaProg);
+    (ctx as any).letterSpacing = `${((cfg.programa.letterSpacing || 0) * progFontSize).toFixed(2)}px`;
     ctx.fillStyle = colorProg;
     ctx.textAlign = cfg.programa.alineacion;
 
@@ -468,12 +470,16 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
       progDrawX = progX + maxProgW;
     }
 
+    // Centrado vertical automático en Y (si pasa de 2 o 3 líneas a 1 línea, se mantiene centrado en el medio del bloque)
     const interlineadoProg = cfg.programa.interlineado || 1.25;
     const lineSpacing = progFontSize * interlineadoProg;
-    const halfLeadingProg = ((interlineadoProg - 1) * progFontSize) / 2;
+    ctx.textBaseline = 'middle';
     progLineas.forEach((lin, idx) => {
-      drawStyledText(ctx, lin, progDrawX, progY + halfLeadingProg + (idx * lineSpacing), progFontSize, cfg.programa.subrayado);
+      const yLinea = progY + ((idx - ((progLineas.length - 1) / 2)) * lineSpacing);
+      drawStyledText(ctx, lin, progDrawX, yLinea, progFontSize, cfg.programa.subrayado);
     });
+    ctx.textBaseline = 'top';
+    (ctx as any).letterSpacing = '0px';
   }
 
   // 3. Horas y créditos: Ancho máximo estandarizado y auto-escala

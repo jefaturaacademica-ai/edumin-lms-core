@@ -97,7 +97,8 @@ export function medirAnchoTextoPt(
   tamanoPt: number,
   fuenteId?: TipoFuenteCertificado,
   esNegrita: boolean = true,
-  esCursiva: boolean = false
+  esCursiva: boolean = false,
+  letterSpacingEm: number = 0
 ): number {
   if (!texto) return 0;
   if (typeof document === 'undefined') {
@@ -114,7 +115,10 @@ export function medirAnchoTextoPt(
   const style = esCursiva && fuenteSoportaCursiva(fuenteId) ? 'italic ' : '';
   const weight = esNegrita ? 'bold ' : 'normal ';
   ctx.font = `${style}${weight}${tamanoPt}px ${fontFam}`;
-  return ctx.measureText(texto).width;
+  (ctx as any).letterSpacing = `${(letterSpacingEm * tamanoPt).toFixed(2)}px`;
+  const w = ctx.measureText(texto).width;
+  (ctx as any).letterSpacing = '0px';
+  return w;
 }
 
 /**
@@ -463,7 +467,8 @@ export function dividirTextoProgramaEnLineas(
   tamanoBasePt: number,
   fuente?: TipoFuenteCertificado,
   esNegrita: boolean = true,
-  esCursiva: boolean = false
+  esCursiva: boolean = false,
+  letterSpacingEm: number = 0
 ): { lineas: string[]; tamanoFuentePt: number } {
   if (!texto) return { lineas: [''], tamanoFuentePt: tamanoBasePt };
 
@@ -471,7 +476,7 @@ export function dividirTextoProgramaEnLineas(
   const esVertical = orientacion === 'vertical';
 
   // 1. Probar si entra en 1 sola línea
-  const ancho1LineaPt = medirAnchoTextoPt(texto, tamanoBasePt, fuente, esNegrita, esCursiva);
+  const ancho1LineaPt = medirAnchoTextoPt(texto, tamanoBasePt, fuente, esNegrita, esCursiva, letterSpacingEm);
   if (ancho1LineaPt <= anchoMaxPt || palabras.length <= 1) {
     let tam = tamanoBasePt;
     if (ancho1LineaPt > anchoMaxPt && anchoMaxPt > 0) {
@@ -494,8 +499,8 @@ export function dividirTextoProgramaEnLineas(
   }
   const linea2_1 = palabras.slice(0, corte2).join(' ');
   const linea2_2 = palabras.slice(corte2).join(' ');
-  const w2_1 = medirAnchoTextoPt(linea2_1, tamanoBasePt, fuente, esNegrita, esCursiva);
-  const w2_2 = medirAnchoTextoPt(linea2_2, tamanoBasePt, fuente, esNegrita, esCursiva);
+  const w2_1 = medirAnchoTextoPt(linea2_1, tamanoBasePt, fuente, esNegrita, esCursiva, letterSpacingEm);
+  const w2_2 = medirAnchoTextoPt(linea2_2, tamanoBasePt, fuente, esNegrita, esCursiva, letterSpacingEm);
   const maxW2 = Math.max(w2_1, w2_2);
 
   // En Horizontal el máximo es de 2 líneas estrictas:
@@ -538,9 +543,9 @@ export function dividirTextoProgramaEnLineas(
     const l3_2 = palabras.slice(corte3_1, corte3_2).join(' ');
     const l3_3 = palabras.slice(corte3_2).join(' ');
 
-    const w3_1 = medirAnchoTextoPt(l3_1, tamanoBasePt, fuente, esNegrita, esCursiva);
-    const w3_2 = medirAnchoTextoPt(l3_2, tamanoBasePt, fuente, esNegrita, esCursiva);
-    const w3_3 = medirAnchoTextoPt(l3_3, tamanoBasePt, fuente, esNegrita, esCursiva);
+    const w3_1 = medirAnchoTextoPt(l3_1, tamanoBasePt, fuente, esNegrita, esCursiva, letterSpacingEm);
+    const w3_2 = medirAnchoTextoPt(l3_2, tamanoBasePt, fuente, esNegrita, esCursiva, letterSpacingEm);
+    const w3_3 = medirAnchoTextoPt(l3_3, tamanoBasePt, fuente, esNegrita, esCursiva, letterSpacingEm);
     const maxW3 = Math.max(w3_1, w3_2, w3_3);
 
     // Si 3 líneas reduce el ancho de la línea más larga respecto a 2 líneas:
@@ -586,6 +591,7 @@ export interface PosicionElemento {
   anchoMaximoCm?: number; // Ancho máximo físico en centímetros A4 para todas las variables
   anchoMaximo?: number; // Porcentaje de ancho máximo (compatibilidad)
   interlineado?: number; // Altura de línea / espacio entre filas (multiplicador, ej: 1.25)
+  letterSpacing?: number; // Espaciado entre letras en em (0 = normal, negativo = más pegadas)
   negrita?: boolean; // Negrita (bold)
   cursiva?: boolean; // Cursiva (italic)
   subrayado?: boolean; // Subrayado (underline)
@@ -603,7 +609,7 @@ export interface DisenoCoordenadas {
 
 export const DISENO_DEFAULT_HORIZONTAL: DisenoCoordenadas = {
   estudiante: { x: 7.9, y: 32, alineacion: 'center', visible: true, fuente: 'serif-institucional', formatoNombre: 'apellidos-nombres', anchoMaximoCm: 25.0, tamanoFuente: 36, color: '#000000', negrita: false, interlineado: 1.25 },
-  programa: { x: 7.1, y: 50, alineacion: 'center', visible: true, fuente: 'sans-moderna', anchoMaximoCm: 25.5, tamanoFuente: 22, color: '#000000', negrita: false, interlineado: 1.25 },
+  programa: { x: 7.1, y: 53.5, alineacion: 'center', visible: true, fuente: 'sans-moderna', anchoMaximoCm: 25.5, tamanoFuente: 22, color: '#000000', negrita: false, interlineado: 1.25, letterSpacing: 0 },
   horas: { x: 50, y: 61, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: '', sufijo: 'horas académicas', tamanoFuente: 12, color: '#000000' },
   creditos: { x: 50, y: 65, alineacion: 'center', visible: false, fuente: 'sans-formal', textoPrefijo: '', sufijo: 'créditos académicos', tamanoFuente: 12, color: '#000000' },
   fecha: { x: 86, y: 86, alineacion: 'right', visible: true, fuente: 'sans-formal', textoPrefijo: 'Fecha de emisión: ', formatoFecha: 'larga', tamanoFuente: 10, color: '#000000' },
@@ -613,7 +619,7 @@ export const DISENO_DEFAULT_HORIZONTAL: DisenoCoordenadas = {
 
 export const DISENO_DEFAULT_VERTICAL: DisenoCoordenadas = {
   estudiante: { x: 6.0, y: 35, alineacion: 'center', visible: true, fuente: 'serif-institucional', formatoNombre: 'apellidos-nombres', anchoMaximoCm: 18.5, tamanoFuente: 30, color: '#000000', negrita: false, interlineado: 1.25 },
-  programa: { x: 6.0, y: 49, alineacion: 'center', visible: true, fuente: 'sans-moderna', anchoMaximoCm: 18.5, tamanoFuente: 18, color: '#000000', negrita: false, interlineado: 1.25 },
+  programa: { x: 6.0, y: 52, alineacion: 'center', visible: true, fuente: 'sans-moderna', anchoMaximoCm: 18.5, tamanoFuente: 18, color: '#000000', negrita: false, interlineado: 1.25, letterSpacing: 0 },
   horas: { x: 50, y: 59, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: '', sufijo: 'horas académicas', tamanoFuente: 10, color: '#000000' },
   creditos: { x: 50, y: 63, alineacion: 'center', visible: false, fuente: 'sans-formal', textoPrefijo: '', sufijo: 'créditos académicos', tamanoFuente: 10, color: '#000000' },
   fecha: { x: 50, y: 85, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: 'Fecha de emisión: ', formatoFecha: 'larga', tamanoFuente: 10, color: '#000000' },
@@ -801,7 +807,8 @@ export default function AvanzaCertificateRenderer({
     tamanoBaseProgPt,
     cfg.programa.fuente,
     !!cfg.programa.negrita,
-    !!cfg.programa.cursiva
+    !!cfg.programa.cursiva,
+    cfg.programa.letterSpacing || 0
   );
 
   // 3. AJUSTE DE ANCHO Y ESCALA PARA HORAS
@@ -915,7 +922,8 @@ export default function AvanzaCertificateRenderer({
         ? (elRect.left + elRect.right) / 2
         : elRect.left;
     const grabOffsetX = startClientX - anchorX;
-    const grabOffsetY = startClientY - elRect.top;
+    const anchorY = campo === 'programa' ? (elRect.top + elRect.bottom) / 2 : elRect.top;
+    const grabOffsetY = startClientY - anchorY;
 
     const actualizarPosicion = (clientX: number, clientY: number) => {
       const rect = container.getBoundingClientRect();
@@ -1057,7 +1065,7 @@ export default function AvanzaCertificateRenderer({
             top: `${cfg.programa.y}%`,
             width: `${anchoProgramaPct}%`,
             maxWidth: `${anchoProgramaPct}%`,
-            transform: getTransform()
+            transform: 'translateY(-50%)'
           }}
         >
           <h3 
@@ -1070,6 +1078,7 @@ export default function AvanzaCertificateRenderer({
               fontStyle: cfg.programa.cursiva && fuenteSoportaCursiva(cfg.programa.fuente) ? 'italic' : 'normal',
               textDecoration: cfg.programa.subrayado ? 'underline' : 'none',
               lineHeight: cfg.programa.interlineado || 1.25,
+              letterSpacing: `${cfg.programa.letterSpacing || 0}em`,
               textAlign: cfg.programa.alineacion
             }}
           >

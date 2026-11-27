@@ -2326,7 +2326,7 @@ export default function CertificacionesAdminPage() {
                                 <button
                                   type="button"
                                   onClick={() => {
-                                    let nuevoX = 40;
+                                    let nuevoX = 50;
                                     if (elementoSeleccionado === 'estudiante' || elementoSeleccionado === 'programa') {
                                       const anchoCm = act.anchoMaximoCm || (editorOrientacion === 'vertical' ? 18.5 : 25.0);
                                       const anchoPct = Math.min(98, Math.max(20, (anchoCm / anchoHojaCm) * 100));
@@ -2345,7 +2345,15 @@ export default function CertificacionesAdminPage() {
                                 </button>
                                 <button
                                   type="button"
-                                  onClick={() => actualizarPosicionElemento(elementoSeleccionado, { y: 45 })}
+                                  onClick={() => {
+                                    let nuevoY = 50;
+                                    if (elementoSeleccionado === 'qr') {
+                                      const qrCm = act.tamanoCm || 2.0;
+                                      const qrPct = (qrCm / altoHojaCm) * 100;
+                                      nuevoY = Math.max(0, Number(((100 - qrPct) / 2).toFixed(1)));
+                                    }
+                                    actualizarPosicionElemento(elementoSeleccionado, { y: nuevoY });
+                                  }}
                                   className="px-2 py-1 bg-slate-50 dark:bg-slate-800 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/60 border border-slate-200 dark:border-slate-700 rounded-lg text-[10px] font-bold transition cursor-pointer"
                                   title="Centrar verticalmente"
                                 >
@@ -2593,6 +2601,22 @@ export default function CertificacionesAdminPage() {
                                       anchoMaximo: Number(((cmVal / anchoHojaCm) * 100).toFixed(1))
                                     });
                                   }}
+                                />
+                              </div>
+
+                              <div className="flex items-center justify-between pt-1.5 border-t border-slate-100 dark:border-slate-800">
+                                <span className="text-[10px] font-bold text-slate-700 dark:text-slate-300">
+                                  Espaciado entre letras (tracking):
+                                </span>
+                                <ControlPasoNumero
+                                  valor={act.letterSpacing ?? 0}
+                                  min={-0.1}
+                                  max={0.3}
+                                  paso={0.01}
+                                  unidad="em"
+                                  precision={2}
+                                  ancho="w-14"
+                                  alCambiar={(val) => actualizarPosicionElemento('programa', { letterSpacing: val })}
                                 />
                               </div>
 
