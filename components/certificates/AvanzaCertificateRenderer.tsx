@@ -14,8 +14,10 @@ export type TipoFuenteCertificado =
   | 'serif-romana'        // Cinzel, serif (Romana Solemne para diplomas)
   | 'serif-cormorant'     // Cormorant Garamond, serif (Académica de Lujo)
   | 'serif-lora'          // Lora, Georgia, serif (Editorial Formal)
+  | 'serif-roboto-slab'   // Roboto Slab, Georgia, serif (Slab Institucional)
   | 'sans-moderna'        // Montserrat, Segoe UI, sans-serif
   | 'sans-formal'         // Inter, sans-serif
+  | 'sans-open-sans'      // Open Sans, sans-serif (Humanista Clara)
   | 'sans-roboto'         // Roboto, sans-serif
   | 'sans-outfit';        // Outfit, sans-serif (Geométrica Moderna Vanguardista)
 
@@ -36,9 +38,11 @@ export const FUENTES_CERTIFICADO = [
   { id: 'serif-romana', nombre: 'Cinzel', fontFamily: '"Cinzel", Georgia, "Times New Roman", serif', soportaCursiva: false },
   { id: 'serif-cormorant', nombre: 'Cormorant Garamond', fontFamily: '"Cormorant Garamond", Garamond, Georgia, serif', soportaCursiva: true },
   { id: 'serif-lora', nombre: 'Lora', fontFamily: '"Lora", Georgia, serif', soportaCursiva: true },
+  { id: 'serif-roboto-slab', nombre: 'Roboto Slab', fontFamily: '"Roboto Slab", Georgia, serif', soportaCursiva: false },
   { id: 'sans-outfit', nombre: 'Outfit', fontFamily: '"Outfit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', soportaCursiva: false },
   { id: 'sans-moderna', nombre: 'Montserrat', fontFamily: '"Montserrat", "Segoe UI", Arial, sans-serif', soportaCursiva: true },
   { id: 'sans-formal', nombre: 'Inter', fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif', soportaCursiva: true },
+  { id: 'sans-open-sans', nombre: 'Open Sans', fontFamily: '"Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', soportaCursiva: true },
   { id: 'sans-roboto', nombre: 'Roboto', fontFamily: '"Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', soportaCursiva: true }
 ] as const;
 

@@ -239,6 +239,12 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
         document.fonts.load('normal 24px "Roboto"'),
         document.fonts.load('italic bold 36px "Roboto"'),
         document.fonts.load('italic normal 24px "Roboto"'),
+        document.fonts.load('bold 36px "Roboto Slab"'),
+        document.fonts.load('normal 24px "Roboto Slab"'),
+        document.fonts.load('bold 36px "Open Sans"'),
+        document.fonts.load('normal 24px "Open Sans"'),
+        document.fonts.load('italic bold 36px "Open Sans"'),
+        document.fonts.load('italic normal 24px "Open Sans"'),
         document.fonts.ready
       ]);
     } catch {}
