@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { createAdminClient } from '@/lib/supabase/admin';
 import { parseDiplomadosFromProfile, parseCursosFromProfile } from '@/lib/utils/profileParser';
-import { generarCodigoUnicoCertificado, formatearNombreCertificado, normalizarCodigoCertificado, capitalizarPalabras } from '@/lib/utils/certificateUtils';
+import { generarCodigoUnicoCertificado, formatearNombreCertificado, normalizarCodigoCertificado, capitalizarPalabras, formatearHorasModulo } from '@/lib/utils/certificateUtils';
 
 export async function GET(request?: Request) {
   try {
@@ -216,7 +216,9 @@ export async function GET(request?: Request) {
             // Sincronizar modulares
             const dips = parseDiplomadosFromProfile(p);
             for (const d of dips) {
-              for (const m of d.modulos || []) {
+              const modsList = d.modulos || [];
+              for (let mIdx = 0; mIdx < modsList.length; mIdx++) {
+                const m = modsList[mIdx];
                 const estaAprobado = Boolean(m.completado) || Boolean(m.codigo_cert) || (Number(m.nota) >= 12 && (m as any).rendido);
                 if (estaAprobado) {
                   const modNombre = m.nombre || m.codigo || 'Módulo';
@@ -227,7 +229,7 @@ export async function GET(request?: Request) {
                     codigosExistentes.add(key1);
                     codigosExistentes.add(key2);
                     const modeloVigenteMod = resolverModeloVigente('MODULAR', d.titulo, d.id);
-                    const horasMod = m.horas || modeloVigenteMod?.horas || '108 horas académicas';
+                    const horasMod = m.horas || formatearHorasModulo(mIdx, modsList.length, (d as any).horas || 325);
                     const creditosMod = resolverCreditosModelo(modeloVigenteMod, 'MODULAR');
                     const fechaMod = m.fecha || new Date().toISOString().split('T')[0];
                     const snapshotMod = construirSnapshot(modeloVigenteMod, 'mod-avanza-mod', 'horizontal', horasMod, fechaMod, creditosMod);

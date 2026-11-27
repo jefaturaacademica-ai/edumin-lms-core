@@ -304,12 +304,12 @@ export function convertirFilasAListaModulos(filas: LeccionRow[]) {
 
   filas.forEach((f) => {
     const r = normalizeLeccionRow(f);
-    const modKey = r.Modulo || 'MÓDULO 01';
+    const modKey = (r.Modulo || 'MÓDULO 01').trim().toUpperCase();
 
     if (!modulosMap.has(modKey)) {
       modulosMap.set(modKey, {
         codigo: modKey,
-        nombre: r.NombreModulo || modKey,
+        nombre: (r.NombreModulo || modKey).trim().toUpperCase(),
         docente: r.Docente || '',
         temasMap: new Map(),
         clasesAdicionales: []

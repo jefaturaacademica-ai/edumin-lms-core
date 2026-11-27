@@ -90,21 +90,28 @@ export function parseDiplomadosFromProfile(profile: any): DiplomadoJSON[] {
       .replace(/^-+|-+$/g, '');
   };
 
+  const normalizeDip = (d: any): DiplomadoJSON => ({
+    ...d,
+    titulo: String(d.titulo || d.nombre || '').trim().toUpperCase(),
+    slug: normalizeSlug(d.slug || d.id || d.titulo),
+    id: normalizeSlug(d.id || d.slug || d.titulo),
+    modulos: Array.isArray(d.modulos)
+      ? d.modulos.map((m: any) => ({
+          ...m,
+          codigo: m.codigo ? String(m.codigo).trim().toUpperCase() : m.codigo,
+          nombre: m.nombre ? String(m.nombre).trim().toUpperCase() : m.nombre,
+          ...(m.titulo ? { titulo: String(m.titulo).trim().toUpperCase() } : {})
+        }))
+      : d.modulos
+  });
+
   // 1. Si existe la propiedad `diplomados` o `diplomados_json` (array ya parseado/enriquecido)
   if (Array.isArray(profile.diplomados_json)) {
-    return profile.diplomados_json.map((d: any) => ({
-      ...d,
-      slug: normalizeSlug(d.slug || d.id || d.titulo),
-      id: normalizeSlug(d.id || d.slug || d.titulo)
-    }));
+    return profile.diplomados_json.map(normalizeDip);
   }
 
   if (Array.isArray(profile.diplomados)) {
-    return profile.diplomados.map((d: any) => ({
-      ...d,
-      slug: normalizeSlug(d.slug || d.id || d.titulo),
-      id: normalizeSlug(d.id || d.slug || d.titulo)
-    }));
+    return profile.diplomados.map(normalizeDip);
   }
 
   // 2. Si `diplomados` o `diplomado_1` viene serializado como `DIPLOMADOS_LIST|[...]`
@@ -120,17 +127,9 @@ export function parseDiplomadosFromProfile(profile: any): DiplomadoJSON[] {
         const jsonStr = candidate.substring(candidate.indexOf('|') + 1).trim();
         const parsed = JSON.parse(jsonStr);
         if (Array.isArray(parsed)) {
-          return parsed.map((d: any) => ({
-            ...d,
-            slug: normalizeSlug(d.slug || d.id || d.titulo),
-            id: normalizeSlug(d.id || d.slug || d.titulo)
-          }));
+          return parsed.map(normalizeDip);
         } else if (parsed && Array.isArray(parsed.lista)) {
-          return parsed.lista.map((d: any) => ({
-            ...d,
-            slug: normalizeSlug(d.slug || d.id || d.titulo),
-            id: normalizeSlug(d.id || d.slug || d.titulo)
-          }));
+          return parsed.lista.map(normalizeDip);
         }
       } catch (e) {
         console.error('Error parsing DIPLOMADOS JSON:', e);
@@ -177,11 +176,17 @@ export function parseDiplomadosFromProfile(profile: any): DiplomadoJSON[] {
 export function parseCursosFromProfile(profile: any): CursoJSON[] {
   if (!profile) return [];
 
+  const normalizeCursosList = (list: any[]): CursoJSON[] =>
+    list.map((c: any) => ({
+      ...c,
+      titulo: String(c.titulo || c.nombre || '').trim().toUpperCase(),
+    }));
+
   if (Array.isArray(profile.cursos)) {
-    return profile.cursos;
+    return normalizeCursosList(profile.cursos);
   }
   if (Array.isArray(profile.cursos_json)) {
-    return profile.cursos_json;
+    return normalizeCursosList(profile.cursos_json);
   }
 
   const strCandidates = [
@@ -197,16 +202,16 @@ export function parseCursosFromProfile(profile: any): CursoJSON[] {
         try {
           const jsonStr = trimmed.substring(trimmed.indexOf('|') + 1).trim();
           const parsed = JSON.parse(jsonStr);
-          if (Array.isArray(parsed)) return parsed;
-          if (parsed && Array.isArray(parsed.lista)) return parsed.lista;
+          if (Array.isArray(parsed)) return normalizeCursosList(parsed);
+          if (parsed && Array.isArray(parsed.lista)) return normalizeCursosList(parsed.lista);
         } catch (e) {
           console.error('Error parsing CURSOS_LIST JSON:', e);
         }
       } else if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
         try {
           const parsed = JSON.parse(trimmed);
-          if (Array.isArray(parsed)) return parsed;
-          if (parsed && Array.isArray(parsed.lista)) return parsed.lista;
+          if (Array.isArray(parsed)) return normalizeCursosList(parsed);
+          if (parsed && Array.isArray(parsed.lista)) return normalizeCursosList(parsed.lista);
         } catch (e) {
           // ignore
         }

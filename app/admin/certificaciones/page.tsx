@@ -30,6 +30,7 @@ import AvanzaCertificateRenderer, {
   resolverTextoCreditos
 } from '@/components/certificates/AvanzaCertificateRenderer';
 import { descargarCertificadoA4Pdf, optimizarImagenFondo } from '@/lib/utils/certificatePdf';
+import { formatearHorasModulo } from '@/lib/utils/certificateUtils';
 
 export interface ModeloCertificado {
   id: string;
@@ -222,6 +223,7 @@ export default function CertificacionesAdminPage() {
   // Modal de previsualización dinámica para modelos de certificados
   const [modeloParaPrevisualizar, setModeloParaPrevisualizar] = useState<ModeloCertificado | null>(null);
   const [programaSimuladoEnModal, setProgramaSimuladoEnModal] = useState<string>('DERECHO MINERO');
+  const [moduloSimuladoEnModal, setModuloSimuladoEnModal] = useState<string>('MÓDULO 01: LEGISLACIÓN MINERA Y MARCO LEGAL DEL SECTOR');
 
   // Certificaciones externas (solicitudes de alumnos y registros directos de convenios)
   const [solicitudesCip, setSolicitudesCip] = useState<any[]>([]);
@@ -1021,14 +1023,23 @@ export default function CertificacionesAdminPage() {
 
   const abrirPrevisualizacionModelo = (modelo: ModeloCertificado) => {
     setModeloParaPrevisualizar(modelo);
+    let progInicial = '';
     if (modelo.recursoAsignadoNombre && modelo.asignacionAlcance === 'PRODUCTO_ESPECIFICO') {
-      setProgramaSimuladoEnModal(modelo.recursoAsignadoNombre);
+      progInicial = modelo.recursoAsignadoNombre;
     } else if (modelo.tipo === 'CURSO') {
-      setProgramaSimuladoEnModal(catalogoCursos[0]?.titulo || 'Gestión de trabajo en alto riesgo en minería');
+      progInicial = catalogoCursos[0]?.titulo || 'GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA';
     } else if (modelo.tipo === 'TALLER') {
-      setProgramaSimuladoEnModal(catalogoTalleres[0]?.titulo || 'Primeros auxilios y emergencias mineras');
+      progInicial = catalogoTalleres[0]?.titulo || 'PRIMEROS AUXILIOS Y EMERGENCIAS MINERAS';
     } else {
-      setProgramaSimuladoEnModal(catalogoDiplomados[0]?.titulo || 'Seguridad y salud ocupacional en minería');
+      progInicial = catalogoDiplomados[0]?.titulo || 'SEGURIDAD Y SALUD OCUPACIONAL EN MINERÍA';
+    }
+    setProgramaSimuladoEnModal(progInicial);
+
+    if (modelo.tipo === 'MODULAR') {
+      const dip = catalogoDiplomados.find(d => (d.titulo || d.nombre) === progInicial) || catalogoDiplomados[0];
+      const primerMod = dip?.modulos?.[0];
+      const modNombre = primerMod ? (primerMod.nombre || primerMod.titulo || 'MÓDULO 01: LEGISLACIÓN MINERA Y MARCO LEGAL DEL SECTOR') : 'MÓDULO 01: LEGISLACIÓN MINERA Y MARCO LEGAL DEL SECTOR';
+      setModuloSimuladoEnModal(modNombre.toUpperCase());
     }
   };
 
@@ -2216,23 +2227,35 @@ export default function CertificacionesAdminPage() {
 
                             {/* Atajos de centrado esenciales */}
                             <div className="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-                              <span className="text-[10px] font-bold text-slate-400">Atajos rápidos:</span>
+                              <span className="text-[10px] font-bold text-slate-400">Esquina sup. izq. (0,0):</span>
                               <div className="flex items-center gap-1.5">
                                 <button
                                   type="button"
-                                  onClick={() => actualizarPosicionElemento(elementoSeleccionado, { x: 50, alineacion: 'center' })}
+                                  onClick={() => {
+                                    let nuevoX = 40;
+                                    if (elementoSeleccionado === 'estudiante' || elementoSeleccionado === 'programa') {
+                                      const anchoCm = act.anchoMaximoCm || (editorOrientacion === 'vertical' ? 18.5 : 25.0);
+                                      const anchoPct = Math.min(98, Math.max(20, (anchoCm / anchoHojaCm) * 100));
+                                      nuevoX = Math.max(0, Number(((100 - anchoPct) / 2).toFixed(1)));
+                                    } else if (elementoSeleccionado === 'qr') {
+                                      const qrCm = act.tamanoCm || 2.0;
+                                      const qrPct = (qrCm / anchoHojaCm) * 100;
+                                      nuevoX = Math.max(0, Number(((100 - qrPct) / 2).toFixed(1)));
+                                    }
+                                    actualizarPosicionElemento(elementoSeleccionado, { x: nuevoX, alineacion: 'center' });
+                                  }}
                                   className="px-2 py-1 bg-slate-50 dark:bg-slate-800 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/60 border border-slate-200 dark:border-slate-700 rounded-lg text-[10px] font-bold transition cursor-pointer"
                                   title="Centrar horizontalmente"
                                 >
-                                  Centrar H (50%)
+                                  Centrar H
                                 </button>
                                 <button
                                   type="button"
-                                  onClick={() => actualizarPosicionElemento(elementoSeleccionado, { y: 50 })}
+                                  onClick={() => actualizarPosicionElemento(elementoSeleccionado, { y: 45 })}
                                   className="px-2 py-1 bg-slate-50 dark:bg-slate-800 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/60 border border-slate-200 dark:border-slate-700 rounded-lg text-[10px] font-bold transition cursor-pointer"
                                   title="Centrar verticalmente"
                                 >
-                                  Centrar V (50%)
+                                  Centrar V
                                 </button>
                               </div>
                             </div>
@@ -3410,63 +3433,110 @@ export default function CertificacionesAdminPage() {
             </div>
 
             {/* Selector interactivo de simulación con programas del catálogo */}
-            <div className="px-5 py-2.5 bg-indigo-50/50 dark:bg-indigo-950/30 border-b border-indigo-100 dark:border-indigo-900/50 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-              <label className="text-xs font-bold text-indigo-900 dark:text-indigo-300 flex items-center gap-1.5">
-                <Sparkles className="w-4 h-4 text-amber-500" />
-                <span>Simular con este programa:</span>
-              </label>
+            <div className="px-5 py-2.5 bg-indigo-50/50 dark:bg-indigo-950/30 border-b border-indigo-100 dark:border-indigo-900/50 flex flex-col gap-2">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <label className="text-xs font-bold text-indigo-900 dark:text-indigo-300 flex items-center gap-1.5 shrink-0">
+                  <Sparkles className="w-4 h-4 text-amber-500" />
+                  <span>Simular con este programa:</span>
+                </label>
 
-              <select
-                value={programaSimuladoEnModal}
-                onChange={(e) => setProgramaSimuladoEnModal(e.target.value)}
-                className="px-3 py-1.5 bg-white dark:bg-slate-800 border border-indigo-200 dark:border-indigo-800 rounded-xl text-xs font-bold text-slate-800 dark:text-slate-200 max-w-sm truncate"
-              >
-                {/* Si el modelo está asignado a un recurso específico, permitir seleccionarlo */}
-                {modeloParaPrevisualizar.asignacionAlcance === 'PRODUCTO_ESPECIFICO' && modeloParaPrevisualizar.recursoAsignadoNombre && (
-                  <option value={modeloParaPrevisualizar.recursoAsignadoNombre}>
-                    {modeloParaPrevisualizar.recursoAsignadoNombre} (Asignado al modelo)
-                  </option>
-                )}
+                <select
+                  value={programaSimuladoEnModal}
+                  onChange={(e) => {
+                    const nuevoProg = e.target.value;
+                    setProgramaSimuladoEnModal(nuevoProg);
+                    if (modeloParaPrevisualizar.tipo === 'MODULAR') {
+                      const dipSel = catalogoDiplomados.find(d => (d.titulo || d.nombre) === nuevoProg);
+                      const primerMod = dipSel?.modulos?.[0];
+                      if (primerMod) {
+                        setModuloSimuladoEnModal((primerMod.nombre || primerMod.titulo || 'MÓDULO 01').toUpperCase());
+                      }
+                    }
+                  }}
+                  className="px-3 py-1.5 bg-white dark:bg-slate-800 border border-indigo-200 dark:border-indigo-800 rounded-xl text-xs font-bold text-slate-800 dark:text-slate-200 max-w-sm truncate uppercase"
+                >
+                  {/* Si el modelo está asignado a un recurso específico, permitir seleccionarlo */}
+                  {modeloParaPrevisualizar.asignacionAlcance === 'PRODUCTO_ESPECIFICO' && modeloParaPrevisualizar.recursoAsignadoNombre && (
+                    <option value={modeloParaPrevisualizar.recursoAsignadoNombre}>
+                      {modeloParaPrevisualizar.recursoAsignadoNombre.toUpperCase()} (Asignado al modelo)
+                    </option>
+                  )}
 
-                {/* Si es certificado para cursos, mostrar ÚNICAMENTE cursos */}
-                {modeloParaPrevisualizar.tipo === 'CURSO' ? (
-                  <optgroup label="Cursos de especialización">
-                    {catalogoCursos.map(c => (
-                      <option key={c.id || c.titulo} value={c.titulo}>{c.titulo}</option>
-                    ))}
-                    {catalogoCursos.length === 0 && (
-                      <>
-                        <option value="Gestión de trabajo en alto riesgo en minería">Gestión de trabajo en alto riesgo en minería</option>
-                        <option value="Software aplicado: Leapfrog Geo y Datamine">Software aplicado: Leapfrog Geo y Datamine</option>
-                        <option value="Topografía minera subterránea con escáner láser">Topografía minera subterránea con escáner láser</option>
-                      </>
-                    )}
-                  </optgroup>
-                ) : modeloParaPrevisualizar.tipo === 'TALLER' ? (
-                  <optgroup label="Talleres y Masterclasses">
-                    {catalogoTalleres.map(t => (
-                      <option key={t.id || t.titulo} value={t.titulo}>{t.titulo}</option>
-                    ))}
-                    {catalogoTalleres.length === 0 && (
-                      <option value="Primeros auxilios y emergencias mineras">Primeros auxilios y emergencias mineras</option>
-                    )}
-                  </optgroup>
-                ) : (
-                  /* Para diplomas generales y modulares, mostrar ÚNICAMENTE diplomados */
-                  <optgroup label="Diplomados oficiales">
-                    {catalogoDiplomados.map(d => (
-                      <option key={d.id || d.titulo} value={d.titulo}>{d.titulo}</option>
-                    ))}
-                    {catalogoDiplomados.length === 0 && (
-                      <>
-                        <option value="Seguridad y salud ocupacional en minería">Seguridad y salud ocupacional en minería</option>
-                        <option value="Derecho minero y gestión de tierras">Derecho minero y gestión de tierras</option>
-                        <option value="Geología minera, yacimientos y exploración">Geología minera, yacimientos y exploración</option>
-                      </>
-                    )}
-                  </optgroup>
-                )}
-              </select>
+                  {/* Si es certificado para cursos, mostrar ÚNICAMENTE cursos */}
+                  {modeloParaPrevisualizar.tipo === 'CURSO' ? (
+                    <optgroup label="Cursos de especialización">
+                      {catalogoCursos.map(c => (
+                        <option key={c.id || c.titulo} value={c.titulo}>{String(c.titulo || '').toUpperCase()}</option>
+                      ))}
+                      {catalogoCursos.length === 0 && (
+                        <>
+                          <option value="GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA">GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA</option>
+                          <option value="SOFTWARE APLICADO: LEAPFROG GEO Y DATAMINE">SOFTWARE APLICADO: LEAPFROG GEO Y DATAMINE</option>
+                          <option value="TOPOGRAFÍA MINERA SUBTERRÁNEA CON ESCÁNER LÁSER">TOPOGRAFÍA MINERA SUBTERRÁNEA CON ESCÁNER LÁSER</option>
+                        </>
+                      )}
+                    </optgroup>
+                  ) : modeloParaPrevisualizar.tipo === 'TALLER' ? (
+                    <optgroup label="Talleres y masterclasses">
+                      {catalogoTalleres.map(t => (
+                        <option key={t.id || t.titulo} value={t.titulo}>{String(t.titulo || '').toUpperCase()}</option>
+                      ))}
+                      {catalogoTalleres.length === 0 && (
+                        <option value="PRIMEROS AUXILIOS Y EMERGENCIAS MINERAS">PRIMEROS AUXILIOS Y EMERGENCIAS MINERAS</option>
+                      )}
+                    </optgroup>
+                  ) : (
+                    /* Para diplomas generales y modulares, mostrar ÚNICAMENTE diplomados */
+                    <optgroup label="Diplomados oficiales">
+                      {catalogoDiplomados.map(d => (
+                        <option key={d.id || d.titulo} value={d.titulo}>{String(d.titulo || '').toUpperCase()}</option>
+                      ))}
+                      {catalogoDiplomados.length === 0 && (
+                        <>
+                          <option value="SEGURIDAD Y SALUD OCUPACIONAL EN MINERÍA">SEGURIDAD Y SALUD OCUPACIONAL EN MINERÍA</option>
+                          <option value="DERECHO MINERO Y GESTIÓN DE TIERRAS">DERECHO MINERO Y GESTIÓN DE TIERRAS</option>
+                          <option value="GEOLOGÍA MINERA, YACIMIENTOS Y EXPLORACIÓN">GEOLOGÍA MINERA, YACIMIENTOS Y EXPLORACIÓN</option>
+                        </>
+                      )}
+                    </optgroup>
+                  )}
+                </select>
+              </div>
+
+              {modeloParaPrevisualizar.tipo === 'MODULAR' && (() => {
+                const dipSel = catalogoDiplomados.find(d => (d.titulo || d.nombre) === programaSimuladoEnModal) || catalogoDiplomados[0];
+                const modsDip = dipSel?.modulos || [];
+                return (
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <label className="text-xs font-bold text-indigo-900 dark:text-indigo-300 flex items-center gap-1.5 shrink-0">
+                      <Layers className="w-4 h-4 text-indigo-500" />
+                      <span>Simular con este módulo:</span>
+                    </label>
+                    <select
+                      value={moduloSimuladoEnModal}
+                      onChange={(e) => setModuloSimuladoEnModal(e.target.value)}
+                      className="px-3 py-1.5 bg-white dark:bg-slate-800 border border-indigo-200 dark:border-indigo-800 rounded-xl text-xs font-bold text-slate-800 dark:text-slate-200 max-w-sm truncate uppercase"
+                    >
+                      {modsDip.length > 0 ? (
+                        modsDip.map((m: any, mIdx: number) => {
+                          const mNombre = String(m.nombre || m.titulo || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`).toUpperCase();
+                          return (
+                            <option key={mIdx} value={mNombre}>
+                              {mNombre}
+                            </option>
+                          );
+                        })
+                      ) : (
+                        <>
+                          <option value="MÓDULO 01: LEGISLACIÓN MINERA Y MARCO LEGAL DEL SECTOR">MÓDULO 01: LEGISLACIÓN MINERA Y MARCO LEGAL DEL SECTOR</option>
+                          <option value="MÓDULO 02: GESTIÓN DE SEGURIDAD Y SALUD OCUPACIONAL">MÓDULO 02: GESTIÓN DE SEGURIDAD Y SALUD OCUPACIONAL</option>
+                          <option value="MÓDULO 03: FISCALIZACIÓN AMBIENTAL Y CIERRE DE MINAS">MÓDULO 03: FISCALIZACIÓN AMBIENTAL Y CIERRE DE MINAS</option>
+                        </>
+                      )}
+                    </select>
+                  </div>
+                );
+              })()}
             </div>
 
             {/* Certificado Canvas A4 Simulado */}
@@ -3488,8 +3558,19 @@ export default function CertificacionesAdminPage() {
                       orientacion={modeloParaPrevisualizar.orientacion || 'horizontal'}
                       estudiante="QUISPE RAMOS, JUAN CARLOS"
                       programa={programaSimuladoEnModal}
-                      modulo={modeloParaPrevisualizar.tipo === 'MODULAR' ? 'Módulo 01: Legislación Minera y Marco Legal del Sector' : undefined}
-                      horas={modeloParaPrevisualizar.horas || (modeloParaPrevisualizar.tipo === 'MODULAR' ? '108 horas académicas' : '325 horas académicas y 13 créditos')}
+                      modulo={modeloParaPrevisualizar.tipo === 'MODULAR' ? moduloSimuladoEnModal : undefined}
+                      horas={(() => {
+                        if (modeloParaPrevisualizar.tipo === 'MODULAR') {
+                          const dipSel = catalogoDiplomados.find(d => (d.titulo || d.nombre) === programaSimuladoEnModal) || catalogoDiplomados[0];
+                          const modsDip = dipSel?.modulos || [];
+                          const mIdx = modsDip.findIndex((m: any, idx: number) =>
+                            String(m.nombre || m.titulo || `MÓDULO ${(idx + 1).toString().padStart(2, '0')}`).toUpperCase() === moduloSimuladoEnModal.toUpperCase()
+                          );
+                          const modObj = mIdx >= 0 ? modsDip[mIdx] : null;
+                          return modObj?.horas || formatearHorasModulo(mIdx >= 0 ? mIdx : 0, modsDip.length || 3, dipSel?.horas || 325);
+                        }
+                        return modeloParaPrevisualizar.horas || '325 horas académicas y 13 créditos';
+                      })()}
                       fecha={new Date().toISOString().split('T')[0]}
                       codigo="HNYNXT2"
                       imagenFondoUrl={modeloParaPrevisualizar.imagenFondoUrl}
@@ -3519,8 +3600,19 @@ export default function CertificacionesAdminPage() {
                         orientacion: modeloParaPrevisualizar.orientacion || 'horizontal',
                         estudiante: 'QUISPE RAMOS, JUAN CARLOS',
                         programa: programaSimuladoEnModal,
-                        modulo: modeloParaPrevisualizar.tipo === 'MODULAR' ? 'Módulo 01: Legislación Minera y Marco Legal del Sector' : undefined,
-                        horas: modeloParaPrevisualizar.horas || (modeloParaPrevisualizar.tipo === 'MODULAR' ? '108 horas académicas' : '325 horas académicas y 13 créditos académicos'),
+                        modulo: modeloParaPrevisualizar.tipo === 'MODULAR' ? moduloSimuladoEnModal : undefined,
+                        horas: (() => {
+                          if (modeloParaPrevisualizar.tipo === 'MODULAR') {
+                            const dipSel = catalogoDiplomados.find(d => (d.titulo || d.nombre) === programaSimuladoEnModal) || catalogoDiplomados[0];
+                            const modsDip = dipSel?.modulos || [];
+                            const mIdx = modsDip.findIndex((m: any, idx: number) =>
+                              String(m.nombre || m.titulo || `MÓDULO ${(idx + 1).toString().padStart(2, '0')}`).toUpperCase() === moduloSimuladoEnModal.toUpperCase()
+                            );
+                            const modObj = mIdx >= 0 ? modsDip[mIdx] : null;
+                            return modObj?.horas || formatearHorasModulo(mIdx >= 0 ? mIdx : 0, modsDip.length || 3, dipSel?.horas || 325);
+                          }
+                          return modeloParaPrevisualizar.horas || '325 horas académicas y 13 créditos académicos';
+                        })(),
                         fecha: new Date().toISOString().split('T')[0],
                         codigo: 'HNYNXT2',
                         imagenFondoUrl: modeloParaPrevisualizar.imagenFondoUrl,
@@ -3736,7 +3828,7 @@ export default function CertificacionesAdminPage() {
                           if (tipoManual === 'MODULAR') {
                             const modNombre = dip?.modulos?.[0]?.nombre || dip?.modulos?.[0]?.titulo || 'Módulo 01: Marco Legal y Fundamentos';
                             setModuloManual(modNombre);
-                            setHorasManual('108 horas académicas');
+                            setHorasManual(dip?.modulos?.[0]?.horas || formatearHorasModulo(0, dip?.modulos?.length || 3, dip?.horas || 325));
                           } else {
                             const h = dip?.horas || dip?.duracion || '325 horas académicas';
                             const c = dip?.creditos ? ` y ${dip.creditos} créditos académicos` : (h.includes('crédito') ? '' : ' y 13 créditos académicos');
@@ -3814,7 +3906,13 @@ export default function CertificacionesAdminPage() {
                         return (
                           <select
                             value={moduloManual}
-                            onChange={(e) => setModuloManual(e.target.value)}
+                            onChange={(e) => {
+                              const val = e.target.value;
+                              setModuloManual(val);
+                              const idxSel = dipSel.modulos.findIndex((m: any, idx: number) => (m.nombre || m.titulo || `MÓDULO ${(idx + 1).toString().padStart(2, '0')}`) === val);
+                              const modObj = idxSel >= 0 ? dipSel.modulos[idxSel] : null;
+                              setHorasManual(modObj?.horas || formatearHorasModulo(idxSel >= 0 ? idxSel : 0, dipSel.modulos.length, dipSel?.horas || 325));
+                            }}
                             className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl font-medium text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer"
                           >
                             {dipSel.modulos.map((m: any, idx: number) => {

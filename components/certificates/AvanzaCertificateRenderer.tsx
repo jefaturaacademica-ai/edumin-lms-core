@@ -598,23 +598,23 @@ export interface DisenoCoordenadas {
 }
 
 export const DISENO_DEFAULT_HORIZONTAL: DisenoCoordenadas = {
-  estudiante: { x: 50, y: 35, alineacion: 'center', visible: true, fuente: 'serif-institucional', formatoNombre: 'apellidos-nombres', anchoMaximoCm: 25.0, tamanoFuente: 36, color: '#000000', negrita: false, interlineado: 1.25 },
-  programa: { x: 50, y: 53.5, alineacion: 'center', visible: true, fuente: 'sans-moderna', anchoMaximoCm: 25.5, tamanoFuente: 22, color: '#000000', negrita: false, interlineado: 1.25 },
-  horas: { x: 50, y: 63, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: '', sufijo: 'horas académicas', tamanoFuente: 12, color: '#000000' },
-  creditos: { x: 50, y: 66, alineacion: 'center', visible: false, fuente: 'sans-formal', textoPrefijo: '', sufijo: 'créditos académicos', tamanoFuente: 12, color: '#000000' },
-  fecha: { x: 86, y: 88, alineacion: 'right', visible: true, fuente: 'sans-formal', textoPrefijo: 'Fecha de emisión: ', formatoFecha: 'larga', tamanoFuente: 10, color: '#000000' },
-  codigo: { x: 86, y: 94, alineacion: 'right', visible: true, fuente: 'sans-formal', textoPrefijo: 'CÓD.: ', tamanoFuente: 11, color: '#000000', negrita: false },
-  qr: { x: 86, y: 74, alineacion: 'right', tamano: 56, tamanoCm: 2.0, visible: true }
+  estudiante: { x: 7.9, y: 32, alineacion: 'center', visible: true, fuente: 'serif-institucional', formatoNombre: 'apellidos-nombres', anchoMaximoCm: 25.0, tamanoFuente: 36, color: '#000000', negrita: false, interlineado: 1.25 },
+  programa: { x: 7.1, y: 50, alineacion: 'center', visible: true, fuente: 'sans-moderna', anchoMaximoCm: 25.5, tamanoFuente: 22, color: '#000000', negrita: false, interlineado: 1.25 },
+  horas: { x: 38, y: 61, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: '', sufijo: 'horas académicas', tamanoFuente: 12, color: '#000000' },
+  creditos: { x: 38, y: 65, alineacion: 'center', visible: false, fuente: 'sans-formal', textoPrefijo: '', sufijo: 'créditos académicos', tamanoFuente: 12, color: '#000000' },
+  fecha: { x: 65, y: 86, alineacion: 'right', visible: true, fuente: 'sans-formal', textoPrefijo: 'Fecha de emisión: ', formatoFecha: 'larga', tamanoFuente: 10, color: '#000000' },
+  codigo: { x: 75, y: 92, alineacion: 'right', visible: true, fuente: 'sans-formal', textoPrefijo: 'CÓD.: ', tamanoFuente: 11, color: '#000000', negrita: false },
+  qr: { x: 82, y: 70, alineacion: 'right', tamano: 56, tamanoCm: 2.0, visible: true }
 };
 
 export const DISENO_DEFAULT_VERTICAL: DisenoCoordenadas = {
-  estudiante: { x: 50, y: 38, alineacion: 'center', visible: true, fuente: 'serif-institucional', formatoNombre: 'apellidos-nombres', anchoMaximoCm: 18.5, tamanoFuente: 30, color: '#000000', negrita: false, interlineado: 1.25 },
-  programa: { x: 50, y: 52, alineacion: 'center', visible: true, fuente: 'sans-moderna', anchoMaximoCm: 18.5, tamanoFuente: 18, color: '#000000', negrita: false, interlineado: 1.25 },
-  horas: { x: 50, y: 61, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: '', sufijo: 'horas académicas', tamanoFuente: 10, color: '#000000' },
-  creditos: { x: 50, y: 64, alineacion: 'center', visible: false, fuente: 'sans-formal', textoPrefijo: '', sufijo: 'créditos académicos', tamanoFuente: 10, color: '#000000' },
-  fecha: { x: 50, y: 86, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: 'Fecha de emisión: ', formatoFecha: 'larga', tamanoFuente: 10, color: '#000000' },
-  codigo: { x: 50, y: 92, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: 'CÓD.: ', tamanoFuente: 11, color: '#000000', negrita: false },
-  qr: { x: 50, y: 74, alineacion: 'center', tamano: 56, tamanoCm: 2.0, visible: true }
+  estudiante: { x: 6.0, y: 35, alineacion: 'center', visible: true, fuente: 'serif-institucional', formatoNombre: 'apellidos-nombres', anchoMaximoCm: 18.5, tamanoFuente: 30, color: '#000000', negrita: false, interlineado: 1.25 },
+  programa: { x: 6.0, y: 49, alineacion: 'center', visible: true, fuente: 'sans-moderna', anchoMaximoCm: 18.5, tamanoFuente: 18, color: '#000000', negrita: false, interlineado: 1.25 },
+  horas: { x: 35, y: 59, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: '', sufijo: 'horas académicas', tamanoFuente: 10, color: '#000000' },
+  creditos: { x: 35, y: 63, alineacion: 'center', visible: false, fuente: 'sans-formal', textoPrefijo: '', sufijo: 'créditos académicos', tamanoFuente: 10, color: '#000000' },
+  fecha: { x: 35, y: 85, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: 'Fecha de emisión: ', formatoFecha: 'larga', tamanoFuente: 10, color: '#000000' },
+  codigo: { x: 40, y: 91, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: 'CÓD.: ', tamanoFuente: 11, color: '#000000', negrita: false },
+  qr: { x: 45, y: 72, alineacion: 'center', tamano: 56, tamanoCm: 2.0, visible: true }
 };
 
 export interface AvanzaCertificateProps {
@@ -785,7 +785,7 @@ export default function AvanzaCertificateRenderer({
 
   // 2. AJUSTE EXACTO DE LÍNEAS Y TAMAÑO PARA PROGRAMA (Máx. 2 líneas en Horizontal / Máx. 3 líneas en Vertical)
   const esModular = String(tipo).toUpperCase() === 'MODULAR' && Boolean(modulo);
-  const textoProgFinal = esModular ? tituloModuloLimpio : tituloProgramaLimpio;
+  const textoProgFinal = (esModular ? tituloModuloLimpio : tituloProgramaLimpio).toUpperCase();
   const tamanoBaseProgPt = cfg.programa.tamanoFuente || (esVertical ? 18 : 22);
   const anchoProgCm = cfg.programa.anchoMaximoCm || (esVertical ? 18.5 : 25.5);
   const maxProgPt = (anchoProgCm / anchoA4Cm) * anchoA4Pt;
@@ -872,20 +872,9 @@ export default function AvanzaCertificateRenderer({
   // Relaciones de aspecto A4 exactas:
   const a4AspectClass = esVertical ? 'aspect-[210/297]' : 'aspect-[297/210]';
 
-  // El contenedor permanece fijado exactamente en (x, y).
-  // La alineación ('left' | 'center' | 'right') únicamente alinea el texto DENTRO de la caja sin mover el contenedor.
-  const getTransform = () => 'translate(-50%, -50%)';
-
-  // Helper para obtener el transform según punto de anclaje de elementos con ancho automático:
-  // - left: el punto (x, y) es el extremo izquierdo (translate(0, -50%))
-  // - center: el punto (x, y) es el centro exacto (translate(-50%, -50%))
-  // - right: el punto (x, y) es el extremo derecho (translate(-100%, -50%))
-  const getTransformAuto = (alineacion: ElementoAlineacion = 'center') => {
-    if (alineacion === 'left') return 'translate(0%, -50%)';
-    if (alineacion === 'right') return 'translate(-100%, -50%)';
-    return 'translate(-50%, -50%)';
-  };
-
+  // El punto (x, y) representa estrictamente la esquina superior izquierda del elemento (0cm, 0cm = esquina superior izquierda del área de trabajo A4).
+  const getTransform = () => 'none';
+  const getTransformAuto = (_alineacion: ElementoAlineacion = 'center') => 'none';
 
   // Manejador interactivo de Arrastrar y Soltar (Drag and Drop) para ubicar elementos directamente en el canvas A4
   // REGLA SOLICITADA: Solo permite arrastrar la variable ACTIVA.
@@ -902,10 +891,17 @@ export default function AvanzaCertificateRenderer({
     const container = containerRef.current;
     if (!container) return;
 
+    const targetEl = e.currentTarget as HTMLElement;
+    const elRect = targetEl.getBoundingClientRect();
+    const startClientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const startClientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
+    const grabOffsetX = startClientX - elRect.left;
+    const grabOffsetY = startClientY - elRect.top;
+
     const actualizarPosicion = (clientX: number, clientY: number) => {
       const rect = container.getBoundingClientRect();
-      const rawX = ((clientX - rect.left) / rect.width) * 100;
-      const rawY = ((clientY - rect.top) / rect.height) * 100;
+      const rawX = ((clientX - grabOffsetX - rect.left) / rect.width) * 100;
+      const rawY = ((clientY - grabOffsetY - rect.top) / rect.height) * 100;
       const x = Math.max(0, Math.min(100, Math.round(rawX * 10) / 10));
       const y = Math.max(0, Math.min(100, Math.round(rawY * 10) / 10));
       onMoverElemento(campo, x, y);

@@ -215,10 +215,10 @@ export default function ValidarCertificadoPage() {
                     <BookOpen className="w-3.5 h-3.5 text-indigo-600" />
                     <span>Programa académico</span>
                   </div>
-                  <p className="text-sm font-bold text-slate-900">{certificado.programa}</p>
+                  <p className="text-sm font-bold text-slate-900 uppercase">{certificado.programa}</p>
                   {certificado.modulo && (
                     <p className="text-xs text-indigo-700 font-medium mt-0.5">
-                      Módulo: <span className="text-slate-700">{certificado.modulo}</span>
+                      Módulo: <span className="text-slate-700 uppercase">{certificado.modulo}</span>
                     </p>
                   )}
                 </div>

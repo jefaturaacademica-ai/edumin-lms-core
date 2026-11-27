@@ -33,7 +33,7 @@ import { evaluarReglasCertificados, parseFechaCertificadoMs } from '@/lib/utils/
 import { getClientCachedData, fetchWithClientCache } from '@/lib/utils/clientCache';
 import configuracionExamenesJson from '@/lib/data/configuracion_examenes.json';
 import AvanzaCertificateRenderer from '@/components/certificates/AvanzaCertificateRenderer';
-import { generarUrlQRValidacion, formatearNotaCertificado } from '@/lib/utils/certificateUtils';
+import { generarUrlQRValidacion, formatearNotaCertificado, formatearHorasModulo } from '@/lib/utils/certificateUtils';
 import { descargarCertificadoA4Pdf } from '@/lib/utils/certificatePdf';
 
 function obtenerConfigNotaExamen(codigoProg?: string, modulo?: string) {
@@ -723,7 +723,7 @@ function CertificadosContent() {
             moduloNombreSolo: m.nombre || m.codigo || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`,
             diplomado: limpiarTituloDiplomado(d.titulo),
             nota: certDb?.nota_final !== undefined && certDb.nota_final !== null ? Number(certDb.nota_final) : evalMod.nota,
-            horas: certDb?.horas_lectivas || m.horas || '108 horas académicas',
+            horas: certDb?.horas_lectivas || m.horas || formatearHorasModulo(mIdx, d.modulos.length, (d as any).horas || 325),
             modelo_id: certDb?.plantilla_snapshot?.modelo_id || (m as any).modelo_id || 'mod-avanza-mod',
             fecha: certDb?.fecha_emision ? String(certDb.fecha_emision) : (m.fecha || '15/01/2026'),
             fechaOrdenMs: parseFechaCertificadoMs(fechaOrdenRaw),

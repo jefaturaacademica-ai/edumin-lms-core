@@ -220,3 +220,42 @@ export function formatearNotaCertificado(nota?: number | string | null): string 
   if (redondeada === null) return null;
   return String(redondeada).padStart(2, '0');
 }
+
+/**
+ * Calcula las horas académicas de un módulo dentro de un diplomado.
+ * Si la división entre totalHorasDiplomado (por defecto 325) y totalModulos tiene residuo
+ * (ej. 325 / 3 = 108 con residuo 1), los primeros módulos reciben la parte entera (108)
+ * y el último módulo recibe el residuo adicional (109).
+ * Si es exacta (ej. 325 / 5 = 65), todos los módulos reciben 65 horas.
+ */
+export function calcularHorasModuloNumero(
+  moduloIndex: number,
+  totalModulos: number,
+  totalHorasDiplomado: number | string | null = 325
+): number {
+  const parsedTotal = typeof totalHorasDiplomado === 'number'
+    ? totalHorasDiplomado
+    : parseInt(String(totalHorasDiplomado || '325').match(/\d+/)?.[0] || '325', 10);
+  const totalHoras = Number.isFinite(parsedTotal) && parsedTotal > 0 ? parsedTotal : 325;
+  const nModulos = Number.isFinite(totalModulos) && totalModulos > 0 ? Math.floor(totalModulos) : 3;
+  const idx = Number.isFinite(moduloIndex) && moduloIndex >= 0 ? Math.floor(moduloIndex) : 0;
+
+  const base = Math.floor(totalHoras / nModulos);
+  const resto = totalHoras % nModulos;
+  if (resto > 0 && idx === nModulos - 1) {
+    return base + resto;
+  }
+  return base;
+}
+
+/**
+ * Formatea las horas académicas calculadas de un módulo (ej. "108 horas académicas" o "65 horas académicas").
+ */
+export function formatearHorasModulo(
+  moduloIndex: number,
+  totalModulos: number,
+  totalHorasDiplomado: number | string | null = 325
+): string {
+  const hrs = calcularHorasModuloNumero(moduloIndex, totalModulos, totalHorasDiplomado);
+  return `${hrs} horas académicas`;
+}

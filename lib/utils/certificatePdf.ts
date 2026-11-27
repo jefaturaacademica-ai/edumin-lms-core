@@ -341,7 +341,7 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
   const rawModulo = modClean || data.modulo || 'LEGISLACIÓN MINERA Y MARCO LEGAL DEL SECTOR';
 
   const esModular = String(data.tipo).toUpperCase() === 'MODULAR' && Boolean(data.modulo);
-  const textoProgramaBase = esModular ? rawModulo : rawPrograma;
+  const textoProgramaBase = (esModular ? rawModulo : rawPrograma).toUpperCase();
   const textoProgramaFinal = ajustarConectorSinHuerfana(textoProgramaBase);
 
   // Redacción oficial de horas y créditos (horas y créditos, solo horas, solo créditos o personalizada)
@@ -369,7 +369,8 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
   const fechaTextoFinal = `${prefijoFecha}${fechaPura}`.trim();
   const codigoCert = data.codigo || 'HNYNXT2';
 
-  ctx.textBaseline = 'middle';
+  // Anclaje en la esquina superior izquierda (0cm, 0cm = esquina superior izquierda del área de trabajo A4)
+  ctx.textBaseline = 'top';
 
   // 1. NOMBRE DEL ESTUDIANTE: Proporción exacta en pt/px, siempre 1 sola línea y auto-escala sin corte
   if (cfg.estudiante.visible) {
@@ -406,10 +407,10 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
 
     ctx.textAlign = cfg.estudiante.alineacion;
     let estDrawX = estX;
-    if (cfg.estudiante.alineacion === 'left') {
-      estDrawX = estX - (maxEstudianteW / 2);
-    } else if (cfg.estudiante.alineacion === 'right') {
+    if (cfg.estudiante.alineacion === 'center') {
       estDrawX = estX + (maxEstudianteW / 2);
+    } else if (cfg.estudiante.alineacion === 'right') {
+      estDrawX = estX + maxEstudianteW;
     }
 
     ctx.fillStyle = colorEstudiante;
@@ -453,23 +454,16 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
     ctx.textAlign = cfg.programa.alineacion;
 
     let progDrawX = progX;
-    if (cfg.programa.alineacion === 'left') {
-      progDrawX = progX - (maxProgW / 2);
-    } else if (cfg.programa.alineacion === 'right') {
+    if (cfg.programa.alineacion === 'center') {
       progDrawX = progX + (maxProgW / 2);
+    } else if (cfg.programa.alineacion === 'right') {
+      progDrawX = progX + maxProgW;
     }
 
     const lineSpacing = progFontSize * (cfg.programa.interlineado || 1.25);
-    if (progLineas.length === 1) {
-      drawStyledText(ctx, progLineas[0], progDrawX, progY, progFontSize, cfg.programa.subrayado);
-    } else if (progLineas.length === 2) {
-      drawStyledText(ctx, progLineas[0], progDrawX, progY - (lineSpacing / 2), progFontSize, cfg.programa.subrayado);
-      drawStyledText(ctx, progLineas[1], progDrawX, progY + (lineSpacing / 2), progFontSize, cfg.programa.subrayado);
-    } else if (progLineas.length === 3) {
-      drawStyledText(ctx, progLineas[0], progDrawX, progY - lineSpacing, progFontSize, cfg.programa.subrayado);
-      drawStyledText(ctx, progLineas[1], progDrawX, progY, progFontSize, cfg.programa.subrayado);
-      drawStyledText(ctx, progLineas[2], progDrawX, progY + lineSpacing, progFontSize, cfg.programa.subrayado);
-    }
+    progLineas.forEach((lin, idx) => {
+      drawStyledText(ctx, lin, progDrawX, progY + (idx * lineSpacing), progFontSize, cfg.programa.subrayado);
+    });
   }
 
   // 3. Horas y créditos: Ancho máximo estandarizado y auto-escala
@@ -499,10 +493,7 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
     }
 
     ctx.fillStyle = colorHoras;
-    ctx.textAlign = cfg.horas.alineacion;
-
-    // Alineación directa al punto de anclaje (x, y)
-    ctx.textAlign = cfg.horas.alineacion;
+    ctx.textAlign = 'left';
     drawStyledText(ctx, horasTexto, horasX, horasY, fontSizeHoras, cfg.horas.subrayado);
   }
 
@@ -533,10 +524,7 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
     }
 
     ctx.fillStyle = colorCred;
-    ctx.textAlign = cfg.creditos.alineacion;
-
-    // Alineación directa al punto de anclaje (x, y)
-    ctx.textAlign = cfg.creditos.alineacion;
+    ctx.textAlign = 'left';
     drawStyledText(ctx, creditosTexto, credX, credY, fontSizeCred, cfg.creditos.subrayado);
   }
 
@@ -549,8 +537,8 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
       canvasW
     );
 
-    const qrX = (cfg.qr.x / 100) * canvasW - (qrFinalSize / 2);
-    const qrTop = (cfg.qr.y / 100) * canvasH - (qrFinalSize / 2);
+    const qrX = (cfg.qr.x / 100) * canvasW;
+    const qrTop = (cfg.qr.y / 100) * canvasH;
 
     // Contenedor blanco para el QR
     ctx.fillStyle = '#ffffff';
@@ -607,10 +595,7 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
       ctx.font = buildCanvasFont(fontSizeFecha, fontFecha, !!cfg.fecha.negrita, !!cfg.fecha.cursiva && fuenteSoportaCursiva(cfg.fecha.fuente));
     }
 
-    ctx.textAlign = cfg.fecha.alineacion;
-
-    // Alineación directa al punto de anclaje (x, y)
-    ctx.textAlign = cfg.fecha.alineacion;
+    ctx.textAlign = 'left';
     drawStyledText(ctx, fechaTextoFinal, fechaX, fechaY, fontSizeFecha, cfg.fecha.subrayado);
   }
 
@@ -640,7 +625,7 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
       ctx.font = buildCanvasFont(fontSizeCod, fontCod, cfg.codigo.negrita !== false, !!cfg.codigo.cursiva && fuenteSoportaCursiva(cfg.codigo.fuente));
     }
 
-    ctx.textAlign = cfg.codigo.alineacion;
+    ctx.textAlign = 'left';
     ctx.fillStyle = colorCod;
     drawStyledText(ctx, textoCod, codX, codY, fontSizeCod, cfg.codigo.subrayado);
   }

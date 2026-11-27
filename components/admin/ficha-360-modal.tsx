@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { formatearFechaVisual, resolverFechaVencimiento } from '@/lib/utils/fechasCuotas';
+import { formatearHorasModulo } from '@/lib/utils/certificateUtils';
 import { PaqueteDefinicion, PAQUETES_DEFAULT } from '@/lib/types/paquetes';
 import { 
   X, Calendar, Plus, Settings, CreditCard, CheckCircle2, RefreshCw, 
@@ -468,7 +469,8 @@ export default function Ficha360Modal({
     const codigosExistentes = new Set(certificaciones.map(c => String(c.codigo_verificacion || c.codigo || '').toUpperCase()));
 
     (alumnoSeleccionado.diplomados_json || []).forEach((dip: any) => {
-      (dip.modulos || []).forEach((mod: any) => {
+      const modsDip = dip.modulos || [];
+      modsDip.forEach((mod: any, mIdx: number) => {
         if (mod.codigo_cert && !codigosExistentes.has(String(mod.codigo_cert).toUpperCase())) {
           codigosExistentes.add(String(mod.codigo_cert).toUpperCase());
           list.push({
@@ -477,7 +479,7 @@ export default function Ficha360Modal({
             tipo: 'MODULAR',
             programa_titulo: dip.titulo,
             modulo_titulo: mod.nombre || mod.codigo,
-            horas_lectivas: '108 horas académicas',
+            horas_lectivas: mod.horas || formatearHorasModulo(mIdx, modsDip.length, dip.horas || 325),
             nota_final: mod.nota || 20,
             fecha_emision: mod.fecha_emision || alumnoSeleccionado.created_at?.split('T')[0] || new Date().toISOString().split('T')[0],
             estado_financiero_al_dia: !alumnoSeleccionado.bloqueado

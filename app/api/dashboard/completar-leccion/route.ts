@@ -4,7 +4,7 @@ import { createAdminClient } from '@/lib/supabase/admin';
 import { parseDiplomadosFromProfile, parseCursosFromProfile, DiplomadoJSON, CursoJSON } from '@/lib/utils/profileParser';
 import { getDiplomadoByTitleOrSlug } from '@/lib/data/diplomadosData';
 import { obtenerConfiguracionExamen } from '@/lib/services/examenesConfigService';
-import { generarCodigoUnicoCertificado, formatearNombreCertificado, normalizarCodigoCertificado } from '@/lib/utils/certificateUtils';
+import { generarCodigoUnicoCertificado, formatearNombreCertificado, normalizarCodigoCertificado, formatearHorasModulo } from '@/lib/utils/certificateUtils';
 
 export async function POST(request: Request) {
   try {
@@ -153,7 +153,7 @@ export async function POST(request: Request) {
               const codUnico = normalizarCodigoCertificado(targetDip.modulos[idxToUpdate].codigo_cert || generarCodigoUnicoCertificado());
               targetDip.modulos[idxToUpdate].codigo_cert = codUnico;
               targetDip.modulos[idxToUpdate].fecha = fechaHoy;
-              targetDip.modulos[idxToUpdate].horas = targetDip.modulos[idxToUpdate].horas || '108 horas académicas';
+              targetDip.modulos[idxToUpdate].horas = targetDip.modulos[idxToUpdate].horas || formatearHorasModulo(idxToUpdate, targetDip.modulos.length, (targetDip as any).horas || 325);
               if (moduloNombre) targetDip.modulos[idxToUpdate].nombre = moduloNombre;
             }
           } else if (completado !== undefined) {
@@ -341,10 +341,11 @@ export async function POST(request: Request) {
               ? `${String(disMod?.creditos?.creditosValor || modeloMod?.creditos || '4').match(/\d+/)?.[0] || '4'} ${String(disMod?.creditos?.sufijo ?? disMod?.creditos?.sufijoCreditos ?? '').trim() || 'créditos académicos'}`
               : null;
 
+            const horasModCalc = modItem.horas || formatearHorasModulo(idxToUpdate >= 0 ? idxToUpdate : 0, targetDip.modulos.length, (targetDip as any).horas || 325);
             const snapshotModular = {
               modelo_id: modeloMod?.id || 'mod-avanza-mod',
               nombrePlantilla: modeloMod?.nombre || 'Superplantilla Oficial Avanza y EDUMIN - Certificado Modular',
-              horas: modItem.horas || modeloMod?.horas || '108 horas académicas',
+              horas: horasModCalc,
               ...(creditosMod ? { creditos: creditosMod } : {}),
               ciudad: 'Arequipa',
               orientacion: modeloMod?.orientacion || 'horizontal',
@@ -375,7 +376,7 @@ export async function POST(request: Request) {
                 tipo: 'MODULAR',
                 programa_titulo: targetDip.titulo,
                 modulo_titulo: moduloNombreFinal,
-                horas_lectivas: modItem.horas || modeloMod?.horas || '108 horas académicas',
+                horas_lectivas: horasModCalc,
                 creditos: creditosMod,
                 nota_final: typeof modItem.nota === 'number' && modItem.nota > 0 ? Math.round(modItem.nota) : null,
                 fecha_emision: fechaEmisionHoy,
