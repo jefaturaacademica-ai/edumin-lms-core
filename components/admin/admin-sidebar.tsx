@@ -6,7 +6,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { 
   ShieldCheck, Users, BookOpen, Settings, LogOut,
   Activity, Award, UserCheck, Server, LayoutDashboard,
-  Menu, X, Sun, Moon, Sparkles, FileQuestion, User, BarChart3
+  Menu, X, Sun, Moon, Sparkles, FileQuestion, User, BarChart3, Code2
 } from 'lucide-react';
 import { createBrowserClient } from '@supabase/ssr';
 import { cerrarSesionUsuario } from '@/lib/auth/logout';
@@ -54,6 +54,7 @@ export default function AdminSidebar() {
       '/admin/reportes': 'Reportes y Datos',
       '/admin/auditoria': 'Auditoría y Webhooks',
       '/admin/configuracion': 'Configuración y Roles',
+      '/admin/desarrolladores': 'APIs y Desarrolladores',
       '/admin/solicitudes-datos': 'Solicitudes de Datos',
       '/admin/perfil': 'Mi perfil',
     };
@@ -147,6 +148,12 @@ export default function AdminSidebar() {
           label: 'Configuración y roles (RBAC)',
           icon: Settings,
           color: 'text-slate-400'
+        },
+        {
+          href: '/admin/desarrolladores',
+          label: 'APIs y desarrolladores',
+          icon: Code2,
+          color: 'text-amber-400'
         }
       ]
     },
