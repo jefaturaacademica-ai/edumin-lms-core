@@ -245,6 +245,10 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
         document.fonts.load('normal 24px "Open Sans"'),
         document.fonts.load('italic bold 36px "Open Sans"'),
         document.fonts.load('italic normal 24px "Open Sans"'),
+        document.fonts.load('bold 36px "Open Sauce Sans"'),
+        document.fonts.load('normal 24px "Open Sauce Sans"'),
+        document.fonts.load('italic bold 36px "Open Sauce Sans"'),
+        document.fonts.load('italic normal 24px "Open Sauce Sans"'),
         document.fonts.ready
       ]);
     } catch {}

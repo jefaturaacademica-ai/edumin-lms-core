@@ -307,13 +307,22 @@ export default function CertificacionesAdminPage() {
   const [elementoSeleccionado, setElementoSeleccionado] = useState<keyof DisenoCoordenadas>('estudiante');
   const [zoomEditor, setZoomEditor] = useState<number>(1);
   const [mostrarSimulacionEditor, setMostrarSimulacionEditor] = useState<boolean>(false);
+  const [viewportPreviewSize, setViewportPreviewSize] = useState<{ w: number; h: number }>({ w: 0, h: 0 });
   const pinchZoomRef = useRef<{ dist: number; startZoom: number } | null>(null);
   const previewViewportRef = useRef<HTMLDivElement | null>(null);
 
   // Interceptar Ctrl+rueda / pellizco de trackpad y 2 dedos con passive: false para evitar zoom global del navegador
+  // y medir el viewport para que el 100% encaje completo sin barras de scroll.
   useEffect(() => {
     const el = previewViewportRef.current;
     if (!el || activeTab !== 'editor') return;
+
+    const medir = () => {
+      setViewportPreviewSize({ w: el.clientWidth, h: el.clientHeight });
+    };
+    medir();
+    const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(medir) : null;
+    ro?.observe(el);
 
     const handleNativeWheel = (e: WheelEvent) => {
       if (e.ctrlKey || e.metaKey) {
@@ -342,6 +351,7 @@ export default function CertificacionesAdminPage() {
     el.addEventListener('wheel', handleNativeWheel, { passive: false });
     el.addEventListener('touchmove', handleNativeTouchMove, { passive: false });
     return () => {
+      ro?.disconnect();
       el.removeEventListener('wheel', handleNativeWheel);
       el.removeEventListener('touchmove', handleNativeTouchMove);
     };
@@ -3200,12 +3210,17 @@ export default function CertificacionesAdminPage() {
                             ? (catalogoTalleres[0]?.titulo || 'PRIMEROS AUXILIOS Y EMERGENCIAS MINERAS')
                             : (catalogoDiplomados[0]?.titulo || 'SEGURIDAD Y SALUD OCUPACIONAL EN MINERÍA'))
                     );
-                    const baseWidthPx = editorOrientacion === 'vertical' ? 420 : 680;
+                    const aspectA4 = editorOrientacion === 'vertical' ? (210 / 297) : (297 / 210);
+                    const availW = Math.max(240, viewportPreviewSize.w - 24);
+                    const availH = Math.max(200, viewportPreviewSize.h - 24);
+                    const baseWidthPx = viewportPreviewSize.w > 0 && viewportPreviewSize.h > 0
+                      ? Math.floor(Math.min(availW, availH * aspectA4))
+                      : (editorOrientacion === 'vertical' ? 360 : 540);
                     const zoomedWidthPx = Math.round(baseWidthPx * zoomEditor);
                     return (
                       <div
                         ref={previewViewportRef}
-                        className="w-full flex-1 min-h-0 overflow-auto rounded-2xl border border-slate-800/80 bg-slate-950/60 p-3 flex items-start justify-center"
+                        className={`w-full flex-1 min-h-0 ${zoomEditor <= 1 ? 'overflow-hidden' : 'overflow-auto'} rounded-2xl border border-slate-800/80 bg-slate-950/60 p-3 flex`}
                         style={{ touchAction: 'pan-x pan-y' }}
                         onTouchStart={(e) => {
                           if (e.touches.length === 2) {
@@ -3221,7 +3236,7 @@ export default function CertificacionesAdminPage() {
                         }}
                       >
                       <div
-                        className="shrink-0 mx-auto"
+                        className="shrink-0 m-auto"
                         style={{ width: `${zoomedWidthPx}px`, minWidth: `${zoomedWidthPx}px` }}
                       >
                         {(() => {

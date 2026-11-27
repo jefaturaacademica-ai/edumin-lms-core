@@ -18,6 +18,7 @@ export type TipoFuenteCertificado =
   | 'sans-moderna'        // Montserrat, Segoe UI, sans-serif
   | 'sans-formal'         // Inter, sans-serif
   | 'sans-open-sans'      // Open Sans, sans-serif (Humanista Clara)
+  | 'sans-open-sauce'     // Open Sauce Sans, sans-serif (Moderna Geométrica)
   | 'sans-roboto'         // Roboto, sans-serif
   | 'sans-outfit';        // Outfit, sans-serif (Geométrica Moderna Vanguardista)
 
@@ -43,6 +44,7 @@ export const FUENTES_CERTIFICADO = [
   { id: 'sans-moderna', nombre: 'Montserrat', fontFamily: '"Montserrat", "Segoe UI", Arial, sans-serif', soportaCursiva: true },
   { id: 'sans-formal', nombre: 'Inter', fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif', soportaCursiva: true },
   { id: 'sans-open-sans', nombre: 'Open Sans', fontFamily: '"Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', soportaCursiva: true },
+  { id: 'sans-open-sauce', nombre: 'Open Sauce Sans', fontFamily: '"Open Sauce Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', soportaCursiva: true },
   { id: 'sans-roboto', nombre: 'Roboto', fontFamily: '"Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', soportaCursiva: true }
 ] as const;
 
