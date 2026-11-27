@@ -1801,6 +1801,7 @@ export default function AdminEstudiantesPage() {
           enviandoAlertaWhatsApp={enviandoAlertaWhatsApp}
           onRefetchEstudiantes={cargarEstudiantes}
           siguienteRecibo={siguienteRecibo}
+          paquetesConfig={paquetesDisponibles}
         />
       )}
 

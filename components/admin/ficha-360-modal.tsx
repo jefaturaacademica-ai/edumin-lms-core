@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { formatearFechaVisual, resolverFechaVencimiento } from '@/lib/utils/fechasCuotas';
+import { PaqueteDefinicion, PAQUETES_DEFAULT } from '@/lib/types/paquetes';
 import { 
   X, Calendar, Plus, Settings, CreditCard, CheckCircle2, RefreshCw, 
   FileText, Download, Award, Send, AlertTriangle, Check, Coins, Receipt, Wallet,
@@ -34,6 +35,7 @@ interface Ficha360ModalProps {
   enviandoAlertaWhatsApp: boolean;
   onRefetchEstudiantes?: () => void;
   siguienteRecibo?: string;
+  paquetesConfig?: Record<string, PaqueteDefinicion>;
 }
 
 export default function Ficha360Modal({
@@ -59,10 +61,29 @@ export default function Ficha360Modal({
   onEnviarAlertaWhatsApp,
   enviandoAlertaWhatsApp,
   onRefetchEstudiantes,
-  siguienteRecibo
+  siguienteRecibo,
+  paquetesConfig
 }: Ficha360ModalProps) {
   // Pestañas modernas
   const [modalTab, setModalTab] = useState<'datos' | 'cronograma' | 'certificaciones' | 'creditos' | 'academico' | 'retencion'>('datos');
+
+  // Catálogo dinámico de paquetes para el selector de paquete contratado
+  const [paquetesLocales, setPaquetesLocales] = useState<Record<string, PaqueteDefinicion>>(paquetesConfig || PAQUETES_DEFAULT);
+
+  useEffect(() => {
+    if (paquetesConfig && Object.keys(paquetesConfig).length > 0) {
+      setPaquetesLocales(paquetesConfig);
+    } else {
+      fetch('/api/admin/configuracion-paquetes')
+        .then(r => r.json())
+        .then(data => {
+          if (data && typeof data === 'object' && Object.keys(data).length > 0) {
+            setPaquetesLocales(data);
+          }
+        })
+        .catch(() => {});
+    }
+  }, [paquetesConfig]);
 
   // Estado para edición de datos del estudiante
   const [editNombres, setEditNombres] = useState<string>('');
@@ -744,11 +765,13 @@ export default function Ficha360Modal({
                       <select
                         value={editPaquete}
                         onChange={(e) => setEditPaquete(e.target.value)}
-                        className="w-full px-3.5 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-900 dark:text-white outline-none focus:border-indigo-500 transition-colors"
+                        className="w-full px-3.5 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-900 dark:text-white outline-none focus:border-indigo-500 transition-colors cursor-pointer"
                       >
-                        <option value="COMPLETO">COMPLETO (1 Diplomado + 3 Cursos)</option>
-                        <option value="FULL">FULL (1 Diplomado + 5 Cursos)</option>
-                        <option value="ILIMITADO">ILIMITADO (Acceso Total)</option>
+                        {Object.values(paquetesLocales).map((pkg) => (
+                          <option key={pkg.id} value={pkg.id}>
+                            {pkg.nombre || pkg.id} ({pkg.creditosDiplomados || 0} Dip. + {pkg.creditosCursos || 0} Cursos)
+                          </option>
+                        ))}
                       </select>
                     </div>
 
