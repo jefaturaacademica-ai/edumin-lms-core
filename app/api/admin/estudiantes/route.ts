@@ -1326,10 +1326,7 @@ export async function POST(request: Request) {
     const cursosSerialized = `CURSOS_LIST|${JSON.stringify(cursosJson)}`;
 
     const paqueteInput = (paquete_adquirido || 'COMPLETO').toUpperCase().trim();
-    // Validar si el paquete es uno de los valores enum de postgres en profiles ('COMPLETO', 'FULL', 'ILIMITADO')
-    const esPaqueteEnumEstandar = ['COMPLETO', 'FULL', 'ILIMITADO'].includes(paqueteInput);
-    // Para la columna enum en profiles usamos el enum mapeado si es estándar o fallback a FULL/COMPLETO
-    const paqueteEnumDb = esPaqueteEnumEstandar ? paqueteInput : (paqueteInput.includes('ILIMITADO') ? 'ILIMITADO' : 'FULL');
+    const paqueteFinal = paqueteInput || 'COMPLETO';
 
     const esContado = tipo_pago === 'CONTADO';
     const numCuotasTotales = esContado ? 1 : Number(cuotas_totales || (paqueteInput === 'ILIMITADO' ? 5 : 3));
@@ -1352,7 +1349,7 @@ export async function POST(request: Request) {
       email: normalizedEmail,
       telefono: telefono ? telefono.trim() : '',
       roles: { administrativo: null, academico: 'ESTUDIANTE' },
-      paquete_adquirido: paqueteEnumDb,
+      paquete_adquirido: paqueteFinal,
       cuotas_pagadas: 1,
       cupos_creditos: {
         diplomados: { asignados: cuposDiplomadosFinal, adicionales: 0, canjeados: diplomadosJson.length },

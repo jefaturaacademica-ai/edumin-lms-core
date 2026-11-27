@@ -200,8 +200,7 @@ export async function POST(request: Request) {
         ];
 
         const paqueteInput = String(item.paquete_adquirido || 'COMPLETO').toUpperCase().trim();
-        const esPaqueteEnumEstandar = ['COMPLETO', 'FULL', 'ILIMITADO'].includes(paqueteInput);
-        const paqueteEnumDb = esPaqueteEnumEstandar ? paqueteInput : (paqueteInput.includes('ILIMITADO') ? 'ILIMITADO' : 'FULL');
+        const paqueteFinal = paqueteInput || 'COMPLETO';
 
         const esContado = String(item.tipo_pago || '').toUpperCase().trim() === 'CONTADO';
         const numCuotasTotales = esContado ? 1 : Number(item.cuotas_totales || (paqueteInput === 'ILIMITADO' ? 5 : 3));
@@ -223,7 +222,7 @@ export async function POST(request: Request) {
           email: normalizedEmail,
           telefono: item.telefono ? String(item.telefono).trim() : '',
           roles: { administrativo: null, academico: 'ESTUDIANTE' },
-          paquete_adquirido: paqueteEnumDb,
+          paquete_adquirido: paqueteFinal,
           cuotas_pagadas: 1,
           cupos_creditos: {
             diplomados: { asignados: cuposDiplomadosFinal, adicionales: 0, canjeados: diplomadosJson.length },
