@@ -5,6 +5,7 @@ import {
   CreditCard, ShieldCheck, Users, BookOpen, Settings, LogOut,
   Activity, Download, FileSpreadsheet, Coins, TrendingUp, AlertTriangle, CheckCircle2, Server, RefreshCw
 } from 'lucide-react';
+import * as XLSX from 'xlsx';
 import AdminSidebar from '@/components/admin/admin-sidebar';
 import { getClientCachedData, fetchWithClientCache } from '@/lib/utils/clientCache';
 
@@ -64,6 +65,28 @@ export default function ReportesPage() {
     }
   };
 
+  const exportarPagosExcel = () => {
+    setDescargando('pagos_excel');
+    try {
+      const data = (reporteData.pagos || []).map(p => ({
+        'ID pago': p.id,
+        'DNI / Documento': p.dni_ce || '',
+        'Monto (S/)': Number(p.monto ?? 0),
+        'Método de pago': p.metodo || 'No registrado',
+        'Estado': p.estado || 'Registrado',
+        'Fecha': p.created_at || ''
+      }));
+      const worksheet = XLSX.utils.json_to_sheet(data);
+      const workbook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(workbook, worksheet, 'Pagos');
+      XLSX.writeFile(workbook, `reporte_transacciones_pagos_supabase_${new Date().toISOString().split('T')[0]}.xlsx`);
+    } catch (err: any) {
+      alert(`Error al generar Excel: ${err?.message || err}`);
+    } finally {
+      setDescargando(null);
+    }
+  };
+
   const exportarPagosCSV = () => {
     setDescargando('pagos');
     try {
@@ -81,6 +104,30 @@ export default function ReportesPage() {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+    } finally {
+      setDescargando(null);
+    }
+  };
+
+  const exportarAlumnosRiesgoExcel = () => {
+    setDescargando('riesgo_excel');
+    try {
+      const data = (reporteData.alumnosRiesgo || []).map(a => ({
+        'DNI / Documento': a.numero_documento || a.dni_ce || '',
+        'Nombres': a.nombres || '',
+        'Apellidos': a.apellidos || '',
+        'Correo electrónico': a.email || '',
+        'Paquete contratado': a.paquete_adquirido || '',
+        'Cuotas pagadas': Number(a.cuotas_pagadas ?? 0),
+        'Bloqueado': a.bloqueado ? 'SÍ' : 'NO',
+        'Prórroga hasta': a.prorroga_hasta || 'NINGUNA'
+      }));
+      const worksheet = XLSX.utils.json_to_sheet(data);
+      const workbook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(workbook, worksheet, 'Alumnos en riesgo');
+      XLSX.writeFile(workbook, `reporte_alumnos_en_riesgo_supabase_${new Date().toISOString().split('T')[0]}.xlsx`);
+    } catch (err: any) {
+      alert(`Error al generar Excel: ${err?.message || err}`);
     } finally {
       setDescargando(null);
     }
@@ -104,6 +151,30 @@ export default function ReportesPage() {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+    } finally {
+      setDescargando(null);
+    }
+  };
+
+  const exportarCatalogoExcel = () => {
+    setDescargando('catalogo_excel');
+    try {
+      const data = (reporteData.cursos || []).map(c => ({
+        'ID': c.id,
+        'Código': c.codigo || '',
+        'Título': c.titulo || '',
+        'Categoría': c.categoria || '',
+        'Tipo': c.tipo || '',
+        'Duración': c.duracion || '',
+        'Precio (S/)': Number(c.precio ?? 0),
+        'Nivel': c.nivel || ''
+      }));
+      const worksheet = XLSX.utils.json_to_sheet(data);
+      const workbook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(workbook, worksheet, 'Catálogo');
+      XLSX.writeFile(workbook, `reporte_catalogo_academico_supabase_${new Date().toISOString().split('T')[0]}.xlsx`);
+    } catch (err: any) {
+      alert(`Error al generar Excel: ${err?.message || err}`);
     } finally {
       setDescargando(null);
     }
@@ -206,57 +277,87 @@ export default function ReportesPage() {
 
           {/* Opciones de Exportación Masiva */}
           <div className="bg-white rounded-3xl shadow-sm border border-slate-200 p-8 space-y-6">
-            <h3 className="text-xl font-bold text-slate-900">Exportador de Archivos CSV y Hojas de Cálculo (Supabase Sync)</h3>
-            <p className="text-xs text-slate-500">Genera reportes detallados en formato plano para integración con Excel, PowerBI o CRM.</p>
+            <h3 className="text-xl font-bold text-slate-900">Exportador de archivos Excel y CSV (Supabase sync)</h3>
+            <p className="text-xs text-slate-500">Genera reportes detallados en formato Excel (.xlsx) y texto plano (.csv) para integración con hojas de cálculo, Power BI o CRM.</p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
               
               <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
                 <div>
                   <FileSpreadsheet className="w-8 h-8 text-emerald-600 mb-3" />
-                  <h4 className="font-bold text-slate-900 text-sm">Reporte de Recaudación y Pagos</h4>
+                  <h4 className="font-bold text-slate-900 text-sm">Reporte de recaudación y pagos</h4>
                   <p className="text-xs text-slate-500 mt-1">Historial detallado de cuotas validadas por DNI, pasarelas y montos recaudados.</p>
                 </div>
-                <button
-                  onClick={exportarPagosCSV}
-                  disabled={descargando === 'pagos'}
-                  className="mt-6 w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 px-4 rounded-xl text-xs font-bold shadow-md transition flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
-                >
-                  <Download className="w-4 h-4" />
-                  {descargando === 'pagos' ? 'Generando CSV...' : 'Descargar Reporte Pagos (CSV)'}
-                </button>
+                <div className="mt-6 flex flex-col gap-2">
+                  <button
+                    onClick={exportarPagosExcel}
+                    disabled={descargando !== null}
+                    className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 px-4 rounded-xl text-xs font-bold shadow-sm transition flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                  >
+                    <FileSpreadsheet className="w-4 h-4" />
+                    {descargando === 'pagos_excel' ? 'Generando Excel...' : 'Descargar reporte (Excel .xlsx)'}
+                  </button>
+                  <button
+                    onClick={exportarPagosCSV}
+                    disabled={descargando !== null}
+                    className="w-full bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 py-2 px-4 rounded-xl text-xs font-semibold transition flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                  >
+                    <Download className="w-3.5 h-3.5 text-slate-500" />
+                    {descargando === 'pagos' ? 'Generando CSV...' : 'Descargar reporte (CSV)'}
+                  </button>
+                </div>
               </div>
 
               <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
                 <div>
                   <FileSpreadsheet className="w-8 h-8 text-amber-600 mb-3" />
-                  <h4 className="font-bold text-slate-900 text-sm">Reporte de Alumnos en Riesgo</h4>
+                  <h4 className="font-bold text-slate-900 text-sm">Reporte de alumnos en riesgo</h4>
                   <p className="text-xs text-slate-500 mt-1">Lista filtrada de morosidad, montos adeudados y prórrogas con fecha de vencimiento.</p>
                 </div>
-                <button
-                  onClick={exportarAlumnosRiesgoCSV}
-                  disabled={descargando === 'riesgo'}
-                  className="mt-6 w-full bg-amber-600 hover:bg-amber-700 text-white py-2.5 px-4 rounded-xl text-xs font-bold shadow-md transition flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
-                >
-                  <Download className="w-4 h-4" />
-                  {descargando === 'riesgo' ? 'Generando CSV...' : 'Descargar Reporte Riesgo (CSV)'}
-                </button>
+                <div className="mt-6 flex flex-col gap-2">
+                  <button
+                    onClick={exportarAlumnosRiesgoExcel}
+                    disabled={descargando !== null}
+                    className="w-full bg-amber-600 hover:bg-amber-700 text-white py-2.5 px-4 rounded-xl text-xs font-bold shadow-sm transition flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                  >
+                    <FileSpreadsheet className="w-4 h-4" />
+                    {descargando === 'riesgo_excel' ? 'Generando Excel...' : 'Descargar reporte (Excel .xlsx)'}
+                  </button>
+                  <button
+                    onClick={exportarAlumnosRiesgoCSV}
+                    disabled={descargando !== null}
+                    className="w-full bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 py-2 px-4 rounded-xl text-xs font-semibold transition flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                  >
+                    <Download className="w-3.5 h-3.5 text-slate-500" />
+                    {descargando === 'riesgo' ? 'Generando CSV...' : 'Descargar reporte (CSV)'}
+                  </button>
+                </div>
               </div>
 
               <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
                 <div>
                   <FileSpreadsheet className="w-8 h-8 text-indigo-600 mb-3" />
-                  <h4 className="font-bold text-slate-900 text-sm">Reporte de Catálogo Académico</h4>
-                  <p className="text-xs text-slate-500 mt-1">Exportación del listado completo de Diplomados y Cursos de Alta Especialización.</p>
+                  <h4 className="font-bold text-slate-900 text-sm">Reporte de catálogo académico</h4>
+                  <p className="text-xs text-slate-500 mt-1">Exportación del listado completo de diplomados y cursos de alta especialización.</p>
                 </div>
-                <button
-                  onClick={exportarCatalogoCSV}
-                  disabled={descargando === 'catalogo'}
-                  className="mt-6 w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2.5 px-4 rounded-xl text-xs font-bold shadow-md transition flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
-                >
-                  <Download className="w-4 h-4" />
-                  {descargando === 'catalogo' ? 'Generando CSV...' : 'Descargar Catálogo (CSV)'}
-                </button>
+                <div className="mt-6 flex flex-col gap-2">
+                  <button
+                    onClick={exportarCatalogoExcel}
+                    disabled={descargando !== null}
+                    className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2.5 px-4 rounded-xl text-xs font-bold shadow-sm transition flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                  >
+                    <FileSpreadsheet className="w-4 h-4" />
+                    {descargando === 'catalogo_excel' ? 'Generando Excel...' : 'Descargar catálogo (Excel .xlsx)'}
+                  </button>
+                  <button
+                    onClick={exportarCatalogoCSV}
+                    disabled={descargando !== null}
+                    className="w-full bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 py-2 px-4 rounded-xl text-xs font-semibold transition flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                  >
+                    <Download className="w-3.5 h-3.5 text-slate-500" />
+                    {descargando === 'catalogo' ? 'Generando CSV...' : 'Descargar catálogo (CSV)'}
+                  </button>
+                </div>
               </div>
 
             </div>

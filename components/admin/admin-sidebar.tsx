@@ -51,7 +51,7 @@ export default function AdminSidebar() {
       '/admin/certificaciones': 'Certificaciones',
       '/admin/alumnos-riesgo': 'Alumnos en Riesgo',
       '/admin/resultados': 'Resultados y Métricas',
-      '/admin/reportes': 'Reportes y Datos',
+      '/admin/reportes': 'Reportes y datos',
       '/admin/auditoria': 'Auditoría y Webhooks',
       '/admin/configuracion': 'Configuración y Roles',
       '/admin/desarrolladores': 'APIs y Desarrolladores',
@@ -128,7 +128,7 @@ export default function AdminSidebar() {
         },
         {
           href: '/admin/reportes',
-          label: 'Reportes y datos (CSV)',
+          label: 'Reportes y datos (Excel / CSV)',
           icon: Server,
           color: 'text-sky-400'
         }
