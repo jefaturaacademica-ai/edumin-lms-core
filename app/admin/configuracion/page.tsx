@@ -34,6 +34,7 @@ export default function ConfiguracionRolesPage() {
   const [paquetesConfig, setPaquetesConfig] = useState<Record<string, PaqueteDefinicion>>(PAQUETES_DEFAULT);
   const [guardandoPaquetes, setGuardandoPaquetes] = useState(false);
   const [guardandoPaqueteId, setGuardandoPaqueteId] = useState<string | null>(null);
+  const [codigosEditados, setCodigosEditados] = useState<Record<string, string>>({});
 
   // Modal / Formulario para crear un nuevo paquete personalizado
   const [mostrarModalNuevoPaquete, setMostrarModalNuevoPaquete] = useState(false);
@@ -294,16 +295,55 @@ export default function ConfiguracionRolesPage() {
   };
 
   const guardarPaqueteIndividual = async (pkgId: string) => {
+    const pkgActual = paquetesConfig[pkgId];
+    if (!pkgActual) return;
+
+    const esBase = ['COMPLETO', 'FULL', 'ILIMITADO'].includes(pkgId);
+    const rawNuevoCodigo = codigosEditados[pkgId];
+    const nuevoCodigo = !esBase && rawNuevoCodigo !== undefined
+      ? rawNuevoCodigo.trim().toUpperCase().replace(/[^A-Z0-9_]/g, '_')
+      : pkgId;
+
+    if (!nuevoCodigo) {
+      alert('El código interno no puede estar vacío.');
+      return;
+    }
+
+    if (nuevoCodigo !== pkgId && paquetesConfig[nuevoCodigo]) {
+      alert(`Ya existe otro paquete con el código interno "${nuevoCodigo}".`);
+      return;
+    }
+
+    let payloadPaquetes = paquetesConfig;
+    if (nuevoCodigo !== pkgId) {
+      payloadPaquetes = {};
+      for (const [k, v] of Object.entries(paquetesConfig)) {
+        if (k === pkgId) {
+          payloadPaquetes[nuevoCodigo] = { ...v, id: nuevoCodigo };
+        } else {
+          payloadPaquetes[k] = v;
+        }
+      }
+    }
+
     setGuardandoPaqueteId(pkgId);
     try {
       const res = await fetch('/api/admin/configuracion-paquetes', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ paquetes: paquetesConfig })
+        body: JSON.stringify({ paquetes: payloadPaquetes })
       });
 
       if (res.ok) {
-        const nombrePkg = paquetesConfig[pkgId]?.nombre || pkgId;
+        if (nuevoCodigo !== pkgId) {
+          setPaquetesConfig(payloadPaquetes);
+          setCodigosEditados(prev => {
+            const copy = { ...prev };
+            delete copy[pkgId];
+            return copy;
+          });
+        }
+        const nombrePkg = payloadPaquetes[nuevoCodigo]?.nombre || nuevoCodigo;
         setMensajeExito(`¡${nombrePkg} guardado con éxito!`);
         setTimeout(() => setMensajeExito(null), 4000);
       } else {
@@ -724,7 +764,7 @@ export default function ConfiguracionRolesPage() {
                             [pkg.id]: { ...pkg, nombre: e.target.value }
                           })}
                           aria-label={`Nombre de ${pkg.id}`}
-                          className="w-full text-lg font-black text-slate-900 dark:text-white mb-1.5 bg-transparent border border-transparent hover:border-slate-200 dark:hover:border-slate-700 focus:border-indigo-500 focus:bg-slate-50 dark:focus:bg-slate-950 rounded-lg px-1.5 py-0.5 -mx-1.5 focus:outline-none transition"
+                          className="w-full text-lg font-black text-slate-900 dark:text-white mb-1.5 bg-slate-50/70 dark:bg-slate-950/50 border border-slate-200/80 dark:border-slate-700/80 focus:border-indigo-500 rounded-lg px-2 py-1 focus:outline-none transition"
                         />
                         <textarea
                           rows={2}
@@ -734,7 +774,7 @@ export default function ConfiguracionRolesPage() {
                             [pkg.id]: { ...pkg, descripcion: e.target.value }
                           })}
                           aria-label={`Descripción de ${pkg.id}`}
-                          className="w-full text-xs text-slate-500 dark:text-slate-400 mb-3 bg-transparent border border-transparent hover:border-slate-200 dark:hover:border-slate-700 focus:border-indigo-500 focus:bg-slate-50 dark:focus:bg-slate-950 rounded-lg px-1.5 py-1 -mx-1.5 focus:outline-none resize-none transition"
+                          className="w-full text-xs text-slate-600 dark:text-slate-300 mb-3 bg-slate-50/70 dark:bg-slate-950/50 border border-slate-200/80 dark:border-slate-700/80 focus:border-indigo-500 rounded-lg px-2 py-1.5 focus:outline-none resize-none transition"
                         />
 
                         {/* Precios y Cuotas sugeridas */}
@@ -920,9 +960,23 @@ export default function ConfiguracionRolesPage() {
                       </div>
 
                       <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2">
-                        <span className="text-[11px] text-slate-400">
-                          Código interno: <code className="font-mono font-bold text-slate-600 dark:text-slate-300">{pkg.id}</code>
-                        </span>
+                        <div className="flex items-center gap-1.5 text-[11px] text-slate-400 min-w-0">
+                          <span className="shrink-0">Código:</span>
+                          {esBase ? (
+                            <code className="font-mono font-bold text-slate-600 dark:text-slate-300">{pkg.id}</code>
+                          ) : (
+                            <input
+                              type="text"
+                              value={codigosEditados[pkg.id] ?? pkg.id}
+                              onChange={(e) => setCodigosEditados({
+                                ...codigosEditados,
+                                [pkg.id]: e.target.value.toUpperCase().replace(/[^A-Z0-9_]/g, '_')
+                              })}
+                              aria-label={`Código interno de ${pkg.id}`}
+                              className="w-28 font-mono font-bold text-[11px] text-slate-700 dark:text-slate-200 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-700 rounded-md px-1.5 py-0.5 focus:outline-none focus:border-indigo-500"
+                            />
+                          )}
+                        </div>
                         <button
                           type="button"
                           onClick={() => guardarPaqueteIndividual(pkg.id)}
