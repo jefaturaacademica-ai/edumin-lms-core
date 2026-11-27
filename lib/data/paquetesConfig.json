@@ -9,13 +9,13 @@
     "descripcion": "Paquete personalizado configurado desde administración.",
     "dreambuilder": false,
     "precioCuotas": 0,
+    "duracionMeses": 12,
     "precioContado": 0,
     "creditosCursos": 0,
     "cuotasSugeridas": 1,
     "esPersonalizado": true,
     "creditosDiplomados": 1,
     "bolsaTrabajoRegular": false,
-    "duracionMeses": 12,
     "diplomadosRenovables": false
   },
   "FULL": {
@@ -27,15 +27,36 @@
     "modulares": 3,
     "descripcion": "Incluye más cursos libres y derecho a certificación digital del Colegio de Ingenieros.",
     "precioCuotas": 900,
+    "duracionMeses": 12,
     "precioContado": 900,
     "creditosCursos": 5,
     "cuotasSugeridas": 3,
     "esPersonalizado": false,
     "certInternacional": true,
     "creditosDiplomados": 1,
-    "bolsaTrabajoExclusiva": true,
-    "duracionMeses": 12,
-    "diplomadosRenovables": false
+    "diplomadosRenovables": false,
+    "bolsaTrabajoExclusiva": true
+  },
+  "BASICO": {
+    "id": "BASICO",
+    "nombre": "BÁSICO",
+    "certCip": false,
+    "colorTag": "emerald",
+    "diplomas": 1,
+    "modulares": 0,
+    "descripcion": "Paquete personalizado configurado desde administración.",
+    "dreambuilder": true,
+    "precioCuotas": 0,
+    "duracionMeses": 6,
+    "precioContado": 360,
+    "creditosCursos": 0,
+    "cuotasSugeridas": 1,
+    "esPersonalizado": true,
+    "certInternacional": false,
+    "creditosDiplomados": 1,
+    "bolsaTrabajoRegular": false,
+    "diplomadosRenovables": false,
+    "bolsaTrabajoExclusiva": false
   },
   "AVANZADO": {
     "id": "AVANZADO",
@@ -47,6 +68,7 @@
     "descripcion": "Paquete personalizado configurado desde administración.",
     "dreambuilder": true,
     "precioCuotas": 0,
+    "duracionMeses": 12,
     "precioContado": 900,
     "creditosCursos": 15,
     "cuotasSugeridas": 1,
@@ -54,9 +76,8 @@
     "certInternacional": false,
     "creditosDiplomados": 3,
     "bolsaTrabajoRegular": true,
-    "bolsaTrabajoExclusiva": true,
-    "duracionMeses": 12,
-    "diplomadosRenovables": true
+    "diplomadosRenovables": true,
+    "bolsaTrabajoExclusiva": true
   },
   "COMPLETO": {
     "id": "COMPLETO",
@@ -67,12 +88,12 @@
     "modulares": 3,
     "descripcion": "Reglas de emisión y límites de cursos para alumnos matriculados en modalidad Completo.",
     "precioCuotas": 540,
+    "duracionMeses": 12,
     "precioContado": 540,
     "creditosCursos": 3,
     "cuotasSugeridas": 3,
     "esPersonalizado": false,
     "creditosDiplomados": 1,
-    "duracionMeses": 12,
     "diplomadosRenovables": false
   },
   "ESTANDAR": {
@@ -85,6 +106,7 @@
     "descripcion": "Paquete personalizado configurado desde administración.",
     "dreambuilder": true,
     "precioCuotas": 0,
+    "duracionMeses": 8,
     "precioContado": 360,
     "creditosCursos": 0,
     "cuotasSugeridas": 1,
@@ -92,9 +114,8 @@
     "certInternacional": false,
     "creditosDiplomados": 1,
     "bolsaTrabajoRegular": true,
-    "bolsaTrabajoExclusiva": false,
-    "duracionMeses": 8,
-    "diplomadosRenovables": false
+    "diplomadosRenovables": false,
+    "bolsaTrabajoExclusiva": false
   },
   "ILIMITADO": {
     "id": "ILIMITADO",
@@ -105,14 +126,35 @@
     "modulares": 10,
     "descripcion": "Progresión ilimitada por bloques con aprobación directa de módulos.",
     "precioCuotas": 1500,
+    "duracionMeses": 24,
     "precioContado": 1500,
     "creditosCursos": 15,
     "cuotasSugeridas": 5,
     "esPersonalizado": false,
     "certInternacional": true,
     "creditosDiplomados": 3,
-    "bolsaTrabajoExclusiva": true,
-    "duracionMeses": 24,
-    "diplomadosRenovables": true
+    "diplomadosRenovables": true,
+    "bolsaTrabajoExclusiva": true
+  },
+  "AVANZADO___2": {
+    "id": "AVANZADO___2",
+    "nombre": "AVANZADO - 2",
+    "certCip": false,
+    "colorTag": "emerald",
+    "diplomas": 1,
+    "modulares": 3,
+    "descripcion": "Paquete personalizado configurado desde administración.",
+    "dreambuilder": true,
+    "precioCuotas": 0,
+    "duracionMeses": 12,
+    "precioContado": 600,
+    "creditosCursos": 15,
+    "cuotasSugeridas": 1,
+    "esPersonalizado": true,
+    "certInternacional": false,
+    "creditosDiplomados": 3,
+    "bolsaTrabajoRegular": true,
+    "diplomadosRenovables": true,
+    "bolsaTrabajoExclusiva": true
   }
 }
