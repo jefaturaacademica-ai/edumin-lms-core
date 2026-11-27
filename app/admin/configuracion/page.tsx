@@ -48,8 +48,7 @@ export default function ConfiguracionRolesPage() {
   const [nuevoPkgCreditosCur, setNuevoPkgCreditosCur] = useState(3);
   const [nuevoPkgDuracionMeses, setNuevoPkgDuracionMeses] = useState(12);
   const [nuevoPkgDiplomadosRenovables, setNuevoPkgDiplomadosRenovables] = useState(false);
-  const [nuevoPkgModulares, setNuevoPkgModulares] = useState(3);
-  const [nuevoPkgDiplomas, setNuevoPkgDiplomas] = useState(1);
+  const [nuevoPkgIncluyeModulares, setNuevoPkgIncluyeModulares] = useState(true);
   const [nuevoPkgCertCip, setNuevoPkgCertCip] = useState(false);
   const [nuevoPkgCertInternacional, setNuevoPkgCertInternacional] = useState(false);
   const [nuevoPkgBolsaRegular, setNuevoPkgBolsaRegular] = useState(true);
@@ -399,8 +398,7 @@ export default function ConfiguracionRolesPage() {
       creditosCursos: Number(nuevoPkgCreditosCur) || 0,
       duracionMeses: Math.max(1, Number(nuevoPkgDuracionMeses) || 12),
       diplomadosRenovables: Boolean(nuevoPkgDiplomadosRenovables),
-      modulares: Number(nuevoPkgModulares) || 3,
-      diplomas: Number(nuevoPkgDiplomas) || 1,
+      incluyeModulares: Boolean(nuevoPkgIncluyeModulares),
       certCip: Boolean(nuevoPkgCertCip),
       certInternacional: Boolean(nuevoPkgCertInternacional),
       bolsaTrabajoRegular: Boolean(nuevoPkgBolsaRegular),
@@ -436,6 +434,7 @@ export default function ConfiguracionRolesPage() {
       setNuevoPkgPrecioCuotas(0);
       setNuevoPkgDuracionMeses(12);
       setNuevoPkgDiplomadosRenovables(false);
+      setNuevoPkgIncluyeModulares(true);
 
       setMensajeExito(`¡Paquete ${cleanId} creado y guardado con éxito!`);
       setTimeout(() => setMensajeExito(null), 4000);
@@ -866,31 +865,26 @@ export default function ConfiguracionRolesPage() {
                             />
                           </div>
 
-                          <div className="flex justify-between items-center">
-                            <span className="text-slate-500">Certificados Modulares:</span>
+                          <div className="flex justify-between items-center pt-1">
+                            <span className="text-slate-600 dark:text-slate-300 font-bold" title="Si está activo, cada diplomado incluye diploma general y todos sus certificados modulares. Si está desactivado, solo incluye el diploma general.">
+                              Incluye certificados modulares:
+                            </span>
                             <input 
-                              type="number" 
-                              value={pkg.modulares}
+                              type="checkbox"
+                              checked={pkg.incluyeModulares !== false}
                               onChange={(e) => setPaquetesConfig({
                                 ...paquetesConfig,
-                                [pkg.id]: { ...pkg, modulares: Math.max(0, parseInt(e.target.value) || 0) }
+                                [pkg.id]: { ...pkg, incluyeModulares: e.target.checked }
                               })}
-                              className="w-16 px-2 py-1 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 rounded-lg text-right font-semibold"
+                              className="w-4 h-4 text-indigo-600 rounded cursor-pointer"
                             />
                           </div>
 
-                          <div className="flex justify-between items-center">
-                            <span className="text-slate-500">Diploma General:</span>
-                            <input 
-                              type="number" 
-                              value={pkg.diplomas}
-                              onChange={(e) => setPaquetesConfig({
-                                ...paquetesConfig,
-                                [pkg.id]: { ...pkg, diplomas: Math.max(0, parseInt(e.target.value) || 0) }
-                              })}
-                              className="w-16 px-2 py-1 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 rounded-lg text-right font-semibold"
-                            />
-                          </div>
+                          <p className="text-[11px] text-slate-400 leading-snug pt-0.5">
+                            {pkg.incluyeModulares !== false
+                              ? 'Emite diploma general y todos los modulares de cada diplomado.'
+                              : 'Solo emite diploma general (sin certificados modulares).'}
+                          </p>
 
                           <div className="flex justify-between items-center pt-2">
                             <span className="text-slate-500">Certificación CIP Incluida:</span>
@@ -1230,6 +1224,15 @@ export default function ConfiguracionRolesPage() {
                     className="rounded text-purple-600"
                   />
                   <span>Créditos de diplomados renovables (tipo Ilimitado)</span>
+                </label>
+                <label className="flex items-center gap-2 font-bold text-indigo-700 dark:text-indigo-300 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={nuevoPkgIncluyeModulares}
+                    onChange={(e) => setNuevoPkgIncluyeModulares(e.target.checked)}
+                    className="rounded text-indigo-600"
+                  />
+                  <span>Incluye certificados modulares (desmarca para solo diploma general)</span>
                 </label>
                 <label className="flex items-center gap-2 font-medium cursor-pointer">
                   <input

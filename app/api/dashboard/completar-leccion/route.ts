@@ -306,6 +306,11 @@ export async function POST(request: Request) {
         const modeloMod = resolverModeloCertificado(modelosConfig, 'MODULAR', targetDip.titulo, codDip);
         const modeloDip = resolverModeloCertificado(modelosConfig, 'DIPLOMA', targetDip.titulo, codDip);
 
+        const { obtenerConfiguracionPaquetes } = await import('@/lib/services/paquetesService');
+        const paquetesMap = await obtenerConfiguracionPaquetes().catch(() => ({} as Record<string, any>));
+        const pkgCfg = paquetesMap[String(profile.paquete_adquirido || 'COMPLETO').toUpperCase().trim()];
+        const incluyeModularesPaquete = pkgCfg ? pkgCfg.incluyeModulares !== false : true;
+
         // A. Revisar cada módulo completado (por examen aprobado o por clases 100% si no aplica examen)
         for (let mIdx = 0; mIdx < targetDip.modulos.length; mIdx++) {
           const modItem = targetDip.modulos[mIdx];
@@ -316,7 +321,7 @@ export async function POST(request: Request) {
           const tieneNotaAprobada = typeof modItem.nota === 'number' && modItem.nota >= 12;
           const esModuloAprobado = tieneNotaAprobada || (noAplicaExamen && modItem.completado);
 
-          if (esModuloAprobado) {
+          if (esModuloAprobado && incluyeModularesPaquete) {
             const codVerifModular = normalizarCodigoCertificado(modItem.codigo_cert || generarCodigoUnicoCertificado());
             modItem.codigo_cert = codVerifModular;
             modItem.fecha = modItem.fecha || fechaEmisionHoy;

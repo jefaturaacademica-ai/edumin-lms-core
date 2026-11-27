@@ -9,8 +9,7 @@ export interface PaqueteDefinicion {
   creditosCursos: number;
   duracionMeses?: number; // Duración predeterminada de acceso a la plataforma (en meses)
   diplomadosRenovables?: boolean; // Renovación automática de créditos de diplomado en bloques sucesivos (tipo Ilimitado)
-  modulares: number;
-  diplomas: number;
+  incluyeModulares?: boolean; // Si el paquete incluye emisión de certificados modulares (ej. BASICO = false, solo diploma general)
   certCip: boolean;
   certInternacional?: boolean; // Certificación Internacional (Full e Ilimitado)
   bolsaTrabajoRegular?: boolean; // Bolsa Regular (Completo, Full, Ilimitado)
@@ -32,8 +31,7 @@ export const PAQUETES_DEFAULT: Record<string, PaqueteDefinicion> = {
     creditosCursos: 3,
     duracionMeses: 12,
     diplomadosRenovables: false,
-    modulares: 3,
-    diplomas: 1,
+    incluyeModulares: true,
     certCip: false,
     certInternacional: false,
     bolsaTrabajoRegular: true,
@@ -53,8 +51,7 @@ export const PAQUETES_DEFAULT: Record<string, PaqueteDefinicion> = {
     creditosCursos: 5,
     duracionMeses: 12,
     diplomadosRenovables: false,
-    modulares: 3,
-    diplomas: 1,
+    incluyeModulares: true,
     certCip: true,
     certInternacional: true,
     bolsaTrabajoRegular: true,
@@ -74,8 +71,7 @@ export const PAQUETES_DEFAULT: Record<string, PaqueteDefinicion> = {
     creditosCursos: 15,
     duracionMeses: 24,
     diplomadosRenovables: true,
-    modulares: 10,
-    diplomas: 5,
+    incluyeModulares: true,
     certCip: true,
     certInternacional: true,
     bolsaTrabajoRegular: true,

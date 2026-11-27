@@ -674,6 +674,7 @@ function CertificadosContent() {
   // Regla global: 1ra cuota = 1er modular aprobado, 2da cuota = 2do modular aprobado, ..., sin deuda = todos.
   const certificadosModulares = useMemo(() => {
     if (!perfilEstudiante) return [];
+    if (configPaqueteEstudiante?.incluyeModulares === false) return [];
 
     const rawDiplomados = parseDiplomadosFromProfile(perfilEstudiante);
     const acumulados: any[] = [];
@@ -773,7 +774,7 @@ function CertificadosContent() {
         bloqueadoPorCuota: !habilitadoPorCuota
       };
     });
-  }, [perfilEstudiante, certificadosEmitidosDb, reglasCertificados.sinRestriccionPago, reglasCertificados.limiteModularesPorCuota]);
+  }, [perfilEstudiante, certificadosEmitidosDb, reglasCertificados.sinRestriccionPago, reglasCertificados.limiteModularesPorCuota, configPaqueteEstudiante?.incluyeModulares]);
 
   // Agrupación de modulares por diplomado: habilitados primero, luego bloqueados por cuota y orden del temario
   const modularesPorDiplomado = useMemo(() => {
